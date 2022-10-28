@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/update-azp2svpngateway
+online version: https://learn.microsoft.com/powershell/module/az.network/update-azp2svpngateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzP2sVpnGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzP2sVpnGateway.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Update an existing P2SVpnGateway under VirtualHub for point to site connectivity.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/update-azp2svpngateway) for up-to-date information.
 
 ## SYNTAX
 
@@ -105,7 +108,7 @@ The **Update-AzP2sVpnGateway** cmdlet enables you to update an existing P2SVpnGa
 
 ### Example 1
 ```powershell
-$vpnClientAddressSpaces = New-Object string[] 1 
+$vpnClientAddressSpaces = New-Object string[] 1
 $vpnClientAddressSpaces[0] = "101.10.0.0/16"
 Update-AzP2sVpnGateway -ResourceGroupName P2SCortexGATesting -Name 683482ade8564515aed4b8448c9757ea-westus-gw -VpnClientAddressPool $vpnClientAddressSpaces -EnableInternetSecurityFlag
 ```
@@ -133,7 +136,7 @@ P2SConnectionConfigurations    : [
                                          "101.10.0.0/16"
                                        ]
                                      },
-                                     "EnableInternetSecurity": True,								 
+                                     "EnableInternetSecurity": True,
                                      "RoutingConfiguration": {
                                        "AssociatedRouteTable": {
                                          "Id": "/subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/virtualHubs/WestUsVirtualHub/hubRouteTables/defaultRouteTable"

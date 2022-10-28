@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: A35BB728-A7EF-4ADF-B1A9-25A156434E99
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azvirtualnetworkgateway
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azvirtualnetworkgateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVirtualNetworkGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVirtualNetworkGateway.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes a Virtual Network Gateway
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-azvirtualnetworkgateway) for up-to-date information.
 
 ## SYNTAX
 

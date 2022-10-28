@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 48D6288A-EBE1-44FD-B871-80A0681BBEA3
-online version: https://docs.microsoft.com/powershell/module/az.sql/remove-azsqlservercommunicationlink
+online version: https://learn.microsoft.com/powershell/module/az.sql/remove-azsqlservercommunicationlink
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Remove-AzSqlServerCommunicationLink.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Remove-AzSqlServerCommunicationLink.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes a communication link for elastic database transactions between two servers.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/remove-azsqlservercommunicationlink) for up-to-date information.
 
 ## SYNTAX
 
@@ -162,4 +165,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-AzSqlServerCommunicationLink](./New-AzSqlServerCommunicationLink.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)

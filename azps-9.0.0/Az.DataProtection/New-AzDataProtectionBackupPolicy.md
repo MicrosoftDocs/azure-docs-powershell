@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataProtection
-online version: https://docs.microsoft.com/powershell/module/az.dataprotection/new-azdataprotectionbackuppolicy
+online version: https://learn.microsoft.com/powershell/module/az.dataprotection/new-azdataprotectionbackuppolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/New-AzDataProtectionBackupPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/New-AzDataProtectionBackupPolicy.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a new backup policy in a given backup vault
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/new-azdataprotectionbackuppolicy) for up-to-date information.
 
 ## SYNTAX
 
@@ -50,11 +53,11 @@ $schDates = @(
     (Get-Date -Year 2021 -Month 08 -Day 18 -Hour 10 -Minute 0 -Second 0)
 ),
 (
-    (Get-Date -Year 2021 -Month 08 -Day 22 -Hour 10 -Minute 0 -Second 0) 
+    (Get-Date -Year 2021 -Month 08 -Day 22 -Hour 10 -Minute 0 -Second 0)
 ))
 
 $trigger =  New-AzDataProtectionPolicyTriggerScheduleClientObject -ScheduleDays $schDates -IntervalType Weekly -IntervalCount 1
-Edit-AzDataProtectionPolicyTriggerClientObject -Schedule $trigger -Policy $defaultPol   
+Edit-AzDataProtectionPolicyTriggerClientObject -Schedule $trigger -Policy $defaultPol
 $lifeCycleVault = New-AzDataProtectionRetentionLifeCycleClientObject -SourceDataStore VaultStore -SourceRetentionDurationType Months -SourceRetentionDurationCount 6 -TargetDataStore ArchiveStore -CopyOption CopyOnExpiryOption
 $lifeCycleArchive = New-AzDataProtectionRetentionLifeCycleClientObject -SourceDataStore ArchiveStore -SourceRetentionDurationType Months -SourceRetentionDurationCount 12
 Edit-AzDataProtectionPolicyRetentionRuleClientObject -Policy $defaultPol -Name Monthly -LifeCycles $lifeCycleVault, $lifeCycleArchive -IsDefault $false
@@ -224,24 +227,24 @@ To create the parameters described below, construct a hash table containing the 
 
 `POLICY <IBackupPolicy>`: Policy Request Object
   - `DatasourceType <String[]>`: Type of datasource for the backup management
-  - `ObjectType <String>`: 
+  - `ObjectType <String>`:
   - `PolicyRule <IBasePolicyRule[]>`: Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
-    - `Name <String>`: 
-    - `ObjectType <String>`: 
+    - `Name <String>`:
+    - `ObjectType <String>`:
     - `DataStoreObjectType <String>`: Type of Datasource object, used to initialize the right inherited type
     - `DataStoreType <DataStoreTypes>`: type of datastore; Operational/Vault/Archive
     - `TriggerObjectType <String>`: Type of the specific object - used for deserializing
-    - `Lifecycle <ISourceLifeCycle[]>`: 
+    - `Lifecycle <ISourceLifeCycle[]>`:
       - `DeleteAfterDuration <String>`: Duration of deletion after given timespan
       - `DeleteAfterObjectType <String>`: Type of the specific object - used for deserializing
       - `SourceDataStoreObjectType <String>`: Type of Datasource object, used to initialize the right inherited type
       - `SourceDataStoreType <DataStoreTypes>`: type of datastore; Operational/Vault/Archive
-      - `[TargetDataStoreCopySetting <ITargetCopySetting[]>]`: 
+      - `[TargetDataStoreCopySetting <ITargetCopySetting[]>]`:
         - `CopyAfterObjectType <String>`: Type of the specific object - used for deserializing
         - `DataStoreObjectType <String>`: Type of Datasource object, used to initialize the right inherited type
         - `DataStoreType <DataStoreTypes>`: type of datastore; Operational/Vault/Archive
     - `[BackupParameterObjectType <String>]`: Type of the specific object - used for deserializing
-    - `[IsDefault <Boolean?>]`: 
+    - `[IsDefault <Boolean?>]`:
 
 ## RELATED LINKS
 

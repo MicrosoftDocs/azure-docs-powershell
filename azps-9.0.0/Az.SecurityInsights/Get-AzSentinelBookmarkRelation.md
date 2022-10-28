@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SecurityInsights
-online version: https://docs.microsoft.com/powershell/module/az.securityinsights/get-azsentinelbookmarkrelation
+online version: https://learn.microsoft.com/powershell/module/az.securityinsights/get-azsentinelbookmarkrelation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Get-AzSentinelBookmarkRelation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Get-AzSentinelBookmarkRelation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a bookmark relation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.securityinsights/get-azsentinelbookmarkrelation) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,7 +41,7 @@ Gets a bookmark relation.
 
 ## EXAMPLES
 
-### Example 1: List all Bookmark Relations for a given Bookmark 
+### Example 1: List all Bookmark Relations for a given Bookmark
 ```powershell
  Get-AzSentinelBookmarkRelation -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName" -BookmarkId "myBookmarkId"
 ```

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 8C1C12AD-5130-42E7-99BB-B13900D7A712
-online version: https://docs.microsoft.com/powershell/module/az.compute/remove-azvmssextension
+online version: https://learn.microsoft.com/powershell/module/az.compute/remove-azvmssextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzVmssExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzVmssExtension.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an extension from the VMSS.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/remove-azvmssextension) for up-to-date information.
 
 ## SYNTAX
 
@@ -34,7 +37,7 @@ The **Remove-AzVmssExtension** cmdlet removes an extension from the Virtual Mach
 
 ### Example 1: Remove a VMSS extension
 ```powershell
-$vmss = Get-AzVmss -ResourceGroupName $RGName -VMScaleSetName $vmssName 
+$vmss = Get-AzVmss -ResourceGroupName $RGName -VMScaleSetName $vmssName
 Remove-AzVmssExtension -VirtualMachineScaleSet $vmss -Name $vmssExtensionName
 Update-AzVmss -ResourceGroupName $RGName -Name $vmssName -VirtualMachineScaleSet $vmss
 ```
@@ -43,7 +46,7 @@ This command removes the extension of a VMSS and update the VMSS after the modif
 
 ### Example 2: Remove an instance from within a VMSS
 ```powershell
-$vmss = Get-AzVmss -ResourceGroupName $RGName -VMScaleSetName $vmssName 
+$vmss = Get-AzVmss -ResourceGroupName $RGName -VMScaleSetName $vmssName
 Remove-AzVmssExtension -VirtualMachineScaleSet $vmss -Id $extensionId
 ```
 

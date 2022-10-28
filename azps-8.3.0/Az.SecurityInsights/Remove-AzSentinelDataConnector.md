@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.dll-Help.xml
 Module Name: Az.SecurityInsights
-online version: https://docs.microsoft.com/powershell/module/az.securityinsights/remove-azsentineldataconnector
+online version: https://learn.microsoft.com/powershell/module/az.securityinsights/remove-azsentineldataconnector
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/SecurityInsights/help/Remove-AzSentinelDataConnector.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/SecurityInsights/help/Remove-AzSentinelDataConnector.md
@@ -49,7 +49,7 @@ $SentinelConnection = @{
     ResourceGroupName = "myResourceGroupName"
     WorkspaceName = "myWorkspaceName"
 }
-$DataConnector = Get-AzSentinelDataConnector @SentinelConnection | Where-Object {$_.Kind -eq "Office365"} 
+$DataConnector = Get-AzSentinelDataConnector @SentinelConnection | Where-Object {$_.Kind -eq "Office365"}
 Remove-AzSentinelDataConnector @SentinelConnection -DataConnectorId $DataConnector.Name
 ```
 

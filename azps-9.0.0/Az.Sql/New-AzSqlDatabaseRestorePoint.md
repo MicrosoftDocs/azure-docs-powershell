@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 67A9BB67-CF17-4CAA-99D9-002D0D23178B
-online version: https://docs.microsoft.com/powershell/module/az.sql/new-azsqldatabaserestorepoint
+online version: https://learn.microsoft.com/powershell/module/az.sql/new-azsqldatabaserestorepoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlDatabaseRestorePoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlDatabaseRestorePoint.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a new restore point from which a SQL Database can be restored.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/new-azsqldatabaserestorepoint) for up-to-date information.
 
 ## SYNTAX
 
@@ -39,7 +42,7 @@ DatabaseName             : database01
 Location                 : Central US
 RestorePointType         : DISCRETE
 RestorePointCreationDate : 8/12/2015 12:00:00 AM
-EarliestRestoreDate      : 
+EarliestRestoreDate      :
 RestorePointLabel        : RestorePoint01
 ```
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: DC870E11-2129-4906-8357-D9BC1CF2E08E
-online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-Azlocation
+online version: https://learn.microsoft.com/en-us/powershell/module/az.resources/get-Azlocation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Get-AzLocation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Get-AzLocation.md

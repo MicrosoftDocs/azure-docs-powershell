@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Marketplace
-online version: https://docs.microsoft.com/powershell/module/az.marketplace/set-azmarketplacebulkprivatestorecollectionaction
+online version: https://learn.microsoft.com/powershell/module/az.marketplace/set-azmarketplacebulkprivatestorecollectionaction
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Marketplace/Marketplace/help/Set-AzMarketplaceBulkPrivateStoreCollectionAction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Marketplace/Marketplace/help/Set-AzMarketplaceBulkPrivateStoreCollectionAction.md
@@ -34,7 +34,7 @@ Perform an action on bulk collections
 
 ## EXAMPLES
 
-### Example 1: Preforms bulk action on collections 
+### Example 1: Preforms bulk action on collections
 ```powershell
 Set-AzMarketplaceBulkPrivateStoreCollectionAction -PrivateStoreId 3ac32d8c-e888-4dc6-b4ff-be4d755af13a -Payload @{Action = "EnableCollections"; CollectionId = "3ac32d8c-e888-4dc6-b4ff-be4d755af13a", "fdb889a1-cf3e-49f0-95b8-2bb012fa01f1" }
 ```

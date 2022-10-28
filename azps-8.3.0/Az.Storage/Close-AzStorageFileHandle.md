@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/close-azstoragefilehandle
+online version: https://learn.microsoft.com/powershell/module/az.storage/close-azstoragefilehandle
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Close-AzStorageFileHandle.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Close-AzStorageFileHandle.md
@@ -93,7 +93,7 @@ PS C:\> Close-AzStorageFileHandle -ShareName "mysharename" -Path 'dir1/dir2' -Re
 
 This command closes all file handles on a file directory and shows the closed file handle count.
 
-### Example 4: Close all file handles on a file share 
+### Example 4: Close all file handles on a file share
 ```
 PS C:\> Close-AzStorageFileHandle -ShareName "mysharename" -CloseAll -Recursive
 ```

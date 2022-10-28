@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/update-azvirtualwan
+online version: https://learn.microsoft.com/powershell/module/az.network/update-azvirtualwan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVirtualWan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVirtualWan.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates an Azure Virtual WAN.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/update-azvirtualwan) for up-to-date information.
 
 ## SYNTAX
 
@@ -43,7 +46,7 @@ Updates an Azure Virtual WAN.
 ### Example 1
 
 ```powershell
-New-AzResourceGroup -Location "West US" -Name "testRG" 
+New-AzResourceGroup -Location "West US" -Name "testRG"
 New-AzVirtualWan -ResourceGroupName "testRG" -Name "myVirtualWAN" -Location "West US"
 Update-AzVirtualWan -ResourceGroupName "testRG" -Name "myVirtualWAN" -AllowBranchToBranchTraffic $true -AllowVnetToVnetTraffic $false
 ```

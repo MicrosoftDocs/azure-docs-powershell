@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: DEBD58A3-AFAF-485C-8708-53228625138F
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azloadbalancerruleconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azloadbalancerruleconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzLoadBalancerRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzLoadBalancerRuleConfig.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a rule configuration for a load balancer.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-azloadbalancerruleconfig) for up-to-date information.
 
 ## SYNTAX
 

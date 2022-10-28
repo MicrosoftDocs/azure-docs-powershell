@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: C61FA834-BEBE-4DBF-888F-C6CB8CC95390
-online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-Azadappcredential
+online version: https://learn.microsoft.com/en-us/powershell/module/az.resources/remove-Azadappcredential
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzADAppCredential.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzADAppCredential.md

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ImportExport
-online version: https://docs.microsoft.com/powershell/module/az.importexport/remove-azimportexport
+online version: https://learn.microsoft.com/powershell/module/az.importexport/remove-azimportexport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/help/Remove-AzImportExport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/help/Remove-AzImportExport.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes an existing job.
 Only jobs in the Creating or Completed states can be deleted.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.importexport/remove-azimportexport) for up-to-date information.
 
 ## SYNTAX
 

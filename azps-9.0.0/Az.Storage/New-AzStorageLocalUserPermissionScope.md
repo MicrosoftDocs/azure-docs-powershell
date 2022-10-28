@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/new-azstoragelocaluserpermissionscope
+online version: https://learn.microsoft.com/powershell/module/az.storage/new-azstoragelocaluserpermissionscope
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageLocalUserPermissionScope.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageLocalUserPermissionScope.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a permission scope object, which can be used in Set-AzStorageLocalUser.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/new-azstoragelocaluserpermissionscope) for up-to-date information.
 
 ## SYNTAX
 
@@ -29,7 +32,7 @@ The **New-AzStorageLocalUserPermissionScope** cmdlet creates a permission scope 
 
 
 ```
-PS C:\> $permissionScope1 = New-AzStorageLocalUserPermissionScope -Permission rw -Service blob -ResourceName container1 
+PS C:\> $permissionScope1 = New-AzStorageLocalUserPermissionScope -Permission rw -Service blob -ResourceName container1
 
 PS C:\> $permissionScope2 = New-AzStorageLocalUserPermissionScope -Permission rwd -Service file -ResourceName share2
 
@@ -41,17 +44,17 @@ PS C:\> $localuser
 
 Name      Sid                                          HomeDirectory HasSharedKey HasSshKey HasSshPassword PermissionScopes SshAuthorizedKeys
 ----      ---                                          ------------- ------------ --------- -------------- ---------------- -----------------
-testuser1 S-1-2-0-0000000000-000000000-0000000000-0000 /                                                   [container1,...]                  
+testuser1 S-1-2-0-0000000000-000000000-0000000000-0000 /                                                   [container1,...]
 
 PS C:\> $localuser.PermissionScopes
 
 Permissions Service ResourceName
 ----------- ------- ------------
-rw          blob    container1  
+rw          blob    container1
 rwd         file    share2
 ```
 
-This first 2 commands create 2 permission scope objects. 
+This first 2 commands create 2 permission scope objects.
 The following commands create or update a local user with the permission scope objects, then show the updated local user properties.
 
 ## PARAMETERS

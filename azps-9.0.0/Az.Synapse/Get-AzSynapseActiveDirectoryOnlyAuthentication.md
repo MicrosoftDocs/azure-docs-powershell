@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/get-azsynapseactivedirectoryonlyauthentication
+online version: https://learn.microsoft.com/powershell/module/az.synapse/get-azsynapseactivedirectoryonlyauthentication
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Get-AzSynapseActiveDirectoryOnlyAuthentication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Get-AzSynapseActiveDirectoryOnlyAuthentication.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets Azure Active Directory (Azure AD) only authentication for a specific Synapse workspace.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/get-azsynapseactivedirectoryonlyauthentication) for up-to-date information.
 
 ## SYNTAX
 

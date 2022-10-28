@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
 ms.assetid: 45DF71E0-77E1-4D20-AD09-2C06680F659F
-online version: https://docs.microsoft.com/powershell/module/az.dns/new-azdnsrecordset
+online version: https://learn.microsoft.com/powershell/module/az.dns/new-azdnsrecordset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/New-AzDnsRecordSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/New-AzDnsRecordSet.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a DNS record set.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dns/new-azdnsrecordset) for up-to-date information.
 
 ## SYNTAX
 

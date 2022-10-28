@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: 5FDD6C6A-9F6A-44C3-B332-B528F648DFDB
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/set-azintegrationaccountagreement
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/set-azintegrationaccountagreement
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Set-AzIntegrationAccountAgreement.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Set-AzIntegrationAccountAgreement.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies an integration account agreement.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logicapp/set-azintegrationaccountagreement) for up-to-date information.
 
 ## SYNTAX
 

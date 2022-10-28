@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ContainerInstance
-online version: https://docs.microsoft.com/powershell/module/az.containerinstance/restart-azcontainergroup
+online version: https://learn.microsoft.com/powershell/module/az.containerinstance/restart-azcontainergroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/help/Restart-AzContainerGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/help/Restart-AzContainerGroup.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Restarts all containers in a container group in place.
 If container image has updates, new image will be downloaded.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerinstance/restart-azcontainergroup) for up-to-date information.
 
 ## SYNTAX
 

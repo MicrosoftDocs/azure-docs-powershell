@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 0ECE4232-EA5D-46A0-8260-69646E27FA9A
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azapplicationgatewayfrontendipconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/add-azapplicationgatewayfrontendipconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzApplicationGatewayFrontendIPConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzApplicationGatewayFrontendIPConfig.md
@@ -31,7 +31,7 @@ Add-AzApplicationGatewayFrontendIPConfig -ApplicationGateway <PSApplicationGatew
 
 ## DESCRIPTION
 The **Add-AzApplicationGatewayFrontendIPConfig** cmdlet adds a front-end IP configuration to an application gateway.
-An application gateway supports two types of front-end IP configurations: 
+An application gateway supports two types of front-end IP configurations:
 
 - Public IP addresses
 - Private IP addresses using internal load-balancing (ILB)
@@ -86,7 +86,7 @@ Specifies the application gateway to which this cmdlet adds a front-end IP confi
 ```yaml
 Type: PSApplicationGateway
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -116,7 +116,7 @@ Specifies the name of the front-end IP configuration to add.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -132,7 +132,7 @@ If specified, this IP is statically allocated from the subnet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +147,7 @@ Specifies the public IP address which this cmdlet adds as a front-end IP address
 ```yaml
 Type: PSPublicIpAddress
 Parameter Sets: SetByResource
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ Specifies the ID of the public IP address which this cmdlet adds as a front-end 
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,7 +180,7 @@ If *PrivateIPAddress* is not specified, one of the IP addresses from this subnet
 ```yaml
 Type: PSSubnet
 Parameter Sets: SetByResource
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +198,7 @@ Otherwise, one of the IP from this subnet is dynamically picked up as the front-
 ```yaml
 Type: String
 Parameter Sets: SetByResourceId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: C091D654-E113-4AE0-A6C8-24630D1294A4
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageblobcontent
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageblobcontent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobContent.md
@@ -78,18 +78,18 @@ This example uses the asterisk wildcard character and the pipeline to find and d
 
 ### Example 4: Get a blob object and save it in a variable, then download blob content with the blob object
 ```
-PS C:\>$blob = Get-AzStorageBlob -Container containername -Blob blobname 
+PS C:\>$blob = Get-AzStorageBlob -Container containername -Blob blobname
 PS C:\>Get-AzStorageBlobContent -CloudBlob $blob.ICloudBlob -Destination "C:\test"
 ```
 
-This example first get a blob object and save it in a variable, then download blob content with the blob object. 
+This example first get a blob object and save it in a variable, then download blob content with the blob object.
 
 ### Example 5: Download a blob content with blob Uri
 ```
 PS C:\>Get-AzStorageBlobContent -Uri $blobUri -Destination "C:\test" -Force
 ```
 
-This example will download a blob content with Uri, the Uri can be a Uri with Sas token. 
+This example will download a blob content with Uri, the Uri can be a Uri with Sas token.
 If the blob is on a managed disk account, and server requires a bearer token besides Sas Uri to download, the cmdlet will try to generate a bearer token with server returned audience and the login AAD user credentail, then download blob with both Sas Uri and bearer token.
 
 ## PARAMETERS
@@ -330,9 +330,9 @@ Accept wildcard characters: False
 ```
 
 ### -TagCondition
-Optional Tag expression statement to check match condition. 
+Optional Tag expression statement to check match condition.
 The blob request will fail when the blob tags does not match the given expression.
-See details in https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
+See details in https://learn.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
 
 ```yaml
 Type: System.String

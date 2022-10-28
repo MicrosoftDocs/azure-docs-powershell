@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/get-azsshkey
+online version: https://learn.microsoft.com/powershell/module/az.compute/get-azsshkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzSshKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzSshKey.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the properties of SSH Public Key resources.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/get-azsshkey) for up-to-date information.
 
 ## SYNTAX
 
@@ -50,7 +53,7 @@ This example retrieves a list of Ssh Public Key resources that are in Resource G
 Get-AzSshKey
 ```
 
-This example retrieves all the Ssh Public Key resources in the subscription. 
+This example retrieves all the Ssh Public Key resources in the subscription.
 
 ## PARAMETERS
 

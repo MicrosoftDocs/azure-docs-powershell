@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/update-azvirtualrouter
+online version: https://learn.microsoft.com/powershell/module/az.network/update-azvirtualrouter
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVirtualRouter.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVirtualRouter.md
@@ -10,7 +10,10 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzVirtualRouter
 
 ## SYNOPSIS
-Updates a Virtual Router. 
+Updates a Virtual Router.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/update-azvirtualrouter) for up-to-date information.
 
 ## SYNTAX
 

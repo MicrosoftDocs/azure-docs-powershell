@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ConnectedMachine
-online version: https://docs.microsoft.com/powershell/module/az.connectedmachine/update-azconnectedprivatelinkscopetag
+online version: https://learn.microsoft.com/powershell/module/az.connectedmachine/update-azconnectedprivatelinkscopetag
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/help/Update-AzConnectedPrivateLinkScopeTag.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/help/Update-AzConnectedPrivateLinkScopeTag.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates an existing PrivateLinkScope's tags.
 To update other fields use the CreateOrUpdate method.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectedmachine/update-azconnectedprivatelinkscopetag) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SpringCloud
-online version: https://docs.microsoft.com/powershell/module/az.springcloud/update-azspringcloud
+online version: https://learn.microsoft.com/powershell/module/az.springcloud/update-azspringcloud
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Update-AzSpringCloud.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Update-AzSpringCloud.md
@@ -41,7 +41,7 @@ Operation to update an exiting Service.
 
 ### Example 1: Update Spring Cloud Service by name
 ```powershell
-Update-AzSpringCloud -ResourceGroupName spring-cloud-rg -ServiceName spring-cloud-service 
+Update-AzSpringCloud -ResourceGroupName spring-cloud-rg -ServiceName spring-cloud-service
 ```
 
 ```output

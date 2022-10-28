@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/set-aznetworkmanagerconnectivityconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.network/set-aznetworkmanagerconnectivityconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzNetworkManagerConnectivityConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzNetworkManagerConnectivityConfiguration.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates a connectivity configuration.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/set-aznetworkmanagerconnectivityconfiguration) for up-to-date information.
 
 ## SYNTAX
 
@@ -30,7 +33,7 @@ The **Set-AzNetworkManagerConnectivityConfiguration** cmdlet updates a connectiv
 $ConnectivityConfiguration = Get-AzNetworkManagerConnectivityConfiguration -Name "psConnectivityConfig" -NetworkManagerName "psNetworkManager" -ResourceGroupName "psResourceGroup"
 $connectivityGroupItem = New-AzNetworkManagerConnectivityGroupItem -NetworkGroupId "/subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/networkGroups/psNetworkGroup"
 $connectivityGroupItem2 = New-AzNetworkManagerConnectivityGroupItem -NetworkGroupId "/subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/networkGroups/psNetworkGroup2"
-[System.Collections.Generic.List[Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerConnectivityGroupItem]]$connectivityGroup  = @()  
+[System.Collections.Generic.List[Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerConnectivityGroupItem]]$connectivityGroup  = @()
 $connectivityGroup.Add($connectivityGroupItem)
 $connectivityGroup.Add($connectivityGroupItem2)
 $ConnectivityConfiguration.AppliesToGroups = $connectivityGroup

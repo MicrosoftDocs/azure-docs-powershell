@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 555D58AB-1361-4BB1-ACD0-905C3C6F4F7E
-online version: https://docs.microsoft.com/powershell/module/az.sql/set-azsqlelasticpool
+online version: https://learn.microsoft.com/powershell/module/az.sql/set-azsqlelasticpool
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlElasticPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlElasticPool.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies properties of an elastic database pool in Azure SQL Database.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/set-azsqlelasticpool) for up-to-date information.
 
 ## SYNTAX
 
@@ -35,7 +38,7 @@ Set-AzSqlElasticPool [-ElasticPoolName] <String> [-Edition <String>] [-StorageMB
 
 ## DESCRIPTION
 The **Set-AzSqlElasticPool** cmdlet sets properties for an elastic pool in Azure SQL Database. This cmdlet can modify the eDTUs per pool (*Dtu*), storage max size per pool (*StorageMB*), maximum eDTUs per database (*DatabaseDtuMax*), and minimum eDTUs per database (*DatabaseDtuMin*).
-Several parameters (*-Dtu, -DatabaseDtuMin, and -DatabaseDtuMax*) require the value being set is from the list of valid values for that parameter. For example, -DatabaseDtuMax for a Standard 100 eDTU pool can only be set to 10, 20, 50, or 100.  For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool).
+Several parameters (*-Dtu, -DatabaseDtuMin, and -DatabaseDtuMax*) require the value being set is from the list of valid values for that parameter. For example, -DatabaseDtuMax for a Standard 100 eDTU pool can only be set to 10, 20, 50, or 100.  For details about which values are valid, see the table for your specific size pool in [elastic pools](https://learn.microsoft.com/azure/sql-database/sql-database-elastic-pool).
 
 ## EXAMPLES
 
@@ -130,7 +133,7 @@ Accept wildcard characters: False
 
 ### -DatabaseDtuMax
 Specifies the maximum number of DTUs that any single database in the pool can consume.
-For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool).
+For details about which values are valid, see the table for your specific size pool in [elastic pools](https://learn.microsoft.com/azure/sql-database/sql-database-elastic-pool).
 The default
 values for different editions are as follows:
 - Basic.  5 DTUs
@@ -151,7 +154,7 @@ Accept wildcard characters: False
 
 ### -DatabaseDtuMin
 Specifies the minimum number of DTUs that the elastic pool guarantees to all the databases in the pool.
-For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool).
+For details about which values are valid, see the table for your specific size pool in [elastic pools](https://learn.microsoft.com/azure/sql-database/sql-database-elastic-pool).
 The default value is zero (0).
 
 ```yaml
@@ -213,7 +216,7 @@ Accept wildcard characters: False
 
 ### -Dtu
 Specifies the total number of shared DTUs for the elastic pool.
-For details about which values are valid, see the table for your specific size pool in [elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool).
+For details about which values are valid, see the table for your specific size pool in [elastic pools](https://learn.microsoft.com/azure/sql-database/sql-database-elastic-pool).
 The default values for different
 editions are as follows:
 - Basic. 100 DTUs
@@ -464,4 +467,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-AzSqlElasticPool](./New-AzSqlElasticPool.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)

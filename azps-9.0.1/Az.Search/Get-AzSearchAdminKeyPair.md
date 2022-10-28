@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Search.dll-Help.xml
 Module Name: Az.Search
-online version: https://docs.microsoft.com/powershell/module/az.search/get-azsearchadminkeypair
+online version: https://learn.microsoft.com/powershell/module/az.search/get-azsearchadminkeypair
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Get-AzSearchAdminKeyPair.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Get-AzSearchAdminKeyPair.md
@@ -42,8 +42,8 @@ The **Get-AzSearchAdminKeyPair** cmdlet gets the admin key pair of the Azure Cog
 Get-AzSearchAdminKeyPair -ResourceGroupName felixwa-01 -ServiceName felixwa-basic-search
 ```
 ```output
-Primary                          Secondary                       
--------                          ---------                       
+Primary                          Secondary
+-------                          ---------
 3B06A25BDADFF72EC132736BAA2547A1 E643B75A52E04DF13EB690807C451C55
 ```
 

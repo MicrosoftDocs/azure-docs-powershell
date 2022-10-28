@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 8F7AF1B8-D769-452C-92CF-4486C3EB894D
-online version: https://docs.microsoft.com/powershell/module/az.compute/set-azvmosdisk
+online version: https://learn.microsoft.com/powershell/module/az.compute/set-azvmosdisk
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMOSDisk.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMOSDisk.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Sets the operating system disk properties on a virtual machine.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/set-azvmosdisk) for up-to-date information.
 
 ## SYNTAX
 
@@ -73,10 +76,10 @@ The **Set-AzVMOSDisk** cmdlet sets the operating system disk properties on a vir
 
 ### Example 1: Set properties on a virtual machine from platform image
 ```powershell
-$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13" 
-$VirtualMachine = New-AzVMConfig -VMName "VirtualMachine17" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id 
+$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13"
+$VirtualMachine = New-AzVMConfig -VMName "VirtualMachine17" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id
 Set-AzVMOSDisk -VM $VirtualMachine -Name "OsDisk12" -VhdUri "os.vhd" -Caching ReadWrite
-$VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Linux -ComputerName "MainComputer" -Credential (Get-Credential) 
+$VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Linux -ComputerName "MainComputer" -Credential (Get-Credential)
 $VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -PublisherName "Canonical" -Offer "UbuntuServer" -Skus "15.10" -Version "latest"
 $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name "osDisk.vhd" -VhdUri "https://mystorageaccount.blob.core.windows.net/disks/" -CreateOption FromImage
 New-AzVM -VM $VirtualMachine -ResourceGroupName "ResourceGroup11"
@@ -90,7 +93,7 @@ The final command sets the properties on the virtual machine in $VirtualMachine.
 
 ### Example 2: Sets properties on a virtual machine from generalized user image
 ```powershell
-$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13" 
+$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13"
 $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine17" -VMSize "Standard_A1"
 $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Linux -ComputerName "MainComputer" -Credential (Get-Credential)
 $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name "osDisk.vhd" -SourceImageUri "https://mystorageaccount.blob.core.windows.net/vhds/myOSImage.vhd" -VhdUri "https://mystorageaccount.blob.core.windows.net/disks/" -CreateOption fromImage -Linux
@@ -105,7 +108,7 @@ The final command sets the properties on the virtual machine in $VirtualMachine.
 
 ### Example 3: Sets properties on a virtual machine from specialized user image
 ```powershell
-$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13" 
+$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet13"
 $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine17" -VMSize "Standard_A1"
 $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name "osDisk.vhd" -VhdUri "https://mystorageaccount.blob.core.windows.net/disks/" -CreateOption Attach -Linux
 New-AzVM -VM $VirtualMachine -ResourceGroupName "ResourceGroup11"
@@ -132,11 +135,11 @@ This example sets the disk encryption settings on a virtual machine operating sy
 $Location = 'northeurope';
 New-AzResourceGroup -Name $ResourceGroupName -Location $Location;
 
-$vmSize = "Standard_DC2as_v5";        
+$vmSize = "Standard_DC2as_v5";
 $identityType = "SystemAssigned";
 $secureEncryptGuestState = "DiskWithVMGuestState";
 $vmSecurityType = "ConfidentialVM";
-$securePassword = "Password" | ConvertTo-SecureString -AsPlainText -Force; 
+$securePassword = "Password" | ConvertTo-SecureString -AsPlainText -Force;
 $cred = New-Object System.Management.Automation.PSCredential ($user, $securePassword);
 
 # Create Key Vault
@@ -150,7 +153,7 @@ $KeyName = "keyname";
 $KeySize = 3072;
 
 Add-AzKeyVaultKey -VaultName $kvname -Name $KeyName -Size $KeySize -KeyOps wrapKey,unwrapKey -KeyType RSA -Destination HSM -Exportable -UseDefaultCVMPolicy;
-        
+
 # Capture Key Vault and Key details
 $encryptionKeyVaultId = (Get-AzKeyVault -VaultName $keyVaultName -ResourceGroupName $ResourceGroupName).ResourceId;
 $encryptionKeyURL = (Get-AzKeyVaultKey -VaultName $keyVaultName -KeyName $keyName).Key.Kid;
@@ -159,18 +162,18 @@ $encryptionKeyURL = (Get-AzKeyVaultKey -VaultName $keyVaultName -KeyName $keyNam
 $diskEncryptionType = "ConfidentialVmEncryptedWithCustomerKey";
 $desConfig = New-AzDiskEncryptionSetConfig -Location $loc -SourceVaultId $encryptionKeyVaultId -KeyUrl $encryptionKeyURL -IdentityType SystemAssigned -EncryptionType $diskEncryptionType;
 New-AzDiskEncryptionSet -ResourceGroupName $ResourceGroupName -Name $desName -DiskEncryptionSet $desConfig;
-        
+
 $diskencset = Get-AzDiskEncryptionSet -ResourceGroupName $rgname -Name $desName;
-        
+
 # Assign DES Access Policy to key vault
 $desIdentity = (Get-AzDiskEncryptionSet -Name $desName -ResourceGroupName $ResourceGroupName).Identity.PrincipalId;
-        
+
 Set-AzKeyVaultAccessPolicy -VaultName $keyVaultName -ResourceGroupName $ResourceGroupName -ObjectId $desIdentity -PermissionsToKeys wrapKey,unwrapKey,get -BypassObjectIdValidation;
-        
+
 $VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $vmSize;
 $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Windows -ComputerName $computerName -Credential $cred -ProvisionVMAgent -EnableAutoUpdate;
 $VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -PublisherName 'MicrosoftWindowsServer' -Offer 'windowsserver' -Skus '2022-datacenter-smalldisk-g2' -Version "latest";
-        
+
 $subnet = New-AzVirtualNetworkSubnetConfig -Name ($subnetPrefix + $ResourceGroupName) -AddressPrefix "10.0.0.0/24";
 $vnet = New-AzVirtualNetwork -Force -Name ($vnetPrefix + $ResourceGroupName) -ResourceGroupName $ResourceGroupName -Location $loc -AddressPrefix "10.0.0.0/16" -Subnet $subnet;
 $vnet = Get-AzVirtualNetwork -Name ($vnetPrefix + $ResourceGroupName) -ResourceGroupName $ResourceGroupName;
@@ -193,14 +196,14 @@ New-AzVM -ResourceGroupName $ResourceGroupName -Location $loc -Vm $VirtualMachin
 $vm = Get-AzVm -ResourceGroupName $ResourceGroupName -Name $vmname;
 
 # Verify the SecurityEncryptionType value on the disk.
-# $vm.StorageProfile.OsDisk.ManagedDisk.SecurityProfile.SecurityEncryptionType == 'DiskWithVMGuestState';              
+# $vm.StorageProfile.OsDisk.ManagedDisk.SecurityProfile.SecurityEncryptionType == 'DiskWithVMGuestState';
 ```
 
 ## PARAMETERS
 
 ### -Caching
 Specifies the caching mode of the operating system disk.
-Valid values are: 
+Valid values are:
 - ReadOnly
 - ReadWrite
 The default value is ReadWrite.
@@ -222,17 +225,17 @@ Accept wildcard characters: False
 
 ### -CreateOption
 Specifies whether this cmdlet creates a disk in the virtual machine from a platform or user image, or attaches an existing disk.
-Valid values are: 
+Valid values are:
 - Attach.
 Specify this option to create a virtual machine from a specialized disk.
 When you specify this option, do not specify the *SourceImageUri* parameter.
 Instead, use the Set-AzVMSourceImage cmdlet.
 You must also use the use the *Windows* or *Linux* parameters to tell the azure platform the type of the operating system on the VHD.
-The *VhdUri* parameter is enough to tell the azure platform the location of the disk to attach. 
+The *VhdUri* parameter is enough to tell the azure platform the location of the disk to attach.
 - FromImage.
 Specify this option to create a virtual machine from a platform image or a generalized user image.
 In the case of a generalized user image, you also need to specify the *SourceImageUri* parameter and either the *Windows* or *Linux* parameters to tell the Azure platform the location and type of the operating system disk VHD instead of using the **Set-AzVMSourceImage** cmdlet.
-In the case of a platform image, the *VhdUri* parameter is sufficient. 
+In the case of a platform image, the *VhdUri* parameter is sufficient.
 - Empty.
 
 ```yaml
@@ -278,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiffDiskPlacement
-Specifies the ephemeral disk placement for operating system disk. This property can be used by user in the request to choose the location i.e. cache disk or resource disk space for Ephemeral OS disk provisioning. For more information on Ephemeral OS disk size requirements, please refer Ephemeral OS disk size requirements for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/ephemeral-os-disks#size-requirements and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/ephemeral-os-disks#size-requirements. This parameter can only be used if the parameter DiffDiskSetting is set to 'Local'.
+Specifies the ephemeral disk placement for operating system disk. This property can be used by user in the request to choose the location i.e. cache disk or resource disk space for Ephemeral OS disk provisioning. For more information on Ephemeral OS disk size requirements, please refer Ephemeral OS disk size requirements for Windows VM at https://learn.microsoft.com/azure/virtual-machines/windows/ephemeral-os-disks#size-requirements and Linux VM at https://learn.microsoft.com/azure/virtual-machines/linux/ephemeral-os-disks#size-requirements. This parameter can only be used if the parameter DiffDiskSetting is set to 'Local'.
 
 ```yaml
 Type: System.String

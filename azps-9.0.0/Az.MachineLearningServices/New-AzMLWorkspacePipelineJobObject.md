@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MachineLearningServices
-online version: https://docs.microsoft.com/powershell/module/az.MLWorkspace/new-AzMLWorkspacePipelineJobObject
+online version: https://learn.microsoft.com/powershell/module/az.MLWorkspace/new-AzMLWorkspacePipelineJobObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/New-AzMLWorkspacePipelineJobObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/New-AzMLWorkspacePipelineJobObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for PipelineJob.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/new-azmlworkspacepipelinejobobject) for up-to-date information.
 
 ## SYNTAX
 

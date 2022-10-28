@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: F46041A3-355F-4449-B582-4D2F7314CA05
-online version: https://docs.microsoft.com/powershell/module/az.compute/get-azvmextensionimage
+online version: https://learn.microsoft.com/powershell/module/az.compute/get-azvmextensionimage
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMExtensionImage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMExtensionImage.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets all versions for an Azure extension.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/get-azvmextensionimage) for up-to-date information.
 
 ## SYNTAX
 

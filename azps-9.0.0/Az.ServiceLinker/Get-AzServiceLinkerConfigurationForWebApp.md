@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ServiceLinker
-online version: https://docs.microsoft.com/powershell/module/az.servicelinker/get-azservicelinkerconfigurationforwebapp
+online version: https://learn.microsoft.com/powershell/module/az.servicelinker/get-azservicelinkerconfigurationforwebapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Get-AzServiceLinkerConfigurationForWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Get-AzServiceLinkerConfigurationForWebApp.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 list source configurations for a linker in webapp.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicelinker/get-azservicelinkerconfigurationforwebapp) for up-to-date information.
 
 ## SYNTAX
 
@@ -32,8 +35,8 @@ Get-AzServiceLinkerConfigurationForWebApp -WebApp servicelinker-webapp -Resource
 
 ```output
 Name  : AZURE_POSTGRESQL_POSTGRESQL_NOVNET_CONNECTIONSTRING
-Value : Server=test.postgres.database.azure.com;Database=testdb;Port=543 
-        2;Ssl Mode=Require;User Id=testuser@test;Password=password;   
+Value : Server=test.postgres.database.azure.com;Database=testdb;Port=543
+        2;Ssl Mode=Require;User Id=testuser@test;Password=password;
 
 ```
 

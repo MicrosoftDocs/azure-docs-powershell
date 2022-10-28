@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DnsResolver
-online version: https://docs.microsoft.com/powershell/module/az.dnsresolver/get-azdnsresolveroutboundendpoint
+online version: https://learn.microsoft.com/powershell/module/az.dnsresolver/get-azdnsresolveroutboundendpoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/Get-AzDnsResolverOutboundEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/Get-AzDnsResolverOutboundEndpoint.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets properties of an outbound endpoint for a DNS resolver.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dnsresolver/get-azdnsresolveroutboundendpoint) for up-to-date information.
 
 ## SYNTAX
 
@@ -37,7 +40,7 @@ Gets properties of an outbound endpoint for a DNS resolver.
 
 ## EXAMPLES
 
-### Example 1: List all outbound endpoints under the DNS resolver in a resouce group 
+### Example 1: List all outbound endpoints under the DNS resolver in a resouce group
 ```powershell
 Get-AzDnsResolverOutboundEndpoint -DnsResolverName sampleResolver -ResourceGroupName sampleResouceGroup
 ```
@@ -51,7 +54,7 @@ sampleOutbound2 Microsoft.Network/dnsResolvers/outboundEndpoints "0a001a27-0000-
 
 This command gets all outbound endpoints under the DNS resolver in a resouce group.
 
-### Example 2: Get single outbound endpoint by name 
+### Example 2: Get single outbound endpoint by name
 ```powershell
 Get-AzDnsResolverOutboundEndpoint -DnsResolverName sampleResolver -Name sampleOutbound -ResourceGroupName sampleResouceGroup
 ```

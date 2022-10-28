@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azvirtualnetworkgatewaynatrule
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azvirtualnetworkgatewaynatrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkGatewayNatRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkGatewayNatRule.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a Virtual Network Gateway NatRule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvirtualnetworkgatewaynatrule) for up-to-date information.
 
 ## SYNTAX
 
@@ -62,7 +65,7 @@ Id                : /subscriptions/7afd8f92-c220-4f53-886e-1df53a69afd4/resource
 Etag              : W/"5150d788-e165-42ba-99c4-8138a545fce9"
 ```
 
-### Example 2: 
+### Example 2:
 ```powershell
 Get-AzVirtualNetworkGatewayNatRule -ResourceGroupName "rg1" -ParentResourceName "gw1"
 ```

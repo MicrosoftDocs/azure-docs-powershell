@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/restore-azstoragecontainer
+online version: https://learn.microsoft.com/powershell/module/az.storage/restore-azstoragecontainer
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Restore-AzStorageContainer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Restore-AzStorageContainer.md
@@ -35,8 +35,8 @@ PS C:\> Get-AzStorageContainer -IncludeDeleted -Context $ctx | Where-Object { $_
 
    Storage Account Name: storageaccountname
 
-Name                 PublicAccess         LastModified                   IsDeleted  VersionId                                                                                                                                                                                                                                                         
-----                 ------------         ------------                   ---------  ---------                                                                                                                                                                    
+Name                 PublicAccess         LastModified                   IsDeleted  VersionId
+----                 ------------         ------------                   ---------  ---------
 container1           Off
 container2           Off
 ```
@@ -46,21 +46,21 @@ This command lists all containers include deleted containers, filter out all the
 ### Example 2: Restore a single deleted container
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\> Get-AzStorageContainer -IncludeDeleted -Context $ctx | Where-Object { $_.IsDeleted } 
+PS C:\> Get-AzStorageContainer -IncludeDeleted -Context $ctx | Where-Object { $_.IsDeleted }
 
    Storage Account Name: storageaccountname
 
-Name                 PublicAccess         LastModified                   IsDeleted  VersionId                                                                                                                                                                                                                                                      
-----                 ------------         ------------                   ---------  ---------                                                                                                                                                                   
-container1                                8/28/2020 10:18:13 AM +00:00   True       01D685BC91A88F22                                                                                                                                                                                                                                                                
-container2                                9/4/2020 12:52:37 PM +00:00    True       01D67D248986B6DA  
+Name                 PublicAccess         LastModified                   IsDeleted  VersionId
+----                 ------------         ------------                   ---------  ---------
+container1                                8/28/2020 10:18:13 AM +00:00   True       01D685BC91A88F22
+container2                                9/4/2020 12:52:37 PM +00:00    True       01D67D248986B6DA
 
 PS C:\> Restore-AzStorageContainer -Name container1 -VersionId 01D685BC91A88F22 -Context $ctx
 
    Storage Account Name: storageaccountname
 
-Name                 PublicAccess         LastModified                   IsDeleted  VersionId                                                                                                                                                                                                                                                     
-----                 ------------         ------------                   ---------  ---------                                                                                                                                                                                                                                                        
+Name                 PublicAccess         LastModified                   IsDeleted  VersionId
+----                 ------------         ------------                   ---------  ---------
 container1           Off
 ```
 
@@ -120,7 +120,7 @@ The version of the previously deleted container.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: DeletedContainerVersion, 
+Aliases: DeletedContainerVersion,
 
 Required: True
 Position: 1

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 0CD03BF8-8DB6-44BC-91F0-D863949DBD17
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azpublicipaddress
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azpublicipaddress
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzPublicIpAddress.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzPublicIpAddress.md
@@ -75,7 +75,7 @@ IpConfiguration          : {
 DnsSettings              : null
 Zones                    : {}
 Sku                      : {
-                             "Name": "Basic", 
+                             "Name": "Basic",
                              "Tier": "Regional"
                            }
 IpTags                   : []

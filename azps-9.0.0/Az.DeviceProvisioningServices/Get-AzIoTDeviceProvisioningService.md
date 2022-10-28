@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DeviceProvisioningServices.dll-Help.xml
 Module Name: Az.DeviceProvisioningServices
-online version: https://docs.microsoft.com/powershell/module/az.deviceprovisioningservices/get-aziotdeviceprovisioningservice
+online version: https://learn.microsoft.com/powershell/module/az.deviceprovisioningservices/get-aziotdeviceprovisioningservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Get-AzIoTDeviceProvisioningService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Get-AzIoTDeviceProvisioningService.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 List all or show details of Azure IoT Hub device provisioning services.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.deviceprovisioningservices/get-aziotdeviceprovisioningservice) for up-to-date information.
 
 ## SYNTAX
 
@@ -27,7 +30,7 @@ Get-AzIoTDeviceProvisioningService -ResourceGroupName <String> [-Name] <String>
 ```
 
 ## DESCRIPTION
-For an introduction to Azure IoT Hub Device Provisioning Service, see https://docs.microsoft.com/azure/iot-dps/about-iot-dps.
+For an introduction to Azure IoT Hub Device Provisioning Service, see https://learn.microsoft.com/azure/iot-dps/about-iot-dps.
 
 ## EXAMPLES
 
@@ -38,7 +41,7 @@ Get-AzIoTDeviceProvisioningService
 
 ```output
 ResourceGroupName	Name		Location	ServiceOperationsHostName					IotHubs	AllocationPolicy	Tags	State
------------------	----		--------	-------------------------					------- ----------------	----	-----	
+-----------------	----		--------	-------------------------					------- ----------------	----	-----
 myresourcegroup0	myiotdps0	eastus		myiotdps0.azure-devices-provisioning.net	0       Static				0		Active
 myresourcegroup1    myiotdps1	eastus		myiotdps1.azure-devices-provisioning.net	4       Hashed				0		Active
 myresourcegroup1    myiotdps2	westus		myiotdps2.azure-devices-provisioning.net	4       GeoLatency			0		Active

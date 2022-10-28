@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
 ms.assetid: F0981A7A-1B17-4141-A267-927E5B78BE5F
-online version: https://docs.microsoft.com/powershell/module/az.notificationhubs/set-aznotificationhubsnamespaceauthorizationrule
+online version: https://learn.microsoft.com/powershell/module/az.notificationhubs/set-aznotificationhubsnamespaceauthorizationrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Set-AzNotificationHubsNamespaceAuthorizationRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Set-AzNotificationHubsNamespaceAuthorizationRule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Sets authorization rules for a notification hub namespace.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.notificationhubs/set-aznotificationhubsnamespaceauthorizationrule) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,13 +41,13 @@ You can use the .NET Framework to accomplish this.
 You can then copy those property values to the rule through the *SASRule* parameter.
 Alternatively, you can create a JSON (JavaScript Object Notation) file containing the relevant configuration values and then apply those values through the *InputFile* parameter.
 A JSON file is a text file that uses syntax similar to this:
-{  
-    "Name": "ContosoAuthorizationRule",  
-    "PrimaryKey": "WE4qH0398AyXjlekt56gg1gMR3NHoMs29KkUnnpUk01Y=",  
-    "Rights": \[  
-        "Listen",  
-        "Send"  
-    \]  
+{
+    "Name": "ContosoAuthorizationRule",
+    "PrimaryKey": "WE4qH0398AyXjlekt56gg1gMR3NHoMs29KkUnnpUk01Y=",
+    "Rights": \[
+        "Listen",
+        "Send"
+    \]
 }
 When used in conjunction with the **Set-AzNotificationHubsNamespaceAuthorizationRule** cmdlet, the preceding JSON sample modifies an authorization rule named ContosoAuthorizationRule to give users Listen and Send rights to the namespace.
 

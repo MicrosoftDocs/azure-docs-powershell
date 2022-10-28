@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
 Module Name: Az.Accounts
-online version: https://docs.microsoft.com/powershell/module/az.accounts/enable-azdatacollection
+online version: https://learn.microsoft.com/powershell/module/az.accounts/enable-azdatacollection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Enable-AzDataCollection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Enable-AzDataCollection.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Enables Azure PowerShell to collect data to improve the user experience with the Azure PowerShell
 cmdlets. Executing this cmdlet opts in to data collection for the current user on the current
 machine. Data is collected by default unless you explicitly opt out.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.accounts/enable-azdatacollection) for up-to-date information.
 
 ## SYNTAX
 

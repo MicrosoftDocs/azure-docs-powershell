@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 60BED40A-EEA4-4667-93E9-8A9B35037726
-online version: https://docs.microsoft.com/powershell/module/az.resources/move-azresource
+online version: https://learn.microsoft.com/powershell/module/az.resources/move-azresource
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Move-AzResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Move-AzResource.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Moves a resource to a different resource group or subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/move-azresource) for up-to-date information.
 
 ## SYNTAX
 

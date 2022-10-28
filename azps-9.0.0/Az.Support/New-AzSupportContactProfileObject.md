@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Support.dll-Help.xml
 Module Name: Az.Support
-online version: https://docs.microsoft.com/powershell/module/az.support/new-azsupportcontactprofileobject
+online version: https://learn.microsoft.com/powershell/module/az.support/new-azsupportcontactprofileobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/New-AzSupportContactProfileObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/New-AzSupportContactProfileObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a support contact profile object.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.support/new-azsupportcontactprofileobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -22,7 +25,7 @@ New-AzSupportContactProfileObject -FirstName <String> -LastName <String>
 ```
 
 ## DESCRIPTION
-This is a helper cmdlet that you can use to create a support contact profile object when creating or updating a support ticket. You must specify the following parameters which are mandatory for creating a support ticket: 
+This is a helper cmdlet that you can use to create a support contact profile object when creating or updating a support ticket. You must specify the following parameters which are mandatory for creating a support ticket:
 
 	• FirstName
 	• LastName
@@ -36,7 +39,7 @@ This is a helper cmdlet that you can use to create a support contact profile obj
 
 ### Example 1: Create a contact object
 ```powershell
-New-AzSupportContactProfileObject -FirstName "First" -LastName "Last" -PreferredContactMethod "Email" -PrimaryEmailAddress "user@contoso.com" -PreferredTimeZone "Pacific Standard Time" -PreferredSupportLanguage "en-US" -Country "USA"             
+New-AzSupportContactProfileObject -FirstName "First" -LastName "Last" -PreferredContactMethod "Email" -PrimaryEmailAddress "user@contoso.com" -PreferredTimeZone "Pacific Standard Time" -PreferredSupportLanguage "en-US" -Country "USA"
 ```
 ```output
 FirstName LastName PreferredContactMethod PrimaryEmailAddress  PhoneNumber PreferredTimeZone     Country PreferredSupportLanguage

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/update-azrecoveryservicesvault
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/update-azrecoveryservicesvault
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Update-AzRecoveryServicesVault.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Update-AzRecoveryServicesVault.md
@@ -72,7 +72,7 @@ The fifth cmdlet shows the Identities added to the vault.
 ```powershell
 $vault = Get-AzRecoveryServicesVault -Name "vaultName" -ResourceGroupName "resourceGroupName"
 $updatedVault = Update-AzRecoveryServicesVault -ResourceGroupName $vault.ResourceGroupName -Name $vault.Name -RemoveSystemAssigned
-$AllUserIdentities =  $vault.Identity.UserAssignedIdentities.Keys | ForEach-Object {$_} 
+$AllUserIdentities =  $vault.Identity.UserAssignedIdentities.Keys | ForEach-Object {$_}
 $updatedVault = Update-AzRecoveryServicesVault -ResourceGroupName $vault.ResourceGroupName -Name $vault.Name -RemoveUserAssigned -IdentityId $AllUserIdentities
 $updatedVault.Identity | Format-List
 ```

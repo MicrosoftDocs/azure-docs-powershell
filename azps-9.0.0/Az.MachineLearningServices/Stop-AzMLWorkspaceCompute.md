@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MachineLearningServices
-online version: https://docs.microsoft.com/powershell/module/az.machinelearningservices/stop-azmlworkspacecompute
+online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/stop-azmlworkspacecompute
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/Stop-AzMLWorkspaceCompute.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/Stop-AzMLWorkspaceCompute.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Posts a stop action to a compute instance
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/stop-azmlworkspacecompute) for up-to-date information.
 
 ## SYNTAX
 
@@ -41,7 +44,7 @@ Posts a stop action to a compute instance
 
 ### Example 2: Posts a stop action to a compute instance by pipeline
 ```powershell
-Get-AzMLWorkspaceCompute -ResourceGroupName ml-rg-test -WorkspaceName mlworkspace-test01 -Name compute02 | Stop-AzMLWorkspaceCompute 
+Get-AzMLWorkspaceCompute -ResourceGroupName ml-rg-test -WorkspaceName mlworkspace-test01 -Name compute02 | Stop-AzMLWorkspaceCompute
 ```
 
 Posts a stop action to a compute instance by pipeline

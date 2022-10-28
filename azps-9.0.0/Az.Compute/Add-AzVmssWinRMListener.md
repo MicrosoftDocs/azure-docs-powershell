@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 987BD670-20F3-4105-A5BE-03E712AB2B56
-online version: https://docs.microsoft.com/powershell/module/az.compute/add-azvmsswinrmlistener
+online version: https://learn.microsoft.com/powershell/module/az.compute/add-azvmsswinrmlistener
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssWinRMListener.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssWinRMListener.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Adds a WinRM listener to the VMSS.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/add-azvmsswinrmlistener) for up-to-date information.
 
 ## SYNTAX
 

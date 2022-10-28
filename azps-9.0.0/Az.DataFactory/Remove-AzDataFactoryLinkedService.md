@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 9425D38D-5978-421F-A438-4463068C4628
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/remove-azdatafactorylinkedservice
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/remove-azdatafactorylinkedservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryLinkedService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryLinkedService.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a linked service from Azure Data Factory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/remove-azdatafactorylinkedservice) for up-to-date information.
 
 ## SYNTAX
 
@@ -40,7 +43,7 @@ Remove-AzDataFactoryLinkedService -ResourceGroupName "ADF" -DataFactoryName "Wik
 
 ```output
 Confirm
-Are you sure you want to remove linked service 'LinkedServiceTest' in data factory 'WikiADF'? 
+Are you sure you want to remove linked service 'LinkedServiceTest' in data factory 'WikiADF'?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 True
 ```

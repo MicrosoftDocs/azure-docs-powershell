@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MachineLearningServices
-online version: https://docs.microsoft.com/powershell/module/az.MLWorkspace/new-AzMLWorkspaceMLTableJobOutputObject
+online version: https://learn.microsoft.com/powershell/module/az.MLWorkspace/new-AzMLWorkspaceMLTableJobOutputObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/New-AzMLWorkspaceMLTableJobOutputObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/New-AzMLWorkspaceMLTableJobOutputObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for MLTableJobOutput.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/new-azmlworkspacemltablejoboutputobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -26,7 +29,7 @@ Create an in-memory object for MLTableJobOutput.
 
 ### Example 1: Create an in-memory object for MLTableJobOutput
 ```powershell
-New-AzMLWorkspaceMLTableJobOutputObject 
+New-AzMLWorkspaceMLTableJobOutputObject
 ```
 
 Create an in-memory object for MLTableJobOutput

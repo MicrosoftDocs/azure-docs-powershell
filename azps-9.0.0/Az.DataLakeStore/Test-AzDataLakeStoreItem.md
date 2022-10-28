@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
 ms.assetid: 0937A390-6AC2-4611-AA6C-99936AC0ABFD
-online version: https://docs.microsoft.com/powershell/module/az.datalakestore/test-azdatalakestoreitem
+online version: https://learn.microsoft.com/powershell/module/az.datalakestore/test-azdatalakestoreitem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Test-AzDataLakeStoreItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Test-AzDataLakeStoreItem.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Tests the existence of a file or folder in Data Lake Store.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/test-azdatalakestoreitem) for up-to-date information.
 
 ## SYNTAX
 
@@ -91,8 +94,8 @@ Accept wildcard characters: False
 ### -PathType
 Specifies the type of item to test.
 The acceptable values for this parameter are:
-- Any 
-- File 
+- Any
+- File
 - Folder
 
 ```yaml

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: 5846BBB7-DA8E-41B5-A894-BA2B61C2212C
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/backup-azapimanagement
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/backup-azapimanagement
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Backup-AzApiManagement.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Backup-AzApiManagement.md

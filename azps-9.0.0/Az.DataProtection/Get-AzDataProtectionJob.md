@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataProtection
-online version: https://docs.microsoft.com/powershell/module/az.dataprotection/get-azdataprotectionjob
+online version: https://learn.microsoft.com/powershell/module/az.dataprotection/get-azdataprotectionjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Get-AzDataProtectionJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Get-AzDataProtectionJob.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a job with id in a backup vault
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/get-azdataprotectionjob) for up-to-date information.
 
 ## SYNTAX
 
@@ -55,7 +58,7 @@ a6a4879d-f914-4174-b129-0e27da8a4fb0 Microsoft.DataProtection/backupVaults/backu
 
 This command gets all the backup jobs in a given backup vault.
 
-### Example 2: Get a single Job 
+### Example 2: Get a single Job
 ```powershell
 Get-AzDataProtectionJob -SubscriptionId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" -ResourceGroupName sarath-rg -VaultName sarath-vault -Id 4abaea8c-f53a-4bb1-9963-59f96b597165
 ```
@@ -185,13 +188,13 @@ To create the parameters described below, construct a hash table containing the 
 
 `INPUTOBJECT <IDataProtectionIdentity>`: Identity Parameter
   - `[BackupInstanceName <String>]`: The name of the backup instance
-  - `[BackupPolicyName <String>]`: 
+  - `[BackupPolicyName <String>]`:
   - `[Id <String>]`: Resource identity path
   - `[JobId <String>]`: The Job ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000).
   - `[Location <String>]`: The location in which uniqueness will be verified.
-  - `[OperationId <String>]`: 
-  - `[RecoveryPointId <String>]`: 
-  - `[RequestName <String>]`: 
+  - `[OperationId <String>]`:
+  - `[RecoveryPointId <String>]`:
+  - `[RequestName <String>]`:
   - `[ResourceGroupName <String>]`: The name of the resource group where the backup vault is present.
   - `[ResourceGuardsName <String>]`: The name of ResourceGuard
   - `[SubscriptionId <String>]`: The subscription Id.

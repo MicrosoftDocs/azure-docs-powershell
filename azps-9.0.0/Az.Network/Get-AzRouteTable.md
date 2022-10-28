@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 4F487FCA-930D-4D56-8D28-7693312E1A01
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azroutetable
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azroutetable
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzRouteTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzRouteTable.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets route tables.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azroutetable) for up-to-date information.
 
 ## SYNTAX
 
@@ -46,7 +49,7 @@ Id                : /subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGr
                     k/routeTables/routetable01
 Etag              : W/"db5f4e12-3f34-465b-92dd-0ab3bf6fc274"
 ProvisioningState : Succeeded
-Tags              : 
+Tags              :
 Routes            : [
                       {
                         "Name": "route07",
@@ -55,10 +58,10 @@ Routes            : [
                     soft.Network/routeTables/routetable01/routes/route07",
                         "AddressPrefix": "10.1.0.0/16",
                         "NextHopType": "VnetLocal",
-                        "NextHopIpAddress": null, 
+                        "NextHopIpAddress": null,
                         "ProvisioningState": "Succeeded"
                       }
-                    ] 
+                    ]
 Subnets           : []
 ```
 
@@ -77,7 +80,7 @@ Id                : /subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGr
                     k/routeTables/routetable01
 Etag              : W/"db5f4e12-3f34-465b-92dd-0ab3bf6fc274"
 ProvisioningState : Succeeded
-Tags              : 
+Tags              :
 Routes            : [
                       {
                         "Name": "route07",
@@ -86,10 +89,10 @@ Routes            : [
                     soft.Network/routeTables/routetable01/routes/route07",
                         "AddressPrefix": "10.1.0.0/16",
                         "NextHopType": "VnetLocal",
-                        "NextHopIpAddress": null, 
+                        "NextHopIpAddress": null,
                         "ProvisioningState": "Succeeded"
                       }
-                    ] 
+                    ]
 Subnets           : []
 
 Name              : routetable02
@@ -99,7 +102,7 @@ Id                : /subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGr
                     k/routeTables/routetable02
 Etag              : W/"db5f4e12-3f34-465b-92dd-0ab3bf6fc274"
 ProvisioningState : Succeeded
-Tags              : 
+Tags              :
 Routes            : [
                       {
                         "Name": "route07",
@@ -108,10 +111,10 @@ Routes            : [
                     soft.Network/routeTables/routetable02/routes/route07",
                         "AddressPrefix": "10.1.0.0/16",
                         "NextHopType": "VnetLocal",
-                        "NextHopIpAddress": null, 
+                        "NextHopIpAddress": null,
                         "ProvisioningState": "Succeeded"
                       }
-                    ] 
+                    ]
 Subnets           : []
 ```
 

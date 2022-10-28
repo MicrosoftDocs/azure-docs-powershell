@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
 Module Name: Az.TrafficManager
 ms.assetid: 2129C457-592B-484C-A148-828BFD5895D4
-online version: https://docs.microsoft.com/powershell/module/az.trafficmanager/remove-aztrafficmanagerendpoint
+online version: https://learn.microsoft.com/powershell/module/az.trafficmanager/remove-aztrafficmanagerendpoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Remove-AzTrafficManagerEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Remove-AzTrafficManagerEndpoint.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an endpoint from Traffic Manager.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.trafficmanager/remove-aztrafficmanagerendpoint) for up-to-date information.
 
 ## SYNTAX
 
@@ -143,7 +146,7 @@ Accept wildcard characters: False
 
 ### -Type
 Specifies the type of endpoint that this cmdlet adds to the Traffic Manager profile.
-Valid values are: 
+Valid values are:
 
 - AzureEndpoints
 - ExternalEndpoints

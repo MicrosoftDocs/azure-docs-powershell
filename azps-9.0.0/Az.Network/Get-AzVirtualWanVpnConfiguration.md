@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azvirtualwanvpnconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azvirtualwanvpnconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualWanVpnConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualWanVpnConfiguration.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the Vpn configuration for a subset of VpnSites connected to this WAN via VpnConnections. Uploads the generated Vpn
 configuration to a storage blob specified by the customer.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvirtualwanvpnconfiguration) for up-to-date information.
 
 ## SYNTAX
 
@@ -84,7 +87,7 @@ SasUrl
 SignedSasUrl
 ```
 
-The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub and a VpnSite in West US in "testRG" resource group in Azure. 
+The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub and a VpnSite in West US in "testRG" resource group in Azure.
 A VPN gateway will be created thereafter in the Virtual Hub with 2 scale units.
 
 Once the gateway has been created, it is connected to the VpnSite using the New-AzVpnConnection command.

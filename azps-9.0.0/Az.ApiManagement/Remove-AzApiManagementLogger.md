@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: 98AD1C84-B147-48EB-94B5-8D77B531F6F8
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/remove-azapimanagementlogger
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/remove-azapimanagementlogger
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementLogger.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementLogger.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an API Management Logger.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/remove-azapimanagementlogger) for up-to-date information.
 
 ## SYNTAX
 

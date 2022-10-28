@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azvirtualnetworkgatewayvpnclientconnectionhealth
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azvirtualnetworkgatewayvpnclientconnectionhealth
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkGatewayVpnClientConnectionHealth.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkGatewayVpnClientConnectionHealth.md
@@ -9,7 +9,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 # Get-AzVirtualNetworkGatewayVpnClientConnectionHealth
 
-## SYNOPSIS 
+## SYNOPSIS
 Get the list of vpn client connection health of an Azure virtual network gateway for per vpn client connection
 
 > [!NOTE]
@@ -72,7 +72,7 @@ IngressBytesTransferred   : 67968
 MaxPacketsPerSecond       : 1
 ```
 
-For the Azure virtual network gateway named gatewayname in resource group resourceGroup, retrieves the currently connected vpn client connection by using OpenVpn. 
+For the Azure virtual network gateway named gatewayname in resource group resourceGroup, retrieves the currently connected vpn client connection by using OpenVpn.
 
 ### Example 2
 

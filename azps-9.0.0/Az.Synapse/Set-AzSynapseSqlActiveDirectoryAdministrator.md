@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/set-azsynapsesqlactivedirectoryadministrator
+online version: https://learn.microsoft.com/powershell/module/az.synapse/set-azsynapsesqlactivedirectoryadministrator
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Set-AzSynapseSqlActiveDirectoryAdministrator.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Set-AzSynapseSqlActiveDirectoryAdministrator.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Provisions an Azure AD administrator for Synapse Analytics SQL pool.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/set-azsynapsesqlactivedirectoryadministrator) for up-to-date information.
 
 ## SYNTAX
 
@@ -55,9 +58,9 @@ Set-AzSynapseSqlActiveDirectoryAdministrator -ResourceId <String> -ObjectId <Gui
 The **Set-AzSynapseSqlActiveDirectoryAdministrator** cmdlet provisions an Azure Active Directory (Azure AD) administrator for Azure Synapse Analytics Workspace in the current subscription.
 You can provision only one administrator at a time.
 The following members of Azure AD can be provisioned as a Synapse Analytics Workspace administrator:
-- Native members of Azure AD 
-- Federated members of Azure AD 
-- Imported members from other Azure ADs who are native or federated members 
+- Native members of Azure AD
+- Federated members of Azure AD
+- Imported members from other Azure ADs who are native or federated members
 - Azure AD groups created as security groups
 Microsoft accounts, such as those in the Outlook.com, Hotmail.com, or Live.com domains, are not supported as administrators.
 Other guest accounts, such as those in the Gmail.com or Yahoo.com domains, are not supported as administrators.

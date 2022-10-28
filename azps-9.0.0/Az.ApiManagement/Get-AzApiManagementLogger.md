@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: A935ABAC-6C60-4AE3-9434-B9BCC1182A34
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementlogger
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementlogger
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementLogger.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementLogger.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets API Management Logger objects.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/get-azapimanagementlogger) for up-to-date information.
 
 ## SYNTAX
 

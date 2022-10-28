@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 30C1AF6C-A8DC-4CA0-9E5F-10641A29D0E8
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/new-azdatafactorypipeline
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/new-azdatafactorypipeline
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/New-AzDataFactoryPipeline.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/New-AzDataFactoryPipeline.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a pipeline in Data Factory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/new-azdatafactorypipeline) for up-to-date information.
 
 ## SYNTAX
 
@@ -32,10 +35,10 @@ New-AzDataFactoryPipeline [[-Name] <String>] [-DataFactory] <PSDataFactory> [-Fi
 The **New-AzDataFactoryPipeline** cmdlet creates a pipeline in Azure Data Factory.
 If you specify a name for a pipeline that already exists, the cmdlet prompts you for confirmation before it replaces the pipeline.
 If you specify the *Force* parameter, the cmdlet replaces the existing pipeline without confirmation.
-Perform these operations in the following order: 
-- Create a data factory. 
-- Create linked services. 
-- Create datasets. 
+Perform these operations in the following order:
+- Create a data factory.
+- Create linked services.
+- Create datasets.
 - Create a pipeline.
 If a pipeline with the same name already exists in the data factory, this cmdlet prompts you to confirm whether to overwrite the existing pipeline with the new pipeline.
 If you confirm to overwrite the existing pipeline, the pipeline definition is also replaced.
@@ -44,7 +47,7 @@ If you confirm to overwrite the existing pipeline, the pipeline definition is al
 
 ### Example 1: Create a pipeline
 ```powershell
-New-AzDataFactoryPipeline -ResourceGroupName "ADF" -Name "DPWikisample" -DataFactoryName "WikiADF" -File "C:\DPWikisample.json" 
+New-AzDataFactoryPipeline -ResourceGroupName "ADF" -Name "DPWikisample" -DataFactoryName "WikiADF" -File "C:\DPWikisample.json"
 ```
 
 ```output

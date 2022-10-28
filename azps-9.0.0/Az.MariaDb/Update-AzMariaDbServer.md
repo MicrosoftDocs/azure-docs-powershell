@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MariaDb
-online version: https://docs.microsoft.com/powershell/module/az.mariadb/update-azmariadbserver
+online version: https://learn.microsoft.com/powershell/module/az.mariadb/update-azmariadbserver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MariaDb/help/Update-AzMariaDbServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MariaDb/help/Update-AzMariaDbServer.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Updates an existing server.
 The request body can contain one to many of the properties present in the normal server definition.
 Use Update-AzMariaDbConfiguration instead if you want update server parameters such as wait_timeout or net_retry_count.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mariadb/update-azmariadbserver) for up-to-date information.
 
 ## SYNTAX
 

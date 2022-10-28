@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ElasticSan
-online version: https://docs.microsoft.com/powershell/module/az.elasticsan/remove-azelasticsan
+online version: https://learn.microsoft.com/powershell/module/az.elasticsan/remove-azelasticsan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Remove-AzElasticSan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Remove-AzElasticSan.md
@@ -33,7 +33,7 @@ Delete a Elastic San.
 
 ### Example 1: Remove a specific Elastic SAN
 ```powershell
-Remove-AzElasticSan -ResourceGroupName myresourcegroup -Name myelasticsan 
+Remove-AzElasticSan -ResourceGroupName myresourcegroup -Name myelasticsan
 ```
 
 This command removes a specific Elastic SAN.

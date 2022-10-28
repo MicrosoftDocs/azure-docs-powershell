@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/invoke-azsynapsedataflowdebugsessioncommand
+online version: https://learn.microsoft.com/powershell/module/az.synapse/invoke-azsynapsedataflowdebugsessioncommand
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Invoke-AzSynapseDataFlowDebugSessionCommand.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Invoke-AzSynapseDataFlowDebugSessionCommand.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Invoke debug action in data flow debug session.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/invoke-azsynapsedataflowdebugsessioncommand) for up-to-date information.
 
 ## SYNTAX
 
@@ -33,10 +36,10 @@ Invoke-AzSynapseDataFlowDebugSessionCommand -WorkspaceObject <PSSynapseWorkspace
 ## DESCRIPTION
 This command executes data preview/stats preview/expression preview for different streams of data flow in debug session. The PowerShell command sequence for data flow debug workflow should be:
 
-Start-AzSynapseDataFlowDebugSession  
-Add-AzSynapseDataFlowDebugSessionPackage  
-Invoke-AzSynapseDataFlowDebugSessionCommand (repeat this step for different commands/targets, or repeat step 2-3 in order to change the package file)  
-Stop-AzSynapseDataFlowDebugSession  
+Start-AzSynapseDataFlowDebugSession
+Add-AzSynapseDataFlowDebugSessionPackage
+Invoke-AzSynapseDataFlowDebugSessionCommand (repeat this step for different commands/targets, or repeat step 2-3 in order to change the package file)
+Stop-AzSynapseDataFlowDebugSession
 
 ## EXAMPLES
 
@@ -49,8 +52,8 @@ $result | Format-Table -wrap
 Id     Name                       PSJobTypeName          State         HasMoreData     Location         Command
 --     ----                       -------------          -----         -----------     --------         -------
 1      Long Running Operation     AzureLongRunningJob`1  Completed     True            localhost        Invoke-AzSynapseDataFlowDebugSessionCommand
-       for 'Invoke-AzSynapseD                                                             
-       ataFlowDebugSessionCommand'            
+       for 'Invoke-AzSynapseD
+       ataFlowDebugSessionCommand'
 
 $output = ConvertFrom-Json($result.Output.Data)
 $output.output
@@ -69,7 +72,7 @@ $ws = Get-AzSynapseWorkspace -Name ContosoWorkspace
 $ws | Invoke-AzSynapseDataFlowDebugSessionCommand -Command executePreviewQuery -SessionId 3afb278e-ac5f-469f-a0b6-2f04c3ab59bc -StreamName source1 -RowLimit 100
 ```
 
-This example invokes data preview command for debug session "3afb278e-ac5f-469f-a0b6-2f04c3ab59bc" in Synapse workspace "ContosoWorkspace" through pipeline. 
+This example invokes data preview command for debug session "3afb278e-ac5f-469f-a0b6-2f04c3ab59bc" in Synapse workspace "ContosoWorkspace" through pipeline.
 
 ## PARAMETERS
 

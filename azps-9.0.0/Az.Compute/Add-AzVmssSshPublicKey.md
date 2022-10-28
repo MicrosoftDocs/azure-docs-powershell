@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 9C216103-EB77-468E-8684-F5E5400B73A7
-online version: https://docs.microsoft.com/powershell/module/az.compute/add-azvmsssshpublickey
+online version: https://learn.microsoft.com/powershell/module/az.compute/add-azvmsssshpublickey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssSshPublicKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssSshPublicKey.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Adds SSH public keys to the VMSS.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/add-azvmsssshpublickey) for up-to-date information.
 
 ## SYNTAX
 

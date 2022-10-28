@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SpringCloud
-online version: https://docs.microsoft.com/powershell/module/az.springcloud/remove-azspringcloud
+online version: https://learn.microsoft.com/powershell/module/az.springcloud/remove-azspringcloud
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Remove-AzSpringCloud.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Remove-AzSpringCloud.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Operation to delete a Service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.springcloud/remove-azspringcloud) for up-to-date information.
 
 ## SYNTAX
 
@@ -33,7 +36,7 @@ Operation to delete a Service.
 
 ### Example 1: Remove Spring Cloud Service by name
 ```powershell
-Remove-AzSpringCloud -ResourceGroupName spring-cloud-rg -ServiceName spring-cloud-service 
+Remove-AzSpringCloud -ResourceGroupName spring-cloud-rg -ServiceName spring-cloud-service
 ```
 
 Remove Spring Cloud Service by name.

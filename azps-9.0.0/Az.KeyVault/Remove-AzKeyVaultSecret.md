@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/remove-azkeyvaultsecret
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/remove-azkeyvaultsecret
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Remove-AzKeyVaultSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Remove-AzKeyVaultSecret.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes a secret in a key vault.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/remove-azkeyvaultsecret) for up-to-date information.
 
 ## SYNTAX
 
@@ -88,7 +91,7 @@ Install-Module Microsoft.PowerShell.SecretManagement -Repository PSGallery -Allo
 Register-SecretVault -Name AzKeyVault -ModuleName Az.KeyVault -VaultParameters @{ AZKVaultName = 'test-kv'; SubscriptionId = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' }
 # Set secret for vault AzKeyVault
 $secure = ConvertTo-SecureString -String "Password" -AsPlainText -Force
-Set-Secret -Vault AzKeyVault -Name secureSecret -SecureStringSecret $secure 
+Set-Secret -Vault AzKeyVault -Name secureSecret -SecureStringSecret $secure
 Remove-Secret -Vault AzKeyVault	-Name secureSecret
 ```
 

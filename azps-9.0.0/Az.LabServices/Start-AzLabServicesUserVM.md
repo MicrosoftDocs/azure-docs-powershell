@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.LabServices
-online version: https://docs.microsoft.com/powershell/module/az.labservices/start-azlabservicesuservm
+online version: https://learn.microsoft.com/powershell/module/az.labservices/start-azlabservicesuservm
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/help/Start-AzLabServicesUserVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/help/Start-AzLabServicesUserVM.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 API to start the assigned vm for the user.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.labservices/start-azlabservicesuservm) for up-to-date information.
 
 ## SYNTAX
 
@@ -214,7 +217,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-USER `<User>`: 
+USER `<User>`:
   - `Email <String>`: Email address of the user.
   - `[AdditionalUsageQuota <TimeSpan?>]`: The amount of usage quota time the user gets in addition to the lab usage quota.
   - `[SystemDataCreatedAt <DateTime?>]`: The timestamp of resource creation (UTC).

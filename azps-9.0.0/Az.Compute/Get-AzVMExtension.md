@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 842652D4-0F1C-4D0D-AB55-0D43D3C5D82A
-online version: https://docs.microsoft.com/powershell/module/az.compute/get-azvmextension
+online version: https://learn.microsoft.com/powershell/module/az.compute/get-azvmextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMExtension.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets properties of Virtual Machine Extensions installed on a virtual machine.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/get-azvmextension) for up-to-date information.
 
 ## SYNTAX
 

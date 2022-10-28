@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.MachineLearning.dll-Help.xml
 Module Name: Az.MachineLearning
-online version: https://docs.microsoft.com/powershell/module/az.machinelearning/get-azmlcommitmentassociation
+online version: https://learn.microsoft.com/powershell/module/az.machinelearning/get-azmlcommitmentassociation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearning/MachineLearning/help/Get-AzMlCommitmentAssociation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearning/MachineLearning/help/Get-AzMlCommitmentAssociation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Retrieves the summary information for one or more commitment associations.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearning/get-azmlcommitmentassociation) for up-to-date information.
 
 ## SYNTAX
 

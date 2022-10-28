@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Support.dll-Help.xml
 Module Name: Az.Support
-online version: https://docs.microsoft.com/powershell/module/az.support/get-azsupportticketcommunication
+online version: https://learn.microsoft.com/powershell/module/az.support/get-azsupportticketcommunication
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Get-AzSupportTicketCommunication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Get-AzSupportTicketCommunication.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get support ticket communications.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.support/get-azsupportticketcommunication) for up-to-date information.
 
 ## SYNTAX
 
@@ -43,7 +46,7 @@ Gets communications for a support ticket. It will retrieve all the communication
 
 This cmdlet supports paging via First and Skip parameters.
 
-You can also retrieve a single support ticket communication by specifying the communication name. 
+You can also retrieve a single support ticket communication by specifying the communication name.
 
 ## EXAMPLES
 

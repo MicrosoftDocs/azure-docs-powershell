@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/set-azsqlinstanceactivedirectoryadministrator
+online version: https://learn.microsoft.com/powershell/module/az.sql/set-azsqlinstanceactivedirectoryadministrator
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlInstanceActiveDirectoryAdministrator.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlInstanceActiveDirectoryAdministrator.md
@@ -38,8 +38,8 @@ Set-AzSqlInstanceActiveDirectoryAdministrator [-DisplayName] <String> [-ObjectId
 The **Set-AzSqlInstanceActiveDirectoryAdministrator** cmdlet provisions an Azure Active Directory (Azure AD) administrator for AzureSQL Managed Instance in the current subscription.
 You can provision only one administrator at a time.
 The following members of Azure AD can be provisioned as a SQL Managed Instance administrator:
-- Native members of Azure AD 
-- Federated members of Azure AD 
+- Native members of Azure AD
+- Federated members of Azure AD
 - Azure AD groups created as security groups
 Imported members from other Azure ADs are not supported as administrators.
 Microsoft accounts, such as those in the Outlook.com, Hotmail.com, or Live.com domains, are not supported as administrators.
@@ -54,8 +54,8 @@ Set-AzSqlInstanceActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup0
 ```
 
 ```output
-ResourceGroupName InstanceName      DisplayName ObjectId 
------------------ ----------------- ----------- -------- 
+ResourceGroupName InstanceName      DisplayName ObjectId
+----------------- ----------------- ----------- --------
 ResourceGroup01   ManagedInstance01 DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 
@@ -68,8 +68,8 @@ Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedIns
 ```
 
 ```output
-ResourceGroupName InstanceName      DisplayName ObjectId 
------------------ ----------------- ----------- -------- 
+ResourceGroupName InstanceName      DisplayName ObjectId
+----------------- ----------------- ----------- --------
 Resourcegroup01   ManagedInstance01 David Chew  11E95548-B179-4FE1-9AF4-ACA49D13ABB9
 ```
 
@@ -81,8 +81,8 @@ Get-AzSqlInstance -ResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
 ```output
-ResourceGroupName InstanceName      DisplayName ObjectId 
------------------ ----------------- ----------- -------- 
+ResourceGroupName InstanceName      DisplayName ObjectId
+----------------- ----------------- ----------- --------
 Resourcegroup01   ManagedInstance01 David Chew  11E95548-B179-4FE1-9AF4-ACA49D13ABB9
 ```
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: https://docs.microsoft.com/powershell/module/az.security/Get-AzSecurityWorkspaceSetting
+online version: https://learn.microsoft.com/powershell/module/az.security/Get-AzSecurityWorkspaceSetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityWorkspaceSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityWorkspaceSetting.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the configured security workspace settings on a subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/get-azsecurityworkspacesetting) for up-to-date information.
 
 ## SYNTAX
 
@@ -41,8 +44,8 @@ Get-AzSecurityWorkspaceSetting
 ```
 
 ```output
-Id                                                                                                         Name    WorkspaceId                                                                                                                               
---                                                                                                         ----    -----------                                                                                                                               
+Id                                                                                                         Name    WorkspaceId
+--                                                                                                         ----    -----------
 /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/workspaceSettings/default default /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourcegroups/mainws/providers/microsoft.operationalinsights/workspaces/securityus...
 ```
 

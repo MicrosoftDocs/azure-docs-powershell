@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Cdn
-online version: https://docs.microsoft.com/powershell/module/az.cdn/update-azcdnorigin
+online version: https://learn.microsoft.com/powershell/module/az.cdn/update-azcdnorigin
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Update-AzCdnOrigin.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Update-AzCdnOrigin.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates an existing origin within an endpoint.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/update-azcdnorigin) for up-to-date information.
 
 ## SYNTAX
 

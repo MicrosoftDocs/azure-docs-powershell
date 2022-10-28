@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/set-azroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/az.network/set-azroutingpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzRoutingPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzRoutingPolicy.md
@@ -12,11 +12,14 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates the destinations or nexthop for the specified Routing Policy of a Routing Intent object.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/set-azroutingpolicy) for up-to-date information.
+
 ## SYNTAX
 
 ### (Default)
 ```
-Set-AzRoutingPolicy -RoutingIntent <PSRoutingIntent> -Name <String> [-Destination <String[]>] [-NextHop <String>] 
+Set-AzRoutingPolicy -RoutingIntent <PSRoutingIntent> -Name <String> [-Destination <String[]>] [-NextHop <String>]
  [-Force] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -31,7 +34,7 @@ $rgName = "testRg"
 $firewallName = "testFirewall"
 $firewall = Get-AzFirewall -Name $firewallName -ResourceGroupName $rgName
 $routingIntent = Get-AzRoutingIntent -Name "routingIntent1" -HubName "hub1" -ResourceGroupName $rgName
-Set-AzRoutingPolicy -Name "PrivateTraffic" -RoutingIntent $routingIntent -Destination @("PrivateTraffic") -NextHop $firewall.Id 
+Set-AzRoutingPolicy -Name "PrivateTraffic" -RoutingIntent $routingIntent -Destination @("PrivateTraffic") -NextHop $firewall.Id
 ```
 ```output
 ProvisioningState   : Succeeded
@@ -100,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the routing policy 
+Name of the routing policy
 
 ```yaml
 Type: System.String
@@ -145,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingIntent
-The routing intent resource to which this rouing policy has to be added. 
+The routing intent resource to which this rouing policy has to be added.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSRoutingIntent

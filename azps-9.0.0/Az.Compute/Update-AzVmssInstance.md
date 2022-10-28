@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: E8C9D68E-7C68-43D0-B348-72E9713CB99F
-online version: https://docs.microsoft.com/powershell/module/az.compute/update-azvmssinstance
+online version: https://learn.microsoft.com/powershell/module/az.compute/update-azvmssinstance
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzVmssInstance.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzVmssInstance.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Starts a manual upgrade of the VMSS instance.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/update-azvmssinstance) for up-to-date information.
 
 ## SYNTAX
 

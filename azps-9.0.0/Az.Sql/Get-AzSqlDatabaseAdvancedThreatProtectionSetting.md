@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 017EF522-ABC5-40EE-B8DC-369D097F49D0
-online version: https://docs.microsoft.com/powershell/module/az.sql/Get-AzSqlDatabaseAdvancedThreatProtectionSetting
+online version: https://learn.microsoft.com/powershell/module/az.sql/Get-AzSqlDatabaseAdvancedThreatProtectionSetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseAdvancedThreatProtectionSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseAdvancedThreatProtectionSetting.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the Advanced Threat Protection settings for a database.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/get-azsqldatabaseadvancedthreatprotectionsetting) for up-to-date information.
 
 ## SYNTAX
 

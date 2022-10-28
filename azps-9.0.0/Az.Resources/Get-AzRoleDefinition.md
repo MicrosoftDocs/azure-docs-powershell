@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 7740AC3B-F643-4F8D-8DC5-ACBF59323BD8
-online version: https://docs.microsoft.com/powershell/module/az.resources/get-azroledefinition
+online version: https://learn.microsoft.com/powershell/module/az.resources/get-azroledefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzRoleDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzRoleDefinition.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Lists all Azure RBAC roles that are available for assignment.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-azroledefinition) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 6A6D6C7D-EED7-4AD4-ACE6-BFA64404455E
-online version: https://docs.microsoft.com/powershell/module/az.batch/set-azbatchtask
+online version: https://learn.microsoft.com/powershell/module/az.batch/set-azbatchtask
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Set-AzBatchTask.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Set-AzBatchTask.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates the properties of a task.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/set-azbatchtask) for up-to-date information.
 
 ## SYNTAX
 

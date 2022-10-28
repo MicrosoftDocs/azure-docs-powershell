@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: 45B96AB0-ACE3-4754-B162-88027AC8CA41
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementauthorizationserver
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementauthorizationserver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementAuthorizationServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementAuthorizationServer.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an authorization server.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/new-azapimanagementauthorizationserver) for up-to-date information.
 
 ## SYNTAX
 

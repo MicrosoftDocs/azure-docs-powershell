@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 89F604DD-EE77-440D-BCC9-3F74D994C447
-online version: https://docs.microsoft.com/powershell/module/az.batch/remove-azbatchaccount
+online version: https://learn.microsoft.com/powershell/module/az.batch/remove-azbatchaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Remove-AzBatchAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Remove-AzBatchAccount.md

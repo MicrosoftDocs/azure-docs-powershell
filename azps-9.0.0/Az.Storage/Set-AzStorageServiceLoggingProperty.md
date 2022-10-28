@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 5422429E-C609-4C1F-A021-E2A085B5F74E
-online version: https://docs.microsoft.com/powershell/module/az.storage/set-azstorageserviceloggingproperty
+online version: https://learn.microsoft.com/powershell/module/az.storage/set-azstorageserviceloggingproperty
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageServiceLoggingProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageServiceLoggingProperty.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies logging for Azure Storage services.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/set-azstorageserviceloggingproperty) for up-to-date information.
 
 ## SYNTAX
 
@@ -126,7 +129,7 @@ Accept wildcard characters: False
 Specifies the storage service type.
 This cmdlet modifies the logging properties for the service type that this parameter specifies.
 The acceptable values for this parameter are:
-- Blob 
+- Blob
 - Table
 - Queue
 - File

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqlsyncmember
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlsyncmember
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlSyncMember.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlSyncMember.md
@@ -42,13 +42,13 @@ SyncGroupName               : SyncGroup01
 SyncMemberName              : SyncMember01
 SyncDirection               : OneWayMemberToHub
 MemberDatabaseType:         : AzureSqlDatabase
-SyncAgentId                 : 
-SqlServerDatabaseId         : 
+SyncAgentId                 :
+SqlServerDatabaseId         :
 MemberServerName            : memberServer01.full.dns.name
 MemberDatabaseName          : memberDatabase01
 MemberDatabaseUserName      : myAccount
-MemberDatabasePassword      : 
-SyncState                   : Good 
+MemberDatabasePassword      :
+SyncState                   : Good
 
 ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember02}
 ResourceGroupName           : ResourceGroup01
@@ -58,12 +58,12 @@ SyncGroupName               : SyncGroup01
 SyncMemberName              : SyncMember02
 SyncDirection               : OneWayMemberToHub
 MemberDatabaseType:         : AzureSqlDatabase
-SyncAgentId                 : 
-SqlServerDatabaseId         : 
+SyncAgentId                 :
+SqlServerDatabaseId         :
 MemberServerName            : memberServer01.full.dns.name
 MemberDatabaseName          : memberDatabase01
 MemberDatabaseUserName      : myAccount
-MemberDatabasePassword      :  
+MemberDatabasePassword      :
 SyncState                   : Good
 ```
 
@@ -83,12 +83,12 @@ SyncGroupName               : SyncGroup01
 SyncMemberName              : SyncMember01
 SyncDirection               : OneWayMemberToHub
 MemberDatabaseType:         : AzureSqlDatabase
-SyncAgentId                 : 
-SqlServerDatabaseId         : 
+SyncAgentId                 :
+SqlServerDatabaseId         :
 MemberServerName            : memberServer01.full.dns.name
 MemberDatabaseName          : memberDatabase01
 MemberDatabaseUserName      : myAccount
-MemberDatabasePassword      : 
+MemberDatabasePassword      :
 SyncState                   : Good
 ```
 
@@ -108,13 +108,13 @@ SyncGroupName               : SyncGroup01
 SyncMemberName              : SyncMember01
 SyncDirection               : OneWayMemberToHub
 MemberDatabaseType:         : AzureSqlDatabase
-SyncAgentId                 : 
-SqlServerDatabaseId         : 
+SyncAgentId                 :
+SqlServerDatabaseId         :
 MemberServerName            : memberServer01.full.dns.name
 MemberDatabaseName          : memberDatabase01
 MemberDatabaseUserName      : myAccount
-MemberDatabasePassword      : 
-SyncState                   : Good 
+MemberDatabasePassword      :
+SyncState                   : Good
 
 ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember02}
 ResourceGroupName           : ResourceGroup01
@@ -124,12 +124,12 @@ SyncGroupName               : SyncGroup01
 SyncMemberName              : SyncMember02
 SyncDirection               : OneWayMemberToHub
 MemberDatabaseType:         : AzureSqlDatabase
-SyncAgentId                 : 
-SqlServerDatabaseId         : 
+SyncAgentId                 :
+SqlServerDatabaseId         :
 MemberServerName            : memberServer01.full.dns.name
 MemberDatabaseName          : memberDatabase01
 MemberDatabaseUserName      : myAccount
-MemberDatabasePassword      :  
+MemberDatabasePassword      :
 SyncState                   : Good
 ```
 

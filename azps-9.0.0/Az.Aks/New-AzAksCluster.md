@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Aks.dll-Help.xml
 Module Name: Az.Aks
-online version: https://docs.microsoft.com/powershell/module/az.aks/new-azakscluster
+online version: https://learn.microsoft.com/powershell/module/az.aks/new-azakscluster
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/New-AzAksCluster.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/New-AzAksCluster.md
@@ -15,6 +15,9 @@ Create a new managed Kubernetes cluster.
 The cmdlet may call below Microsoft Graph API according to input parameters:
 
 - POST /servicePrincipals
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.aks/new-azakscluster) for up-to-date information.
 
 ## SYNTAX
 
@@ -174,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoUpgradeChannel
-The upgrade channel for auto upgrade. For more information see https://docs.microsoft.com/azure/aks/upgrade-cluster#set-auto-upgrade-channel.
+The upgrade channel for auto upgrade. For more information see https://learn.microsoft.com/azure/aks/upgrade-cluster#set-auto-upgrade-channel.
 
 ```yaml
 Type: System.String

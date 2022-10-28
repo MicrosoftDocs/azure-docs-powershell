@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 46FDE4D8-08E0-4465-8BF9-849A108628B8
-online version: https://docs.microsoft.com/powershell/module/az.network/set-azapplicationgatewaywebapplicationfirewallconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.network/set-azapplicationgatewaywebapplicationfirewallconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzApplicationGatewayWebApplicationFirewallConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzApplicationGatewayWebApplicationFirewallConfiguration.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies the WAF configuration of an application gateway.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/set-azapplicationgatewaywebapplicationfirewallconfiguration) for up-to-date information.
 
 ## SYNTAX
 
@@ -181,8 +184,8 @@ Accept wildcard characters: False
 ```
 
 ### -RuleSetType
-The type of the web application firewall rule set. 
-The acceptable values for this parameter are: 
+The type of the web application firewall rule set.
+The acceptable values for this parameter are:
 - OWASP
 
 ```yaml

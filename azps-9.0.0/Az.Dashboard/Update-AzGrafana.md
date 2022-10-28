@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Dashboard
-online version: https://docs.microsoft.com/powershell/module/az.dashboard/update-azgrafana
+online version: https://learn.microsoft.com/powershell/module/az.dashboard/update-azgrafana
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/help/Update-AzGrafana.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/help/Update-AzGrafana.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Update a workspace for Grafana resource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dashboard/update-azgrafana) for up-to-date information.
 
 ## SYNTAX
 
@@ -321,7 +324,7 @@ To create the parameters described below, construct a hash table containing the 
 `INPUTOBJECT <IDashboardIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[PrivateEndpointConnectionName <String>]`: The private endpoint connection name of Azure Managed Grafana.
-  - `[PrivateLinkResourceName <String>]`: 
+  - `[PrivateLinkResourceName <String>]`:
   - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
   - `[SubscriptionId <String>]`: The ID of the target subscription.
   - `[WorkspaceName <String>]`: The workspace name of Azure Managed Grafana.

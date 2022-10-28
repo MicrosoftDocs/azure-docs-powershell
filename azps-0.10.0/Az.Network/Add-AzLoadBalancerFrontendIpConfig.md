@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 07FF274A-F365-44E5-A66B-6740CD165664
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/add-azloadbalancerfrontendipconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/add-azloadbalancerfrontendipconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzLoadBalancerFrontendIpConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzLoadBalancerFrontendIpConfig.md
@@ -101,7 +101,7 @@ This cmdlet adds a front-end IP configuration to the load balancer that this par
 ```yaml
 Type: PSLoadBalancer
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -116,7 +116,7 @@ Specifies the name of the front-end IP configuration to add.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -131,7 +131,7 @@ Specifies the private IP address to associate with a front-end IP configuration.
 ```yaml
 Type: String
 Parameter Sets: SetByResourceSubnet, SetByResourceIdSubnet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ Specifies the public IP address to associate with a front-end IP configuration.
 ```yaml
 Type: PSPublicIpAddress
 Parameter Sets: SetByResourcePublicIpAddress
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -161,7 +161,7 @@ Specifes the ID of the public IP address in which to add a front-end IP configur
 ```yaml
 Type: String
 Parameter Sets: SetByResourceIdPublicIpAddress
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -176,7 +176,7 @@ Specifies the subnet object in which to add a front-end IP configuration.
 ```yaml
 Type: PSSubnet
 Parameter Sets: SetByResourceSubnet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -191,7 +191,7 @@ Specifies the ID of the subnet in which to add a front-end IP configuration.
 ```yaml
 Type: String
 Parameter Sets: SetByResourceIdSubnet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -206,7 +206,7 @@ A list of availability zones denoting the IP allocated for the resource needs to
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

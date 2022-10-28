@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: F6D9EA59-BA61-4117-8771-9B190424BFF8
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/set-azintegrationaccount
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/set-azintegrationaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Set-AzIntegrationAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Set-AzIntegrationAccount.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies an integration account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logicapp/set-azintegrationaccount) for up-to-date information.
 
 ## SYNTAX
 
@@ -40,7 +43,7 @@ Id          : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/pro
 Name        : IntegrationAccount31
 Type        : Microsoft.Logic/integrationAccounts
 Location    : brazilsouth
-Sku         : 
+Sku         :
 CreatedTime : 3/26/2016 4:26:07 PM
 ChangedTime : 3/26/2016 4:26:07 PM
 ```

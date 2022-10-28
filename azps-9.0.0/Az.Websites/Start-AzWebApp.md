@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: D70A61D8-0C9A-4BDB-A546-37C32D25797C
-online version: https://docs.microsoft.com/powershell/module/az.websites/start-azwebapp
+online version: https://learn.microsoft.com/powershell/module/az.websites/start-azwebapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Start-AzWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Start-AzWebApp.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Starts an Azure Web App.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/start-azwebapp) for up-to-date information.
 
 ## SYNTAX
 

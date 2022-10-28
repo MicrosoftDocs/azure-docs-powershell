@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/restore-azkeyvaultcertificate
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/restore-azkeyvaultcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Restore-AzKeyVaultCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Restore-AzKeyVaultCertificate.md
@@ -79,7 +79,7 @@ Expires       : 11/25/2018 10:57:41 AM
 NotBefore     : 5/25/2018 10:47:41 AM
 Created       : 5/25/2018 10:57:41 AM
 Updated       : 5/25/2018 10:57:41 AM
-Tags          : 
+Tags          :
 VaultName     : MyKeyVault
 Name          : cert1
 Version       : bd406f6d6b3a41a1a1c633494d8c3c3a

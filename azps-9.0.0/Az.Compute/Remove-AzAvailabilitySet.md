@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 7320B832-50FD-48AE-9089-445318F3B08A
-online version: https://docs.microsoft.com/powershell/module/az.compute/remove-azavailabilityset
+online version: https://learn.microsoft.com/powershell/module/az.compute/remove-azavailabilityset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzAvailabilitySet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzAvailabilitySet.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an availability set from Azure.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/remove-azavailabilityset) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DynatraceObservability
-online version: https://docs.microsoft.com/powershell/module/az.dynatraceobservability/remove-azdynatracemonitor
+online version: https://learn.microsoft.com/powershell/module/az.dynatraceobservability/remove-azdynatracemonitor
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DynatraceObservability/help/Remove-AzDynatraceMonitor.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DynatraceObservability/help/Remove-AzDynatraceMonitor.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Delete a MonitorResource
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dynatraceobservability/remove-azdynatracemonitor) for up-to-date information.
 
 ## SYNTAX
 

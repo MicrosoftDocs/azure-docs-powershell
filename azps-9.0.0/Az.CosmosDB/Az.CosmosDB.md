@@ -1,7 +1,7 @@
 ---
 Module Name: Az.CosmosDB
 Module Guid: 91832aaa-dc11-4583-8239-bce5fd531604
-Download Help Link: {{ https://docs.microsoft.com/powershell/module/az.cosmosdb }}
+Download Help Link: {{ https://learn.microsoft.com/powershell/module/az.cosmosdb }}
 Help Version: {{ 1.0.0.1 }}
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Az.CosmosDB.md
@@ -17,7 +17,7 @@ The topics in this section document the Azure PowerShell cmdlets for Azure Cosmo
 Get CosmosDB Account.
 
 ### [Get-AzCosmosDBAccountKey](Get-AzCosmosDBAccountKey.md)
-Get Keys{"ConnectionKeys", "PrimaryReadOnly" or "Keys"} for the given CosmosDB Account. 
+Get Keys{"ConnectionKeys", "PrimaryReadOnly" or "Keys"} for the given CosmosDB Account.
 
 ### [Get-AzCosmosDBCassandraKeyspace](Get-AzCosmosDBCassandraKeyspace.md)
 Gets a CosmosDB Cassandra Keyspace.

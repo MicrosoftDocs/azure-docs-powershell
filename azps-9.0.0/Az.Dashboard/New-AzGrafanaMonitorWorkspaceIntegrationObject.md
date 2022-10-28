@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Dashboard
-online version: https://docs.microsoft.com/powershell/module/az.dashboard/new-azgrafanamonitorworkspaceintegrationobject
+online version: https://learn.microsoft.com/powershell/module/az.dashboard/new-azgrafanamonitorworkspaceintegrationobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/help/New-AzGrafanaMonitorWorkspaceIntegrationObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/help/New-AzGrafanaMonitorWorkspaceIntegrationObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for AzureMonitorWorkspaceIntegration.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dashboard/new-azgrafanamonitorworkspaceintegrationobject) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstoragelocaluser
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstoragelocaluser
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageLocalUser.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageLocalUser.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a specified local user or lists all local users in a storage account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/get-azstoragelocaluser) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,7 +41,7 @@ The **Get-AzStorageLocalUser** cmdlet gets a specified local user or lists all l
 ```
 PS C:\> $localUser = Get-AzStorageLocalUser -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -UserName testuser1
 
-PS C:\> $localUser 
+PS C:\> $localUser
 
    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
 
@@ -47,10 +50,10 @@ Name      Sid                                          HomeDirectory HasSharedKe
 testuser1 S-1-2-0-0000000000-000000000-0000000000-0000 /             True         True      True           [container1,...]
 
 PS C:\> $localUser.PermissionScopes
-  
+
 Permissions Service ResourceName
 ----------- ------- ------------
-rw          blob    container1  
+rw          blob    container1
 rw          file    share2
 ```
 
@@ -66,7 +69,7 @@ ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
 
 Name      Sid                                          HomeDirectory HasSharedKey HasSshKey HasSshPassword PermissionScopes SshAuthorizedKeys
 ----      ---                                          ------------- ------------ --------- -------------- ---------------- -----------------
-testuser1 S-1-2-0-0000000000-000000000-0000000000-0000 /             True         True      True           [container1,...]      
+testuser1 S-1-2-0-0000000000-000000000-0000000000-0000 /             True         True      True           [container1,...]
 testuser2 S-1-2-0-0000000000-000000000-0000000000-0002 /dir          True         True      False
 ```
 

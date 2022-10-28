@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 8C1D738C-825D-4718-AD2A-9CFEAA7DBD3B
-online version: https://docs.microsoft.com/powershell/module/az.resources/remove-azroleassignment
+online version: https://learn.microsoft.com/powershell/module/az.resources/remove-azroleassignment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Remove-AzRoleAssignment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Remove-AzRoleAssignment.md
@@ -22,6 +22,9 @@ The cmdlet may call below Microsoft Graph API according to input parameters:
 - POST /directoryObjects/getByIds
 
 Please notice that this cmdlet will mark `ObjectType` as `Unknown` in output if the object of role assignment is not found or current account has insufficient privileges to get object type.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/remove-azroleassignment) for up-to-date information.
 
 ## SYNTAX
 

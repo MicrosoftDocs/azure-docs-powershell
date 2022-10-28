@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Peering.dll-Help.xml
 Module Name: Az.Peering
-online version: https://docs.microsoft.com/powershell/module/az.peering/get-azpeeringserviceprefix
+online version: https://learn.microsoft.com/powershell/module/az.peering/get-azpeeringserviceprefix
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringServicePrefix.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringServicePrefix.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a list of peering service prefixes for a subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.peering/get-azpeeringserviceprefix) for up-to-date information.
 
 ## SYNTAX
 
@@ -66,7 +69,7 @@ Gets the prefixes for a peering service based on piping commands.
 
 ### Example 2
 ```powershell
-Get-AzPeeringServicePrefix -ResourceId $peeringServicePrefixResourceId 
+Get-AzPeeringServicePrefix -ResourceId $peeringServicePrefixResourceId
 ```
 
 ```output

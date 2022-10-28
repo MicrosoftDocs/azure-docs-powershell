@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/remove-azrmstoragecontainerimmutabilitypolicy
+online version: https://learn.microsoft.com/powershell/module/az.storage/remove-azrmstoragecontainerimmutabilitypolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Remove-AzRmStorageContainerImmutabilityPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Remove-AzRmStorageContainerImmutabilityPolicy.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes ImmutabilityPolicy of a Storage blob container with an unlocked policy
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/remove-azrmstoragecontainerimmutabilitypolicy) for up-to-date information.
 
 ## SYNTAX
 
@@ -59,7 +62,7 @@ PS C:\>$policy = Get-AzRmStorageContainerImmutabilityPolicy -StorageAccount $acc
 PS C:\>Remove-AzRmStorageContainerImmutabilityPolicy -StorageAccount $accountObject -ContainerName "myContainer" -Etag $policy.Etag
 ```
 
-This command removes unlocked ImmutabilityPolicy of a Storage blob container, with Storage account object. 
+This command removes unlocked ImmutabilityPolicy of a Storage blob container, with Storage account object.
 
 ### Example 3: Remove unlocked ImmutabilityPolicy of a Storage blob container, with container object
 ```

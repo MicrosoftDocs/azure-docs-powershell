@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version: https://docs.microsoft.com/powershell/module/az.resources/get-azdeploymentwhatifresult
+online version: https://learn.microsoft.com/powershell/module/az.resources/get-azdeploymentwhatifresult
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzDeploymentWhatIfResult.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzDeploymentWhatIfResult.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzDeploymentWhatIfResult
 
 ## SYNOPSIS
-Gets a template What-If result for a deployment at subscription scope. 
+Gets a template What-If result for a deployment at subscription scope.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azvirtualwan
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azvirtualwan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualWan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualWan.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a Virtual WAN or all Virtual WANs in a resource group or subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvirtualwan) for up-to-date information.
 
 ## SYNTAX
 
@@ -33,7 +36,7 @@ Gets a Virtual WAN or all Virtual WANs in a resource group or subscription.
 ### Example 1
 
 ```powershell
-New-AzResourceGroup -Location "West US" -Name "testRG" 
+New-AzResourceGroup -Location "West US" -Name "testRG"
 New-AzVirtualWan -ResourceGroupName "testRG" -Name "myVirtualWAN" -Location "West US" -AllowBranchToBranchTraffic
 Get-AzVirtualWan -Name "myVirtualWAN" -ResourceGroupName "testRG"
 ```

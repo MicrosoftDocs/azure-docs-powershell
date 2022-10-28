@@ -1,7 +1,7 @@
 ---
 external help file: Az.AppConfiguration-help.xml
 Module Name: Az.AppConfiguration
-online version: https://docs.microsoft.com/powershell/module/az.appconfiguration/new-azappconfigurationstore
+online version: https://learn.microsoft.com/powershell/module/az.appconfiguration/new-azappconfigurationstore
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppConfiguration/AppConfiguration/help/New-AzAppConfigurationStore.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppConfiguration/AppConfiguration/help/New-AzAppConfigurationStore.md

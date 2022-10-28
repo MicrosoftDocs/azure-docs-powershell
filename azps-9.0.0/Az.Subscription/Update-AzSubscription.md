@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Subscription.dll-Help.xml
 Module Name: Az.Subscription
-online version: https://docs.microsoft.com/powershell/module/az.subscription/update-azsubscription
+online version: https://learn.microsoft.com/powershell/module/az.subscription/update-azsubscription
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Subscription/Subscription/help/Update-AzSubscription.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Subscription/Subscription/help/Update-AzSubscription.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates an Azure Subscription
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.subscription/update-azsubscription) for up-to-date information.
 
 ## SYNTAX
 
@@ -32,7 +35,7 @@ Update-AzSubscription -SubscriptionId "86869d42-1782-4337-98b0-c905fb937d46" -Ac
 Name        : My Subscription
 Id          : 86869d42-1782-4337-98b0-c905fb937d46
 TenantId    : a5dcb057-fd83-4384-9d49-5198004d33a5
-State       : Cancelled 
+State       : Cancelled
 ```
 
 Cancels the subscription

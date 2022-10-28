@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: 164C5205-01BA-47BB-B780-D0B9AE614A4B
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/new-azapimanagement
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagement
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagement.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagement.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 
 Creates an API Management deployment.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/new-azapimanagement) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://docs.microsoft.com/powershell/module/az.Purview/new-AzPurviewAmazonAccountDataSourceObject
+online version: https://learn.microsoft.com/powershell/module/az.Purview/new-AzPurviewAmazonAccountDataSourceObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAmazonAccountDataSourceObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAmazonAccountDataSourceObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for AmazonAccountDataSource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.purview/new-azpurviewamazonaccountdatasourceobject) for up-to-date information.
 
 ## SYNTAX
 

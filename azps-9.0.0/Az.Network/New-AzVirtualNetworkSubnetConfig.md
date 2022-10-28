@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 901FD38B-67FA-40D5-8D23-51E5544C25D8
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azvirtualnetworksubnetconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azvirtualnetworksubnetconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualNetworkSubnetConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualNetworkSubnetConfig.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a virtual network subnet configuration.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azvirtualnetworksubnetconfig) for up-to-date information.
 
 ## SYNTAX
 
@@ -46,8 +49,8 @@ New-AzResourceGroup -Name TestResourceGroup -Location centralus
 $rdpRule = New-AzNetworkSecurityRuleConfig -Name rdp-rule -Description "Allow RDP" `
    -Access Allow -Protocol Tcp -Direction Inbound -Priority 100 `
    -SourceAddressPrefix Internet -SourcePortRange * `
-   -DestinationAddressPrefix * -DestinationPortRange 3389 
-    
+   -DestinationAddressPrefix * -DestinationPortRange 3389
+
 $networkSecurityGroup = New-AzNetworkSecurityGroup -ResourceGroupName TestResourceGroup `
   -Location centralus -Name "NSG-FrontEnd" -SecurityRules $rdpRule
 
@@ -70,11 +73,11 @@ New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup
     -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $frontendSubnet,$backendSubnet,$natGatewaySubnet
 ```
 
-This example creates two new subnet configurations using the 
-    New-AzVirtualSubnetConfig cmdlet, and then uses them to create a virtual network. 
-    The New-AzVirtualSubnetConfig template only creates an in-memory representation of 
-    the subnet. In this example, the frontendSubnet has CIDR 10.0.1.0/24 and references a 
-    network security group that allows RDP access. The backendSubnet has CIDR 10.0.2.0/24 and 
+This example creates two new subnet configurations using the
+    New-AzVirtualSubnetConfig cmdlet, and then uses them to create a virtual network.
+    The New-AzVirtualSubnetConfig template only creates an in-memory representation of
+    the subnet. In this example, the frontendSubnet has CIDR 10.0.1.0/24 and references a
+    network security group that allows RDP access. The backendSubnet has CIDR 10.0.2.0/24 and
     references the same network security group.
 
 ## PARAMETERS

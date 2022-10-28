@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/update-azrmstorageshare
+online version: https://learn.microsoft.com/powershell/module/az.storage/update-azrmstorageshare
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Update-AzRmStorageShare.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Update-AzRmStorageShare.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies a Storage file share.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/update-azrmstorageshare) for up-to-date information.
 
 ## SYNTAX
 
@@ -62,8 +65,8 @@ myshare  200
 
 PS C:\>$share.Metadata
 
-Key  Value  
----  ----- 
+Key  Value
+---  -----
 tag0 value0
 tag1 value1
 ```
@@ -110,7 +113,7 @@ This command modifies a Storage file share with accesstier as Cool.
 ### Example 5: Modifies rootsquash for a file shares in a Storage account
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\>$share = Update-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -Name "myshare" -RootSquash NoRootSquash 
+PS C:\>$share = Update-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -Name "myshare" -RootSquash NoRootSquash
 
 PS C:\>$share
 
@@ -118,7 +121,7 @@ PS C:\>$share
 
 Name     QuotaGiB EnabledProtocols AccessTier Deleted Version ShareUsageBytes
 ----     -------- ---------------- ---------- ------- ------- ---------------
-myshare  
+myshare
 
 PS C:\> $share.RootSquash
 NoRootSquash

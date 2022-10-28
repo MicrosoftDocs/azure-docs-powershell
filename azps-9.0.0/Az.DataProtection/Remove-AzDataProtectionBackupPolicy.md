@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataProtection
-online version: https://docs.microsoft.com/powershell/module/az.dataprotection/remove-azdataprotectionbackuppolicy
+online version: https://learn.microsoft.com/powershell/module/az.dataprotection/remove-azdataprotectionbackuppolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Remove-AzDataProtectionBackupPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Remove-AzDataProtectionBackupPolicy.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes a backup policy belonging to a backup vault
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/remove-azdataprotectionbackuppolicy) for up-to-date information.
 
 ## SYNTAX
 
@@ -200,13 +203,13 @@ To create the parameters described below, construct a hash table containing the 
 
 `INPUTOBJECT <IDataProtectionIdentity>`: Identity Parameter
   - `[BackupInstanceName <String>]`: The name of the backup instance
-  - `[BackupPolicyName <String>]`: 
+  - `[BackupPolicyName <String>]`:
   - `[Id <String>]`: Resource identity path
   - `[JobId <String>]`: The Job ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000).
   - `[Location <String>]`: The location in which uniqueness will be verified.
-  - `[OperationId <String>]`: 
-  - `[RecoveryPointId <String>]`: 
-  - `[RequestName <String>]`: 
+  - `[OperationId <String>]`:
+  - `[RecoveryPointId <String>]`:
+  - `[RequestName <String>]`:
   - `[ResourceGroupName <String>]`: The name of the resource group where the backup vault is present.
   - `[ResourceGuardsName <String>]`: The name of ResourceGuard
   - `[SubscriptionId <String>]`: The subscription Id.

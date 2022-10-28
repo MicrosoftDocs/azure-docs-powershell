@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
 Module Name: Az.Media
 ms.assetid: 0FA49058-F3A7-4ED9-93F2-0C84BC130FB7
-online version: https://docs.microsoft.com/powershell/module/az.media/set-azmediaservice
+online version: https://learn.microsoft.com/powershell/module/az.media/set-azmediaservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Media/Media/help/Set-AzMediaService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Media/Media/help/Set-AzMediaService.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies specified properties of an existing media service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.media/set-azmediaservice) for up-to-date information.
 
 ## SYNTAX
 

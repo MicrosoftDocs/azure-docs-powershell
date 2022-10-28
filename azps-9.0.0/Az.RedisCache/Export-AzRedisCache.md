@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
 ms.assetid: B447E492-D87E-4DA3-A8B0-0BAF603CCC26
-online version: https://docs.microsoft.com/powershell/module/az.rediscache/export-azrediscache
+online version: https://learn.microsoft.com/powershell/module/az.rediscache/export-azrediscache
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Export-AzRedisCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Export-AzRedisCache.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Exports data from Azure Redis Cache to a container.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.rediscache/export-azrediscache) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,7 +41,7 @@ This command exports data from an Azure Redis Cache instance into the container 
 ### -Container
 Specifies the Service SAS URL of container where this cmdlet exports data. You can generate a Service SAS URL using the following PowerShell commands:
 $storageAccountContext = New-AzStorageContext -StorageAccountName "storageName" -StorageAccountKey "key"
-$sasKeyForContainer = New-AzStorageContainerSASToken -Name "containername" -Permission "rwdl" -StartTime ([System.DateTime]::Now).AddMinutes(-15) -ExpiryTime ([System.DateTime]::Now).AddHours(5) -Context $storageAccountContext -FullUri 
+$sasKeyForContainer = New-AzStorageContainerSASToken -Name "containername" -Permission "rwdl" -StartTime ([System.DateTime]::Now).AddMinutes(-15) -ExpiryTime ([System.DateTime]::Now).AddHours(5) -Context $storageAccountContext -FullUri
 Export-AzRedisCache -ResourceGroupName "ResourceGroupName" -Name "cacheName" -Prefix "blobprefix" -Container ($sasKeyForContainer)
 
 ```yaml

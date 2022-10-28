@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
 ms.assetid: 30C10687-F172-4663-8D4A-F0DDEA5C3741
-online version: https://docs.microsoft.com/powershell/module/az.datalakestore/remove-azdatalakestoretrustedidprovider
+online version: https://learn.microsoft.com/powershell/module/az.datalakestore/remove-azdatalakestoretrustedidprovider
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Remove-AzDataLakeStoreTrustedIdProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Remove-AzDataLakeStoreTrustedIdProvider.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes the specified trusted identity provider in the specified Data Lake Store.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/remove-azdatalakestoretrustedidprovider) for up-to-date information.
 
 ## SYNTAX
 

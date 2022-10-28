@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ConfidentialLedger
-online version: https://docs.microsoft.com/powershell/module/az.ConfidentialLedger/new-AzConfidentialLedgerAADBasedSecurityPrincipalObject
+online version: https://learn.microsoft.com/powershell/module/az.ConfidentialLedger/new-AzConfidentialLedgerAADBasedSecurityPrincipalObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/help/New-AzConfidentialLedgerAADBasedSecurityPrincipalObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/help/New-AzConfidentialLedgerAADBasedSecurityPrincipalObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for AADBasedSecurityPrincipal.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.confidentialledger/new-azconfidentialledgeraadbasedsecurityprincipalobject) for up-to-date information.
 
 ## SYNTAX
 

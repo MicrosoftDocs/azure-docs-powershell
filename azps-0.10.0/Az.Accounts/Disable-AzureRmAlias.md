@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
 Module Name: Az.Accounts
-online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/disable-azurermalias
+online version: https://learn.microsoft.com/en-us/powershell/module/az.accounts/disable-azurermalias
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Disable-AzureRmAlias.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Disable-AzureRmAlias.md
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-Indicates what scope aliases should be disabled for. 
+Indicates what scope aliases should be disabled for.
 Default is 'Process'
 
 ```yaml

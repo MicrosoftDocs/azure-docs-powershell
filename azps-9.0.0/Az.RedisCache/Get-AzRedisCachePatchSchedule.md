@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
 ms.assetid: DA180A4A-88B6-4359-94E0-CF72F66D1FE4
-online version: https://docs.microsoft.com/powershell/module/az.rediscache/get-azrediscachepatchschedule
+online version: https://learn.microsoft.com/powershell/module/az.rediscache/get-azrediscachepatchschedule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Get-AzRedisCachePatchSchedule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Get-AzRedisCachePatchSchedule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a patch schedule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.rediscache/get-azrediscachepatchschedule) for up-to-date information.
 
 ## SYNTAX
 

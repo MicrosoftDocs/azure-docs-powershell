@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 7EFFFF43-501E-4955-A4EE-2C09B8863B30
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-aznetworksecurityruleconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/set-aznetworksecurityruleconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzNetworkSecurityRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzNetworkSecurityRuleConfig.md
@@ -63,13 +63,13 @@ The third command changes the access configuration of rdp-rule to Deny.
 ## PARAMETERS
 
 ### -Access
-Specifies whether network traffic is allowed or denied. 
+Specifies whether network traffic is allowed or denied.
 The acceptable values for this parameter are: Allow and Deny.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Allow, Deny
 
 Required: False
@@ -101,7 +101,7 @@ The maximum size is 140 characters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,8 +114,8 @@ Accept wildcard characters: False
 Specifies a destination address prefix.
 The acceptable values for this parameter are:
 
-- A Classless Interdomain Routing (CIDR) address 
-- A destination IP address range 
+- A Classless Interdomain Routing (CIDR) address
+- A destination IP address range
 - A wildcard character (*) to match any IP address
 
 You can use tags such as VirtualNetwork, AzureLoadBalancer, and Internet.
@@ -123,7 +123,7 @@ You can use tags such as VirtualNetwork, AzureLoadBalancer, and Internet.
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ The application security group set as destination for the rule. It cannot be use
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup]
 Parameter Sets: SetByResource
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ The application security group set as destination for the rule. It cannot be use
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: SetByResourceId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,14 +166,14 @@ Accept wildcard characters: False
 Specifies a destination port or range.
 The acceptable values for this parameter are:
 
-- An integer 
+- An integer
 - A range of integers between 0 and 65535
 - A wildcard character (*) to match any port
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -189,7 +189,7 @@ The acceptable values for this parameter are: Inbound and Outbound.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Inbound, Outbound
 
 Required: False
@@ -205,7 +205,7 @@ Specifies the name of the network security rule configuration that this cmdlet s
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -220,7 +220,7 @@ Specifies the **NetworkSecurityGroup** object that contains the network security
 ```yaml
 Type: PSNetworkSecurityGroup
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -239,7 +239,7 @@ The lower the priority number, the higher the priority of the rule.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -259,7 +259,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Tcp, Udp, *
 
 Required: False
@@ -282,7 +282,7 @@ You can also use tags such as VirtualNetwork, AzureLoadBalancer and Internet.
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -297,7 +297,7 @@ The application security group set as source for the rule. It cannot be used wit
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup]
 Parameter Sets: SetByResource
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -312,7 +312,7 @@ The application security group set as source for the rule. It cannot be used wit
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: SetByResourceId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -332,7 +332,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

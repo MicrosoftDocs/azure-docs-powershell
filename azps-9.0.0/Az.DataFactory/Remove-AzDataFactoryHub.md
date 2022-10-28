@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 4C839730-B494-45BD-B5A1-F93B02AB4B2A
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/remove-azdatafactoryhub
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/remove-azdatafactoryhub
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryHub.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a hub from Azure Data Factory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/remove-azdatafactoryhub) for up-to-date information.
 
 ## SYNTAX
 

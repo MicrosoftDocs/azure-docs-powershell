@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
 Module Name: Az.CosmosDB
-online version: https://docs.microsoft.com/powershell/module/az.cosmosdb/get-azcosmosdbmongodbrestorabledatabase
+online version: https://learn.microsoft.com/powershell/module/az.cosmosdb/get-azcosmosdbmongodbrestorabledatabase
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBMongoDBRestorableDatabase.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBMongoDBRestorableDatabase.md
@@ -29,7 +29,7 @@ Get-AzCosmosDBMongoDBRestorableDatabase -InputObject <PSRestorableDatabaseAccoun
 ## DESCRIPTION
 Gets the list of all the restorable Azure Cosmos DB MongoDB database events available under the restorable account.
 The list would have entries corresponding to create, replace and delete events of all live and deleted databases.
-This list is useful to identify the restore timestamp based on the changes in the database. 
+This list is useful to identify the restore timestamp based on the changes in the database.
 For example, if user wants to restore the database account to a timestamp when a database named foo is deleted, the user can find corresponding database delete event from this list, and choose a timestamp before the delete event for restore.
 
 ## EXAMPLES

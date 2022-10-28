@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ServiceLinker
-online version: https://docs.microsoft.com/powershell/module/az.servicelinker/test-azservicelinkerforspringcloud
+online version: https://learn.microsoft.com/powershell/module/az.servicelinker/test-azservicelinkerforspringcloud
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Test-AzServiceLinkerForSpringCloud.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Test-AzServiceLinkerForSpringCloud.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Validate a link in spring cloud.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicelinker/test-azservicelinkerforspringcloud) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,20 +41,20 @@ Test-AzServiceLinkerForSpringCloud -ServiceName servicelinker-springcloud -AppNa
 ```
 
 ```output
-AuthType              : 
+AuthType              :
 IsConnectionAvailable : True
 LinkerName            : storagetable_404e8
 ReportEndTimeUtc      : 5/6/2022 8:32:26 AM
 ReportStartTimeUtc    : 5/6/2022 8:32:24 AM
-ResourceId            : /subscriptions/d82d7763-8e12-4f39-a7b6-496a983ec2f4/resourceGroups/servicelinke 
-                        r-test-group/providers/Microsoft.AppPlatform/Spring/servicelinker-springcloud/apps/appconfiguration/deployments/default/providers/Mi 
+ResourceId            : /subscriptions/d82d7763-8e12-4f39-a7b6-496a983ec2f4/resourceGroups/servicelinke
+                        r-test-group/providers/Microsoft.AppPlatform/Spring/servicelinker-springcloud/apps/appconfiguration/deployments/default/providers/Mi
                         crosoft.ServiceLinker/linkers/storagetable_404e8
 SourceId              :
 Status                : Succeeded
-TargetId              : /subscriptions/937bc588-a144-4083-8612-5f9ffbbddb14/resourceGroups/servicelinke 
-                        r-test-linux-group/providers/Microsoft.Storage/storageAccounts/servicelinkersto 
+TargetId              : /subscriptions/937bc588-a144-4083-8612-5f9ffbbddb14/resourceGroups/servicelinke
+                        r-test-linux-group/providers/Microsoft.Storage/storageAccounts/servicelinkersto
                         rage/tableServices/default
-ValidationDetail      : {The target existence is validated, The target service firewall is validated,   
+ValidationDetail      : {The target existence is validated, The target service firewall is validated,
                         The configured values is validated}
 ```
 

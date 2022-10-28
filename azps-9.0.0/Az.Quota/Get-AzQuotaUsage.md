@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Quota
-online version: https://docs.microsoft.com/powershell/module/az.quota/get-azquotausage
+online version: https://learn.microsoft.com/powershell/module/az.quota/get-azquotausage
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/help/Get-AzQuotaUsage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/help/Get-AzQuotaUsage.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get the current usage of a resource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.quota/get-azquotausage) for up-to-date information.
 
 ## SYNTAX
 
@@ -31,7 +34,7 @@ Get the current usage of a resource.
 
 ### Example 1: List the currents usage of a resource
 ```powershell
-Get-AzQuotaUsage -Scope "subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/providers/Microsoft.Network/locations/eastus" 
+Get-AzQuotaUsage -Scope "subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/providers/Microsoft.Network/locations/eastus"
 ```
 
 ```output

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DiskPool
-online version: https://docs.microsoft.com/powershell/module/az.DiskPool/new-AzDiskPoolIscsiLunObject
+online version: https://learn.microsoft.com/powershell/module/az.DiskPool/new-AzDiskPoolIscsiLunObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/help/New-AzDiskPoolIscsiLunObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/help/New-AzDiskPoolIscsiLunObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create a in-memory object for IscsiLun
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.diskpool/new-azdiskpooliscsilunobject) for up-to-date information.
 
 ## SYNTAX
 

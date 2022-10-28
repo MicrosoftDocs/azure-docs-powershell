@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
 ms.assetid: 4682807D-34E8-4057-8894-36820447067B
-online version: https://docs.microsoft.com/powershell/module/az.operationalinsights/new-azoperationalinsightsworkspace
+online version: https://learn.microsoft.com/powershell/module/az.operationalinsights/new-azoperationalinsightsworkspace
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsWorkspace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsWorkspace.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a workspace, or restore a soft-deleted workspace.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.operationalinsights/new-azoperationalinsightsworkspace) for up-to-date information.
 
 ## SYNTAX
 
@@ -296,7 +299,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-A new pricing model has been released. If you are a CSP that means that you have to use "standalone" for the sku. Behind the scenes, the sku will be changed to pergb2018. For more information, please see the following: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-usage-and-estimated-costs#new-pricing-model
+A new pricing model has been released. If you are a CSP that means that you have to use "standalone" for the sku. Behind the scenes, the sku will be changed to pergb2018. For more information, please see the following: https://learn.microsoft.com/azure/monitoring-and-diagnostics/monitoring-usage-and-estimated-costs#new-pricing-model
 
 ## RELATED LINKS
 

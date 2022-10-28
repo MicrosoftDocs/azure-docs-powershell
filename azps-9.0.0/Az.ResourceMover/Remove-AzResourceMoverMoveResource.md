@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ResourceMover
-online version: https://docs.microsoft.com/powershell/module/az.resourcemover/remove-azresourcemovermoveresource
+online version: https://learn.microsoft.com/powershell/module/az.resourcemover/remove-azresourcemovermoveresource
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Remove-AzResourceMoverMoveResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Remove-AzResourceMoverMoveResource.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes a Move Resource from the move collection.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resourcemover/remove-azresourcemovermoveresource) for up-to-date information.
 
 ## SYNTAX
 
@@ -31,13 +34,13 @@ Remove-AzResourceMoverMoveResource -ResourceGroupName "RG-MoveCollection-demoRMS
 ```
 
 ```output
-AdditionalInfo : 
-Code           : 
-Detail         : 
+AdditionalInfo :
+Code           :
+Detail         :
 EndTime        : 2/10/2021 1:08:49 PM
 Id             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralu
                  s-demoRMS/operations/bee69758-c7cb-4160-b3e0-8e4b69ec3731
-Message        : 
+Message        :
 Name           : bee69758-c7cb-4160-b3e0-8e4b69ec3731
 Property       : Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Any
 StartTime      : 2/10/2021 1:08:47 PM

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: AE8E26F2-CF8E-4340-936D-230731B5BA32
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azapplicationgatewayfrontendipconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azapplicationgatewayfrontendipconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayFrontendIPConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayFrontendIPConfig.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a front-end IP configuration for an application gateway.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azapplicationgatewayfrontendipconfig) for up-to-date information.
 
 ## SYNTAX
 
@@ -32,8 +35,8 @@ New-AzApplicationGatewayFrontendIPConfig -Name <String> [-PrivateIPAddress <Stri
 
 ## DESCRIPTION
 The **New-AzApplicationGatewayFrontendIPConfig** cmdlet creates a front-end IP configuration for an Azure application gateway.
-An application gateway supports two types of front-end IP configuration: 
-- Public IP addresses 
+An application gateway supports two types of front-end IP configuration:
+- Public IP addresses
  -- Private IP addresses using internal load balancing (ILB).
 An application gateway can have at most one public IP address and one private IP address.
 The public IP address and private IP address should be added separately as front-end IP addresses.

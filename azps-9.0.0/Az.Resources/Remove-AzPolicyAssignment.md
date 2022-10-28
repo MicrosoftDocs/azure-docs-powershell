@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 36399302-3EA5-45A3-A042-536CC7EC2E6D
-online version: https://docs.microsoft.com/powershell/module/az.resources/remove-azpolicyassignment
+online version: https://learn.microsoft.com/powershell/module/az.resources/remove-azpolicyassignment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Remove-AzPolicyAssignment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Remove-AzPolicyAssignment.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a policy assignment.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/remove-azpolicyassignment) for up-to-date information.
 
 ## SYNTAX
 
@@ -51,7 +54,7 @@ The **ResourceId** property of $ResourceGroup identifies the resource group.
 
 ### Example 2: Remove policy assignment by ID
 ```powershell
-$ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11' 
+$ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
 $PolicyAssignment = Get-AzPolicyAssignment -Name 'PolicyAssignment07' -Scope $ResourceGroup.ResourceId
 Remove-AzPolicyAssignment -Id $PolicyAssignment.ResourceId -Confirm
 ```

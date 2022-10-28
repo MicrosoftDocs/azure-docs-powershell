@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 86D8965D-D999-48A4-A4EE-9E054E5486EE
-online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/new-Azaduser
+online version: https://learn.microsoft.com/en-us/powershell/module/az.resources/new-Azaduser
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADUser.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADUser.md

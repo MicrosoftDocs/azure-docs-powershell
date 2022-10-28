@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Maps
-online version: https://docs.microsoft.com/powershell/module/az.maps/get-azmapscreator
+online version: https://learn.microsoft.com/powershell/module/az.maps/get-azmapscreator
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/help/Get-AzMapsCreator.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/help/Get-AzMapsCreator.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get a Maps Creator resource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.maps/get-azmapscreator) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 2DF5FB4D-A5CB-439C-AC6F-DF2130AF33EC
-online version: https://docs.microsoft.com/powershell/module/az.batch/disable-azbatchcomputenodescheduling
+online version: https://learn.microsoft.com/powershell/module/az.batch/disable-azbatchcomputenodescheduling
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Disable-AzBatchComputeNodeScheduling.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Disable-AzBatchComputeNodeScheduling.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Disables task scheduling on the specified compute node.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/disable-azbatchcomputenodescheduling) for up-to-date information.
 
 ## SYNTAX
 
@@ -33,12 +36,12 @@ Disable-AzBatchComputeNodeScheduling [[-ComputeNode] <PSComputeNode>]
 The **Disable-AzBatchComputeNodeScheduling** cmdlet disables task scheduling on the specified compute node.
 A compute node is an Azure virtual machine dedicated to a specific application workload.
 When you disable task scheduling on a compute node you will also have the option of determining what to do about jobs currently in the node's task queue.
-**Disable-AzBatchComputeNodeScheduling** lets you do the following: 
+**Disable-AzBatchComputeNodeScheduling** lets you do the following:
 - Terminate the tasks and put them back in the job queue.
-This enables those tasks to be rescheduled on another compute node. 
+This enables those tasks to be rescheduled on another compute node.
 - Terminate the tasks and remove them from the job queue.
-Tasks stopped in this manner will not be rescheduled. 
-- Wait for all the tasks currently being executed to complete and then disable task scheduling on the compute node. 
+Tasks stopped in this manner will not be rescheduled.
+- Wait for all the tasks currently being executed to complete and then disable task scheduling on the compute node.
 - Wait for all the running tasks to complete and all the data retention periods to expire, and then disable task scheduling on the compute node.
 
 ## EXAMPLES
@@ -123,13 +126,13 @@ The acceptable values for this parameter are:
 - Requeue.
 Tasks are stopped immediately and returned to the job queue.
 This enables the tasks to be rescheduled on another compute node.
-This is the default value. 
+This is the default value.
 - Terminate.
 Tasks are stopped immediately and removed from the job queue.
-These tasks will not be rescheduled. 
+These tasks will not be rescheduled.
 - TaskCompletion.
 Currently running tasks will be able to complete before task scheduling is disabled on the compute node.
-No new tasks will be scheduled on this node. 
+No new tasks will be scheduled on this node.
 - RetainedData.
 Currently running tasks will be able to complete and data retention periods will be able to expire before task scheduling is disabled on the compute node.
 No new tasks will be scheduled on this node.

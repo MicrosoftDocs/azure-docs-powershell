@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Reservations
-online version: https://docs.microsoft.com/powershell/module/az.reservations/update-azreservation
+online version: https://learn.microsoft.com/powershell/module/az.reservations/update-azreservation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Update-AzReservation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Update-AzReservation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates the applied scopes of the `Reservation`.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.reservations/update-azreservation) for up-to-date information.
 
 ## SYNTAX
 
@@ -342,7 +345,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[SubscriptionId <String>]`: Id of the subscription
 
 `RENEWPROPERTY <IPatchPropertiesRenewProperties>`: .
-  - `[PurchaseProperty <IPurchaseRequest>]`: 
+  - `[PurchaseProperty <IPurchaseRequest>]`:
     - `[AppliedScopeType <AppliedScopeType?>]`: Type of the Applied Scope.
     - `[AppliedScopes <String[]>]`: List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared.
     - `[BillingPlan <ReservationBillingPlan?>]`: Represent the billing plans.
@@ -353,7 +356,7 @@ To create the parameters described below, construct a hash table containing the 
     - `[Quantity <Int32?>]`: Quantity of the SKUs that are part of the Reservation.
     - `[Renew <Boolean?>]`: Setting this to true will automatically purchase a new reservation on the expiration date time.
     - `[ReservedResourceType <ReservedResourceType?>]`: The type of the resource that is being reserved.
-    - `[Sku <String>]`: 
+    - `[Sku <String>]`:
     - `[Term <ReservationTerm?>]`: Represent the term of Reservation.
 
 `RESERVATION <IPatch>`: .
@@ -362,8 +365,8 @@ To create the parameters described below, construct a hash table containing the 
   - `[InstanceFlexibility <InstanceFlexibility?>]`: Turning this on will apply the reservation discount to other VMs in the same VM size group. Only specify for VirtualMachines reserved resource type.
   - `[Name <String>]`: Name of the Reservation
   - `[Renew <Boolean?>]`: Setting this to true will automatically purchase a new reservation on the expiration date time.
-  - `[RenewProperty <IPatchPropertiesRenewProperties>]`: 
-    - `[PurchaseProperty <IPurchaseRequest>]`: 
+  - `[RenewProperty <IPatchPropertiesRenewProperties>]`:
+    - `[PurchaseProperty <IPurchaseRequest>]`:
       - `[AppliedScopeType <AppliedScopeType?>]`: Type of the Applied Scope.
       - `[AppliedScopes <String[]>]`: List of the subscriptions that the benefit will be applied. Do not specify if AppliedScopeType is Shared.
       - `[BillingPlan <ReservationBillingPlan?>]`: Represent the billing plans.
@@ -374,7 +377,7 @@ To create the parameters described below, construct a hash table containing the 
       - `[Quantity <Int32?>]`: Quantity of the SKUs that are part of the Reservation.
       - `[Renew <Boolean?>]`: Setting this to true will automatically purchase a new reservation on the expiration date time.
       - `[ReservedResourceType <ReservedResourceType?>]`: The type of the resource that is being reserved.
-      - `[Sku <String>]`: 
+      - `[Sku <String>]`:
       - `[Term <ReservationTerm?>]`: Represent the term of Reservation.
 
 ## RELATED LINKS

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/update-azsqlinstancelink
+online version: https://learn.microsoft.com/powershell/module/az.sql/update-azsqlinstancelink
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Update-AzSqlInstanceLink.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Update-AzSqlInstanceLink.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates the properties of an instance link.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/update-azsqlinstancelink) for up-to-date information.
 
 ## SYNTAX
 
@@ -122,7 +125,7 @@ This command sets the replication mode of an instance link to "Sync" by its reso
 
 ### Example 4: Set replication mode of instance link by its PowerShell object
 ```powershell
-$managedInstanceLink = Get-AzSqlInstanceLink -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Link01" 
+$managedInstanceLink = Get-AzSqlInstanceLink -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Link01"
 Update-AzSqlInstanceLink -InputObject $managedInstanceLink -ReplicationMode "Async"
 ```
 
@@ -148,7 +151,7 @@ This command sets the replication mode of an instance link to "Async" using the 
 
 ### Example 5: Set replication mode of instance link by mutating its object
 ```powershell
-$managedInstanceLink = Get-AzSqlInstanceLink -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Link01" 
+$managedInstanceLink = Get-AzSqlInstanceLink -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Link01"
 $managedInstanceLink.ReplicationMode = "Async"
 Update-AzSqlInstanceLink -InputObject $managedInstanceLink
 ```
@@ -175,7 +178,7 @@ This command sets the instance link using input object.
 
 ### Example 6: Set replication mode of an instance link by its parent instance object
 ```powershell
-$instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01" 
+$instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01"
 Update-AzSqlInstanceLink -InstanceObject $instance -Name "Link01" -ReplicationMode "Async"
 ```
 

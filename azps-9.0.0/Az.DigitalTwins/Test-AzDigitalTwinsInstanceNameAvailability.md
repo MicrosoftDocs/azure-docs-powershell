@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DigitalTwins
-online version: https://docs.microsoft.com/powershell/module/az.digitaltwins/test-azdigitaltwinsinstancenameavailability
+online version: https://learn.microsoft.com/powershell/module/az.digitaltwins/test-azdigitaltwinsinstancenameavailability
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DigitalTwins/help/Test-AzDigitalTwinsInstanceNameAvailability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DigitalTwins/help/Test-AzDigitalTwinsInstanceNameAvailability.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Check if a DigitalTwinsInstance name is available.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.digitaltwins/test-azdigitaltwinsinstancenameavailability) for up-to-date information.
 
 ## SYNTAX
 
@@ -60,7 +63,7 @@ Check the availability of the name by location and name.
 
 ### Example 2: Check the name by DigitalTwinsObject and CheckNameObject.
 ```powershell
-$getAzDT =Get-AzDigitalTwinsInstance -ResourceGroupName youritemp -ResourceName youriDigitalTwinsTest 
+$getAzDT =Get-AzDigitalTwinsInstance -ResourceGroupName youritemp -ResourceName youriDigitalTwinsTest
 $checkName = New-AzDigitalTwinsCheckNameRequestObject -name youriTestName
 Test-AzDigitalTwinsInstanceNameAvailability -InputObject $getAzDT -DigitalTwinsInstanceCheckName $checkName
 ```

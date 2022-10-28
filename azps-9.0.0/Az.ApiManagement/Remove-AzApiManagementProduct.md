@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: D6B7F253-03CD-40BE-87D6-E4AE300A29D5
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/remove-azapimanagementproduct
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/remove-azapimanagementproduct
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementProduct.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementProduct.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an existing API Management product.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/remove-azapimanagementproduct) for up-to-date information.
 
 ## SYNTAX
 

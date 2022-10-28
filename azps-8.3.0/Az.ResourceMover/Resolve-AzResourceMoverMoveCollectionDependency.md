@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ResourceMover
-online version: https://docs.microsoft.com/powershell/module/az.resourcemover/resolve-azresourcemovermovecollectiondependency
+online version: https://learn.microsoft.com/powershell/module/az.resourcemover/resolve-azresourcemovermovecollectiondependency
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Resolve-AzResourceMoverMoveCollectionDependency.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Resolve-AzResourceMoverMoveCollectionDependency.md
@@ -30,11 +30,11 @@ Computes, resolves and validate the dependencies of the moveResources in the mov
 
 ### Example 1: Compute, resolve and validate the dependencies of the Move Resources in the Move collection.
 ```powershell
-Resolve-AzResourceMoverMoveCollectionDependency -ResourceGroupName "RG-MoveCollection-demoRMS" -MoveCollectionName "PS-centralus-westcentralus-demoRMS" 
+Resolve-AzResourceMoverMoveCollectionDependency -ResourceGroupName "RG-MoveCollection-demoRMS" -MoveCollectionName "PS-centralus-westcentralus-demoRMS"
 ```
 
 ```output
-AdditionalInfo : 
+AdditionalInfo :
 Code           : MoveCollectionResolveDependenciesOperationFailed
 Detail         : {}
 EndTime        : 2/9/2021 2:05:04 AM
@@ -43,7 +43,7 @@ Id             : /subscriptions/e80eb9fa-c996-4435-aa32-5af6f3d3077c/resourceGro
 Message        : The resolve dependencies operation of one or more resources has failed. Check the move status of the resource for more details.
                      Possible Causes: The resolve dependencies operation of one ore more resources has failed.
                      Recommended Action: Retry the operation after resolving errors if any. If issue persists, contact support.
-                     
+
 Name           : c2ad0066-6a69-45fe-aa70-193c240a9bc0
 Property       : Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Any
 StartTime      : 2/9/2021 2:05:00 AM

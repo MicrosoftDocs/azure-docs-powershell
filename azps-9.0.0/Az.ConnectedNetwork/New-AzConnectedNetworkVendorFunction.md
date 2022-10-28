@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ConnectedNetwork
-online version: https://docs.microsoft.com/powershell/module/az.connectednetwork/new-azconnectednetworkvendorfunction
+online version: https://learn.microsoft.com/powershell/module/az.connectednetwork/new-azconnectednetworkvendorfunction
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/help/New-AzConnectedNetworkVendorFunction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/help/New-AzConnectedNetworkVendorFunction.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Creates or updates a vendor network function.
 This operation can take up to 6 hours to complete.
 This is expected service behavior.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectednetwork/new-azconnectednetworkvendorfunction) for up-to-date information.
 
 ## SYNTAX
 

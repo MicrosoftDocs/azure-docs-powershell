@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 3E736E85-0488-4D10-BEA1-4F9B8DA54C4B
-online version: https://docs.microsoft.com/powershell/module/az.batch/stop-azbatchpoolresize
+online version: https://learn.microsoft.com/powershell/module/az.batch/stop-azbatchpoolresize
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Stop-AzBatchPoolResize.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Stop-AzBatchPoolResize.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Stops a pool resize operation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/stop-azbatchpoolresize) for up-to-date information.
 
 ## SYNTAX
 

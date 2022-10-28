@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azvirtualappliancesite
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azvirtualappliancesite
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualApplianceSite.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualApplianceSite.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create a site connected to a Network Virtual Appliance.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azvirtualappliancesite) for up-to-date information.
 
 ## SYNTAX
 
@@ -35,7 +38,7 @@ The New-AzVirtualApplianceSite command creates a Virtual Appliance site connecte
 
 ### Example 1
 ```powershell
-$nva = Get-AzNetworkVirtualAppliance -ResourceGroupName testrg -Name nva 
+$nva = Get-AzNetworkVirtualAppliance -ResourceGroupName testrg -Name nva
 $o365Policy = New-AzOffice365PolicyProperty -Allow -Optimize
 $site = New-AzVirtualApplianceSite -ResourceGroupName testrg -Name testsite -NetworkVirtualApplianceId $nva.Id -AddressPrefix 10.0.1.0/24 -O365Policy $o365Policy
 ```

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/set-azstackhci
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/set-azstackhci
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Set-AzStackHCI.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Set-AzStackHCI.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Set-AzStackHCI modifies resource properties of the Microsoft.AzureStackHCI cloud resource representing the on-premises cluster to enable or disable features.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.stackhci/set-azstackhci) for up-to-date information.
 
 ## SYNTAX
 
@@ -26,7 +29,7 @@ Set-AzStackHCI modifies resource properties of the Microsoft.AzureStackHCI cloud
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 Set-AzStackHCI -EnableWSSubscription $true
 ```
@@ -37,7 +40,7 @@ Result: Success
 
 Invoking on one of the cluster node to enable Windows Server Subscription feature
 
-### Example 2: 
+### Example 2:
 ```powershell
 Set-AzStackHCI -ComputerName ClusterNode1 -DiagnosticLevel Basic
 ```

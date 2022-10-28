@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: C3DD193E-B8FE-468D-BEE7-00C3D99B469E
-online version: https://docs.microsoft.com/powershell/module/az.resources/remove-azresourcegroupdeployment
+online version: https://learn.microsoft.com/powershell/module/az.resources/remove-azresourcegroupdeployment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Remove-AzResourceGroupDeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Remove-AzResourceGroupDeployment.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a resource group deployment and any associated operations.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/remove-azresourcegroupdeployment) for up-to-date information.
 
 ## SYNTAX
 

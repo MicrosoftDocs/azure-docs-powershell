@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ImageBuilder
-online version: https://docs.microsoft.com/powershell/module/az.imagebuilder/new-azimagebuildertemplate
+online version: https://learn.microsoft.com/powershell/module/az.imagebuilder/new-azimagebuildertemplate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/help/New-AzImageBuilderTemplate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/help/New-AzImageBuilderTemplate.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create or update a virtual machine image template
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.imagebuilder/new-azimagebuildertemplate) for up-to-date information.
 
 ## SYNTAX
 
@@ -56,12 +59,12 @@ $distributor = New-AzImageBuilderTemplateDistributorObject -SharedImageDistribut
 # the userAssignedIdentity should have access permissions to the image above
 $userAssignedIdentity = '/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourcegroups/bez-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/bez-id'
 # Create a virtual machine image template
-New-AzImageBuilderTemplate -Name bez-test-img-temp -ResourceGroupName bez-rg -Location eastus -UserAssignedIdentityId $userAssignedIdentity -Source $source -Customize $customizer -Distribute $distributor  
+New-AzImageBuilderTemplate -Name bez-test-img-temp -ResourceGroupName bez-rg -Location eastus -UserAssignedIdentityId $userAssignedIdentity -Source $source -Customize $customizer -Distribute $distributor
 ```
 
 ```output
-Location Name              SystemDataCreatedAt SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType       
--------- ----              ------------------- ------------------- ----------------------- ------------------------ ------------------------ ----------------------------       
+Location Name              SystemDataCreatedAt SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType
+-------- ----              ------------------- ------------------- ----------------------- ------------------------ ------------------------ ----------------------------
 eastus   bez-test-img-temp
 ```
 
@@ -585,20 +588,20 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-`CUSTOMIZE <IImageTemplateCustomizer[]>`: 
+`CUSTOMIZE <IImageTemplateCustomizer[]>`:
   - `Type <String>`: The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
   - `[Name <String>]`: Friendly Name to provide context on what this customization step does
 
-`DISTRIBUTE <IImageTemplateDistributor[]>`: 
+`DISTRIBUTE <IImageTemplateDistributor[]>`:
   - `RunOutputName <String>`: The name to be used for the associated RunOutput.
   - `Type <String>`: Type of distribution.
   - `[ArtifactTag <IImageTemplateDistributorArtifactTags>]`: Tags that will be applied to the artifact once it has been created/updated by the distributor.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
 
-`SOURCE <IImageTemplateSource>`: 
+`SOURCE <IImageTemplateSource>`:
   - `Type <String>`: Specifies the type of source image you want to start with.
 
-`VALIDATOR <IImageTemplateInVMValidator[]>`: 
+`VALIDATOR <IImageTemplateInVMValidator[]>`:
   - `Type <String>`: The type of validation you want to use on the Image. For example, "Shell" can be shell validation
   - `[Name <String>]`: Friendly Name to provide context on what this validation step does
 

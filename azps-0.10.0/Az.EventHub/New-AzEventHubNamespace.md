@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
 Module Name: Az.EventHub
-online version: https://docs.microsoft.com/en-us/powershell/module/az.eventhub/new-azeventhubnamespace
+online version: https://learn.microsoft.com/en-us/powershell/module/az.eventhub/new-azeventhubnamespace
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/EventHub/EventHub/help/New-AzEventHubNamespace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/EventHub/EventHub/help/New-AzEventHubNamespace.md
@@ -34,7 +34,7 @@ The New-AzEventHubNamespace cmdlet creates a new namespace of type Event Hubs.
 
 ## EXAMPLES
 
-### Example 1			 								
+### Example 1
 ```
 PS C:\> New-AzEventHubNamespace -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Location MyLocation
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.AnalysisServices.dll-Help.xml
 Module Name: Az.AnalysisServices
-online version: https://docs.microsoft.com/powershell/module/az.analysisservices/new-azanalysisservicesfirewallconfig
+online version: https://learn.microsoft.com/powershell/module/az.analysisservices/new-azanalysisservicesfirewallconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AnalysisServices/AnalysisServices/help/New-AzAnalysisServicesFirewallConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AnalysisServices/AnalysisServices/help/New-AzAnalysisServicesFirewallConfig.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzAnalysisServicesFirewallConfig
 
 ## SYNOPSIS
-Creates a new Analysis Services firewall config 
+Creates a new Analysis Services firewall config
 
 ## SYNTAX
 

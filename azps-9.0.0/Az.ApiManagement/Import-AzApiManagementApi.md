@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: 48C143BE-3BF6-43E3-99B0-1A1D12A0A3F3
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/import-azapimanagementapi
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/import-azapimanagementapi
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Import-AzApiManagementApi.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Import-AzApiManagementApi.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Imports an API from a file or a URL.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/import-azapimanagementapi) for up-to-date information.
 
 ## SYNTAX
 
@@ -98,7 +101,7 @@ SubscriptionRequired          :
 ApiRevisionDescription        :
 ApiVersionSetDescription      :
 ApiVersionSetId               :
-Id                            : /subscriptions/subid/resourceGroups/Api-Default-West-US/providers/Microsoft.ApiManagement/service/contoso/apis/af3f57bab399455aa875d7050654e9d1     
+Id                            : /subscriptions/subid/resourceGroups/Api-Default-West-US/providers/Microsoft.ApiManagement/service/contoso/apis/af3f57bab399455aa875d7050654e9d1
 ResourceGroupName             : Api-Default-West-US
 ServiceName                   : contoso
 ```
@@ -116,8 +119,8 @@ Import-AzApiManagementApi -Context $context -SpecificationPath "C:\contoso\speci
 ApiId                         : 6c3f20c66e5745b19229d06cd865948f
 Name                          : USPTO Data Set API
 Description                   : The Data Set API (DSAPI) allows the public users to discover and search USPTO exported data sets. This is a generic API that allows USPTO users to make any CSV based data files
-                                searchable through API. With the help of GET call, it returns the list of data fields that are searchable. With the help of POST call, data can be fetched based on the filters on the    
-                                field names. Please note that POST call is used to search the actual data. The reason for the POST call is that it allows users to specify any complex search criteria without worry      
+                                searchable through API. With the help of GET call, it returns the list of data fields that are searchable. With the help of POST call, data can be fetched based on the filters on the
+                                field names. Please note that POST call is used to search the actual data. The reason for the POST call is that it allows users to specify any complex search criteria without worry
                                 about the GET size limitations as well as encoding of the input parameters.
 ServiceUrl                    : https://developer.uspto.gov/ds-api
 Path                          : uspostal
@@ -137,7 +140,7 @@ SubscriptionRequired          :
 ApiRevisionDescription        :
 ApiVersionSetDescription      :
 ApiVersionSetId               : /subscriptions/subid/resourceGroups/Api-Default-East-US/providers/Microsoft.ApiManagement/service/contoso/apiVersionSets/0d50e2cf-aaeb-4ea3-8a58-db9ec079c6cd
-Id                            : /subscriptions/subid/resourceGroups/Api-Default-East-US/providers/Microsoft.ApiManagement/service/contoso/apis/6c3f20c66e5745b19229d06cd865948f    
+Id                            : /subscriptions/subid/resourceGroups/Api-Default-East-US/providers/Microsoft.ApiManagement/service/contoso/apis/6c3f20c66e5745b19229d06cd865948f
 ResourceGroupName             : Api-Default-East-US
 ServiceName                   : contoso
 ```
@@ -172,7 +175,7 @@ SubscriptionRequired          :
 ApiRevisionDescription        :
 ApiVersionSetDescription      :
 ApiVersionSetId               :
-Id                            : /subscriptions/subid/resourceGroups/Api-Default-West-US/providers/Microsoft.ApiManagement/service/contoso/apis/bg4g23csd067432zz853f0942341g3z1     
+Id                            : /subscriptions/subid/resourceGroups/Api-Default-West-US/providers/Microsoft.ApiManagement/service/contoso/apis/bg4g23csd067432zz853f0942341g3z1
 ResourceGroupName             : Api-Default-West-US
 ServiceName                   : contoso
 ```

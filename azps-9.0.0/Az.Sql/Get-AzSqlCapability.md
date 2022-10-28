@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 8C5D29AD-0B15-4CD4-8637-86ABD19F41C8
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqlcapability
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlcapability
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlCapability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlCapability.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets SQL Database capabilities for the current subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/get-azsqlcapability) for up-to-date information.
 
 ## SYNTAX
 
@@ -68,7 +71,7 @@ Get-AzSqlCapability -LocationName "Central US" -ServiceObjectiveName "S1"
 ```output
 Location        : Central US
 Status          : Available
-ExpandedDetails : Version: 12.0 (Available) -> Edition: Standard (Default) -> Service Objective: S1 (Available) 
+ExpandedDetails : Version: 12.0 (Available) -> Edition: Standard (Default) -> Service Objective: S1 (Available)
                   Version: 2.0 (Default) -> Edition: Standard (Default) -> Service Objective: S1 (Available)
 ```
 

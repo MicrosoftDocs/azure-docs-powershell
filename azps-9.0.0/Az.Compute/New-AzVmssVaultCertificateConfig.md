@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 5CC89899-00B6-424A-8896-FD32DE9DDA28
-online version: https://docs.microsoft.com/powershell/module/az.compute/new-azvmssvaultcertificateconfig
+online version: https://learn.microsoft.com/powershell/module/az.compute/new-azvmssvaultcertificateconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzVmssVaultCertificateConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzVmssVaultCertificateConfig.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a Key Vault certificate configuration.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/new-azvmssvaultcertificateconfig) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Support.dll-Help.xml
 Module Name: Az.Support
-online version: https://docs.microsoft.com/powershell/module/az.support/get-azsupportticket
+online version: https://learn.microsoft.com/powershell/module/az.support/get-azsupportticket
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Get-AzSupportTicket.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Get-AzSupportTicket.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get support tickets.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.support/get-azsupportticket) for up-to-date information.
 
 ## SYNTAX
 
@@ -40,7 +43,7 @@ Gets the list of support tickets. It will retrieve all the support tickets if yo
 
 This cmdlet supports paging via First and Skip parameters.
 
-You can also retrieve a single support ticket by specifying the ticket name. 
+You can also retrieve a single support ticket by specifying the ticket name.
 
 ## EXAMPLES
 

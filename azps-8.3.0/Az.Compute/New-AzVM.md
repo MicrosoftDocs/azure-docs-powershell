@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 05E6155D-4F0E-406B-9312-77AD97EF66EE
-online version: https://docs.microsoft.com/powershell/module/az.compute/new-azvm
+online version: https://learn.microsoft.com/powershell/module/az.compute/new-azvm
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzVM.md
@@ -64,7 +64,7 @@ New-AzVM [[-ResourceGroupName] <String>] [[-Location] <String>] [-EdgeZone <Stri
 The **New-AzVM** cmdlet creates a virtual machine in Azure.
 This cmdlet takes a virtual machine object as input.
 Use the New-AzVMConfig cmdlet to create a virtual machine object.
-The **New-AzVM** cmdlet will create a new storage account for boot diagnostics if one does not already exist. 
+The **New-AzVM** cmdlet will create a new storage account for boot diagnostics if one does not already exist.
 Other cmdlets can be used to configure the virtual machine, such as Set-AzVMOperatingSystem, Set-AzVMSourceImage, Add-AzVMNetworkInterface, and Set-AzVMOSDisk.
 The `SimpleParameterSet` provides a convenient method to create a VM by making common VM creation arguments optional.
 
@@ -209,7 +209,7 @@ New-AzVM -ResourceGroupName $ResourceGroupName -Name $VMName -Credential $cred -
 $vm = Get-AzVM -ResourceGroupName $ResourceGroupName -Name $VMName -UserData;
 ```
 
-The UserData value must always be Base64 encoded. 
+The UserData value must always be Base64 encoded.
 
 ### Example 5: Creating a new VM with an existing subnet in another resource group
 ```powershell
@@ -280,7 +280,7 @@ $vmGADefaultIDentity = "SystemAssigned";
 
 # Credential
 $password = <PASSWORD>;
-$securePassword = $password | ConvertTo-SecureString -AsPlainText -Force;  
+$securePassword = $password | ConvertTo-SecureString -AsPlainText -Force;
 $user = <USER NAME>;
 $cred = New-Object System.Management.Automation.PSCredential ($user, $securePassword);
 
@@ -544,8 +544,8 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionAtHost
-EncryptionAtHost property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. 
-This will enable the encryption for all the disks including Resource/Temp disk at host itself. 
+EncryptionAtHost property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set.
+This will enable the encryption for all the disks including Resource/Temp disk at host itself.
 Default: The Encryption at host will be disabled unless this property is set to true for the resource.
 
 ```yaml
@@ -670,9 +670,9 @@ Specifies a license type, which indicates that the image or disk for the virtual
 Possible values for Windows Server are:
 - Windows_Client
 - Windows_Server
-Possible values for Linux Server operating system are: 
-- RHEL_BYOS (for RHEL) 
-- SLES_BYOS (for SUSE) 
+Possible values for Linux Server operating system are:
+- RHEL_BYOS (for RHEL)
+- SLES_BYOS (for SUSE)
 
 ```yaml
 Type: System.String
@@ -1048,7 +1048,7 @@ Accept wildcard characters: False
 ```
 
 ### -vCPUCountAvailable
-Specifies the number of vCPUs available for the VM. When this property is not specified in the request body the default behavior is to set it to the value of vCPUs available for that VM size exposed in api response of [List all available virtual machine sizes in a region](https://docs.microsoft.com/en-us/rest/api/compute/resource-skus/list).
+Specifies the number of vCPUs available for the VM. When this property is not specified in the request body the default behavior is to set it to the value of vCPUs available for that VM size exposed in api response of [List all available virtual machine sizes in a region](https://learn.microsoft.com/en-us/rest/api/compute/resource-skus/list).
 
 ```yaml
 Type: System.Int32
@@ -1063,7 +1063,7 @@ Accept wildcard characters: False
 ```
 
 ### -vCPUCountPerCore
-Specifies the vCPU to physical core ratio. When this property is not specified in the request body the default behavior is set to the value of vCPUsPerCore for the VM Size exposed in api response of [List all available virtual machine sizes in a region](https://docs.microsoft.com/en-us/rest/api/compute/resource-skus/list). Setting this property to 1 also means that hyper-threading is disabled.
+Specifies the vCPU to physical core ratio. When this property is not specified in the request body the default behavior is set to the value of vCPUsPerCore for the VM Size exposed in api response of [List all available virtual machine sizes in a region](https://learn.microsoft.com/en-us/rest/api/compute/resource-skus/list). Setting this property to 1 also means that hyper-threading is disabled.
 
 ```yaml
 Type: System.Int32

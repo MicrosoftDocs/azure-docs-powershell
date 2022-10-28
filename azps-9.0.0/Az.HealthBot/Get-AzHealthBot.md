@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.HealthBot
-online version: https://docs.microsoft.com/powershell/module/az.healthbot/get-azhealthbot
+online version: https://learn.microsoft.com/powershell/module/az.healthbot/get-azhealthbot
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HealthBot/help/Get-AzHealthBot.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HealthBot/help/Get-AzHealthBot.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get a HealthBot.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.healthbot/get-azhealthbot) for up-to-date information.
 
 ## SYNTAX
 

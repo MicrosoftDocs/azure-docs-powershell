@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: F845ED42-A7C1-4CCC-9AD8-E9A91C3EEC7A
-online version: https://docs.microsoft.com/powershell/module/az.network/move-azexpressroutecircuit
+online version: https://learn.microsoft.com/powershell/module/az.network/move-azexpressroutecircuit
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Move-AzExpressRouteCircuit.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Move-AzExpressRouteCircuit.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Moves an ExpressRoute circuit from the classic deployment model to the Resource Manager deployment model.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/move-azexpressroutecircuit) for up-to-date information.
 
 ## SYNTAX
 

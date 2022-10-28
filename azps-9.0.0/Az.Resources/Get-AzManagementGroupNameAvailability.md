@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
-online version: https://docs.microsoft.com/powershell/module/az.resources/new-azmanagementgroupsubscription/
+online version: https://learn.microsoft.com/powershell/module/az.resources/new-azmanagementgroupsubscription/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzManagementGroupNameAvailability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzManagementGroupNameAvailability.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Checks if the Management Group name is available in the Tenant and a valid name.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-azmanagementgroupnameavailability) for up-to-date information.
 
 ## SYNTAX
 
@@ -30,7 +33,7 @@ Get-AzManagementGroupNameAvailability -GroupName "testMG"
 ```
 
 ```output
-Message              : 
+Message              :
 NameAvailable        : True
 Reason               :
 ```

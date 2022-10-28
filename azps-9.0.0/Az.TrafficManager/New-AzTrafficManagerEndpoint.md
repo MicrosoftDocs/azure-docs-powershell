@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
 Module Name: Az.TrafficManager
 ms.assetid: A7A908A1-7326-4725-A3F9-4D05E40C5F73
-online version: https://docs.microsoft.com/powershell/module/az.trafficmanager/new-aztrafficmanagerendpoint
+online version: https://learn.microsoft.com/powershell/module/az.trafficmanager/new-aztrafficmanagerendpoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/New-AzTrafficManagerEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/New-AzTrafficManagerEndpoint.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an endpoint in a Traffic Manager profile.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.trafficmanager/new-aztrafficmanagerendpoint) for up-to-date information.
 
 ## SYNTAX
 
@@ -103,10 +106,10 @@ Accept wildcard characters: False
 
 ### -EndpointStatus
 Specifies the status of the endpoint.
-Valid values are: 
+Valid values are:
 
-- Enabled 
-- Disabled 
+- Enabled
+- Disabled
 
 If the status is Enabled, the endpoint is probed for endpoint health and is included in the traffic-routing method.
 
@@ -282,7 +285,7 @@ Accept wildcard characters: False
 
 ### -Type
 Specifies the type of endpoint that this cmdlet adds to the Traffic Manager profile.
-Valid values are: 
+Valid values are:
 
 - AzureEndpoints
 - ExternalEndpoints

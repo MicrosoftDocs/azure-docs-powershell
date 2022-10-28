@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Peering
 Module Guid: 6c848b97-4dd4-49ef-b385-43c64905d25a
-Download Help Link: https://docs.microsoft.com/powershell/module/az.peering.md
+Download Help Link: https://learn.microsoft.com/powershell/module/az.peering.md
 Help Version: 0.1.0
 Locale: e-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Az.Peering.md
@@ -17,7 +17,7 @@ Microsoft Peering Service allows customers and Microsoft to connect to Azure and
 Lists all of the advertised prefixes for cdn in the specified peering location
 
 ### [Get-AzLegacyPeering](Get-AzLegacyPeering.md)
-Used to Convert Legacy Peering resources to Azure Resource Management (ARM) Resources. 
+Used to Convert Legacy Peering resources to Azure Resource Management (ARM) Resources.
 
 ### [Get-AzPeerAsn](Get-AzPeerAsn.md)
 Gets PeerAsn object from ARM.
@@ -53,10 +53,10 @@ Gets a list of peering service prefixes for a subscription.
 Gets a list of peering service providers partnered with Microsoft.
 
 ### [New-AzPeerAsn](New-AzPeerAsn.md)
-Creates a new Peer ASN 
+Creates a new Peer ASN
 
 ### [New-AzPeerAsnContactDetail](New-AzPeerAsnContactDetail.md)
-Creates an in memory contact detail for PeerAsn. 
+Creates an in memory contact detail for PeerAsn.
 
 ### [New-AzPeering](New-AzPeering.md)
 Creates a new Peering ARM Resource
@@ -98,10 +98,10 @@ Removes a new peering service prefix
 Update Contact Information
 
 ### [Set-AzPeeringDirectConnectionObject](Set-AzPeeringDirectConnectionObject.md)
-Sets or updates the Direct Connection information. 
+Sets or updates the Direct Connection information.
 
 ### [Set-AzPeeringExchangeConnectionObject](Set-AzPeeringExchangeConnectionObject.md)
-Sets or updates the Exchange Connection information. 
+Sets or updates the Exchange Connection information.
 
 ### [Set-AzPeeringRegisteredAsn](Set-AzPeeringRegisteredAsn.md)
 Sets or updates a registered ASN from the parent peering resource.

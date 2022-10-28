@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DynatraceObservability
-online version: https://docs.microsoft.com/powershell/module/az.dynatraceobservability/get-azdynatracemonitoredresource
+online version: https://learn.microsoft.com/powershell/module/az.dynatraceobservability/get-azdynatracemonitoredresource
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DynatraceObservability/help/Get-AzDynatraceMonitoredResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DynatraceObservability/help/Get-AzDynatraceMonitoredResource.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 List the resources currently being monitored by the Dynatrace monitor resource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dynatraceobservability/get-azdynatracemonitoredresource) for up-to-date information.
 
 ## SYNTAX
 

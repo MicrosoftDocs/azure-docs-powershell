@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 52C5CD8B-2489-4FE6-9F33-B3350531CD8E
-online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/get-Azadgroupmember
+online version: https://learn.microsoft.com/en-us/powershell/module/az.resources/get-Azadgroupmember
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Get-AzADGroupMember.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Get-AzADGroupMember.md
@@ -60,7 +60,7 @@ Lists the first 100 members of the AD group with object id '85F89C90-780E-4AA6-9
 PS C:\> Get-AzADGroup -ObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE | Get-AzADGroupMember
 ```
 
-Gets the AD group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE' and pipes it to the Get-AzADGroupMember cmdlet to list all members in that group. 
+Gets the AD group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE' and pipes it to the Get-AzADGroupMember cmdlet to list all members in that group.
 
 ## PARAMETERS
 

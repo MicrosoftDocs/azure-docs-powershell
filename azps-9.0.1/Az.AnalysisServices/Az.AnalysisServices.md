@@ -1,7 +1,7 @@
 ---
 Module Name: Az.AnalysisServices
 Module Guid: acace26c-1775-4100-85c0-20c4d71eaa21
-Download Help Link: https://docs.microsoft.com/powershell/module/az.analysisservices
+Download Help Link: https://learn.microsoft.com/powershell/module/az.analysisservices
 Help Version: 0.0.1.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AnalysisServices/AnalysisServices/help/Az.AnalysisServices.md
@@ -23,7 +23,7 @@ Exports a log from an instance of Analysis Services server in the currently logg
 Gets the details of an Analysis Services server.
 
 ### [New-AzAnalysisServicesFirewallConfig](New-AzAnalysisServicesFirewallConfig.md)
-Creates a new Analysis Services firewall config 
+Creates a new Analysis Services firewall config
 
 ### [New-AzAnalysisServicesFirewallRule](New-AzAnalysisServicesFirewallRule.md)
 Creates a new Analysis Services firewall rule

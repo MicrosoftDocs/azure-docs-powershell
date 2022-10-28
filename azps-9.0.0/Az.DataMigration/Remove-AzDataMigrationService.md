@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
 Module Name: Az.DataMigration
-online version: https://docs.microsoft.com/powershell/module/az.datamigration/Remove-AzDataMigrationService
+online version: https://learn.microsoft.com/powershell/module/az.datamigration/Remove-AzDataMigrationService
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Remove-AzDataMigrationService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Remove-AzDataMigrationService.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an instance of the Azure Database Migration Service from Azure.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/remove-azdatamigrationservice) for up-to-date information.
 
 ## SYNTAX
 
@@ -33,7 +36,7 @@ Remove-AzDataMigrationService [-ResourceId] <String> [-Force] [-DeleteRunningTas
 ```
 
 ## DESCRIPTION
-The Remove-AzDataMigrationService cmdlet removes an instance of the Azure Database Migration Service from Azure. Supplying the DeleteRunningTask parameter removes all of the Azure Database Migration Service tasks associated with the service that is being removed. 
+The Remove-AzDataMigrationService cmdlet removes an instance of the Azure Database Migration Service from Azure. Supplying the DeleteRunningTask parameter removes all of the Azure Database Migration Service tasks associated with the service that is being removed.
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/remove-azstorageblobimmutabilitypolicy
+online version: https://learn.microsoft.com/powershell/module/az.storage/remove-azstorageblobimmutabilitypolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Remove-AzStorageBlobImmutabilityPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Remove-AzStorageBlobImmutabilityPolicy.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes ImmutabilityPolicy of a Storage blob.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/remove-azstorageblobimmutabilitypolicy) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,14 +41,14 @@ The **Remove-AzStorageBlobImmutabilityPolicy** cmdlet removes immutability polic
 ### Example 1: Removes immutability policy of a Storage blob.
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\> $blob = Remove-AzStorageBlobImmutabilityPolicy -Container $containerName -Blob $blobname  
+PS C:\> $blob = Remove-AzStorageBlobImmutabilityPolicy -Container $containerName -Blob $blobname
 
 PS C:\> $blob
 
    AccountName: mystorageaccount, ContainerName: mycontainer
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId                     
-----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------                     
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
 testblob             BlockBlob 10485760        application/octet-stream       2021-07-19 08:56:00Z Hot                                     False      2021-07-19T08:56:01.8120788Z *
 
 PS C:\> $blob.BlobProperties.ImmutabilityPolicy
@@ -180,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -TagCondition
-Optional Tag expression statement to check match condition. The blob request will fail when the blob tags does not match the given expression.See details in https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
+Optional Tag expression statement to check match condition. The blob request will fail when the blob tags does not match the given expression.See details in https://learn.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
 
 ```yaml
 Type: System.String

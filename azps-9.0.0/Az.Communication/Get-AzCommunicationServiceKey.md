@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Communication
-online version: https://docs.microsoft.com/powershell/module/az.communication/get-azcommunicationservicekey
+online version: https://learn.microsoft.com/powershell/module/az.communication/get-azcommunicationservicekey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/help/Get-AzCommunicationServiceKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/help/Get-AzCommunicationServiceKey.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get the access keys of the CommunicationService resource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.communication/get-azcommunicationservicekey) for up-to-date information.
 
 ## SYNTAX
 

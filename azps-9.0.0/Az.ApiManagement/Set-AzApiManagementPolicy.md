@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: 6CD1C2B8-0416-4FF3-81B0-0C9E59AE6CF9
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/set-azapimanagementpolicy
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/set-azapimanagementpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Set-AzApiManagementPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Set-AzApiManagementPolicy.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Sets the specified scope policy for API Management.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/set-azapimanagementpolicy) for up-to-date information.
 
 ## SYNTAX
 
@@ -144,8 +147,8 @@ Accept wildcard characters: False
 ```
 
 ### -Format
-Specifies the format of the policy. When using `application/vnd.ms-azure-apim.policy+xml`, 
-expressions contained within the policy must be XML-escaped. When using `application/vnd.ms-azure-apim.policy.raw+xml` it 
+Specifies the format of the policy. When using `application/vnd.ms-azure-apim.policy+xml`,
+expressions contained within the policy must be XML-escaped. When using `application/vnd.ms-azure-apim.policy.raw+xml` it
 is **not** necessary for the policy to be XML-escaped.
 The default value is `application/vnd.ms-azure-apim.policy+xml`.
 This parameter is optional.

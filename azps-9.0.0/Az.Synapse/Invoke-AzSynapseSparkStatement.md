@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/invoke-azsynapsesparkstatement
+online version: https://learn.microsoft.com/powershell/module/az.synapse/invoke-azsynapsesparkstatement
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Invoke-AzSynapseSparkStatement.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Invoke-AzSynapseSparkStatement.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Invokes a Synapse Analytics Spark statement.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/invoke-azsynapsesparkstatement) for up-to-date information.
 
 ## SYNTAX
 
@@ -50,7 +53,7 @@ The **Invoke-AzSynapseSparkStatement** cmdlet invokes a Synapse Analytics Spark 
 ### Example 1
 ```powershell
 $session = Start-AzSynapseSparkSession -WorkspaceName ContosoWorkspace -SparkPoolName ContosoSparkPool -Name ContosoSessionName -ExecutorCount 3 -ExecutorSize Small
-$session.Language = 'Spark' 
+$session.Language = 'Spark'
 $session | Invoke-AzSynapseSparkStatement -Code 'print("Hello world\n")'
 ```
 
@@ -66,7 +69,7 @@ These commands start a Spark session then invoke an inline Spark statement.
 ### Example 3
 ```powershell
 $session = Start-AzSynapseSparkSession -WorkspaceName ContosoWorkspace -SparkPoolName ContosoSparkPool -Name ContosoSessionName -ExecutorCount 3 -ExecutorSize Small
-$session.Language = 'Spark' 
+$session.Language = 'Spark'
 $session | Invoke-AzSynapseSparkStatement -FilePath 'C:\path\to\code.sc'
 ```
 

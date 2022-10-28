@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-aznetworkwatcherflowlogstatus
+online version: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkwatcherflowlogstatus
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkWatcherFlowLogStatus.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkWatcherFlowLogStatus.md
@@ -36,9 +36,9 @@ Get-AzNetworkWatcherFlowLogStatus -Location <String> -TargetResourceId <String> 
 ```
 
 ## DESCRIPTION
-The Get-AzNetworkWatcherFlowLogStatus cmdlet Gets the status of flow logging on a resource. 
-The status includes whether or not flow logging is enabled for the resource provided, the configured storage account to send logs, and the retention policy for the logs. 
-Currently Network Security Groups are supported for flow logging. 
+The Get-AzNetworkWatcherFlowLogStatus cmdlet Gets the status of flow logging on a resource.
+The status includes whether or not flow logging is enabled for the resource provided, the configured storage account to send logs, and the retention policy for the logs.
+Currently Network Security Groups are supported for flow logging.
 
 ## EXAMPLES
 

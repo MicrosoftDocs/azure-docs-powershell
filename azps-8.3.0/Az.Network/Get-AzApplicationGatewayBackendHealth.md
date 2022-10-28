@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: D5E928C3-26B6-4B7C-8A9C-F1F602BABF75
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azapplicationgatewaybackendhealth
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azapplicationgatewaybackendhealth
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewayBackendHealth.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewayBackendHealth.md

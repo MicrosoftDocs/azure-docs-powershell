@@ -1,7 +1,7 @@
 ---
 Module Name: Az.FrontDoor
 Module Guid: 91832aaa-dc11-4583-8239-adb7df531604
-Download Help Link: https://docs.microsoft.com/powershell/module/az.frontdoor
+Download Help Link: https://learn.microsoft.com/powershell/module/az.frontdoor
 Help Version: 0.1.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/Az.FrontDoor.md
@@ -62,7 +62,7 @@ Create a PSLoadBalancingSetting object for Front Door creation
 Create a PSRoutingRuleObject for Front Door creation
 
 ### [New-AzFrontDoorRulesEngine](New-AzFrontDoorRulesEngine.md)
-Create a new rules engine configuration for a specified front door. 
+Create a new rules engine configuration for a specified front door.
 
 ### [New-AzFrontDoorRulesEngineActionObject](New-AzFrontDoorRulesEngineActionObject.md)
 Create a PSRulesEngineAction object for creating a rules engine rule.

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ADDomainServices
-online version: https://docs.microsoft.com/powershell/module/az.addomainservices/new-azaddomainservice
+online version: https://learn.microsoft.com/powershell/module/az.addomainservices/new-azaddomainservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ADDomainServices/help/New-AzADDomainService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ADDomainServices/help/New-AzADDomainService.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 The Create Domain Service operation creates a new domain service with the specified parameters.
 If the specific service already exists, then any patchable properties will be updated and any immutable properties will remain unchanged.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.addomainservices/new-azaddomainservice) for up-to-date information.
 
 ## SYNTAX
 
@@ -50,12 +53,12 @@ youriADdomain youriAddomain.com westus   Enterprise
 
 Create a new ADDomainService
 
-### Example 2: Create new ADDomainService with certificate 
+### Example 2: Create new ADDomainService with certificate
 ```powershell
 # Variables
 $replicaSet = New-AzADDomainServiceReplicaSet -Location westus -SubnetId /subscriptions/********-****-****-****-**********/resourceGroups/yishitest/providers/Microsoft.Network/virtualNetworks/aadds-vnet/subnets/default\
 $certificateBytes = Get-Content "certificate.pfx" -AsByteStream
-$base64String = [System.Convert]::ToBase64String($certificateBytes) 
+$base64String = [System.Convert]::ToBase64String($certificateBytes)
 $ldaps_pfx_pass = "MyStrongPassword"
 
 New-AzADDomainService -Name youriADdomain -ResourceGroupName youriAddomain -DomainName youriAddomain.com -ReplicaSet $replicaSet -LdapSettingLdaps Enabled -LdapSettingPfxCertificate $base64String -LdapSettingPfxCertificatePassword $($ldaps_pfx_pass | ConvertTo-SecureString -Force -AsPlainText)

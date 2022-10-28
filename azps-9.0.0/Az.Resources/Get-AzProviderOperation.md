@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 6424B740-DBFB-490C-AEAA-EDD60952B435
-online version: https://docs.microsoft.com/powershell/module/az.resources/get-azprovideroperation
+online version: https://learn.microsoft.com/powershell/module/az.resources/get-azprovideroperation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzProviderOperation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzProviderOperation.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the operations for an Azure resource provider that are securable using Azure RBAC.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-azprovideroperation) for up-to-date information.
 
 ## SYNTAX
 

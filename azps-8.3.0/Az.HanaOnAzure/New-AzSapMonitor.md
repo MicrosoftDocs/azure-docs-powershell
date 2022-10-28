@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.HanaOnAzure
-online version: https://docs.microsoft.com/powershell/module/az.hanaonazure/new-azsapmonitor
+online version: https://learn.microsoft.com/powershell/module/az.hanaonazure/new-azsapmonitor
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HanaOnAzure/help/New-AzSapMonitor.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HanaOnAzure/help/New-AzSapMonitor.md
@@ -29,7 +29,7 @@ Creates a SAP monitor for the specified subscription, resource group, and resour
 
 ## EXAMPLES
 
-### Example 1: New SAP monitor 
+### Example 1: New SAP monitor
 ```powershell
 $Workspace = New-AzOperationalInsightsWorkspace -ResourceGroupName nancyc-hn1 -Name sapmonitor-test  -Location westus2 -Sku "Standard"
 $WorkspaceKey = Get-AzOperationalInsightsWorkspaceSharedKey -ResourceGroupName nancyc-hn1 -Name sapmonitor-test

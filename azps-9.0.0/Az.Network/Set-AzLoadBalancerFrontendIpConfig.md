@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: C23BEF37-D472-43EC-90AA-F8742247ABA2
-online version: https://docs.microsoft.com/powershell/module/az.network/set-azloadbalancerfrontendipconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/set-azloadbalancerfrontendipconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzLoadBalancerFrontendIpConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzLoadBalancerFrontendIpConfig.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates a front-end IP configuration for a load balancer.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/set-azloadbalancerfrontendipconfig) for up-to-date information.
 
 ## SYNTAX
 

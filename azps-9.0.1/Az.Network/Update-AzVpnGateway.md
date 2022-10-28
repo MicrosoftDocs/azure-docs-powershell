@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/update-azvpngateway
+online version: https://learn.microsoft.com/powershell/module/az.network/update-azvpngateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVpnGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVpnGateway.md
@@ -42,7 +42,7 @@ Update-AzVpnGateway -ResourceId <String> [-VpnConnection <PSVpnConnection[]>]
 ```
 
 ## DESCRIPTION
-The **Update-AzVpnGateway** cmdlet updates a scalable VPN gateway.  
+The **Update-AzVpnGateway** cmdlet updates a scalable VPN gateway.
 An Azure VPN gateway is a software defined connectivity for site to site connections inside the VirtualHub. This gateway resizes and scales based on the scale unit specified by the user. A connection can be set up from a branch/site known as VPN site to the scalable gateway. Each connection comprises of 2 Active-Active tunnels
 
 ## EXAMPLES
@@ -69,7 +69,7 @@ Type                : Microsoft.Network/vpnGateways
 ProvisioningState   : Succeeded
 ```
 
-The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub in West US in "testRG" resource group in Azure. 
+The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub in West US in "testRG" resource group in Azure.
 A VPN gateway will be created thereafter in the Virtual Hub with 2 scale units.
 
 After the gateway has been created, it uses  Update-AzVpnGateway to upgrade the gateway to 3 scale units.
@@ -103,7 +103,7 @@ Type                : Microsoft.Network/vpnGateways
 ProvisioningState   : Succeeded
 ```
 
-The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub in West US in "testRG" resource group in Azure. 
+The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub in West US in "testRG" resource group in Azure.
 A VPN gateway will be created thereafter in the Virtual Hub with 2 scale units.
 
 After the gateway has been created, it uses Set-AzVpnGateway to update BgpPeeringAddress.

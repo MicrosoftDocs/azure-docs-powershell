@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
 Module Name: Az.EventHub
-online version: https://docs.microsoft.com/powershell/module/az.eventhub/add-azeventhubvirtualnetworkrule
+online version: https://learn.microsoft.com/powershell/module/az.eventhub/add-azeventhubvirtualnetworkrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Add-AzEventHubVirtualNetworkRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Add-AzEventHubVirtualNetworkRule.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Add a single VirtualNetworkRule to NetworkRuleSet for the given Namespace
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventhub/add-azeventhubvirtualnetworkrule) for up-to-date information.
 
 ## SYNTAX
 
@@ -43,7 +46,7 @@ Name                : default
 DefaultAction       : Allow
 Id                  : /subscriptions/SubscriptionId/resourceGroups/RSG-TestAzEventhub/providers/Microsoft.Eventhub/namespaces/Eventhub-Namespace-1122/networkRuleSets/default
 Type                : Microsoft.Eventhub/Namespaces/NetworkRuleSet
-IpRules             : 
+IpRules             :
 VirtualNetworkRules : {/subscriptions/SubscriptionId/resourcegroups/v-ajnavtest/providers/Microsoft.Network/virtualNetworks/sbehvnettest1/subnets/default, False}
 ```
 
@@ -59,7 +62,7 @@ Name                : default
 DefaultAction       : Allow
 Id                  : /subscriptions/SubscriptionId/resourceGroups/RSG-TestAzEventhub/providers/Microsoft.Eventhub/namespaces/Eventhub-Namespace-1122/networkRuleSets/default
 Type                : Microsoft.Eventhub/Namespaces/NetworkRuleSet
-IpRules             : 
+IpRules             :
 VirtualNetworkRules : {/subscriptions/SubscriptionId/resourcegroups/v-ajnavtest/providers/Microsoft.Network/virtualNetworks/sbehvnettest1/subnets/default, False}
 ```
 

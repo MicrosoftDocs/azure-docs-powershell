@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 6493186F-064B-45B7-8DFD-7799B1F2E5C9
-online version: https://docs.microsoft.com/powershell/module/az.automation/get-azautomationdscnode
+online version: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationdscnode
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationDscNode.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationDscNode.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets DSC nodes from Automation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/get-azautomationdscnode) for up-to-date information.
 
 ## SYNTAX
 
@@ -195,11 +198,11 @@ Accept wildcard characters: False
 
 ### -Status
 Specifies the status of the DSC nodes that this cmdlet gets.
-Valid values are: 
-- Compliant 
+Valid values are:
+- Compliant
 - NotCompliant
 - Failed
-- Pending 
+- Pending
 - Received
 - Unresponsive
 

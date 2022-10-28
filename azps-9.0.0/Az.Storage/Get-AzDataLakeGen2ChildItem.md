@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azdatalakegen2childitem
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azdatalakegen2childitem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzDataLakeGen2ChildItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzDataLakeGen2ChildItem.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Lists sub directories and files from a directory or filesystem root.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/get-azdatalakegen2childitem) for up-to-date information.
 
 ## SYNTAX
 
@@ -29,13 +32,13 @@ This cmdlet only works if Hierarchical Namespace is enabled for the Storage acco
 ### Example 1: List the direct sub items from a Filesystem
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\>Get-AzDataLakeGen2ChildItem -FileSystem "filesystem1" 
+PS C:\>Get-AzDataLakeGen2ChildItem -FileSystem "filesystem1"
 
    FileSystem Name: filesystem1
 
-Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
-----                 -----------  ------          ------------         -----------  -----                -----               
-dir1                 True                         2020-03-13 13:07:34Z rwxr-x---    $superuser           $superuser          
+Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+----                 -----------  ------          ------------         -----------  -----                -----
+dir1                 True                         2020-03-13 13:07:34Z rwxr-x---    $superuser           $superuser
 dir2                 True                         2020-03-23 09:28:36Z rwxr-x---    $superuser           $superuser
 ```
 
@@ -48,10 +51,10 @@ PS C:\>Get-AzDataLakeGen2ChildItem -FileSystem "filesystem1" -Path "dir1/" -Recu
 
    FileSystem Name: filesystem1
 
-Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
-----                 -----------  ------          ------------         -----------  -----                -----               
-dir1/dir3            True                         2020-03-23 09:34:31Z rwx---rwx    $superuser           $superuser          
-dir1/file1           False        1024            2020-03-23 09:29:18Z rwx---rwx    $superuser           $superuser           
+Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+----                 -----------  ------          ------------         -----------  -----                -----
+dir1/dir3            True                         2020-03-23 09:34:31Z rwx---rwx    $superuser           $superuser
+dir1/file1           False        1024            2020-03-23 09:29:18Z rwx---rwx    $superuser           $superuser
 dir1/testfile_1K_0   False        1024            2020-03-23 09:29:21Z rw-r-----    $superuser           $superuser
 ```
 

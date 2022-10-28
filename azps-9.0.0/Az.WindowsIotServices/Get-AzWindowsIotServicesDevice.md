@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.WindowsIotServices
-online version: https://docs.microsoft.com/powershell/module/az.windowsiotservices/get-azwindowsiotservicesdevice
+online version: https://learn.microsoft.com/powershell/module/az.windowsiotservices/get-azwindowsiotservicesdevice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/WindowsIotServices/help/Get-AzWindowsIotServicesDevice.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/WindowsIotServices/help/Get-AzWindowsIotServicesDevice.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get the non-security related metadata of a Windows IoT Device Service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.windowsiotservices/get-azwindowsiotservicesdevice) for up-to-date information.
 
 ## SYNTAX
 

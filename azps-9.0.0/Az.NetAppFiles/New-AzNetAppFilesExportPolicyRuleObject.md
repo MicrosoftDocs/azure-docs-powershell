@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.NetAppFiles.dll-Help.xml
 Module Name: Az.NetAppFiles
-online version: https://docs.microsoft.com/powershell/module/az.netappfiles/new-aznetappfilesexportpolicyruleobject
+online version: https://learn.microsoft.com/powershell/module/az.netappfiles/new-aznetappfilesexportpolicyruleobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/New-AzNetAppFilesExportPolicyRuleObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/New-AzNetAppFilesExportPolicyRuleObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates export policy rule object.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.netappfiles/new-aznetappfilesexportpolicyruleobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -28,7 +31,7 @@ New-AzNetAppFilesExportPolicyRuleObject is a helper cmdlet that creates an expor
 
 ### Example 1
 ```powershell
-$exportPolicyRule = New-AzNetAppFilesExportPolicyRuleObject -RuleIndex 1 -AllowedClient '0.0.0.0/0' -UnixReadOnly -UnixReadWrite -Cifs -Nfsv3 
+$exportPolicyRule = New-AzNetAppFilesExportPolicyRuleObject -RuleIndex 1 -AllowedClient '0.0.0.0/0' -UnixReadOnly -UnixReadWrite -Cifs -Nfsv3
 $exportPolicyRules = $($exportPolicyRule)
 $newExportPolicy = New-AzNetAppFilesExportPolicyObject -Rule $exportPolicyRules
 New-AzNetAppFilesVolume -ResourceGroupName "MyRG" -AccountName "MyAnfAccount" -PoolName "MyAnfPool" -Name "MyAnfVolume" -Location "westus2" -CreationToken "MyAnfVolume" -UsageThreshold 1099511627776 -ServiceLevel "Premium" -SubnetId "/subscriptions/subsId/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/MyVnetName/subnets/MySubNetName" -ExportPolicy $newExportPolicy

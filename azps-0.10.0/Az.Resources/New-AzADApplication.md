@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: F58FD77E-2946-44B1-B410-6E983FC20E21
-online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/new-Azadapplication
+online version: https://learn.microsoft.com/en-us/powershell/module/az.resources/new-Azadapplication
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADApplication.md
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 
 ### -EndDate
 The effective end date of the credential usage.
-The default end date value is one year from today. 
+The default end date value is one year from today.
 For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.
 
 ```yaml
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 The effective start date of the credential usage.
-The default start date value is today. 
+The default start date value is today.
 For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.
 
 ```yaml

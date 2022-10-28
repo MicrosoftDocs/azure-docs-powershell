@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.KubernetesConfiguration
-online version: https://docs.microsoft.com/powershell/module/az.kubernetesconfiguration/remove-azkubernetesconfigurationflux
+online version: https://learn.microsoft.com/powershell/module/az.kubernetesconfiguration/remove-azkubernetesconfigurationflux
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesConfiguration/help/Remove-AzKubernetesConfigurationFlux.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesConfiguration/help/Remove-AzKubernetesConfigurationFlux.md

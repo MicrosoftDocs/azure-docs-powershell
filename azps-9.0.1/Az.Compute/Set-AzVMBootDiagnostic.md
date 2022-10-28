@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 9A6F140C-9F1C-4701-9603-FC6107FCAF92
-online version: https://docs.microsoft.com/powershell/module/az.compute/set-azvmbootdiagnostic
+online version: https://learn.microsoft.com/powershell/module/az.compute/set-azvmbootdiagnostic
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMBootDiagnostic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMBootDiagnostic.md
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-Specifies the name of the storage account in which to save boot diagnostics data. If not provided, it will look for a StorageUri in the BootDiagnostic Profile in the PSVirtualMachine object provided in the '-VM' parameter. If StorageUri is null, it will default to used a managed storage account. 
+Specifies the name of the storage account in which to save boot diagnostics data. If not provided, it will look for a StorageUri in the BootDiagnostic Profile in the PSVirtualMachine object provided in the '-VM' parameter. If StorageUri is null, it will default to used a managed storage account.
 
 ```yaml
 Type: System.String

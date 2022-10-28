@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
 Module Name: Az.Accounts
-online version: https://docs.microsoft.com/powershell/module/az.accounts/get-azcontextautosavesetting
+online version: https://learn.microsoft.com/powershell/module/az.accounts/get-azcontextautosavesetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Get-AzContextAutosaveSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Get-AzContextAutosaveSetting.md
@@ -10,8 +10,11 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzContextAutosaveSetting
 
 ## SYNOPSIS
-Display metadata about the context autosave feature, including whether the context is 
+Display metadata about the context autosave feature, including whether the context is
 automatically saved, and where saved context and credential information can be found.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.accounts/get-azcontextautosavesetting) for up-to-date information.
 
 ## SYNTAX
 
@@ -21,7 +24,7 @@ Get-AzContextAutosaveSetting [-Scope <ContextModificationScope>] [-DefaultProfil
 ```
 
 ## DESCRIPTION
-Display metadata about the context autosave feature, including whether the context is 
+Display metadata about the context autosave feature, including whether the context is
 automatically saved, and where saved context and credential information can be found.
 
 ## EXAMPLES
@@ -56,8 +59,8 @@ CacheFile        : TokenCache.dat
 Settings         : {}
 ```
 
-Get details about whether and where the context is saved by default for the current user.  Note that this may be different than 
-the settings that are active in the current session. In the above example, the autosave feature has been enabled, and data is saved 
+Get details about whether and where the context is saved by default for the current user.  Note that this may be different than
+the settings that are active in the current session. In the above example, the autosave feature has been enabled, and data is saved
 to the default location.
 
 ## PARAMETERS

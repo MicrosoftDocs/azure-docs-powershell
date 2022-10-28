@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 51AF8EFB-F0C1-41E0-BBC5-E48FB1B8672C
-online version: https://docs.microsoft.com/powershell/module/az.sql/new-azsqlserverfirewallrule
+online version: https://learn.microsoft.com/powershell/module/az.sql/new-azsqlserverfirewallrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlServerFirewallRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlServerFirewallRule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a firewall rule for a SQL Database server.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/new-azsqlserverfirewallrule) for up-to-date information.
 
 ## SYNTAX
 
@@ -219,6 +222,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AzSqlServerFirewallRule](./Set-AzSqlServerFirewallRule.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)
 
 

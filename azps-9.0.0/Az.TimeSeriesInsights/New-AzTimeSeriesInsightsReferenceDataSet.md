@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.TimeSeriesInsights
-online version: https://docs.microsoft.com/powershell/module/az.timeseriesinsights/new-aztimeseriesinsightsreferencedataset
+online version: https://learn.microsoft.com/powershell/module/az.timeseriesinsights/new-aztimeseriesinsightsreferencedataset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/help/New-AzTimeSeriesInsightsReferenceDataSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/help/New-AzTimeSeriesInsightsReferenceDataSet.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create or update a reference data set in the specified environment.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.timeseriesinsights/new-aztimeseriesinsightsreferencedataset) for up-to-date information.
 
 ## SYNTAX
 
@@ -26,7 +29,7 @@ Create or update a reference data set in the specified environment.
 
 ## EXAMPLES
 
-### Example 1: Create a reference data set for a specified environment  
+### Example 1: Create a reference data set for a specified environment
 ```powershell
 $mykeyproperties = @{ "name" = "device01"; "type" = "Double"}
 New-AzTimeSeriesInsightsReferenceDataSet -EnvironmentName tsitest001 -Name dstest001 -ResourceGroupName testgroup -Location eastus -DataStringComparisonBehavior Ordinal -KeyProperty $mykeyproperties

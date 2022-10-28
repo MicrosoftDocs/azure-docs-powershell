@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 9160A21D-0F83-415B-830B-F35C8B863E90
-online version: https://docs.microsoft.com/powershell/module/az.network/add-aznetworksecurityruleconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/add-aznetworksecurityruleconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzNetworkSecurityRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzNetworkSecurityRuleConfig.md
@@ -45,7 +45,7 @@ The **Add-AzNetworkSecurityRuleConfig** cmdlet adds a network security rule conf
 
 ### Example 1: Adding a network security group
 ```powershell
-Get-AzNetworkSecurityGroup -Name nsg1 -ResourceGroupName rg1 | 
+Get-AzNetworkSecurityGroup -Name nsg1 -ResourceGroupName rg1 |
 Add-AzNetworkSecurityRuleConfig -Name rdp-rule -Description "Allow RDP" -Access `
     Allow -Protocol Tcp -Direction Inbound -Priority 100 -SourceAddressPrefix Internet `
     -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 3389 |

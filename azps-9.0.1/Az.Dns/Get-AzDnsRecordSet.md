@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
 ms.assetid: 40179CF3-7896-4C45-BC18-4CB653B245B6
-online version: https://docs.microsoft.com/powershell/module/az.dns/get-azdnsrecordset
+online version: https://learn.microsoft.com/powershell/module/az.dns/get-azdnsrecordset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Get-AzDnsRecordSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Get-AzDnsRecordSet.md
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 ### -RecordType
 Specifies the type of DNS record that this cmdlet gets.
-Valid values are: 
+Valid values are:
 - A
 - AAAA
 - CNAME
@@ -123,7 +123,7 @@ Valid values are:
 - SOA
 - SRV
 - TXT
-If you do not specify the *RecordType* parameter, you must also omit the *Name* parameter. 
+If you do not specify the *RecordType* parameter, you must also omit the *Name* parameter.
 This cmdlet then returns all record sets in the zone (of all names and types).
 
 ```yaml

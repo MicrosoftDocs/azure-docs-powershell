@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ImportExport
-online version: https://docs.microsoft.com/powershell/module/az.importexport/update-azimportexport
+online version: https://learn.microsoft.com/powershell/module/az.importexport/update-azimportexport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/help/Update-AzImportExport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/help/Update-AzImportExport.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Updates specific properties of a job.
 You can call this operation to notify the Import/Export service that the hard drives comprising the import or export job have been shipped to the Microsoft data center.
 It can also be used to cancel an existing job.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.importexport/update-azimportexport) for up-to-date information.
 
 ## SYNTAX
 
@@ -545,12 +548,12 @@ DRIVELIST <IDriveStatus[]>: List of drives that comprise the job.
   - `[DriveHeaderHash <String>]`: The drive header hash value.
   - `[DriveId <String>]`: The drive's hardware serial number, without spaces.
   - `[ErrorLogUri <String>]`: A URI that points to the blob containing the error log for the data transfer operation.
-  - `[ManifestFile <String>]`: The relative path of the manifest file on the drive. 
+  - `[ManifestFile <String>]`: The relative path of the manifest file on the drive.
   - `[ManifestHash <String>]`: The Base16-encoded MD5 hash of the manifest file on the drive.
-  - `[ManifestUri <String>]`: A URI that points to the blob containing the drive manifest file. 
-  - `[PercentComplete <Int32?>]`: Percentage completed for the drive. 
-  - `[State <DriveState?>]`: The drive's current state. 
-  - `[VerboseLogUri <String>]`: A URI that points to the blob containing the verbose log for the data transfer operation. 
+  - `[ManifestUri <String>]`: A URI that points to the blob containing the drive manifest file.
+  - `[PercentComplete <Int32?>]`: Percentage completed for the drive.
+  - `[State <DriveState?>]`: The drive's current state.
+  - `[VerboseLogUri <String>]`: A URI that points to the blob containing the verbose log for the data transfer operation.
 
 INPUTOBJECT `<IImportExportIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path

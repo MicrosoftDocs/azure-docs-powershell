@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: 6E84E26F-8150-41F8-8823-CEED05619A75
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/get-azintegrationaccountpartner
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/get-azintegrationaccountpartner
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountPartner.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountPartner.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets integration account partners.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logicapp/get-azintegrationaccountpartner) for up-to-date information.
 
 ## SYNTAX
 

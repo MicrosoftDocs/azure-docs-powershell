@@ -1,7 +1,7 @@
 ---
 external help file: Az.DataMigration-help.xml
 Module Name: Az.DataMigration
-online version: https://docs.microsoft.com/powershell/module/az.datamigration/new-azdatamigrationsqlserviceauthkey
+online version: https://learn.microsoft.com/powershell/module/az.datamigration/new-azdatamigrationsqlserviceauthkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationSqlServiceAuthKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationSqlServiceAuthKey.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Regenerate a new set of Authentication Keys for Self Hosted Integration Runtime.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/new-azdatamigrationsqlserviceauthkey) for up-to-date information.
 
 ## SYNTAX
 

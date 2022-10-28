@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.EdgeOrder
-online version: https://docs.microsoft.com/powershell/module/az.edgeorder/invoke-azedgeorderitemcancellation
+online version: https://learn.microsoft.com/powershell/module/az.edgeorder/invoke-azedgeorderitemcancellation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/help/Invoke-AzEdgeOrderItemCancellation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/help/Invoke-AzEdgeOrderItemCancellation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Cancel order item.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.edgeorder/invoke-azedgeorderitemcancellation) for up-to-date information.
 
 ## SYNTAX
 

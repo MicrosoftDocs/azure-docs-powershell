@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ElasticSan
-online version: https://docs.microsoft.com/powershell/module/az.elasticsan/update-azelasticsanvolume
+online version: https://learn.microsoft.com/powershell/module/az.elasticsan/update-azelasticsanvolume
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Update-AzElasticSanVolume.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Update-AzElasticSanVolume.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Update an Volume.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.elasticsan/update-azelasticsanvolume) for up-to-date information.
 
 ## SYNTAX
 
@@ -51,8 +54,8 @@ $volume = Update-AzElasticSanVolume -ResourceGroupName myresourcegroup -ElasticS
 ```
 
 ```output
-CreationDataCreateSource       : 
-CreationDataSourceUri          : 
+CreationDataCreateSource       :
+CreationDataSourceUri          :
 Id                             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumegroups/myvolumegroup/volumes/myvolume
 Name                           : myvolume
 SizeGiB                        : 120

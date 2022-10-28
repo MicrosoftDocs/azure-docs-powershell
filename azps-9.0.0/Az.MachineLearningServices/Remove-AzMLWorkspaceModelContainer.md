@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MachineLearningServices
-online version: https://docs.microsoft.com/powershell/module/az.machinelearningservices/remove-azmlworkspacemodelcontainer
+online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/remove-azmlworkspacemodelcontainer
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/Remove-AzMLWorkspaceModelContainer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/Remove-AzMLWorkspaceModelContainer.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Delete container.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/remove-azmlworkspacemodelcontainer) for up-to-date information.
 
 ## SYNTAX
 
@@ -40,7 +43,7 @@ Delete model container
 
 ### Example 2: Delete model container by pipeline
 ```powershell
-Get-AzMLWorkspaceModelContainer -ResourceGroupName ml-rg-test -WorkspaceName mlworkspace-cli01 -Name modelcontainerpwsh01 | Remove-AzMLWorkspaceModelContainer 
+Get-AzMLWorkspaceModelContainer -ResourceGroupName ml-rg-test -WorkspaceName mlworkspace-cli01 -Name modelcontainerpwsh01 | Remove-AzMLWorkspaceModelContainer
 ```
 
 Delete model container by pipeline

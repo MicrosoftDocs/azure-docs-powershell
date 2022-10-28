@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.PolicyInsights.dll-Help.xml
 Module Name: Az.PolicyInsights
-online version: https://docs.microsoft.com/powershell/module/az.policyinsights/start-azpolicycompliancescan
+online version: https://learn.microsoft.com/powershell/module/az.policyinsights/start-azpolicycompliancescan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Start-AzPolicyComplianceScan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Start-AzPolicyComplianceScan.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Triggers a policy compliance evaluation for all resources in a subscription or resource group.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.policyinsights/start-azpolicycompliancescan) for up-to-date information.
 
 ## SYNTAX
 

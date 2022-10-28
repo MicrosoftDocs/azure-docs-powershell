@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/new-aziothubexportdevice
+online version: https://learn.microsoft.com/powershell/module/az.iothub/new-aziothubexportdevice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/New-AzIotHubExportDevice.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/New-AzIotHubExportDevice.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a new export devices job.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/new-aziothubexportdevice) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -21,9 +24,9 @@ New-AzIotHubExportDevice [-ResourceGroupName] <String> [-Name] <String> [-Export
 
 ## DESCRIPTION
 Creates a new export devices job for the IotHub.
-This will export all the devices to the specified container. 
+This will export all the devices to the specified container.
 Refer to the following article on how to generate the SAS URI.
-https://docs.microsoft.com/azure/iot-hub/iot-hub-bulk-identity-mgmt#get-the-container-sas-uri .
+https://learn.microsoft.com/azure/iot-hub/iot-hub-bulk-identity-mgmt#get-the-container-sas-uri .
 
 ## EXAMPLES
 
@@ -67,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExportBlobContainerUri
-The Uri to export the blob to. 
+The Uri to export the blob to.
 
 ```yaml
 Type: System.String

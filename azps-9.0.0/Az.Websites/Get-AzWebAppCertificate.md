@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: 2D83D38F-3A5C-40DB-BE8B-D52E5CAFCF6E
-online version: https://docs.microsoft.com/powershell/module/az.websites/get-azwebappcertificate
+online version: https://learn.microsoft.com/powershell/module/az.websites/get-azwebappcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppCertificate.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets an Azure Web App certificate.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/get-azwebappcertificate) for up-to-date information.
 
 ## SYNTAX
 

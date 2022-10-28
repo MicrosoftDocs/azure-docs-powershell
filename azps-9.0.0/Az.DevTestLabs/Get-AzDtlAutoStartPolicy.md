@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DevTestLabs.dll-Help.xml
 Module Name: Az.DevTestLabs
 ms.assetid: 9FD4DB8C-B242-4F9A-92E5-0B3EDED00521
-online version: https://docs.microsoft.com/powershell/module/az.devtestlabs/get-azdtlautostartpolicy
+online version: https://learn.microsoft.com/powershell/module/az.devtestlabs/get-azdtlautostartpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevTestLabs/DevTestLabs/help/Get-AzDtlAutoStartPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevTestLabs/DevTestLabs/help/Get-AzDtlAutoStartPolicy.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the auto start policy of a lab in DevTest Labs.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.devtestlabs/get-azdtlautostartpolicy) for up-to-date information.
 
 ## SYNTAX
 

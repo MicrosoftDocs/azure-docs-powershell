@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: EBDBB9F0-CA2E-4E4F-9034-3D0FAB88E442
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/remove-azintegrationaccountagreement
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/remove-azintegrationaccountagreement
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Remove-AzIntegrationAccountAgreement.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Remove-AzIntegrationAccountAgreement.md

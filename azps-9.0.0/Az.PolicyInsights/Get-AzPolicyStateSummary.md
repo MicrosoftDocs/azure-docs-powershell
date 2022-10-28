@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.PolicyInsights.dll-Help.xml
 Module Name: Az.PolicyInsights
-online version: https://docs.microsoft.com/powershell/module/az.policyinsights/get-azpolicystatesummary
+online version: https://learn.microsoft.com/powershell/module/az.policyinsights/get-azpolicystatesummary
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Get-AzPolicyStateSummary.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Get-AzPolicyStateSummary.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets latest policy compliance states summary for resources.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.policyinsights/get-azpolicystatesummary) for up-to-date information.
 
 ## SYNTAX
 
@@ -168,7 +171,7 @@ Gets the summary view of latest policy compliance states generated in the last d
 Get-AzPolicyStateSummary -Top 5
 ```
 
-Gets the summary view of latest policy compliance states generated in the last day for all resources within the subscription in current session context. 
+Gets the summary view of latest policy compliance states generated in the last day for all resources within the subscription in current session context.
 The command orders the policy assignment summaries in the results by non-compliant resource counts in descending order, and takes only top 5 of those policy assignment summaries.
 
 ### Example 15: Get latest non-compliant policy states summary in current subscription scope, with From and To query options

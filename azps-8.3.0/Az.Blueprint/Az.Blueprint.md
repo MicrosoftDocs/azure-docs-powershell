@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Blueprint
 Module Guid: ef36c942-4a71-4e19-9450-05a35843deb6
-Download Help Link: https://docs.microsoft.com/powershell/module/az.blueprint
+Download Help Link: https://learn.microsoft.com/powershell/module/az.blueprint
 Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Az.Blueprint.md
@@ -14,7 +14,7 @@ The topics in this section document the Azure PowerShell cmdlets for Azure Bluep
 
 ## Az.Blueprint Cmdlets
 ### [Export-AzBlueprintWithArtifact](Export-AzBlueprintWithArtifact.md)
-Export specified blueprint definition to the specified output location as a JSON file. 
+Export specified blueprint definition to the specified output location as a JSON file.
 
 ### [Get-AzBlueprint](Get-AzBlueprint.md)
 Get one or more blueprint definitions.

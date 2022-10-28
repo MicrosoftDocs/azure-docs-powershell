@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
 Module Name: Az.DataFactory
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/start-azdatafactoryv2integrationruntime
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/start-azdatafactoryv2integrationruntime
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Start-AzDataFactoryV2IntegrationRuntime.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Start-AzDataFactoryV2IntegrationRuntime.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Starts a managed dedicated integration runtime.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/start-azdatafactoryv2integrationruntime) for up-to-date information.
 
 ## SYNTAX
 
@@ -47,7 +50,7 @@ Start-AzDataFactoryV2IntegrationRuntime -ResourceGroupName 'rg-test-dfv2' -DataF
     CreateTime                   : 9/11/2017 2:16:12 PM
     Nodes                        : {tvm-1650185656_1-20170911t141751z}
     OtherErrors                  : {}
-    LastOperation                : 
+    LastOperation                :
     State                        : Started
     Location                     : West US
     NodeSize                     : Standard_D1_v2
@@ -57,10 +60,10 @@ Start-AzDataFactoryV2IntegrationRuntime -ResourceGroupName 'rg-test-dfv2' -DataF
     CatalogAdminUserName         : admin
     CatalogAdminPassword         : **********
     CatalogPricingTier           : S1
-    VNetId                       : 
-    Subnet                       : 
-    SubnetId                     : 
-    PublicIPs                    : 
+    VNetId                       :
+    Subnet                       :
+    SubnetId                     :
+    PublicIPs                    :
     Id                           : /subscriptions/b3ee3a7f-7614-4644-ad07-afa832620b4b/resourceGroups/rg-test-dfv2/providers/Microsoft.DataFactory/factories/test-df-eu2/integrationruntimes/test-dedicated-ir
     ResourceGroupName            : rg-test-dfv2
     DataFactoryName              : test-df-eu2

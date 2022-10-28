@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 5D4F13F9-57E7-446B-AA28-8C44B149E1CB
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqldatabaseimportexportstatus
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqldatabaseimportexportstatus
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseImportExportStatus.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseImportExportStatus.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the details of an import or export of an Azure SQL Database.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/get-azsqldatabaseimportexportstatus) for up-to-date information.
 
 ## SYNTAX
 
@@ -32,8 +35,8 @@ Get-AzSqlDatabaseImportExportStatus -OperationStatusLink "https://management.con
 ```
 
 ```output
-OperationStatusLink : 
-ErrorMessage        : 
+OperationStatusLink :
+ErrorMessage        :
 LastModifiedTime    : 4/15/2016 10:16:14 PM
 QueuedTime          : 4/15/2016 10:16:13 PM
 StatusMessage       : Running, Progress = 5.00 %
@@ -125,4 +128,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-AzSqlDatabaseImport](./New-AzSqlDatabaseImport.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)

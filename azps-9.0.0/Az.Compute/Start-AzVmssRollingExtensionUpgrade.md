@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/start-azvmssrollingextensionupgrade
+online version: https://learn.microsoft.com/powershell/module/az.compute/start-azvmssrollingextensionupgrade
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Start-AzVmssRollingExtensionUpgrade.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Start-AzVmssRollingExtensionUpgrade.md
@@ -10,7 +10,10 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Start-AzVmssRollingExtensionUpgrade
 
 ## SYNOPSIS
-This cmdlet starts a rolling upgrade for all extensions on the given Virtual Machine Scale Set to the latest available version. 
+This cmdlet starts a rolling upgrade for all extensions on the given Virtual Machine Scale Set to the latest available version.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/start-azvmssrollingextensionupgrade) for up-to-date information.
 
 ## SYNTAX
 
@@ -45,7 +48,7 @@ Add-AzVmssExtension -VirtualMachineScaleSet $vmss -Name "testExtension" -Publish
 Start-AzVmssRollingExtensionUpgrade -ResourceGroupName "MyResourceGroupName" -VMScaleSetName "MyVmssName";
 ```
 
-This example gets the existing VM scale set "MyVmssName", and adds an extension to it. The final command runs the extension rolling upgrade process. 
+This example gets the existing VM scale set "MyVmssName", and adds an extension to it. The final command runs the extension rolling upgrade process.
 
 ## PARAMETERS
 
@@ -95,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-The resource Id of the VM scale set object. 
+The resource Id of the VM scale set object.
 
 ```yaml
 Type: System.String

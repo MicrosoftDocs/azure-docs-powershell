@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.MachineLearning.dll-Help.xml
 Module Name: Az.MachineLearning
-online version: https://docs.microsoft.com/powershell/module/az.machinelearning/update-azmlwebservice
+online version: https://learn.microsoft.com/powershell/module/az.machinelearning/update-azmlwebservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearning/MachineLearning/help/Update-AzMlWebService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearning/MachineLearning/help/Update-AzMlWebService.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates properties of an existing web service resource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearning/update-azmlwebservice) for up-to-date information.
 
 ## SYNTAX
 

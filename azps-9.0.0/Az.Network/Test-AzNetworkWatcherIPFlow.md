@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/test-aznetworkwatcheripflow
+online version: https://learn.microsoft.com/powershell/module/az.network/test-aznetworkwatcheripflow
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Test-AzNetworkWatcherIPFlow.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Test-AzNetworkWatcherIPFlow.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Returns whether the packet is allowed or denied to or from a particular destination.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/test-aznetworkwatcheripflow) for up-to-date information.
 
 ## SYNTAX
 
@@ -45,15 +48,15 @@ The Test-AzNetworkWatcherIPFlow cmdlet, for a specified VM resource and a packet
 
 ### Example 1: Run Test-AzNetworkWatcherIPFlow
 ```powershell
-$nw = Get-AzResource | Where-Object {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
-$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
-$VM = Get-AzVM -ResourceGroupName testResourceGroup -Name VM0 
+$nw = Get-AzResource | Where-Object {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" }
+$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName
+$VM = Get-AzVM -ResourceGroupName testResourceGroup -Name VM0
 $Nics = Get-AzNetworkInterface | Where-Object { $vm.NetworkProfile.NetworkInterfaces.Id -contains $_.Id }
 
 Test-AzNetworkWatcherIPFlow -NetworkWatcher $networkWatcher -TargetVirtualMachineId $VM.Id -Direction Outbound -Protocol TCP -LocalIPAddress $nics[0].IpConfigurations[0].PrivateIpAddress -LocalPort 6895 -RemoteIPAddress 204.79.197.200 -RemotePort 80
 ```
 
-Gets the Network Watcher in West Central US for this subscription, then gets the VM and it's associated Network Interfaces. 
+Gets the Network Watcher in West Central US for this subscription, then gets the VM and it's associated Network Interfaces.
 Then for the first Network Interface, runs Test-AzNetworkWatcherIPFlow using the first IP from the first Network Interface for an outbound connection to an IP on the internet.
 
 ## PARAMETERS
@@ -284,7 +287,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.Network.Models.PSIPFlowVerifyResult
 
 ## NOTES
-Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, flow, ip 
+Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, flow, ip
 
 ## RELATED LINKS
 

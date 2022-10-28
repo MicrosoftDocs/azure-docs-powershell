@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: C0E1D4DF-232F-49C6-BE4C-05C8E8038329
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azfirewallnetworkrule
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azfirewallnetworkrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewallNetworkRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewallNetworkRule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a Firewall Network Rule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azfirewallnetworkrule) for up-to-date information.
 
 ## SYNTAX
 

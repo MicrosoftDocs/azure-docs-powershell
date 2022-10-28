@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Maps
-online version: https://docs.microsoft.com/powershell/module/az.maps/new-azmapsaccount
+online version: https://learn.microsoft.com/powershell/module/az.maps/new-azmapsaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/help/New-AzMapsAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/help/New-AzMapsAccount.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create or update a Maps Account.
 A Maps Account holds the keys which allow access to the Maps REST APIs.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.maps/new-azmapsaccount) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/add-azvirtualhubroute
+online version: https://learn.microsoft.com/powershell/module/az.network/add-azvirtualhubroute
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzVirtualHubRoute.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzVirtualHubRoute.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Add-AzVirtualHubRoute
 
 ## SYNOPSIS
-Creates a VirtualHubRoute object which can be passed as parameter to the Add-AzVirtualHubRouteTable command. 
+Creates a VirtualHubRoute object which can be passed as parameter to the Add-AzVirtualHubRouteTable command.
 
 ## SYNTAX
 

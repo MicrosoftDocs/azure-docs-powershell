@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/remove-azsqlinstanceactivedirectoryadministrator
+online version: https://learn.microsoft.com/powershell/module/az.sql/remove-azsqlinstanceactivedirectoryadministrator
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Remove-AzSqlInstanceActiveDirectoryAdministrator.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Remove-AzSqlInstanceActiveDirectoryAdministrator.md
@@ -44,11 +44,11 @@ Remove-AzSqlInstanceActiveDirectoryAdministrator -ResourceGroupName "ResourceGro
 ```
 
 ```output
-Are you sure you want to remove the Azure Sql Instance Active Directory Administrator on managed instance 'ManagedInstanceName01'? 
-[Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Y"): Y 
+Are you sure you want to remove the Azure Sql Instance Active Directory Administrator on managed instance 'ManagedInstanceName01'?
+[Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Y"): Y
 
-ResourceGroupName InstanceName          DisplayName ObjectId 
------------------ --------------------- ----------- -------- 
+ResourceGroupName InstanceName          DisplayName ObjectId
+----------------- --------------------- ----------- --------
 ResourceGroup01   ManagedInstanceName01 DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 
@@ -60,11 +60,11 @@ Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance1" 
 ```
 
 ```output
-Are you sure you want to remove the Azure Sql Instance Active Directory Administrator on managed instance 'ManagedInstanceName01'? 
-[Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Y"): Y 
+Are you sure you want to remove the Azure Sql Instance Active Directory Administrator on managed instance 'ManagedInstanceName01'?
+[Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Y"): Y
 
-ResourceGroupName InstanceName          DisplayName ObjectId 
------------------ --------------------- ----------- -------- 
+ResourceGroupName InstanceName          DisplayName ObjectId
+----------------- --------------------- ----------- --------
 ResourceGroup01   ManagedInstanceName01 DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 
@@ -76,11 +76,11 @@ Get-AzSqlInstance -ResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
 ```output
-Are you sure you want to remove the Azure Sql Instance Active Directory Administrator on managed instance 'ManagedInstanceName01'? 
-[Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Y"): Y 
+Are you sure you want to remove the Azure Sql Instance Active Directory Administrator on managed instance 'ManagedInstanceName01'?
+[Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Y"): Y
 
-ResourceGroupName InstanceName          DisplayName ObjectId 
------------------ --------------------- ----------- -------- 
+ResourceGroupName InstanceName          DisplayName ObjectId
+----------------- --------------------- ----------- --------
 ResourceGroup01   ManagedInstanceName01 DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 

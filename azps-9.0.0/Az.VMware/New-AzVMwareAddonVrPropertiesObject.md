@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.VMware
-online version: https://docs.microsoft.com/powershell/module/az.VMware/new-AzVMwareAddonVrPropertiesObject
+online version: https://learn.microsoft.com/powershell/module/az.VMware/new-AzVMwareAddonVrPropertiesObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/help/New-AzVMwareAddonVrPropertiesObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/help/New-AzVMwareAddonVrPropertiesObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create a in-memory object for AddonVrProperties
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.vmware/new-azvmwareaddonvrpropertiesobject) for up-to-date information.
 
 ## SYNTAX
 

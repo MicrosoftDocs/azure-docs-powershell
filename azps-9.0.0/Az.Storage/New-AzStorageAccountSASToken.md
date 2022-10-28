@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: BCCBB05B-A5D7-4796-BE55-6BE5E18E07FC
-online version: https://docs.microsoft.com/powershell/module/az.storage/new-azstorageaccountsastoken
+online version: https://learn.microsoft.com/powershell/module/az.storage/new-azstorageaccountsastoken
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageAccountSASToken.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageAccountSASToken.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an account-level SAS token.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/new-azstorageaccountsastoken) for up-to-date information.
 
 ## SYNTAX
 
@@ -48,7 +51,7 @@ This command creates an account-level SAS token for HTTPS-only requests from the
 PS C:\> New-AzStorageAccountSASToken -Service Blob -ResourceType Service,Container,Object -Permission "rl" -ExpiryTime (Get-Date).AddDays(1)
 ```
 
-This command creates an read-only account-level SAS token that is valid for 24 hours. 
+This command creates an read-only account-level SAS token that is valid for 24 hours.
 
 ## PARAMETERS
 

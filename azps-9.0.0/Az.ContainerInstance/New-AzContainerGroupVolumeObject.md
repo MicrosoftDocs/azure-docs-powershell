@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ContainerInstance
-online version: https://docs.microsoft.com/powershell/module/az.ContainerInstance/new-AzContainerGroupVolumeObject
+online version: https://learn.microsoft.com/powershell/module/az.ContainerInstance/new-AzContainerGroupVolumeObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/help/New-AzContainerGroupVolumeObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/help/New-AzContainerGroupVolumeObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for Volume.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerinstance/new-azcontainergroupvolumeobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -45,15 +48,15 @@ New-AzContainerGroupVolumeObject -Name "emptyvolume" -EmptyDir @{} | Format-List
 ```
 
 ```output
-AzureFileReadOnly           : 
-AzureFileShareName          : 
-AzureFileStorageAccountKey  : 
-AzureFileStorageAccountName : 
+AzureFileReadOnly           :
+AzureFileShareName          :
+AzureFileStorageAccountKey  :
+AzureFileStorageAccountName :
 EmptyDir                    : {
                               }
-GitRepoDirectory            : 
-GitRepoRepository           : 
-GitRepoRevision             : 
+GitRepoDirectory            :
+GitRepoRepository           :
+GitRepoRevision             :
 Name                        : emptyvolume
 Secret                      : {
                               }

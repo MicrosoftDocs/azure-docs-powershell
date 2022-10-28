@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: C1F6BBF9-0DB5-46FD-B8A8-9029B0AB6166
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/get-azlogicapptriggerhistory
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/get-azlogicapptriggerhistory
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzLogicAppTriggerHistory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzLogicAppTriggerHistory.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 
 Gets the history of triggers in a logic app.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logicapp/get-azlogicapptriggerhistory) for up-to-date information.
 
 ## SYNTAX
 
@@ -48,8 +51,8 @@ Fired       : False
 InputsLink  : https://flowprodcu02by01.blob.core.windows.net/flow3ea9ffd11c684c9f9f258b1a6ea5cb6020160113t000000zcontent/A7392_d1e831de68ac4ef89d19a40f05e663
               cb_httpTrigger:5Finputs:2Ejson?sv=2014-02-14&sr=b&sig=&se=2016-01-14T16%3A15%3A16Z&sp=r
 Name        : 08587489107387695768
-OutputsLink : 
-Run         : 
+OutputsLink :
+Run         :
 StartTime   : 1/13/2016 2:42:26 PM
 Status      : Failed
 TrackingId  : f88a499b-f80f-4a28-9bbf-c4cc0d129700
@@ -72,8 +75,8 @@ Fired       : False
 InputsLink  : https://flowprodcu02by01.blob.core.windows.net/flow3ea9ffd11c684c9f9f258b1a6ea5cb6020160113t000000zcontent/CAB46_60e2ad0f0e1947e8b5798716914c5d
               b6_httpTrigger:5Finputs:2Ejson?sv=2014-02-14&sr=b&sig=&se=2016-01-14T16%3A18%3A27Z&sp=r
 Name        : 08587489106716457817
-OutputsLink : 
-Run         : 
+OutputsLink :
+Run         :
 StartTime   : 1/13/2016 2:43:33 PM
 Status      : Failed
 TrackingId  : c91a63f1-48b4-4eae-91eb-8f6dbfa9fe06
@@ -86,8 +89,8 @@ Fired       : False
 InputsLink  : https://flowprodcu02by01.blob.core.windows.net/flow3ea9ffd11c684c9f9f258b1a6ea5cb6020160113t000000zcontent/A7392_d1e831de68ac4ef89d19a40f05e663
               cb_httpTrigger:5Finputs:2Ejson?sv=2014-02-14&sr=b&sig=&se=2016-01-14T16%3A18%3A27Z&sp=r
 Name        : 08587489107387695768
-OutputsLink : 
-Run         : 
+OutputsLink :
+Run         :
 StartTime   : 1/13/2016 2:42:26 PM
 Status      : Failed
 TrackingId  : f88a499b-f80f-4a28-9bbf-c4cc0d129700

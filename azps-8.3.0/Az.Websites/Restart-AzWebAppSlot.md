@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: 645E74D2-640D-494F-9798-4375FE6A0AF2
-online version: https://docs.microsoft.com/powershell/module/az.websites/restart-azwebappslot
+online version: https://learn.microsoft.com/powershell/module/az.websites/restart-azwebappslot
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Restart-AzWebAppSlot.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Restart-AzWebAppSlot.md

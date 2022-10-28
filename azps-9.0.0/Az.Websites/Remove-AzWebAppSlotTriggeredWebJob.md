@@ -1,7 +1,7 @@
 ---
 external help file: Az.Websites-help.xml
 Module Name: Az.Websites
-online version: https://docs.microsoft.com/powershell/module/az.websites/remove-azwebappslottriggeredwebjob
+online version: https://learn.microsoft.com/powershell/module/az.websites/remove-azwebappslottriggeredwebjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Remove-AzWebAppSlotTriggeredWebJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Remove-AzWebAppSlotTriggeredWebJob.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Delete a triggered web job for a deployment slot.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/remove-azwebappslottriggeredwebjob) for up-to-date information.
 
 ## SYNTAX
 

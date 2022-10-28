@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
 Module Name: Az.TrafficManager
 ms.assetid: 975DD42E-61B6-437B-884D-C15A8DB7A667
-online version: https://docs.microsoft.com/powershell/module/az.trafficmanager/set-aztrafficmanagerprofile
+online version: https://learn.microsoft.com/powershell/module/az.trafficmanager/set-aztrafficmanagerprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Set-AzTrafficManagerProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Set-AzTrafficManagerProfile.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates a Traffic Manager profile.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.trafficmanager/set-aztrafficmanagerprofile) for up-to-date information.
 
 ## SYNTAX
 
@@ -32,7 +35,7 @@ Modify the object locally and then use **Set-AzTrafficManagerProfile** to commit
 
 ### Example 1: Update a profile
 ```powershell
-$TrafficManagerProfile = Get-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" 
+$TrafficManagerProfile = Get-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
 $TrafficManagerProfile.ProfileStatus = "Disabled"
 Set-AzTrafficManagerProfile -TrafficManagerProfile $TrafficManagerProfile
 ```

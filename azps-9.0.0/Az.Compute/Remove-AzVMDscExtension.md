@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: C7FCF2CA-2C8D-4280-BF68-10DEA96642A5
-online version: https://docs.microsoft.com/powershell/module/az.compute/remove-azvmdscextension
+online version: https://learn.microsoft.com/powershell/module/az.compute/remove-azvmdscextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzVMDscExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzVMDscExtension.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a DSC extension handler from a virtual machine in a resource group.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/remove-azvmdscextension) for up-to-date information.
 
 ## SYNTAX
 

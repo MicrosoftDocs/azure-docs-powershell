@@ -1,7 +1,7 @@
 ---
 external help file: Az.DataMigration-help.xml
 Module Name: Az.DataMigration
-online version: https://docs.microsoft.com/powershell/module/az.datamigration/invoke-azdatamigrationcutovertosqlmanagedinstance
+online version: https://learn.microsoft.com/powershell/module/az.datamigration/invoke-azdatamigrationcutovertosqlmanagedinstance
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Invoke-AzDataMigrationCutoverToSqlManagedInstance.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Invoke-AzDataMigrationCutoverToSqlManagedInstance.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Initiate cutover for in-progress online database migration to SQL Managed Instance.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/invoke-azdatamigrationcutovertosqlmanagedinstance) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: https://docs.microsoft.com/powershell/module/az.security/Start-AzJitNetworkAccessPolicy
+online version: https://learn.microsoft.com/powershell/module/az.security/Start-AzJitNetworkAccessPolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Start-AzJitNetworkAccessPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Start-AzJitNetworkAccessPolicy.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Invokes a temporary network access request.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/start-azjitnetworkaccesspolicy) for up-to-date information.
 
 ## SYNTAX
 
@@ -44,11 +47,11 @@ The request will be logged in the policy for later review and will be terminated
 ```powershell
 $MyResource = Get-AzResource -Id /subscriptions/xxxxxxx-xxxxx-xxxxx-xxxxxxx/resourceGroups/PolicyDemo/providers/Microsoft.Compute/virtualMachines/PolicyDemoVM1
 $JitPolicy = (@{
-        id    = $MyResource.ResourceId; 
+        id    = $MyResource.ResourceId;
         ports = (@{
                 number                     = 22
                 endTimeUtc                 = Get-Date (Get-Date -AsUTC).AddHours(1) -Format O
-                allowedSourceAddressPrefix = @($MyPublicIP) 
+                allowedSourceAddressPrefix = @($MyPublicIP)
             })
     })
 $ActivationVM = @($JitPolicy)

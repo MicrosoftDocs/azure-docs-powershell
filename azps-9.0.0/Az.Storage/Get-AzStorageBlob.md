@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: E54BFD3A-CD54-4E6B-9574-92B8D3E88FF3
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageblob
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageblob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlob.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Lists blobs in a container.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/get-azstorageblob) for up-to-date information.
 
 ## SYNTAX
 
@@ -69,10 +72,10 @@ PS C:\>Get-AzStorageContainer -Name container* | Get-AzStorageBlob -IncludeDelet
 
    Container Uri: https://storageaccountname.blob.core.windows.net/container1
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime         IsDeleted 
-----                 --------  ------          -----------                    ------------         ---------- ------------         --------- 
-test1                BlockBlob 403116          application/octet-stream       2017-11-08 07:53:19Z            2017-11-08 08:19:32Z True      
-test1                BlockBlob 403116          application/octet-stream       2017-11-08 09:00:29Z                                 True      
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime         IsDeleted
+----                 --------  ------          -----------                    ------------         ---------- ------------         ---------
+test1                BlockBlob 403116          application/octet-stream       2017-11-08 07:53:19Z            2017-11-08 08:19:32Z True
+test1                BlockBlob 403116          application/octet-stream       2017-11-08 09:00:29Z                                 True
 test2                BlockBlob 403116          application/octet-stream       2017-11-08 07:53:00Z                                 False
 ```
 
@@ -115,16 +118,16 @@ The final command uses the **Echo** command to display the total.
 
 
 ```
-PS C:\>Get-AzStorageBlob -Container "containername"  -IncludeVersion 
+PS C:\>Get-AzStorageBlob -Container "containername"  -IncludeVersion
 
    AccountName: storageaccountname, ContainerName: containername
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId                     
-----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------                     
-blob1                BlockBlob 2097152         application/octet-stream       2020-07-06 06:56:06Z Hot                                     False      2020-07-06T06:56:06.2432658Z  
-blob1                BlockBlob 2097152         application/octet-stream       2020-07-06 06:56:06Z Hot        2020-07-06T06:56:06.8588431Z False                                    
-blob1                BlockBlob 2097152         application/octet-stream       2020-07-06 06:56:06Z Hot                                     False      2020-07-06T06:56:06.8598431Z *  
-blob2                BlockBlob 2097152         application/octet-stream       2020-07-03 16:19:16Z Hot                                     False      2020-07-03T16:19:16.2883167Z  
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
+blob1                BlockBlob 2097152         application/octet-stream       2020-07-06 06:56:06Z Hot                                     False      2020-07-06T06:56:06.2432658Z
+blob1                BlockBlob 2097152         application/octet-stream       2020-07-06 06:56:06Z Hot        2020-07-06T06:56:06.8588431Z False
+blob1                BlockBlob 2097152         application/octet-stream       2020-07-06 06:56:06Z Hot                                     False      2020-07-06T06:56:06.8598431Z *
+blob2                BlockBlob 2097152         application/octet-stream       2020-07-03 16:19:16Z Hot                                     False      2020-07-03T16:19:16.2883167Z
 blob2                BlockBlob 2097152         application/octet-stream       2020-07-03 16:19:35Z Hot                                     False      2020-07-03T16:19:35.2381110Z *
 ```
 
@@ -135,12 +138,12 @@ This command gets all blobs in a container include blob version.
 
 
 ```
-PS C:\> Get-AzStorageBlob -Container "containername" -Blob blob2 -VersionId "2020-07-03T16:19:16.2883167Z" 
+PS C:\> Get-AzStorageBlob -Container "containername" -Blob blob2 -VersionId "2020-07-03T16:19:16.2883167Z"
 
    AccountName: storageaccountname, ContainerName: containername
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId                     
-----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------                     
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
 blob2                BlockBlob 2097152         application/octet-stream       2020-07-03 16:19:16Z Hot                                     False      2020-07-03T16:19:16.2883167Z
 ```
 
@@ -155,8 +158,8 @@ PS C:\> Get-AzStorageBlob -Container "containername" -Blob blob1 -SnapshotTime "
 
    AccountName: storageaccountname, ContainerName: containername
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId                     
-----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------                     
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
 blob1                BlockBlob 2097152         application/octet-stream       2020-07-06 06:56:06Z Hot        2020-07-06T06:56:06.8588431Z False
 ```
 
@@ -173,14 +176,14 @@ PS C:\> $blobs
 
    AccountName: storageaccountname, ContainerName: containername
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId                     
-----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------                     
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
 testblob             BlockBlob 2097152         application/octet-stream       2020-07-23 09:35:02Z Hot                                     False      2020-07-23T09:35:02.8527357Z *
 testblob2            BlockBlob 2097152         application/octet-stream       2020-07-23 09:35:04Z Hot                                     False      2020-07-23T09:35:04.0856187Z *
 
 
 PS C:\> $blobs[0].Tags
-Name          Value 
+Name          Value
 ----          -----
 tag1          value1
 tag2          value2
@@ -197,12 +200,12 @@ PS C:\> Get-AzStorageBlob -Container "containername" -Blob testblob -TagConditio
 
    AccountName: storageaccountname, ContainerName: containername
 
-Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId                     
-----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------                     
+Name                 BlobType  Length          ContentType                    LastModified         AccessTier SnapshotTime                 IsDeleted  VersionId
+----                 --------  ------          -----------                    ------------         ---------- ------------                 ---------  ---------
 testblob             BlockBlob 2097152         application/octet-stream       2020-07-23 09:35:02Z Hot                                     False      2020-07-23T09:35:02.8527357Z *
 ```
 
-This command gets a single blob with blob tag condition. 
+This command gets a single blob with blob tag condition.
 The cmdlet will only success when the blob contains a tag with name "tag1" and value "value1", else the cmdlet will fail with error code 412.
 
 ## PARAMETERS
@@ -444,9 +447,9 @@ Accept wildcard characters: False
 ```
 
 ### -TagCondition
-Optional Tag expression statement to check match condition. 
+Optional Tag expression statement to check match condition.
 The blob request will fail when the blob tags does not match the given expression.
-See details in https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
+See details in https://learn.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
 
 ```yaml
 Type: System.String

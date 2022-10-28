@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 87E7FA51-427E-4DB8-A6A2-D8638FD3DB8B
-online version: https://docs.microsoft.com/powershell/module/az.batch/new-azbatchjobschedule
+online version: https://learn.microsoft.com/powershell/module/az.batch/new-azbatchjobschedule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/New-AzBatchJobSchedule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/New-AzBatchJobSchedule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a job schedule in the Batch service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/new-azbatchjobschedule) for up-to-date information.
 
 ## SYNTAX
 

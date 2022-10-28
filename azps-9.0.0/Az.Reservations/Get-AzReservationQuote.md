@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Reservations
-online version: https://docs.microsoft.com/powershell/module/az.reservations/get-azreservationquote
+online version: https://learn.microsoft.com/powershell/module/az.reservations/get-azreservationquote
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Get-AzReservationQuote.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Get-AzReservationQuote.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Calculate price for placing a `ReservationOrder`.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.reservations/get-azreservationquote) for up-to-date information.
 
 ## SYNTAX
 
@@ -45,10 +48,10 @@ BillingCurrencyTotal    : {
                             "amount": 24
                           }
 GrandTotal              : 0
-IsBillingPartnerManaged : 
-IsTaxIncluded           : 
+IsBillingPartnerManaged :
+IsTaxIncluded           :
 NetTotal                : 0
-PaymentSchedule         : 
+PaymentSchedule         :
 PricingCurrencyTotal    : {
                             "currencyCode": "GBP",
                             "amount": 24
@@ -72,8 +75,8 @@ BillingCurrencyTotal    : {
                             "amount": 24
                           }
 GrandTotal              : 0
-IsBillingPartnerManaged : 
-IsTaxIncluded           : 
+IsBillingPartnerManaged :
+IsTaxIncluded           :
 NetTotal                : 0
 PaymentSchedule         : {{
                             "dueDate": "2022-07-07",
@@ -397,7 +400,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[Quantity <Int32?>]`: Quantity of the SKUs that are part of the Reservation.
   - `[Renew <Boolean?>]`: Setting this to true will automatically purchase a new reservation on the expiration date time.
   - `[ReservedResourceType <ReservedResourceType?>]`: The type of the resource that is being reserved.
-  - `[Sku <String>]`: 
+  - `[Sku <String>]`:
   - `[Term <ReservationTerm?>]`: Represent the term of Reservation.
 
 ## RELATED LINKS

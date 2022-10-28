@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/test-azrecoveryservicesdsmove
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/test-azrecoveryservicesdsmove
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Test-AzRecoveryServicesDSMove.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Test-AzRecoveryServicesDSMove.md
@@ -23,7 +23,7 @@ Test-AzRecoveryServicesDSMove [-Force] [-DefaultProfile <IAzureContextContainer>
 ```
 
 ## DESCRIPTION
-This cmdlet performs necessary validations for DS Move. This cmdlet generates a boolean true if 
+This cmdlet performs necessary validations for DS Move. This cmdlet generates a boolean true if
 all validations pass successfully. It is mandatory to run this cmdlet before Initialize-AzRecoveryServicesDSMove
 cmdlet. This cmdlet is useful for cross tenant DS move scenario.
 
@@ -39,7 +39,7 @@ if($validated) {
  }
 ```
 
-First cmdlet sets target subscription context. 
+First cmdlet sets target subscription context.
 Second cmdlet triggers some mandatory validations on target vault.
 Third cmdlet sets source subscription context.
 Then based on Test-AzRecoveryServicesDSMove cmdlet state, we fetch CorrelationId using

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
 ms.assetid: 4E9EA2E9-4BE2-4530-BC2B-D369C016CD8C
-online version: https://docs.microsoft.com/powershell/module/az.datalakestore/join-azdatalakestoreitem
+online version: https://learn.microsoft.com/powershell/module/az.datalakestore/join-azdatalakestoreitem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Join-AzDataLakeStoreItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Join-AzDataLakeStoreItem.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Joins one or more files to create one file in Data Lake Store.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/join-azdatalakestoreitem) for up-to-date information.
 
 ## SYNTAX
 

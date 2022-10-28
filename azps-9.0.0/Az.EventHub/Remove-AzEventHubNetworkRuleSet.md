@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
 Module Name: Az.EventHub
-online version: https://docs.microsoft.com/powershell/module/az.eventhub/remove-azeventhubnetworkruleset
+online version: https://learn.microsoft.com/powershell/module/az.eventhub/remove-azeventhubnetworkruleset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Remove-AzEventHubNetworkRuleSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Remove-AzEventHubNetworkRuleSet.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes the NetworkRuleSet for the Given Namespace
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventhub/remove-azeventhubnetworkruleset) for up-to-date information.
 
 ## SYNTAX
 
@@ -47,18 +50,18 @@ Name                : default
 DefaultAction       : Allow
 Id                  : /subscriptions/subscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/EventHub-Namespace-1375/networkRuleSets/default
 Type                : Microsoft.EventHub/Namespaces/NetworkRuleSet
-IpRules             : 
+IpRules             :
 VirtualNetworkRules :
 ```
 
-Deletes the NetworkRuleSet for the Given "Eventhub-Namespace1-1375" namespace 
+Deletes the NetworkRuleSet for the Given "Eventhub-Namespace1-1375" namespace
 
 ### Example 2
 ```powershell
 Remove-AzEventHubNetworkRuleSet -InputObject $result1375
 ```
 
-Deletes the NetworkRuleSet using InputObject 
+Deletes the NetworkRuleSet using InputObject
 
 ### Example 3
 ```powershell
@@ -70,7 +73,7 @@ Name                : default
 DefaultAction       : Allow
 Id                  : /subscriptions/subscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/EventHub-Namespace-1375/networkRuleSets/default
 Type                : Microsoft.EventHub/Namespaces/NetworkRuleSet
-IpRules             : 
+IpRules             :
 VirtualNetworkRules :
 ```
 

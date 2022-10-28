@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ConnectedMachine
-online version: https://docs.microsoft.com/powershell/module/az.connectedmachine/remove-azconnectedmachine
+online version: https://learn.microsoft.com/powershell/module/az.connectedmachine/remove-azconnectedmachine
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/help/Remove-AzConnectedMachine.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/help/Remove-AzConnectedMachine.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 The operation to remove a hybrid machine identity in Azure.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectedmachine/remove-azconnectedmachine) for up-to-date information.
 
 ## SYNTAX
 

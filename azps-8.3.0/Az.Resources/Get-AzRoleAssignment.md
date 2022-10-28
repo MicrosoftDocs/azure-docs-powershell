@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 488229AF-FD6D-4E1B-B3DA-E57CA781D91E
-online version: https://docs.microsoft.com/powershell/module/az.resources/get-azroleassignment
+online version: https://learn.microsoft.com/powershell/module/az.resources/get-azroleassignment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzRoleAssignment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzRoleAssignment.md
@@ -146,7 +146,7 @@ To specify a security group, use Azure AD ObjectId parameter.
 And to specify an Azure AD application, use ServicePrincipalName or ObjectId parameters.
 The role that is being assigned must be specified using the RoleDefinitionName parameter.
 The scope at which access is being granted may be specified.
-It defaults to the selected subscription. 
+It defaults to the selected subscription.
 The scope of the assignment can be specified using one of the following parameter combinations
         a.
 Scope - This is the fully qualified scope starting with /subscriptions/\<subscriptionId\>.

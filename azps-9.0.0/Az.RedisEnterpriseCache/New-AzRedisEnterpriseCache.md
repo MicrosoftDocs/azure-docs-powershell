@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.RedisEnterpriseCache
-online version: https://docs.microsoft.com/powershell/module/az.redisenterprisecache/new-azredisenterprisecache
+online version: https://learn.microsoft.com/powershell/module/az.redisenterprisecache/new-azredisenterprisecache
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/help/New-AzRedisEnterpriseCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/help/New-AzRedisEnterpriseCache.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a Redis Enterprise cache.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.redisenterprisecache/new-azredisenterprisecache) for up-to-date information.
 
 ## SYNTAX
 

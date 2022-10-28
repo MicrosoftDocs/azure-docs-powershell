@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/backup-azkeyvaultmanagedstorageaccount
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/backup-azkeyvaultmanagedstorageaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Backup-AzKeyVaultManagedStorageAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Backup-AzKeyVaultManagedStorageAccount.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Backs up a KeyVault-managed storage account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/backup-azkeyvaultmanagedstorageaccount) for up-to-date information.
 
 ## SYNTAX
 
@@ -31,11 +34,11 @@ Backup-AzKeyVaultManagedStorageAccount [-InputObject] <PSKeyVaultManagedStorageA
 The **Backup-AzKeyVaultManagedStorageAccount** cmdlet backs up a specified managed storage account in a key vault by downloading it and storing it in a file.
 Because the downloaded content is encrypted, it cannot be used outside of Azure Key Vault.
 You can restore a backed-up storage account to any key vault in the subscription that it was backed up from, as long as the vault is in the same Azure geography.
-Typical reasons to use this cmdlet are: 
+Typical reasons to use this cmdlet are:
 - You want to retain an offline copy of the storage account in case you accidentally delete the original from the vault.
- 
+
 - You created a managed storage account using Key Vault and now want to clone the object into a different Azure region, so that you can use it from all instances of your distributed application.
-Use the **Backup-AzKeyVaultManagedStorageAccount** cmdlet to retrieve the managed storage account in encrypted format and then use the **Restore-AzKeyVaultManagedStorageAccount** cmdlet 
+Use the **Backup-AzKeyVaultManagedStorageAccount** cmdlet to retrieve the managed storage account in encrypted format and then use the **Restore-AzKeyVaultManagedStorageAccount** cmdlet
 and specify a key vault in the second region.
 
 ## EXAMPLES

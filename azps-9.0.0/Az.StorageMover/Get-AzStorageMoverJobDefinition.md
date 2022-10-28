@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StorageMover
-online version: https://docs.microsoft.com/powershell/module/az.storagemover/get-azstoragemoverjobdefinition
+online version: https://learn.microsoft.com/powershell/module/az.storagemover/get-azstoragemoverjobdefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/help/Get-AzStorageMoverJobDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/help/Get-AzStorageMoverJobDefinition.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a Job Definition resource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storagemover/get-azstoragemoverjobdefinition) for up-to-date information.
 
 ## SYNTAX
 
@@ -39,7 +42,7 @@ Gets a Job Definition resource.
 
 ### Example 1: Get all job definitions under a Storage mover
 ```powershell
-Get-AzStorageMoverJobDefinition -ProjectName myProject -ResourceGroupName myResourceGroup -StorageMoverName myStorageMover 
+Get-AzStorageMoverJobDefinition -ProjectName myProject -ResourceGroupName myResourceGroup -StorageMoverName myStorageMover
 ```
 
 ```output

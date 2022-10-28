@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/get-azhost
+online version: https://learn.microsoft.com/powershell/module/az.compute/get-azhost
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzHost.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzHost.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get or list hosts.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/get-azhost) for up-to-date information.
 
 ## SYNTAX
 
@@ -42,13 +45,13 @@ ResourceGroupName    : myrg01
 PlatformFaultDomain  : 1
 AutoReplaceOnFailure : True
 HostId               : 00000000-0000-0000-0000-000000000000
-VirtualMachines[0]   : 
+VirtualMachines[0]   :
   Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/virtualMachines/myvm01
-VirtualMachines[1]   : 
+VirtualMachines[1]   :
   Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/virtualMachines/myvm02
 ProvisioningTime     : 7/27/2019 3:22:59 AM
 ProvisioningState    : Succeeded
-Sku                  : 
+Sku                  :
   Name               : ESv3-Type1
 Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/hostGroups/myhostgroup01/hosts/myhost01
 Name                 : myhost01
@@ -70,28 +73,28 @@ AutoReplaceOnFailure   : True
 HostId                 : 00000000-0000-0000-0000-000000000000
 ProvisioningTime       : 8/19/2019 9:13:19 PM
 ProvisioningState      : Succeeded
-InstanceView           : 
+InstanceView           :
   AssetId              : 00000000-0000-0000-0000-000000000000
-  AvailableCapacity    : 
-    AllocatableVMs[0]  : 
+  AvailableCapacity    :
+    AllocatableVMs[0]  :
       VmSize           : Standard_E2s_v3
       Count            : 28
-    AllocatableVMs[1]  : 
+    AllocatableVMs[1]  :
       VmSize           : Standard_E4-2s_v3
       Count            : 14
-    AllocatableVMs[2]  : 
+    AllocatableVMs[2]  :
       VmSize           : Standard_E4s_v3
       Count            : 14
-  Statuses[0]          : 
+  Statuses[0]          :
     Code               : ProvisioningState/succeeded
     Level              : Info
     DisplayStatus      : Provisioning succeeded
     Time               : 8/19/2019 9:13:19 PM
-  Statuses[1]          : 
+  Statuses[1]          :
     Code               : HealthState/available
     Level              : Info
     DisplayStatus      : Host available
-Sku                    : 
+Sku                    :
   Name                 : ESv3-Type1
 Id                     : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/hostGroups/myhostgroup01/hosts/myhost01
 Name                   : crptestps2264host

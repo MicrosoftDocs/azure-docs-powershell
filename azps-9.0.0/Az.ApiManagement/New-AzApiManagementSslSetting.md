@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementsslsetting
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementsslsetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementSslSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementSslSetting.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an instance of PsApiManagementSslSetting
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/new-azapimanagementsslsetting) for up-to-date information.
 
 ## SYNTAX
 
@@ -44,7 +47,7 @@ Create an new instance of PsApiManagementSslSetting to Enable TLSv 1.0 in both F
 
 ### -BackendProtocol
 Backend Security protocol settings. This parameter is optional.
-The valid Protocol Settings are 
+The valid Protocol Settings are
 `Tls11` - Tls 1.1
 `Tls10` - Tls 1.0
 `Ssl30` - SSL 3.0
@@ -63,7 +66,7 @@ Accept wildcard characters: False
 
 ### -CipherSuite
 Ssl cipher suites settings in the specified order. This parameter is optional.
-The valid Settings are 
+The valid Settings are
 `TripleDes168` - Enable / Disable Tripe Des 168
 
 ```yaml
@@ -95,7 +98,7 @@ Accept wildcard characters: False
 
 ### -FrontendProtocol
 Frontend Security protocols settings. This parameter is optional.
-The valid Protocol Settings are 
+The valid Protocol Settings are
 `Tls11` - Tls 1.1
 `Tls10` - Tls 1.0
 `Ssl30` - SSL 3.0
@@ -115,7 +118,7 @@ Accept wildcard characters: False
 
 ### -ServerProtocol
 Server protocol settings like Http2. This parameter is optional.
-The valid Settings are 
+The valid Settings are
 `Http2` - Enable Http 2.0
 
 ```yaml

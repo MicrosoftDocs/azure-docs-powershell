@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: 7C86B385-D784-45FD-9B57-31C895115A2C
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/add-azapimanagementapitoproduct
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/add-azapimanagementapitoproduct
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Add-AzApiManagementApiToProduct.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Add-AzApiManagementApiToProduct.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Adds an API to a product.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/add-azapimanagementapitoproduct) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: 8F36244D-A4D7-40BB-AC4C-E9AD445549F8
-online version: https://docs.microsoft.com/powershell/module/az.websites/new-azappserviceplan
+online version: https://learn.microsoft.com/powershell/module/az.websites/new-azappserviceplan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/New-AzAppServicePlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/New-AzAppServicePlan.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an Azure App Service plan in a given Geo location.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/new-azappserviceplan) for up-to-date information.
 
 ## SYNTAX
 
@@ -167,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Location 
+Location
 
 ```yaml
 Type: System.String

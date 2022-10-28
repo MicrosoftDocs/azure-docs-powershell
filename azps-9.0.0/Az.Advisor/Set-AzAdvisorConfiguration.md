@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Advisor
-online version: https://docs.microsoft.com/powershell/module/az.advisor/Set-AzAdvisorConfiguration
+online version: https://learn.microsoft.com/powershell/module/az.advisor/Set-AzAdvisorConfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Advisor/help/Set-AzAdvisorConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Advisor/help/Set-AzAdvisorConfiguration.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates or creates the Azure Advisor Configuration.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.advisor/set-azadvisorconfiguration) for up-to-date information.
 
 ## SYNTAX
 

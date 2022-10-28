@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/get-aziothubjob
+online version: https://learn.microsoft.com/powershell/module/az.iothub/get-aziothubjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubJob.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the information about an IotHub job.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/get-aziothubjob) for up-to-date information.
 
 ## SYNTAX
 
@@ -58,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-The Job Identifier. 
+The Job Identifier.
 
 ```yaml
 Type: System.String
@@ -73,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the IoT hub. 
+Name of the IoT hub.
 
 ```yaml
 Type: System.String

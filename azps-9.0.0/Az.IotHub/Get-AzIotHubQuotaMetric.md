@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/get-aziothubquotametric
+online version: https://learn.microsoft.com/powershell/module/az.iothub/get-aziothubquotametric
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubQuotaMetric.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubQuotaMetric.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the Quota Metrics for an IotHub.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/get-aziothubquotametric) for up-to-date information.
 
 ## SYNTAX
 
@@ -49,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the IoT hub. 
+Name of the IoT hub.
 
 ```yaml
 Type: System.String

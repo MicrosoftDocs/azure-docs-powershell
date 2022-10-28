@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Blueprint.dll-Help.xml
 Module Name: Az.Blueprint
-online version: https://docs.microsoft.com/powershell/module/az.blueprint/new-azblueprintartifact
+online version: https://learn.microsoft.com/powershell/module/az.blueprint/new-azblueprintartifact
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/New-AzBlueprintArtifact.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/New-AzBlueprintArtifact.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create a new artifact and save it within a blueprint definition.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.blueprint/new-azblueprintartifact) for up-to-date information.
 
 ## SYNTAX
 
@@ -45,7 +48,7 @@ New-AzBlueprintArtifact -Name <String> -Type <PSArtifactKind> -Blueprint <PSBlue
 ```
 
 ## DESCRIPTION
-Create a new artifact. There are two ways to create an artifact: either through an artifact JSON as an input file or through providing inline parameters for the artifact. 
+Create a new artifact. There are two ways to create an artifact: either through an artifact JSON as an input file or through providing inline parameters for the artifact.
 While the JSON method doesn't require type of the artifact to be provided inline parameter method requires user to provide the type of the artifact through -Type parameter.
 
 ## EXAMPLES

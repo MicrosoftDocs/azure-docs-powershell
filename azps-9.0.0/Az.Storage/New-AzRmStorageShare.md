@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/new-azrmstorageshare
+online version: https://learn.microsoft.com/powershell/module/az.storage/new-azrmstorageshare
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzRmStorageShare.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzRmStorageShare.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a Storage file share.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/new-azrmstorageshare) for up-to-date information.
 
 ## SYNTAX
 
@@ -36,7 +39,7 @@ The **New-AzRmStorageShare** cmdlet creates a Storage file share.
 ### Example 1: Create a Storage file share with Storage account name and share name, with metadata and share quota as 100 GiB.
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\>New-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -Name "myshare" -QuotaGiB 100 -Metadata @{"tag1" = "value1"; "tag2" = "value2" } 
+PS C:\>New-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -Name "myshare" -QuotaGiB 100 -Metadata @{"tag1" = "value1"; "tag2" = "value2" }
 
    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
 
@@ -82,8 +85,8 @@ PS C:\>$shareSnapshot = New-AzRmStorageShare -ResourceGroupName "myresourcegroup
 
    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
 
-Name     QuotaGiB EnabledProtocols AccessTier Deleted Version ShareUsageBytes snapshotTime 
-----     -------- ---------------- ---------- ------- ------- --------------- ------------   
+Name     QuotaGiB EnabledProtocols AccessTier Deleted Version ShareUsageBytes snapshotTime
+----     -------- ---------------- ---------- ------- ------- --------------- ------------
 myshare                                                                       2021-05-10T08:04:08
 ```
 
@@ -92,7 +95,7 @@ This command creates a Storage file share snapshot of an existing base file shar
 ### Example 5: Create a Storage file share with EnabledProtocol proeprty as NFS, and RootSquash property as NoRootSquash
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\>$share = New-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -Name "myshare" -EnabledProtocol NFS -RootSquash NoRootSquash 
+PS C:\>$share = New-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -Name "myshare" -EnabledProtocol NFS -RootSquash NoRootSquash
 
 PS C:\> $share
 

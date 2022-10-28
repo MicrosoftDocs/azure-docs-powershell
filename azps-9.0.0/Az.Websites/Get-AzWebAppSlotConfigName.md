@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: EF2D377C-C000-4BCA-8EB9-58C805FA5C31
-online version: https://docs.microsoft.com/powershell/module/az.websites/get-azwebappslotconfigname
+online version: https://learn.microsoft.com/powershell/module/az.websites/get-azwebappslotconfigname
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppSlotConfigName.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppSlotConfigName.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get the list of Web App Slot Config names
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/get-azwebappslotconfigname) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
 ms.assetid: 1F094EBA-E4AE-4B3E-BA20-858818C6FD12
-online version: https://docs.microsoft.com/powershell/module/az.operationalinsights/get-azoperationalinsightsdatasource
+online version: https://learn.microsoft.com/powershell/module/az.operationalinsights/get-azoperationalinsightsdatasource
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/Get-AzOperationalInsightsDataSource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/Get-AzOperationalInsightsDataSource.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get datasources under Azure Log Analytics workspace.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.operationalinsights/get-azoperationalinsightsdatasource) for up-to-date information.
 
 ## SYNTAX
 
@@ -88,11 +91,11 @@ Accept wildcard characters: False
 ### -Kind
 Specifies the kind of data sources to get.
 The acceptable values for this parameter are:
-- AzureActivityLog 
-- CustomLog 
-- LinuxPerformanceObject 
-- LinuxSyslog 
-- WindowsEvent 
+- AzureActivityLog
+- CustomLog
+- LinuxPerformanceObject
+- LinuxSyslog
+- WindowsEvent
 - WindowsPerformanceCounter
 
 ```yaml

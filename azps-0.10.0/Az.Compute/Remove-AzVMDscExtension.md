@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: C7FCF2CA-2C8D-4280-BF68-10DEA96642A5
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/remove-azvmdscextension
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/remove-azvmdscextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Remove-AzVMDscExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Remove-AzVMDscExtension.md
@@ -56,7 +56,7 @@ The Set-AzVMDscExtension cmdlet sets this name to Microsoft.Powershell.DSC, whic
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -71,7 +71,7 @@ Specifies the name of the resource group of the virtual machine.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -86,7 +86,7 @@ Specifies the name of a virtual machine from which this cmdlet removes the DSC e
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

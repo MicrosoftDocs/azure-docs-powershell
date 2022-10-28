@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: 38433470-CAFD-4B8F-980C-63D4B264B39F
-online version: https://docs.microsoft.com/powershell/module/az.websites/get-azwebapppublishingprofile
+online version: https://learn.microsoft.com/powershell/module/az.websites/get-azwebapppublishingprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppPublishingProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppPublishingProfile.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets an Azure Web App publishing profile.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/get-azwebapppublishingprofile) for up-to-date information.
 
 ## SYNTAX
 

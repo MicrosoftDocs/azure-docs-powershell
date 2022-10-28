@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ElasticSan
-online version: https://docs.microsoft.com/powershell/module/az.elasticsan/update-azelasticsanvolumegroup
+online version: https://learn.microsoft.com/powershell/module/az.elasticsan/update-azelasticsanvolumegroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Update-AzElasticSanVolumeGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Update-AzElasticSanVolumeGroup.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Update an VolumeGroup.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.elasticsan/update-azelasticsanvolumegroup) for up-to-date information.
 
 ## SYNTAX
 
@@ -74,7 +77,7 @@ Type                          : Microsoft.ElasticSan/ElasticSans
 
 This example updates the protocol type and virtual network rules of a volume gorup
 
-### Example 2: Update a volume group virtual network rule with JSON input 
+### Example 2: Update a volume group virtual network rule with JSON input
 ```powershell
 Update-AzElasticSanVolumeGroup -ResourceGroupName myresourcegroup -ElasticSanName myelasticsan -Name myvolumegroup -ProtocolType 'Iscsi' -Tag @{tag1="value1";tag2="value2"} `
             -NetworkAclsVirtualNetworkRule (

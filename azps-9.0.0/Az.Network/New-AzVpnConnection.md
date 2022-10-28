@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azvpnconnection
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azvpnconnection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVpnConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVpnConnection.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a IPSec connection that connects a VpnGateway to a remote customer branch represented in RM as a VpnSite.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azvpnconnection) for up-to-date information.
 
 ## SYNTAX
 
@@ -123,7 +126,7 @@ RoutingConfiguration      : {
                             }
 ```
 
-The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub and a VpnSite in West US in "testRG" resource group in Azure. 
+The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub and a VpnSite in West US in "testRG" resource group in Azure.
 A VPN gateway will be created thereafter in the Virtual Hub with 2 scale units.
 
 Once the gateway has been created, it is connected to the VpnSite using the New-AzVpnConnection command.

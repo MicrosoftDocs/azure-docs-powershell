@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StorageMover
-online version: https://docs.microsoft.com/powershell/module/az.storagemover/update-azstoragemoverproject
+online version: https://learn.microsoft.com/powershell/module/az.storagemover/update-azstoragemoverproject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/help/Update-AzStorageMoverProject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/help/Update-AzStorageMoverProject.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates properties for a Project resource.
 Properties not specified in the request body will be unchanged.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storagemover/update-azstoragemoverproject) for up-to-date information.
 
 ## SYNTAX
 

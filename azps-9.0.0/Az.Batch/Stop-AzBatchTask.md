@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 1EA57372-6FA5-45C9-94A1-50D53830FC10
-online version: https://docs.microsoft.com/powershell/module/az.batch/stop-azbatchtask
+online version: https://learn.microsoft.com/powershell/module/az.batch/stop-azbatchtask
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Stop-AzBatchTask.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Stop-AzBatchTask.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Stops a Batch task.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/stop-azbatchtask) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Cdn
-online version: https://docs.microsoft.com/powershell/module/az.cdn/import-azcdnendpointcontent
+online version: https://learn.microsoft.com/powershell/module/az.cdn/import-azcdnendpointcontent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Import-AzCdnEndpointContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Import-AzCdnEndpointContent.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Pre-loads a content to CDN.
 Available for Verizon Profiles.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/import-azcdnendpointcontent) for up-to-date information.
 
 ## SYNTAX
 
@@ -49,7 +52,7 @@ Available for Verizon Profiles.
 
 ### Example 1: Import content of an AzureCDN Endpoint under the AzureCDN profile
 ```powershell
-Import-AzCdnEndpointContent -ResourceGroupName testps-rg-verzion -ProfileName verzioncdn001 -EndpointName verzionendptest001 -ContentPath @("/movies/hello","/pictures/pic1.jpg") 
+Import-AzCdnEndpointContent -ResourceGroupName testps-rg-verzion -ProfileName verzioncdn001 -EndpointName verzionendptest001 -ContentPath @("/movies/hello","/pictures/pic1.jpg")
 ```
 
 Import content of an AzureCDN Endpoint under the AzureCDN profile, only some skus support this action

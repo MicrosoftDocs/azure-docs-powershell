@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: F8756DA1-7BB9-4CD5-9D81-E11FF7A26125
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azlocalnetworkgateway
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azlocalnetworkgateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzLocalNetworkGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzLocalNetworkGateway.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a Local Network Gateway
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azlocalnetworkgateway) for up-to-date information.
 
 ## SYNTAX
 

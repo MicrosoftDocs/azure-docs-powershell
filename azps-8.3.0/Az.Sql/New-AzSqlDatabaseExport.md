@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 3D4822DD-736B-42DF-8D9A-1CB23FEF052E
-online version: https://docs.microsoft.com/powershell/module/az.sql/new-azsqldatabaseexport
+online version: https://learn.microsoft.com/powershell/module/az.sql/new-azsqldatabaseexport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlDatabaseExport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlDatabaseExport.md
@@ -47,10 +47,10 @@ ResourceGroupName          : RG01
 ServerName                 : Server01
 DatabaseName               : Database01
 StorageKeyType             : StorageAccessKey
-StorageKey                 : 
+StorageKey                 :
 StorageUri                 : http://account01.blob.core.contoso.net/bacpacs/database01.bacpac
 AdministratorLogin         : User
-AdministratorLoginPassword : 
+AdministratorLoginPassword :
 AuthenticationType         : None
 OperationStatusLink        : https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource01/providers/Microsoft.Sql/servers/server01/databases/database01/importExportOperationResults/00000000-00
                              0-0000-0000-000000000000?api-version=2014-04-01
@@ -98,7 +98,7 @@ The default value is SQL if no authentication type is set.
 The acceptable values for this parameter are:
 - Sql.
 SQL authentication.
-Set the *AdministratorLogin* and *AdministratorLoginPassword* to the SQL administrator username and password. 
+Set the *AdministratorLogin* and *AdministratorLoginPassword* to the SQL administrator username and password.
 - ADPassword.
 Azure Active Directory authentication.
 Set *AdministratorLogin* and *AdministratorLoginPassword* to the Azure AD administrator username and password.
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 Specifies the type of access key for the storage account.
 The acceptable values for this parameter are:
 - StorageAccessKey.
-This value uses a storage account key. 
+This value uses a storage account key.
 - SharedAccessKey.
 This value uses a Shared Access Signature (SAS) key.
 
@@ -324,4 +324,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-AzSqlDatabaseImport](./New-AzSqlDatabaseImport.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)

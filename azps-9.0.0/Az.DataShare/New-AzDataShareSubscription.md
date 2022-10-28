@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll-Help.xml
 Module Name: Az.DataShare
-online version: https://docs.microsoft.com/powershell/module/az.datashare/new-azdatasharesubscription
+online version: https://learn.microsoft.com/powershell/module/az.datashare/new-azdatasharesubscription
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/New-AzDataShareSubscription.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/New-AzDataShareSubscription.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a new share subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datashare/new-azdatasharesubscription) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,7 +41,7 @@ ProvisioningState       : Succeeded
 ShareName               : AdsShare
 ShareSender             : adsprovider@microsoft.com
 ShareSenderCompanyName  : ADS Company
-ShareDescription        : Test description  
+ShareDescription        : Test description
 ShareTerms              : Test terms of use
 ShareSubscriptionStatus : Active
 ShareKind               : CopyBased

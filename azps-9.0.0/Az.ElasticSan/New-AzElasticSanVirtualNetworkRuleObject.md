@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ElasticSan
-online version: https://docs.microsoft.com/powershell/module/az.ElasticSan/new-AzElasticSanVirtualNetworkRuleObject
+online version: https://learn.microsoft.com/powershell/module/az.ElasticSan/new-AzElasticSanVirtualNetworkRuleObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/New-AzElasticSanVirtualNetworkRuleObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/New-AzElasticSanVirtualNetworkRuleObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for VirtualNetworkRule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.elasticsan/new-azelasticsanvirtualnetworkruleobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -24,14 +27,14 @@ Create an in-memory object for VirtualNetworkRule.
 
 ## EXAMPLES
 
-### Example 1: Create a virtual network rule object 
+### Example 1: Create a virtual network rule object
 ```powershell
 New-AzElasticSanVirtualNetworkRuleObject -VirtualNetworkResourceId  "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1" -Action Allow
 ```
 
 ```output
-Action State VirtualNetworkResourceId                                                                                                                       
------- ----- ------------------------                                                                                                                       
+Action State VirtualNetworkResourceId
+------ ----- ------------------------
 Allow        /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1
 ```
 

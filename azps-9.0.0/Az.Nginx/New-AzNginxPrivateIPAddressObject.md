@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Nginx
-online version: https://docs.microsoft.com/powershell/module/az.Nginx/new-AzNginxPrivateIPAddressObject
+online version: https://learn.microsoft.com/powershell/module/az.Nginx/new-AzNginxPrivateIPAddressObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/help/New-AzNginxPrivateIPAddressObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/help/New-AzNginxPrivateIPAddressObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for NginxPrivateIPAddress.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.nginx/new-aznginxprivateipaddressobject) for up-to-date information.
 
 ## SYNTAX
 

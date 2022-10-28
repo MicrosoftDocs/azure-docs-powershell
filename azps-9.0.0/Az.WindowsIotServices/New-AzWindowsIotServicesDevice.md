@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.WindowsIotServices
-online version: https://docs.microsoft.com/powershell/module/az.windowsiotservices/new-azwindowsiotservicesdevice
+online version: https://learn.microsoft.com/powershell/module/az.windowsiotservices/new-azwindowsiotservicesdevice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/WindowsIotServices/help/New-AzWindowsIotServicesDevice.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/WindowsIotServices/help/New-AzWindowsIotServicesDevice.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create or update the metadata of a Windows IoT Device Service.
 The usual pattern to modify a property is to retrieve the Windows IoT Device Service metadata and security metadata, and then combine them with the modified values in a new body to update the Windows IoT Device Service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.windowsiotservices/new-azwindowsiotservicesdevice) for up-to-date information.
 
 ## SYNTAX
 

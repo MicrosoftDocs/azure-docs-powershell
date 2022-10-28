@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ResourceMover
-online version: https://docs.microsoft.com/powershell/module/az.resourcemover/invoke-azresourcemoverdiscard
+online version: https://learn.microsoft.com/powershell/module/az.resourcemover/invoke-azresourcemoverdiscard
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Invoke-AzResourceMoverDiscard.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Invoke-AzResourceMoverDiscard.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Discards the set of resources included in the request body.
 The discard operation is triggered on the moveResources in the moveState 'CommitPending' or 'DiscardFailed', on a successful completion the moveResource moveState do a transition to MovePending.
 To aid the user to prerequisite the operation the client can call operation with validateOnly property set to true.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resourcemover/invoke-azresourcemoverdiscard) for up-to-date information.
 
 ## SYNTAX
 
@@ -35,13 +38,13 @@ Invoke-AzResourceMoverInitiateMove -ResourceGroupName "RG-MoveCollection-demoRMS
 ```
 
 ```output
-AdditionalInfo : 
-Code           : 
-Detail         : 
+AdditionalInfo :
+Code           :
+Detail         :
 EndTime        : 2/10/2021 12:39:48 PM
 Id             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralus-demoRMS/operations/095f3d5
                  1-ebd1-4c5b-9a65-d78ebe3ac345
-Message        : 
+Message        :
 Name           : 095f3d51-ebd1-4c5b-9a65-d78ebe3ac345
 Property       : Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Any
 StartTime      : 2/10/2021 12:39:37 PM
@@ -57,13 +60,13 @@ Invoke-AzResourceMoverDiscard -ResourceGroupName "RG-MoveCollection-demoRMS" -Mo
 ```
 
 ```output
-AdditionalInfo : 
-Code           : 
-Detail         : 
+AdditionalInfo :
+Code           :
+Detail         :
 EndTime        : 2/10/2021 12:56:33 PM
 Id             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralu
                  s-demoRMS/operations/290472e3-c8de-4c55-aba1-3a34a7a4ab38
-Message        : 
+Message        :
 Name           : 290472e3-c8de-4c55-aba1-3a34a7a4ab38
 Property       : Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Any
 StartTime      : 2/10/2021 12:55:21 PM
@@ -79,13 +82,13 @@ Invoke-AzResourceMoverDiscard -ResourceGroupName "RG-MoveCollection-demoRMS" -Mo
 ```
 
 ```output
-AdditionalInfo : 
-Code           : 
-Detail         : 
+AdditionalInfo :
+Code           :
+Detail         :
 EndTime        : 2/10/2021 1:01:32 PM
 Id             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralu
                  s-demoRMS/operations/955fd43c-10b6-481e-888b-d26d6ec42aea
-Message        : 
+Message        :
 Name           : 955fd43c-10b6-481e-888b-d26d6ec42aea
 Property       : Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Any
 StartTime      : 2/10/2021 1:00:00 PM

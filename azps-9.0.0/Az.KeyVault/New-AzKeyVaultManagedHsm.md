@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/new-azkeyvaultmanagedhsm
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/new-azkeyvaultmanagedhsm
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/New-AzKeyVaultManagedHsm.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/New-AzKeyVaultManagedHsm.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a managed HSM.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/new-azkeyvaultmanagedhsm) for up-to-date information.
 
 ## SYNTAX
 
@@ -23,8 +26,8 @@ New-AzKeyVaultManagedHsm [-Name] <String> [-ResourceGroupName] <String> [-Locati
 ```
 
 ## DESCRIPTION
-The **New-AzKeyVaultManagedHsm** cmdlet creates a managed HSM in the specified resource group. To add, 
-remove, or list keys in the managed HSM, user should: 
+The **New-AzKeyVaultManagedHsm** cmdlet creates a managed HSM in the specified resource group. To add,
+remove, or list keys in the managed HSM, user should:
 1. grant permissions by adding user ID to Administrator;
 2. add role assignment for user like "Managed HSM Crypto User" and so on;
 3. back up security domain data of a managed HSM using `Export-AzKeyVaultSecurityDomain`.

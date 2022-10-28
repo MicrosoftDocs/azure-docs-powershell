@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: BAC2FA68-1D82-411D-A853-FD4EE525B533
-online version: https://docs.microsoft.com/powershell/module/az.compute/add-azvmssnetworkinterfaceconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.compute/add-azvmssnetworkinterfaceconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssNetworkInterfaceConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssNetworkInterfaceConfiguration.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Adds a network interface configuration to the VMSS.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/add-azvmssnetworkinterfaceconfiguration) for up-to-date information.
 
 ## SYNTAX
 
@@ -143,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkApiVersion
-Specify the Network API version 
+Specify the Network API version
 
 ```yaml
 Type: System.String

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.CostManagement
-online version: https://docs.microsoft.com/powershell/module/az.costmanagement/get-azcostmanagementexport
+online version: https://learn.microsoft.com/powershell/module/az.costmanagement/get-azcostmanagementexport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/help/Get-AzCostManagementExport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/help/Get-AzCostManagementExport.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 The operation to get the export for the defined scope by export name.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.costmanagement/get-azcostmanagementexport) for up-to-date information.
 
 ## SYNTAX
 

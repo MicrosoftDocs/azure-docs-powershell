@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: 8337BEA9-4927-4718-83B9-F3F567BE0FBD
-online version: https://docs.microsoft.com/powershell/module/az.websites/get-azwebappbackupconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.websites/get-azwebappbackupconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppBackupConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppBackupConfiguration.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzWebAppBackupConfiguration
 
 ## SYNOPSIS
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/get-azwebappbackupconfiguration) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Accounts
 Module Guid: 342714fc-4009-4863-8afb-a9067e3db04b
-Download Help Link: https://docs.microsoft.com/en-us/powershell/module/az.accounts
+Download Help Link: https://learn.microsoft.com/en-us/powershell/module/az.accounts
 Help Version: 4.6.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Az.Accounts.md
@@ -29,7 +29,7 @@ Connect to Azure with an authenticated account for use with Azure Resource Manag
 Turn off autosaving Azure credentials.  Your login information will be forgotten the next time you open a PowerShell window
 
 ### [Disable-AzDataCollection](Disable-AzDataCollection.md)
-Opts out of collecting data to improve the AzurePowerShell cmdlets. 
+Opts out of collecting data to improve the AzurePowerShell cmdlets.
 Data is not collected unless you explicitly opt in.
 
 ### [Disable-AzureRmAlias](Disable-AzureRmAlias.md)
@@ -39,7 +39,7 @@ Disables AzureRm prefix aliases for Az modules.
 Disconnects a connected Azure account and removes all credentials and contexts associated with that account.
 
 ### [Enable-AzContextAutosave](Enable-AzContextAutosave.md)
-Allow the azure credential, account and subscription information to be saved and automatically loaded when you open a PowerShell window. 
+Allow the azure credential, account and subscription information to be saved and automatically loaded when you open a PowerShell window.
 
 ### [Enable-AzDataCollection](Enable-AzDataCollection.md)
 Enables Azure PowerShell to collect data to improve the user experience with AzurePowerShell cmdlets.
@@ -53,7 +53,7 @@ Enables AzureRm prefix aliases for Az modules.
 Gets the metadata used to authenticate Azure Resource Manager requests.
 
 ### [Get-AzContextAutosaveSetting](Get-AzContextAutosaveSetting.md)
-Display metadata about the context autosave feature, including whether the context is 
+Display metadata about the context autosave feature, including whether the context is
 automatically saved, and where saved context and credential information can be found.
 
 ### [Get-AzDefault](Get-AzDefault.md)

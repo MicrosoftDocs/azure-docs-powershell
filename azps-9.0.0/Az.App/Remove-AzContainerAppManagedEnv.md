@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.App
-online version: https://docs.microsoft.com/powershell/module/az.app/remove-azcontainerappmanagedenv
+online version: https://learn.microsoft.com/powershell/module/az.app/remove-azcontainerappmanagedenv
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/help/Remove-AzContainerAppManagedEnv.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/help/Remove-AzContainerAppManagedEnv.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Delete a Managed Environment if it does not have any container apps.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.app/remove-azcontainerappmanagedenv) for up-to-date information.
 
 ## SYNTAX
 

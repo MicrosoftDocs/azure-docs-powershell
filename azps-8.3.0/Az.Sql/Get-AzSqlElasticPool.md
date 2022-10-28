@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 350E19F6-5B1C-4D3F-B4CD-7225CDC984C4
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqlelasticpool
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlelasticpool
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlElasticPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlElasticPool.md
@@ -47,7 +47,7 @@ Dtu               : 400
 DatabaseDtuMax    : 100
 DatabaseDtuMin    : 10
 StorageMB         : 409600
-Tags              : 
+Tags              :
 
 ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool02
 ResourceGroupName : resourcegroup01
@@ -95,55 +95,55 @@ Get-AzSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01"
 ```
 
 ```output
-DimensionName  : 
-DimensionValue : 
+DimensionName  :
+DimensionValue :
 Name           : cpu_percent
 EndTime        : 8/27/2015 5:22:25 PM
-MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...} 
+MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...}
 Properties     : {}
 ResourceId     : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
 StartTime      : 8/27/2015 4:20:00 PM
 TimeGrain      : 00:05:00
 Unit           : Percent
 
-DimensionName  : 
-DimensionValue : 
+DimensionName  :
+DimensionValue :
 Name           : physical_data_read_percent
 EndTime        : 8/27/2015 5:22:25 PM
-MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...} 
+MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...}
 Properties     : {}
 ResourceId     : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
 StartTime      : 8/27/2015 4:20:00 PM
 TimeGrain      : 00:05:00
 Unit           : Percent
 
-DimensionName  : 
-DimensionValue : 
+DimensionName  :
+DimensionValue :
 Name           : log_write_percent
 EndTime        : 8/27/2015 5:22:25 PM
-MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...} 
+MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...}
 Properties     : {}
 ResourceId     : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
 StartTime      : 8/27/2015 4:20:00 PM
 TimeGrain      : 00:05:00
 Unit           : Percent
 
-DimensionName  : 
-DimensionValue : 
+DimensionName  :
+DimensionValue :
 Name           : dtu_consumption_percent
 EndTime        : 8/27/2015 5:22:25 PM
-MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...} 
+MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...}
 Properties     : {}
 ResourceId     : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
 StartTime      : 8/27/2015 4:20:00 PM
 TimeGrain      : 00:05:00
 Unit           : Percent
 
-DimensionName  : 
-DimensionValue : 
+DimensionName  :
+DimensionValue :
 Name           : storage_percent
 EndTime        : 8/27/2015 5:22:25 PM
-MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...} 
+MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...}
 Properties     : {}
 ResourceId     : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
 StartTime      : 8/27/2015 4:20:00 PM
@@ -171,7 +171,7 @@ Dtu               : 400
 DatabaseDtuMax    : 100
 DatabaseDtuMin    : 10
 StorageMB         : 409600
-Tags              : 
+Tags              :
 
 ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool02
 ResourceGroupName : resourcegroup01

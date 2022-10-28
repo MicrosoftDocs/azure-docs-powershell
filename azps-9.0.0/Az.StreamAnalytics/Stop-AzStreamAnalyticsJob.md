@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StreamAnalytics
-online version: https://docs.microsoft.com/powershell/module/az.streamanalytics/stop-azstreamanalyticsjob
+online version: https://learn.microsoft.com/powershell/module/az.streamanalytics/stop-azstreamanalyticsjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StreamAnalytics/help/Stop-AzStreamAnalyticsJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StreamAnalytics/help/Stop-AzStreamAnalyticsJob.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Stops a running streaming job.
 This will cause a running streaming job to stop processing input events and producing output.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.streamanalytics/stop-azstreamanalyticsjob) for up-to-date information.
 
 ## SYNTAX
 

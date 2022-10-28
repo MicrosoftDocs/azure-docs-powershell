@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
 Module Name: Az.HDInsight
 ms.assetid: 691AC991-3249-487C-A0DF-C579ED7D00E7
-online version: https://docs.microsoft.com/powershell/module/az.hdinsight/new-azhdinsightcluster
+online version: https://learn.microsoft.com/powershell/module/az.hdinsight/new-azhdinsightcluster
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/New-AzHDInsightCluster.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/New-AzHDInsightCluster.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an Azure HDInsight cluster in the specified resource group for the current subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hdinsight/new-azhdinsightcluster) for up-to-date information.
 
 ## SYNTAX
 

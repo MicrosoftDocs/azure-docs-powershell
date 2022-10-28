@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
 Module Name: Az.TrafficManager
 ms.assetid: 4556C345-55D0-431C-B980-219D5ED14E5F
-online version: https://docs.microsoft.com/powershell/module/az.trafficmanager/get-aztrafficmanagerendpoint
+online version: https://learn.microsoft.com/powershell/module/az.trafficmanager/get-aztrafficmanagerendpoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Get-AzTrafficManagerEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Get-AzTrafficManagerEndpoint.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets an endpoint for a Traffic Manager profile.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.trafficmanager/get-aztrafficmanagerendpoint) for up-to-date information.
 
 ## SYNTAX
 
@@ -124,7 +127,7 @@ Accept wildcard characters: False
 
 ### -Type
 Specifies the type of endpoint that this cmdlet adds to the Traffic Manager profile.
-Valid values are: 
+Valid values are:
 
 - AzureEndpoints
 - ExternalEndpoints

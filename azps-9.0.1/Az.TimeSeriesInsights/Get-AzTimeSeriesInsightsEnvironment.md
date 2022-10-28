@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.TimeSeriesInsights
-online version: https://docs.microsoft.com/powershell/module/az.timeseriesinsights/get-aztimeseriesinsightsenvironment
+online version: https://learn.microsoft.com/powershell/module/az.timeseriesinsights/get-aztimeseriesinsightsenvironment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/help/Get-AzTimeSeriesInsightsEnvironment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/help/Get-AzTimeSeriesInsightsEnvironment.md
@@ -51,7 +51,7 @@ Get-AzTimeSeriesInsightsEnvironment -ResourceGroupName testgroup -Name tsitest00
 DataAccessFqdn               : b6d113a4-0865-405f-b09e-ad4355b5d046.env.timeseries.azure.com
 DataAccessId                 : b6d113a4-0865-405f-b09e-ad4355b5d046
 DataRetentionTime            : 1.01:25:00
-Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/tsitest 
+Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/tsitest
                                001
 IngressState                 :
 Kind                         : Gen1
@@ -80,7 +80,7 @@ Get-AzTimeSeriesInsightsEnvironment -ResourceGroupName testgroup
 ```output
 DataAccessFqdn                      : 3de1d1e1-4f9b-4bc6-aad3-a835597dcd86.env.timeseries.azure.com
 DataAccessId                        : 3de1d1e1-4f9b-4bc6-aad3-a835597dcd86
-Id                                  : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/ 
+Id                                  : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/
                                       tsill
 IngressState                        :
 Kind                                : Gen2
@@ -103,7 +103,7 @@ WarmStoreConfigurationDataRetention : 00:00:00
 DataAccessFqdn               : b6d113a4-0865-405f-b09e-ad4355b5d046.env.timeseries.azure.com
 DataAccessId                 : b6d113a4-0865-405f-b09e-ad4355b5d046
 DataRetentionTime            : 1.01:25:00
-Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/tsitest 
+Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/tsitest
                                001
 IngressState                 :
 Kind                         : Gen1
@@ -127,7 +127,7 @@ This command lists all time series insights environments in a resource group.
 
 ### Example 3: Get a time series insights environment by object
 ```powershell
-$env = Get-AzTimeSeriesInsightsEnvironment -ResourceGroupName tsi-test-i01k5l -Name tsi-envv8u56x 
+$env = Get-AzTimeSeriesInsightsEnvironment -ResourceGroupName tsi-test-i01k5l -Name tsi-envv8u56x
 Get-AzTimeSeriesInsightsEnvironment -InputObject $env
 ```
 ```output

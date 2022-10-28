@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://docs.microsoft.com/powershell/module/az.Purview/new-AzPurviewAmazonS3CredentialScanObject
+online version: https://learn.microsoft.com/powershell/module/az.Purview/new-AzPurviewAmazonS3CredentialScanObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAmazonS3CredentialScanObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAmazonS3CredentialScanObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for AmazonS3CredentialScan.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.purview/new-azpurviewamazons3credentialscanobject) for up-to-date information.
 
 ## SYNTAX
 

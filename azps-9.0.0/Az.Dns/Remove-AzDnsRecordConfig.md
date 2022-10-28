@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
 ms.assetid: D1A2326C-CD41-45A6-B37A-FC6176193B01
-online version: https://docs.microsoft.com/powershell/module/az.dns/remove-azdnsrecordconfig
+online version: https://learn.microsoft.com/powershell/module/az.dns/remove-azdnsrecordconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Remove-AzDnsRecordConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Remove-AzDnsRecordConfig.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a DNS record from a local record set object.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dns/remove-azdnsrecordconfig) for up-to-date information.
 
 ## SYNTAX
 

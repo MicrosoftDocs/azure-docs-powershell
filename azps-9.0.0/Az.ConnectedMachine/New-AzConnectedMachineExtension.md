@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ConnectedMachine
-online version: https://docs.microsoft.com/powershell/module/az.connectedmachine/new-azconnectedmachineextension
+online version: https://learn.microsoft.com/powershell/module/az.connectedmachine/new-azconnectedmachineextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/help/New-AzConnectedMachineExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/help/New-AzConnectedMachineExtension.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 The operation to create or update the extension.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectedmachine/new-azconnectedmachineextension) for up-to-date information.
 
 ## SYNTAX
 

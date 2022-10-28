@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageblobtag
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageblobtag
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobTag.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobTag.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get blob tags of a specific blob.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/get-azstorageblobtag) for up-to-date information.
 
 ## SYNTAX
 
@@ -48,9 +51,9 @@ The **Get-AzStorageBlobTag** gets blob tags of a specific blob.
 ```
 PS C:\> Get-AzStorageBlobTag -Container "containername" -Blob testblob
 
-Name                           Value                                                                                                                                                                                 
-----                           -----                                                                                                                                                                                 
-tag1                           value1                                                                                                                                                                               
+Name                           Value
+----                           -----
+tag1                           value1
 tag2                           value2
 ```
 
@@ -61,9 +64,9 @@ This command gets blob tags on a specific blob.
 ```
 PS C:\> Get-AzStorageBlobTag -Container "containername" -Blob testblob -TagCondition """tag1""='value1'"
 
-Name                           Value                                                                                                                                                                                 
-----                           -----                                                                                                                                                                                 
-tag1                           value1                                                                                                                                                                               
+Name                           Value
+----                           -----
+tag1                           value1
 tag2                           value2
 ```
 
@@ -209,9 +212,9 @@ Accept wildcard characters: False
 ```
 
 ### -TagCondition
-Optional Tag expression statement to check match condition. 
+Optional Tag expression statement to check match condition.
 The blob request will fail when the blob tags does not match the given expression.
-See details in https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
+See details in https://learn.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
 
 ```yaml
 Type: System.String

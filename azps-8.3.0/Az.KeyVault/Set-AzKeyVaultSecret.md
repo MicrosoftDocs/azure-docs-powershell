@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 9FC72DE9-46BB-4CB5-9880-F53756DBE012
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultsecret
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultsecret
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Set-AzKeyVaultSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Set-AzKeyVaultSecret.md

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 89C931AE-DA81-47A7-80E4-159C36497DA0
-online version: https://docs.microsoft.com/powershell/module/az.automation/get-azautomationdscnodeconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationdscnodeconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationDscNodeConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationDscNodeConfiguration.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets metadata for DSC node configurations in Automation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/get-azautomationdscnodeconfiguration) for up-to-date information.
 
 ## SYNTAX
 
@@ -141,8 +144,8 @@ Accept wildcard characters: False
 
 ### -RollupStatus
 Specifies the rollup status of DSC node configurations that this cmdlet gets.
-Valid values are: 
-- Bad 
+Valid values are:
+- Bad
 - Good
 *Bad: Non-Compliant* *Good: Compliant*
 >[!NOTE]

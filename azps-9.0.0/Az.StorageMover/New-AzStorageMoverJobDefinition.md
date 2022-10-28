@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StorageMover
-online version: https://docs.microsoft.com/powershell/module/az.storagemover/new-azstoragemoverjobdefinition
+online version: https://learn.microsoft.com/powershell/module/az.storagemover/new-azstoragemoverjobdefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/help/New-AzStorageMoverJobDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/help/New-AzStorageMoverJobDefinition.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates or updates a Job Definition resource, which contains configuration for a single unit of managed data transfer.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storagemover/new-azstoragemoverjobdefinition) for up-to-date information.
 
 ## SYNTAX
 

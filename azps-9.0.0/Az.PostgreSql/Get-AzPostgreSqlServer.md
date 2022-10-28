@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.PostgreSql
-online version: https://docs.microsoft.com/powershell/module/az.postgresql/get-azpostgresqlserver
+online version: https://learn.microsoft.com/powershell/module/az.postgresql/get-azpostgresqlserver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/help/Get-AzPostgreSqlServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/help/Get-AzPostgreSqlServer.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets information about a server.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.postgresql/get-azpostgresqlserver) for up-to-date information.
 
 ## SYNTAX
 
@@ -63,7 +66,7 @@ Get-AzPostgreSqlServer -ResourceGroupName PostgreSqlTestRG -Name PostgreSqlTestS
 Name                 Location AdministratorLogin Version StorageProfileStorageMb SkuName   SkuTier        SslEnforcement
 ----                 -------- ------------------ ------- ----------------------- -------   -------        --------------
 postgresqltestserver eastus   pwsh               9.6     5120                    GP_Gen5_4 GeneralPurpose Enabled
-``` 
+```
 
 This cmdlet gets PostgreSql server by resource group and server name.
 

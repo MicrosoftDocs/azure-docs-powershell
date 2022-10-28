@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: D3FE0440-C663-4379-8F5F-2E66EF024E5D
-online version: https://docs.microsoft.com/powershell/module/az.websites/new-azwebappbackup
+online version: https://learn.microsoft.com/powershell/module/az.websites/new-azwebappbackup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/New-AzWebAppBackup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/New-AzWebAppBackup.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzWebAppBackup
 
 ## SYNOPSIS
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/new-azwebappbackup) for up-to-date information.
 
 ## SYNTAX
 

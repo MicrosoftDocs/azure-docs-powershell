@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
 ms.assetid: 62631E1C-FB43-4E87-82C2-159A9D1D4221
-online version: https://docs.microsoft.com/powershell/module/az.notificationhubs/remove-aznotificationhub
+online version: https://learn.microsoft.com/powershell/module/az.notificationhubs/remove-aznotificationhub
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Remove-AzNotificationHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Remove-AzNotificationHub.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an existing notification hub.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.notificationhubs/remove-aznotificationhub) for up-to-date information.
 
 ## SYNTAX
 

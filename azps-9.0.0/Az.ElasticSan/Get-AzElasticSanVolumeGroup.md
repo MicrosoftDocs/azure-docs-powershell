@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ElasticSan
-online version: https://docs.microsoft.com/powershell/module/az.elasticsan/get-azelasticsanvolumegroup
+online version: https://learn.microsoft.com/powershell/module/az.elasticsan/get-azelasticsanvolumegroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Get-AzElasticSanVolumeGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Get-AzElasticSanVolumeGroup.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get either a list of all volume groups from an Elastic SAN or get a single volume group from an Elastic SAN.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.elasticsan/get-azelasticsanvolumegroup) for up-to-date information.
 
 ## SYNTAX
 
@@ -46,7 +49,7 @@ Get-AzElasticSanVolumeGroup -ResourceGroupName myresourcegroup -ElasticSanName m
 Encryption                    : EncryptionAtRestWithPlatformKey
 Id                            : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumegroups/myvolumegroup1
 Name                          : myvolumegroup1
-NetworkAclsVirtualNetworkRule : 
+NetworkAclsVirtualNetworkRule :
 ProtocolType                  : iSCSI
 ProvisioningState             : Succeeded
 SystemDataCreatedAt           : 8/18/2022 8:43:35 AM
@@ -61,7 +64,7 @@ Type                          : Microsoft.ElasticSan/ElasticSans
 Encryption                    : EncryptionAtRestWithPlatformKey
 Id                            : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumegroups/myvolumegroup2
 Name                          : myvolumegroup2
-NetworkAclsVirtualNetworkRule : {/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet3, /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet4, 
+NetworkAclsVirtualNetworkRule : {/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet3, /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet4,
                                 /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1, /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet2}
 ProtocolType                  : iSCSI
 ProvisioningState             : Succeeded

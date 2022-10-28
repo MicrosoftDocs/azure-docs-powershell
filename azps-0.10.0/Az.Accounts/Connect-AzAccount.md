@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
 Module Name: Az.Accounts
-online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/connect-azaccount
+online version: https://learn.microsoft.com/en-us/powershell/module/az.accounts/connect-azaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Connect-AzAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Connect-AzAccount.md
@@ -148,7 +148,7 @@ yyyy-yyyy-yyyy-yyyy    Subscription1    xxxx-xxxx-xxxx-xxxx     AzureCloud
 ```
 
 This command connects using the managed service identity of "myUserAssignedIdentity" by adding the User Assigned Identity to the Virtual Machine, then connecting using the ClientId of the User Assigned Identity.
-More information about configuring Managed Identities can be found here: https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm.
+More information about configuring Managed Identities can be found here: https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm.
 
 ### Example 7: Add an Account Using Managed Service Identity Login and ClientId
 ```powershell
@@ -162,13 +162,13 @@ yyyy-yyyy-yyyy-yyyy    Subscription1    xxxx-xxxx-xxxx-xxxx     AzureCloud
 ```
 
 This command connects using the managed service identity of "myUserAssignedIdentity" by adding the User Assigned Identity to the Virtual Machine, then connecting using the Id of the User Assigned Identity.
-More information about configuring Managed Identities can be found here: https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm.
+More information about configuring Managed Identities can be found here: https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm.
 
 ### Example 8: Add an account using certificates
 ```powershell
 # For more information on creating a self-signed certificate
 # and giving it proper permissions, please see the following:
-# https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-authenticate-service-principal-powershell
+# https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-authenticate-service-principal-powershell
 PS C:\> $Thumbprint = "0SZTNJ34TCCMUJ5MJZGR8XQD3S0RVHJBA33Z8ZXV"
 PS C:\> $TenantId = "4cd76576-b611-43d0-8f2b-adcb139531bf"
 PS C:\> $ApplicationId = "3794a65a-e4e4-493d-ac1d-f04308d712dd"
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountId
-Account Id for access token in AccessToken parameter set. 
+Account Id for access token in AccessToken parameter set.
 Account Id for managed service in ManagedService parameter set. Can be a managed service resource Id, or the associated client id. To use the SystemAssigned identity, leave this field blank.
 
 ```yaml

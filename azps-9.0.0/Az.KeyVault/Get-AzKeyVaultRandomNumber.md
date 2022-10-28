@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultrandomnumber
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultrandomnumber
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultRandomNumber.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultRandomNumber.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get the requested number of bytes containing random values from a managed HSM.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/get-azkeyvaultrandomnumber) for up-to-date information.
 
 ## SYNTAX
 
@@ -55,7 +58,7 @@ Get-AzKeyVaultRandomNumber -HsmName testmhsm -Count 10
 201
 ```
 
-This command gets 10 random bytes from managed HSM "testmhsm" 
+This command gets 10 random bytes from managed HSM "testmhsm"
 
 ### Example 2: Get random number as base64 string by piping
 ```powershell
@@ -66,7 +69,7 @@ Get-AzKeyVaultManagedHsm -HsmName bezmhsm2022 | Get-AzKeyVaultRandomNumber -Coun
 G1CsEqa9yUp/EA==
 ```
 
-This command gets 10 random bytes as base-64 string from managed HSM "testmhsm" 
+This command gets 10 random bytes as base-64 string from managed HSM "testmhsm"
 
 ### Example 3: Get random number by resource id
 ```powershell

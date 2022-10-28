@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
 Module Name: Az.DataMigration
-online version: https://docs.microsoft.com/powershell/module/az.datamigration/New-AzDataMigrationTask
+online version: https://learn.microsoft.com/powershell/module/az.datamigration/New-AzDataMigrationTask
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationTask.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationTask.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates and starts a data migration task in the Azure Database Migration Service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/new-azdatamigrationtask) for up-to-date information.
 
 ## SYNTAX
 
@@ -34,7 +37,7 @@ New-AzDataMigrationTask [-ResourceId] <String> -TaskType <TaskTypeEnum> -Name <S
 ```
 
 ## DESCRIPTION
-The New-AzDataMigrationTask cmdlet creates data migration task. This cmdlet takes in parameters for Task Type enumerator, Azure Resource Group, name of associated Azure Database Migration Service and Project as input. 
+The New-AzDataMigrationTask cmdlet creates data migration task. This cmdlet takes in parameters for Task Type enumerator, Azure Resource Group, name of associated Azure Database Migration Service and Project as input.
 
 ## EXAMPLES
 
@@ -43,7 +46,7 @@ The New-AzDataMigrationTask cmdlet creates data migration task. This cmdlet take
 New-AzDataMigrationTask -TaskType MigrateSqlServerSqlDb -ResourceGroupName myResourceGroup -ServiceName TestService -ProjectName myDMSProject -TaskName MyMigrationTask
 ```
 
-This example script shows how to create a new Data Migration Task named MyMigrationTask in the project named myDMSProject and service named TestService. 
+This example script shows how to create a new Data Migration Task named MyMigrationTask in the project named myDMSProject and service named TestService.
 
 ## PARAMETERS
 
@@ -169,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-Whether to wait for task to finish. If the flag is set, checks every one seconds till the task finishes and return to user the task properties where output or error can be inspected. 
+Whether to wait for task to finish. If the flag is set, checks every one seconds till the task finishes and return to user the task properties where output or error can be inspected.
 
 
 ```yaml

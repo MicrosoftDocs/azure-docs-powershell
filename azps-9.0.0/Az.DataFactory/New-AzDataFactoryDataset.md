@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 352A4B94-E433-413B-91D1-6AA347563959
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/new-azdatafactorydataset
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/new-azdatafactorydataset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/New-AzDataFactoryDataset.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/New-AzDataFactoryDataset.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a dataset in Data Factory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/new-azdatafactorydataset) for up-to-date information.
 
 ## SYNTAX
 
@@ -32,10 +35,10 @@ New-AzDataFactoryDataset [-DataFactory] <PSDataFactory> [[-Name] <String>] [-Fil
 The **New-AzDataFactoryDataset** cmdlet creates a dataset in Azure Data Factory.
 If you specify a name for a dataset that already exists, this cmdlet prompts you for confirmation before it replaces the dataset.
 If you specify the *Force* parameter, the cmdlet replaces the existing dataset without confirmation.
-Perform these operations in the following order: 
-- Create a data factory. 
-- Create linked services. 
-- Create datasets. 
+Perform these operations in the following order:
+- Create a data factory.
+- Create linked services.
+- Create datasets.
 - Create a pipeline.
 If a dataset with the same name already exists in the data factory, this cmdlet prompts you to confirm whether to overwrite the existing dataset with the new dataset.
 If you confirm to overwrite the existing dataset, the dataset definition is also replaced.
@@ -67,10 +70,10 @@ $Dataset.Availability
 ```
 
 ```output
-AnchorDateTime : 
+AnchorDateTime :
 Frequency      : Hour
 Interval       : 1
-Offset         : 
+Offset         :
 WaitOnExternal : Microsoft.DataFactories.WaitOnExternal
 ```
 
@@ -85,8 +88,8 @@ $Dataset.Location
 
 ```output
 BlobPath          : wikidatagateway/wikisampledatain/
-FilenamePrefix    : 
-Format            : 
+FilenamePrefix    :
+Format            :
 LinkedServiceName : LinkedServiceWikipediaClickEvents
 PartitionBy       : {}
 ```
@@ -102,12 +105,12 @@ $Dataset.Policy.Validation | Format-List $dataset.Location
 
 ```output
 BlobPath          : wikidatagateway/wikisampledatain/
-FilenamePrefix    : 
-Format            : 
+FilenamePrefix    :
+Format            :
 LinkedServiceName : LinkedServiceWikipediaClickEvents
 PartitionBy       : {}
 
-MinimumRows   : 
+MinimumRows   :
 MinimumSizeMB : 1
 ```
 

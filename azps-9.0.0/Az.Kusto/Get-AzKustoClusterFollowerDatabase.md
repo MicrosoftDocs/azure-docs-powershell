@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Kusto
-online version: https://docs.microsoft.com/powershell/module/az.kusto/get-azkustoclusterfollowerdatabase
+online version: https://learn.microsoft.com/powershell/module/az.kusto/get-azkustoclusterfollowerdatabase
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/help/Get-AzKustoClusterFollowerDatabase.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/help/Get-AzKustoClusterFollowerDatabase.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Returns a list of databases that are owned by this cluster and were followed by another cluster.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.kusto/get-azkustoclusterfollowerdatabase) for up-to-date information.
 
 ## SYNTAX
 

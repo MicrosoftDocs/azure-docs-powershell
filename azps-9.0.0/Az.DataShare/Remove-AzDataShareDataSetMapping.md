@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll-Help.xml
 Module Name: Az.DataShare
-online version: https://docs.microsoft.com/powershell/module/az.datashare/remove-azdatasharedatasetmapping
+online version: https://learn.microsoft.com/powershell/module/az.datashare/remove-azdatasharedatasetmapping
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Remove-AzDataShareDataSetMapping.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Remove-AzDataShareDataSetMapping.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a dataset mapping
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datashare/remove-azdatasharedatasetmapping) for up-to-date information.
 
 ## SYNTAX
 
@@ -44,11 +47,11 @@ Remove-AzDataShareDataSetMapping -ResourceGroupName "ADS" -AccountName "WikiAds"
 ```
 
 ```output
-Are you sure you want to remove dataset mapping "DSM"? 
+Are you sure you want to remove dataset mapping "DSM"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```
 
-This commands removes the dataset named DSM from sharesubscription WikiAds. 
+This commands removes the dataset named DSM from sharesubscription WikiAds.
 
 ## PARAMETERS
 

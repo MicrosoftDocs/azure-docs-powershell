@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.EdgeOrder
-online version: https://docs.microsoft.com/powershell/module/az.edgeorder/new-azedgeorderitem
+online version: https://learn.microsoft.com/powershell/module/az.edgeorder/new-azedgeorderitem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/help/New-AzEdgeOrderItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/help/New-AzEdgeOrderItem.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates an order item.
 Existing order item cannot be updated with this api and should instead be updated with the Update order item API.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.edgeorder/new-azedgeorderitem) for up-to-date information.
 
 ## SYNTAX
 
@@ -48,7 +51,7 @@ $DebugPreference = "Continue"
 #     ],
 #     "Target": null
 #   }
-# } 
+# }
 $orderItem = New-AzEdgeOrderItem -Name "examplePowershell" -ResourceGroupName "resourceGroupName" -ForwardAddressContactDetail $contactDetail -Location "eastus" -OrderId "/subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.EdgeOrder/locations/eastus/orders/pwOrderItem11" -OrderItemDetail $details -SubscriptionId SubscriptionId -ForwardShippingAddress $ShippingDetails
 $orderItem | Format-List
 ```

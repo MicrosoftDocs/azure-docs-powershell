@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: 78AAF476-2E9E-4E60-9940-9A9AC6F9506A
-online version: https://docs.microsoft.com/powershell/module/az.websites/remove-azappserviceplan
+online version: https://learn.microsoft.com/powershell/module/az.websites/remove-azappserviceplan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Remove-AzAppServicePlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Remove-AzAppServicePlan.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an Azure App Service plan.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/remove-azappserviceplan) for up-to-date information.
 
 ## SYNTAX
 

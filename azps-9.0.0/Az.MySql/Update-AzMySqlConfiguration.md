@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MySql
-online version: https://docs.microsoft.com/powershell/module/az.mysql/update-azmysqlconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.mysql/update-azmysqlconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/help/Update-AzMySqlConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/help/Update-AzMySqlConfiguration.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates a configuration of a server.
 Use Update-AzMySqlServer instead if you want update AdministratorLoginPassword, sku, etc.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mysql/update-azmysqlconfiguration) for up-to-date information.
 
 ## SYNTAX
 

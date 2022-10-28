@@ -1,7 +1,7 @@
 ---
 external help file: Az.ActivityLogAlert.psm1-help.xml
 Module Name: Az.Monitor
-online version: https://docs.microsoft.com/powershell/module/az.monitor/update-azactivitylogalert
+online version: https://learn.microsoft.com/powershell/module/az.monitor/update-azactivitylogalert
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Update-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Update-AzActivityLogAlert.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Updates 'tags' and 'enabled' fields in an existing Alert rule.
 This method is used to update the Alert rule tags, and to enable or disable the Alert rule.
 To update other fields use CreateOrUpdate operation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/update-azactivitylogalert) for up-to-date information.
 
 ## SYNTAX
 

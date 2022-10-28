@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataBox
-online version: https://docs.microsoft.com/powershell/module/az.DataBox/new-AzDataBoxDiskJobDetailsObject
+online version: https://learn.microsoft.com/powershell/module/az.DataBox/new-AzDataBoxDiskJobDetailsObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/New-AzDataBoxDiskJobDetailsObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/New-AzDataBoxDiskJobDetailsObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for DataBoxDiskJobDetails.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.databox/new-azdataboxdiskjobdetailsobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -27,7 +30,7 @@ Create an in-memory object for DataBoxDiskJobDetails.
 
 ## EXAMPLES
 
-### Example 1: DataBoxDisk details in-memory object 
+### Example 1: DataBoxDisk details in-memory object
 ```powershell
 $contactDetail = New-AzDataBoxContactDetailsObject -ContactName "random" -EmailList @("emailId") -Phone "1234567891"
 $ShippingDetails = New-AzDataBoxShippingAddressObject -StreetAddress1 "101 TOWNSEND ST" -StateOrProvince "CA" -Country "US" -City "San Francisco" -PostalCode "94107" -AddressType "Commercial"
@@ -36,8 +39,8 @@ New-AzDataBoxDiskJobDetailsObject -Type "DataBoxDisk"  -DataImportDetail  @(@{Ac
 ```
 
 ```output
-Action ChainOfCustodySasKey ExpectedDataSizeInTeraByte ReverseShipmentLabelSasKey Type        Passkey        
------- -------------------- -------------------------- -------------------------- ----        -------        
+Action ChainOfCustodySasKey ExpectedDataSizeInTeraByte ReverseShipmentLabelSasKey Type        Passkey
+------ -------------------- -------------------------- -------------------------- ----        -------
                             18                                                    DataBoxDisk randm@423jarABC
 ```
 DataBoxDisk details in-memory object

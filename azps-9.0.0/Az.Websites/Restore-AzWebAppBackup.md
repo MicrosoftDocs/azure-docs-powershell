@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: DC400E32-CAB9-4354-99B2-ABA4AA776030
-online version: https://docs.microsoft.com/powershell/module/az.websites/restore-azwebappbackup
+online version: https://learn.microsoft.com/powershell/module/az.websites/restore-azwebappbackup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Restore-AzWebAppBackup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Restore-AzWebAppBackup.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Restore-AzWebAppBackup
 
 ## SYNOPSIS
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/restore-azwebappbackup) for up-to-date information.
 
 ## SYNTAX
 

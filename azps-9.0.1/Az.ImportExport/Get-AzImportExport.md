@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ImportExport
-online version: https://docs.microsoft.com/powershell/module/az.importexport/get-azimportexport
+online version: https://learn.microsoft.com/powershell/module/az.importexport/get-azimportexport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/help/Get-AzImportExport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/help/Get-AzImportExport.md

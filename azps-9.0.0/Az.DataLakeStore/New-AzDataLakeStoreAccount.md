@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
 ms.assetid: 58AAA284-45A3-4360-B321-FBE0A3F5D7A9
-online version: https://docs.microsoft.com/powershell/module/az.datalakestore/new-azdatalakestoreaccount
+online version: https://learn.microsoft.com/powershell/module/az.datalakestore/new-azdatalakestoreaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/New-AzDataLakeStoreAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/New-AzDataLakeStoreAccount.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a new Data Lake Store account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/new-azdatalakestoreaccount) for up-to-date information.
 
 ## SYNTAX
 

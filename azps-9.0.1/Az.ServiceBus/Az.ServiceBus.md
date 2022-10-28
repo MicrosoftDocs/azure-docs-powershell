@@ -1,7 +1,7 @@
 ---
 Module Name: Az.ServiceBus
 Module Guid: cc69c625-e961-43f4-8b50-0061eba6e4b6
-Download Help Link: https://docs.microsoft.com/powershell/module/az.servicebus
+Download Help Link: https://learn.microsoft.com/powershell/module/az.servicebus
 Help Version: 4.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Az.ServiceBus.md
@@ -72,10 +72,10 @@ Returns a description for the specified topic.
 Creates a ServiceBus Namespace, Queue, Topic Authorization Rule
 
 ### [New-AzServiceBusAuthorizationRuleSASToken](New-AzServiceBusAuthorizationRuleSASToken.md)
-Generates a SAS token for Azure servicebus authorization rule of namespace/queue/topic. 
+Generates a SAS token for Azure servicebus authorization rule of namespace/queue/topic.
 
 ### [New-AzServiceBusEncryptionConfig](New-AzServiceBusEncryptionConfig.md)
-Creates an in memory object instance of PSEncryptionConfigAttributes which can then be given as input to New-AzServiceBusNamespace and Set-AzServiceBusNamespace to enable encryption 
+Creates an in memory object instance of PSEncryptionConfigAttributes which can then be given as input to New-AzServiceBusNamespace and Set-AzServiceBusNamespace to enable encryption
 
 ### [New-AzServiceBusGeoDRConfiguration](New-AzServiceBusGeoDRConfiguration.md)
 Creates or updates a new Alias(Disaster Recovery configuration)
@@ -118,7 +118,7 @@ Remove a single IP rule to the NetworkRuleSet of the given Namespace
 Deletes a MigrationConfiguration
 
 ### [Remove-AzServiceBusNamespace](Remove-AzServiceBusNamespace.md)
-Removes the namespace from the specified resource group. 
+Removes the namespace from the specified resource group.
 
 ### [Remove-AzServiceBusNetworkRuleSet](Remove-AzServiceBusNetworkRuleSet.md)
 Removes the NetworkRuleSet for the Given Namespace

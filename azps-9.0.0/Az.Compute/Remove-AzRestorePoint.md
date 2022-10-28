@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/remove-azrestorepoint
+online version: https://learn.microsoft.com/powershell/module/az.compute/remove-azrestorepoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzRestorePoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzRestorePoint.md
@@ -10,7 +10,10 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzRestorePoint
 
 ## SYNOPSIS
-This cmdlet can remove a Restore Point 
+This cmdlet can remove a Restore Point
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/remove-azrestorepoint) for up-to-date information.
 
 ## SYNTAX
 
@@ -20,7 +23,7 @@ Remove-AzRestorePoint [-ResourceGroupName] <String> [-RestorePointCollectionName
 ```
 
 ## DESCRIPTION
-This cmdlet can remove a Restore Point 
+This cmdlet can remove a Restore Point
 
 ## EXAMPLES
 
@@ -79,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestorePointCollectionName
-Restore Point Collection Name 
+Restore Point Collection Name
 
 ```yaml
 Type: System.String

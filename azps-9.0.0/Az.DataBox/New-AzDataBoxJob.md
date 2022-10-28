@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataBox
-online version: https://docs.microsoft.com/powershell/module/az.databox/new-azdataboxjob
+online version: https://learn.microsoft.com/powershell/module/az.databox/new-azdataboxjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/New-AzDataBoxJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/New-AzDataBoxJob.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a new job with the specified parameters.
 Existing job cannot be updated with this API and should instead be updated with the Update job API.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.databox/new-azdataboxjob) for up-to-date information.
 
 ## SYNTAX
 
@@ -29,7 +32,7 @@ Existing job cannot be updated with this API and should instead be updated with 
 
 ## EXAMPLES
 
-### Example 1: Create a databox import job 
+### Example 1: Create a databox import job
 <!-- Skip: Output cannot be splitted from code -->
 ```powershell
 $dataAccount = New-AzDataBoxStorageAccountDetailsObject -DataAccountType "StorageAccount" -StorageAccountId "/subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.Storage/storageAccounts/storageAccountName"
@@ -47,7 +50,7 @@ $DebugPreference = "Continue"
 #     ],
 #     "Target": null
 #   }
-# } 
+# }
 $resource = New-AzDataBoxJob -Name "ImportTest" -SubscriptionId "SubscriptionId" -ResourceGroupName "resourceGroupName" -TransferType "ImportToAzure" -Detail $details -Location "WestUS" -SkuName "DataBox"
 $resource
 

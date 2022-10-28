@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: DB0A8E4B-AD3F-4BAC-A0B2-031913E019D4
-online version: https://docs.microsoft.com/powershell/module/az.batch/remove-azbatchpool
+online version: https://learn.microsoft.com/powershell/module/az.batch/remove-azbatchpool
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Remove-AzBatchPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Remove-AzBatchPool.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes the specified Batch pool.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/remove-azbatchpool) for up-to-date information.
 
 ## SYNTAX
 

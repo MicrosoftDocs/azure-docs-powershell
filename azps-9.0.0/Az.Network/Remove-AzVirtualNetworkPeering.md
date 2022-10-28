@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 1CE08F0F-A59E-46AC-B470-F1DCCD46513E
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azvirtualnetworkpeering
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azvirtualnetworkpeering
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVirtualNetworkPeering.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVirtualNetworkPeering.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a virtual network peering.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-azvirtualnetworkpeering) for up-to-date information.
 
 ## SYNTAX
 

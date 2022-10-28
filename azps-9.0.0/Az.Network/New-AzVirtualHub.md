@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azvirtualhub
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azvirtualhub
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualHub.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an Azure VirtualHub resource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azvirtualhub) for up-to-date information.
 
 ## SYNTAX
 
@@ -51,7 +54,7 @@ ResourceGroupName         : testRG
 Name                      : westushub
 Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub
 AddressPrefix             : 10.0.1.0/24
-RouteTable                : 
+RouteTable                :
 VirtualNetworkConnections : {}
 RouteTables                           : {}
 Location                  : West US
@@ -78,7 +81,7 @@ ResourceGroupName         : testRG
 Name                      : westushub
 Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub
 AddressPrefix             : 10.0.1.0/24
-RouteTable                : 
+RouteTable                :
 VirtualNetworkConnections : {}
 RouteTables                           : {}
 Location                  : West US
@@ -89,7 +92,7 @@ Type                      : Microsoft.Network/virtualHubs
 ProvisioningState         : Succeeded
 ```
 
-The above will create a resource group "testRG", a Virtual WAN and a Virtual Hub in West US in that resource group in Azure. The virtual hub will have the address space "10.0.1.0/24". 
+The above will create a resource group "testRG", a Virtual WAN and a Virtual Hub in West US in that resource group in Azure. The virtual hub will have the address space "10.0.1.0/24".
 
 This example is similar to Example 1, but uses a resource Id to reference the Virtual WAN that is required to create the virtual Hub.
 
@@ -141,7 +144,7 @@ Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG
 AddressPrefix             : 10.0.1.0/24
 RouteTable                :
 Location                  : West US
-Sku                  : Standard 
+Sku                  : Standard
 HubRoutingPreference      : VpnGateway
 VirtualNetworkConnections : {}
 Location                  : West US

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: https://docs.microsoft.com/powershell/module/az.security/New-AzIotSecuritySolutionUserDefinedResourcesObject
+online version: https://learn.microsoft.com/powershell/module/az.security/New-AzIotSecuritySolutionUserDefinedResourcesObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzIotSecuritySolutionUserDefinedResourcesObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzIotSecuritySolutionUserDefinedResourcesObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create new user defined resources for iot security solution
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/new-aziotsecuritysolutionuserdefinedresourcesobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -31,7 +34,7 @@ New-AzIotSecuritySolutionUserDefinedResourcesObject -Query 'where type != "micro
 ```
 
 ```output
-Query: 'where type != "microsoft.devices/iothubs" | where name contains "v2"' 
+Query: 'where type != "microsoft.devices/iothubs" | where name contains "v2"'
 QuerySubscriptions: ["XXXXXXXX-XXXX-XXXXX-XXXX-XXXXXXXXXXXX"]
 ```
 

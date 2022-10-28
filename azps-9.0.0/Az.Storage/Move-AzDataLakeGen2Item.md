@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/move-azdatalakegen2item
+online version: https://learn.microsoft.com/powershell/module/az.storage/move-azdatalakegen2item
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Move-AzDataLakeGen2Item.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Move-AzDataLakeGen2Item.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Move a file or directory to another a file or directory in same Storage account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/move-azdatalakegen2item) for up-to-date information.
 
 ## SYNTAX
 
@@ -41,8 +44,8 @@ PS C:\> Move-AzDataLakeGen2Item -FileSystem "filesystem1" -Path "dir1/" -DestFil
 
    FileSystem Name: filesystem1
 
-Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
-----                 -----------  ------          ------------         -----------  -----                -----               
+Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+----                 -----------  ------          ------------         -----------  -----                -----
 dir3                 True                         2020-03-13 13:07:34Z rwxrw-rw-    $superuser           $superuser
 ```
 
@@ -55,8 +58,8 @@ PS C:\> Get-AzDataLakeGen2Item -FileSystem "filesystem1" -Path "dir1/file1" | Mo
 
    FileSystem Name: filesystem2
 
-Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
-----                 -----------  ------          ------------         -----------  -----                -----               
+Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+----                 -----------  ------          ------------         -----------  -----                -----
 dir2/file2           False        1024            2020-03-23 09:57:33Z rwxrw-rw-    $superuser           $superuser
 ```
 
@@ -69,12 +72,12 @@ PS C:\> $sas = New-AzStorageContainerSASToken -Name $filesystemName -Permission 
 
 PS C:\> $sasctx = New-AzStorageContext -StorageAccountName $ctx.StorageAccountName -SasToken $sas
 
-PS C:\> Move-AzDataLakeGen2Item -FileSystem $filesystemName -Path $itempath1 -DestFileSystem $filesystemName -DestPath "$($itempath2)$($sas)" -Context $sasctx 
+PS C:\> Move-AzDataLakeGen2Item -FileSystem $filesystemName -Path $itempath1 -DestFileSystem $filesystemName -DestPath "$($itempath2)$($sas)" -Context $sasctx
 
    FileSystem Name: filesystem1
 
-Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
-----                 -----------  ------          ------------         -----------  -----                -----               
+Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+----                 -----------  ------          ------------         -----------  -----                -----
 dir2/file1           False        1024            2021-03-23 09:57:33Z rwxrw-rw-    $superuser           $superuser
 ```
 

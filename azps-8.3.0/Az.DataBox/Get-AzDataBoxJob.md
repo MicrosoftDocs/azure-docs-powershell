@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataBox
-online version: https://docs.microsoft.com/powershell/module/az.databox/get-azdataboxjob
+online version: https://learn.microsoft.com/powershell/module/az.databox/get-azdataboxjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/Get-AzDataBoxJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/Get-AzDataBoxJob.md
@@ -40,7 +40,7 @@ Gets information about the specified job.
 
 ## EXAMPLES
 
-### Example 1: Gets a particular job 
+### Example 1: Gets a particular job
 ```powershell
 Get-AzDataBoxJob -Name "Powershell10" -ResourceGroupName "resourceGroupName"  -SubscriptionId "SubscriptionId"
 ```
@@ -53,7 +53,7 @@ Powershell10 WestUS   DeviceOrdered ImportToAzure DataBox None         NonSchedu
 
 Gets a particular job
 
-### Example 2: List all job under a subscription 
+### Example 2: List all job under a subscription
 ```powershell
 Get-AzDataBoxJob -SubscriptionId "SubscriptionId"
 ```
@@ -67,7 +67,7 @@ testorder  uksouth       Cancelled     ImportToAzure   DataBoxDisk None         
 
 List all job under a subscription
 
-### Example 3: List all job under a resourcegroup 
+### Example 3: List all job under a resourcegroup
 ```powershell
 Get-AzDataBoxJob -ResourceGroupName "resourceGroupName"
 ```

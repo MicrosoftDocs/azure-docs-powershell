@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Portal
-online version: https://docs.microsoft.com/powershell/module/az.portal/remove-azportaldashboard
+online version: https://learn.microsoft.com/powershell/module/az.portal/remove-azportaldashboard
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Portal/help/Remove-AzPortalDashboard.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Portal/help/Remove-AzPortalDashboard.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes the Dashboard.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.portal/remove-azportaldashboard) for up-to-date information.
 
 ## SYNTAX
 

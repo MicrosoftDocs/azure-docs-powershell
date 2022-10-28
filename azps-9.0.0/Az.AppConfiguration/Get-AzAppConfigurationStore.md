@@ -1,7 +1,7 @@
 ---
 external help file: Az.AppConfiguration-help.xml
 Module Name: Az.AppConfiguration
-online version: https://docs.microsoft.com/powershell/module/az.appconfiguration/get-azappconfigurationstore
+online version: https://learn.microsoft.com/powershell/module/az.appconfiguration/get-azappconfigurationstore
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppConfiguration/AppConfiguration/help/Get-AzAppConfigurationStore.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppConfiguration/AppConfiguration/help/Get-AzAppConfigurationStore.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get or list app configuration stores.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.appconfiguration/get-azappconfigurationstore) for up-to-date information.
 
 ## SYNTAX
 

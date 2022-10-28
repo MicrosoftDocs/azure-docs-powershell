@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
 ms.assetid: 0671D833-8B3A-4480-A576-92F1A9E8CE92
-online version: https://docs.microsoft.com/powershell/module/az.datalakestore/set-azdatalakestoreitemaclentry
+online version: https://learn.microsoft.com/powershell/module/az.datalakestore/set-azdatalakestoreitemaclentry
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Set-AzDataLakeStoreItemAclEntry.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Set-AzDataLakeStoreItemAclEntry.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies an entry in the ACL of a file or folder in Data Lake Store.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/set-azdatalakestoreitemaclentry) for up-to-date information.
 
 ## SYNTAX
 
@@ -75,9 +78,9 @@ Accept wildcard characters: False
 ### -AceType
 Specifies the type of ACE to modify.
 The acceptable values for this parameter are:
-- User 
-- Group 
-- Mask 
+- User
+- Group
+- Mask
 - Other
 
 ```yaml

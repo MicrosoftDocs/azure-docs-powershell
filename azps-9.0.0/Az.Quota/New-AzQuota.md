@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Quota
-online version: https://docs.microsoft.com/powershell/module/az.quota/new-azquota
+online version: https://learn.microsoft.com/powershell/module/az.quota/new-azquota
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/help/New-AzQuota.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/help/New-AzQuota.md
@@ -16,6 +16,9 @@ Use the GET operation for quotas and usages to determine how much quota remains 
 These steps are detailed in [this example](https://techcommunity.microsoft.com/t5/azure-governance-and-management/using-the-new-quota-rest-api/ba-p/2183670).\n2.
 Use this PUT operation to update the quota limit.
 Please check the URI in location header for the detailed status of the request.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.quota/new-azquota) for up-to-date information.
 
 ## SYNTAX
 

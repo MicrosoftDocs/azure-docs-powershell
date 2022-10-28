@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: A504099E-BA96-45C9-A7A6-195E7087A0D4
-online version: https://docs.microsoft.com/powershell/module/az.automation/new-azautomationcertificate
+online version: https://learn.microsoft.com/powershell/module/az.automation/new-azautomationcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationCertificate.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an Automation certificate.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/new-azautomationcertificate) for up-to-date information.
 
 ## SYNTAX
 

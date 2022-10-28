@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://docs.microsoft.com/powershell/module/az.Purview/new-AzPurviewAzureStorageScanRulesetObject
+online version: https://learn.microsoft.com/powershell/module/az.Purview/new-AzPurviewAzureStorageScanRulesetObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAzureStorageScanRulesetObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAzureStorageScanRulesetObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for AzureStorageScanRuleset.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.purview/new-azpurviewazurestoragescanrulesetobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -168,11 +171,11 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-SCANNINGRULECUSTOMFILEEXTENSION <ICustomFileExtension[]>: 
-  - `[CustomFileTypeBuiltInType <FileExtensionsType?>]`: 
-  - `[CustomFileTypeCustomDelimiter <String>]`: 
-  - `[Description <String>]`: 
-  - `[Enabled <Boolean?>]`: 
-  - `[FileExtension <String>]`: 
+SCANNINGRULECUSTOMFILEEXTENSION <ICustomFileExtension[]>:
+  - `[CustomFileTypeBuiltInType <FileExtensionsType?>]`:
+  - `[CustomFileTypeCustomDelimiter <String>]`:
+  - `[Description <String>]`:
+  - `[Enabled <Boolean?>]`:
+  - `[FileExtension <String>]`:
 
 ## RELATED LINKS

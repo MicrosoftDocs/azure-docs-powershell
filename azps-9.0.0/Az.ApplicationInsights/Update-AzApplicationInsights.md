@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ApplicationInsights
-online version: https://docs.microsoft.com/powershell/module/az.applicationinsights/new-azapplicationinsights
+online version: https://learn.microsoft.com/powershell/module/az.applicationinsights/new-azapplicationinsights
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/help/Update-AzApplicationInsights.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/help/Update-AzApplicationInsights.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates (or updates) an Application Insights component.
 Note: You cannot specify a different value for InstrumentationKey nor AppId in the Put operation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.applicationinsights/update-azapplicationinsights) for up-to-date information.
 
 ## SYNTAX
 

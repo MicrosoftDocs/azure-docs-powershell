@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
 ms.assetid: A73D4DDD-387A-4468-AC6E-F15BF473527E
-online version: https://docs.microsoft.com/powershell/module/az.rediscache/reset-azrediscache
+online version: https://learn.microsoft.com/powershell/module/az.rediscache/reset-azrediscache
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Reset-AzRedisCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Reset-AzRedisCache.md
@@ -101,8 +101,8 @@ Accept wildcard characters: False
 ### -RebootType
 Specifies which node or nodes to restart.
 The acceptable values for this parameter are:
-- PrimaryNode 
-- SecondaryNode 
+- PrimaryNode
+- SecondaryNode
 - AllNodes
 
 ```yaml

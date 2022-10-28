@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageblobinventorypolicy
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageblobinventorypolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobInventoryPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobInventoryPolicy.md
@@ -45,7 +45,7 @@ The **Get-AzStorageBlobInventoryPolicy** cmdlet gets blob inventory policy from 
 ```
 PS C:\> $policy = Get-AzStorageBlobInventoryPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount"
 
-PS C:\> $policy 
+PS C:\> $policy
 
 StorageAccountName : mystorageaccount
 ResourceGroupName  : myresourcegroup
@@ -58,9 +58,9 @@ Rules              : {Test1, Test2}
 
 PS C:\> $policy.Rules
 
-Name  Enabled Destination   ObjectType Format  Schedule IncludeSnapshots IncludeBlobVersions BlobTypes               PrefixMatch SchemaFields                                           
-----  ------- -----------   ---------- ------  -------- ---------------- ------------------- ---------               ----------- ------------                                           
-Test1 False   containername Container  Csv     Daily                                                                 {aaa, bbb}  {Name, Metadata, PublicAccess, Last-Modified...}       
+Name  Enabled Destination   ObjectType Format  Schedule IncludeSnapshots IncludeBlobVersions BlobTypes               PrefixMatch SchemaFields
+----  ------- -----------   ---------- ------  -------- ---------------- ------------------- ---------               ----------- ------------
+Test1 False   containername Container  Csv     Daily                                                                 {aaa, bbb}  {Name, Metadata, PublicAccess, Last-Modified...}
 Test2 True    containername Blob       Parquet Weekly   True             True                {blockBlob, appendBlob} {ccc, ddd}  {Name, Creation-Time, Last-Modified, Content-Length...}
 ```
 

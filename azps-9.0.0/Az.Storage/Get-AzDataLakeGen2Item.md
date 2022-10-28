@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azdatalakegen2item
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azdatalakegen2item
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzDataLakeGen2Item.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzDataLakeGen2Item.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the details of a file or directory in a filesystem.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/get-azdatalakegen2item) for up-to-date information.
 
 ## SYNTAX
 
@@ -33,17 +36,17 @@ PS C:\> $dir1
 
    FileSystem Name: filesystem1
 
-Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
-----                 -----------  ------          ------------         -----------  -----                -----               
-dir1                 True                         2020-03-23 09:15:56Z rwx---rwx    $superuser           $superuser     
- 
+Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+----                 -----------  ------          ------------         -----------  -----                -----
+dir1                 True                         2020-03-23 09:15:56Z rwx---rwx    $superuser           $superuser
+
 PS C:\WINDOWS\system32> $dir1.ACL
 
 DefaultScope AccessControlType EntityId Permissions
 ------------ ----------------- -------- -----------
-False        User                       rwx        
-False        Group                      ---        
-False        Other                      rwx      
+False        User                       rwx
+False        Group                      ---
+False        Other                      rwx
 
 PS C:\WINDOWS\system32> $dir1.Permissions
 
@@ -55,9 +58,9 @@ ExtendedAcls : False
 
 PS C:\WINDOWS\system32> $dir1.Properties.Metadata
 
-Key          Value 
----          ----- 
-hdi_isfolder true  
+Key          Value
+---          -----
+hdi_isfolder true
 tag1         value1
 tag2         value2
 
@@ -67,10 +70,10 @@ LastModified          : 3/23/2020 9:15:56 AM +00:00
 CreatedOn             : 3/23/2020 9:15:56 AM +00:00
 Metadata              : {[hdi_isfolder, true], [tag1, value1], [tag2, value2]}
 CopyCompletedOn       : 1/1/0001 12:00:00 AM +00:00
-CopyStatusDescription : 
-CopyId                : 
-CopyProgress          : 
-CopySource            : 
+CopyStatusDescription :
+CopyId                :
+CopyProgress          :
+CopySource            :
 CopyStatus            : Pending
 IsIncrementalCopy     : False
 LeaseDuration         : Infinite
@@ -79,16 +82,16 @@ LeaseStatus           : Unlocked
 ContentLength         : 0
 ContentType           : application/octet-stream
 ETag                  : "0x8D7CF0ACBA35FA8"
-ContentHash           : 
+ContentHash           :
 ContentEncoding       : UDF12
-ContentDisposition    : 
-ContentLanguage       : 
+ContentDisposition    :
+ContentLanguage       :
 CacheControl          : READ
 AcceptRanges          : bytes
 IsServerEncrypted     : True
-EncryptionKeySha256   : 
+EncryptionKeySha256   :
 AccessTier            : Cool
-ArchiveStatus         : 
+ArchiveStatus         :
 AccessTierChangedOn   : 1/1/0001 12:00:00 AM +00:00
 ```
 
@@ -101,12 +104,12 @@ PS C:\> Get-AzDataLakeGen2Item -FileSystem "filesystem1" -Path "dir1/file1"
 
    FileSystem Name: filesystem1
 
-Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
-----                 -----------  ------          ------------         -----------  -----                -----               
+Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+----                 -----------  ------          ------------         -----------  -----                -----
 dir1/file1           False        1024            2020-03-23 09:20:37Z rwx---rwx    $superuser           $superuser
 ```
 
-This command gets the details of a file from a Filesystem. 
+This command gets the details of a file from a Filesystem.
 
 ## PARAMETERS
 

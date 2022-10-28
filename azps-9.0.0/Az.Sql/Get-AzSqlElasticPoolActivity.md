@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 0DB0B08A-F948-4F6E-9CF0-2FB5DD5064D3
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqlelasticpoolactivity
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlelasticpoolactivity
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlElasticPoolActivity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlElasticPoolActivity.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the status of operations on an elastic pool.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/get-azsqlelasticpoolactivity) for up-to-date information.
 
 ## SYNTAX
 

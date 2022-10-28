@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/get-azstackhciremotesupportaccess
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/get-azstackhciremotesupportaccess
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Get-AzStackHCIRemoteSupportAccess.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Get-AzStackHCIRemoteSupportAccess.md
@@ -26,7 +26,7 @@ Gets remote support access.
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 Get-AzStackHCIRemoteSupportAccess -Cluster
 ```
@@ -48,7 +48,7 @@ SasCredential :
 
 Get remote access across a cluster
 
-### Example 2: 
+### Example 2:
 ```powershell
 Get-AzStackHCIRemoteSupportAccess -Cluster -IncludeExpired
 ```

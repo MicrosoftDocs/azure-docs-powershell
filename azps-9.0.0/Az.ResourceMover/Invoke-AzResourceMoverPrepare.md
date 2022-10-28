@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ResourceMover
-online version: https://docs.microsoft.com/powershell/module/az.resourcemover/invoke-azresourcemoverprepare
+online version: https://learn.microsoft.com/powershell/module/az.resourcemover/invoke-azresourcemoverprepare
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Invoke-AzResourceMoverPrepare.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Invoke-AzResourceMoverPrepare.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Initiates prepare for the set of resources included in the request body.
 The prepare operation is on the moveResources that are in the moveState 'PreparePending' or 'PrepareFailed', on a successful completion the moveResource moveState do a transition to MovePending.
 To aid the user to prerequisite the operation the client can call operation with validateOnly property set to true.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resourcemover/invoke-azresourcemoverprepare) for up-to-date information.
 
 ## SYNTAX
 
@@ -54,10 +57,10 @@ MoveCollectionMissingRequiredDependentResources
 
 $resp.AdditionalInfo[0].InfoMoveResource
 
-SourceId                                                                                                                                  
---------                                                                                                                                  
-/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/psdemorm/providers/microsoft.network/networkinterfaces/psdemovm111     
-/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/psdemorm/providers/Microsoft.Network/virtualNetworks/psdemorm-vnet     
+SourceId
+--------
+/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/psdemorm/providers/microsoft.network/networkinterfaces/psdemovm111
+/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/psdemorm/providers/Microsoft.Network/virtualNetworks/psdemorm-vnet
 /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/psdemorm/providers/microsoft.network/networksecuritygroups/psdemovm-nsg
 
 ```
@@ -71,13 +74,13 @@ Invoke-AzResourceMoverPrepare -ResourceGroupName "RG-MoveCollection-demoRMS" -Mo
 ```
 
 ```output
-AAdditionalInfo : 
-Code           : 
-Detail         : 
+AAdditionalInfo :
+Code           :
+Detail         :
 EndTime        : 2/9/2021 11:25:13 AM
 Id             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralus-demoRMS/operations/49e4429
                  4-24ac-4eac-93da-e7e1c815554d
-Message        : 
+Message        :
 Name           : 49e44294-24ac-4eac-93da-e7e1c815554d
 Property       : Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Any
 StartTime      : 2/9/2021 10:55:53 AM

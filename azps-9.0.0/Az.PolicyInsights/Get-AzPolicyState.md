@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.PolicyInsights.dll-Help.xml
 Module Name: Az.PolicyInsights
-online version: https://docs.microsoft.com/powershell/module/az.policyinsights/get-azpolicystate
+online version: https://learn.microsoft.com/powershell/module/az.policyinsights/get-azpolicystate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Get-AzPolicyState.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Get-AzPolicyState.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets policy compliance states for resources.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.policyinsights/get-azpolicystate) for up-to-date information.
 
 ## SYNTAX
 
@@ -178,7 +181,7 @@ Gets latest policy state records generated in the last day for all resources (wi
 Get-AzPolicyState -OrderBy "Timestamp desc, PolicyAssignmentName asc" -Top 5 -Select "Timestamp, ResourceId, PolicyAssignmentId, PolicySetDefinitionId, PolicyDefinitionId, IsCompliant"
 ```
 
-Gets latest policy state records generated in the last day for all resources within the subscription in current session context. 
+Gets latest policy state records generated in the last day for all resources within the subscription in current session context.
 The command orders the results by timestamp and policy assignment name properties, and takes only top 5 of those listed in that order.
 It also selects to list only a subset of the columns for each record.
 
@@ -210,7 +213,7 @@ The command returns the count of the policy state records only, which is returne
 Get-AzPolicyState -Filter "ComplianceState eq 'NonCompliant'" -Apply "groupby((PolicyAssignmentId, PolicySetDefinitionId, PolicyDefinitionReferenceId, PolicyDefinitionId), aggregate(`$count as NumStates))" -OrderBy "NumStates desc" -Top 5
 ```
 
-Gets latest policy state records generated in the last day for all resources within the subscription in current session context. 
+Gets latest policy state records generated in the last day for all resources within the subscription in current session context.
 The command limits the results returned by filtering based on compliance status (includes only non-compliant status).
 It groups the results based on policy assignment, policy set definition, and policy definition, and computes the number of records in each group, which is returned inside AdditionalProperties property.
 It orders the results by the count aggregation in descending order, and takes only top 5 of those listed in that order.
@@ -220,7 +223,7 @@ It orders the results by the count aggregation in descending order, and takes on
 Get-AzPolicyState -Filter "ComplianceState eq 'NonCompliant'" -Apply "groupby((ResourceId))"
 ```
 
-Gets latest policy state records generated in the last day for all resources within the subscription in current session context. 
+Gets latest policy state records generated in the last day for all resources within the subscription in current session context.
 The command limits the results returned by filtering based on compliance status (includes only non-compliant status).
 It groups the results based on resource id.
 This generates the list of all resources within the subscription that are non-compliant for at least one policy.
@@ -230,9 +233,9 @@ This generates the list of all resources within the subscription that are non-co
 Get-AzPolicyState -Filter "ComplianceState eq 'NonCompliant'" -Apply "groupby((PolicyAssignmentId, PolicySetDefinitionId, PolicyDefinitionReferenceId, PolicyDefinitionId, ResourceId))/groupby((PolicyAssignmentId, PolicySetDefinitionId, PolicyDefinitionReferenceId, PolicyDefinitionId), aggregate(`$count as NumNonCompliantResources))" -OrderBy "NumNonCompliantResources desc" -Top 5
 ```
 
-Gets latest policy state records generated in the last day for all resources within the subscription in current session context. 
+Gets latest policy state records generated in the last day for all resources within the subscription in current session context.
 The command limits the results returned by filtering based on compliance status (includes only non-compliant status).
-It groups the results first based on policy assignment, policy set definition, policy definition, and resource id. 
+It groups the results first based on policy assignment, policy set definition, policy definition, and resource id.
 Then, it further groups the results of this grouping with the same properties except for resource id, and computes the number of records in each of these groups, which is returned inside AdditionalProperties property.
 It orders the results by the count aggregation in descending order, and takes only top 5 of those listed in that order.
 This generates the top 5 policies with the most number of non-compliant resources.
@@ -399,7 +402,7 @@ Accept wildcard characters: False
 ### -PolicyAssignmentName
 The name of a policy assignment.
 This policy assignment must have exactly the same scope as the parameter set. It cannot be a management group scope policy assignment.
-For example: if `-SubscriptionId` and `ResourceGroupName` are specified, the policy assignment must be assigned to that resource group. If only `-SubscriptionId` is specified, then the policy assignment must be assigned to that subscription. 
+For example: if `-SubscriptionId` and `ResourceGroupName` are specified, the policy assignment must be assigned to that resource group. If only `-SubscriptionId` is specified, then the policy assignment must be assigned to that subscription.
 
 ```yaml
 Type: System.String

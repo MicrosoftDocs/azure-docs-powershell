@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 473C71A8-1DF7-487A-B239-B80E2BB63B82
-online version: https://docs.microsoft.com/powershell/module/az.compute/remove-azvmchefextension
+online version: https://learn.microsoft.com/powershell/module/az.compute/remove-azvmchefextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzVMChefExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzVMChefExtension.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes the Chef extension from a virtual machine.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/remove-azvmchefextension) for up-to-date information.
 
 ## SYNTAX
 

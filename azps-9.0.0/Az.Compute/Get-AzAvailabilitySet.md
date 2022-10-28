@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 45D55DC9-0027-4EB9-B2F7-9ABF6685E6B5
-online version: https://docs.microsoft.com/powershell/module/az.compute/get-azavailabilityset
+online version: https://learn.microsoft.com/powershell/module/az.compute/get-azavailabilityset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzAvailabilitySet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzAvailabilitySet.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets Azure availability sets in a resource group.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/get-azavailabilityset) for up-to-date information.
 
 ## SYNTAX
 

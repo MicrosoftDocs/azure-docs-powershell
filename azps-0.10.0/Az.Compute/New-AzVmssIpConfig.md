@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 92F192A5-F75E-4EFE-B2D2-B0DF0B78D3B5
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azvmssipconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmssipconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVmssIpConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVmssIpConfig.md
@@ -58,7 +58,7 @@ Multiple scale sets cannot use the same load balancer.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -105,7 +105,7 @@ Specifies an ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -122,7 +122,7 @@ Multiple scale sets cannot use the same load balancer.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -139,7 +139,7 @@ Multiple scale sets cannot use the same load balancer.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -154,7 +154,7 @@ Specifies the name of the IP configuration.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -169,7 +169,7 @@ Specifies the primary IP Configuration in case the network interface has more th
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,7 +184,7 @@ Specify the ip configuration is either IPv4 or IPv6. Default is taken as IPv4.  
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,7 +229,7 @@ Specifies the subnet ID in which the configuration creates  the VMSS network int
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2

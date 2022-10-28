@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Cdn
-online version: https://docs.microsoft.com/powershell/module/az.cdn/clear-azcdnendpointcontent
+online version: https://learn.microsoft.com/powershell/module/az.cdn/clear-azcdnendpointcontent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Clear-AzCdnEndpointContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Clear-AzCdnEndpointContent.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a content from CDN.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/clear-azcdnendpointcontent) for up-to-date information.
 
 ## SYNTAX
 
@@ -47,7 +50,7 @@ Removes a content from CDN.
 
 ### Example 1: Get content of an AzureCDN Endpoint under the AzureCDN profile
 ```powershell
-Clear-AzCdnEndpointContent -ResourceGroupName testps-rg-da16jm -ProfileName cdn001 -EndpointName endptest001 -ContentPath @("/movies/*","/pictures/pic1.jpg") 
+Clear-AzCdnEndpointContent -ResourceGroupName testps-rg-da16jm -ProfileName cdn001 -EndpointName endptest001 -ContentPath @("/movies/*","/pictures/pic1.jpg")
 ```
 
 Get content of an AzureCDN Endpoint under the AzureCDN profile

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/stop-azsynapselinkconnection
+online version: https://learn.microsoft.com/powershell/module/az.synapse/stop-azsynapselinkconnection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Stop-AzSynapseLinkConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Stop-AzSynapseLinkConnection.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Stops a link connection.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/stop-azsynapselinkconnection) for up-to-date information.
 
 ## SYNTAX
 
@@ -46,7 +49,7 @@ This command stops a link connection named ContosoLinkConnection in workspace.
 
 ### Example 2
 ```powershell
-$ws = Get-AzSynapseWorkspace -Workspacename ContosoWorkspace 
+$ws = Get-AzSynapseWorkspace -Workspacename ContosoWorkspace
 $ws | Stop-AzSynapseLinkConnection -Name ContosoLinkConnection
 ```
 
@@ -74,7 +77,7 @@ IsPartiallyFailed : False
 StartTime         : 2022-03-10T06:59:34.5820499Z
 StopTime          : 2022-03-10T07:21:42.4895248Z
 Status            : Stopping
-ContinuousRunId   : 
+ContinuousRunId   :
 Error             :
 ```
 

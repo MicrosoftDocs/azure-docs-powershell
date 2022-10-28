@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Nginx
-online version: https://docs.microsoft.com/powershell/module/az.nginx/get-aznginxcertificate
+online version: https://learn.microsoft.com/powershell/module/az.nginx/get-aznginxcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/help/Get-AzNginxCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/help/Get-AzNginxCertificate.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get a certificate of given Nginx deployment
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.nginx/get-aznginxcertificate) for up-to-date information.
 
 ## SYNTAX
 

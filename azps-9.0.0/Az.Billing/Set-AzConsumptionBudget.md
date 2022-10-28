@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Consumption.dll-Help.xml
 Module Name: Az.Billing
-online version: https://docs.microsoft.com/powershell/module/az.billing/set-azconsumptionbudget
+online version: https://learn.microsoft.com/powershell/module/az.billing/set-azconsumptionbudget
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Set-AzConsumptionBudget.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Set-AzConsumptionBudget.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Update a budget in either a subscription or a resource group.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.billing/set-azconsumptionbudget) for up-to-date information.
 
 ## SYNTAX
 
@@ -60,7 +63,7 @@ Set-AzConsumptionBudget -Name PSBudget -Amount 75
 ```
 
 ```output
-Amount:  75		
+Amount:  75
 Category:  Cost
 CurrentSpend:  null
 Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/providers/Microsoft.Consumption/budgets/PSBudget
@@ -77,7 +80,7 @@ Set-AzConsumptionBudget -Name PSBudget -NotificationKey notificationKey-ps1234 -
 ```
 
 ```output
-Amount:  75		
+Amount:  75
 Category:  Cost
 CurrentSpend:  null
 Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/providers/Microsoft.Consumption/budgets/PSBudget
@@ -99,7 +102,7 @@ Set-AzConsumptionBudget -ResourceGroupName RGBudgets -Name PSBudgetRG -Amount 75
 ```
 
 ```output
-Amount:  75		
+Amount:  75
 Category:  Cost
 CurrentSpend:  null
 Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/resourceGroups/RGBudgets/providers/Microsoft.Consumption/budgets/PSBudgetRG

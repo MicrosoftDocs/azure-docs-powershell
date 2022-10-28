@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Reservations
-online version: https://docs.microsoft.com/powershell/module/az.reservations/invoke-azreservationcalculaterefund
+online version: https://learn.microsoft.com/powershell/module/az.reservations/invoke-azreservationcalculaterefund
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Invoke-AzReservationCalculateRefund.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Invoke-AzReservationCalculateRefund.md
@@ -57,15 +57,15 @@ Invoke-AzReservationCalculateRefund -ReservationOrderId $orderId -ReservationToR
 ```output
 BillingInformationBillingCurrencyProratedAmount            : {
                                                                "currencyCode": "USD",
-                                                               "amount": 25.05       
+                                                               "amount": 25.05
                                                              }
 BillingInformationBillingCurrencyRemainingCommitmentAmount : {
                                                                "currencyCode": "USD",
-                                                               "amount": 18.06       
+                                                               "amount": 18.06
                                                              }
 BillingInformationBillingCurrencyTotalPaidAmount           : {
                                                                "currencyCode": "USD",
-                                                               "amount": 25.8        
+                                                               "amount": 25.8
                                                              }
 BillingInformationBillingPlan                              : Monthly
 BillingInformationCompletedTransaction                     : 5

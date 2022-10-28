@@ -1,7 +1,7 @@
 ---
 external help file: Az.Attestation-help.xml
 Module Name: Az.Attestation
-online version: https://docs.microsoft.com/powershell/module/az.attestation/remove-azattestationprovider
+online version: https://learn.microsoft.com/powershell/module/az.attestation/remove-azattestationprovider
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Remove-AzAttestationProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Remove-AzAttestationProvider.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Delete Attestation Service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.attestation/remove-azattestationprovider) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 2A3B7343-9AA0-4505-AEDE-31C0C5B98694
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azexpressroutecircuit
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/set-azexpressroutecircuit
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzExpressRouteCircuit.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzExpressRouteCircuit.md
@@ -40,7 +40,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -70,7 +70,7 @@ Specifies the **ExpressRouteCircuit** object that this cmdlet modifies.
 ```yaml
 Type: PSExpressRouteCircuit
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

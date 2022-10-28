@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 5878FAD4-A4BB-4DBF-A1F2-221FD34F0308
-online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/set-azstorageservicemetricsproperty
+online version: https://learn.microsoft.com/en-us/powershell/module/az.storage/set-azstorageservicemetricsproperty
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Set-AzStorageServiceMetricsProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Set-AzStorageServiceMetricsProperty.md
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 Specifies the storage service type.
 This cmdlet modifies the metrics properties for the service type that this parameter specifies.
 The acceptable values for this parameter are:
-- Blob 
+- Blob
 - Table
 - Queue
 - File

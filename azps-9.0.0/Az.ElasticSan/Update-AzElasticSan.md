@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ElasticSan
-online version: https://docs.microsoft.com/powershell/module/az.elasticsan/update-azelasticsan
+online version: https://learn.microsoft.com/powershell/module/az.elasticsan/update-azelasticsan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Update-AzElasticSan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Update-AzElasticSan.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Update a Elastic San.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.elasticsan/update-azelasticsan) for up-to-date information.
 
 ## SYNTAX
 
@@ -52,7 +55,7 @@ $elasticSan = Update-AzElasticSan -ResourceGroupName myresourcegroup -Name myela
 ```
 
 ```output
-AvailabilityZone             : 
+AvailabilityZone             :
 BaseSizeTiB                  : 64
 ExtendedCapacitySizeTiB      : 128
 Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan
@@ -60,7 +63,7 @@ Location                     : eastus
 Name                         : myelasticsan
 ProvisioningState            : Succeeded
 SkuName                      : Premium_LRS
-SkuTier                      : 
+SkuTier                      :
 SystemDataCreatedAt          : 8/16/2022 4:59:54 AM
 SystemDataCreatedBy          : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
 SystemDataCreatedByType      : Application

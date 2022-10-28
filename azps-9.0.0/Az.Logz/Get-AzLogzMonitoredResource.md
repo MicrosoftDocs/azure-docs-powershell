@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Logz
-online version: https://docs.microsoft.com/powershell/module/az.logz/get-azlogzmonitoredresource
+online version: https://learn.microsoft.com/powershell/module/az.logz/get-azlogzmonitoredresource
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Logz/help/Get-AzLogzMonitoredResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Logz/help/Get-AzLogzMonitoredResource.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 List the resources currently being monitored by the Logz monitor resource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logz/get-azlogzmonitoredresource) for up-to-date information.
 
 ## SYNTAX
 

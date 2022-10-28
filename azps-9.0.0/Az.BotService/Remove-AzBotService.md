@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.BotService
-online version: https://docs.microsoft.com/powershell/module/az.botservice/remove-azbotservice
+online version: https://learn.microsoft.com/powershell/module/az.botservice/remove-azbotservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/help/Remove-AzBotService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/help/Remove-AzBotService.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes a Bot Service from the resource group.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.botservice/remove-azbotservice) for up-to-date information.
 
 ## SYNTAX
 

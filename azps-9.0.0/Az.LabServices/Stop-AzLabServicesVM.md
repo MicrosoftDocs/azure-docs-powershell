@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.LabServices
-online version: https://docs.microsoft.com/powershell/module/az.labservices/stop-azlabservicesvm
+online version: https://learn.microsoft.com/powershell/module/az.labservices/stop-azlabservicesvm
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/help/Stop-AzLabServicesVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/help/Stop-AzLabServicesVM.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Action to stop a lab virtual machine.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.labservices/stop-azlabservicesvm) for up-to-date information.
 
 ## SYNTAX
 
@@ -252,7 +255,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-VM `<VirtualMachine>`: 
+VM `<VirtualMachine>`:
   - `[SystemDataCreatedAt <DateTime?>]`: The timestamp of resource creation (UTC).
   - `[SystemDataCreatedBy <String>]`: The identity that created the resource.
   - `[SystemDataCreatedByType <CreatedByType?>]`: The type of identity that created the resource.

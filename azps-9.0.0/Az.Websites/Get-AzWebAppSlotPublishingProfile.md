@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: B2FDB54F-0318-4037-BC1D-6113E77DDE7E
-online version: https://docs.microsoft.com/powershell/module/az.websites/get-azwebappslotpublishingprofile
+online version: https://learn.microsoft.com/powershell/module/az.websites/get-azwebappslotpublishingprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppSlotPublishingProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppSlotPublishingProfile.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets an Azure Web App slot publishing profile.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/get-azwebappslotpublishingprofile) for up-to-date information.
 
 ## SYNTAX
 

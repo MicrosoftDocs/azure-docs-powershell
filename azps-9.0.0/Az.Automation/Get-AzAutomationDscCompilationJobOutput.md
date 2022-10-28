@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: D40BA2E2-50DF-4D51-A4D2-2D02AECBF20F
-online version: https://docs.microsoft.com/powershell/module/az.automation/get-azautomationdsccompilationjoboutput
+online version: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationdsccompilationjoboutput
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationDscCompilationJobOutput.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationDscCompilationJobOutput.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the logging streams of an Automation DSC compilation job.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/get-azautomationdsccompilationjoboutput) for up-to-date information.
 
 ## SYNTAX
 
@@ -116,10 +119,10 @@ Accept wildcard characters: False
 
 ### -Stream
 Specifies the type of stream for the output that this cmdlet gets.
-Valid values are: 
-- Any 
-- Warning 
-- Error 
+Valid values are:
+- Any
+- Warning
+- Error
 - Verbose
 
 ```yaml

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SignalR
-online version: https://docs.microsoft.com/powershell/module/az.signalr/get-azwebpubsubkey
+online version: https://learn.microsoft.com/powershell/module/az.signalr/get-azwebpubsubkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/Get-AzWebPubSubKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/Get-AzWebPubSubKey.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get the access keys of the resource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.signalr/get-azwebpubsubkey) for up-to-date information.
 
 ## SYNTAX
 

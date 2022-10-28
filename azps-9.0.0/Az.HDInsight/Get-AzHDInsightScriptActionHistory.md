@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
 Module Name: Az.HDInsight
 ms.assetid: CE690DB0-0CD4-4841-B219-C208173D4730
-online version: https://docs.microsoft.com/powershell/module/az.hdinsight/get-azhdinsightscriptactionhistory
+online version: https://learn.microsoft.com/powershell/module/az.hdinsight/get-azhdinsightscriptactionhistory
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Get-AzHDInsightScriptActionHistory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Get-AzHDInsightScriptActionHistory.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the script action history for a cluster and lists it in reverse chronological order, or gets details of a previously executed script action.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hdinsight/get-azhdinsightscriptactionhistory) for up-to-date information.
 
 ## SYNTAX
 

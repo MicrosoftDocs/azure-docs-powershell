@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version: https://docs.microsoft.com/powershell/module/az.operationalinsights/update-azoperationalinsightsdataexport
+online version: https://learn.microsoft.com/powershell/module/az.operationalinsights/update-azoperationalinsightsdataexport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/Update-AzOperationalInsightsDataExport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/Update-AzOperationalInsightsDataExport.md
@@ -54,7 +54,7 @@ ResourceId       : /subscriptions/{resource_subscription}/resourceGroups/{resour
 DataExportType   : StorageAccount
 EventHubName     :
 Enable           : true
-CreatedDate      : 
+CreatedDate      :
 LastModifiedDate :
 ```
 

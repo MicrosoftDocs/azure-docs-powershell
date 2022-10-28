@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-aznetworkmanageractiveconnectivityconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkmanageractiveconnectivityconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerActiveConnectivityConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerActiveConnectivityConfiguration.md
@@ -30,7 +30,7 @@ The **Get-AzNetworkManagerActiveConnectivityConfiguration** cmdlet lists Network
 
 ### Example 1
 ```powershell
-$regions = @("centraluseuap")  
+$regions = @("centraluseuap")
 Get-AzNetworkManagerActiveConnectivityConfiguration -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG" -Region $regions -SkipToken "FakeSkipToken"
 ```
 ```output
@@ -76,7 +76,7 @@ Get-AzNetworkManagerActiveConnectivityConfiguration -NetworkManagerName "TestNMN
                 ]
               }
             ]
-SkipToken : 
+SkipToken :
 
 ```
 Lists NetworkManager Active Connectivity Configurations in network manager for region centraluseuap.
@@ -165,7 +165,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-### System.String[]	
+### System.String[]
 
 ## OUTPUTS
 

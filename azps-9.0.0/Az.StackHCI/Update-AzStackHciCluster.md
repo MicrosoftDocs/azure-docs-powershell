@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/update-azstackhcicluster
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/update-azstackhcicluster
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Update-AzStackHciCluster.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Update-AzStackHciCluster.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Update an HCI cluster.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.stackhci/update-azstackhcicluster) for up-to-date information.
 
 ## SYNTAX
 
@@ -36,7 +39,7 @@ Update an HCI cluster.
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 Update-AzStackHciCluster -ResourceGroupName test-rg -Name myCluster3 -DesiredPropertyDiagnosticLevel Enhanced -DesiredPropertyWindowsServerSubscription Disabled
 ```

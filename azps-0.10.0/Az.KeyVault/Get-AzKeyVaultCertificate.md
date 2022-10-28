@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 363FA51E-D075-4800-A4BE-BFF63FD25C90
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.keyvault/get-AzKeyvaultcertificate
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/get-AzKeyvaultcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
@@ -48,26 +48,26 @@ The **Get-AzKeyVaultCertificate** cmdlet gets the specified certificate or the v
 ```
 PS C:\>Get-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "TestCert01"
 Name        : testCert01
-Certificate : [Subject] 
+Certificate : [Subject]
                 CN=contoso.com
 
-              [Issuer] 
+              [Issuer]
                 CN=contoso.com
 
-              [Serial Number] 
+              [Serial Number]
                 05979C5A2F0741D5A3B6F97673E8A118
 
-              [Not Before] 
+              [Not Before]
                 2/8/2016 3:11:45 PM
 
-              [Not After] 
+              [Not After]
                 8/8/2016 4:21:45 PM
 
-              [Thumbprint] 
+              [Thumbprint]
                 3E9B6848AD1834284157D68B060F748037F663C8
 
 Thumbprint  : 3E9B6848AD1834284157D68B060F748037F663C8
-Tags        : 
+Tags        :
 Enabled     : True
 Created     : 2/8/2016 11:21:45 PM
 Updated     : 2/8/2016 11:21:45 PM
@@ -113,7 +113,7 @@ Indicates that this operation gets all versions of the certificate.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByCertificateVersions
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -128,7 +128,7 @@ Specifies whether to include previously deleted certificates in the output
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByDeletedCertificates
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -170,7 +170,7 @@ Specifies the name of a key vault.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

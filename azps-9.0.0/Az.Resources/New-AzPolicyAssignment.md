@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: BA40BD11-8167-48D7-AC71-72B2FD9924F2
-online version: https://docs.microsoft.com/powershell/module/az.resources/new-azpolicyassignment
+online version: https://learn.microsoft.com/powershell/module/az.resources/new-azpolicyassignment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzPolicyAssignment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzPolicyAssignment.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a policy assignment.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/new-azpolicyassignment) for up-to-date information.
 
 ## SYNTAX
 
@@ -167,7 +170,7 @@ New-AzPolicyAssignment -Name 'VirtualMachinePolicyAssignment' -PolicyDefinition 
 
 The first command gets a subscription named Subscription01 by using the Get-AzSubscription cmdlet and stores it in the $Subscription variable.
 The second command gets the policy definition named VirtualMachinePolicy by using the Get-AzPolicyDefinition cmdlet and stores it in the $Policy variable.
-The final command assigns the policy in $Policy at the level of the subscription identified by the subscription scope string. 
+The final command assigns the policy in $Policy at the level of the subscription identified by the subscription scope string.
 The assignment is set with an EnforcementMode value of _DoNotEnforce_ i.e. the policy effect is not enforced during resource creation or update.
 
 ### Example 8: Policy assignment with non-compliance messages
@@ -276,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentityId
-Specifies the Id of the user assigned managed identity to assign to this policy assignment. This value is required if the value 'UserAssigned' is passed to the -IdentityType parameter. 
+Specifies the Id of the user assigned managed identity to assign to this policy assignment. This value is required if the value 'UserAssigned' is passed to the -IdentityType parameter.
 
 ```yaml
 Type: System.String

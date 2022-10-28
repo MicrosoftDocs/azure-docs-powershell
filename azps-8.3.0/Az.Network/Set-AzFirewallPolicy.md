@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/set-azfirewallpolicy
+online version: https://learn.microsoft.com/powershell/module/az.network/set-azfirewallpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzFirewallPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzFirewallPolicy.md
@@ -86,39 +86,39 @@ $exProxy = New-AzFirewallPolicyExplicitProxy -EnableExplicitProxy  -HttpPort 100
 Set-AzFirewallPolicy -Name firewallPolicy1 -ResourceGroupName TestRg -Location westcentralus -ExplicitProxy $exProxy
 ```
 ```output
-		BasePolicy	                : null	
-		DnsSettings  	            : null	
-		Etag	                    : null	
-		ExplicitProxy	
-			EnableExplicitProxy	    : true	
-			EnablePacFile	        : true	
-			HttpPort	            : 100	
-			HttpsPort	            : 101	
+		BasePolicy	                : null
+		DnsSettings  	            : null
+		Etag	                    : null
+		ExplicitProxy
+			EnableExplicitProxy	    : true
+			EnablePacFile	        : true
+			HttpPort	            : 100
+			HttpsPort	            : 101
 			PacFile                 : "sampleurlfortesting.blob.core.windowsnet/nothing"
-			PacFilePort	            : 130	
-		Id	                        : null	
-		Identity	                : null	
-		IntrusionDetection	        : null	
-		Location	                : "westcentralus"	
-		Name	                    : "firewallPolicy1"	
+			PacFilePort	            : 130
+		Id	                        : null
+		Identity	                : null
+		IntrusionDetection	        : null
+		Location	                : "westcentralus"
+		Name	                    : "firewallPolicy1"
 		PrivateRange	            : null
 		PrivateRangeText	        : "[]"
-		ProvisioningState	        : null	
-		ResourceGroupName	        : "TestRg"	
-		ResourceGuid	            : null	
-		RuleCollectionGroups	    : null	
-		Sku	
-			Tier	                : "Standard"	
-		Snat	
-			AutoLearnPrivateRanges	: null	
-			PrivateRanges	        : null	
-		SqlSetting	                : null	
-		Tag	                        : null	
-		TagsTable	                : null	
-		ThreatIntelMode	            : "Alert"	
-		ThreatIntelWhitelist	    : null	
-		TransportSecurity	        : null	
-		Type	                    : null	
+		ProvisioningState	        : null
+		ResourceGroupName	        : "TestRg"
+		ResourceGuid	            : null
+		RuleCollectionGroups	    : null
+		Sku
+			Tier	                : "Standard"
+		Snat
+			AutoLearnPrivateRanges	: null
+			PrivateRanges	        : null
+		SqlSetting	                : null
+		Tag	                        : null
+		TagsTable	                : null
+		ThreatIntelMode	            : "Alert"
+		ThreatIntelWhitelist	    : null
+		TransportSecurity	        : null
+		Type	                    : null
 ```
 This example sets the firewall policy with the explicit proxy settings
 

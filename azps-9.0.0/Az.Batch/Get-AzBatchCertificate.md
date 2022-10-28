@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: A9C98F8F-90F2-4BF4-A234-31966FBB975B
-online version: https://docs.microsoft.com/powershell/module/az.batch/get-azbatchcertificate
+online version: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchCertificate.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the certificates in a Batch account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/get-azbatchcertificate) for up-to-date information.
 
 ## SYNTAX
 

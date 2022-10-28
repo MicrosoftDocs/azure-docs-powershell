@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/update-azsynapsekustopool
+online version: https://learn.microsoft.com/powershell/module/az.synapse/update-azsynapsekustopool
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Update-AzSynapseKustoPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Update-AzSynapseKustoPool.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Update a Kusto Kusto Pool.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/update-azsynapsekustopool) for up-to-date information.
 
 ## SYNTAX
 
@@ -46,7 +49,7 @@ Update-AzSynapseKustoPool -ResourceGroupName testrg -WorkspaceName testws -Name 
 ```output
 Location  Name                    Type                                    Etag
 --------  ----                    ----                                    ----
-East US 2 testws/testnewkustopool Microsoft.Synapse/workspaces/kustoPools 
+East US 2 testws/testnewkustopool Microsoft.Synapse/workspaces/kustoPools
 ```
 
 The above command updates the sku of the Kusto pool "testnewkustopool" found in the workspace "testws".

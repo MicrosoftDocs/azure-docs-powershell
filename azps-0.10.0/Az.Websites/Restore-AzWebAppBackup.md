@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.WebSites
 ms.assetid: DC400E32-CAB9-4354-99B2-ABA4AA776030
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.websites/restore-Azwebappbackup
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.websites/restore-Azwebappbackup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Restore-AzWebAppBackup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Restore-AzWebAppBackup.md
@@ -48,7 +48,7 @@ The name of the App Service Plan for the restored app. If left empty, the app's 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -63,7 +63,7 @@ Blob Name
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -78,7 +78,7 @@ Databases of type DatabaseBackupSetting[]
 ```yaml
 Type: DatabaseBackupSetting[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Ignore Conflicting HostNames Option
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ WebApp Name
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -138,7 +138,7 @@ Overwrite Option
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ Resource Group Name
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -168,7 +168,7 @@ WebApp Slot Name
 ```yaml
 Type: String
 Parameter Sets: FromResourceName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -183,7 +183,7 @@ Storage Account Url
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -198,7 +198,7 @@ WebApp Object
 ```yaml
 Type: Site
 Parameter Sets: FromWebApp
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

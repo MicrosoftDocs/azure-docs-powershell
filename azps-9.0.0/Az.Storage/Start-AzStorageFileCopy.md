@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: A96A1A67-6C9C-499F-9935-B90F7ACEB50E
-online version: https://docs.microsoft.com/powershell/module/az.storage/start-azstoragefilecopy
+online version: https://learn.microsoft.com/powershell/module/az.storage/start-azstoragefilecopy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Start-AzStorageFileCopy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Start-AzStorageFileCopy.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Starts to copy a source file.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/start-azstoragefilecopy) for up-to-date information.
 
 ## SYNTAX
 

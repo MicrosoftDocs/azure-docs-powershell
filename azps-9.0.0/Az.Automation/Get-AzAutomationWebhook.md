@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: A0A956E9-6C4F-4432-A39F-A180CD519C04
-online version: https://docs.microsoft.com/powershell/module/az.automation/get-azautomationwebhook
+online version: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationwebhook
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationWebhook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationWebhook.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets webhooks from Automation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/get-azautomationwebhook) for up-to-date information.
 
 ## SYNTAX
 

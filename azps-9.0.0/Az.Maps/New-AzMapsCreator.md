@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Maps
-online version: https://docs.microsoft.com/powershell/module/az.maps/new-azmapscreator
+online version: https://learn.microsoft.com/powershell/module/az.maps/new-azmapscreator
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/help/New-AzMapsCreator.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/help/New-AzMapsCreator.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Create or update a Maps Creator resource.
 Creator resource will manage Azure resources required to populate a custom set of mapping data.
 It requires an account to exist before it can be created.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.maps/new-azmapscreator) for up-to-date information.
 
 ## SYNTAX
 

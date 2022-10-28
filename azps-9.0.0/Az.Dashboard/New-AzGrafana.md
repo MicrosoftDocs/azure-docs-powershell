@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Dashboard
-online version: https://docs.microsoft.com/powershell/module/az.dashboard/new-azgrafana
+online version: https://learn.microsoft.com/powershell/module/az.dashboard/new-azgrafana
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/help/New-AzGrafana.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/help/New-AzGrafana.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create or update a workspace for Grafana resource.
 This API is idempotent, so user can either create a new grafana or update an existing grafana.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dashboard/new-azgrafana) for up-to-date information.
 
 ## SYNTAX
 

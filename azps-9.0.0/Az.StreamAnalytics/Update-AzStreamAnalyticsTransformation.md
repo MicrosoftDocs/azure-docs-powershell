@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StreamAnalytics
-online version: https://docs.microsoft.com/powershell/module/az.streamanalytics/update-azstreamanalyticstransformation
+online version: https://learn.microsoft.com/powershell/module/az.streamanalytics/update-azstreamanalyticstransformation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StreamAnalytics/help/Update-AzStreamAnalyticsTransformation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StreamAnalytics/help/Update-AzStreamAnalyticsTransformation.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Updates an existing transformation under an existing streaming job.
 This can be used to partially update (ie.
 update one or two properties) a transformation without affecting the rest the job or transformation definition.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.streamanalytics/update-azstreamanalyticstransformation) for up-to-date information.
 
 ## SYNTAX
 

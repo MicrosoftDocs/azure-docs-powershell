@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: 5F135E64-9432-4D08-961F-4604410378A3
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/remove-azvmssdiagnosticsextension
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/remove-azvmssdiagnosticsextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Remove-AzVmssDiagnosticsExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Remove-AzVmssDiagnosticsExtension.md
@@ -70,7 +70,7 @@ Specifies the VMSS from which to remove the extension.
 ```yaml
 Type: VirtualMachineScaleSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -121,7 +121,7 @@ Parameter 'VirtualMachineScaleSet' accepts value of type 'VirtualMachineScaleSet
 
 ## OUTPUTS
 
-###  
+### None
 This cmdlet does not generate any output.
 
 ## NOTES

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version: https://docs.microsoft.com/powershell/module/az.resources/get-azpolicyalias
+online version: https://learn.microsoft.com/powershell/module/az.resources/get-azpolicyalias
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzPolicyAlias.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzPolicyAlias.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Get-AzPolicyAlias retrieves and outputs Azure provider resource types that have aliases defined and match the
 given parameter values. If no parameters are provided, all provider resource types that contain an alias will be output.
 The -ListAvailable switch modifies this behavior by listing all matching resource types including those without aliases.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-azpolicyalias) for up-to-date information.
 
 ## SYNTAX
 

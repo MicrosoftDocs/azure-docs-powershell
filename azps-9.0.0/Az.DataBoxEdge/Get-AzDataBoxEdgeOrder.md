@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataBoxEdge.dll-Help.xml
 Module Name: Az.DataBoxEdge
-online version: https://docs.microsoft.com/powershell/module/az.databoxedge/get-azdataboxedgeorder
+online version: https://learn.microsoft.com/powershell/module/az.databoxedge/get-azdataboxedgeorder
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBoxEdge/DataBoxEdge/help/Get-AzDataBoxEdgeOrder.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBoxEdge/DataBoxEdge/help/Get-AzDataBoxEdgeOrder.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get the order details for a device
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.databoxedge/get-azdataboxedgeorder) for up-to-date information.
 
 ## SYNTAX
 
@@ -32,7 +35,7 @@ Get-AzDataBoxEdgeOrder -ResourceId <String> [-DefaultProfile <IAzureContextConta
 ```
 
 ## DESCRIPTION
-The **Get-AzDataBoxEdgeOrder** cmdlet gets the order details for a Data Box Edge device. 
+The **Get-AzDataBoxEdgeOrder** cmdlet gets the order details for a Data Box Edge device.
 
 ## EXAMPLES
 

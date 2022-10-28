@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Cdn
-online version: https://docs.microsoft.com/powershell/module/az.cdn/remove-azfrontdoorcdnprofile
+online version: https://learn.microsoft.com/powershell/module/az.cdn/remove-azfrontdoorcdnprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Remove-AzFrontDoorCdnProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Remove-AzFrontDoorCdnProfile.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes an existing  Azure Front Door Standard or Azure Front Door Premium or CDN profile with the specified parameters.
 Deleting a profile will result in the deletion of all of the sub-resources including endpoints, origins and custom domains.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/remove-azfrontdoorcdnprofile) for up-to-date information.
 
 ## SYNTAX
 

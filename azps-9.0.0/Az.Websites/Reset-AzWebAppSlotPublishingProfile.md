@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: 3CD449A1-084E-4950-80EF-06B5ECDFB70F
-online version: https://docs.microsoft.com/powershell/module/az.websites/reset-azwebappslotpublishingprofile
+online version: https://learn.microsoft.com/powershell/module/az.websites/reset-azwebappslotpublishingprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Reset-AzWebAppSlotPublishingProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Reset-AzWebAppSlotPublishingProfile.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Reset-AzWebAppSlotPublishingProfile
 
 ## SYNOPSIS
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/reset-azwebappslotpublishingprofile) for up-to-date information.
 
 ## SYNTAX
 

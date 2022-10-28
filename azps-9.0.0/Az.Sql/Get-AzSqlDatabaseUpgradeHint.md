@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: D64FB139-04E2-47BC-86FB-EEEA23839F2F
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqldatabaseupgradehint
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqldatabaseupgradehint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseUpgradeHint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseUpgradeHint.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets pricing tier hints for a database.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/get-azsqldatabaseupgradehint) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataProtection
-online version: https://docs.microsoft.com/powershell/module/az.dataprotection/set-azdataprotectionmsipermission
+online version: https://learn.microsoft.com/powershell/module/az.dataprotection/set-azdataprotectionmsipermission
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Set-AzDataProtectionMSIPermission.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Set-AzDataProtectionMSIPermission.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Grants required permissions to the backup vault to configure backup
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/set-azdataprotectionmsipermission) for up-to-date information.
 
 ## SYNTAX
 
@@ -214,9 +217,9 @@ To create the parameters described below, construct a hash table containing the 
       - `[ResourceType <String>]`: Resource Type of Datasource.
       - `[ResourceUri <String>]`: Uri of the resource.
       - `[Type <String>]`: DatasourceType of the resource.
-    - `ObjectType <String>`: 
+    - `ObjectType <String>`:
     - `PolicyInfo <IPolicyInfo>`: Gets or sets the policy information.
-      - `PolicyId <String>`: 
+      - `PolicyId <String>`:
       - `[PolicyParameter <IPolicyParameters>]`: Policy parameters for the backup instance
         - `[DataStoreParametersList <IDataStoreParameters[]>]`: Gets or sets the DataStore Parameters
           - `DataStoreType <DataStoreTypes>`: type of datastore; Operational/Vault/Archive

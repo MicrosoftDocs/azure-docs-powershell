@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azp2svpngatewayconnectionhealth
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azp2svpngatewayconnectionhealth
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzP2sVpnGatewayConnectionHealth.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzP2sVpnGatewayConnectionHealth.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the current aggregared point to site connections health information from P2SVpnGateway.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azp2svpngatewayconnectionhealth) for up-to-date information.
 
 ## SYNTAX
 
@@ -52,7 +55,7 @@ VpnGatewayScaleUnit            : 1
 VirtualHub                     : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/virtualHubs/WestUsVirtualHub
 VpnServerConfiguration         : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/vpnServerConfigurations/WestUsConfig
 VpnServerConfigurationLocation :
-VpnClientConnectionHealth      : { 
+VpnClientConnectionHealth      : {
 				  "VpnClientConnectionsCount": 2,
  			          "AllocatedIpAddresses": { "192.168.2.1", "192.168.2.2" },
  			          "TotalIngressBytesTransferred": 100,

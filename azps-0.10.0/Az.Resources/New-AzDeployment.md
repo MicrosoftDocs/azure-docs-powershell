@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
-online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/new-Azdeployment
+online version: https://learn.microsoft.com/en-us/powershell/module/az.resources/new-Azdeployment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzDeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzDeployment.md
@@ -74,11 +74,11 @@ New-AzDeployment [-Name <String>] -Location <String> [-DeploymentDebugLogLevel <
 The **New-AzDeployment** cmdlet adds a deployment at the current subscription scope.
 This includes the resources that the deployment requires.
 
-An Azure resource is a user-managed Azure entity. A resource can live in a resource group, like database server, database, website, virtual machine, or Storage account. 
+An Azure resource is a user-managed Azure entity. A resource can live in a resource group, like database server, database, website, virtual machine, or Storage account.
 Or, it can be a subscription level resource, like role definition, policy definition, etc.
 
 To add resources to a resource group, use the **New-AzDeployment** which creates a deployment at a resource group.
-The **New-AzDeployment** cmdlet creates a deployment at the current subscription scope, which deploys subscription level resources. 
+The **New-AzDeployment** cmdlet creates a deployment at the current subscription scope, which deploys subscription level resources.
 
 To add a deployment at subscription, specify the location and a template.
 The location tells Azure Resource Manager where to store the deployment data. The template is a JSON string that contains individual resources to be deployed.

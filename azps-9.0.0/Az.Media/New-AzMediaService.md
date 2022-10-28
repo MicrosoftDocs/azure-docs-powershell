@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
 Module Name: Az.Media
 ms.assetid: 5CEA7323-4CF7-42B2-BA94-BB3C8F73D2E9
-online version: https://docs.microsoft.com/powershell/module/az.media/new-azmediaservice
+online version: https://learn.microsoft.com/powershell/module/az.media/new-azmediaservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Media/Media/help/New-AzMediaService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Media/Media/help/New-AzMediaService.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a media service if the media service already exists, all its properties are updated with the input provided.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.media/new-azmediaservice) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/set-aziothubverifiedcertificate
+online version: https://learn.microsoft.com/powershell/module/az.iothub/set-aziothubverifiedcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Set-AzIotHubVerifiedCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Set-AzIotHubVerifiedCertificate.md
@@ -10,7 +10,10 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Set-AzIotHubVerifiedCertificate
 
 ## SYNOPSIS
-Verifies an Azure IoT Hub certificate. 
+Verifies an Azure IoT Hub certificate.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/set-aziothubverifiedcertificate) for up-to-date information.
 
 ## SYNTAX
 
@@ -35,7 +38,7 @@ Set-AzIotHubVerifiedCertificate [-ResourceId] <String> [-Etag] <String> [-Path] 
 
 ## DESCRIPTION
 Verifies a certificate by uploading a verification certificate containing the verification code obtained by cmdlet Get-AzIotHubCertificateVerificationCode. This is the last step in the proof of possession process.
-For a detailed explanation of CA certificates in Azure IoT Hub, see https://docs.microsoft.com/azure/iot-hub/iot-hub-x509ca-overview
+For a detailed explanation of CA certificates in Azure IoT Hub, see https://learn.microsoft.com/azure/iot-hub/iot-hub-x509ca-overview
 
 ## EXAMPLES
 
@@ -57,7 +60,7 @@ Created				: 1/01/2017 16:01
 Etag				: AAAAAAFpObE=
 ```
 
-Verifies ownership of the MyCertificate private key. 
+Verifies ownership of the MyCertificate private key.
 
 ## PARAMETERS
 

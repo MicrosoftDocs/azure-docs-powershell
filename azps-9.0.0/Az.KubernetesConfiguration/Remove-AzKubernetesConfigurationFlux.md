@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.KubernetesConfiguration
-online version: https://docs.microsoft.com/powershell/module/az.kubernetesconfiguration/remove-azkubernetesconfigurationflux
+online version: https://learn.microsoft.com/powershell/module/az.kubernetesconfiguration/remove-azkubernetesconfigurationflux
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesConfiguration/help/Remove-AzKubernetesConfigurationFlux.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesConfiguration/help/Remove-AzKubernetesConfigurationFlux.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 This will delete the YAML file used to set up the Flux Configuration, thus stopping future sync from the source repo.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.kubernetesconfiguration/remove-azkubernetesconfigurationflux) for up-to-date information.
 
 ## SYNTAX
 

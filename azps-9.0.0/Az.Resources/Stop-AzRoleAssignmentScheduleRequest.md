@@ -1,7 +1,7 @@
 ---
 external help file: Az.Resources-help.xml
 Module Name: Az.Resources
-online version: https://docs.microsoft.com/powershell/module/az.resources/stop-azroleassignmentschedulerequest
+online version: https://learn.microsoft.com/powershell/module/az.resources/stop-azroleassignmentschedulerequest
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Stop-AzRoleAssignmentScheduleRequest.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Stop-AzRoleAssignmentScheduleRequest.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Cancels a pending role assignment schedule request.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/stop-azroleassignmentschedulerequest) for up-to-date information.
 
 ## SYNTAX
 

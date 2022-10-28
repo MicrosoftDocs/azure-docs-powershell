@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SpringCloud
-online version: https://docs.microsoft.com/powershell/module/az.springcloud/disable-azspringcloudtestendpoint
+online version: https://learn.microsoft.com/powershell/module/az.springcloud/disable-azspringcloudtestendpoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Disable-AzSpringCloudTestEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Disable-AzSpringCloudTestEndpoint.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Disable test endpoint functionality for a Service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.springcloud/disable-azspringcloudtestendpoint) for up-to-date information.
 
 ## SYNTAX
 
@@ -40,7 +43,7 @@ Disable test endpoint functionality for a Service.
 
 ### Example 2: Disable test endpoint functionality for a Service by pipeline
 ```powershell
-Get-AzSpringCloud -ResourceGroupName lucas-rg-test -Name springapp-pwsh01 | Disable-AzSpringCloudTestEndpoint 
+Get-AzSpringCloud -ResourceGroupName lucas-rg-test -Name springapp-pwsh01 | Disable-AzSpringCloudTestEndpoint
 ```
 
 Disable test endpoint functionality for a Service by pipeline.

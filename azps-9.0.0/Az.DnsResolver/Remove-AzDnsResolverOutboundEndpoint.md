@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DnsResolver
-online version: https://docs.microsoft.com/powershell/module/az.dnsresolver/remove-azdnsresolveroutboundendpoint
+online version: https://learn.microsoft.com/powershell/module/az.dnsresolver/remove-azdnsresolveroutboundendpoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/Remove-AzDnsResolverOutboundEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/Remove-AzDnsResolverOutboundEndpoint.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes an outbound endpoint for a DNS resolver.
 WARNING: This operation cannot be undone.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dnsresolver/remove-azdnsresolveroutboundendpoint) for up-to-date information.
 
 ## SYNTAX
 
@@ -44,7 +47,7 @@ This command removes an outbound endpoint by name.
 ### Example 2: Remove an outbound endpoint by identity
 ```powershell
 $inputObject = Get-AzDnsResolverOutboundEndpoint -DnsResolverName sampleResolver -Name sampleOutbound -ResourceGroupName sampleResourceGroup
-Remove-AzDnsResolverOutboundEndpoint -InputObject $inputObject 
+Remove-AzDnsResolverOutboundEndpoint -InputObject $inputObject
 ```
 
 This command removes an outbound endpoint by identity.

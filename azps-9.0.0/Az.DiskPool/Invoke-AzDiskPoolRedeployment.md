@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DiskPool
-online version: https://docs.microsoft.com/powershell/module/az.diskpool/invoke-azdiskpoolredeployment
+online version: https://learn.microsoft.com/powershell/module/az.diskpool/invoke-azdiskpoolredeployment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/help/Invoke-AzDiskPoolRedeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/help/Invoke-AzDiskPoolRedeployment.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Upgrade replaces the underlying virtual machine hosts one at a time.
 This operation can take 10-15 minutes to complete.
 This is expected service behavior.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.diskpool/invoke-azdiskpoolredeployment) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 919B3755-81D4-43FB-AE8C-B071329A61D9
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azapplicationgatewaysslcertificate
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azapplicationgatewaysslcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewaySslCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewaySslCertificate.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets an SSL certificate for an application gateway.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azapplicationgatewaysslcertificate) for up-to-date information.
 
 ## SYNTAX
 

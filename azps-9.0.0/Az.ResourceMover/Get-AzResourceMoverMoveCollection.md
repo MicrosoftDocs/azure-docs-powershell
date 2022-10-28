@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ResourceMover
-online version: https://docs.microsoft.com/powershell/module/az.resourcemover/get-azresourcemovermovecollection
+online version: https://learn.microsoft.com/powershell/module/az.resourcemover/get-azresourcemovermovecollection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Get-AzResourceMoverMoveCollection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Get-AzResourceMoverMoveCollection.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the move collection.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resourcemover/get-azresourcemovermovecollection) for up-to-date information.
 
 ## SYNTAX
 
@@ -43,8 +46,8 @@ Get-AzResourceMoverMoveCollection  -SubscriptionId "xxxxxxxx-xxxx-xxxx-xxxx-xxxx
 ```
 
 ```output
-Etag                                   Location      Name                                Type                             
-----                                   --------      ----                                ----                             
+Etag                                   Location      Name                                Type
+----                                   --------      ----                                ----
 "270119e0-0000-0c00-0000-5f5c94940000" centraluseuap PS-centralus-westcentralus-demoRMS  Microsoft.Migrate/moveCollections
 "39015ed4-0000-0c00-0000-5f5ce2760000" centraluseuap PS-centralus-westcentralus-demo2RMS Microsoft.Migrate/moveCollections
 "1000b505-0000-0c00-0000-5f69db6e0000" centraluseuap MoveCollection-cus-eus-ccy         Microsoft.Migrate/moveCollections
@@ -60,8 +63,8 @@ Get-AzResourceMoverMoveCollection -ResourceGroupName "RG-MoveCollection-demoRMS"
 ```
 
 ```output
-Etag                                   Location      Name                               Type                             
-----                                   --------      ----                               ----                             
+Etag                                   Location      Name                               Type
+----                                   --------      ----                               ----
 "22006609-0000-3300-0000-602169590000" centraluseuap PS-centralus-westcentralus-demoRMS Microsoft.Migrate/moveCollections
 
 ```
@@ -70,15 +73,15 @@ Get details of the Move collection with a specified move collection name in the 
 
 ### Example 3: Get details of the Move collection with a specified resource group name in the subscription
 ```powershell
-Get-AzResourceMoverMoveCollection -ResourceGroupName "RG-MoveCollection-demoRMS" 
+Get-AzResourceMoverMoveCollection -ResourceGroupName "RG-MoveCollection-demoRMS"
 ```
 
 ```output
 Location    Name                               Type
 --------    ----                               ----
 eastus2     PS-centralus-westcentralus-demoRM  Microsoft.Migrate/moveCollections
-Etag                                   Location      Name                                Type                             
-----                                   --------      ----                                ----                             
+Etag                                   Location      Name                                Type
+----                                   --------      ----                                ----
 "22006609-0000-3300-0000-602169590000" centraluseuap PS-centralus-westcentralus-demoRMS  Microsoft.Migrate/moveCollections
 "4e02b0a9-0000-0c00-0000-5fd101cc0000" centraluseuap PS-centralus-westcentralus-demo2RMS Microsoft.Migrate/moveCollections
 

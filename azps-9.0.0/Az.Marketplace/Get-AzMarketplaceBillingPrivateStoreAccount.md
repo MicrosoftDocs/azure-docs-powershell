@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Marketplace
-online version: https://docs.microsoft.com/powershell/module/az.marketplace/get-azmarketplacebillingprivatestoreaccount
+online version: https://learn.microsoft.com/powershell/module/az.marketplace/get-azmarketplacebillingprivatestoreaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Marketplace/Marketplace/help/Get-AzMarketplaceBillingPrivateStoreAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Marketplace/Marketplace/help/Get-AzMarketplaceBillingPrivateStoreAccount.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Tenant billing accounts names
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.marketplace/get-azmarketplacebillingprivatestoreaccount) for up-to-date information.
 
 ## SYNTAX
 
@@ -31,7 +34,7 @@ Tenant billing accounts names
 
 ## EXAMPLES
 
-### Example 1: Returns the billing account of a private store 
+### Example 1: Returns the billing account of a private store
 ```powershell
 Get-AzMarketplaceBillingPrivateStoreAccount -PrivateStoreId 3ac32d8c-e888-4dc6-b4ff-be4d755af13a
 ```

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ServiceLinker
-online version: https://docs.microsoft.com/powershell/module/az.servicelinker/update-azservicelinkerforcontainerapp
+online version: https://learn.microsoft.com/powershell/module/az.servicelinker/update-azservicelinkerforcontainerapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Update-AzServiceLinkerForContainerApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Update-AzServiceLinkerForContainerApp.md
@@ -39,7 +39,7 @@ Operation to update an existing link in container app.
 ### Example 1: Update linker
 ```powershell
 $target=New-AzServiceLinkerAzureResourceObject -Id /subscriptions/937bc588-a144-4083-8612-5f9ffbbddb14/resourceGroups/servicelinker-test-linux-group/providers/Microsoft.DBforPostgreSQL/servers/servicelinker-postgresql/databases/test
-$authInfo=New-AzServiceLinkerSecretAuthInfoObject -Name username -SecretValue password 
+$authInfo=New-AzServiceLinkerSecretAuthInfoObject -Name username -SecretValue password
 Update-AzServiceLinkerForContainerApp -ResourceGroupName servicelinker-test-linux-group -ContainerApp servicelinker-app -TargetService $target -AuthInfo $authInfo -ClientType 'none' -Name postgres_connection -Scope 'simple-hello-world-container'
 ```
 

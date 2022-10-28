@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.FluidRelay
-online version: https://docs.microsoft.com/powershell/module/az.fluidrelay/get-azfluidrelaycontainer
+online version: https://learn.microsoft.com/powershell/module/az.fluidrelay/get-azfluidrelaycontainer
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FluidRelay/help/Get-AzFluidRelayContainer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FluidRelay/help/Get-AzFluidRelayContainer.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get a Fluid Relay container.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.fluidrelay/get-azfluidrelaycontainer) for up-to-date information.
 
 ## SYNTAX
 
@@ -49,7 +52,7 @@ eb4dd5f6-531f-44e1-86e3-759d39d1010c 2022-06-16 02:35:16 AM 2022-06-16 02:58:55 
 ```
 
 List Fluid Relay container.
-Read and execute this document [Quickstart: Dice roller](https://docs.microsoft.com/en-us/azure/azure-fluid-relay/quickstarts/quickstart-dice-roll) to complete setup of the environment.
+Read and execute this document [Quickstart: Dice roller](https://learn.microsoft.com/en-us/azure/azure-fluid-relay/quickstarts/quickstart-dice-roll) to complete setup of the environment.
 
 ### Example 2:Get a Fluid Relay container.
 ```powershell
@@ -63,7 +66,7 @@ eb4dd5f6-531f-44e1-86e3-759d39d1010c 2022-06-16 02:35:16 AM 2022-06-16 02:58:55 
 ```
 
 Get a Fluid Relay container.
-Read and execute this document [Quickstart: Dice roller](https://docs.microsoft.com/en-us/azure/azure-fluid-relay/quickstarts/quickstart-dice-roll) to complete setup of the environment.
+Read and execute this document [Quickstart: Dice roller](https://learn.microsoft.com/en-us/azure/azure-fluid-relay/quickstarts/quickstart-dice-roll) to complete setup of the environment.
 
 ## PARAMETERS
 

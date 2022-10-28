@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azvpnconnection
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azvpnconnection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVpnConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVpnConnection.md
@@ -13,7 +13,10 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Gets a vpn connection by name or lists all vpn connections connected to a VpnGateway.
 
 >[!NOTE]
-> This Powershell command is for customers using Virtual WAN Site-to-site VPN Gateway only. 
+> This Powershell command is for customers using Virtual WAN Site-to-site VPN Gateway only.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvpnconnection) for up-to-date information.
 
 ## SYNTAX
 
@@ -91,7 +94,7 @@ RoutingConfiguration      : {
                             }
 ```
 
-The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub and a VpnSite in West US in "testRG" resource group in Azure. 
+The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub and a VpnSite in West US in "testRG" resource group in Azure.
 A VPN gateway will be created thereafter in the Virtual Hub with 2 scale units.
 
 Once the gateway has been created, it is connected to the VpnSite using the New-AzVpnConnection command.

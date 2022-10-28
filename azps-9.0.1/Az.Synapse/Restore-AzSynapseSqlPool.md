@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/restore-azsynapsesqlpool
+online version: https://learn.microsoft.com/powershell/module/az.synapse/restore-azsynapsesqlpool
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Restore-AzSynapseSqlPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Restore-AzSynapseSqlPool.md
@@ -66,13 +66,13 @@ The restored SQL pool is created as a new SQL pool.
 
 ### Example 1
 ```powershell
-# Transform Synapse SQL pool resource ID to SQL database ID because 
+# Transform Synapse SQL pool resource ID to SQL database ID because
 # currently the command only accepts the SQL databse ID. For example: /subscriptions/<SubscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Sql/servers/<WorkspaceName>/databases/<DatabaseName>
 $pool = Get-AzSynapseSqlPool -ResourceGroupName ContosoResourceGroup -WorkspaceName ContosoWorkspace -Name ContosoSqlPool
 $databaseId = $pool.Id -replace "Microsoft.Synapse", "Microsoft.Sql" `
 	-replace "workspaces", "servers" `
 	-replace "sqlPools", "databases"
- 
+
 # Get the latest restore point
 $restorePoint = $pool | Get-AzSynapseSqlPoolRestorePoint | Select-Object -Last 1
 
@@ -111,7 +111,7 @@ This command creates an Azure Synapse Analytics SQL pool which restores from the
 
 ### Example 4
 ```powershell
-# Transform Synapse SQL pool resource ID to SQL database ID because 
+# Transform Synapse SQL pool resource ID to SQL database ID because
 # currently the command only accepts the SQL databse ID. For example: /subscriptions/<SubscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Sql/servers/<WorkspaceName>/databases/<DatabaseName>
 $pool = Get-AzSynapseSqlPool -ResourceGroupName ContosoResourceGroup -WorkspaceName ContosoWorkspace -Name ContosoSqlPool
 $databaseId = $pool.Id -replace "Microsoft.Synapse", "Microsoft.Sql" `

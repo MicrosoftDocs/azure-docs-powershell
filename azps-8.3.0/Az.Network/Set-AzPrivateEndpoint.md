@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/set-azprivateendpoint
+online version: https://learn.microsoft.com/powershell/module/az.network/set-azprivateendpoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzPrivateEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzPrivateEndpoint.md
@@ -38,7 +38,7 @@ $privateEndpoint.Subnet = $virtualNetwork.Subnet[1]
 $privateEndpoint | Set-AzPrivateEndpoint
 ```
 
-This example creates a private endpoint with one subnet, then it replace to another subnet from the in-memory representation of the virtual network. The Set-PrivateEndpoint cmdlet is then used to write the modified private endpoint state on the service side. 
+This example creates a private endpoint with one subnet, then it replace to another subnet from the in-memory representation of the virtual network. The Set-PrivateEndpoint cmdlet is then used to write the modified private endpoint state on the service side.
 
 ## PARAMETERS
 

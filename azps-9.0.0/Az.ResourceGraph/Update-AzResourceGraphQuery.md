@@ -1,7 +1,7 @@
 ---
 external help file: Az.ResourceGraph-help.xml
 Module Name: Az.ResourceGraph
-online version: https://docs.microsoft.com/powershell/module/az.resourcegraph/update-azresourcegraphquery
+online version: https://learn.microsoft.com/powershell/module/az.resourcegraph/update-azresourcegraphquery
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceGraph/ResourceGraph/help/Update-AzResourceGraphQuery.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceGraph/ResourceGraph/help/Update-AzResourceGraphQuery.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates a graph query that has already been added.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resourcegraph/update-azresourcegraphquery) for up-to-date information.
 
 ## SYNTAX
 
@@ -47,7 +50,7 @@ This command updates the parameter query and tag by name.
 
 ### Example 2: Update the parameter file by object
 ```powershell
-$query =  Get-AzResourceGraphQuery -ResourceGroupName azure-rg-test -Name query-t05 
+$query =  Get-AzResourceGraphQuery -ResourceGroupName azure-rg-test -Name query-t05
 Update-AzResourceGraphQuery -InputObject $query -File './Query.kql'
 ```
 

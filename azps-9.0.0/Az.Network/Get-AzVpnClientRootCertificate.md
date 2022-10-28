@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 16754F70-9619-4F68-86E9-5C8B27812707
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azvpnclientrootcertificate
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azvpnclientrootcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVpnClientRootCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVpnClientRootCertificate.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets information about VPN root certificates.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvpnclientrootcertificate) for up-to-date information.
 
 ## SYNTAX
 

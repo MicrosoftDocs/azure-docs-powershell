@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/Az.storage/new-Azstorageaccountmanagementpolicyfilter
+online version: https://learn.microsoft.com/powershell/module/Az.storage/new-Azstorageaccountmanagementpolicyfilter
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageAccountManagementPolicyFilter.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageAccountManagementPolicyFilter.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a ManagementPolicy rule filter object, which can be used in New-AzStorageAccountManagementPolicyRule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/new-azstorageaccountmanagementpolicyfilter) for up-to-date information.
 
 ## SYNTAX
 
@@ -30,11 +33,11 @@ The **New-AzStorageAccountManagementPolicyFilter** cmdlet creates a ManagementPo
 PS C:\>$blobindexmatch1 = New-AzStorageAccountManagementPolicyBlobIndexMatchObject -Name "tag1" -Value "value1"
 PS C:\>$blobindexmatch2 = New-AzStorageAccountManagementPolicyBlobIndexMatchObject -Name "tag2" -Value "value2"
 PS C:\>$filter = New-AzStorageAccountManagementPolicyFilter -PrefixMatch blobprefix1,blobprefix2 -BlobType appendBlob,blockBlob -BlobIndexMatch $blobindexmatch1,$blobindexmatch2
-PS C:\>$filter 
+PS C:\>$filter
 
 PrefixMatch                BlobTypes               BlobIndexMatch
 -----------                ---------               --------------
-{blobprefix1, blobprefix2} {appendBlob, blockBlob} {tag1, tag2}  
+{blobprefix1, blobprefix2} {appendBlob, blockBlob} {tag1, tag2}
 
 PS C:\>$action = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction Delete -daysAfterModificationGreaterThan 100
 PS C:\>$rule = New-AzStorageAccountManagementPolicyRule -Name Test -Action $action -Filter $filter

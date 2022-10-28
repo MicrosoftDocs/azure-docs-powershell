@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azvirtualwan
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azvirtualwan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVirtualWan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVirtualWan.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an Azure Virtual WAN.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-azvirtualwan) for up-to-date information.
 
 ## SYNTAX
 
@@ -45,7 +48,7 @@ New-AzVirtualWan -Name "MyVirtualWan" -ResourceGroupName "TestResourceGroup" -Lo
 Remove-AzVirtualWan -Name "MyVirtualWan" -ResourceGroupName "TestResourceGroup" -Passthru
 ```
 
-This example creates a Virtual WAN in a resource group and then immediately deletes it. 
+This example creates a Virtual WAN in a resource group and then immediately deletes it.
 To suppress the prompt when deleting the Virtual WAN, use the -Force flag.
 
 ### Example 2

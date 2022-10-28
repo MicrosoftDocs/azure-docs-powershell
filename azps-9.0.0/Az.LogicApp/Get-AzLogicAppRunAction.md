@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: 2EA28B90-4BAE-45DF-BD2E-60C74F53FB7B
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/get-azlogicapprunaction
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/get-azlogicapprunaction
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzLogicAppRunAction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzLogicAppRunAction.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 
 Gets an action from a logic app run.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logicapp/get-azlogicapprunaction) for up-to-date information.
 
 ## SYNTAX
 
@@ -43,13 +46,13 @@ Get-AzLogicAppRunAction -ResourceGroupName "ResourceGroup11" -Name "LogicApp05" 
 ```output
 Code        : NotFound
 EndTime     : 1/13/2016 2:42:56 PM
-Error       : 
+Error       :
 InputsLink  : Microsoft.Azure.Management.Logic.Models.ContentLink
 Name        : LogicAppAction01
 OutputsLink : Microsoft.Azure.Management.Logic.Models.ContentLink
 StartTime   : 1/13/2016 2:42:55 PM
 Status      : Failed
-TrackingId  : 
+TrackingId  :
 Type        :
 ```
 

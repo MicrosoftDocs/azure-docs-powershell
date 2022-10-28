@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Consumption.dll-Help.xml
 Module Name: Az.Billing
-online version: https://docs.microsoft.com/powershell/module/az.billing/get-azconsumptionreservationsummary
+online version: https://learn.microsoft.com/powershell/module/az.billing/get-azconsumptionreservationsummary
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzConsumptionReservationSummary.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzConsumptionReservationSummary.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get reservation summaries for daily or monthly grain.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.billing/get-azconsumptionreservationsummary) for up-to-date information.
 
 ## SYNTAX
 

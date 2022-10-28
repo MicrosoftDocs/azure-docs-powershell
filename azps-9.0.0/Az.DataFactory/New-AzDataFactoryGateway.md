@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 4DCF54BA-CFFA-4555-8CA3-66B98F704EFB
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/new-azdatafactorygateway
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/new-azdatafactorygateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/New-AzDataFactoryGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/New-AzDataFactoryGateway.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a gateway for an Azure Data Factory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/new-azdatafactorygateway) for up-to-date information.
 
 ## SYNTAX
 
@@ -40,13 +43,13 @@ New-AzDataFactoryGateway -ResourceGroupName "ADF" -Name "ContosoGateway" -DataFa
 ```output
 Name              : ContosoGateway
 Description       : my gateway
-Version           : 
+Version           :
 Status            : NeedRegistration
 VersionStatus     : None
 CreateTime        : 8/22/2014 1:40:34 AM
-RegisterTime      : 
-LastConnectTime   : 
-ExpiryTime        : 
+RegisterTime      :
+LastConnectTime   :
+ExpiryTime        :
 ProvisioningState : Succeeded
 Key               : ADF#40cbb3d9-2736-4794-a8a6-e6b839b4894f@a2d875ce-c9d7-4b8b-ad65-dd3ebbb9a940@8c0d1801-e863-44af-82e6-fb2f0c00f2ae@xz#Y9R0NhAeH3u7wgnrJyiWj4Y/QIhH4fFilIdzZgwsVQA=
 ```

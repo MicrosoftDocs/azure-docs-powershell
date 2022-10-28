@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/new-azstackhcicluster
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/new-azstackhcicluster
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/New-AzStackHciCluster.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/New-AzStackHciCluster.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an HCI cluster.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.stackhci/new-azstackhcicluster) for up-to-date information.
 
 ## SYNTAX
 
@@ -28,7 +31,7 @@ Create an HCI cluster.
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 New-AzStackHciCluster -Name "myCluster" -ResourceGroupName "test-rg" -AadTenantId "c76bd4d1-bea3-45ea-be1b-4a745a675d07" -AadClientId "24a6e53d-04e5-44d2-b7cc-1b732a847dfc" -Location "eastus"
 ```
@@ -41,7 +44,7 @@ eastus   myCluster test-rg
 
 This command creates a Stack HCI cluster
 
-### Example 2: 
+### Example 2:
 ```powershell
 New-AzStackHciCluster -Name "myCluster2" -ResourceGroupName "test-rg" -AadTenantId "c76bd4d1-bea3-45ea-be1b-4a745a675d07" -AadClientId "24a6e53d-04e5-44d2-b7cc-1b732a847dfc" -Location "westeurope" -DesiredPropertyDiagnosticLevel "Off" -DesiredPropertyWindowsServerSubscription "Enabled"
 ```

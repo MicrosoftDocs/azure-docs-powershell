@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 3efb6270-f908-4734-bdb1-6c7e4e4eb382
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azexpressroutecrossconnection
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azexpressroutecrossconnection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRouteCrossConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRouteCrossConnection.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets an Azure ExpressRoute cross connection from Azure.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azexpressroutecrossconnection) for up-to-date information.
 
 ## SYNTAX
 

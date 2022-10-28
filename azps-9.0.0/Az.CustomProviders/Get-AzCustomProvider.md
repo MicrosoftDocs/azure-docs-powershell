@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.CustomProviders
-online version: https://docs.microsoft.com/powershell/module/az.customproviders/get-azcustomprovider
+online version: https://learn.microsoft.com/powershell/module/az.customproviders/get-azcustomprovider
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomProviders/help/Get-AzCustomProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomProviders/help/Get-AzCustomProvider.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the custom resource provider manifest.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.customproviders/get-azcustomprovider) for up-to-date information.
 
 ## SYNTAX
 

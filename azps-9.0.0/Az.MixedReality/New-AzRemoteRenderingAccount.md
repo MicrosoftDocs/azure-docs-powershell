@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.MixedReality.dll-Help.xml
 Module Name: Az.MixedReality
-online version: https://docs.microsoft.com/powershell/module/az.mixedreality/new-azremoterenderingaccount
+online version: https://learn.microsoft.com/powershell/module/az.mixedreality/new-azremoterenderingaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/New-AzRemoteRenderingAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/New-AzRemoteRenderingAccount.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create Remote Rendering Account
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mixedreality/new-azremoterenderingaccount) for up-to-date information.
 
 ## SYNTAX
 

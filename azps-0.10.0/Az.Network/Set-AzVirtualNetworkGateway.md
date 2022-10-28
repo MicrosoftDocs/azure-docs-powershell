@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 5C309071-A2ED-464C-9197-0A77859C8FBB
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/set-azvirtualnetworkgateway
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/set-azvirtualnetworkgateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzVirtualNetworkGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzVirtualNetworkGateway.md
@@ -64,7 +64,7 @@ Run cmdlet in the background
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +79,7 @@ Specifies the virtual network gateway Autonomous System Number (ASN) that is use
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Disables the active-active feature.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ Enables the active-active feature.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +139,7 @@ If a default site is specified, all internet traffic from the gateway's Virtual 
 ```yaml
 Type: PSLocalNetworkGateway
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Basic, Standard, HighPerformance, UltraPerformance, VpnGw1, VpnGw2, VpnGw3
 
 Required: False
@@ -178,7 +178,7 @@ Specifies the weight added to routes learned over BGP from this virtual network 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +192,7 @@ P2S External Radius server address.
 ```yaml
 Type: String
 Parameter Sets: RadiusServerConfiguration
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -206,7 +206,7 @@ P2S External Radius server secret.
 ```yaml
 Type: SecureString
 Parameter Sets: RadiusServerConfiguration
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -222,7 +222,7 @@ You can use the Get-AzVirtualNetworkGateway cmdlet to get the virtual network ga
 ```yaml
 Type: PSVirtualNetworkGateway
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -238,7 +238,7 @@ This should not overlap with virtual network or on-premise ranges.
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -252,7 +252,7 @@ A list of P2S VPN client tunneling protocols
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: SSTP, IkeV2
 
 Required: False
@@ -269,7 +269,7 @@ A VPN client presenting a certificate that matches one of these is removed.
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRevokedCertificate]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -285,7 +285,7 @@ Connecting VPN clients must present certificates generated from one of these roo
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

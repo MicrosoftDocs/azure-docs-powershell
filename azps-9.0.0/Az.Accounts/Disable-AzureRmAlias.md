@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
 Module Name: Az.Accounts
-online version: https://docs.microsoft.com/powershell/module/az.accounts/disable-azurermalias
+online version: https://learn.microsoft.com/powershell/module/az.accounts/disable-azurermalias
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Disable-AzureRmAlias.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Disable-AzureRmAlias.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Disables AzureRm prefix aliases for Az modules.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.accounts/disable-azurermalias) for up-to-date information.
 
 ## SYNTAX
 
@@ -87,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-Indicates what scope aliases should be disabled for. 
+Indicates what scope aliases should be disabled for.
 Default is 'Process'
 
 ```yaml

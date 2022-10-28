@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
 Module Name: Az.DataFactory
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryv2integrationruntimenode
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryv2integrationruntimenode
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2IntegrationRuntimeNode.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2IntegrationRuntimeNode.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets an integration runtime node information.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/get-azdatafactoryv2integrationruntimenode) for up-to-date information.
 
 ## SYNTAX
 
@@ -56,14 +59,14 @@ VersionStatus          : UpToDate
 Version                : 3.2.6519.3
 RegisterTime           : 12/1/2017 6:48:15 AM
 LastConnectTime        : 12/1/2017 7:35:03 AM
-ExpiryTime             : 
+ExpiryTime             :
 LastStartTime          : 12/1/2017 6:49:26 AM
-LastStopTime           : 
+LastStopTime           :
 LastUpdateResult       : None
-LastStartUpdateTime    : 
-LastEndUpdateTime      : 
+LastStartUpdateTime    :
+LastEndUpdateTime      :
 IsActiveDispatcher     : True
-ConcurrentJobsLimit    : 
+ConcurrentJobsLimit    :
 MaxConcurrentJobs      : 48
 IpAddress              :
 ```
@@ -88,14 +91,14 @@ VersionStatus          : UpToDate
 Version                : 3.2.6519.3
 RegisterTime           : 12/1/2017 6:48:15 AM
 LastConnectTime        : 12/1/2017 7:35:03 AM
-ExpiryTime             : 
+ExpiryTime             :
 LastStartTime          : 12/1/2017 6:49:26 AM
-LastStopTime           : 
+LastStopTime           :
 LastUpdateResult       : None
-LastStartUpdateTime    : 
-LastEndUpdateTime      : 
+LastStartUpdateTime    :
+LastEndUpdateTime      :
 IsActiveDispatcher     : True
-ConcurrentJobsLimit    : 
+ConcurrentJobsLimit    :
 MaxConcurrentJobs      : 48
 IpAddress              : 167.220.1.167
 ```

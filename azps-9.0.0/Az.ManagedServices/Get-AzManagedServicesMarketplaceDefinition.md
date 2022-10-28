@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ManagedServices
-online version: https://docs.microsoft.com/powershell/module/az.managedservices/get-azmanagedservicesmarketplacedefinition
+online version: https://learn.microsoft.com/powershell/module/az.managedservices/get-azmanagedservicesmarketplacedefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/help/Get-AzManagedServicesMarketplaceDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/help/Get-AzManagedServicesMarketplaceDefinition.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get the marketplace registration definition for the marketplace identifier.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.managedservices/get-azmanagedservicesmarketplacedefinition) for up-to-date information.
 
 ## SYNTAX
 

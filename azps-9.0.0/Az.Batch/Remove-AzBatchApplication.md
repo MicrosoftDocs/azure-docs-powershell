@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 2CED21D6-4BEF-423B-A04A-5B812CEB975D
-online version: https://docs.microsoft.com/powershell/module/az.batch/remove-azbatchapplication
+online version: https://learn.microsoft.com/powershell/module/az.batch/remove-azbatchapplication
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Remove-AzBatchApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Remove-AzBatchApplication.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes an application from a Batch account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/remove-azbatchapplication) for up-to-date information.
 
 ## SYNTAX
 

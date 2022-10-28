@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: C54AC64C-DA21-443E-8CFE-6CCAC6152C2B
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azvpnclientrootcertificate
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azvpnclientrootcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVpnClientRootCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVpnClientRootCertificate.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a new VPN client root certificate.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azvpnclientrootcertificate) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Quota
-online version: https://docs.microsoft.com/powershell/module/az.quota/get-azquotaoperation
+online version: https://learn.microsoft.com/powershell/module/az.quota/get-azquotaoperation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/help/Get-AzQuotaOperation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/help/Get-AzQuotaOperation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 List all the operations supported by the Microsoft.Quota resource provider.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.quota/get-azquotaoperation) for up-to-date information.
 
 ## SYNTAX
 
@@ -31,12 +34,12 @@ Get-AzQuotaOperation
 ```output
 Name                               Origin
 ----                               ------
-Microsoft.Quota/quotas/read              
-Microsoft.Quota/quotas/write             
-Microsoft.Quota/quotaRequests/read       
-Microsoft.Quota/usages/read              
-Microsoft.Quota/operations/read          
-Microsoft.Quota/register/action          
+Microsoft.Quota/quotas/read
+Microsoft.Quota/quotas/write
+Microsoft.Quota/quotaRequests/read
+Microsoft.Quota/usages/read
+Microsoft.Quota/operations/read
+Microsoft.Quota/register/action
 ```
 
 This command lists all the operations supported by the Microsoft.Quota resource provider.

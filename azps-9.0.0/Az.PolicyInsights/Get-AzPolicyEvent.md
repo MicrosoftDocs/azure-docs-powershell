@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.PolicyInsights.dll-Help.xml
 Module Name: Az.PolicyInsights
-online version: https://docs.microsoft.com/powershell/module/az.policyinsights/get-azpolicyevent
+online version: https://learn.microsoft.com/powershell/module/az.policyinsights/get-azpolicyevent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Get-AzPolicyEvent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Get-AzPolicyEvent.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets policy evaluation events generated as resources are created or updated.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.policyinsights/get-azpolicyevent) for up-to-date information.
 
 ## SYNTAX
 
@@ -171,7 +174,7 @@ Gets policy event records generated in the last day for all resources (within th
 Get-AzPolicyEvent -OrderBy "Timestamp desc, PolicyAssignmentName asc" -Top 5 -Select "Timestamp, ResourceId, PolicyAssignmentId, PolicySetDefinitionId, PolicyDefinitionId"
 ```
 
-Gets policy event records generated in the last day for all resources within the subscription in current session context. 
+Gets policy event records generated in the last day for all resources within the subscription in current session context.
 The command orders the results by timestamp and policy assignment name properties, and takes only top 5 of those listed in that order.
 It also selects to list only a subset of the columns for each record.
 
@@ -203,7 +206,7 @@ The command returns the count of the policy event records only, which is returne
 Get-AzPolicyEvent -Filter "PolicyDefinitionAction eq 'audit' or PolicyDefinitionAction eq 'deny'" -Apply "groupby((PolicyAssignmentId, PolicyDefinitionId, PolicyDefinitionAction, ResourceId), aggregate(`$count as NumEvents))" -OrderBy "NumEvents desc" -Top 5
 ```
 
-Gets policy event records generated in the last day for all resources within the subscription in current session context. 
+Gets policy event records generated in the last day for all resources within the subscription in current session context.
 The command limits the results returned by filtering based on policy definition action (includes only audit and deny events).
 It groups the results based on policy assignment, policy definition, policy definition action, and resource id, and computes the number of records in each group, which is returned inside AdditionalProperties property.
 It orders the results by the count aggregation in descending order, and takes only top 5 of those listed in that order.
@@ -213,7 +216,7 @@ It orders the results by the count aggregation in descending order, and takes on
 Get-AzPolicyEvent -Filter "PolicyDefinitionAction eq 'audit' or PolicyDefinitionAction eq 'deny'" -Apply "groupby((ResourceId))"
 ```
 
-Gets policy event records generated in the last day for all resources within the subscription in current session context. 
+Gets policy event records generated in the last day for all resources within the subscription in current session context.
 The command limits the results returned by filtering based on policy definition action (includes only audit and deny events).
 It groups the results based on resource id.
 This generates the list of all resources within the subscription that generated a policy event for at least one audit or deny policy.
@@ -223,9 +226,9 @@ This generates the list of all resources within the subscription that generated 
 Get-AzPolicyEvent -Filter "PolicyDefinitionAction eq 'deny'" -Apply "groupby((PolicyAssignmentId, PolicyDefinitionId, ResourceId))/groupby((PolicyAssignmentId, PolicyDefinitionId), aggregate(`$count as NumDeniedResources))" -OrderBy "NumDeniedResources desc" -Top 5
 ```
 
-Gets policy event records generated in the last day for all resources within the subscription in current session context. 
+Gets policy event records generated in the last day for all resources within the subscription in current session context.
 The command limits the results returned by filtering based on policy definition action (includes only deny events).
-It groups the results first based on policy assignment, policy definition, and resource id. 
+It groups the results first based on policy assignment, policy definition, and resource id.
 Then, it further groups the results of this grouping with the same properties except for resource id, and computes the number of records in each of these groups, which is returned inside AdditionalProperties property.
 It orders the results by the count aggregation in descending order, and takes only top 5 of those listed in that order.
 This generates the top 5 deny policies with the most number of denied resources.

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/initialize-azrecoveryservicesdsmove
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/initialize-azrecoveryservicesdsmove
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Initialize-AzRecoveryServicesDSMove.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Initialize-AzRecoveryServicesDSMove.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Initializes DS move for Copy-AzRecoveryServicesVault.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/initialize-azrecoveryservicesdsmove) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -20,9 +23,9 @@ Initialize-AzRecoveryServicesDSMove [-DefaultProfile <IAzureContextContainer>] [
 ```
 
 ## DESCRIPTION
-Initializes DS move for Copy-AzRecoveryServicesVault. It is mandatory to run Test-AzRecoveryServicesDSMove 
-cmdlet before this cmdlet. This cmdlet generates a Correlation Id which can be used as Input to 
-Copy-AzRecoveryServicesVault cmdlet. This cmdlet is useful for cross tenant DS move scenario. 
+Initializes DS move for Copy-AzRecoveryServicesVault. It is mandatory to run Test-AzRecoveryServicesDSMove
+cmdlet before this cmdlet. This cmdlet generates a Correlation Id which can be used as Input to
+Copy-AzRecoveryServicesVault cmdlet. This cmdlet is useful for cross tenant DS move scenario.
 
 ## EXAMPLES
 
@@ -36,7 +39,7 @@ if($validated) {
  }
 ```
 
-First cmdlet sets target subscription context. 
+First cmdlet sets target subscription context.
 Second cmdlet triggers some mandatory validations on target vault.
 Third cmdlet sets source subscription context.
 Then based on Test-AzRecoveryServicesDSMove cmdlet state, we fetch CorrelationId using

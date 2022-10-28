@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 84FDB0F7-E6DE-4E1B-BD71-89535EDC6AA1
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azeffectiveroutetable
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azeffectiveroutetable
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzEffectiveRouteTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzEffectiveRouteTable.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the effective route table of a network interface.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azeffectiveroutetable) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: E2A56E55-30A3-4A2F-80AE-9D166840909E
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/get-azremotedesktopfile
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azremotedesktopfile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzRemoteDesktopFile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzRemoteDesktopFile.md
@@ -63,7 +63,7 @@ Indicates that this cmdlet launches Remote Desktop after it gets the .rdp file.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Launch
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -78,7 +78,7 @@ Specifies the local full path where this cmdlet stores the .rdp file.
 ```yaml
 Type: String
 Parameter Sets: Download
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: Launch
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -120,7 +120,7 @@ Specifies the name of a resource group.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

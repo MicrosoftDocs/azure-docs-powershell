@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqlsyncagent
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlsyncagent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlSyncAgent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlSyncAgent.md
@@ -43,7 +43,7 @@ SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syn
 LastAliveTime:              : 6/1/2017 5:08:48 AM
 Version                     : 4.3.6348.1
 IsUpToDate                  : False
-ExpiryTime                  : 
+ExpiryTime                  :
 State                       : Online
 
 ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/syncAgents/{SyncAgent02}
@@ -55,7 +55,7 @@ SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syn
 LastAliveTime:              : 6/1/2017 5:08:48 AM
 Version                     : 4.3.6348.1
 IsUpToDate                  : False
-ExpiryTime                  : 
+ExpiryTime                  :
 State                       : Online
 ```
 
@@ -76,7 +76,7 @@ SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syn
 LastAliveTime:              : 6/1/2017 5:08:48 AM
 Version                     : 4.3.6348.1
 IsUpToDate                  : False
-ExpiryTime                  : 
+ExpiryTime                  :
 State                       : Online
 ```
 
@@ -97,7 +97,7 @@ SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syn
 LastAliveTime:              : 6/1/2017 5:08:48 AM
 Version                     : 4.3.6348.1
 IsUpToDate                  : False
-ExpiryTime                  : 
+ExpiryTime                  :
 State                       : Online
 
 ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/syncAgents/{SyncAgent02}
@@ -109,7 +109,7 @@ SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syn
 LastAliveTime:              : 6/1/2017 5:08:48 AM
 Version                     : 4.3.6348.1
 IsUpToDate                  : False
-ExpiryTime                  : 
+ExpiryTime                  :
 State                       : Online
 ```
 

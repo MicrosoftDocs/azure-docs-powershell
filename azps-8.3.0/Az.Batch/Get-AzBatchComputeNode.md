@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 93614655-A8F2-4A67-887D-43D41AB91F82
-online version: https://docs.microsoft.com/powershell/module/az.batch/get-azbatchcomputenode
+online version: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchcomputenode
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchComputeNode.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchComputeNode.md

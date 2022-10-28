@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: 8D8FE2FE-03E7-453E-B968-E28B07E42EF2
-online version: https://docs.microsoft.com/powershell/module/az.monitor/remove-azactiongroup
+online version: https://learn.microsoft.com/powershell/module/az.monitor/remove-azactiongroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Remove-AzActionGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Remove-AzActionGroup.md

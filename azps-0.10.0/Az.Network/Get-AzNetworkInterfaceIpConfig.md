@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 1B39809C-90DA-4ECB-B949-D4A9A54ED982
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkinterfaceipconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/get-aznetworkinterfaceipconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkInterfaceIpConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkInterfaceIpConfig.md
@@ -33,7 +33,7 @@ Get-AzNetworkInterfaceIpConfig -Name ipconfig1 -NetworkInterface $nic1
 
 The first command gets an existing network interface called mynic and stores it in the variable $nic1. The second
     command gets the IP configuration called ipconfig1 of this network interface.
-    
+
 
 ## PARAMETERS
 
@@ -58,7 +58,7 @@ Specifies the name of the network IP configuration that this cmdlet gets.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -73,7 +73,7 @@ Specifies a **NetworkInterface** object that contains the network IP configurati
 ```yaml
 Type: PSNetworkInterface
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

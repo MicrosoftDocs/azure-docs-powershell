@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 9C755BE8-0624-4CF7-AE7C-34DAF44678E8
-online version: https://docs.microsoft.com/powershell/module/az.batch/disable-azbatchautoscale
+online version: https://learn.microsoft.com/powershell/module/az.batch/disable-azbatchautoscale
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Disable-AzBatchAutoScale.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Disable-AzBatchAutoScale.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Disables automatic scaling of a pool.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/disable-azbatchautoscale) for up-to-date information.
 
 ## SYNTAX
 

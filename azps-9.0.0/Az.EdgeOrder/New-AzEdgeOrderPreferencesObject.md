@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.EdgeOrder
-online version: https://docs.microsoft.com/powershell/module/az.EdgeOrder/new-AzEdgeOrderPreferencesObject
+online version: https://learn.microsoft.com/powershell/module/az.EdgeOrder/new-AzEdgeOrderPreferencesObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/help/New-AzEdgeOrderPreferencesObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/help/New-AzEdgeOrderPreferencesObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for Preferences.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.edgeorder/new-azedgeorderpreferencesobject) for up-to-date information.
 
 ## SYNTAX
 

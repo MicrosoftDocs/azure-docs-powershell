@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/update-azsynapsekustopooldatabase
+online version: https://learn.microsoft.com/powershell/module/az.synapse/update-azsynapsekustopooldatabase
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Update-AzSynapseKustoPoolDatabase.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Update-AzSynapseKustoPoolDatabase.md
@@ -45,8 +45,8 @@ Update-AzSynapseKustoPoolDatabase -ResourceGroupName testrg -WorkspaceName testw
 ```
 
 ```output
-Kind      Location Name                                
-----      -------- ----                                
+Kind      Location Name
+----      -------- ----
 ReadWrite East US  testws/testkustopool/mykustodatabase
 ```
 
@@ -61,8 +61,8 @@ Update-AzSynapseKustoPoolDatabase -InputObject $database -Kind ReadWrite -SoftDe
 ```
 
 ```output
-Kind      Location Name                                
-----      -------- ----                                
+Kind      Location Name
+----      -------- ----
 ReadWrite East US  testws/testkustopool/mykustodatabase
 ```
 

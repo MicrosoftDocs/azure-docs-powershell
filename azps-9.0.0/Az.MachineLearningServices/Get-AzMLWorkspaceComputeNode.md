@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MachineLearningServices
-online version: https://docs.microsoft.com/powershell/module/az.machinelearningservices/get-azmlworkspacecomputenode
+online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/get-azmlworkspacecomputenode
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/Get-AzMLWorkspaceComputeNode.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/Get-AzMLWorkspaceComputeNode.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get the details (e.g IP address, port etc) of all the compute nodes in the compute.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/get-azmlworkspacecomputenode) for up-to-date information.
 
 ## SYNTAX
 

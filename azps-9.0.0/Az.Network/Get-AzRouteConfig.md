@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: DBD40431-DD7A-42CB-83AA-568B1065A468
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azrouteconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azrouteconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzRouteConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzRouteConfig.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets routes from a route table.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azrouteconfig) for up-to-date information.
 
 ## SYNTAX
 
@@ -33,9 +36,9 @@ Get-AzRouteTable -ResourceGroupName "ResourceGroup11" -Name "RouteTable01" | Get
 
 ```output
 Name              : route07
-Id                : 
-Etag              : 
-ProvisioningState : 
+Id                :
+Etag              :
+ProvisioningState :
 AddressPrefix     : 10.1.0.0/16
 NextHopType       : VnetLocal
 NextHopIpAddress  :

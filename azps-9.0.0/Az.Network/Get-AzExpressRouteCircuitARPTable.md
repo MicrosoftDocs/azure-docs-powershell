@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: F0370845-13D9-4FB5-B30E-826A22EBC5E0
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azexpressroutecircuitarptable
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azexpressroutecircuitarptable
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRouteCircuitARPTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRouteCircuitARPTable.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the ARP table from an ExpressRoute circuit.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azexpressroutecircuitarptable) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.PrivateDns.dll-Help.xml
 Module Name: Az.PrivateDns
 ms.assetid: B78F3E8B-C7D2-458C-AB23-06F584FE97E0
-online version: https://docs.microsoft.com/powershell/module/az.privatedns/New-AzPrivateDnsVirtualNetworkLink
+online version: https://learn.microsoft.com/powershell/module/az.privatedns/New-AzPrivateDnsVirtualNetworkLink
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PrivateDns/PrivateDns/help/New-AzPrivateDnsVirtualNetworkLink.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PrivateDns/PrivateDns/help/New-AzPrivateDnsVirtualNetworkLink.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a new private DNS virtual network link.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.privatedns/new-azprivatednsvirtualnetworklink) for up-to-date information.
 
 ## SYNTAX
 
@@ -39,7 +42,7 @@ New-AzPrivateDnsVirtualNetworkLink -ResourceGroupName <String> -ZoneName <String
 ## DESCRIPTION
 The **New-AzPrivateDnsVirtualNetworkLink** cmdlet creates a new private Domain Name System (DNS) virtual network link in the specified
 resource group and private zone. You must specify a unique link name for the *Name* parameter or the cmdlet will
-return an error. 
+return an error.
 You can use the *Confirm* parameter and $ConfirmPreference Windows PowerShell variable to control
 whether the cmdlet prompts you for confirmation.
 

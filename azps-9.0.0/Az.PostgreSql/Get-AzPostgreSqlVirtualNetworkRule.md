@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.PostgreSql
-online version: https://docs.microsoft.com/powershell/module/az.postgresql/get-azpostgresqlvirtualnetworkrule
+online version: https://learn.microsoft.com/powershell/module/az.postgresql/get-azpostgresqlvirtualnetworkrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/help/Get-AzPostgreSqlVirtualNetworkRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/help/Get-AzPostgreSqlVirtualNetworkRule.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a virtual network rule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.postgresql/get-azpostgresqlvirtualnetworkrule) for up-to-date information.
 
 ## SYNTAX
 
@@ -39,7 +42,7 @@ Gets a virtual network rule.
 
 ### Example 1: Lists all the Virtual Network Rules in specified PostgreSql server
 ```powershell
-Get-AzPostgreSqlVirtualNetworkRule -ResourceGroupName PostgreSqlTestRG -ServerName PostgreSqlTestServer 
+Get-AzPostgreSqlVirtualNetworkRule -ResourceGroupName PostgreSqlTestRG -ServerName PostgreSqlTestServer
 ```
 
 ```output

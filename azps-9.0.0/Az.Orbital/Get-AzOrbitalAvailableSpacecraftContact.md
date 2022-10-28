@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Orbital
-online version: https://docs.microsoft.com/powershell/module/az.orbital/get-azorbitalavailablespacecraftcontact
+online version: https://learn.microsoft.com/powershell/module/az.orbital/get-azorbitalavailablespacecraftcontact
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Orbital/help/Get-AzOrbitalAvailableSpacecraftContact.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Orbital/help/Get-AzOrbitalAvailableSpacecraftContact.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Returns list of available contacts.
 A contact is available if the spacecraft is visible from the ground station for more than the minimum viable contact duration provided in the contact profile.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.orbital/get-azorbitalavailablespacecraftcontact) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Billing.dll-Help.xml
 Module Name: Az.Billing
-online version: https://docs.microsoft.com/powershell/module/az.billing/get-azbillinginvoice
+online version: https://learn.microsoft.com/powershell/module/az.billing/get-azbillinginvoice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzBillingInvoice.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzBillingInvoice.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get billing invoices of the subscription.
 Get billing invoices of a billing account and billing profile
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.billing/get-azbillinginvoice) for up-to-date information.
 
 ## SYNTAX
 
@@ -33,7 +36,7 @@ Get-AzBillingInvoice -Name <System.Collections.Generic.List`1[System.String]>
 ```
 
 ## DESCRIPTION
-The **Get-AzBillingInvoice** cmdlet gets billing invoices of the subscription. 
+The **Get-AzBillingInvoice** cmdlet gets billing invoices of the subscription.
 
 ## EXAMPLES
 
@@ -56,7 +59,7 @@ Get the invoice of the subscription with the specified name.
 Get-AzBillingInvoice
 ```
 
-Get all available invoices of the subscription in reverse chronological order beginning with the most recent invoice without download Url. 
+Get all available invoices of the subscription in reverse chronological order beginning with the most recent invoice without download Url.
 
 ### Example 4
 ```powershell
@@ -102,7 +105,7 @@ Get most recent 10 invoices of the specific billing account and specific billing
 
 ### Example 10
 ```powershell
-Get-AzBillingInvoice -Latest -GenerateDownloadUrl -BillingAccountName 00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000_0000-00-00 -BillingProfileName 0000-0000-000-000 
+Get-AzBillingInvoice -Latest -GenerateDownloadUrl -BillingAccountName 00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000_0000-00-00 -BillingProfileName 0000-0000-000-000
 ```
 
 Get latest invoice by billing account name and billing profile name and include download url for invoice in the result.

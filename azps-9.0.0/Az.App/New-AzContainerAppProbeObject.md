@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.App
-online version: https://docs.microsoft.com/powershell/module/az./new-azcontainerappprobeobject
+online version: https://learn.microsoft.com/powershell/module/az./new-azcontainerappprobeobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/help/New-AzContainerAppProbeObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/help/New-AzContainerAppProbeObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for ContainerAppProbe.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.app/new-azcontainerappprobeobject) for up-to-date information.
 
 ## SYNTAX
 

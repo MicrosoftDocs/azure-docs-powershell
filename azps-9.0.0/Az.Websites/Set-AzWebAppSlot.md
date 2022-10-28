@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: FA868206-D8B0-4868-A1D1-D3F96BF3ADCC
-online version: https://docs.microsoft.com/powershell/module/az.websites/set-azwebappslot
+online version: https://learn.microsoft.com/powershell/module/az.websites/set-azwebappslot
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Set-AzWebAppSlot.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Set-AzWebAppSlot.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies an Azure Web App slot.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/set-azwebappslot) for up-to-date information.
 
 ## SYNTAX
 
@@ -54,7 +57,7 @@ Set-AzWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -
 ```
 
 This command changes the appservice plan associated with the Slot001, on the Webapp ContosoWebApp associated with the resource group Default-Web-WestUS. Use the link to learn more about changing the appservice plan and constraints associated with it.
-https://docs.microsoft.com/azure/app-service/app-service-plan-manage#move-an-app-to-another-app-service-plan
+https://learn.microsoft.com/azure/app-service/app-service-plan-manage#move-an-app-to-another-app-service-plan
 
 ### Example 2
 ```powershell

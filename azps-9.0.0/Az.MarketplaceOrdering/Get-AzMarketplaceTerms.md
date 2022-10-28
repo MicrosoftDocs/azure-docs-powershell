@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MarketplaceOrdering
-online version: https://docs.microsoft.com/powershell/module/az.marketplaceordering/get-azmarketplaceterms
+online version: https://learn.microsoft.com/powershell/module/az.marketplaceordering/get-azmarketplaceterms
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MarketplaceOrdering/help/Get-AzMarketplaceTerms.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MarketplaceOrdering/help/Get-AzMarketplaceTerms.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get marketplace terms.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.marketplaceordering/get-azmarketplaceterms) for up-to-date information.
 
 ## SYNTAX
 

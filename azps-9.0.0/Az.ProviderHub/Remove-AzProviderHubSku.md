@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ProviderHub
-online version: https://docs.microsoft.com/powershell/module/az.providerhub/remove-azproviderhubsku
+online version: https://learn.microsoft.com/powershell/module/az.providerhub/remove-azproviderhubsku
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ProviderHub/help/Remove-AzProviderHubSku.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ProviderHub/help/Remove-AzProviderHubSku.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes a resource type sku.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.providerhub/remove-azproviderhubsku) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Functions
-online version: https://docs.microsoft.com/powershell/module/az.functions/get-azfunctionappavailablelocation
+online version: https://learn.microsoft.com/powershell/module/az.functions/get-azfunctionappavailablelocation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Functions/help/Get-AzFunctionAppAvailableLocation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Functions/help/Get-AzFunctionAppAvailableLocation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the location where a function app for the given os and plan type is available.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.functions/get-azfunctionappavailablelocation) for up-to-date information.
 
 ## SYNTAX
 

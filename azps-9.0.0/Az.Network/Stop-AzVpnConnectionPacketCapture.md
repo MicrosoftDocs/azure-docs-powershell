@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/stop-azvpnconnectionpacketcapture
+online version: https://learn.microsoft.com/powershell/module/az.network/stop-azvpnconnectionpacketcapture
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Stop-AzVpnConnectionPacketCapture.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Stop-AzVpnConnectionPacketCapture.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Stops Packet Capture Operation on a Vpn connection
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/stop-azvpnconnectionpacketcapture) for up-to-date information.
 
 ## SYNTAX
 

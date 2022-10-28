@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azdatalakegen2deleteditem
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azdatalakegen2deleteditem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzDataLakeGen2DeletedItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzDataLakeGen2DeletedItem.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 List all deleted files or directories from a directory or filesystem root.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/get-azdatalakegen2deleteditem) for up-to-date information.
 
 ## SYNTAX
 
@@ -28,7 +31,7 @@ This cmdlet only works if Hierarchical Namespace is enabled for the Storage acco
 
 ### Example 1: List all deleted files or directories from a Filesystem
 ```powershell
-Get-AzDataLakeGen2DeletedItem -FileSystem "filesystem1" 
+Get-AzDataLakeGen2DeletedItem -FileSystem "filesystem1"
 ```
 
 ```output
@@ -36,8 +39,8 @@ FileSystem Name: filesystem1
 
 Path                 DeletionId           DeletedOn            RemainingRetentionDays
 ----                 ----------           ---------            ----------------------
-dir0/dir1/file1      132658816156507617   2021-05-19 07:06:55Z 3                     
-dir0/dir2            132658834541610122   2021-05-19 07:37:34Z 3                    
+dir0/dir1/file1      132658816156507617   2021-05-19 07:06:55Z 3
+dir0/dir2            132658834541610122   2021-05-19 07:37:34Z 3
 dir0/dir2/file3      132658834534174806   2021-05-19 07:37:33Z 3
 ```
 
@@ -47,12 +50,12 @@ This command lists all deleted files or directories from a Filesystem.
 ```powershell
 Get-AzDataLakeGen2DeletedItem -FileSystem "filesystem1" -Path dir0/dir2
 ```
-```output 
+```output
 FileSystem Name: filesystem1
 
 Path                 DeletionId           DeletedOn            RemainingRetentionDays
 ----                 ----------           ---------            ----------------------
-dir0/dir2            132658834541610122   2021-05-19 07:37:34Z 3                     
+dir0/dir2            132658834541610122   2021-05-19 07:37:34Z 3
 dir0/dir2/file3      132658834534174806   2021-05-19 07:37:33Z 3
 ```
 

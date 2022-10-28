@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/update-azvirtualhub
+online version: https://learn.microsoft.com/powershell/module/az.network/update-azvirtualhub
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVirtualHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVirtualHub.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates a virtual hub.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/update-azvirtualhub) for up-to-date information.
 
 ## SYNTAX
 
@@ -61,7 +64,7 @@ ResourceGroupName         : testRG
 Name                      : westushub
 Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub
 AddressPrefix             : 10.0.2.0/24
-RouteTable                : 
+RouteTable                :
 VirtualNetworkConnections : {}
 Location                  : West US
 Sku                  : Standard
@@ -117,7 +120,7 @@ Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG
 AddressPrefix             : 10.0.1.0/24
 RouteTable                :
 Location                  : West US
-Sku                  : Standard 
+Sku                  : Standard
 HubRoutingPreference      : VpnGateway
 VirtualNetworkConnections : {}
 Location                  : West US

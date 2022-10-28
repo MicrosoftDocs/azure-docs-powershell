@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataBoxEdge.dll-Help.xml
 Module Name: Az.DataBoxEdge
-online version: https://docs.microsoft.com/powershell/module/az.databoxedge/new-azdataboxedgetrigger
+online version: https://learn.microsoft.com/powershell/module/az.databoxedge/new-azdataboxedgetrigger
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBoxEdge/DataBoxEdge/help/New-AzDataBoxEdgeTrigger.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBoxEdge/DataBoxEdge/help/New-AzDataBoxEdgeTrigger.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Configures a trigger on the device.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.databoxedge/new-azdataboxedgetrigger) for up-to-date information.
 
 ## SYNTAX
 
@@ -41,7 +44,7 @@ New-AzDataBoxEdgeTrigger [-PeriodicTimerEvent] [-AsJob] [-DefaultProfile <IAzure
 ```
 
 ## DESCRIPTION
-The **New-AzDataBoxEdgeTrigger** cmdlet configures a trigger on the Data Box Edge device. 
+The **New-AzDataBoxEdgeTrigger** cmdlet configures a trigger on the Data Box Edge device.
 
 ## EXAMPLES
 
@@ -51,8 +54,8 @@ New-AzDataBoxEdgeTrigger -ResourceGroupName resourceGroupName -DeviceName device
 ```
 
 ```output
-Name                  Kind               
-----                  ----               
+Name                  Kind
+----                  ----
 periodic-trigger      PeriodicTimerEvent
 ```
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.App
-online version: https://docs.microsoft.com/powershell/module/az.app/get-azcontainerappmanagedenvdaprsecret
+online version: https://learn.microsoft.com/powershell/module/az.app/get-azcontainerappmanagedenvdaprsecret
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/help/Get-AzContainerAppManagedEnvDaprSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/help/Get-AzContainerAppManagedEnvDaprSecret.md

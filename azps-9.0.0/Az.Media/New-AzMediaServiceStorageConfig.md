@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
 Module Name: Az.Media
 ms.assetid: 4D64CA4D-1066-4D3E-9317-60D37D9DE2BB
-online version: https://docs.microsoft.com/powershell/module/az.media/new-azmediaservicestorageconfig
+online version: https://learn.microsoft.com/powershell/module/az.media/new-azmediaservicestorageconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Media/Media/help/New-AzMediaServiceStorageConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Media/Media/help/New-AzMediaServiceStorageConfig.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create a storage account configuration for the media service cmdlets.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.media/new-azmediaservicestorageconfig) for up-to-date information.
 
 ## SYNTAX
 

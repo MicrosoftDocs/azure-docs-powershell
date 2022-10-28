@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azroutingpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzRoutingPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzRoutingPolicy.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes the specified routing policy from a routing intent resource associated with a VirtualHub.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-azroutingpolicy) for up-to-date information.
 
 ## SYNTAX
 
@@ -117,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingIntent
-The routing intent object from which this rouing policy has to be removed. 
+The routing intent object from which this rouing policy has to be removed.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSRoutingIntent

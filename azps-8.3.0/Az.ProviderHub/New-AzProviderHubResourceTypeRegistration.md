@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ProviderHub
-online version: https://docs.microsoft.com/powershell/module/az.providerhub/new-azproviderhubresourcetyperegistration
+online version: https://learn.microsoft.com/powershell/module/az.providerhub/new-azproviderhubresourcetyperegistration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ProviderHub/help/New-AzProviderHubResourceTypeRegistration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ProviderHub/help/New-AzProviderHubResourceTypeRegistration.md
@@ -765,62 +765,62 @@ To create the parameters described below, construct a hash table containing the 
 
 
 AUTHORIZATIONACTIONMAPPING <IAuthorizationActionMapping[]>: .
-  - `[Desired <String>]`: 
-  - `[Original <String>]`: 
+  - `[Desired <String>]`:
+  - `[Original <String>]`:
 
 ENDPOINT <IResourceTypeEndpoint[]>: .
-  - `[ApiVersion <String[]>]`: 
-  - `[Enabled <Boolean?>]`: 
-  - `[Extension <IResourceTypeExtension[]>]`: 
-    - `[EndpointUri <String>]`: 
-    - `[ExtensionCategory <ExtensionCategory[]>]`: 
-    - `[Timeout <TimeSpan?>]`: 
-  - `[FeatureRuleRequiredFeaturesPolicy <String>]`: 
-  - `[Location <String[]>]`: 
-  - `[RequiredFeature <String[]>]`: 
-  - `[Timeout <TimeSpan?>]`: 
+  - `[ApiVersion <String[]>]`:
+  - `[Enabled <Boolean?>]`:
+  - `[Extension <IResourceTypeExtension[]>]`:
+    - `[EndpointUri <String>]`:
+    - `[ExtensionCategory <ExtensionCategory[]>]`:
+    - `[Timeout <TimeSpan?>]`:
+  - `[FeatureRuleRequiredFeaturesPolicy <String>]`:
+  - `[Location <String[]>]`:
+  - `[RequiredFeature <String[]>]`:
+  - `[Timeout <TimeSpan?>]`:
 
 EXTENDEDLOCATION <IExtendedLocationOptions[]>: .
-  - `[SupportedPolicy <String>]`: 
-  - `[Type <String>]`: 
+  - `[SupportedPolicy <String>]`:
+  - `[Type <String>]`:
 
 LINKEDACCESSCHECK <ILinkedAccessCheck[]>: .
-  - `[ActionName <String>]`: 
-  - `[LinkedAction <String>]`: 
-  - `[LinkedActionVerb <String>]`: 
-  - `[LinkedProperty <String>]`: 
-  - `[LinkedType <String>]`: 
+  - `[ActionName <String>]`:
+  - `[LinkedAction <String>]`:
+  - `[LinkedActionVerb <String>]`:
+  - `[LinkedProperty <String>]`:
+  - `[LinkedType <String>]`:
 
 LOGGINGRULE <ILoggingRule[]>: .
-  - `Action <String>`: 
-  - `DetailLevel <LoggingDetails>`: 
-  - `Direction <LoggingDirections>`: 
-  - `[HiddenPropertyPathHiddenPathsOnRequest <String[]>]`: 
-  - `[HiddenPropertyPathHiddenPathsOnResponse <String[]>]`: 
+  - `Action <String>`:
+  - `DetailLevel <LoggingDetails>`:
+  - `Direction <LoggingDirections>`:
+  - `[HiddenPropertyPathHiddenPathsOnRequest <String[]>]`:
+  - `[HiddenPropertyPathHiddenPathsOnResponse <String[]>]`:
 
 SERVICETREEINFO <IServiceTreeInfo[]>: .
-  - `[ComponentId <String>]`: 
-  - `[ServiceId <String>]`: 
+  - `[ComponentId <String>]`:
+  - `[ServiceId <String>]`:
 
 SUBSCRIPTIONLIFECYCLENOTIFICATIONSPECIFICATIONSUBSCRIPTIONSTATEOVERRIDEACTION <ISubscriptionStateOverrideAction[]>: .
-  - `Action <SubscriptionNotificationOperation>`: 
-  - `State <SubscriptionTransitioningState>`: 
+  - `Action <SubscriptionNotificationOperation>`:
+  - `State <SubscriptionTransitioningState>`:
 
 SUBSCRIPTIONSTATERULE <ISubscriptionStateRule[]>: .
-  - `[AllowedAction <String[]>]`: 
-  - `[State <SubscriptionState?>]`: 
+  - `[AllowedAction <String[]>]`:
+  - `[State <SubscriptionState?>]`:
 
 SWAGGERSPECIFICATION <ISwaggerSpecification[]>: .
-  - `[ApiVersion <String[]>]`: 
-  - `[SwaggerSpecFolderUri <String>]`: 
+  - `[ApiVersion <String[]>]`:
+  - `[SwaggerSpecFolderUri <String>]`:
 
 THROTTLINGRULE <IThrottlingRule[]>: .
-  - `Action <String>`: 
-  - `Metric <IThrottlingMetric[]>`: 
-    - `Limit <Int64>`: 
-    - `Type <ThrottlingMetricType>`: 
-    - `[Interval <TimeSpan?>]`: 
-  - `[RequiredFeature <String[]>]`: 
+  - `Action <String>`:
+  - `Metric <IThrottlingMetric[]>`:
+    - `Limit <Int64>`:
+    - `Type <ThrottlingMetricType>`:
+    - `[Interval <TimeSpan?>]`:
+  - `[RequiredFeature <String[]>]`:
 
 ## RELATED LINKS
 

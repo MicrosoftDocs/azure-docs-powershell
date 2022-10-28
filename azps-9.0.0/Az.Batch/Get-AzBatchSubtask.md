@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 7D0D8B46-4BF0-47D5-9261-3306AEB9E7DD
-online version: https://docs.microsoft.com/powershell/module/az.batch/get-azbatchsubtask
+online version: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchsubtask
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchSubtask.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchSubtask.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the subtask information of the specified task.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/get-azbatchsubtask) for up-to-date information.
 
 ## SYNTAX
 

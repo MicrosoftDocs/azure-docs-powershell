@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ConnectedNetwork
-online version: https://docs.microsoft.com/powershell/module/az.connectednetwork/new-azconnectednetworkdevice
+online version: https://learn.microsoft.com/powershell/module/az.connectednetwork/new-azconnectednetworkdevice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/help/New-AzConnectedNetworkDevice.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/help/New-AzConnectedNetworkDevice.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates or updates a device.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectednetwork/new-azconnectednetworkdevice) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.EventGrid.dll-Help.xml
 Module Name: Az.EventGrid
-online version: https://docs.microsoft.com/powershell/module/az.eventgrid/new-azeventgridsubscription
+online version: https://learn.microsoft.com/powershell/module/az.eventgrid/new-azeventgridsubscription
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridSubscription.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridSubscription.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a new Azure Event Grid Event Subscription to a topic, Azure resource, Azure subscription or Resource Group.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventgrid/new-azeventgridsubscription) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SecurityInsights
-online version: https://docs.microsoft.com/powershell/module/az.securityinsights/new-azsentinelentityquery
+online version: https://learn.microsoft.com/powershell/module/az.securityinsights/new-azsentinelentityquery
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/New-AzSentinelEntityQuery.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/New-AzSentinelEntityQuery.md
@@ -347,7 +347,7 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-`ENTITIESFILTER <ActivityEntityQueriesPropertiesEntitiesFilter>`: 
+`ENTITIESFILTER <ActivityEntityQueriesPropertiesEntitiesFilter>`:
   - `[(Any) <String[]>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS

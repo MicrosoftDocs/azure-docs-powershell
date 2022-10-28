@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.dll-Help.xml
 Module Name: Az.SqlVirtualMachine
-online version: https://docs.microsoft.com/powershell/module/az.sqlvirtualmachine/get-azsqlvm
+online version: https://learn.microsoft.com/powershell/module/az.sqlvirtualmachine/get-azsqlvm
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SqlVirtualMachine/SqlVirtualMachine/help/Get-AzSqlVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SqlVirtualMachine/SqlVirtualMachine/help/Get-AzSqlVM.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets one or more sql virtual machines.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sqlvirtualmachine/get-azsqlvm) for up-to-date information.
 
 ## SYNTAX
 

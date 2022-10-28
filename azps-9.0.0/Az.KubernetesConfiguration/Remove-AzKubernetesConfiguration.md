@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.KubernetesConfiguration
-online version: https://docs.microsoft.com/powershell/module/az.kubernetesconfiguration/remove-azkubernetesconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.kubernetesconfiguration/remove-azkubernetesconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesConfiguration/help/Remove-AzKubernetesConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesConfiguration/help/Remove-AzKubernetesConfiguration.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 This will delete the YAML file used to set up the Source control configuration, thus stopping future sync from the source repo.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.kubernetesconfiguration/remove-azkubernetesconfiguration) for up-to-date information.
 
 ## SYNTAX
 

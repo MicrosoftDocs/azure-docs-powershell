@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotCentral.dll-Help.xml
 Module Name: Az.IotCentral
-online version: https://docs.microsoft.com/powershell/module/az.iotcentral/get-aziotcentralapp
+online version: https://learn.microsoft.com/powershell/module/az.iotcentral/get-aziotcentralapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotCentral/IotCentral/help/Get-AzIotCentralApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotCentral/IotCentral/help/Get-AzIotCentralApp.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets properties for either one or several IoT Central Applications.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iotcentral/get-aziotcentralapp) for up-to-date information.
 
 ## SYNTAX
 
@@ -32,7 +35,7 @@ Get-AzIotCentralApp -ResourceId <String> [-DefaultProfile <IAzureContextContaine
 ```
 
 ## DESCRIPTION
-Gets the metadata for either a specific IoT Central Application, or all the applications in a Resource Group or Subscription, depending on Parameter Set. 
+Gets the metadata for either a specific IoT Central Application, or all the applications in a Resource Group or Subscription, depending on Parameter Set.
 
 ## EXAMPLES
 

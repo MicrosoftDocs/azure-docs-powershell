@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.CognitiveServices.dll-Help.xml
 Module Name: Az.CognitiveServices
 ms.assetid: 87A79215-5688-474D-822A-6B84B3D10E3F
-online version: https://docs.microsoft.com/powershell/module/az.cognitiveservices/remove-azcognitiveservicesaccount
+online version: https://learn.microsoft.com/powershell/module/az.cognitiveservices/remove-azcognitiveservicesaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CognitiveServices/CognitiveServices/help/Remove-AzCognitiveServicesAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CognitiveServices/CognitiveServices/help/Remove-AzCognitiveServicesAccount.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes a Cognitive Services account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cognitiveservices/remove-azcognitiveservicesaccount) for up-to-date information.
 
 ## SYNTAX
 

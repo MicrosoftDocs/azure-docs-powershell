@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
 ms.assetid: 99E6C4DD-11AF-4DC0-848B-39811240BE06
-online version: https://docs.microsoft.com/en-us/powershell/module/az.dns/set-azdnsrecordset
+online version: https://learn.microsoft.com/en-us/powershell/module/az.dns/set-azdnsrecordset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Dns/Dns/help/Set-AzDnsRecordSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Dns/Dns/help/Set-AzDnsRecordSet.md
@@ -75,7 +75,7 @@ To suppress this behavior, you can use the *Overwrite* parameter, which results 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ Specifies the **RecordSet** to update.
 ```yaml
 Type: DnsRecordSet
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -147,7 +147,7 @@ You can use the *Confirm* parameter to control whether this cmdlet prompts you f
 By default, the cmdlet prompts you for confirmation if the $ConfirmPreference Windows PowerShell variable has a value of Medium or lower.
 
 If you specify *Confirm* or *Confirm:$True*, this cmdlet prompts you for confirmation before it runs.
-If you specify *Confirm:$False*, the cmdlet does not prompt you for confirmation. 
+If you specify *Confirm:$False*, the cmdlet does not prompt you for confirmation.
 
 ## RELATED LINKS
 

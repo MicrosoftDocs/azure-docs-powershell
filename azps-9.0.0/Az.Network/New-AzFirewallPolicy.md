@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azfirewallpolicy
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azfirewallpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewallPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewallPolicy.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a new Azure Firewall Policy
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azfirewallpolicy) for up-to-date information.
 
 ## SYNTAX
 
@@ -76,39 +79,39 @@ $exProxy = New-AzFirewallPolicyExplicitProxy -EnableExplicitProxy  -HttpPort 100
 New-AzFirewallPolicy -Name fp1 -ResourceGroupName TestRg -ExplicitProxy $exProxy
 ```
 ```output
-		BasePolicy	                : null	
-		DnsSettings  	            : null	
-		Etag	                    : null	
-		ExplicitProxy	
-			EnableExplicitProxy	    : true	
-			EnablePacFile	        : true	
-			HttpPort	            : 100	
-			HttpsPort	            : 101	
+		BasePolicy	                : null
+		DnsSettings  	            : null
+		Etag	                    : null
+		ExplicitProxy
+			EnableExplicitProxy	    : true
+			EnablePacFile	        : true
+			HttpPort	            : 100
+			HttpsPort	            : 101
 			PacFile                 : "sampleurlfortesting.blob.core.windowsnet/nothing"
-			PacFilePort	            : 130	
-		Id	                        : null	
-		Identity	                : null	
-		IntrusionDetection	        : null	
-		Location	                : "westus2"	
-		Name	                    : "fp1"	
+			PacFilePort	            : 130
+		Id	                        : null
+		Identity	                : null
+		IntrusionDetection	        : null
+		Location	                : "westus2"
+		Name	                    : "fp1"
 		PrivateRange	            : null
 		PrivateRangeText	        : "[]"
-		ProvisioningState	        : null	
-		ResourceGroupName	        : "TestRg"	
-		ResourceGuid	            : null	
-		RuleCollectionGroups	    : null	
-		Sku	
-			Tier	                : "Standard"	
-		Snat	
-			AutoLearnPrivateRanges	: null	
-			PrivateRanges	        : null	
-		SqlSetting	                : null	
-		Tag	                        : null	
-		TagsTable	                : null	
-		ThreatIntelMode	            : "Alert"	
-		ThreatIntelWhitelist	    : null	
-		TransportSecurity	        : null	
-		Type	                    : null	
+		ProvisioningState	        : null
+		ResourceGroupName	        : "TestRg"
+		ResourceGuid	            : null
+		RuleCollectionGroups	    : null
+		Sku
+			Tier	                : "Standard"
+		Snat
+			AutoLearnPrivateRanges	: null
+			PrivateRanges	        : null
+		SqlSetting	                : null
+		Tag	                        : null
+		TagsTable	                : null
+		ThreatIntelMode	            : "Alert"
+		ThreatIntelWhitelist	    : null
+		TransportSecurity	        : null
+		Type	                    : null
 ```
 This example creates a firewall policy with explicit proxy settings
 

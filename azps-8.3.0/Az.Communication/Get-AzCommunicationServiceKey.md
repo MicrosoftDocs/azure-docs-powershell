@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Communication
-online version: https://docs.microsoft.com/powershell/module/az.communication/get-azcommunicationservicekey
+online version: https://learn.microsoft.com/powershell/module/az.communication/get-azcommunicationservicekey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/help/Get-AzCommunicationServiceKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/help/Get-AzCommunicationServiceKey.md

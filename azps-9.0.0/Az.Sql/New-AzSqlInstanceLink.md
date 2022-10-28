@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/new-azsqlinstancelink
+online version: https://learn.microsoft.com/powershell/module/az.sql/new-azsqlinstancelink
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlInstanceLink.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlInstanceLink.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a new instance link.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/new-azsqlinstancelink) for up-to-date information.
 
 ## SYNTAX
 
@@ -40,7 +43,7 @@ The **New-AzSqlInstanceLink** cmdlet creates an Azure SQL Managed Instance link 
 New-AzSqlInstanceLink -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Link01" -PrimaryAvailabilityGroupName "Link01PrimaryAG" -SecondaryAvailabilityGroupName "Link01SecondaryAG" -TargetDatabase "Database01" -SourceEndpoint "TCP://SERVER01:5022"
 ```
 
-```output		
+```output
 ResourceGroupName              : ResourceGroup01
 InstanceName                   : ManagedInstance01
 Type                           : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
@@ -66,7 +69,7 @@ $instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "Manage
 New-AzSqlInstanceLink -InstanceObject $instance -Name "Link01" -PrimaryAvailabilityGroupName "Link01PrimaryAG" -SecondaryAvailabilityGroupName "Link01SecondaryAG" -TargetDatabase "Database01" -SourceEndpoint "TCP://SERVER01:5022"
 ```
 
-```output		
+```output
 ResourceGroupName              : ResourceGroup01
 InstanceName                   : ManagedInstance01
 Type                           : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
@@ -92,7 +95,7 @@ $instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "Manage
 $instance | New-AzSqlInstanceLink -Name "Link01" -PrimaryAvailabilityGroupName "Link01PrimaryAG" -SecondaryAvailabilityGroupName "Link01SecondaryAG" -TargetDatabase "Database01" -SourceEndpoint "TCP://SERVER01:5022"
 ```
 
-```output		
+```output
 ResourceGroupName              : ResourceGroup01
 InstanceName                   : ManagedInstance01
 Type                           : Microsoft.Sql/managedInstances/distributedAvailabilityGroups

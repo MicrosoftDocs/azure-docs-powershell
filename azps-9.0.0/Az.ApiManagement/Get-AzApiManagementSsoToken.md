@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: A7CABC63-2E9C-474B-A4F0-69F13A16F65A
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementssotoken
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementssotoken
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementSsoToken.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementSsoToken.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a link with an SSO token to a deployed management portal of an API Management service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/get-azapimanagementssotoken) for up-to-date information.
 
 ## SYNTAX
 

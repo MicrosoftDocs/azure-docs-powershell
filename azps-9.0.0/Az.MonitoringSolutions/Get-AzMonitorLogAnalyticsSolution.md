@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MonitoringSolutions
-online version: https://docs.microsoft.com/powershell/module/az.monitoringsolutions/get-azmonitorloganalyticssolution
+online version: https://learn.microsoft.com/powershell/module/az.monitoringsolutions/get-azmonitorloganalyticssolution
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MonitoringSolutions/help/Get-AzMonitorLogAnalyticsSolution.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MonitoringSolutions/help/Get-AzMonitorLogAnalyticsSolution.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Retrieves the user solution.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitoringsolutions/get-azmonitorloganalyticssolution) for up-to-date information.
 
 ## SYNTAX
 
@@ -98,7 +101,7 @@ This command gets all monitor log analytics solutions under a resource group.
 
 ### Example 5: Get all monitor log analytics solutions under a subscription
 ```powershell
-Get-AzMonitorLogAnalyticsSolution 
+Get-AzMonitorLogAnalyticsSolution
 ```
 
 ```output

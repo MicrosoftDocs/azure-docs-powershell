@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 1FF0B0F9-4B2C-46BC-8BED-12BE865E4480
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/suspend-azdatafactorypipeline
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/suspend-azdatafactorypipeline
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Suspend-AzDataFactoryPipeline.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Suspend-AzDataFactoryPipeline.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Suspends a pipeline in Azure Data Factory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/suspend-azdatafactorypipeline) for up-to-date information.
 
 ## SYNTAX
 
@@ -40,7 +43,7 @@ Suspend-AzDataFactoryPipeline -ResourceGroupName "ADF" -Name "DPWikiSample" -Dat
 
 ```output
 Confirm
-Are you sure you want to suspend pipeline 'DPWikisample' in data factory 'WikiADF'? 
+Are you sure you want to suspend pipeline 'DPWikisample' in data factory 'WikiADF'?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 True
 ```

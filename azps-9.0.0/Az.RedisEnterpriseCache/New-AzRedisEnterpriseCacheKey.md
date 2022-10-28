@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.RedisEnterpriseCache
-online version: https://docs.microsoft.com/powershell/module/az.redisenterprisecache/new-azredisenterprisecachekey
+online version: https://learn.microsoft.com/powershell/module/az.redisenterprisecache/new-azredisenterprisecachekey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/help/New-AzRedisEnterpriseCacheKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/help/New-AzRedisEnterpriseCacheKey.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Regenerates an access key for a Redis Enterprise database.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.redisenterprisecache/new-azredisenterprisecachekey) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ADDomainServices
-online version: https://docs.microsoft.com/powershell/module/az.ADDomainService/new-AzADDomainServiceReplicaSetObject
+online version: https://learn.microsoft.com/powershell/module/az.ADDomainService/new-AzADDomainServiceReplicaSetObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ADDomainServices/help/New-AzADDomainServiceReplicaSetObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ADDomainServices/help/New-AzADDomainServiceReplicaSetObject.md
@@ -34,7 +34,7 @@ New-AzADDomainServiceReplicaSetObject -Location westus -SubnetId /subscriptions/
 ```output
 DomainControllerIPAddress ExternalAccessIPAddress HealthLastEvaluated Location ServiceStatus SubnetId
 ------------------------- ----------------------- ------------------- -------- ------------- --------
-                                                                      westus                 /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resource… 
+                                                                      westus                 /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resource…
 ```
 
 Create an in-memory object for ReplicaSet.

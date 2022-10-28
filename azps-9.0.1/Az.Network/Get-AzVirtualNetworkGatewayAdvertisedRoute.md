@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azvirtualnetworkgatewayadvertisedroute
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azvirtualnetworkgatewayadvertisedroute
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkGatewayAdvertisedRoute.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkGatewayAdvertisedRoute.md
@@ -20,7 +20,7 @@ Get-AzVirtualNetworkGatewayAdvertisedRoute -VirtualNetworkGatewayName <String> -
 ```
 
 ## DESCRIPTION
-Given the IP of a BGP peer, enumerates routes being advertised to that peer by the specified Azure virtual network gateway. 
+Given the IP of a BGP peer, enumerates routes being advertised to that peer by the specified Azure virtual network gateway.
 
 ## EXAMPLES
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Peer
-BGP peer's IP address. This should be an IP within the address space accessible from within the Azure virtual network the gateway is deployed in. 
+BGP peer's IP address. This should be an IP within the address space accessible from within the Azure virtual network the gateway is deployed in.
 
 ```yaml
 Type: System.String

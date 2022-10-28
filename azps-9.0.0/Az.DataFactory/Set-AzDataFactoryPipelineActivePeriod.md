@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: D853A91F-95E7-4C36-AC0F-2C10DFCF68F8
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/set-azdatafactorypipelineactiveperiod
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/set-azdatafactorypipelineactiveperiod
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Set-AzDataFactoryPipelineActivePeriod.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Set-AzDataFactoryPipelineActivePeriod.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Configures the active period for data slices.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/set-azdatafactorypipelineactiveperiod) for up-to-date information.
 
 ## SYNTAX
 
@@ -46,7 +49,7 @@ Set-AzDataFactoryPipelineActivePeriod -ResourceGroupName "ADF" -PipelineName "DP
 ```output
 Confirm
 Are you sure you want to set pipeline 'DPWikisample' active period from '05/21/2014 16:00:00' to
-'05/22/2014 16:00:00'? 
+'05/22/2014 16:00:00'?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
 True
 ```
@@ -123,10 +126,10 @@ Accept wildcard characters: False
 Specifies the end of a time period as a **DateTime** object.
 Data processing occurs or data slices are processed within this period.
 For more information about **DateTime** objects, type `Get-Help Get-Date`.
-*EndDateTime* must be specified in the ISO8601 format as in the following examples: 
-2015-01-01Z 
-2015-01-01T00:00:00Z 
-2015-01-01T00:00:00.000Z (UTC) 
+*EndDateTime* must be specified in the ISO8601 format as in the following examples:
+2015-01-01Z
+2015-01-01T00:00:00Z
+2015-01-01T00:00:00.000Z (UTC)
 2015-01-01T00:00:00-08:00 (Pacific Standard Time)
 The default time zone designator is UTC.
 

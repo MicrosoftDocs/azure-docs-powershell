@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqlinstanceactivedirectoryadministrator
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlinstanceactivedirectoryadministrator
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlInstanceActiveDirectoryAdministrator.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlInstanceActiveDirectoryAdministrator.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets information about an Azure AD administrator for SQL Managed Instance.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/get-azsqlinstanceactivedirectoryadministrator) for up-to-date information.
 
 ## SYNTAX
 
@@ -43,8 +46,8 @@ Get-AzSqlInstanceActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup0
 ```
 
 ```output
-ResourceGroupName InstanceName      DisplayName ObjectId 
------------------ ----------------- ----------- -------- 
+ResourceGroupName InstanceName      DisplayName ObjectId
+----------------- ----------------- ----------- --------
 ResourceGroup01   ManagedInstance01 DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 
@@ -56,8 +59,8 @@ Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance1" 
 ```
 
 ```output
-ResourceGroupName InstanceName      DisplayName ObjectId 
------------------ ----------------- ----------- -------- 
+ResourceGroupName InstanceName      DisplayName ObjectId
+----------------- ----------------- ----------- --------
 ResourceGroup01   ManagedInstance01 DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 
@@ -69,8 +72,8 @@ Get-AzSqlInstance -ResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
 ```output
-ResourceGroupName InstanceName      DisplayName ObjectId 
------------------ ----------------- ----------- -------- 
+ResourceGroupName InstanceName      DisplayName ObjectId
+----------------- ----------------- ----------- --------
 ResourceGroup01   ManagedInstance01 DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Kusto
-online version: https://docs.microsoft.com/powershell/module/az.kusto/get-azkustoattacheddatabaseconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.kusto/get-azkustoattacheddatabaseconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/help/Get-AzKustoAttachedDatabaseConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/help/Get-AzKustoAttachedDatabaseConfiguration.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Returns an attached database configuration.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.kusto/get-azkustoattacheddatabaseconfiguration) for up-to-date information.
 
 ## SYNTAX
 
@@ -52,7 +55,7 @@ The above command lists all the AttachedDatabaseConfigurations in the cluster "t
 
 ### Example 2: Get a specific AttachedDatabaseConfiguration in a cluster
 ```powershell
-Get-AzKustoAttachedDatabaseConfiguration -ResourceGroupName "testrg" -ClusterName "testnewkustoclusterf" -Name "myfollowerconfiguration" 
+Get-AzKustoAttachedDatabaseConfiguration -ResourceGroupName "testrg" -ClusterName "testnewkustoclusterf" -Name "myfollowerconfiguration"
 ```
 
 ```output

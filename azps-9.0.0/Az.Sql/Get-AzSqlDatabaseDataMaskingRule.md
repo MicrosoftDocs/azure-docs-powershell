@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 848A6972-AB29-46FB-8E03-FF2ADB113A0E
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqldatabasedatamaskingrule
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqldatabasedatamaskingrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseDataMaskingRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseDataMaskingRule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the data masking rules from a database.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/get-azsqldatabasedatamaskingrule) for up-to-date information.
 
 ## SYNTAX
 

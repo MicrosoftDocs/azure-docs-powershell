@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 47F0EE55-78C0-4C71-BD32-C7CB7B200DC3
-online version: https://docs.microsoft.com/powershell/module/az.compute/restart-azvmss
+online version: https://learn.microsoft.com/powershell/module/az.compute/restart-azvmss
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Restart-AzVmss.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Restart-AzVmss.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Restarts the VMSS or a virtual machine within the VMSS.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/restart-azvmss) for up-to-date information.
 
 ## SYNTAX
 

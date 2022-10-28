@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
 Module Name: Az.NotificationHubs
 ms.assetid: 08D03498-D18D-47FE-8916-702FA2E7D719
-online version: https://docs.microsoft.com/powershell/module/az.notificationhubs/get-aznotificationhubsnamespaceauthorizationrule
+online version: https://learn.microsoft.com/powershell/module/az.notificationhubs/get-aznotificationhubsnamespaceauthorizationrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubsNamespaceAuthorizationRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubsNamespaceAuthorizationRule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets information about the authorization rules associated with a notification hub namespace.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.notificationhubs/get-aznotificationhubsnamespaceauthorizationrule) for up-to-date information.
 
 ## SYNTAX
 
@@ -26,7 +29,7 @@ You can return information about all the rules associated with the namespace.
 Alternatively, and by including the *AuthorizationRule* parameter, you can return information for a specific rule.
 Authorization rules manage access to namespaces.
 This is done through the creation of links, as URIs, based on different permission levels.
-Platform levels can be one of the following: 
+Platform levels can be one of the following:
 - Listen
 - Send
 - Manage

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 7100B5F0-A07B-4305-BF80-1F52647A03AB
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryrun
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryrun
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryRun.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryRun.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets runs for a data slice of a dataset in Azure Data Factory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/get-azdatafactoryrun) for up-to-date information.
 
 ## SYNTAX
 
@@ -60,7 +63,7 @@ DatasetName           : DAWikiAggregatedData
 PipelineName        : 249ea141-ca00-8597-fad9-a148e5e7bdba
 ActivityId          : fcefe2bd-39b1-2d7a-7b35-bcc2b0432300
 ResumptionToken     : a7c4913c-9623-49b3-ae1e-3e45e2b68819
-ContinuationToken   : 
+ContinuationToken   :
 ProcessingStartTime : 5/21/2014 5:02:41 PM
 ProcessingEndTime   : 5/21/2014 5:04:12 PM
 PercentComplete     : 100
@@ -69,7 +72,7 @@ DataSliceEnd        : 5/21/2014 5:00:00 PM
 Status              : Succeeded
 Timestamp           : 5/21/2014 5:02:41 PM
 RetryAttempt        : 0
-Properties          : {[errors, ]} 
+Properties          : {[errors, ]}
 ErrorMessage        :
 ```
 
@@ -159,10 +162,10 @@ Accept wildcard characters: False
 ### -StartDateTime
 Specifies the start of a time period as a **DateTime** object.
 This cmdlet gets runs for the data slices that match this time period.
-*StartDateTime* must be specified in the ISO8601 format, as in the following examples: 
+*StartDateTime* must be specified in the ISO8601 format, as in the following examples:
 2015-01-01Z
 2015-01-01T00:00:00Z
-2015-01-01T00:00:00.000Z (UTC) 
+2015-01-01T00:00:00.000Z (UTC)
 2015-01-01T00:00:00-08:00 (Pacific Standard Time)
 The default time zone designator is UTC.
 

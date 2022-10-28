@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: 910239BE-9E48-4DC5-85EA-CC6D466FE62F
-online version: https://docs.microsoft.com/powershell/module/az.websites/new-azwebappsslbinding
+online version: https://learn.microsoft.com/powershell/module/az.websites/new-azwebappsslbinding
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/New-AzWebAppSSLBinding.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/New-AzWebAppSSLBinding.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an SSL certificate binding for an Azure Web App.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/new-azwebappsslbinding) for up-to-date information.
 
 ## SYNTAX
 

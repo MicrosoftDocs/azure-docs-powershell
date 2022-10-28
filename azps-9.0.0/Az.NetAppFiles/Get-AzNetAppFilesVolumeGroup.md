@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.NetAppFiles.dll-Help.xml
 Module Name: Az.NetAppFiles
-online version: https://docs.microsoft.com/powershell/module/az.netappfiles/get-aznetappfilesvolumegroup
+online version: https://learn.microsoft.com/powershell/module/az.netappfiles/get-aznetappfilesvolumegroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Get-AzNetAppFilesVolumeGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Get-AzNetAppFilesVolumeGroup.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets details of an Azure NetApp Files (ANF) VolumeGroup.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.netappfiles/get-aznetappfilesvolumegroup) for up-to-date information.
 
 ## SYNTAX
 
@@ -42,7 +45,7 @@ The **Get-AzNetAppFilesVolumeGroup** cmdlet gets details of an ANF VolumeGroup.
 Get-AzNetAppFilesVolumeGroup -ResourceGroupName "MyRG" -AccountName "MyAnfAccount" -Name "MyAnfVolumeGroup"
 ```
 
-This command gets the volume named MyAnfVolumeGroup from the Account "MyAnfAccount". 
+This command gets the volume named MyAnfVolumeGroup from the Account "MyAnfAccount".
 
 ## PARAMETERS
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: F01CB88A-49E7-41D8-B4E7-F1A4DCDC6B84
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azapplicationgatewaysku
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azapplicationgatewaysku
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewaySku.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewaySku.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the SKU of an application gateway.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azapplicationgatewaysku) for up-to-date information.
 
 ## SYNTAX
 

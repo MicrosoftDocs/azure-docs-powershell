@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/export-azloganalyticrequestratebyinterval
+online version: https://learn.microsoft.com/powershell/module/az.compute/export-azloganalyticrequestratebyinterval
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Export-AzLogAnalyticRequestRateByInterval.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Export-AzLogAnalyticRequestRateByInterval.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Export logs that show Api requests made by this subscription in the given time window to show throttling activities.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/export-azloganalyticrequestratebyinterval) for up-to-date information.
 
 ## SYNTAX
 
@@ -25,7 +28,7 @@ Export-AzLogAnalyticRequestRateByInterval [-Location] <String> [-FromTime] <Date
 Exports statistical data about the subscription's calls to the Microsoft.Compute API by Success, Failure, or Throttled status, in predefined time intervals. The logs can be further grouped by five parameters: GroupByOperationName, GroupByThrottlePolicy, GroupByResourceName, GroupByUserAgent, or GroupByApplicationId.
 Note that this cmdlet collects only Compute Resource Provider logs; moreover, data about the Disk and Snapshot resource types is not yet available.
 
-For an overview of the Compute Resource Provider's API throttling, see https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-request-limits. 
+For an overview of the Compute Resource Provider's API throttling, see https://learn.microsoft.com/azure/azure-resource-manager/resource-manager-request-limits.
 
 ## EXAMPLES
 
@@ -61,7 +64,7 @@ TIMESTAMP             clientApplicationId   TotalRequests SuccessfulRequests Thr
 2/21/2018  9:00:00 PM <clientApplicationId> 9             9                  0
 ```
 
-This command stores the aggregated numbers of Microsoft.Compute API calls separated by Success, Failure, or Throttled between 2018-02-20T17:54:14 and 2018-02-22T17:54:17 in the given SAS URI, aggregated by application id. 
+This command stores the aggregated numbers of Microsoft.Compute API calls separated by Success, Failure, or Throttled between 2018-02-20T17:54:14 and 2018-02-22T17:54:17 in the given SAS URI, aggregated by application id.
 
 ### Example 3: Export records aggregated by user agent
 ```powershell
@@ -78,7 +81,7 @@ TIMESTAMP             userAgent   TotalRequests SuccessfulRequests ThrottledRequ
 2/21/2018  9:00:00 PM <userAgent> 9             9                  0
 ```
 
-This command stores the aggregated numbers of Microsoft.Compute API calls separated by Success, Failure, or Throttled between 2018-02-20T17:54:14 and 2018-02-22T17:54:17 in the given SAS URI, aggregated by user agent. 
+This command stores the aggregated numbers of Microsoft.Compute API calls separated by Success, Failure, or Throttled between 2018-02-20T17:54:14 and 2018-02-22T17:54:17 in the given SAS URI, aggregated by user agent.
 
 ## PARAMETERS
 

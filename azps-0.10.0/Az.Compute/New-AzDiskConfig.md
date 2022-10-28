@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/new-azdiskconfig
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azdiskconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzDiskConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzDiskConfig.md
@@ -54,7 +54,7 @@ creates an empty disk, or attaches an existing disk.
 ```yaml
 Type: DiskCreateOption
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Empty, Attach, FromImage, Import, Copy
 
 Required: False
@@ -85,7 +85,7 @@ Specifies the disk encryption key object on a disk.
 ```yaml
 Type: KeyVaultAndSecretReference
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ Specifies the size of the disk in GB.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -115,7 +115,7 @@ Enable encryption settings.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ Specifies the image reference on a disk.
 ```yaml
 Type: ImageDiskReference
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +145,7 @@ Specifies the Key encryption key on a disk.
 ```yaml
 Type: KeyVaultAndKeyReference
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ Specifies a location.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -175,7 +175,7 @@ Specifies the OS type.
 ```yaml
 Type: OperatingSystemTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Windows, Linux
 
 Required: False
@@ -207,7 +207,7 @@ Specifies the  source resource ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,7 +222,7 @@ Specifies the source Uri.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -237,7 +237,7 @@ Specifies the storage account ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -254,7 +254,7 @@ Key-value pairs in the form of a hash table. For example:
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -269,7 +269,7 @@ Specifies the logical zone list for Disk.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

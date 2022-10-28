@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 9BE2E42C-594B-4B67-866C-BBA3B84AA5FD
-online version: https://docs.microsoft.com/powershell/module/az.compute/add-azvmssadditionalunattendcontent
+online version: https://learn.microsoft.com/powershell/module/az.compute/add-azvmssadditionalunattendcontent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssAdditionalUnattendContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssAdditionalUnattendContent.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Adds information to the unattended Windows Setup answer file.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/add-azvmssadditionalunattendcontent) for up-to-date information.
 
 ## SYNTAX
 

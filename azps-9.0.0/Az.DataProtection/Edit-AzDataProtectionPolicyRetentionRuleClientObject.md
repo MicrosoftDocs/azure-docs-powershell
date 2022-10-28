@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataProtection
-online version: https://docs.microsoft.com/powershell/module/az.dataprotection/edit-azdataprotectionpolicyretentionruleclientobject
+online version: https://learn.microsoft.com/powershell/module/az.dataprotection/edit-azdataprotectionpolicyretentionruleclientobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Edit-AzDataProtectionPolicyRetentionRuleClientObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/help/Edit-AzDataProtectionPolicyRetentionRuleClientObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Adds or removes Retention Rule to existing Policy
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/edit-azdataprotectionpolicyretentionruleclientobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -163,31 +166,31 @@ To create the parameters described below, construct a hash table containing the 
   - `DeleteAfterObjectType <String>`: Type of the specific object - used for deserializing
   - `SourceDataStoreObjectType <String>`: Type of Datasource object, used to initialize the right inherited type
   - `SourceDataStoreType <DataStoreTypes>`: type of datastore; Operational/Vault/Archive
-  - `[TargetDataStoreCopySetting <ITargetCopySetting[]>]`: 
+  - `[TargetDataStoreCopySetting <ITargetCopySetting[]>]`:
     - `CopyAfterObjectType <String>`: Type of the specific object - used for deserializing
     - `DataStoreObjectType <String>`: Type of Datasource object, used to initialize the right inherited type
     - `DataStoreType <DataStoreTypes>`: type of datastore; Operational/Vault/Archive
 
 `POLICY <IBackupPolicy>`: Backup Policy Object
   - `DatasourceType <String[]>`: Type of datasource for the backup management
-  - `ObjectType <String>`: 
+  - `ObjectType <String>`:
   - `PolicyRule <IBasePolicyRule[]>`: Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
-    - `Name <String>`: 
-    - `ObjectType <String>`: 
+    - `Name <String>`:
+    - `ObjectType <String>`:
     - `DataStoreObjectType <String>`: Type of Datasource object, used to initialize the right inherited type
     - `DataStoreType <DataStoreTypes>`: type of datastore; Operational/Vault/Archive
     - `TriggerObjectType <String>`: Type of the specific object - used for deserializing
-    - `Lifecycle <ISourceLifeCycle[]>`: 
+    - `Lifecycle <ISourceLifeCycle[]>`:
       - `DeleteAfterDuration <String>`: Duration of deletion after given timespan
       - `DeleteAfterObjectType <String>`: Type of the specific object - used for deserializing
       - `SourceDataStoreObjectType <String>`: Type of Datasource object, used to initialize the right inherited type
       - `SourceDataStoreType <DataStoreTypes>`: type of datastore; Operational/Vault/Archive
-      - `[TargetDataStoreCopySetting <ITargetCopySetting[]>]`: 
+      - `[TargetDataStoreCopySetting <ITargetCopySetting[]>]`:
         - `CopyAfterObjectType <String>`: Type of the specific object - used for deserializing
         - `DataStoreObjectType <String>`: Type of Datasource object, used to initialize the right inherited type
         - `DataStoreType <DataStoreTypes>`: type of datastore; Operational/Vault/Archive
     - `[BackupParameterObjectType <String>]`: Type of the specific object - used for deserializing
-    - `[IsDefault <Boolean?>]`: 
+    - `[IsDefault <Boolean?>]`:
 
 ## RELATED LINKS
 

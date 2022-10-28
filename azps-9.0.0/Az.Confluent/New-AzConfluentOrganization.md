@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Confluent
-online version: https://docs.microsoft.com/powershell/module/az.confluent/new-azconfluentorganization
+online version: https://learn.microsoft.com/powershell/module/az.confluent/new-azconfluentorganization
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Confluent/help/New-AzConfluentOrganization.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Confluent/help/New-AzConfluentOrganization.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create Organization resource
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.confluent/new-azconfluentorganization) for up-to-date information.
 
 ## SYNTAX
 

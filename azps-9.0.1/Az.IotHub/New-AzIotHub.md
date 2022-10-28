@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/new-aziothub
+online version: https://learn.microsoft.com/powershell/module/az.iothub/new-aziothub
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/New-AzIotHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/New-AzIotHub.md
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Location where the IoT hub needs to be created. 
+Location where the IoT hub needs to be created.
 
 ```yaml
 Type: System.String
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-Properties of the IoT hub. 
+Properties of the IoT hub.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHubInputProperties

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version: https://docs.microsoft.com/powershell/module/az.servicebus/add-azservicebusiprule
+online version: https://learn.microsoft.com/powershell/module/az.servicebus/add-azservicebusiprule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Add-AzServiceBusIPRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Add-AzServiceBusIPRule.md
@@ -45,7 +45,7 @@ DefaultAction       : Allow
 Id                  : /subscriptions/SubscriptionId/resourceGroups/RSG-TestAzEventhub/providers/Microsoft.ServiceBus/namespaces/ServiceBus-Namespace-2389/networkRuleSets/default
 Type                : Microsoft.ServiceBus/Namespaces/NetworkRuleSet
 IpRules             : {11.22.33.44, Allow}
-VirtualNetworkRules : 
+VirtualNetworkRules :
 ```
 add the IPRule with IpMask "11.22.33.44" and Action Allow fro the given namespace.
 
@@ -59,7 +59,7 @@ DefaultAction       : Allow
 Id                  : /subscriptions/SubscriptionId/resourceGroups/RSG-TestAzEventhub/providers/Microsoft.ServiceBus/namespaces/ServiceBus-Namespace-2389/networkRuleSets/default
 Type                : Microsoft.ServiceBus/Namespaces/NetworkRuleSet
 IpRules             : {11.22.33.44, Allow}
-VirtualNetworkRules : 
+VirtualNetworkRules :
 ```
 add the IPRule with IpMask "11.22.33.44" and Action Allow fro the given namespace.
 

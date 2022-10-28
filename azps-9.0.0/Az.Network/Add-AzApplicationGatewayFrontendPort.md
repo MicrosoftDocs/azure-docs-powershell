@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 40198C86-A4EB-494A-86D5-DF632518EB95
-online version: https://docs.microsoft.com/powershell/module/az.network/add-azapplicationgatewayfrontendport
+online version: https://learn.microsoft.com/powershell/module/az.network/add-azapplicationgatewayfrontendport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzApplicationGatewayFrontendPort.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzApplicationGatewayFrontendPort.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Adds a front-end port to an application gateway.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/add-azapplicationgatewayfrontendport) for up-to-date information.
 
 ## SYNTAX
 

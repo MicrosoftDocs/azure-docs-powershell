@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DeviceUpdate
-online version: https://docs.microsoft.com/powershell/module/az.deviceupdate/get-azdeviceupdateaccount
+online version: https://learn.microsoft.com/powershell/module/az.deviceupdate/get-azdeviceupdateaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceUpdate/help/Get-AzDeviceUpdateAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceUpdate/help/Get-AzDeviceUpdateAccount.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Returns account details for the given account name.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.deviceupdate/get-azdeviceupdateaccount) for up-to-date information.
 
 ## SYNTAX
 

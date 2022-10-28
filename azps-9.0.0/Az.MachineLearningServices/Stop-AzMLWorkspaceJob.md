@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MachineLearningServices
-online version: https://docs.microsoft.com/powershell/module/az.machinelearningservices/stop-azmlworkspacejob
+online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/stop-azmlworkspacejob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/Stop-AzMLWorkspaceJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/Stop-AzMLWorkspaceJob.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Cancels a Job (asynchronous).
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/stop-azmlworkspacejob) for up-to-date information.
 
 ## SYNTAX
 

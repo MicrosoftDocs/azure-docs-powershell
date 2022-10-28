@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/update-azstoragefileserviceproperty
+online version: https://learn.microsoft.com/powershell/module/az.storage/update-azstoragefileserviceproperty
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Update-AzStorageFileServiceProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Update-AzStorageFileServiceProperty.md
@@ -56,9 +56,9 @@ ResourceGroupName                             : myresourcegroup
 ShareDeleteRetentionPolicy.Enabled            : True
 ShareDeleteRetentionPolicy.Days               : 5
 ProtocolSettings.Smb.Multichannel.Enabled     : False
-ProtocolSettings.Smb.Versions                 : 
-ProtocolSettings.Smb.AuthenticationMethods    : 
-ProtocolSettings.Smb.KerberosTicketEncryption : 
+ProtocolSettings.Smb.Versions                 :
+ProtocolSettings.Smb.AuthenticationMethods    :
+ProtocolSettings.Smb.KerberosTicketEncryption :
 ProtocolSettings.Smb.ChannelEncryption        :
 ```
 
@@ -74,9 +74,9 @@ ResourceGroupName                             : myresourcegroup
 ShareDeleteRetentionPolicy.Enabled            : True
 ShareDeleteRetentionPolicy.Days               : 5
 ProtocolSettings.Smb.Multichannel.Enabled     : True
-ProtocolSettings.Smb.Versions                 : 
-ProtocolSettings.Smb.AuthenticationMethods    : 
-ProtocolSettings.Smb.KerberosTicketEncryption : 
+ProtocolSettings.Smb.Versions                 :
+ProtocolSettings.Smb.AuthenticationMethods    :
+ProtocolSettings.Smb.KerberosTicketEncryption :
 ProtocolSettings.Smb.ChannelEncryption        :
 ```
 
@@ -89,7 +89,7 @@ PS C:\> Update-AzStorageFileServiceProperty -ResourceGroupName "myresourcegroup"
 			-SMBProtocolVersion SMB2.1,SMB3.0,SMB3.1.1  `
 			-SMBAuthenticationMethod Kerberos,NTLMv2 `
 			-SMBKerberosTicketEncryption RC4-HMAC,AES-256 `
-			-SMBChannelEncryption AES-128-CCM,AES-128-GCM,AES-256-GCM 
+			-SMBChannelEncryption AES-128-CCM,AES-128-GCM,AES-256-GCM
 
 StorageAccountName                            : mystorageaccount
 ResourceGroupName                             : myresourcegroup
@@ -111,16 +111,16 @@ PS C:\> Update-AzStorageFileServiceProperty -ResourceGroupName "myresourcegroup"
 			-SMBProtocolVersion @() `
 			-SMBAuthenticationMethod @() `
 			-SMBKerberosTicketEncryption @() `
-			-SMBChannelEncryption @() 
+			-SMBChannelEncryption @()
 
 StorageAccountName                            : mystorageaccount
 ResourceGroupName                             : myresourcegroup
 ShareDeleteRetentionPolicy.Enabled            : True
 ShareDeleteRetentionPolicy.Days               : 5
 ProtocolSettings.Smb.Multichannel.Enabled     : True
-ProtocolSettings.Smb.Versions                 : 
-ProtocolSettings.Smb.AuthenticationMethods    : 
-ProtocolSettings.Smb.KerberosTicketEncryption : 
+ProtocolSettings.Smb.Versions                 :
+ProtocolSettings.Smb.AuthenticationMethods    :
+ProtocolSettings.Smb.KerberosTicketEncryption :
 ProtocolSettings.Smb.ChannelEncryption        :
 ```
 

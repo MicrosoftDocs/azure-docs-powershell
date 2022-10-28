@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MachineLearningServices
-online version: https://docs.microsoft.com/powershell/module/az.MLWorkspace/new-AzMLWorkspaceComputeInstanceObject
+online version: https://learn.microsoft.com/powershell/module/az.MLWorkspace/new-AzMLWorkspaceComputeInstanceObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/New-AzMLWorkspaceComputeInstanceObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/help/New-AzMLWorkspaceComputeInstanceObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for ComputeInstance.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/new-azmlworkspacecomputeinstanceobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -461,9 +464,9 @@ To create the parameters described below, construct a hash table containing the 
 
 SCHEDULECOMPUTESTARTSTOP <IComputeStartStopSchedule[]>: The list of compute start stop schedules to be applied.
   - `[Action <ComputePowerAction?>]`: The compute power action.
-  - `[ScheduleId <String>]`: 
-  - `[ScheduleProvisioningStatus <ScheduleProvisioningState?>]`: 
-  - `[ScheduleStatus <ScheduleStatus?>]`: 
+  - `[ScheduleId <String>]`:
+  - `[ScheduleProvisioningStatus <ScheduleProvisioningState?>]`:
+  - `[ScheduleStatus <ScheduleStatus?>]`:
 
 ## RELATED LINKS
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 98CB62E1-0A18-4207-81FA-07CC60310896
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azfirewallfqdntag
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azfirewallfqdntag
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzFirewallFqdnTag.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzFirewallFqdnTag.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the available Azure Firewall Fqdn Tags.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azfirewallfqdntag) for up-to-date information.
 
 ## SYNTAX
 

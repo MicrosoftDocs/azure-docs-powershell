@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Relay.dll-Help.xml
 Module Name: Az.Relay
-online version: https://docs.microsoft.com/powershell/module/az.relay/get-azrelaykey
+online version: https://learn.microsoft.com/powershell/module/az.relay/get-azrelaykey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/Get-AzRelayKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/Get-AzRelayKey.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the primary and secondary connection strings for the given Relay entities (Namespace/WcfRelay/HybridConnection).
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.relay/get-azrelaykey) for up-to-date information.
 
 ## SYNTAX
 

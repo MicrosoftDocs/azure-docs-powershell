@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.MixedReality.dll-Help.xml
 Module Name: Az.MixedReality
-online version: https://docs.microsoft.com/powershell/module/az.mixedreality/new-azspatialanchorsaccountkey
+online version: https://learn.microsoft.com/powershell/module/az.mixedreality/new-azspatialanchorsaccountkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/New-AzSpatialAnchorsAccountKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/New-AzSpatialAnchorsAccountKey.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Regenerate key of Spatial Anchors Account
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mixedreality/new-azspatialanchorsaccountkey) for up-to-date information.
 
 ## SYNTAX
 
@@ -66,7 +69,7 @@ PrimaryKey                                   SecondaryKey
 QTwT6LpnD6NuUfgfkCKFBmf89xWJ7tDC0Yx0yxxaejs= mF8lsBeEbs51H/jLe4COW4zUiEyg9lDM1XHQ03jtxZU=
 ```
 
-Regenerate secondary key of Spatial Anchors Account "example" in Resource Group "rg1". 
+Regenerate secondary key of Spatial Anchors Account "example" in Resource Group "rg1".
 
 ### Example 2
 ```powershell

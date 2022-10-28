@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.NetAppFiles.dll-Help.xml
 Module Name: Az.NetAppFiles
-online version: https://docs.microsoft.com/powershell/module/az.netappfiles/get-aznetappfilesvolume
+online version: https://learn.microsoft.com/powershell/module/az.netappfiles/get-aznetappfilesvolume
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Get-AzNetAppFilesVolume.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Get-AzNetAppFilesVolume.md
@@ -59,7 +59,7 @@ ProvisioningState : Succeeded
 SubnetId          : /subscriptions/subsId/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/MyRG-vnet/subnets/default
 ```
 
-This command gets the volume named MyAnfVolume from the pool "MyAnfPool". 
+This command gets the volume named MyAnfVolume from the pool "MyAnfPool".
 
 ## PARAMETERS
 

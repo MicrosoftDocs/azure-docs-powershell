@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/set-azrmstoragecontainerimmutabilitypolicy
+online version: https://learn.microsoft.com/powershell/module/az.storage/set-azrmstoragecontainerimmutabilitypolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzRmStorageContainerImmutabilityPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzRmStorageContainerImmutabilityPolicy.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates or updates ImmutabilityPolicy of a Storage blob containers
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/set-azrmstoragecontainerimmutabilitypolicy) for up-to-date information.
 
 ## SYNTAX
 
@@ -112,8 +115,8 @@ This command extend ImmutabilityPolicy of a Storage blob container, with Immutab
 ## PARAMETERS
 
 ### -AllowProtectedAppendWrite
-This property can only be changed for unlocked time-based retention policies. 
-With this property enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. 
+This property can only be changed for unlocked time-based retention policies.
+With this property enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted.
 '-AllowProtectedAppendWrites' and '-AllowProtectedAppendWritesAll' are mutually exclusive.
 
 ```yaml
@@ -129,8 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowProtectedAppendWriteAll
-This property can only be changed for unlocked policies. 
-When enabled, new blocks can be written to both 'Appened and Block Blobs' while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. 
+This property can only be changed for unlocked policies.
+When enabled, new blocks can be written to both 'Appened and Block Blobs' while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted.
 This property cannot be changed with ExtendImmutabilityPolicy API. '-AllowProtectedAppendWrites' and '-AllowProtectedAppendWritesAll' are mutually exclusive.
 
 ```yaml
@@ -218,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendPolicy
-Indicate ExtendPolicy to Extend an existing ImmutabilityPolicy.  After ImmutabilityPolicy is locked, it can only be extend. 
+Indicate ExtendPolicy to Extend an existing ImmutabilityPolicy.  After ImmutabilityPolicy is locked, it can only be extend.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

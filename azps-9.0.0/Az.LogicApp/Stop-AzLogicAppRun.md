@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: 3308F901-4C9F-424D-8BEB-877A6038B246
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/stop-azlogicapprun
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/stop-azlogicapprun
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Stop-AzLogicAppRun.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Stop-AzLogicAppRun.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Cancels a run of a logic app.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logicapp/stop-azlogicapprun) for up-to-date information.
 
 ## SYNTAX
 

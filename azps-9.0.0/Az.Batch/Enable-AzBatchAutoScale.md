@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 3107D061-7F25-45D0-8029-C99120A156DA
-online version: https://docs.microsoft.com/powershell/module/az.batch/enable-azbatchautoscale
+online version: https://learn.microsoft.com/powershell/module/az.batch/enable-azbatchautoscale
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Enable-AzBatchAutoScale.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Enable-AzBatchAutoScale.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Enables automatic scaling of a pool.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/enable-azbatchautoscale) for up-to-date information.
 
 ## SYNTAX
 

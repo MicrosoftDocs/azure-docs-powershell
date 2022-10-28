@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/get-azstackhciremotesupportsessionhistory
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/get-azstackhciremotesupportsessionhistory
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Get-AzStackHCIRemoteSupportSessionHistory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Get-AzStackHCIRemoteSupportSessionHistory.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets Remote Support Session History Details.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.stackhci/get-azstackhciremotesupportsessionhistory) for up-to-date information.
 
 ## SYNTAX
 
@@ -26,7 +29,7 @@ Session history represents all remote accesses made by Microsoft Support for eit
 
 ### Example 1:
 ```powershell
-Get-AzStackHCIRemoteSupportSessionHistory 
+Get-AzStackHCIRemoteSupportSessionHistory
 ```
 
 ```output

@@ -1,7 +1,7 @@
 ---
 external help file: Az.Attestation-help.xml
 Module Name: Az.Attestation
-online version: https://docs.microsoft.com/powershell/module/az.attestation/get-azattestationprovider
+online version: https://learn.microsoft.com/powershell/module/az.attestation/get-azattestationprovider
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Get-AzAttestationProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Get-AzAttestationProvider.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get the status of Attestation Provider.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.attestation/get-azattestationprovider) for up-to-date information.
 
 ## SYNTAX
 
@@ -51,15 +54,15 @@ AttestUri                    : https://testprovider1.eus.attest.azure.net
 Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.Attestation/attestationProviders/testprovider1
 Location                     : eastus
 Name                         : testprovider1
-PrivateEndpointConnection    : 
+PrivateEndpointConnection    :
 ResourceGroupName            : test-rg
 Status                       : Ready
-SystemDataCreatedAt          : 
-SystemDataCreatedBy          : 
-SystemDataCreatedByType      : 
-SystemDataLastModifiedAt     : 
-SystemDataLastModifiedBy     : 
-SystemDataLastModifiedByType : 
+SystemDataCreatedAt          :
+SystemDataCreatedBy          :
+SystemDataCreatedByType      :
+SystemDataLastModifiedAt     :
+SystemDataLastModifiedBy     :
+SystemDataLastModifiedByType :
 Tag                          : {
                                }
 TrustModel                   : AAD
@@ -74,12 +77,12 @@ Get-AzAttestationProvider
 ```
 
 ```output
-SystemDataCreatedAt          : 
-SystemDataCreatedBy          : 
-SystemDataCreatedByType      : 
-SystemDataLastModifiedAt     : 
-SystemDataLastModifiedBy     : 
-SystemDataLastModifiedByType : 
+SystemDataCreatedAt          :
+SystemDataCreatedBy          :
+SystemDataCreatedByType      :
+SystemDataLastModifiedAt     :
+SystemDataLastModifiedBy     :
+SystemDataLastModifiedByType :
 Value                        : {{
                                  "id": "/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Attestation/attestationProviders/test",
                                  "name": "test",
@@ -109,7 +112,7 @@ Value                        : {{
                                    "attestUri": "https://testprovider1.eus.attest.azure.net"
                                  }
                                },{
-                                 "id": "/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Att 
+                                 "id": "/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Att
                                estation/attestationProviders/testprovider2",
                                  "name": "testprovider2",
                                  "type": "Microsoft.Attestation/attestationProviders",
@@ -130,12 +133,12 @@ Get-AzAttestationProvider -ResourceGroupName test-rg
 ```
 
 ```output
-SystemDataCreatedAt          : 
-SystemDataCreatedBy          : 
-SystemDataCreatedByType      : 
-SystemDataLastModifiedAt     : 
-SystemDataLastModifiedBy     : 
-SystemDataLastModifiedByType : 
+SystemDataCreatedAt          :
+SystemDataCreatedBy          :
+SystemDataCreatedByType      :
+SystemDataLastModifiedAt     :
+SystemDataLastModifiedBy     :
+SystemDataLastModifiedByType :
 Value                        : {{
                                  "id": "/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Attestation/attestationProviders/test",
                                  "name": "test",

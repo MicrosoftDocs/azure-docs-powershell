@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 52664E45-7EAB-41C9-BF78-304F10BFC51A
-online version: https://docs.microsoft.com/powershell/module/az.sql/new-azsqlservercommunicationlink
+online version: https://learn.microsoft.com/powershell/module/az.sql/new-azsqlservercommunicationlink
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlServerCommunicationLink.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlServerCommunicationLink.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a communication link for elastic database transactions between two SQL Database servers.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/new-azsqlservercommunicationlink) for up-to-date information.
 
 ## SYNTAX
 
@@ -179,4 +182,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AzSqlServerCommunicationLink](./Remove-AzSqlServerCommunicationLink.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)

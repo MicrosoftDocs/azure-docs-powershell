@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MySql
-online version: https://docs.microsoft.com/powershell/module/az.mysql/restore-azmysqlserver
+online version: https://learn.microsoft.com/powershell/module/az.mysql/restore-azmysqlserver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/help/Restore-AzMySqlServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/help/Restore-AzMySqlServer.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Restore a server from an existing backup
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mysql/restore-azmysqlserver) for up-to-date information.
 
 ## SYNTAX
 
@@ -36,7 +39,7 @@ Restore a server from an existing backup
 
 ### Example 1: Restore MySql server using GeoReplica Restore
 ```powershell
-Get-AzMySqlServer -ResourceGroupName PowershellMySqlTest -ServerName mysql-test-replica | Restore-AzMySqlServer -Name mysql-test -ResourceGroupName PowershellMySqlTest -UseGeoRestore 
+Get-AzMySqlServer -ResourceGroupName PowershellMySqlTest -ServerName mysql-test-replica | Restore-AzMySqlServer -Name mysql-test -ResourceGroupName PowershellMySqlTest -UseGeoRestore
 ```
 
 ```output

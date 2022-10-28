@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: https://docs.microsoft.com/powershell/module/az.security/Set-AzSecurityAutoProvisioningSetting
+online version: https://learn.microsoft.com/powershell/module/az.security/Set-AzSecurityAutoProvisioningSetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Set-AzSecurityAutoProvisioningSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Set-AzSecurityAutoProvisioningSetting.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates automatic provisioning setting
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/set-azsecurityautoprovisioningsetting) for up-to-date information.
 
 ## SYNTAX
 
@@ -58,8 +61,8 @@ Set-AzSecurityAutoProvisioningSetting -Name "default"
 ```
 
 ```output
-Id                                                                                                                Name 
---                                                                                                                ---- 
+Id                                                                                                                Name
+--                                                                                                                ----
 /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/autoProvisioningSettings/default de...
 ```
 

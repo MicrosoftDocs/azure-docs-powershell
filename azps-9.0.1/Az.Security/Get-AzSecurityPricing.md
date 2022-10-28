@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: https://docs.microsoft.com/powershell/module/az.security/Get-AzSecurityPricing
+online version: https://learn.microsoft.com/powershell/module/az.security/Get-AzSecurityPricing
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityPricing.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityPricing.md
@@ -34,7 +34,7 @@ Get-AzSecurityPricing -ResourceId <String> [-DefaultProfile <IAzureContextContai
 
 You can view each Azure Defender plan, per subscription, using this cmdlet.
 
-For details about Azure Defender and the available plans, see [Introduction to Azure Defender](https://docs.microsoft.com/azure/security-center/azure-defender).
+For details about Azure Defender and the available plans, see [Introduction to Azure Defender](https://learn.microsoft.com/azure/security-center/azure-defender).
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Automanage
-online version: https://docs.microsoft.com/powershell/module/az.automanage/remove-azautomanageconfigprofileassignment
+online version: https://learn.microsoft.com/powershell/module/az.automanage/remove-azautomanageconfigprofileassignment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automanage/help/Remove-AzAutomanageConfigProfileAssignment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automanage/help/Remove-AzAutomanageConfigProfileAssignment.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Delete a configuration profile assignment
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automanage/remove-azautomanageconfigprofileassignment) for up-to-date information.
 
 ## SYNTAX
 

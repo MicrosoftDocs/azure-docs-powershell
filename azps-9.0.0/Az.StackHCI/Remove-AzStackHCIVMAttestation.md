@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/remove-azstackhcivmattestation
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/remove-azstackhcivmattestation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Remove-AzStackHCIVMAttestation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Remove-AzStackHCIVMAttestation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Remove-AzStackHCIVMAttestation removes guests from AzureStack HCI IMDS Attestation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.stackhci/remove-azstackhcivmattestation) for up-to-date information.
 
 ## SYNTAX
 
@@ -34,7 +37,7 @@ Remove-AzStackHCIVMAttestation removes guests from AzureStack HCI IMDS Attestati
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 Remove-AzStackHCIVMAttestation -RemoveAll
 ```

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 18E1AD70-42A6-47A2-A685-6E218B6DC4BE
-online version: https://docs.microsoft.com/powershell/module/az.compute/save-azvhd
+online version: https://learn.microsoft.com/powershell/module/az.compute/save-azvhd
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Save-AzVhd.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Save-AzVhd.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Saves downloaded .vhd images locally.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/save-azvhd) for up-to-date information.
 
 ## SYNTAX
 

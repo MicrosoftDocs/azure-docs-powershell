@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
 ms.assetid: 5C788778-58A4-4798-AB66-1D3562BB9338
-online version: https://docs.microsoft.com/powershell/module/az.datalakestore/add-azdatalakestoretrustedidprovider
+online version: https://learn.microsoft.com/powershell/module/az.datalakestore/add-azdatalakestoretrustedidprovider
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Add-AzDataLakeStoreTrustedIdProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Add-AzDataLakeStoreTrustedIdProvider.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Adds a trusted identity provider to the specified Data Lake Store account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/add-azdatalakestoretrustedidprovider) for up-to-date information.
 
 ## SYNTAX
 

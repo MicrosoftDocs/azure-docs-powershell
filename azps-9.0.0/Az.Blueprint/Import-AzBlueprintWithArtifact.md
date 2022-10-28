@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Blueprint.dll-Help.xml
 Module Name: Az.Blueprint
-online version: https://docs.microsoft.com/powershell/module/az.blueprint/import-azblueprintwithartifact
+online version: https://learn.microsoft.com/powershell/module/az.blueprint/import-azblueprintwithartifact
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Import-AzBlueprintWithArtifact.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Import-AzBlueprintWithArtifact.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Import a blueprint file in JSON format to a blueprint object and save it within the specified subscription or management group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.blueprint/import-azblueprintwithartifact) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -21,7 +24,7 @@ Import-AzBlueprintWithArtifact -Name <String> [-SubscriptionId <String>] [-Manag
 ```
 
 ## DESCRIPTION
-Import a blueprint definition with its artifacts. 
+Import a blueprint definition with its artifacts.
 
 ## EXAMPLES
 

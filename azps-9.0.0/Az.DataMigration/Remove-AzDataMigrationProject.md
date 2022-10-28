@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
 Module Name: Az.DataMigration
-online version: https://docs.microsoft.com/powershell/module/az.datamigration/Remove-AzDataMigrationProject
+online version: https://learn.microsoft.com/powershell/module/az.datamigration/Remove-AzDataMigrationProject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Remove-AzDataMigrationProject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Remove-AzDataMigrationProject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an Azure Database Migration Service project from Azure.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/remove-azdatamigrationproject) for up-to-date information.
 
 ## SYNTAX
 
@@ -34,7 +37,7 @@ Remove-AzDataMigrationProject [-ResourceId] <String> [-Force] [-DeleteRunningTas
 ```
 
 ## DESCRIPTION
-The Remove-AzDataMigrationProject cmdlet removes an Azure Database Migration Service project from Azure. Supplying the DeleteRunningTask parameter removes all of the Azure Database Migration Service tasks associated with the project that is being removed. 
+The Remove-AzDataMigrationProject cmdlet removes an Azure Database Migration Service project from Azure. Supplying the DeleteRunningTask parameter removes all of the Azure Database Migration Service tasks associated with the project that is being removed.
 
 ## EXAMPLES
 

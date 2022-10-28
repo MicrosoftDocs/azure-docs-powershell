@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: B3C8A2DB-6571-418D-8C4B-3BE3FDA42F89
-online version: https://docs.microsoft.com/powershell/module/az.batch/stop-azbatchcertificatedeletion
+online version: https://learn.microsoft.com/powershell/module/az.batch/stop-azbatchcertificatedeletion
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Stop-AzBatchCertificateDeletion.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Stop-AzBatchCertificateDeletion.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Cancels a failed deletion of a certificate.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/stop-azbatchcertificatedeletion) for up-to-date information.
 
 ## SYNTAX
 

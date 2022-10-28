@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/get-aziothubroutingendpoint
+online version: https://learn.microsoft.com/powershell/module/az.iothub/get-aziothubroutingendpoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubRoutingEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubRoutingEndpoint.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get information on all the endpoints for your IoT Hub
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/get-aziothubroutingendpoint) for up-to-date information.
 
 ## SYNTAX
 
@@ -64,7 +67,7 @@ resourcegroup1    91d12343-a3de-345d-b2ea-135792468abc E1
 resourcegroup1    91d12343-a3de-345d-b2ea-135792468abc E2
 ```
 
-Get all the endpoints of type EventHub from "myiothub" IoT Hub. 
+Get all the endpoints of type EventHub from "myiothub" IoT Hub.
 
 ### Example 3
 ```powershell

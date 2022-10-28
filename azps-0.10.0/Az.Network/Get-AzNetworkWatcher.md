@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkwatcher
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/get-aznetworkwatcher
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkWatcher.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkWatcher.md
@@ -39,7 +39,7 @@ Name              : NetworkWatcher_westcentralus
 Id                : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_westcentralus
 Etag              : W/"ac624778-0214-49b9-a04c-794863485fa6"
 Location          : westcentralus
-Tags              : 
+Tags              :
 ProvisioningState : Succeeded
 ```
 
@@ -83,7 +83,7 @@ The resource group name.
 ```yaml
 Type: String
 Parameter Sets: Get
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: List
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
 
 ## NOTES
-Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher 
+Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher
 
 ## RELATED LINKS
 

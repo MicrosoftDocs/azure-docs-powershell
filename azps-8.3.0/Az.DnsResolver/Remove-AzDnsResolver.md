@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DnsResolver
-online version: https://docs.microsoft.com/powershell/module/az.dnsresolver/remove-azdnsresolver
+online version: https://learn.microsoft.com/powershell/module/az.dnsresolver/remove-azdnsresolver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/Remove-AzDnsResolver.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/Remove-AzDnsResolver.md
@@ -46,7 +46,7 @@ This command removes a DNS Resolver by name.
 ### Example 2: Remove a DNS Resolver by identity
 ```powershell
 $dnsResolverObject = Get-AzDnsResolver -ResourceGroupName powershell-test-rg -Name  psdnsresolvername33nmy1fz
-Remove-AzDnsResolver -InputObject $dnsResolverObject 
+Remove-AzDnsResolver -InputObject $dnsResolverObject
 ```
 
 This command removes a DNS Resolver by identity.

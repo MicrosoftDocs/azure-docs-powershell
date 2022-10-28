@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.TimeSeriesInsights
-online version: https://docs.microsoft.com/powershell/module/az.timeseriesinsights/update-aztimeseriesinsightseventsource
+online version: https://learn.microsoft.com/powershell/module/az.timeseriesinsights/update-aztimeseriesinsightseventsource
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/help/Update-AzTimeSeriesInsightsEventSource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/help/Update-AzTimeSeriesInsightsEventSource.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates the event source with the specified name in the specified subscription, resource group, and environment.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.timeseriesinsights/update-aztimeseriesinsightseventsource) for up-to-date information.
 
 ## SYNTAX
 

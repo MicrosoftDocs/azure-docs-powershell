@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SecurityInsights
-online version: https://docs.microsoft.com/powershell/module/az.securityinsights/get-azsentinelincidentcomment
+online version: https://learn.microsoft.com/powershell/module/az.securityinsights/get-azsentinelincidentcomment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Get-AzSentinelIncidentComment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Get-AzSentinelIncidentComment.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets an incident comment.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.securityinsights/get-azsentinelincidentcomment) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,7 +41,7 @@ Gets an incident comment.
 
 ## EXAMPLES
 
-### Example 1: List all Incident Comments for a given Incident 
+### Example 1: List all Incident Comments for a given Incident
 ```powershell
  Get-AzSentinelIncidentComment -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName" -IncidentId "7a4c27ea-d61a-496b-b5c3-246770c857c1"
 ```

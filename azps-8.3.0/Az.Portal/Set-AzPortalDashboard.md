@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Portal
-online version: https://docs.microsoft.com/powershell/module/az.portal/set-azportaldashboard
+online version: https://learn.microsoft.com/powershell/module/az.portal/set-azportaldashboard
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Portal/help/Set-AzPortalDashboard.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Portal/help/Set-AzPortalDashboard.md

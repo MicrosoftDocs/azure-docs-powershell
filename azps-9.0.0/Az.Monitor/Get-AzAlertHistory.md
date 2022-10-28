@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: 1EDFCAC4-6A66-4124-8192-B7F0D3C5BCFC
-online version: https://docs.microsoft.com/powershell/module/az.monitor/get-azalerthistory
+online version: https://learn.microsoft.com/powershell/module/az.monitor/get-azalerthistory
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzAlertHistory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzAlertHistory.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the history of classic alert rules.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/get-azalerthistory) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: B6487D26-2B6A-4938-B1CD-48EADD8D0C3C
-online version: https://docs.microsoft.com/powershell/module/az.automation/import-azautomationrunbook
+online version: https://learn.microsoft.com/powershell/module/az.automation/import-azautomationrunbook
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Import-AzAutomationRunbook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Import-AzAutomationRunbook.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Imports an Automation runbook.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/import-azautomationrunbook) for up-to-date information.
 
 ## SYNTAX
 
@@ -23,9 +26,9 @@ Import-AzAutomationRunbook [-Path] <String> [-Description <String>] [-Name <Stri
 ```
 
 ## DESCRIPTION
-The **Import-AzAutomationRunbook** cmdlet imports an Azure Automation runbook. Specify the 
+The **Import-AzAutomationRunbook** cmdlet imports an Azure Automation runbook. Specify the
 path to a wps_2 script (.ps1) file to import for wps_2 and wps_2 Workflow runbooks,
-(.graphrunbook) file for graphical runbooks, or (.py) file for python 2 runbooks. 
+(.graphrunbook) file for graphical runbooks, or (.py) file for python 2 runbooks.
 For wps_2 Workflow runbooks, the script must contain a single wps_2 Workflow definition that matches the name of the file.
 
 ## EXAMPLES

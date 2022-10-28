@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DnsResolver
-online version: https://docs.microsoft.com/powershell/module/az.dnsresolver/update-azdnsresolver
+online version: https://learn.microsoft.com/powershell/module/az.dnsresolver/update-azdnsresolver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/Update-AzDnsResolver.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/Update-AzDnsResolver.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates a DNS resolver.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dnsresolver/update-azdnsresolver) for up-to-date information.
 
 ## SYNTAX
 
@@ -33,7 +36,7 @@ Updates a DNS resolver.
 
 ### Example 1: Update an existing DNS Resolver by name
 ```powershell
-Update-AzDnsResolver -ResourceGroupName powershell-test-rg -Name  psdnsresolvername33nmy1fz -Tag @{"key0" = "value0"} 
+Update-AzDnsResolver -ResourceGroupName powershell-test-rg -Name  psdnsresolvername33nmy1fz -Tag @{"key0" = "value0"}
 ```
 
 ```output
@@ -47,7 +50,7 @@ This command updates an existing DNS Resolver by name ( adding tag ).
 ### Example 2: Updates an existing DNS Resolver by identity
 ```powershell
 $dnsResolverObject = Get-AzDnsResolver -ResourceGroupName powershell-test-rg -Name  psdnsresolvername33nmy1fz
-Update-AzDnsResolver -InputObject $dnsResolverObject  -Tag @{} 
+Update-AzDnsResolver -InputObject $dnsResolverObject  -Tag @{}
 ```
 
 ```output

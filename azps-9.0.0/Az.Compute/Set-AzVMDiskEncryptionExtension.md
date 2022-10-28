@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 6BCB36BC-F5E6-4EDD-983C-8BDE7A9B004D
-online version: https://docs.microsoft.com/powershell/module/az.compute/set-azvmdiskencryptionextension
+online version: https://learn.microsoft.com/powershell/module/az.compute/set-azvmdiskencryptionextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMDiskEncryptionExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMDiskEncryptionExtension.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Enables encryption on a running IaaS virtual machine in Azure.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/set-azvmdiskencryptionextension) for up-to-date information.
 
 ## SYNTAX
 
@@ -69,13 +72,13 @@ Set-AzVMDiskEncryptionExtension [-ResourceGroupName] <String> [-VMName] <String>
 ```
 
 ## DESCRIPTION
-The **Set-AzVMDiskEncryptionExtension** cmdlet enables encryption on a running infrastructure as a service (IaaS) virtual machine in Azure.  It enables encryption by installing the disk encryption extension on the virtual machine. 
+The **Set-AzVMDiskEncryptionExtension** cmdlet enables encryption on a running infrastructure as a service (IaaS) virtual machine in Azure.  It enables encryption by installing the disk encryption extension on the virtual machine.
 
 This cmdlet requires confirmation from the users as one of the steps to enable encryption requires a restart of the virtual machine.
 
 It is advised that you save your work on the virtual machine before you run this cmdlet.
 
-Linux: The **VolumeType** parameter is required when encrypting Linux virtual machines, and must be set to a value ("Os", "Data", or "All") supported by the Linux distribution. 
+Linux: The **VolumeType** parameter is required when encrypting Linux virtual machines, and must be set to a value ("Os", "Data", or "All") supported by the Linux distribution.
 
 Windows: The **VolumeType** parameter may be omitted, in which case the operation defaults to All; if the VolumeType parameter is present for a Windows virtual machine, it must be set to either All or OS.
 
@@ -144,22 +147,22 @@ $CertPath = "C:\certificates\examplecert.pfx"
 $CertPassword = "Password"
 $Cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($CertPath, $CertPassword)
 $CertValue = [System.Convert]::ToBase64String($cert.GetRawCertData())
-$AzureAdApplication = New-AzADApplication -DisplayName "<Your Application Display Name>" -HomePage "<https://YourApplicationHomePage>" -IdentifierUris "<https://YouApplicationUri>" -CertValue $CertValue 
+$AzureAdApplication = New-AzADApplication -DisplayName "<Your Application Display Name>" -HomePage "<https://YourApplicationHomePage>" -IdentifierUris "<https://YouApplicationUri>" -CertValue $CertValue
 $ServicePrincipal = New-AzADServicePrincipal -ApplicationId $AzureAdApplication.ApplicationId
 
 $AADClientID = $AzureAdApplication.ApplicationId
 $aadClientCertThumbprint= $cert.Thumbprint
 
-#Upload pfx to KeyVault 
+#Upload pfx to KeyVault
 $KeyVaultSecretName = "MyAADCert"
 $FileContentBytes = Get-Content $CertPath -Encoding Byte
 $FileContentEncoded = [System.Convert]::ToBase64String($fileContentBytes)
 $JSONObject = @"
-    { 
-        "data" : "$filecontentencoded", 
-        "dataType" : "pfx", 
-        "password" : "$CertPassword" 
-    } 
+    {
+        "data" : "$filecontentencoded",
+        "dataType" : "pfx",
+        "password" : "$CertPassword"
+    }
 "@
 $JSONObjectBytes = [System.Text.Encoding]::UTF8.GetBytes($jsonObject)
 $JSONEncoded = [System.Convert]::ToBase64String($jsonObjectBytes)
@@ -171,9 +174,9 @@ Set-AzKeyVaultAccessPolicy -VaultName $VaultName -ResourceGroupName $RGName -Ena
 #deploy cert to VM
 $CertUrl = (Get-AzKeyVaultSecret -VaultName $VaultName -Name $KeyVaultSecretName).Id
 $SourceVaultId = (Get-AzKeyVault -VaultName $VaultName -ResourceGroupName $RGName).ResourceId
-$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName 
+$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName
 $VM = Add-AzVMSecret -VM $VM -SourceVaultId $SourceVaultId -CertificateStore "My" -CertificateUrl $CertUrl
-Update-AzVM -VM $VM -ResourceGroupName $RGName 
+Update-AzVM -VM $VM -ResourceGroupName $RGName
 
 #Enable encryption on the virtual machine using Azure AD client ID and client cert thumbprint
 Set-AzVMDiskEncryptionExtension -ResourceGroupName $RGName -VMName $VMName -AadClientID $AADClientID -AadClientCertThumbprint $AADClientCertThumbprint -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId -VolumeType $VolumeType
@@ -229,16 +232,16 @@ $ServicePrincipal = New-AzADServicePrincipal -ApplicationId $AzureAdApplication.
 $AADClientID = $AzureAdApplication.ApplicationId
 $AADClientCertThumbprint= $Cert.Thumbprint
 
-#Upload pfx to KeyVault 
+#Upload pfx to KeyVault
 $KeyVaultSecretName = "MyAADCert"
 $FileContentBytes = Get-Content $CertPath -Encoding Byte
 $FileContentEncoded = [System.Convert]::ToBase64String($FileContentBytes)
 $JSONObject = @"
-    { 
-        "data" : "$filecontentencoded", 
-        "dataType" : "pfx", 
-        "password" : "$CertPassword" 
-    } 
+    {
+        "data" : "$filecontentencoded",
+        "dataType" : "pfx",
+        "password" : "$CertPassword"
+    }
 "@
 $JSONObjectBytes = [System.Text.Encoding]::UTF8.GetBytes($JSONObject)
 $JsonEncoded = [System.Convert]::ToBase64String($JSONObjectBytes)
@@ -249,9 +252,9 @@ Set-AzKeyVaultAccessPolicy -VaultName $VaultName -ResourceGroupName $RGName -Ena
 #deploy cert to VM
 $CertUrl = (Get-AzKeyVaultSecret -VaultName $VaultName -Name $KeyVaultSecretName).Id
 $SourceVaultId = (Get-AzKeyVault -VaultName $VaultName -ResourceGroupName $RGName).ResourceId
-$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName 
-$VM = Add-AzVMSecret -VM $VM -SourceVaultId $SourceVaultId -CertificateStore "My" -CertificateUrl $CertUrl 
-Update-AzVM -VM $VM -ResourceGroupName $RGName 
+$VM = Get-AzVM -ResourceGroupName $RGName -Name $VMName
+$VM = Add-AzVMSecret -VM $VM -SourceVaultId $SourceVaultId -CertificateStore "My" -CertificateUrl $CertUrl
+Update-AzVM -VM $VM -ResourceGroupName $RGName
 
 #Enable encryption on the virtual machine using Azure AD client ID and client cert thumbprint
 Set-AzVMDiskEncryptionExtension -ResourceGroupName $RGname -VMName $VMName -AadClientID $AADClientID -AadClientCertThumbprint $AADClientCertThumbprint -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId -KeyEncryptionKeyUrl $KeyEncryptionKeyUrl -KeyEncryptionKeyVaultId $KeyVaultResourceId -VolumeType $VolumeType
@@ -619,9 +622,9 @@ Accept wildcard characters: False
 ```
 
 ### -VolumeType
-Specifies the type of virtual machine volumes on which to perform encryption operation: OS, Data, or All. 
+Specifies the type of virtual machine volumes on which to perform encryption operation: OS, Data, or All.
 
-Linux: The **VolumeType** parameter is required when encrypting Linux virtual machines, and must be set to a value ("Os", "Data", or "All") supported by the Linux distribution. 
+Linux: The **VolumeType** parameter is required when encrypting Linux virtual machines, and must be set to a value ("Os", "Data", or "All") supported by the Linux distribution.
 
 Windows: The **VolumeType** parameter may be omitted, in which case the operation defaults to All; if the VolumeType parameter is present for a Windows virtual machine, it must be set to either All or OS.
 

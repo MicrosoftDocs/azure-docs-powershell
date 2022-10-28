@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 0729687C-3104-4136-A80D-16BAEBD6B76C
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultcertificatepolicy
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultcertificatepolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificatePolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificatePolicy.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the policy for a certificate in a key vault.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/get-azkeyvaultcertificatepolicy) for up-to-date information.
 
 ## SYNTAX
 
@@ -44,12 +47,12 @@ KeySize                         : 2048
 Exportable                      : True
 ReuseKeyOnRenewal               : True
 SubjectName                     : CN=contoso.com
-DnsNames                        : 
+DnsNames                        :
 Ekus                            : {1.3.6.1.5.5.7.3.1, 1.3.6.1.5.5.7.3.2}
 ValidityInMonths                : 6
 IssuerName                      : Self
 CertificateType                 :
-RenewAtNumberOfDaysBeforeExpiry : 
+RenewAtNumberOfDaysBeforeExpiry :
 RenewAtPercentageLifetime       : 80
 EmailAtNumberOfDaysBeforeExpiry :
 EmailAtPercentageLifetime       :

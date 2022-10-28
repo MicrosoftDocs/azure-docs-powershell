@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: 236B4436-E8AD-42B4-922C-E2E1406CAFC2
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementtenantaccess
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementtenantaccess
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementTenantAccess.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementTenantAccess.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the access configuration for a tenant.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/get-azapimanagementtenantaccess) for up-to-date information.
 
 ## SYNTAX
 

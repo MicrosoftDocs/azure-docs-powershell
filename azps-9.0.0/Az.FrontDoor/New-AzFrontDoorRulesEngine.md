@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
 Module Name: Az.FrontDoor
-online version: https://docs.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorrulesengine
+online version: https://learn.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorrulesengine
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRulesEngine.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRulesEngine.md
@@ -10,7 +10,10 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzFrontDoorRulesEngine
 
 ## SYNOPSIS
-Create a new rules engine configuration for a specified front door. 
+Create a new rules engine configuration for a specified front door.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.frontdoor/new-azfrontdoorrulesengine) for up-to-date information.
 
 ## SYNTAX
 
@@ -21,7 +24,7 @@ New-AzFrontDoorRulesEngine -ResourceGroupName <String> -FrontDoorName <String> -
 ```
 
 ## DESCRIPTION
-Create a new rules engine configuration for a specified front door. 
+Create a new rules engine configuration for a specified front door.
 
 Use cmdlet "New-AzFrontDoorRulesEngineRule" to construct rules engine rules to pass into the "-Rules" parameter of this cmdlet.
 

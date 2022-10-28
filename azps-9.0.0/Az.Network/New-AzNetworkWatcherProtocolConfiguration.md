@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-aznetworkwatcherprotocolconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkwatcherprotocolconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkWatcherProtocolConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkWatcherProtocolConfiguration.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a new protocol configuration object.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-aznetworkwatcherprotocolconfiguration) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -20,8 +23,8 @@ New-AzNetworkWatcherProtocolConfiguration -Protocol <String> [-Method <String>] 
 ```
 
 ## DESCRIPTION
-The New-AzNetworkWatcherProtocolConfiguration cmdlet creates a new protocol configuration object. 
-This object is used to restrict the protocol configuration during a connectivity check session using the specified criteria. 
+The New-AzNetworkWatcherProtocolConfiguration cmdlet creates a new protocol configuration object.
+This object is used to restrict the protocol configuration during a connectivity check session using the specified criteria.
 
 ## EXAMPLES
 

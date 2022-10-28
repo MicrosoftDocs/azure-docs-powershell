@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/add-aziothubroute
+online version: https://learn.microsoft.com/powershell/module/az.iothub/add-aziothubroute
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Add-AzIotHubRoute.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Add-AzIotHubRoute.md
@@ -52,7 +52,7 @@ Add-AzIotHubRoute -ResourceGroupName "myresourcegroup" -Name "myiothub" -RouteNa
 RouteName     : R1
 DataSource    : DeviceMessages
 EndpointNames : E1
-Condition     : 
+Condition     :
 IsEnabled     : False
 ```
 

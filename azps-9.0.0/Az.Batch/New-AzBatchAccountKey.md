@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 486748AC-3932-4E0C-BBCC-2BC194E69DCC
-online version: https://docs.microsoft.com/powershell/module/az.batch/new-azbatchaccountkey
+online version: https://learn.microsoft.com/powershell/module/az.batch/new-azbatchaccountkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/New-AzBatchAccountKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/New-AzBatchAccountKey.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Regenerates a key of a Batch account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/new-azbatchaccountkey) for up-to-date information.
 
 ## SYNTAX
 

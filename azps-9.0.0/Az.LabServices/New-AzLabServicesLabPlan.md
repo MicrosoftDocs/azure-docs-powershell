@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.LabServices
-online version: https://docs.microsoft.com/powershell/module/az.labservices/new-azlabserviceslabplan
+online version: https://learn.microsoft.com/powershell/module/az.labservices/new-azlabserviceslabplan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/help/New-AzLabServicesLabPlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/help/New-AzLabServicesLabPlan.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Operation to create or update a Lab Plan resource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.labservices/new-azlabserviceslabplan) for up-to-date information.
 
 ## SYNTAX
 

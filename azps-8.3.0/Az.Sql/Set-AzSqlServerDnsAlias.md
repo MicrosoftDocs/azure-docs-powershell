@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/set-azsqlserverdnsalias
+online version: https://learn.microsoft.com/powershell/module/az.sql/set-azsqlserverdnsalias
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlServerDnsAlias.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlServerDnsAlias.md
@@ -24,7 +24,7 @@ Set-AzSqlServerDnsAlias -Name <String> -TargetServerName <String> [-ResourceGrou
 ```
 
 ## DESCRIPTION
-This command is updating the server to which alias is pointing. 
+This command is updating the server to which alias is pointing.
 This command needs to be issued while logged into subscription where new server to which alias is going to point is located.
 
 ## EXAMPLES

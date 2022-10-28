@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SecurityInsights
-online version: https://docs.microsoft.com/powershell/module/az.securityinsights/get-azsentinelentityrelation
+online version: https://learn.microsoft.com/powershell/module/az.securityinsights/get-azsentinelentityrelation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Get-AzSentinelEntityRelation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Get-AzSentinelEntityRelation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets an entity relation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.securityinsights/get-azsentinelentityrelation) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,7 +41,7 @@ Gets an entity relation.
 
 ## EXAMPLES
 
-### Example 1: List all Entity Relations for a given Entity 
+### Example 1: List all Entity Relations for a given Entity
 ```powershell
  Get-AzSentinelEntityRelation -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName" -EntityId "myEntityId"
 ```

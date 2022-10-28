@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: 18D5B95E-4CF1-4C79-AE8B-9F4DA49B46A9
-online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/add-azlogprofile
+online version: https://learn.microsoft.com/en-us/powershell/module/az.monitor/add-azlogprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Add-AzLogProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Add-AzLogProfile.md
@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl
 # Add-AzLogProfile
 
 ## SYNOPSIS
-Creates a new activity log profile. This profile is used to either archive the activity log to an Azure storage account or stream it to an Azure event hub in the same subscription. 
+Creates a new activity log profile. This profile is used to either archive the activity log to an Azure storage account or stream it to an Azure event hub in the same subscription.
 
 ## SYNTAX
 
@@ -24,10 +24,10 @@ Add-AzLogProfile -Name <String> [-StorageAccountId <String>] [-ServiceBusRuleId 
 
 ## DESCRIPTION
 The **Add-AzLogProfile** cmdlet creates a log profile.
-- **Storage Account** - Only standard storage account (premium storage account is not supported) is supported. It could either be of type ARM or Classic. If it's logged to a storage account, the cost of storing the activity log is billed at normal standard storage rates. There could be only one log profile per subscription consequentially only one storage account per subscription can be used to export activity log. 
-- **Event Hub** - There could be only one log profile per subscription consequentially only one event hub per subscription can be used to export activity log. If activity log is streamed to an event hub, standard event hub pricing will apply. 
-In the activity log, events can pertain to a region or could be "Global". Global essentially means these events are region agnostics and are independent of region, in fact majority of events fall into this category. If the activity log profile is set from the portal, it implicitly adds "Global" along with any other region selected in the user interface. When using the cmdlet, the location as "Global" must be explicitly mentioned apart from any other region. 
-**Note** :- **Failing to set "Global" in the locations will result in a majority of activity log not getting exported.** 
+- **Storage Account** - Only standard storage account (premium storage account is not supported) is supported. It could either be of type ARM or Classic. If it's logged to a storage account, the cost of storing the activity log is billed at normal standard storage rates. There could be only one log profile per subscription consequentially only one storage account per subscription can be used to export activity log.
+- **Event Hub** - There could be only one log profile per subscription consequentially only one event hub per subscription can be used to export activity log. If activity log is streamed to an event hub, standard event hub pricing will apply.
+In the activity log, events can pertain to a region or could be "Global". Global essentially means these events are region agnostics and are independent of region, in fact majority of events fall into this category. If the activity log profile is set from the portal, it implicitly adds "Global" along with any other region selected in the user interface. When using the cmdlet, the location as "Global" must be explicitly mentioned apart from any other region.
+**Note** :- **Failing to set "Global" in the locations will result in a majority of activity log not getting exported.**
 This cmdlet implements the ShouldProcess pattern, i.e. it might request confirmation from the user before actually creating, modifying, or removing the resource.
 
 ## EXAMPLES
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 
 ### -Location
 Specifies the location of the log profile.
-Valid values: Run below cmdlet to get the latest list of locations. 
+Valid values: Run below cmdlet to get the latest list of locations.
 Get-AzLocation | Select DisplayName
 
 ```yaml
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountId
-Specifies the ID of the Storage account. ID is the fully qualified Resource ID of the storage account for example  
+Specifies the ID of the Storage account. ID is the fully qualified Resource ID of the storage account for example
 /subscriptions/40gpe80s-9sb7-4f07-9042-b1b6a92ja9fk/resourceGroups/activitylogRG/providers/Microsoft.Storage/storageAccounts/activitylogstorageaccount
 
 ```yaml

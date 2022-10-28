@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.PostgreSql
-online version: https://docs.microsoft.com/powershell/module/az.postgresql/remove-azpostgresqlflexibleserverdatabase
+online version: https://learn.microsoft.com/powershell/module/az.postgresql/remove-azpostgresqlflexibleserverdatabase
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/help/Remove-AzPostgreSqlFlexibleServerDatabase.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/help/Remove-AzPostgreSqlFlexibleServerDatabase.md

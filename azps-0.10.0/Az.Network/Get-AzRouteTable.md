@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 4F487FCA-930D-4D56-8D28-7693312E1A01
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azroutetable
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/get-azroutetable
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzRouteTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzRouteTable.md
@@ -43,7 +43,7 @@ Id                : /subscriptions/xxxx-xxxx-xxxx-xxxx/resourceGroups/ResourceGr
                     k/routeTables/routetable01
 Etag              : W/"db5f4e12-3f34-465b-92dd-0ab3bf6fc274"
 ProvisioningState : Succeeded
-Tags              : 
+Tags              :
 Routes            : [
                       {
                         "Name": "route07",
@@ -52,10 +52,10 @@ Routes            : [
                     soft.Network/routeTables/routetable01/routes/route07",
                         "AddressPrefix": "10.1.0.0/16",
                         "NextHopType": "VnetLocal",
-                        "NextHopIpAddress": null, 
+                        "NextHopIpAddress": null,
                         "ProvisioningState": "Succeeded"
                       }
-                    ] 
+                    ]
 Subnets           : []
 ```
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: Expand
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -124,7 +124,7 @@ Specifies the name of the resource group that contains the route tables that thi
 ```yaml
 Type: String
 Parameter Sets: Expand
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: NoExpand
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

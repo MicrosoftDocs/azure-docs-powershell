@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: https://docs.microsoft.com/powershell/module/az.security/Get-AzSecuritySecureScoreControlDefinition
+online version: https://learn.microsoft.com/powershell/module/az.security/Get-AzSecuritySecureScoreControlDefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecuritySecureScoreControlDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecuritySecureScoreControlDefinition.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets security secure score control definitions on a subscription
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/get-azsecuritysecurescorecontroldefinition) for up-to-date information.
 
 ## SYNTAX
 
@@ -40,7 +43,7 @@ Id                    : /providers/Microsoft.Security/secureScoreControlDefiniti
 Name                  : a9909064-42b4-4d34-8143-275477afe18b
 Type                  : Microsoft.Security/secureScoreControlDefinitions
 DisplayName           : Protect your applications with Azure advanced networking solutions
-Description           : 
+Description           :
 MaxScore              : 2
 Source                : BuiltIn
 AssessmentDefinitions : {/providers/Microsoft.Security/assessmentMetadata/e3de1cc0-f4dd-3b34-e496-8b5381ba2d70, /providers/Microsoft.Security/assessmentMetadata/08e628db-e2ed-4793-bc91-d13e6

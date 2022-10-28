@@ -1,7 +1,7 @@
 ---
 external help file: Az.Attestation-help.xml
 Module Name: Az.Attestation
-online version: https://docs.microsoft.com/powershell/module/az.attestation/get-azattestationdefaultprovider
+online version: https://learn.microsoft.com/powershell/module/az.attestation/get-azattestationdefaultprovider
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Get-AzAttestationDefaultProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Get-AzAttestationDefaultProvider.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get the default provider by location.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.attestation/get-azattestationdefaultprovider) for up-to-date information.
 
 ## SYNTAX
 
@@ -57,12 +60,12 @@ Get-AzAttestationDefaultProvider
 ```
 
 ```output
-SystemDataCreatedAt          : 
-SystemDataCreatedBy          : 
-SystemDataCreatedByType      : 
-SystemDataLastModifiedAt     : 
-SystemDataLastModifiedBy     : 
-SystemDataLastModifiedByType : 
+SystemDataCreatedAt          :
+SystemDataCreatedBy          :
+SystemDataCreatedByType      :
+SystemDataLastModifiedAt     :
+SystemDataLastModifiedBy     :
+SystemDataLastModifiedByType :
 Value                        : {{
                                  "id": "/providers/Microsoft.Attestation/attestationProviders/sharedeus2",
                                  "name": "sharedeus2",

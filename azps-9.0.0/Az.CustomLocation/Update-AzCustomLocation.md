@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.CustomLocation
-online version: https://docs.microsoft.com/powershell/module/az.customlocation/update-azcustomlocation
+online version: https://learn.microsoft.com/powershell/module/az.customlocation/update-azcustomlocation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/help/Update-AzCustomLocation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/help/Update-AzCustomLocation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates a Custom Location with the specified Resource Name in the specified Resource Group and Subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.customlocation/update-azcustomlocation) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: D23BBF34-80C0-48B1-8E1C-6F345DEC61AD
-online version: https://docs.microsoft.com/powershell/module/az.websites/new-azwebappslot
+online version: https://learn.microsoft.com/powershell/module/az.websites/new-azwebappslot
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/New-AzWebAppSlot.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/New-AzWebAppSlot.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an Azure Web App slot.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/new-azwebappslot) for up-to-date information.
 
 ## SYNTAX
 
@@ -40,7 +43,7 @@ The command uses an existing App Service plan named ContosoServicePlan.
 ## PARAMETERS
 
 ### -AppServicePlan
-App Service Plan Name or App Service Plan Id. If the Slot and App Service Plan are in different Resource Groups, use the ID instead of the name. 
+App Service Plan Name or App Service Plan Id. If the Slot and App Service Plan are in different Resource Groups, use the ID instead of the name.
 The App Service Plan Id can be retrieved using:
 $asp = Get-AzAppServicePlan -ResourceGroup  myRG -Name MyWebapp
 $asp.id returns the App Service Plan Id.

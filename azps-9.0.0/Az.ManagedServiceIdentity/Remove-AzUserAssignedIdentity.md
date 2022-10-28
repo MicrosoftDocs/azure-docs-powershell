@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ManagedServiceIdentity
-online version: https://docs.microsoft.com/powershell/module/az.managedserviceidentity/remove-azuserassignedidentity
+online version: https://learn.microsoft.com/powershell/module/az.managedserviceidentity/remove-azuserassignedidentity
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServiceIdentity/help/Remove-AzUserAssignedIdentity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServiceIdentity/help/Remove-AzUserAssignedIdentity.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes the identity.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.managedserviceidentity/remove-azuserassignedidentity) for up-to-date information.
 
 ## SYNTAX
 

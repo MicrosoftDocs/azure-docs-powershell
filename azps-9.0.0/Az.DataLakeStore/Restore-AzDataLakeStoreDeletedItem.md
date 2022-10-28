@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
 ms.assetid: D231E9A0-DC1E-411B-A87A-56A8C767F6C5
-online version: https://docs.microsoft.com/powershell/module/az.datalakestore/restore-azdatalakestoredeleteditem
+online version: https://learn.microsoft.com/powershell/module/az.datalakestore/restore-azdatalakestoredeleteditem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Restore-AzDataLakeStoreDeletedItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Restore-AzDataLakeStoreDeletedItem.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Restore a deleted file or folder in Azure Data Lake.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/restore-azdatalakestoredeleteditem) for up-to-date information.
 
 ## SYNTAX
 
@@ -31,7 +34,7 @@ Restore-AzDataLakeStoreDeletedItem [-Account] <String> [-DeletedItem] <DataLakeS
 
 ## DESCRIPTION
 The **Restore-AzDataLakeStoreDeletedItem** cmdlet restores a deleted file or folder in Data Lake Store. Requires the path of deleted item in trash returned by Get-AzDataLakeStoreDeletedItem.
-Caution: Undeleting files is a best effort operation. There are no guarantees that a file can be restored once it is deleted. The use of this API is enabled via whitelisting. 
+Caution: Undeleting files is a best effort operation. There are no guarantees that a file can be restored once it is deleted. The use of this API is enabled via whitelisting.
 If your ADL account is not whitelisted, then using this api will throw Not implemented exception. For further information and assistance please contact Microsoft support.
 
 ## EXAMPLES
@@ -104,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Destination
-The destination path to where the deleted file or folder should be restored. 
+The destination path to where the deleted file or folder should be restored.
 
 ```yaml
 Type: System.String

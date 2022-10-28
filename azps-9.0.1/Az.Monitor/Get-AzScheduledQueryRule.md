@@ -1,7 +1,7 @@
 ---
 external help file: Az.ScheduledQueryRule.psm1-help.xml
 Module Name: Az.Monitor
-online version: https://docs.microsoft.com/powershell/module/az.monitor/get-azscheduledqueryrule
+online version: https://learn.microsoft.com/powershell/module/az.monitor/get-azscheduledqueryrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzScheduledQueryRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzScheduledQueryRule.md

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/initialize-azrecoveryservicesbackupprotectableitem
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/initialize-azrecoveryservicesbackupprotectableitem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Initialize-AzRecoveryServicesBackupProtectableItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Initialize-AzRecoveryServicesBackupProtectableItem.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 This command triggers the discovery of any unprotected items of the given workload type in the given container. If the DB application is not auto-protected use this command to discover new DBs whenever they are added and proceed to protect them.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/initialize-azrecoveryservicesbackupprotectableitem) for up-to-date information.
 
 ## SYNTAX
 

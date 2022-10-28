@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/update-azvirtualhub
+online version: https://learn.microsoft.com/powershell/module/az.network/update-azvirtualhub
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVirtualHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVirtualHub.md
@@ -61,7 +61,7 @@ ResourceGroupName         : testRG
 Name                      : westushub
 Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub
 AddressPrefix             : 10.0.2.0/24
-RouteTable                : 
+RouteTable                :
 VirtualNetworkConnections : {}
 Location                  : West US
 Sku                  : Standard
@@ -106,7 +106,7 @@ This example is similar to Example 1, but also attaches a route table to the vir
 New-AzResourceGroup -Location "West US" -Name "testRG"
 $virtualWan = New-AzVirtualWan -ResourceGroupName "testRG" -Name "myVirtualWAN" -Location "West US"
 New-AzVirtualHub -VirtualWan $virtualWan -ResourceGroupName "testRG" -Name "westushub" -AddressPrefix "10.0.1.0/24"
-Update-AzVirtualHub -ResourceGroupName "testRG" -Name "westushub" -HubRoutingPreference "VpnGateway"    
+Update-AzVirtualHub -ResourceGroupName "testRG" -Name "westushub" -HubRoutingPreference "VpnGateway"
 ```
 
 ```output
@@ -117,7 +117,7 @@ Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG
 AddressPrefix             : 10.0.1.0/24
 RouteTable                :
 Location                  : West US
-Sku                  : Standard 
+Sku                  : Standard
 HubRoutingPreference      : VpnGateway
 VirtualNetworkConnections : {}
 Location                  : West US

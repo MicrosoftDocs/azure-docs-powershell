@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupproperty
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupproperty
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupProperty.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets Backup properties.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupproperty) for up-to-date information.
 
 ## SYNTAX
 
@@ -51,7 +54,7 @@ Accept wildcard characters: False
 ### -Vault
 Specifies the name of the vault.
 The vault must be an **AzureRmRecoveryServicesVault** object.
-Run the [Get-AzRecoveryServicesVault](https://docs.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesvault) cmdlet to get the recovery services vault details.
+Run the [Get-AzRecoveryServicesVault](https://learn.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesvault) cmdlet to get the recovery services vault details.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.ARSVault

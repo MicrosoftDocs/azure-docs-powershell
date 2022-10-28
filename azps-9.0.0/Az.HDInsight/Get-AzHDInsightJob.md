@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
 Module Name: Az.HDInsight
 ms.assetid: AFE90092-8B25-4897-8D3A-3E732CC5CBA6
-online version: https://docs.microsoft.com/powershell/module/az.hdinsight/get-azhdinsightjob
+online version: https://learn.microsoft.com/powershell/module/az.hdinsight/get-azhdinsightjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Get-AzHDInsightJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Get-AzHDInsightJob.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the list of jobs from a cluster and lists them in reverse chronological order, or retrieves a specific job.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hdinsight/get-azhdinsightjob) for up-to-date information.
 
 ## SYNTAX
 

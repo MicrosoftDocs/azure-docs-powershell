@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Attestation.dll-Help.xml
 Module Name: Az.Attestation
-online version: https://docs.microsoft.com/powershell/module/az.attestation/new-azattestation
+online version: https://learn.microsoft.com/powershell/module/az.attestation/new-azattestation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/New-AzAttestation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/New-AzAttestation.md
@@ -32,7 +32,7 @@ The New-AzAttestation cmdlet creates an attestation in the specified resource gr
 ```powershell
 New-AzAttestation -Name pshtest4 -ResourceGroupName psh-test-rg -Location "East US" -Tags @{Test="true";CreationYear="2020"}
 ```
-```output                                                                                                                                                                                         
+```output
 Id                : subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/psh-test-rg/providers/Microsoft.Attestation/attestationProviders/pshtest4
 Location          : East US
 ResourceGroupName : psh-test-rg
@@ -54,7 +54,7 @@ Create a new instance of an Attestation Provider named *pshtest4* with a couple 
 ```powershell
 New-AzAttestation -Name pshtest3 -ResourceGroupName psh-test-rg -Location "East US" -PolicySignersCertificateFile .\cert1.pem
 ```
-```output                                                                                                                                                
+```output
 Id                : subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/psh-test-rg/providers/Microsoft.Attestation/attestationProviders/pshtest3
 Location          : East US
 ResourceGroupName : psh-test-rg

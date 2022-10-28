@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Nginx
-online version: https://docs.microsoft.com/powershell/module/az.Nginx/new-AzNginxNetworkProfileObject
+online version: https://learn.microsoft.com/powershell/module/az.Nginx/new-AzNginxNetworkProfileObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/help/New-AzNginxNetworkProfileObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/help/New-AzNginxNetworkProfileObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for NginxNetworkProfile.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.nginx/new-aznginxnetworkprofileobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -87,16 +90,16 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-`FRONTENDIPCONFIGURATION <INginxFrontendIPConfiguration>`: 
-  - `[PrivateIPAddress <INginxPrivateIPAddress[]>]`: 
-    - `[PrivateIPAddress <String>]`: 
-    - `[PrivateIPAllocationMethod <NginxPrivateIPAllocationMethod?>]`: 
-    - `[SubnetId <String>]`: 
-  - `[PublicIPAddress <INginxPublicIPAddress[]>]`: 
-    - `[Id <String>]`: 
+`FRONTENDIPCONFIGURATION <INginxFrontendIPConfiguration>`:
+  - `[PrivateIPAddress <INginxPrivateIPAddress[]>]`:
+    - `[PrivateIPAddress <String>]`:
+    - `[PrivateIPAllocationMethod <NginxPrivateIPAllocationMethod?>]`:
+    - `[SubnetId <String>]`:
+  - `[PublicIPAddress <INginxPublicIPAddress[]>]`:
+    - `[Id <String>]`:
 
-`NETWORKINTERFACECONFIGURATION <INginxNetworkInterfaceConfiguration>`: 
-  - `[SubnetId <String>]`: 
+`NETWORKINTERFACECONFIGURATION <INginxNetworkInterfaceConfiguration>`:
+  - `[SubnetId <String>]`:
 
 ## RELATED LINKS
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
 Module Name: Az.HDInsight
 ms.assetid: 87B3C102-0A8C-4FFA-8429-594D2360AC32
-online version: https://docs.microsoft.com/powershell/module/az.hdinsight/remove-azhdinsightcluster
+online version: https://learn.microsoft.com/powershell/module/az.hdinsight/remove-azhdinsightcluster
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Remove-AzHDInsightCluster.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Remove-AzHDInsightCluster.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes the specified HDInsight cluster from the current subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hdinsight/remove-azhdinsightcluster) for up-to-date information.
 
 ## SYNTAX
 

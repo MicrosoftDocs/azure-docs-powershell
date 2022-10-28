@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 15973FE8-16C1-4B71-A3A8-6D6F67A96FDF
-online version: https://docs.microsoft.com/powershell/module/az.storage/set-azcurrentstorageaccount
+online version: https://learn.microsoft.com/powershell/module/az.storage/set-azcurrentstorageaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzCurrentStorageAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzCurrentStorageAccount.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies the current Storage account of the specified subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/set-azcurrentstorageaccount) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 14814BF3-51AF-4E51-A8A6-661825BD88D1
-online version: https://docs.microsoft.com/powershell/module/az.sql/Set-AzSqlServerAudit
+online version: https://learn.microsoft.com/powershell/module/az.sql/Set-AzSqlServerAudit
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlServerAudit.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlServerAudit.md
@@ -118,13 +118,13 @@ Accept wildcard characters: False
 ```
 
 ### -AuditActionGroup
-The recommended set of action groups to use is the following combination - this will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:  
-  
-"BATCH_COMPLETED_GROUP",  
-"SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP",  
-"FAILED_DATABASE_AUTHENTICATION_GROUP"  
+The recommended set of action groups to use is the following combination - this will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:
+
+"BATCH_COMPLETED_GROUP",
+"SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP",
+"FAILED_DATABASE_AUTHENTICATION_GROUP"
 This above combination is also the set that is configured by default. These groups cover all SQL statements and stored procedures executed against the database, and should not be used in combination with other groups as this will result in duplicate audit logs.
-For more information, see https://docs.microsoft.com/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups.
+For more information, see https://learn.microsoft.com/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Sql.Auditing.Model.AuditActionGroups[]

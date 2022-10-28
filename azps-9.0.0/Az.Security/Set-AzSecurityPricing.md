@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: https://docs.microsoft.com/powershell/module/az.security/Set-AzSecurityPricing
+online version: https://learn.microsoft.com/powershell/module/az.security/Set-AzSecurityPricing
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Set-AzSecurityPricing.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Set-AzSecurityPricing.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 
 Enables or disables Azure Defender plans for a subscription in Azure Security Center.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/set-azsecuritypricing) for up-to-date information.
 
 ## SYNTAX
 
@@ -31,7 +34,7 @@ Set-AzSecurityPricing -InputObject <PSSecurityPricing> [-DefaultProfile <IAzureC
 
 Enable or disable any of the Azure Defender plans for a subscription.
 
-For details about Azure Defender and the available plans, see [Introduction to Azure Defender](https://docs.microsoft.com/azure/security-center/azure-defender).
+For details about Azure Defender and the available plans, see [Introduction to Azure Defender](https://learn.microsoft.com/azure/security-center/azure-defender).
 
 ## EXAMPLES
 

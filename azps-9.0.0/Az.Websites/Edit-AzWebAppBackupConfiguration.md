@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.Websites
 ms.assetid: BFC38930-DBB4-4EBB-8E29-73B901FAF486
-online version: https://docs.microsoft.com/powershell/module/az.websites/edit-azwebappbackupconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.websites/edit-azwebappbackupconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Edit-AzWebAppBackupConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Edit-AzWebAppBackupConfiguration.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Edit-AzWebAppBackupConfiguration
 
 ## SYNOPSIS
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/edit-azwebappbackupconfiguration) for up-to-date information.
 
 ## SYNTAX
 

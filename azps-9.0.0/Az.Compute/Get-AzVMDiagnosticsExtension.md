@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: D5BEA683-44AE-4D71-827D-02A03F0BEAE9
-online version: https://docs.microsoft.com/powershell/module/az.compute/get-azvmdiagnosticsextension
+online version: https://learn.microsoft.com/powershell/module/az.compute/get-azvmdiagnosticsextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMDiagnosticsExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMDiagnosticsExtension.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the settings of the Diagnostics extension on a virtual machine.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/get-azvmdiagnosticsextension) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 3E7B9EFA-8BC2-46EB-9AD7-43EAB7FF3891
-online version: https://docs.microsoft.com/powershell/module/az.compute/set-azvmssosprofile
+online version: https://learn.microsoft.com/powershell/module/az.compute/set-azvmssosprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVmssOsProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVmssOsProfile.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Sets the VMSS operating system profile properties.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/set-azvmssosprofile) for up-to-date information.
 
 ## SYNTAX
 
@@ -54,7 +57,7 @@ $vnetname = "myVnet";
 $vnetAddress = "10.0.0.0/16";
 $subnetname = "default-slb";
 $subnetAddress = "10.0.2.0/24";
-$securePassword = "<Password>" | ConvertTo-SecureString -AsPlainText -Force;  
+$securePassword = "<Password>" | ConvertTo-SecureString -AsPlainText -Force;
 $cred = New-Object System.Management.Automation.PSCredential ("<Username>", $securePassword);
 
 # VMSS Flex requires explicit outbound access.
@@ -150,7 +153,7 @@ Set-AzVmssStorageProfile $vmssConfig `
     -ImageReferencePublisher "MicrosoftWindowsServer" `
     -ImageReferenceOffer "WindowsServer" `
     -ImageReferenceSku "2022-datacenter-azure-edition-core-smalldisk" `
-    -ImageReferenceVersion "latest";  
+    -ImageReferenceVersion "latest";
 
 # Set up information for authenticating with the virtual machine.
 Set-AzVmssOsProfile $vmssConfig `
@@ -233,7 +236,7 @@ Linux: Username must only contain letters, numbers, hyphens, and underscores and
 **Disallowed values:** \"administrator\", \"admin\", \"user\", \"user1\", \"test\", \"user2\", \"test1\", \"user3\", \"admin1\", \"1\", \"123\", \"a\", \"actuser\", \"adm\", \"admin2\", \"aspnet\", \"backup\", \"console\", \"david\", \"guest\", \"john\", \"owner\", \"root\", \"server\", \"sql\", \"support\", \"support_388945a0\", \"sys\", \"test2\", \"test3\", \"user4\", \"user5\". <br>
 **Minimum-length:** 1  character <br>
 **Max-length:** 20 characters for Windows, 64 characters for Linux <br>
-For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/devops/organizations/settings/naming-restrictions).
+For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://learn.microsoft.com/azure/devops/organizations/settings/naming-restrictions).
 
 ```yaml
 Type: System.String
@@ -407,7 +410,7 @@ Accept wildcard characters: False
 
 ### -TimeZone
 Specifies the time zone of the virtual machine. e.g. \"Pacific Standard Time\". <br>
-Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
+Possible values can be [TimeZoneInfo.Id](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
 
 ```yaml
 Type: System.String

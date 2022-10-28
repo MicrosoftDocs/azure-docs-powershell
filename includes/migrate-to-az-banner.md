@@ -1,9 +1,9 @@
 ---
 ms.topic: include
-ms.date: 02/12/2021
+ms.date: 10/25/2022
 ---
 
-> [!IMPORTANT]
+> [!CAUTION]
 > Because Az PowerShell modules now have all the capabilities of AzureRM PowerShell modules and more,
 > we'll retire AzureRM PowerShell modules on 29 February 2024.
 >

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: 67EE6EFB-3297-4D21-A6EC-B03F5FE82F84
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/set-azapimanagementoperation
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/set-azapimanagementoperation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Set-AzApiManagementOperation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Set-AzApiManagementOperation.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Sets API operation details.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/set-azapimanagementoperation) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SpringCloud
-online version: https://docs.microsoft.com/powershell/module/az.SpringCloud/deploy-azSpringCloudapp
+online version: https://learn.microsoft.com/powershell/module/az.SpringCloud/deploy-azSpringCloudapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Deploy-AzSpringCloudApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/help/Deploy-AzSpringCloudApp.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deploy the build file to an existing deployment.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.springcloud/deploy-azspringcloudapp) for up-to-date information.
 
 ## SYNTAX
 

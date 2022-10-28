@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 115A7612-4856-47AE-AEE4-918350CD7009
-online version: https://docs.microsoft.com/powershell/module/az.resources/set-azroledefinition
+online version: https://learn.microsoft.com/powershell/module/az.resources/set-azroledefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Set-AzRoleDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Set-AzRoleDefinition.md
@@ -16,6 +16,9 @@ Provide the modified role definition either as a JSON file or as a PSRoleDefinit
 First, use the Get-AzRoleDefinition command to retrieve the custom role that you wish to modify.
 Then, modify the properties that you wish to change.
 Finally, save the role definition using this command.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/set-azroledefinition) for up-to-date information.
 
 ## SYNTAX
 

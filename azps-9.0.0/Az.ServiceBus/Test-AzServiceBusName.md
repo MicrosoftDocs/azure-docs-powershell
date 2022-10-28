@@ -1,7 +1,7 @@
 ---
 external help file: Az.ServiceBus-help.xml
 Module Name: Az.ServiceBus
-online version: https://docs.microsoft.com/powershell/module/az.servicebus/test-azservicebusname
+online version: https://learn.microsoft.com/powershell/module/az.servicebus/test-azservicebusname
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Test-AzServiceBusName.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Test-AzServiceBusName.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Checks availability of a namespace name or disaster recovery alias.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/test-azservicebusname) for up-to-date information.
 
 ## SYNTAX
 

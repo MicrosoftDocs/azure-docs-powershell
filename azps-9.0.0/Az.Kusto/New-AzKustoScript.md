@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Kusto
-online version: https://docs.microsoft.com/powershell/module/az.kusto/new-azkustoscript
+online version: https://learn.microsoft.com/powershell/module/az.kusto/new-azkustoscript
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/help/New-AzKustoScript.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/help/New-AzKustoScript.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a Kusto database script.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.kusto/new-azkustoscript) for up-to-date information.
 
 ## SYNTAX
 
@@ -318,7 +321,7 @@ To create the parameters described below, construct a hash table containing the 
 
 
 PARAMETER `<IScript>`: Class representing a database script.
-  - `[AzureAsyncOperation <String>]`: 
+  - `[AzureAsyncOperation <String>]`:
   - `[Content <String>]`: The script content. This property should be used when the script is provide inline and not through file in a SA. Must not be used together with scriptUrl and scriptUrlSasToken properties.
   - `[ContinueOnError <Boolean?>]`: Flag that indicates whether to continue if one of the command fails.
   - `[ForceUpdateTag <String>]`: A unique string. If changed the script will be applied again.

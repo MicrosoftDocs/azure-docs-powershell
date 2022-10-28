@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: F6EA099A-D588-49AE-9D2C-865BC32685BA
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageaccountnameavailability
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageaccountnameavailability
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageAccountNameAvailability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageAccountNameAvailability.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Checks the availability of a Storage account name.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/get-azstorageaccountnameavailability) for up-to-date information.
 
 ## SYNTAX
 

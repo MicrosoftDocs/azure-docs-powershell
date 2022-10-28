@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: 7AAF2ACC-84ED-449C-B1E8-F074463F44EB
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/remove-azintegrationaccountmap
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/remove-azintegrationaccountmap
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Remove-AzIntegrationAccountMap.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Remove-AzIntegrationAccountMap.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an integration account map.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logicapp/remove-azintegrationaccountmap) for up-to-date information.
 
 ## SYNTAX
 

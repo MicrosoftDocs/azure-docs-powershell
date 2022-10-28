@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataBox
-online version: https://docs.microsoft.com/powershell/module/az.DataBox/new-AzDataBoxManagedDiskDetailsObject
+online version: https://learn.microsoft.com/powershell/module/az.DataBox/new-AzDataBoxManagedDiskDetailsObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/New-AzDataBoxManagedDiskDetailsObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/New-AzDataBoxManagedDiskDetailsObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for ManagedDiskDetails.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.databox/new-azdataboxmanageddiskdetailsobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -24,14 +27,14 @@ Create an in-memory object for ManagedDiskDetails.
 
 ## EXAMPLES
 
-### Example 1: ManagedDisk object 
+### Example 1: ManagedDisk object
 ```powershell
 New-AzDataBoxManagedDiskDetailsObject -ResourceGroupId "/subscriptions/SubscriptionId/resourceGroups/resourceGroupName" -StagingStorageAccountId "/subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.Storage/storageAccounts/stagingAccountName" -DataAccountType "ManagedDisk"
 ```
 
 ```output
-DataAccountType SharePassword ResourceGroupId                                                StagingStorageAccountId                                                                                                      
---------------- ------------- ---------------                                                -----------------------                                                                                                      
+DataAccountType SharePassword ResourceGroupId                                                StagingStorageAccountId
+--------------- ------------- ---------------                                                -----------------------
 ManagedDisk                   /subscriptions/SubscriptionId/resourceGroups/resourceGroupName /subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.Storage/storageAccounts/stagingAccountName
 ```
 Creates a in-memory managed disk object

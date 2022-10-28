@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-aznetworkservicetag
+online version: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkservicetag
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkServiceTag.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkServiceTag.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the list of service tag information resources.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-aznetworkservicetag) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -21,7 +24,7 @@ Get-AzNetworkServiceTag -Location <String> [-DefaultProfile <IAzureContextContai
 ## DESCRIPTION
 The **Get-AzNetworkServiceTag** cmdlet gets the list of service tag information resources.
 
-Please note that the Azure region information you specify will be used as a reference for version (not as a filter based on location). 
+Please note that the Azure region information you specify will be used as a reference for version (not as a filter based on location).
 For example, even if you specify `-Location eastus2` you will get the list of service tags with prefix details across all regions but limited to the cloud that your subscription belongs to (i.e. Public, US government, China or Germany).
 
 ## EXAMPLES

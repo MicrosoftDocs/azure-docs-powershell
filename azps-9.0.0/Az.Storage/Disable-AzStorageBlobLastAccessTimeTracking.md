@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/disable-azstoragebloblastaccesstimetracking
+online version: https://learn.microsoft.com/powershell/module/az.storage/disable-azstoragebloblastaccesstimetracking
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Disable-AzStorageBlobLastAccessTimeTracking.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Disable-AzStorageBlobLastAccessTimeTracking.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Disable last access time tracking for the Azure Storage Blob service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/disable-azstoragebloblastaccesstimetracking) for up-to-date information.
 
 ## SYNTAX
 
@@ -33,7 +36,7 @@ The **Disable-AzStorageBlobDeleteRetentionPolicy** cmdlet disables delete retent
 
 ### Example 1: Disable last access time tracking for the Blob service
 ```
-C:\PS>Disable-AzStorageBlobLastAccessTimeTracking -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" 
+C:\PS>Disable-AzStorageBlobLastAccessTimeTracking -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount"
 ```
 
 This command disables last access time tracking for the Blob service.

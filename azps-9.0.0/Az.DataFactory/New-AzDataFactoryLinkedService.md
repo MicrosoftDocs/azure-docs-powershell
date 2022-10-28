@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 8CD2BE3E-2FA1-4EAB-BC01-B1E1E3203FF1
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/new-azdatafactorylinkedservice
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/new-azdatafactorylinkedservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/New-AzDataFactoryLinkedService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/New-AzDataFactoryLinkedService.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Links a data store or a cloud service to an Azure Data Factory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/new-azdatafactorylinkedservice) for up-to-date information.
 
 ## SYNTAX
 
@@ -32,10 +35,10 @@ New-AzDataFactoryLinkedService [-DataFactory] <PSDataFactory> [[-Name] <String>]
 The **New-AzDataFactoryLinkedService** cmdlet links a data store or a cloud service to Azure Data Factory.
 If you specify a name for a linked service that already exists, this cmdlet prompts you for confirmation before it replaces the linked service.
 If you specify the *Force* parameter, the cmdlet replaces the existing linked service without confirmation.
-Perform these operations in the following order: 
-- Create a data factory. 
-- Create linked services. 
-- Create datasets. 
+Perform these operations in the following order:
+- Create a data factory.
+- Create linked services.
+- Create datasets.
 - Create a pipeline.
 
 ## EXAMPLES

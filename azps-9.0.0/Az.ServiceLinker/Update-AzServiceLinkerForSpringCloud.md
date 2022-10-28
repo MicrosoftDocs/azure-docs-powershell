@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ServiceLinker
-online version: https://docs.microsoft.com/powershell/module/az.servicelinker/update-azservicelinkerforspringcloud
+online version: https://learn.microsoft.com/powershell/module/az.servicelinker/update-azservicelinkerforspringcloud
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Update-AzServiceLinkerForSpringCloud.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/help/Update-AzServiceLinkerForSpringCloud.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Operation to update an existing link in spring cloud.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicelinker/update-azservicelinkerforspringcloud) for up-to-date information.
 
 ## SYNTAX
 
@@ -39,7 +42,7 @@ Operation to update an existing link in spring cloud.
 ### Example 1: Update linker
 ```powershell
 $target=New-AzServiceLinkerAzureResourceObject -Id /subscriptions/937bc588-a144-4083-8612-5f9ffbbddb14/resourceGroups/servicelinker-test-group/providers/Microsoft.DBforPostgreSQL/servers/servicelinker-postgresql/databases/test
-$authInfo=New-AzServiceLinkerSecretAuthInfoObject -Name username -SecretValue password 
+$authInfo=New-AzServiceLinkerSecretAuthInfoObject -Name username -SecretValue password
 Update-AzServiceLinkerForSpringCloud -ServiceName servicelinker-springcloud -AppName appconfiguration -DeploymentName "default" -ResourceGroupName servicelinker-test-group  -TargetService $target -AuthInfo $authInfo -ClientType 'none' -Name postgres_connection
 ```
 

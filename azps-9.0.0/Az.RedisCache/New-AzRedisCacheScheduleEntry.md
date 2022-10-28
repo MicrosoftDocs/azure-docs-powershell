@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
 ms.assetid: ACB53C23-99E0-4A0A-A44E-0D3FDB12450B
-online version: https://docs.microsoft.com/powershell/module/az.rediscache/new-azrediscachescheduleentry
+online version: https://learn.microsoft.com/powershell/module/az.rediscache/new-azrediscachescheduleentry
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/New-AzRedisCacheScheduleEntry.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/New-AzRedisCacheScheduleEntry.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a schedule entry.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.rediscache/new-azrediscachescheduleentry) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,14 +41,14 @@ This command creates a **PSScheduleEntry** object that represents a weekend sche
 ### -DayOfWeek
 Specifies the day of the week for the schedule entry.
 The acceptable values for this parameter are:
-- Everyday 
-- Weekend 
-- Monday 
-- Tuesday 
-- Wednesday 
-- Thursday 
-- Friday 
-- Saturday 
+- Everyday
+- Weekend
+- Monday
+- Tuesday
+- Wednesday
+- Thursday
+- Friday
+- Saturday
 - Sunday
 
 ```yaml

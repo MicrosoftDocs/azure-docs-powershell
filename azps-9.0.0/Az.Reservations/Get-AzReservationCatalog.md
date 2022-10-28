@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Reservations
-online version: https://docs.microsoft.com/powershell/module/az.reservations/get-azreservationcatalog
+online version: https://learn.microsoft.com/powershell/module/az.reservations/get-azreservationcatalog
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Get-AzReservationCatalog.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Get-AzReservationCatalog.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get the regions and skus that are available for RI purchase for the specified Azure subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.reservations/get-azreservationcatalog) for up-to-date information.
 
 ## SYNTAX
 
@@ -41,14 +44,14 @@ Get-AzReservationCatalog -SubscriptionId "10000000-aaaa-bbbb-cccc-100000000001" 
 ```output
 ResourceType    Terms           Name                   Locations
 ------------    -----           ----                   ---------
-virtualMachines {P1Y, P3Y, P5Y} Standard_B12ms         {westus} 
-virtualMachines {P1Y, P3Y, P5Y} Standard_B16ms         {westus} 
-virtualMachines {P1Y, P3Y, P5Y} Standard_B1ls          {westus} 
-virtualMachines {P1Y, P3Y, P5Y} Standard_B1ms          {westus} 
-virtualMachines {P1Y, P3Y, P5Y} Standard_B1s           {westus} 
-virtualMachines {P1Y, P3Y, P5Y} Standard_B20ms         {westus} 
-virtualMachines {P1Y, P3Y, P5Y} Standard_B2ms          {westus} 
-virtualMachines {P1Y, P3Y, P5Y} Standard_B2s           {westus} 
+virtualMachines {P1Y, P3Y, P5Y} Standard_B12ms         {westus}
+virtualMachines {P1Y, P3Y, P5Y} Standard_B16ms         {westus}
+virtualMachines {P1Y, P3Y, P5Y} Standard_B1ls          {westus}
+virtualMachines {P1Y, P3Y, P5Y} Standard_B1ms          {westus}
+virtualMachines {P1Y, P3Y, P5Y} Standard_B1s           {westus}
+virtualMachines {P1Y, P3Y, P5Y} Standard_B20ms         {westus}
+virtualMachines {P1Y, P3Y, P5Y} Standard_B2ms          {westus}
+virtualMachines {P1Y, P3Y, P5Y} Standard_B2s           {westus}
 virtualMachines {P1Y, P3Y, P5Y} Standard_B4ms          {westus}
 ```
 
@@ -62,22 +65,22 @@ Get-AzReservationCatalog -SubscriptionId "10000000-aaaa-bbbb-cccc-100000000001" 
 ```output
 ResourceType Terms           Name                            Locations
 ------------ -----           ----                            ---------
-SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_standard_3-4_vcpu_vm   
-SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_standard_1-2_vcpu_vm   
-SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_standard_5plus_vcpu_vm 
-SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_priority_1-2_vcpu_vm   
-SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_priority_5plus_vcpu_vm 
-SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_priority_3-4_vcpu_vm   
-SuseLinux    {P1Y, P3Y, P5Y} sles_standard_5plus_vcpu_vm     
-SuseLinux    {P1Y, P3Y, P5Y} sles_standard_3-4_vcpu_vm       
-SuseLinux    {P1Y, P3Y, P5Y} sles_standard_1-2_vcpu_vm       
+SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_standard_3-4_vcpu_vm
+SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_standard_1-2_vcpu_vm
+SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_standard_5plus_vcpu_vm
+SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_priority_1-2_vcpu_vm
+SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_priority_5plus_vcpu_vm
+SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_priority_3-4_vcpu_vm
+SuseLinux    {P1Y, P3Y, P5Y} sles_standard_5plus_vcpu_vm
+SuseLinux    {P1Y, P3Y, P5Y} sles_standard_3-4_vcpu_vm
+SuseLinux    {P1Y, P3Y, P5Y} sles_standard_1-2_vcpu_vm
 SuseLinux    {P1Y, P3Y, P5Y} sles_priority_6_vcpu_vm
-SuseLinux    {P1Y, P3Y, P5Y} sles_priority_2-4_vcpu_vm       
+SuseLinux    {P1Y, P3Y, P5Y} sles_priority_2-4_vcpu_vm
 SuseLinux    {P1Y, P3Y, P5Y} sles_priority_1_vcpu_vm
-SuseLinux    {P1Y, P3Y, P5Y} sles_priority_8plus_vcpu_vm     
-SuseLinux    {P1Y, P3Y, P5Y} sles_sap_priority_5plus_vcpu_vm 
-SuseLinux    {P1Y, P3Y, P5Y} sles_sap_priority_1-2_vcpu_vm   
-SuseLinux    {P1Y, P3Y, P5Y} sles_sap_priority_3-4_vcpu_vm 
+SuseLinux    {P1Y, P3Y, P5Y} sles_priority_8plus_vcpu_vm
+SuseLinux    {P1Y, P3Y, P5Y} sles_sap_priority_5plus_vcpu_vm
+SuseLinux    {P1Y, P3Y, P5Y} sles_sap_priority_1-2_vcpu_vm
+SuseLinux    {P1Y, P3Y, P5Y} sles_sap_priority_3-4_vcpu_vm
 ```
 
 This command gets a catlog of reserved resource type skus without location
@@ -90,10 +93,10 @@ Get-AzReservationCatalog -SubscriptionId "10000000-aaaa-bbbb-cccc-100000000001" 
 ```output
 ResourceType           Terms           Name                                                          Locations
 ------------           -----           ----                                                          ---------
-VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.10core     
-VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.416core    
-VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.2core      
-VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.36core     
+VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.10core
+VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.416core
+VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.2core
+VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.36core
 VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.80core
 VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.72core
 VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.sharedcore

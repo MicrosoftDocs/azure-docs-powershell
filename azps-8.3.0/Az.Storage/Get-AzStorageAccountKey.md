@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: A57A9EFA-47AC-44D8-BFA7-CDE0E2A612B3
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageaccountkey
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageaccountkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageAccountKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageAccountKey.md
@@ -43,12 +43,12 @@ PS C:\>(Get-AzStorageAccountKey -ResourceGroupName "RG01" -Name "mystorageaccoun
 
 KeyName Value             Permissions CreationTime
 ------- -----             ----------- ------------
-key1    <KeyValue>        Full             
+key1    <KeyValue>        Full
 
-This command gets a specific key value for a Storage account. 
+This command gets a specific key value for a Storage account.
 PS C:\>(Get-AzStorageAccountKey -ResourceGroupName "RG01" -Name "mystorageaccount")[0].Value
 
-<KeyValue> 
+<KeyValue>
 ```
 
 ### Example 3: Lists the access keys for a Storage account, include the Kerberos keys (if active directory enabled)
@@ -77,8 +77,8 @@ Accept wildcard characters: False
 
 ### -ListKerbKey
 Lists the Kerberos keys (if active directory enabled) for the specified storage account.
-Kerberos key is generated per storage account for Azure Files identity based authentication either with Azure Active Directory Domain Service (Azure AD DS) or Active Directory Domain Service (AD DS). 
-It is used as the password of the identity registered in the domain service that represents the storage account. 
+Kerberos key is generated per storage account for Azure Files identity based authentication either with Azure Active Directory Domain Service (Azure AD DS) or Active Directory Domain Service (AD DS).
+It is used as the password of the identity registered in the domain service that represents the storage account.
 Kerberos key does not provide access permission to perform any control or data plane read or write operations against the storage account.
 
 ```yaml

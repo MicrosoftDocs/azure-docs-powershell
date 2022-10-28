@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
 ms.assetid: E247C6DF-B53D-487E-AAA2-551FCBFD77E7
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupschedulepolicyobject
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupschedulepolicyobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupSchedulePolicyObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupSchedulePolicyObject.md
@@ -30,8 +30,8 @@ It is temporary object that you can manipulate and use with the New-AzRecoverySe
 
 ### Example 1: Set the schedule frequency to weekly
 ```powershell
-$RetPol = Get-AzRecoveryServicesBackupRetentionPolicyObject -WorkloadType "AzureVM" 
-$SchPol = Get-AzRecoveryServicesBackupSchedulePolicyObject -WorkloadType "AzureVM" 
+$RetPol = Get-AzRecoveryServicesBackupRetentionPolicyObject -WorkloadType "AzureVM"
+$SchPol = Get-AzRecoveryServicesBackupSchedulePolicyObject -WorkloadType "AzureVM"
 $SchPol.ScheduleRunFrequency = "Weekly"
 New-AzRecoveryServicesBackupProtectionPolicy -Name "NewPolicy" -WorkloadType AzureVM -RetentionPolicy $RetPol -SchedulePolicy $SchPol
 ```
@@ -43,7 +43,7 @@ The last command creates a backup protection policy with the updated schedule.
 
 ### Example 2: Set the backup time
 ```powershell
-$SchPol = Get-AzRecoveryServicesBackupSchedulePolicyObject -WorkloadType "AzureVM" 
+$SchPol = Get-AzRecoveryServicesBackupSchedulePolicyObject -WorkloadType "AzureVM"
 $SchPol.ScheduleRunTimes.RemoveAll()
 $DT = Get-Date
 $SchPol.ScheduleRunTimes.Add($DT.ToUniversalTime())
@@ -70,7 +70,7 @@ $schedulePolicy.ScheduleWindowDuration = 14
 
 The first command gets a base hourly **SchedulePolicyObject**, and then stores it in the $schedulePolicy variable.
 The second and third command fetches the timezone and updates the timezone in the $schedulePolicy.
-The fourth and fifth command initializes the schedule window start time and updates the $schedulePolicy. Please note the start time must be in UTC even if the timezone is not UTC. 
+The fourth and fifth command initializes the schedule window start time and updates the $schedulePolicy. Please note the start time must be in UTC even if the timezone is not UTC.
 The sixth and seventh command updates the interval (in hours) after which the backup will be retriggered on the same day, duration (in hours) for which the schedule will run.
 
 ### Example 4: Get enhanced hourly schedule for AzureVM policy
@@ -86,14 +86,14 @@ $schedulePolicy.HourlySchedule.ScheduleWindowDuration = 23
 
 The first command gets a base enhanced hourly **SchedulePolicyObject** for WorkloadType AzureVM, and then stores it in the $schedulePolicy variable.
 The second and third command fetches the India timezone and updates the timezone in the $schedulePolicy.
-The fourth and fifth command initializes the schedule window start time and updates the $schedulePolicy. Please note that the start time must be in UTC even if the timezone is not UTC. 
+The fourth and fifth command initializes the schedule window start time and updates the $schedulePolicy. Please note that the start time must be in UTC even if the timezone is not UTC.
 The sixth and seventh command updates the interval (in hours) after which the backup will be retriggered on the same day, duration (in hours) for which the schedule will run.
 
 ## PARAMETERS
 
 ### -BackupManagementType
 The class of resources being protected. The acceptable values for this parameter are:
-- AzureVM 
+- AzureVM
 - AzureStorage
 - AzureWorkload
 
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 
 ### -WorkloadType
 Workload type of the resource. The acceptable values for this parameter are:
-- AzureVM 
+- AzureVM
 - AzureFiles
 - MSSQL
 

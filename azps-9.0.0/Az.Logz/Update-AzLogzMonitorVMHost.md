@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Logz
-online version: https://docs.microsoft.com/powershell/module/az.logz/update-azlogzmonitorvmhost
+online version: https://learn.microsoft.com/powershell/module/az.logz/update-azlogzmonitorvmhost
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Logz/help/Update-AzLogzMonitorVMHost.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Logz/help/Update-AzLogzMonitorVMHost.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Sending request to update the collection when Logz.io agent has been installed on a VM for a given monitor.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logz/update-azlogzmonitorvmhost) for up-to-date information.
 
 ## SYNTAX
 

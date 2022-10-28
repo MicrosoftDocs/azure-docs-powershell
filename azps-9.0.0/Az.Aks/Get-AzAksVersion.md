@@ -1,7 +1,7 @@
 ---
 external help file: Az.Aks-help.xml
 Module Name: Az.Aks
-online version: https://docs.microsoft.com/powershell/module/az.aks/get-azaksversion
+online version: https://learn.microsoft.com/powershell/module/az.aks/get-azaksversion
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/Get-AzAksVersion.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/Get-AzAksVersion.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 List available version for creating managed Kubernetes cluster.
 The operation returns properties of each orchestrator including version, available upgrades and whether that version or upgrades are in preview.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.aks/get-azaksversion) for up-to-date information.
 
 ## SYNTAX
 

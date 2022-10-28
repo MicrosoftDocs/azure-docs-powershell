@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
 ms.assetid: 585D6C4D-EA80-4E6B-8C36-E7632430431F
-online version: https://docs.microsoft.com/powershell/module/az.datalakestore/remove-azdatalakestoreaccount
+online version: https://learn.microsoft.com/powershell/module/az.datalakestore/remove-azdatalakestoreaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Remove-AzDataLakeStoreAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Remove-AzDataLakeStoreAccount.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes a Data Lake Store account permanently.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/remove-azdatalakestoreaccount) for up-to-date information.
 
 ## SYNTAX
 

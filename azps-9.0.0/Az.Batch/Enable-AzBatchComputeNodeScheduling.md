@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 36EB9CE6-EAC9-471C-97D6-14E882E0F710
-online version: https://docs.microsoft.com/powershell/module/az.batch/enable-azbatchcomputenodescheduling
+online version: https://learn.microsoft.com/powershell/module/az.batch/enable-azbatchcomputenodescheduling
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Enable-AzBatchComputeNodeScheduling.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Enable-AzBatchComputeNodeScheduling.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Enables task scheduling on the specified compute node.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/enable-azbatchcomputenodescheduling) for up-to-date information.
 
 ## SYNTAX
 

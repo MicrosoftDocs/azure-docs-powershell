@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.RedisEnterpriseCache
-online version: https://docs.microsoft.com/powershell/module/az.redisenterprisecache/remove-azredisenterprisecache
+online version: https://learn.microsoft.com/powershell/module/az.redisenterprisecache/remove-azredisenterprisecache
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/help/Remove-AzRedisEnterpriseCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/help/Remove-AzRedisEnterpriseCache.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes a RedisEnterprise cache cluster.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.redisenterprisecache/remove-azredisenterprisecache) for up-to-date information.
 
 ## SYNTAX
 

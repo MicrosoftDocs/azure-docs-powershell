@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
 Module Name: Az.RecoveryServices
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesasrstorageclassification
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesasrstorageclassification
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrStorageClassification.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrStorageClassification.md
@@ -45,7 +45,7 @@ The **Get-AzRecoveryServicesAsrStorageClassification** cmdlet gets details of th
 $StorageClassifications = Get-AzRecoveryServicesAsrStorageClassification -Fabric $Fabric
 ```
 
-List the discovered storage classifications corresponding to the specified ASR fabric. 
+List the discovered storage classifications corresponding to the specified ASR fabric.
 
 ## PARAMETERS
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fabric
-Specifies an ASR fabric object. The cmdlet gets the details of discovered storage classifications corresponding to the specified ASR fabric. 
+Specifies an ASR fabric object. The cmdlet gets the details of discovered storage classifications corresponding to the specified ASR fabric.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRFabric

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: C54AC64C-DA21-443E-8CFE-6CCAC6152C2B
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azvpnclientrootcertificate
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/new-azvpnclientrootcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzVpnClientRootCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzVpnClientRootCertificate.md
@@ -75,7 +75,7 @@ Specifies a name for the new client root certificate.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -102,7 +102,7 @@ $CertificateText = for ($i=1; $i -lt $Text.Length -1 ; $i++){$Text\[$i\]}
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -116,12 +116,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### None
 This cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
+### Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate
 This cmdlet creates new instances of the **Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate** object.
 
 ## NOTES

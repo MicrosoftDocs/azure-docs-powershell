@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/add-aziothubmodule
+online version: https://learn.microsoft.com/powershell/module/az.iothub/add-aziothubmodule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Add-AzIotHubModule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Add-AzIotHubModule.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create a module on a target IoT device in an IoT Hub.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/add-aziothubmodule) for up-to-date information.
 
 ## SYNTAX
 
@@ -55,7 +58,7 @@ ConnectionState            : Disconnected
 ConnectionStateUpdatedTime : 1/1/0001 12:00:00 AM
 CloudToDeviceMessageCount  : 0
 Authentication             : Sas
-ManagedBy                  : 
+ManagedBy                  :
 ```
 
 Create a module on a target IoT device with default authorization (shared private key).

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ImportExport
-online version: https://docs.microsoft.com/powershell/module/az.importexport/new-azimportexport
+online version: https://learn.microsoft.com/powershell/module/az.importexport/new-azimportexport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/help/New-AzImportExport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/help/New-AzImportExport.md
@@ -857,12 +857,12 @@ DRIVELIST <IDriveStatus[]>: List of up to ten drives that comprise the job. The 
   - `[DriveHeaderHash <String>]`: The drive header hash value.
   - `[DriveId <String>]`: The drive's hardware serial number, without spaces.
   - `[ErrorLogUri <String>]`: A URI that points to the blob containing the error log for the data transfer operation.
-  - `[ManifestFile <String>]`: The relative path of the manifest file on the drive. 
+  - `[ManifestFile <String>]`: The relative path of the manifest file on the drive.
   - `[ManifestHash <String>]`: The Base16-encoded MD5 hash of the manifest file on the drive.
-  - `[ManifestUri <String>]`: A URI that points to the blob containing the drive manifest file. 
-  - `[PercentComplete <Int32?>]`: Percentage completed for the drive. 
-  - `[State <DriveState?>]`: The drive's current state. 
-  - `[VerboseLogUri <String>]`: A URI that points to the blob containing the verbose log for the data transfer operation. 
+  - `[ManifestUri <String>]`: A URI that points to the blob containing the drive manifest file.
+  - `[PercentComplete <Int32?>]`: Percentage completed for the drive.
+  - `[State <DriveState?>]`: The drive's current state.
+  - `[VerboseLogUri <String>]`: A URI that points to the blob containing the verbose log for the data transfer operation.
 
 ## RELATED LINKS
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/unregister-azstackhci
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/unregister-azstackhci
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Unregister-AzStackHCI.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Unregister-AzStackHCI.md
@@ -29,7 +29,7 @@ The registered information available on the cluster is used to unregister the cl
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 Unregister-AzStackHCI
 ```
@@ -51,7 +51,7 @@ Result: Success
 
 Invoking from the management node
 
-### Example 3: 
+### Example 3:
 ```powershell
 Unregister-AzStackHCI -SubscriptionId "12a0f531-56cb-4340-9501-257726d741fd" -ArmAccessToken etyer..ere= -GraphAccessToken acyee..rerrer -AccountId user1@corp1.com -ResourceName DemoHCICluster3 -ResourceGroupName DemoHCIRG -Confirm:$False
 ```
@@ -62,7 +62,7 @@ Result: Success
 
 Invoking from WAC
 
-### Example 4: 
+### Example 4:
 ```powershell
 Unregister-AzStackHCI -SubscriptionId "12a0f531-56cb-4340-9501-257726d741fd" -ResourceName HciCluster1 -TenantId "c31c0dbb-ce27-4c78-ad26-a5f717c14557" -ResourceGroupName HciClusterRG -ArmAccessToken eerrer..ere= -GraphAccessToken acee..rerrer -AccountId user1@corp1.com -EnvironmentName AzureCloud -ComputerName node1hci -Credential Get-Credential
 ```

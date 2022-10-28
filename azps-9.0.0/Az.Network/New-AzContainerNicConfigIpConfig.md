@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-AzContainerNicconfigipconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/new-AzContainerNicconfigipconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzContainerNicConfigIpConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzContainerNicConfigIpConfig.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a container nic configuration ip configuration object.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azcontainernicconfigipconfig) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -20,7 +23,7 @@ New-AzContainerNicConfigIpConfig -Name <String> -Subnet <PSSubnet> [-SubnetId <S
 ```
 
 ## DESCRIPTION
-The **New-AzContainerNicConfigIpConfig** cmdlet creates a new container network interface configuration ip configuration. 
+The **New-AzContainerNicConfigIpConfig** cmdlet creates a new container network interface configuration ip configuration.
 
 ## EXAMPLES
 

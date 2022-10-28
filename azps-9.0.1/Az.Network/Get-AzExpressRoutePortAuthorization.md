@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azexpressrouteportauthorization
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azexpressrouteportauthorization
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRoutePortAuthorization.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRoutePortAuthorization.md
@@ -22,10 +22,10 @@ Get-AzExpressRoutePortAuthorization [-Name <String>] -ExpressRoutePortObject <PS
 ## DESCRIPTION
 The **Get-AzExpressRoutePortAuthorization** cmdlet gets information about the
 authorizations assigned to an ExpressRoutePort.  The owner of an ExpressRoutePort
-can create these authorizations which generate an authorization key that can be 
-used by a ExpressRoute circuit owner to create the circuit on the ExpressRoutePort 
+can create these authorizations which generate an authorization key that can be
+used by a ExpressRoute circuit owner to create the circuit on the ExpressRoutePort
 (with a different owner). Only one circuit can be created with one ExpressRoutePort
-authorization. Authorization keys, as well as other information about 
+authorization. Authorization keys, as well as other information about
 the authorization, can be viewed at any time by running
 **Get-AzExpressRoutePortAuthorization**.
 

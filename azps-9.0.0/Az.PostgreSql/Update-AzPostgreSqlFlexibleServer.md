@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.PostgreSql
-online version: https://docs.microsoft.com/powershell/module/az.postgresql/update-azpostgresqlflexibleserver
+online version: https://learn.microsoft.com/powershell/module/az.postgresql/update-azpostgresqlflexibleserver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/help/Update-AzPostgreSqlFlexibleServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/help/Update-AzPostgreSqlFlexibleServer.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Updates an existing server.
 The request body can contain one to many of the properties present in the normal server definition.
 Use Update-AzPostSqlFlexibleServerConfiguration instead if you want update server parameters such as wait_timeout or net_retry_count.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.postgresql/update-azpostgresqlflexibleserver) for up-to-date information.
 
 ## SYNTAX
 

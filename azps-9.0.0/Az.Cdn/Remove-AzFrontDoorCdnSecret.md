@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Cdn
-online version: https://docs.microsoft.com/powershell/module/az.cdn/remove-azfrontdoorcdnsecret
+online version: https://learn.microsoft.com/powershell/module/az.cdn/remove-azfrontdoorcdnsecret
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Remove-AzFrontDoorCdnSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Remove-AzFrontDoorCdnSecret.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Deletes an existing Secret within profile.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/remove-azfrontdoorcdnsecret) for up-to-date information.
 
 ## SYNTAX
 

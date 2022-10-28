@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
 ms.assetid: F7FAFF52-5E07-4D88-B48F-BC70C43E8691
-online version: https://docs.microsoft.com/powershell/module/az.rediscache/new-azrediscachepatchschedule
+online version: https://learn.microsoft.com/powershell/module/az.rediscache/new-azrediscachepatchschedule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/New-AzRedisCachePatchSchedule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/New-AzRedisCachePatchSchedule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Adds a patch schedule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.rediscache/new-azrediscachepatchschedule) for up-to-date information.
 
 ## SYNTAX
 
@@ -51,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Entries
-Specifies an array of schedules that this cmdlet sets on a cache. 
+Specifies an array of schedules that this cmdlet sets on a cache.
 To obtain a **PSScheduleEntry** object, use the New-AzRedisCacheScheduleEntry cmdlet.
 
 ```yaml

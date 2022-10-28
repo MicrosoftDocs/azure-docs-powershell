@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 463DDBA8-0F93-483D-A4B6-3B055968CDE8
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azvirtualnetworkpeering
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azvirtualnetworkpeering
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkPeering.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkPeering.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the virtual network peering.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvirtualnetworkpeering) for up-to-date information.
 
 ## SYNTAX
 

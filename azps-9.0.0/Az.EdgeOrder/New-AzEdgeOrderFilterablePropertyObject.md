@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.EdgeOrder
-online version: https://docs.microsoft.com/powershell/module/az.EdgeOrder/new-AzEdgeOrderFilterablePropertyObject
+online version: https://learn.microsoft.com/powershell/module/az.EdgeOrder/new-AzEdgeOrderFilterablePropertyObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/help/New-AzEdgeOrderFilterablePropertyObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/help/New-AzEdgeOrderFilterablePropertyObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for FilterableProperty.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.edgeorder/new-azedgeorderfilterablepropertyobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -24,7 +27,7 @@ Create an in-memory object for FilterableProperty.
 
 ## EXAMPLES
 
-### Example 1: Filterable property object 
+### Example 1: Filterable property object
 ```powershell
 $filterableProperty = New-AzEdgeOrderFilterablePropertyObject -Type "ShipToCountries" -SupportedValue @("US")
 $filterableProperty | Format-List

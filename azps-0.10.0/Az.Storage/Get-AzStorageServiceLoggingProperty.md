@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 494291A1-D854-4E97-B5EE-27BB5653D97C
-online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/get-azstorageserviceloggingproperty
+online version: https://learn.microsoft.com/en-us/powershell/module/az.storage/get-azstorageserviceloggingproperty
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Get-AzStorageServiceLoggingProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Get-AzStorageServiceLoggingProperty.md
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 Specifies the storage service type.
 This cmdlet gets the logging properties for the service type that this parameter specifies.
 The acceptable values for this parameter are:
-- Blob 
+- Blob
 - Table
 - Queue
 - File

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Search.dll-Help.xml
 Module Name: Az.Search
-online version: https://docs.microsoft.com/powershell/module/az.search/remove-azsearchquerykey
+online version: https://learn.microsoft.com/powershell/module/az.search/remove-azsearchquerykey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Remove-AzSearchQueryKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Remove-AzSearchQueryKey.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Remove the query key from the Azure Cognitive Search service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.search/remove-azsearchquerykey) for up-to-date information.
 
 ## SYNTAX
 
@@ -42,8 +45,8 @@ The **Remove-AzSearchQueryKey** cmdlet removes the query key from the Azure Cogn
 ```powershell
 Get-AzSearchQueryKey -ResourceGroupName "TestAzureSearchPsGroup" -ServiceName "pstestazuresearch01"
 
-Name         Key                             
-----         ---                             
+Name         Key
+----         ---
              D260F448EA192EBC19D59F7E5670E8BB
 NewQueryKey1 B4C13E3F6FA76100D3488673CFDCD438
 

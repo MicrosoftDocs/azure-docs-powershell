@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
-online version: https://docs.microsoft.com/powershell/module/az.operationalinsights/Invoke-AzOperationalInsightsMigrateTable
+online version: https://learn.microsoft.com/powershell/module/az.operationalinsights/Invoke-AzOperationalInsightsMigrateTable
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/Invoke-AzOperationalInsightsMigrateTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/Invoke-AzOperationalInsightsMigrateTable.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Migrate a Log Analytics table from support of the Data Collector API and Custom Fields features to support of Data Collection Rule-based Custom Logs.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.operationalinsights/invoke-azoperationalinsightsmigratetable) for up-to-date information.
 
 ## SYNTAX
 

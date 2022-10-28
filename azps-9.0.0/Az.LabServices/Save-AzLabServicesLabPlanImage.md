@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.LabServices
-online version: https://docs.microsoft.com/powershell/module/az.labservices/save-azlabserviceslabplanimage
+online version: https://learn.microsoft.com/powershell/module/az.labservices/save-azlabserviceslabplanimage
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/help/Save-AzLabServicesLabPlanImage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/help/Save-AzLabServicesLabPlanImage.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Saves an image from a lab VM to the attached shared image gallery.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.labservices/save-azlabserviceslabplanimage) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 6C90AF6C-3193-4D75-A78F-3EC315C6D7DF
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azapplicationgatewayhttplistener
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azapplicationgatewayhttplistener
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzApplicationGatewayHttpListener.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzApplicationGatewayHttpListener.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes an HTTP listener from an application gateway.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-azapplicationgatewayhttplistener) for up-to-date information.
 
 ## SYNTAX
 

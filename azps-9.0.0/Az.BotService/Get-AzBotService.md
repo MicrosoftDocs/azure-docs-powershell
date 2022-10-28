@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.BotService
-online version: https://docs.microsoft.com/powershell/module/az.botservice/get-azbotservice
+online version: https://learn.microsoft.com/powershell/module/az.botservice/get-azbotservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/help/Get-AzBotService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/help/Get-AzBotService.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Returns a BotService specified by the parameters.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.botservice/get-azbotservice) for up-to-date information.
 
 ## SYNTAX
 

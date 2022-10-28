@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: https://docs.microsoft.com/powershell/module/az.security/Update-AzIotSecuritySolution
+online version: https://learn.microsoft.com/powershell/module/az.security/Update-AzIotSecuritySolution
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Update-AzIotSecuritySolution.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Update-AzIotSecuritySolution.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Update one or more of the following properties in IoT security solution: tags, recommendation configuration, user defined resources
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/update-aziotsecuritysolution) for up-to-date information.
 
 ## SYNTAX
 
@@ -66,7 +69,7 @@ Workspace: "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourcegroups/M
 AdditionalWorkspaces: null
 IotHubs: ["/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourcegroups/MyResourceGroup/providers/microsoft.devices/iothubs/MySample"]
 UserDefinedResources: {
-	Query: 'where type != "microsoft.devices/iothubs" | where name contains "v2"' 
+	Query: 'where type != "microsoft.devices/iothubs" | where name contains "v2"'
 	QuerySubscriptions: ["XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"]
 }
 RecommendationsConfiguration: [

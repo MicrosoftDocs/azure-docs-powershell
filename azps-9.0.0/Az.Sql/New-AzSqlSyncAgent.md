@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/new-azsqlsyncagent
+online version: https://learn.microsoft.com/powershell/module/az.sql/new-azsqlsyncagent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlSyncAgent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlSyncAgent.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an Azure SQL Sync Agent.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/new-azsqlsyncagent) for up-to-date information.
 
 ## SYNTAX
 
@@ -46,7 +49,7 @@ ServerName                  : Server01
 DatabaseName                : Database01
 SyncAgentName               : SyncAgent01
 SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syncDatabaseResourceGroup01}/servers/{syncDatabaseServer01}/databases/{syncDatabaseName01}
-LastAliveTime:              : 
+LastAliveTime:              :
 Version                     : 4.2.0.0
 IsUpToDate                  : True
 ExpiryTime                  : 12/31/9999 11:59:59 PM

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azvpnsite
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azvpnsite
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVpnSite.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVpnSite.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a new Azure VpnSite resource. This is an RM representation of customer branches that are uploaded to Azure
 for S2S connectivity with a Cortex virtual hub.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azvpnsite) for up-to-date information.
 
 ## SYNTAX
 
@@ -100,7 +103,7 @@ Type              : Microsoft.Network/vpnSites
 ProvisioningState : Succeeded
 ```
 
-The above will create a resource group, Virtual WAN in East US in "nonlinkSite" resource group in Azure. 
+The above will create a resource group, Virtual WAN in East US in "nonlinkSite" resource group in Azure.
 
 Then it creates a VpnSite to represent a customer branch and links it to the Virtual WAN.
 

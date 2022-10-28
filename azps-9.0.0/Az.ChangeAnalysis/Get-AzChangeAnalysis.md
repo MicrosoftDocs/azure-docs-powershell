@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ChangeAnalysis
-online version: https://docs.microsoft.com/powershell/module/az.changeanalysis/get-azchangeanalysis
+online version: https://learn.microsoft.com/powershell/module/az.changeanalysis/get-azchangeanalysis
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ChangeAnalysis/help/Get-AzChangeAnalysis.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ChangeAnalysis/help/Get-AzChangeAnalysis.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Customer data is always masked if query at subscription or resource group level.
 For query on a single resource, customer data is masked if the user doesn’t have access.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.changeanalysis/get-azchangeanalysis) for up-to-date information.
 
 ## SYNTAX
 

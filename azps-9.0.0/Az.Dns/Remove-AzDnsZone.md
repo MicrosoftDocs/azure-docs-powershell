@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
 ms.assetid: A8E230A0-5057-40BC-81CD-6D397A503A84
-online version: https://docs.microsoft.com/powershell/module/az.dns/remove-azdnszone
+online version: https://learn.microsoft.com/powershell/module/az.dns/remove-azdnszone
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Remove-AzDnsZone.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Remove-AzDnsZone.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a DNS zone from a resource group.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dns/remove-azdnszone) for up-to-date information.
 
 ## SYNTAX
 
@@ -192,7 +195,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 Due to the potentially high impact of deleting a DNS zone, by default, this cmdlet prompts for confirmation if the $ConfirmPreference Windows PowerShell variable has any value other than None.
 If you specify *Confirm* or *Confirm:$True*, this cmdlet prompts you for confirmation before it runs.
-If you specify *Confirm:$False*, the cmdlet does not prompt you for confirmation. 
+If you specify *Confirm:$False*, the cmdlet does not prompt you for confirmation.
 
 ## RELATED LINKS
 

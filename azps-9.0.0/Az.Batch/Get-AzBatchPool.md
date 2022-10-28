@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 44D877F1-D066-4C9C-A797-05EF03785B54
-online version: https://docs.microsoft.com/powershell/module/az.batch/get-azbatchpool
+online version: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchpool
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchPool.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets Batch pools under the specified Batch account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/get-azbatchpool) for up-to-date information.
 
 ## SYNTAX
 

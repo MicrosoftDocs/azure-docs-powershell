@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 3E7B9EFA-8BC2-46EB-9AD7-43EAB7FF3891
-online version: https://docs.microsoft.com/powershell/module/az.compute/set-azvmssosprofile
+online version: https://learn.microsoft.com/powershell/module/az.compute/set-azvmssosprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVmssOsProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVmssOsProfile.md
@@ -57,7 +57,7 @@ $vnetname = "myVnet";
 $vnetAddress = "10.0.0.0/16";
 $subnetname = "default-slb";
 $subnetAddress = "10.0.2.0/24";
-$securePassword = "<Password>" | ConvertTo-SecureString -AsPlainText -Force;  
+$securePassword = "<Password>" | ConvertTo-SecureString -AsPlainText -Force;
 $cred = New-Object System.Management.Automation.PSCredential ("<Username>", $securePassword);
 
 # VMSS Flex requires explicit outbound access.
@@ -153,7 +153,7 @@ Set-AzVmssStorageProfile $vmssConfig `
     -ImageReferencePublisher "MicrosoftWindowsServer" `
     -ImageReferenceOffer "WindowsServer" `
     -ImageReferenceSku "2022-datacenter-azure-edition-core-smalldisk" `
-    -ImageReferenceVersion "latest";  
+    -ImageReferenceVersion "latest";
 
 # Set up information for authenticating with the virtual machine.
 Set-AzVmssOsProfile $vmssConfig `
@@ -235,7 +235,7 @@ Specifies the administrator account name to use for all the virtual machine inst
 **Minimum-length (Linux):** 1  character <br>
 **Max-length (Linux):** 64 characters <br>
 **Max-length (Windows):** 20 characters  <br>
-<li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/devops/organizations/settings/naming-restrictions).
+<li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://learn.microsoft.com/azure/devops/organizations/settings/naming-restrictions).
 
 ```yaml
 Type: System.String
@@ -409,7 +409,7 @@ Accept wildcard characters: False
 
 ### -TimeZone
 Specifies the time zone of the virtual machine. e.g. \"Pacific Standard Time\". <br>
-Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
+Possible values can be [TimeZoneInfo.Id](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
 
 ```yaml
 Type: System.String

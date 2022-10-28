@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 015C7DB7-2B08-4033-9B6E-1738D4DDACDA
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-aznetworkinterfaceipconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-aznetworkinterfaceipconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzNetworkInterfaceIpConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzNetworkInterfaceIpConfig.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a network interface IP configuration from a network interface.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-aznetworkinterfaceipconfig) for up-to-date information.
 
 ## SYNTAX
 

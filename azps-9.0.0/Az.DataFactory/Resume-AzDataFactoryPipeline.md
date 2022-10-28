@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: F522841A-4246-4028-A754-393D8DADD924
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/resume-azdatafactorypipeline
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/resume-azdatafactorypipeline
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Resume-AzDataFactoryPipeline.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Resume-AzDataFactoryPipeline.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Resumes a suspended pipeline in Data Factory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/resume-azdatafactorypipeline) for up-to-date information.
 
 ## SYNTAX
 

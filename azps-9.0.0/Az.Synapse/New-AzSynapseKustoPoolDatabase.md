@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/new-azsynapsekustopooldatabase
+online version: https://learn.microsoft.com/powershell/module/az.synapse/new-azsynapsekustopooldatabase
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/New-AzSynapseKustoPoolDatabase.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/New-AzSynapseKustoPoolDatabase.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates or updates a database.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/new-azsynapsekustopooldatabase) for up-to-date information.
 
 ## SYNTAX
 
@@ -32,8 +35,8 @@ New-AzSynapseKustoPoolDatabase -ResourceGroupName "testrg" -WorkspaceName "testw
 ```
 
 ```output
-Kind      Location  Name                                                                                   
-----      --------  ----                              
+Kind      Location  Name
+----      --------  ----
 ReadWrite East US 2 testws/testkustopool/mykustodatabase
 ```
 

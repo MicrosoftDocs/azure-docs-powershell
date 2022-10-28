@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.dll-Help.xml
 Module Name: Az.ServiceBus
-online version: https://docs.microsoft.com/powershell/module/az.servicebus/remove-azservicebusnetworkruleset
+online version: https://learn.microsoft.com/powershell/module/az.servicebus/remove-azservicebusnetworkruleset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Remove-AzServiceBusNetworkRuleSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Remove-AzServiceBusNetworkRuleSet.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes the NetworkRuleSet for the Given Namespace
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/remove-azservicebusnetworkruleset) for up-to-date information.
 
 ## SYNTAX
 
@@ -47,11 +50,11 @@ Name                : default
 DefaultAction       : Allow
 Id                  : /subscriptions/subscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/ServiceBus-Namespace-1375/networkRuleSets/default
 Type                : Microsoft.ServiceBus/Namespaces/NetworkRuleSet
-IpRules             : 
+IpRules             :
 VirtualNetworkRules :
 ```
 
-Deletes the NetworkRuleSet for the Given "ServiceBus-Namespace1-1375" namespace 
+Deletes the NetworkRuleSet for the Given "ServiceBus-Namespace1-1375" namespace
 
 ### Example 2
 ```powershell
@@ -63,11 +66,11 @@ Name                : default
 DefaultAction       : Allow
 Id                  : /subscriptions/subscriptionId/resourceGroups/RSG-TestAzEventhub/providers/Microsoft.EventHub/namespaces/Eventhub-Namespace-1375/networkRuleSets/default
 Type                : Microsoft.EventHub/Namespaces/NetworkRuleSet
-IpRules             : 
+IpRules             :
 VirtualNetworkRules :
 ```
 
-Deletes the NetworkRuleSet using InputObject 
+Deletes the NetworkRuleSet using InputObject
 
 ### Example 3
 ```powershell
@@ -79,7 +82,7 @@ Name                : default
 DefaultAction       : Allow
 Id                  : /subscriptions/subscriptionId/resourceGroups/RSG-TestAzEventhub/providers/Microsoft.EventHub/namespaces/Eventhub-Namespace-1375/networkRuleSets/default
 Type                : Microsoft.EventHub/Namespaces/NetworkRuleSet
-IpRules             : 
+IpRules             :
 VirtualNetworkRules :
 ```
 

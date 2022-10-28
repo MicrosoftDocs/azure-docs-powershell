@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 35562212-283C-4BB2-8B12-C3617A6760D0
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azapplicationgatewayipconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azapplicationgatewayipconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewayIPConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewayIPConfiguration.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the IP configuration of an application gateway.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azapplicationgatewayipconfiguration) for up-to-date information.
 
 ## SYNTAX
 

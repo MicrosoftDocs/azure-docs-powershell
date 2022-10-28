@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.CloudService
-online version: https://docs.microsoft.com/powershell/module/az.cloudservice/new-azcloudservice
+online version: https://learn.microsoft.com/powershell/module/az.cloudservice/new-azcloudservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/help/New-AzCloudService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/help/New-AzCloudService.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create or update a cloud service.
 Please note some properties can be set only during cloud service creation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cloudservice/new-azcloudservice) for up-to-date information.
 
 ## SYNTAX
 
@@ -224,12 +227,12 @@ This parameter set also uploads the .CsPkg file to the provided StorageAccount.
 ### Example 6: Create new cloud service with CsCfg, CsDef, and Cspkg files using 'quickCreateParameterSetWithoutStorage' parameter set.
 ```powershell
 # getting Package URL
-$tokenStartTime = Get-Date 
-$tokenEndTime = $tokenStartTime.AddYears(1) 
+$tokenStartTime = Get-Date
+$tokenEndTime = $tokenStartTime.AddYears(1)
 $storAcc = Get-AzStorageAccount -ResourceGroupName ContosoOrg -Name ContosoStorAcc
 $csPkgBlob = Get-AzStorageBlob -Container Contoso-Container -Blob ContosoBlob.cspkg -Context $storAcc.Context
 $csPkgToken = New-AzStorageBlobSASToken -Container Contoso-Container -Blob ContosoBlob.cspkg -Permission rwd -StartTime $tokenStartTime -ExpiryTime $tokenEndTime -Context $storAcc.Context
-$cspkgUrl = $csPkgBlob.ICloudBlob.Uri.AbsoluteUri + $csPkgToken 
+$cspkgUrl = $csPkgBlob.ICloudBlob.Uri.AbsoluteUri + $csPkgToken
 
 # Create cloud service
 $cloudService = New-AzCloudService                                              `
@@ -678,7 +681,7 @@ EXTENSIONPROFILE `<ICloudServiceExtensionProfile>`: Describes a cloud service ex
     - `[ForceUpdateTag <String>]`: Tag to force apply the provided public and protected settings.         Changing the tag value allows for re-running the extension without changing any of the public or protected settings.         If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.         If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and         it is up to handler implementation whether to re-run it or not
     - `[Name <String>]`: The name of the extension.
     - `[ProtectedSetting <String>]`: Protected settings for the extension which are encrypted before sent to the role instance.
-    - `[ProtectedSettingFromKeyVaultSecretUrl <String>]`: 
+    - `[ProtectedSettingFromKeyVaultSecretUrl <String>]`:
     - `[Publisher <String>]`: The name of the extension handler publisher.
     - `[RolesAppliedTo <String[]>]`: Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.
     - `[Setting <String>]`: Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.

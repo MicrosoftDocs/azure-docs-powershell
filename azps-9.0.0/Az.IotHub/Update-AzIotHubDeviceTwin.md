@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/update-aziothubdevicetwin
+online version: https://learn.microsoft.com/powershell/module/az.iothub/update-aziothubdevicetwin
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Update-AzIotHubDeviceTwin.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Update-AzIotHubDeviceTwin.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates tags and desired properties of a device twin.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/update-aziothubdevicetwin) for up-to-date information.
 
 ## SYNTAX
 
@@ -35,7 +38,7 @@ Update-AzIotHubDeviceTwin [-ResourceId] <String> [-DeviceId] <String> [-Tag <Has
 ```
 
 ## DESCRIPTION
-Updates or replaces a device twin. See https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-device-twins for more information.
+Updates or replaces a device twin. See https://learn.microsoft.com/azure/iot-hub/iot-hub-devguide-device-twins for more information.
 
 ## EXAMPLES
 

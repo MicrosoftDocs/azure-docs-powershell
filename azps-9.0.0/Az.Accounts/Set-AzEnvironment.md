@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
 Module Name: Az.Accounts
-online version: https://docs.microsoft.com/powershell/module/az.accounts/set-azenvironment
+online version: https://learn.microsoft.com/powershell/module/az.accounts/set-azenvironment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Set-AzEnvironment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Set-AzEnvironment.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Sets properties for an Azure environment.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.accounts/set-azenvironment) for up-to-date information.
 
 ## SYNTAX
 
@@ -76,7 +79,7 @@ ActiveDirectoryServiceEndpointResourceId          : TestADApplicationId
 AdTenant                                          :
 GalleryUrl                                        : TestGalleryEndpoint
 ManagementPortalUrl                               :
-ServiceManagementUrl                              : 
+ServiceManagementUrl                              :
 PublishSettingsFileUrl                            :
 ResourceManagerUrl                                : TestRMEndpoint
 SqlDatabaseDnsSuffix                              :

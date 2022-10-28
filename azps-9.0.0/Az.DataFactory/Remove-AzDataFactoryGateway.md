@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: E1461540-DEAE-43C3-83DF-7DF3FE8D4EC0
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/remove-azdatafactorygateway
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/remove-azdatafactorygateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryGateway.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a gateway from Azure Data Factory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/remove-azdatafactorygateway) for up-to-date information.
 
 ## SYNTAX
 
@@ -39,7 +42,7 @@ Remove-AzDataFactoryGateway -Name "ContosoGateway" -DataFactoryName "WikiADF" -R
 
 ```output
 Confirm
-Are you sure you want to remove gateway 'ContosoGateway' in data factory 'WikiADF'? 
+Are you sure you want to remove gateway 'ContosoGateway' in data factory 'WikiADF'?
  [Y] Yes  [N] No  [S] Suspend  [?] Help (default is Y): Y
 True
 ```

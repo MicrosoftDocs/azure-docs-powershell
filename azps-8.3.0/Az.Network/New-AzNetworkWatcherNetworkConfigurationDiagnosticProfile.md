@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-aznetworkwatchernetworkconfigurationdiagnosticprofile
+online version: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkwatchernetworkconfigurationdiagnosticprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile
 
 ## SYNOPSIS
-Creates a new network configuration diagnostic profile object. 
+Creates a new network configuration diagnostic profile object.
 This object is used to restrict the network configuration during a diagnostic session using the specified criteria.
 
 > [!NOTE]
@@ -25,7 +25,7 @@ New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile -Direction <String> -P
 ```
 
 ## DESCRIPTION
-The New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile cmdlet creates a new diagnostic profile object. 
+The New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile cmdlet creates a new diagnostic profile object.
 This object is used to restrict the network configuration during a network configuration diagnostic session using the specified criteria.
 
 ## EXAMPLES

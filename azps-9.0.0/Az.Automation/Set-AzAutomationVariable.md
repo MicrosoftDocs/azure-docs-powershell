@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: F344D8D1-5593-4C09-A1CA-37579D2A3A61
-online version: https://docs.microsoft.com/powershell/module/az.automation/set-azautomationvariable
+online version: https://learn.microsoft.com/powershell/module/az.automation/set-azautomationvariable
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Set-AzAutomationVariable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Set-AzAutomationVariable.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies an Automation variable.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/set-azautomationvariable) for up-to-date information.
 
 ## SYNTAX
 

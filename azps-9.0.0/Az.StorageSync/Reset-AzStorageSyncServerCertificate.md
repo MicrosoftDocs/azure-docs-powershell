@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.StorageSync.dll-Help.xml
 Module Name: Az.StorageSync
-online version: https://docs.microsoft.com/powershell/module/Az.storagesync/reset-Azstoragesyncservercertificate
+online version: https://learn.microsoft.com/powershell/module/Az.storagesync/reset-Azstoragesyncservercertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageSync/StorageSync/help/Reset-AzStorageSyncServerCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageSync/StorageSync/help/Reset-AzStorageSyncServerCertificate.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Use for troubleshooting only. This command will roll the storage sync server certificate used to describe the server identity to the storage sync service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storagesync/reset-azstoragesyncservercertificate) for up-to-date information.
 
 ## SYNTAX
 

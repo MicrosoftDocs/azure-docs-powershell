@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 3B5B828A-6B3E-49BD-8BA9-916F8B69B8E9
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageservicemetricsproperty
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageservicemetricsproperty
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageServiceMetricsProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageServiceMetricsProperty.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets metrics properties for the Azure Storage service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/get-azstorageservicemetricsproperty) for up-to-date information.
 
 ## SYNTAX
 
@@ -87,10 +90,10 @@ Accept wildcard characters: False
 Specifies the storage service type.
 This cmdlet gets the metrics properties for the type that this parameter specifies.
 The acceptable values for this parameter are:
-- Blob 
+- Blob
 - Table
 - Queue
-- File 
+- File
 The value of File is not currently supported.
 
 ```yaml

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.CustomLocation
-online version: https://docs.microsoft.com/powershell/module/az.customlocation/get-azcustomlocation
+online version: https://learn.microsoft.com/powershell/module/az.customlocation/get-azcustomlocation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/help/Get-AzCustomLocation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/help/Get-AzCustomLocation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the details of the customLocation with a specified resource group and name.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.customlocation/get-azcustomlocation) for up-to-date information.
 
 ## SYNTAX
 

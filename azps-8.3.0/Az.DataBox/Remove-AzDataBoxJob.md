@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataBox
-online version: https://docs.microsoft.com/powershell/module/az.databox/remove-azdataboxjob
+online version: https://learn.microsoft.com/powershell/module/az.databox/remove-azdataboxjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/Remove-AzDataBoxJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/Remove-AzDataBoxJob.md
@@ -27,7 +27,7 @@ Deletes a job.
 
 ## EXAMPLES
 
-### Example 1: Deletes a job 
+### Example 1: Deletes a job
 ```powershell
 Remove-AzDataBoxJob -Name "Powershell10" -ResourceGroupName "resourceGroupName"
 ```

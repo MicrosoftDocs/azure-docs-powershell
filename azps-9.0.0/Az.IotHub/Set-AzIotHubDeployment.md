@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/set-aziothubdeployment
+online version: https://learn.microsoft.com/powershell/module/az.iothub/set-aziothubdeployment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Set-AzIotHubDeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Set-AzIotHubDeployment.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Update the mutable fields of IoT Edge deployment.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/set-aziothubdeployment) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,7 +41,7 @@ Set-AzIotHubDeployment [-ResourceId] <String> -Name <String> [-Priority <Int32>]
 ## DESCRIPTION
 Update specified properties of an IoT Edge deployment.
 Note: Configuration content is immutable. Configuration properties that can be updated are 'labels', 'metrics', 'priority' and 'targetCondition'.
-See https://docs.microsoft.com/azure/iot-edge/module-deployment-monitoring  for more information.
+See https://learn.microsoft.com/azure/iot-edge/module-deployment-monitoring  for more information.
 
 ## EXAMPLES
 

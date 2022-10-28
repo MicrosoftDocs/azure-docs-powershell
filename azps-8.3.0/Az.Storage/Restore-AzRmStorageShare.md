@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/restore-azrmstorageshare
+online version: https://learn.microsoft.com/powershell/module/az.storage/restore-azrmstorageshare
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Restore-AzRmStorageShare.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Restore-AzRmStorageShare.md
@@ -46,14 +46,14 @@ The **Restore-AzRmStorageShare** cmdlet restores a deleted file share within a v
 ```powershell
 PS C:\> Remove-AzRmStorageShare -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Name $shareName -Force
 
-PS C:\> Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -IncludeDeleted 
+PS C:\> Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -IncludeDeleted
 
    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
 
 Name     QuotaGiB EnabledProtocol AccessTier           Deleted Version          ShareUsageBytes
 ----     -------- --------------- ----------           ------- -------          ---------------
-test     100                      TransactionOptimized                                         
-share1   100                      TransactionOptimized True    01D61FD1FC5498B6                
+test     100                      TransactionOptimized
+share1   100                      TransactionOptimized True    01D61FD1FC5498B6
 
 PS C:\> Restore-AzRmStorageShare -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Name $shareName -DeletedShareVersion 01D61FD1FC5498B6
 
@@ -64,7 +64,7 @@ Name     QuotaGiB EnabledProtocol AccessTier Deleted Version ShareUsageBytes
 share1   100
 ```
 
-This command first delete a file share, and then list shares and see the deleted share version, finally restore it back to a normal share. 
+This command first delete a file share, and then list shares and see the deleted share version, finally restore it back to a normal share.
 Need enabled share soft delete with Update-AzStorageFileServiceProperty, before delete the share.
 
 ## PARAMETERS

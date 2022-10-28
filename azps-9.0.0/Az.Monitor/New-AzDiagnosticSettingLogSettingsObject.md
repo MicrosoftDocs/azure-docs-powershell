@@ -1,7 +1,7 @@
 ---
 external help file: Az.DiagnosticSetting.psm1-help.xml
 Module Name: Az.Monitor
-online version: https://docs.microsoft.com/powershell/module/az.DiagnosticSetting/new-AzDiagnosticSettingLogSettingsObject
+online version: https://learn.microsoft.com/powershell/module/az.DiagnosticSetting/new-AzDiagnosticSettingLogSettingsObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzDiagnosticSettingLogSettingsObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzDiagnosticSettingLogSettingsObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for LogSettings.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/new-azdiagnosticsettinglogsettingsobject) for up-to-date information.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: D4188DC6-A8AB-4B45-9781-94B74C338C63
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.keyvault/import-AzKeyvaultcertificate
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/import-AzKeyvaultcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Import-AzKeyVaultCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Import-AzKeyVaultCertificate.md
@@ -95,7 +95,7 @@ Specifies the certificate collection to add to a key vault.
 ```yaml
 Type: X509Certificate2Collection
 Parameter Sets: ImportWithPrivateKeyFromCollection
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -110,7 +110,7 @@ Specifies a certificate string.
 ```yaml
 Type: String
 Parameter Sets: ImportWithPrivateKeyFromString
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -140,7 +140,7 @@ Specifies the path of the certificate file that this cmdlet imports.
 ```yaml
 Type: String
 Parameter Sets: ImportCertificateFromFile, ImportWithPrivateKeyFromFile
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -171,7 +171,7 @@ Specifies the password for a certificate file.
 ```yaml
 Type: SecureString
 Parameter Sets: ImportWithPrivateKeyFromFile, ImportWithPrivateKeyFromString
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -188,7 +188,7 @@ Key-value pairs in the form of a hash table. For example:
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ This cmdlet constructs the fully qualified domain name (FQDN) of a key vault bas
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

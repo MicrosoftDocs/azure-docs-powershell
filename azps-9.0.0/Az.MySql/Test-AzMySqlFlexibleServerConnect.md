@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MySql
-online version: https://docs.microsoft.com/powershell/module/az.mysql/test-azmysqlflexibleserverconnect
+online version: https://learn.microsoft.com/powershell/module/az.mysql/test-azmysqlflexibleserverconnect
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/help/Test-AzMySqlFlexibleServerConnect.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/help/Test-AzMySqlFlexibleServerConnect.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Test out the connection to the database server
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mysql/test-azmysqlflexibleserverconnect) for up-to-date information.
 
 ## SYNTAX
 

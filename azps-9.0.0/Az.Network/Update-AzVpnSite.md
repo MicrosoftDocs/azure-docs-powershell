@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/update-azvpnsite
+online version: https://learn.microsoft.com/powershell/module/az.network/update-azvpnsite
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVpnSite.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVpnSite.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates a VPN site.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/update-azvpnsite) for up-to-date information.
 
 ## SYNTAX
 
@@ -148,7 +151,7 @@ Type              : Microsoft.Network/vpnSites
 ProvisioningState : Succeeded
 ```
 
-The above will create a resource group, Virtual WAN in West US in "testRG" resource group in Azure. 
+The above will create a resource group, Virtual WAN in West US in "testRG" resource group in Azure.
 
 Then it creates a VpnSite to represent a customer branch and links it to the Virtual WAN.
 

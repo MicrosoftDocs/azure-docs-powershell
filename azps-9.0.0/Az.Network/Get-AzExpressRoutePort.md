@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/get-azexpressrouteport
+online version: https://learn.microsoft.com/powershell/module/az.network/get-azexpressrouteport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRoutePort.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRoutePort.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets an Azure ExpressRoutePort resource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azexpressrouteport) for up-to-date information.
 
 ## SYNTAX
 
@@ -51,7 +54,7 @@ Gets all of the ExpressRoutePort objects whose name starts with "test".
 Get-AzExpressRoutePort -ResourceId $id
 ```
 
-Gets the ExpressRoutePort object with ResourceId $id. 
+Gets the ExpressRoutePort object with ResourceId $id.
 
 ## PARAMETERS
 

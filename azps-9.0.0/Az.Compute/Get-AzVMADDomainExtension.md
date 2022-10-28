@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 49D17667-35C3-4A79-A0C8-C197DAA5CD90
-online version: https://docs.microsoft.com/powershell/module/az.compute/get-azvmaddomainextension
+online version: https://learn.microsoft.com/powershell/module/az.compute/get-azvmaddomainextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMADDomainExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMADDomainExtension.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets information about an AD domain extension.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/get-azvmaddomainextension) for up-to-date information.
 
 ## SYNTAX
 

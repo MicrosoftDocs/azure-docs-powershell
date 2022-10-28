@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SignalR
-online version: https://docs.microsoft.com/powershell/module/az.signalr/new-azwebpubsubkey
+online version: https://learn.microsoft.com/powershell/module/az.signalr/new-azwebpubsubkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/New-AzWebPubSubKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/New-AzWebPubSubKey.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Regenerate the access key for the resource.
 PrimaryKey and SecondaryKey cannot be regenerated at the same time.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.signalr/new-azwebpubsubkey) for up-to-date information.
 
 ## SYNTAX
 

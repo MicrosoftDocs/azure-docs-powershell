@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/invoke-aziothubdeploymentmetricsquery
+online version: https://learn.microsoft.com/powershell/module/az.iothub/invoke-aziothubdeploymentmetricsquery
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Invoke-AzIotHubDeploymentMetricsQuery.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Invoke-AzIotHubDeploymentMetricsQuery.md
@@ -41,7 +41,7 @@ There are pre-defined system metrics which are calculated by Iot Hub and cannot 
 - "Targeted" shows the IoT Edge devices that match the deployment targeting condition.
 - "Applied" shows the targeted IoT Edge devices that are not targeted by another deployment of higher priority.
 - "Reporting Success" shows the IoT Edge devices that have reported that the modules have been deployed successfully.
-- "Reporting Failure" shows the IoT Edge devices that have reported that one or more modules haven't been deployed successfully. 
+- "Reporting Failure" shows the IoT Edge devices that have reported that one or more modules haven't been deployed successfully.
   To further investigate the error, connect remotely to those devices and view the log files.
 
 ## EXAMPLES

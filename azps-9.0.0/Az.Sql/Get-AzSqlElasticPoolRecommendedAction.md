@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: 3FC9E586-3962-437E-B89F-BB4EA1FBF403
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqlelasticpoolrecommendedaction
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlelasticpoolrecommendedaction
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlElasticPoolRecommendedAction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlElasticPoolRecommendedAction.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets one or more recommended actions for an Azure SQL Elastic Pool Advisor.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/get-azsqlelasticpoolrecommendedaction) for up-to-date information.
 
 ## SYNTAX
 
@@ -37,8 +40,8 @@ ResourceGroupName          : WIRunnersProd
 ServerName                 : wi-runner-australia-east
 AdvisorName                : CreateIndex
 RecommendedActionName      : IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893
-Details                    : {[indexName, nci_wi_test_table_0.0361551_6C7AE8CC9C87E7FD5893], [indexType, 
-                             NONCLUSTERED], [schema, [test_schema]], [table, [test_table_0.0361551]]...} 
+Details                    : {[indexName, nci_wi_test_table_0.0361551_6C7AE8CC9C87E7FD5893], [indexType,
+                             NONCLUSTERED], [schema, [test_schema]], [table, [test_table_0.0361551]]...}
 ErrorDetails               : Microsoft.Azure.Management.Sql.Models.RecommendedActionErrorInfo
 EstimatedImpact            : {ActionDuration, SpaceChange}
 ExecuteActionDuration      : PT1M
@@ -51,12 +54,12 @@ IsExecutableAction         : True
 IsRevertableAction         : True
 LastRefresh                : 4/21/2016 3:24:47 PM
 LinkedObjects              : {}
-ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...} 
-RecommendationReason       : 
-RevertActionDuration       : 
-RevertActionInitiatedBy    : 
-RevertActionInitiatedTime  : 
-RevertActionStartTime      : 
+ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...}
+RecommendationReason       :
+RevertActionDuration       :
+RevertActionInitiatedBy    :
+RevertActionInitiatedTime  :
+RevertActionStartTime      :
 Score                      : 2
 State                      : Microsoft.Azure.Management.Sql.Models.RecommendedActionStateInfo
 TimeSeries                 : {}
@@ -67,8 +70,8 @@ ResourceGroupName          : WIRunnersProd
 ServerName                 : wi-runner-australia-east
 AdvisorName                : CreateIndex
 RecommendedActionName      : IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893
-Details                    : {[indexName, nci_wi_test_table_0.236046_6C7AE8CC9C87E7FD5893], [indexType, NONCLUSTERED], 
-                             [schema, [test_schema]], [table, [test_table_0.236046]]...} 
+Details                    : {[indexName, nci_wi_test_table_0.236046_6C7AE8CC9C87E7FD5893], [indexType, NONCLUSTERED],
+                             [schema, [test_schema]], [table, [test_table_0.236046]]...}
 ErrorDetails               : Microsoft.Azure.Management.Sql.Models.RecommendedActionErrorInfo
 EstimatedImpact            : {ActionDuration, SpaceChange}
 ExecuteActionDuration      : PT1M
@@ -82,11 +85,11 @@ IsRevertableAction         : True
 LastRefresh                : 4/21/2016 3:24:47 PM
 LinkedObjects              : {}
 ObservedImpact             : {SpaceChange}
-RecommendationReason       : 
-RevertActionDuration       : 
-RevertActionInitiatedBy    : 
-RevertActionInitiatedTime  : 
-RevertActionStartTime      : 
+RecommendationReason       :
+RevertActionDuration       :
+RevertActionInitiatedBy    :
+RevertActionInitiatedTime  :
+RevertActionStartTime      :
 Score                      : 3
 State                      : Microsoft.Azure.Management.Sql.Models.RecommendedActionStateInfo
 TimeSeries                 : {}
@@ -97,8 +100,8 @@ ResourceGroupName          : WIRunnersProd
 ServerName                 : wi-runner-australia-east
 AdvisorName                : CreateIndex
 RecommendedActionName      : IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893
-Details                    : {[indexName, nci_wi_test_table_0.239359_6C7AE8CC9C87E7FD5893], [indexType, NONCLUSTERED], 
-                             [schema, [test_schema]], [table, [test_table_0.239359]]...} 
+Details                    : {[indexName, nci_wi_test_table_0.239359_6C7AE8CC9C87E7FD5893], [indexType, NONCLUSTERED],
+                             [schema, [test_schema]], [table, [test_table_0.239359]]...}
 ErrorDetails               : Microsoft.Azure.Management.Sql.Models.RecommendedActionErrorInfo
 EstimatedImpact            : {ActionDuration, SpaceChange}
 ExecuteActionDuration      : PT1M
@@ -111,8 +114,8 @@ IsExecutableAction         : True
 IsRevertableAction         : True
 LastRefresh                : 4/21/2016 3:24:47 PM
 LinkedObjects              : {}
-ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...} 
-RecommendationReason       : 
+ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...}
+RecommendationReason       :
 RevertActionDuration       : PT10S
 RevertActionInitiatedBy    : System
 RevertActionInitiatedTime  : 4/21/2016 3:24:47 PM
@@ -136,8 +139,8 @@ ResourceGroupName          : WIRunnersProd
 ServerName                 : wi-runner-australia-east
 AdvisorName                : CreateIndex
 RecommendedActionName      : IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893
-Details                    : {[indexName, nci_wi_test_table_0.0361551_6C7AE8CC9C87E7FD5893], [indexType, 
-                             NONCLUSTERED], [schema, [test_schema]], [table, [test_table_0.0361551]]...} 
+Details                    : {[indexName, nci_wi_test_table_0.0361551_6C7AE8CC9C87E7FD5893], [indexType,
+                             NONCLUSTERED], [schema, [test_schema]], [table, [test_table_0.0361551]]...}
 ErrorDetails               : Microsoft.Azure.Management.Sql.Models.RecommendedActionErrorInfo
 EstimatedImpact            : {ActionDuration, SpaceChange}
 ExecuteActionDuration      : PT1M
@@ -150,12 +153,12 @@ IsExecutableAction         : True
 IsRevertableAction         : True
 LastRefresh                : 4/21/2016 3:24:47 PM
 LinkedObjects              : {}
-ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...} 
-RecommendationReason       : 
-RevertActionDuration       : 
-RevertActionInitiatedBy    : 
-RevertActionInitiatedTime  : 
-RevertActionStartTime      : 
+ObservedImpact             : {CpuUtilization, LogicalReads, LogicalWrites, QueriesWithImprovedPerformance...}
+RecommendationReason       :
+RevertActionDuration       :
+RevertActionInitiatedBy    :
+RevertActionInitiatedTime  :
+RevertActionStartTime      :
 Score                      : 2
 State                      : Microsoft.Azure.Management.Sql.Models.RecommendedActionStateInfo
 TimeSeries                 : {}
@@ -280,4 +283,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AzSqlElasticPoolRecommendedActionState](./Set-AzSqlElasticPoolRecommendedActionState.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 356764CF-A860-432A-907A-9058CEB2BF8E
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azrouteconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azrouteconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzRouteConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzRouteConfig.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a route for a route table.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azrouteconfig) for up-to-date information.
 
 ## SYNTAX
 
@@ -34,9 +37,9 @@ $Route
 
 ```output
 Name              : Route07
-Id                : 
-Etag              : 
-ProvisioningState : 
+Id                :
+Etag              :
+ProvisioningState :
 AddressPrefix     : 10.1.0.0/16
 NextHopType       : VnetLocal
 NextHopIpAddress  :
@@ -60,7 +63,7 @@ New-AzRouteConfig -AddressPrefix 10.1.0.0/16 -Name 'Route07' -NextHopIpAddress '
 New-AzRouteConfig -Name "Route07" -AddressPrefix "AppService" -NextHopType "VirtualAppliance" -NextHopIpAddress "10.0.2.4"
 ```
 
-This command creates a route named Route07 which forwards traffic to IP prefixes contained in the AppService Service Tag to a virtual appliance. 
+This command creates a route named Route07 which forwards traffic to IP prefixes contained in the AppService Service Tag to a virtual appliance.
 
 ## PARAMETERS
 
@@ -130,13 +133,13 @@ Accept wildcard characters: False
 Specifies how this route forwards packets.
 The acceptable values for this parameter are:
 - Internet.
-The default Internet gateway provided by Azure. 
+The default Internet gateway provided by Azure.
 - None.
-If you specify this value, the route does not forward packets. 
+If you specify this value, the route does not forward packets.
 - VirtualAppliance.
-A virtual appliance that you add to your Azure virtual network. 
+A virtual appliance that you add to your Azure virtual network.
 - VirtualNetworkGateway.
-An Azure server-to-server virtual private network gateway. 
+An Azure server-to-server virtual private network gateway.
 - VnetLocal.
 The local virtual network.
 If you have two subnets, 10.1.0.0/16 and 10.2.0.0/16 in the same virtual network, select a value of VnetLocal for each subnet to forward to the other subnet.

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: E94B88AA-B8B0-49F0-AD36-6707E17B40AD
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementproduct
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementproduct
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementProduct.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementProduct.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an API Management product.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/new-azapimanagementproduct) for up-to-date information.
 
 ## SYNTAX
 
@@ -143,7 +146,7 @@ Accept wildcard characters: False
 Specifies the product state.
 psdx_paramvalues
 - NotPublished
-- Published 
+- Published
 The default value is NotPublished.
 
 ```yaml

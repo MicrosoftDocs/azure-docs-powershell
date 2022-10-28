@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: 7EF87BE5-FB10-4E5D-A12F-7F50EE6DAD57
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/set-azintegrationaccountmap
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/set-azintegrationaccountmap
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Set-AzIntegrationAccountMap.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Set-AzIntegrationAccountMap.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies an integration account map.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logicapp/set-azintegrationaccountmap) for up-to-date information.
 
 ## SYNTAX
 

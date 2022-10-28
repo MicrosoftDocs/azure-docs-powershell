@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ImageBuilder
-online version: https://docs.microsoft.com/powershell/module/az.ImageBuilder/new-azimagebuildertemplatesourceobject
+online version: https://learn.microsoft.com/powershell/module/az.ImageBuilder/new-azimagebuildertemplatesourceobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/help/New-AzImageBuilderTemplateSourceObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/help/New-AzImageBuilderTemplateSourceObject.md
@@ -55,7 +55,7 @@ This command creates a managed image source.
 
 ### Example 2: Create a shared image source
 ```powershell
-New-AzImageBuilderTemplateSourceObject -SharedImageVersionSource -ImageVersionId /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/wyunchi-imagebuilder/providers/Microsoft.Compute/galleries/lucasimagegallery/images/myimagedefinition/versions/1.0.0 
+New-AzImageBuilderTemplateSourceObject -SharedImageVersionSource -ImageVersionId /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/wyunchi-imagebuilder/providers/Microsoft.Compute/galleries/lucasimagegallery/images/myimagedefinition/versions/1.0.0
 ```
 
 ```output
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Offer
-Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+Image offer from the [Azure Gallery Images](https://learn.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 
 ```yaml
 Type: System.String
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -PlatformImageSource
-Describes an image source from [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+Describes an image source from [Azure Gallery Images](https://learn.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -Publisher
-Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+Image Publisher in [Azure Gallery Images](https://learn.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 
 ```yaml
 Type: System.String
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sku
-Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+Image sku from the [Azure Gallery Images](https://learn.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 
 ```yaml
 Type: System.String
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+Image version from the [Azure Gallery Images](https://learn.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
 If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted.
 
 ```yaml

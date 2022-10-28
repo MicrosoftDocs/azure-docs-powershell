@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: https://docs.microsoft.com/powershell/module/az.security/Get-AzJitNetworkAccessPolicy
+online version: https://learn.microsoft.com/powershell/module/az.security/Get-AzJitNetworkAccessPolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzJitNetworkAccessPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzJitNetworkAccessPolicy.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the JIT network access policies
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/get-azjitnetworkaccesspolicy) for up-to-date information.
 
 ## SYNTAX
 
@@ -40,7 +43,7 @@ Get-AzJitNetworkAccessPolicy -ResourceId <String> [-DefaultProfile <IAzureContex
 ## DESCRIPTION
 Just In Time (JIT) network access policies let you define a policy the will allow simple users to create a temporary network connection to a VM.
 The policy defines what ports, protocol and source IP addresses can request a connection to a VM and the max duration before the connection will be closed automatically.
-In the policy you can also see the connection request that were made with this policy. 
+In the policy you can also see the connection request that were made with this policy.
 
 ## EXAMPLES
 

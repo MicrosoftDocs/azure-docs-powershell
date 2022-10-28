@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Billing.dll-Help.xml
 Module Name: Az.Billing
-online version: https://docs.microsoft.com/powershell/module/az.billing/get-azbillingaccount
+online version: https://learn.microsoft.com/powershell/module/az.billing/get-azbillingaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzBillingAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzBillingAccount.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get billing accounts.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.billing/get-azbillingaccount) for up-to-date information.
 
 ## SYNTAX
 
@@ -27,7 +30,7 @@ Get-AzBillingAccount -Name <System.Collections.Generic.List`1[System.String]> [-
 ```
 
 ## DESCRIPTION
-The **Get-AzBillingAccount** cmdlet gets billing accounts, user has access to. 
+The **Get-AzBillingAccount** cmdlet gets billing accounts, user has access to.
 
 ## EXAMPLES
 

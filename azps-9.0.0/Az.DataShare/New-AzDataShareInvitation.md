@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll-Help.xml
 Module Name: Az.DataShare
-online version: https://docs.microsoft.com/powershell/module/az.datashare/new-azdatashareinvitation
+online version: https://learn.microsoft.com/powershell/module/az.datashare/new-azdatashareinvitation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/New-AzDataShareInvitation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/New-AzDataShareInvitation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an invitation for share.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datashare/new-azdatashareinvitation) for up-to-date information.
 
 ## SYNTAX
 
@@ -33,7 +36,7 @@ New-AzDataShareInvitation -ResourceGroupName <String> -AccountName <String> -Sha
 ```
 
 ## DESCRIPTION
-The **New-AzDataShareInvitation** cmdlet sends an invitation to the target consumer with information about the provider share. 
+The **New-AzDataShareInvitation** cmdlet sends an invitation to the target consumer with information about the provider share.
 
 ## EXAMPLES
 

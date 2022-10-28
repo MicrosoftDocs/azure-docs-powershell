@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
 Module Name: Az.DataFactory
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/set-azdatafactoryv2integrationruntime
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/set-azdatafactoryv2integrationruntime
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Set-AzDataFactoryV2IntegrationRuntime.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Set-AzDataFactoryV2IntegrationRuntime.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates an integration runtime.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/set-azdatafactoryv2integrationruntime) for up-to-date information.
 
 ## SYNTAX
 
@@ -128,27 +131,27 @@ Set-AzDataFactoryV2IntegrationRuntime -ResourceGroupName testgroup `
     NodeSize                          : Standard_D8_v3
     NodeCount                         : 1
     MaxParallelExecutionsPerNode      : 8
-    CatalogServerEndpoint             : 
-    CatalogAdminUserName              : 
-    CatalogAdminPassword              : 
-    CatalogPricingTier                : 
-    VNetId                            : 
-    Subnet                            : 
-    SubnetId                          : 
+    CatalogServerEndpoint             :
+    CatalogAdminUserName              :
+    CatalogAdminPassword              :
+    CatalogPricingTier                :
+    VNetId                            :
+    Subnet                            :
+    SubnetId                          :
     VNetInjectionMethod               : Express
-    PublicIPs                         : 
+    PublicIPs                         :
     State                             : Initial
     LicenseType                       : LicenseIncluded
-    SetupScriptContainerSasUri        : 
+    SetupScriptContainerSasUri        :
     DataProxyIntegrationRuntimeName   : proxySelfhostedIR
     DataProxyStagingLinkedServiceName : AzureBlobStorage
-    DataProxyStagingPath              : 
+    DataProxyStagingPath              :
     Edition                           : Standard
     Name                              : SSISIRWithDataProxy
     Type                              : Managed
     ResourceGroupName                 : testgroup
     DataFactoryName                   : testdf
-    Description                       : 
+    Description                       :
     Id                                : /subscriptions/cb715d05-3337-4640-8c43-4f943c50d06e/resourceGroups/testgroup/providers/Microsoft.DataFactory/factories/testdf/integrationruntimes/SSISIRWithDataProxy
 ```
 

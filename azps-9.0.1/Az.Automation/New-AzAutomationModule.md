@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 2DC97415-D59A-428E-8FFE-56B17B320DAF
-online version: https://docs.microsoft.com/powershell/module/az.automation/new-azautomationmodule
+online version: https://learn.microsoft.com/powershell/module/az.automation/new-azautomationmodule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationModule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationModule.md
@@ -23,8 +23,8 @@ New-AzAutomationModule [-Name] <String> [-ContentLinkUri] <Uri> [-ResourceGroupN
 ## DESCRIPTION
 The **New-AzAutomationModule** cmdlet imports a module into Azure Automation.
 This command accepts a compressed file that has a .zip file name extension.
-The file contains a folder that includes a file that is one of the following types: 
-- Windows PowerShell module, which has a .psm1 or .dll file name extension 
+The file contains a folder that includes a file that is one of the following types:
+- Windows PowerShell module, which has a .psm1 or .dll file name extension
 - Windows PowerShell module manifest, which has a .psd1 file name extension
 The name of the .zip file, the name of the folder, and the name of the file in the folder must be the same.
 Specify the .zip file as a URL that the Automation service can access.

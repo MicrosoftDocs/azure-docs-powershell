@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/restore-azstorageblobrange
+online version: https://learn.microsoft.com/powershell/module/az.storage/restore-azstorageblobrange
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Restore-AzStorageBlobRange.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Restore-AzStorageBlobRange.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Restores a Storage account for specific blob ranges.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/restore-azstorageblobrange) for up-to-date information.
 
 ## SYNTAX
 
@@ -48,14 +51,14 @@ PS C:\> $range1 = New-AzStorageBlobRangeToRestore -StartRange container1/blob1 -
 PS C:\> $range2 = New-AzStorageBlobRangeToRestore -StartRange container3/blob3 -EndRange container4/blob4
 PS C:\> Restore-AzStorageBlobRange -ResourceGroupName "myresourcegoup" -StorageAccountName "mystorageaccount" -TimeToRestore (Get-Date).AddDays(-1) -BlobRestoreRange $range1,$range2
 
-Status     RestoreId                            FailureReason Parameters.TimeToRestore     Parameters.BlobRanges                     
-------     ---------                            ------------- ------------------------     ---------------------                     
+Status     RestoreId                            FailureReason Parameters.TimeToRestore     Parameters.BlobRanges
+------     ---------                            ------------- ------------------------     ---------------------
 InProgress 6ca55a8b-fca0-461a-8e4c-13927a9707e6               2020-02-10T13:58:44.6841810Z ["container1/blob1" -> "container2/blob2",...]
 
-PS C:\> (Get-AzStorageAccount -ResourceGroupName $rgname -StorageAccountName $accountName -IncludeBlobRestoreStatus).BlobRestoreStatus 
+PS C:\> (Get-AzStorageAccount -ResourceGroupName $rgname -StorageAccountName $accountName -IncludeBlobRestoreStatus).BlobRestoreStatus
 
-Status   RestoreId                            FailureReason Parameters.TimeToRestore     Parameters.BlobRanges                     
-------   ---------                            ------------- ------------------------     ---------------------                     
+Status   RestoreId                            FailureReason Parameters.TimeToRestore     Parameters.BlobRanges
+------   ---------                            ------------- ------------------------     ---------------------
 Complete 6ca55a8b-fca0-461a-8e4c-13927a9707e6               2020-02-10T13:58:44.6841810Z ["container1/blob1" -> "container2/blob2",...]
 ```
 
@@ -85,8 +88,8 @@ PS C:\> Restore-AzStorageBlobRange -ResourceGroupName "myresourcegoup" -StorageA
     -BlobRestoreRange @{StartRange="aaa/abc";EndRange="bbb/abc"},@{StartRange="bbb/acc";EndRange=""}
 WARNING: Restore blob rang with Id 'd66d1d02-6e48-47ef-b516-0155dd8319c6' started. Restore blob ranges time to complete is dependent on the size of the restore.
 
-Status   RestoreId                            FailureReason Parameters.TimeToRestore     Parameters.BlobRanges   
-------   ---------                            ------------- ------------------------     ---------------------   
+Status   RestoreId                            FailureReason Parameters.TimeToRestore     Parameters.BlobRanges
+------   ---------                            ------------- ------------------------     ---------------------
 Complete d66d1d02-6e48-47ef-b516-0155dd8319c6               2020-02-10T14:17:46.8189116Z ["aaa/abc" -> "bbb/abc",...]
 ```
 

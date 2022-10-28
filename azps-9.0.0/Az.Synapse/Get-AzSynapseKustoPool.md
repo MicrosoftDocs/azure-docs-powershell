@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/get-azsynapsekustopool
+online version: https://learn.microsoft.com/powershell/module/az.synapse/get-azsynapsekustopool
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Get-AzSynapseKustoPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Get-AzSynapseKustoPool.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a Kusto pool.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/get-azsynapsekustopool) for up-to-date information.
 
 ## SYNTAX
 
@@ -44,7 +47,7 @@ Get-AzSynapseKustoPool -ResourceGroupName testrg -WorkspaceName testws
 ```output
 Location  Name                     Type                                    Etag
 --------  ----                     ----                                    ----
-East US 2 testws/testnewkustopool  Microsoft.Synapse/workspaces/kustoPools 
+East US 2 testws/testnewkustopool  Microsoft.Synapse/workspaces/kustoPools
 East US 2 testws/testnewkustopool1 Microsoft.Synapse/workspaces/kustoPools
 ```
 
@@ -58,7 +61,7 @@ Get-AzSynapseKustoPool -ResourceGroupName testrg -WorkspaceName testws -Name tes
 ```output
 Location  Name                    Type                                    Etag
 --------  ----                    ----                                    ----
-East US 2 testws/testnewkustopool Microsoft.Synapse/workspaces/kustoPools 
+East US 2 testws/testnewkustopool Microsoft.Synapse/workspaces/kustoPools
 ```
 
 The above command returns the Kusto pool named "testnewkustopool" in the resource group "testrg".

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll-Help.xml
 Module Name: Az.DataShare
-online version: https://docs.microsoft.com/powershell/module/az.datashare/stop-azdatasharesubscriptionsynchronization
+online version: https://learn.microsoft.com/powershell/module/az.datashare/stop-azdatasharesubscriptionsynchronization
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Stop-AzDataShareSubscriptionSynchronization.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Stop-AzDataShareSubscriptionSynchronization.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Stops ongoing synchronization for a share subscription. A share subscription can be specified through its resource id or its name.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datashare/stop-azdatasharesubscriptionsynchronization) for up-to-date information.
 
 ## SYNTAX
 
@@ -49,7 +52,7 @@ AdsShareSubscription
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 
 durationMs        : 231869
-endTime           : 
+endTime           :
 message           :
 startTime         : 7/9/2019 11:40:53 PM
 status            : Canceled

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
 ms.assetid: 6234F211-6ED4-443F-9B83-DEB9AC51B763
-online version: https://docs.microsoft.com/powershell/module/az.rediscache/set-azrediscache
+online version: https://learn.microsoft.com/powershell/module/az.rediscache/set-azrediscache
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Set-AzRedisCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Set-AzRedisCache.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies an Azure Cache for Redis.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.rediscache/set-azrediscache) for up-to-date information.
 
 ## SYNTAX
 
@@ -74,7 +77,7 @@ Set-AzRedisCache -Name "MyCache"  -RedisConfiguration @{"rdb-backup-enabled" = "
           ProvisioningState  : Succeeded
           SslPort            : 6380
           RedisConfiguration : {[maxmemory-policy, allkeys-random], [maxclients, 7500], [maxmemory-reserved, 200],
-                                [maxfragmentationmemory-reserved, 300], [rdb-backup-enabled, false]...} 
+                                [maxfragmentationmemory-reserved, 300], [rdb-backup-enabled, false]...}
           EnableNonSslPort   : False
           RedisVersion       : 4.0.14
           Size               : 6GB
@@ -83,7 +86,7 @@ Set-AzRedisCache -Name "MyCache"  -RedisConfiguration @{"rdb-backup-enabled" = "
           Zone               : []
 ```
 
-    
+
 
 This cmdlet disables RDB backup data persistence for Azure Cache for Redis. You can also disable AOF backup persistent cache.
 
@@ -105,7 +108,7 @@ Set-AzRedisCache -Name "MyCache" -RedisConfiguration @{"rdb-backup-enabled" = "t
           ProvisioningState  : Succeeded
           SslPort            : 6380
           RedisConfiguration : {[maxmemory-policy, allkeys-random], [maxclients, 7500], [maxmemory-reserved, 200],
-                                [maxfragmentationmemory-reserved, 300], [rdb-backup-enabled, true]....} 
+                                [maxfragmentationmemory-reserved, 300], [rdb-backup-enabled, true]....}
           EnableNonSslPort   : False
           RedisVersion       : 4.0.14
           Size               : 6GB
@@ -137,7 +140,7 @@ Set-AzRedisCache -Name "MyCache" -RedisConfiguration @{"rdb-backup-frequency" = 
           ProvisioningState  : Succeeded
           SslPort            : 6380
           RedisConfiguration : {[maxmemory-policy, allkeys-random], [maxclients, 7500], [maxmemory-reserved, 200],
-                                [maxfragmentationmemory-reserved, 300], [rdb-backup-enabled, true]....} 
+                                [maxfragmentationmemory-reserved, 300], [rdb-backup-enabled, true]....}
           EnableNonSslPort   : False
           RedisVersion       : 4.0.14
           Size               : 6GB
@@ -165,7 +168,7 @@ Set-AzRedisCache -Name "MyCache"  -RedisConfiguration @{"aof-backup-enabled"= "f
           ProvisioningState  : Succeeded
           SslPort            : 6380
           RedisConfiguration : {[maxmemory-policy, allkeys-random], [maxclients, 7500], [maxmemory-reserved, 200],
-                                [maxfragmentationmemory-reserved, 300], [rdb-backup-enabled, true]....} 
+                                [maxfragmentationmemory-reserved, 300], [rdb-backup-enabled, true]....}
           EnableNonSslPort   : False
           RedisVersion       : 4.0.14
           Size               : 6GB
@@ -174,7 +177,7 @@ Set-AzRedisCache -Name "MyCache"  -RedisConfiguration @{"aof-backup-enabled"= "f
           Zone               : []
 ```
 
- 
+
 This cmdlet helps in changing persistence method.
 
 ### Example 6: Scale an Azure Cache for Redis Instance - Update to different size.
@@ -196,7 +199,7 @@ Set-AzRedisCache -Name "MyCache" -Size "P2" -Sku "Premium"
           ProvisioningState  : Scaling
           SslPort            : 6380
           RedisConfiguration : {[maxmemory-policy, allkeys-random], [maxclients, 7500], [maxmemory-reserved, 200],
-                                [maxfragmentationmemory-reserved, 300]....} 
+                                [maxfragmentationmemory-reserved, 300]....}
           EnableNonSslPort   : False
           RedisVersion       : 4.0.14
           Size               : 6GB
@@ -210,7 +213,7 @@ This command increases or decreases the memory size of your instance.
 ### Example 7: Scale an Azure Cache for Redis Instance - Update to different tier.
 
 ```powershell
-Set-AzRedisCache -Name "MyCache" -Size "P1" -Sku "Premium" 
+Set-AzRedisCache -Name "MyCache" -Size "P1" -Sku "Premium"
 ```
 
 ```output
@@ -226,7 +229,7 @@ Set-AzRedisCache -Name "MyCache" -Size "P1" -Sku "Premium"
           ProvisioningState  : Scaling
           SslPort            : 6380
           RedisConfiguration : {[maxmemory-policy, allkeys-random], [maxclients, 7500], [maxmemory-reserved, 200],
-                                [maxfragmentationmemory-reserved, 300]....} 
+                                [maxfragmentationmemory-reserved, 300]....}
           EnableNonSslPort   : False
           RedisVersion       : 4.0.14
           Size               : 1GB
@@ -256,7 +259,7 @@ Set-AzRedisCache -Name "MyCache" -ShardCount 1
           ProvisioningState  : Scaling
           SslPort            : 6380
           RedisConfiguration : {[maxmemory-policy, allkeys-random], [maxclients, 7500], [maxmemory-reserved, 200],
-                                [maxfragmentationmemory-reserved, 300]....} 
+                                [maxfragmentationmemory-reserved, 300]....}
           EnableNonSslPort   : False
           RedisVersion       : 4.0.14
           Size               : 6GB
@@ -287,7 +290,7 @@ Set-AzRedisCache -Name "MyCache" -ShardCount 2
           ProvisioningState  : Scaling
           SslPort            : 6380
           RedisConfiguration : {[maxmemory-policy, allkeys-random], [maxclients, 7500], [maxmemory-reserved, 200],
-                                [maxfragmentationmemory-reserved, 300]....} 
+                                [maxfragmentationmemory-reserved, 300]....}
           EnableNonSslPort   : False
           RedisVersion       : 4.0.14
           Size               : 6GB
@@ -388,31 +391,31 @@ Specifies the connection string to the Storage account for Redis data persistenc
 Premium tier only.
 - rdb-backup-frequency.
 Specifies the backup frequency for Redis data persistence.
-Premium tier only. 
+Premium tier only.
 - maxmemory-reserved.
 Configures the memory reserved for non-cache processes.
-Standard and Premium tiers. 
+Standard and Premium tiers.
 - maxmemory-policy.
 Configures the eviction policy for the cache.
-All pricing tiers. 
+All pricing tiers.
 - notify-keyspace-events.
 Configures keyspace notifications.
-Standard and premium tiers. 
+Standard and premium tiers.
 - hash-max-ziplist-entries.
 Configures memory optimization for small aggregate data types.
-Standard and Premium tiers. 
+Standard and Premium tiers.
 - hash-max-ziplist-value.
 Configures memory optimization for small aggregate data types.
-Standard and Premium tiers. 
+Standard and Premium tiers.
 - set-max-intset-entries.
 Configures memory optimization for small aggregate data types.
-Standard and Premium tiers. 
+Standard and Premium tiers.
 - zset-max-ziplist-entries.
 Configures memory optimization for small aggregate data types.
-Standard and Premium tiers. 
+Standard and Premium tiers.
 - zset-max-ziplist-value.
 Configures memory optimization for small aggregate data types.
-Standard and Premium tiers. 
+Standard and Premium tiers.
 - databases.
 Configures the number of databases.
 This property can be configured only at cache creation.
@@ -478,7 +481,7 @@ Accept wildcard characters: False
 
 ### -Size
 Specifies the size of the Redis Cache.
-Valid values are: 
+Valid values are:
 - P1
 - P2
 - P3
@@ -515,7 +518,7 @@ Accept wildcard characters: False
 
 ### -Sku
 Specifies the SKU of the Redis Cache to create.
-Valid values are: 
+Valid values are:
 - Basic
 - Standard
 - Premium

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Reservations
-online version: https://docs.microsoft.com/powershell/module/az.reservations/move-azreservationdirectory
+online version: https://learn.microsoft.com/powershell/module/az.reservations/move-azreservationdirectory
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Move-AzReservationDirectory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Move-AzReservationDirectory.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Change directory (tenant) of `ReservationOrder` and all `Reservation` under it to specified tenant id
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.reservations/move-azreservationdirectory) for up-to-date information.
 
 ## SYNTAX
 
@@ -62,7 +65,7 @@ Reservation                 : {{
                                 "name": "VM_RI_05-26-2022_16-53",
                                 "isSucceeded": true
                               }}
-ReservationOrderError       : 
+ReservationOrderError       :
 ReservationOrderId          : 7c31a9e8-8490-4002-88cd-3a16b71362a9
 ReservationOrderIsSucceeded : True
 ReservationOrderName        : VM_RI_05-26-2022_16-53

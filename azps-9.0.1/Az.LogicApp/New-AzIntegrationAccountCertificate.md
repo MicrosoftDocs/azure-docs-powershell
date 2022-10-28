@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: BB1B49CD-B42F-4222-B0BA-0AA4CE3C95E0
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/new-azintegrationaccountcertificate
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/new-azintegrationaccountcertificate
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/New-AzIntegrationAccountCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/New-AzIntegrationAccountCertificate.md
@@ -64,7 +64,7 @@ KeyVersion        : 1.0
 KeyVaultId        : /subscriptions/<SubscriptionId>/resourcegroups/ResourceGroup11/providers/microsoft.keyvault/vaults/<name>
 KeyVaultName      : testkeyvault
 KeyVaultName      : testkeyvault
-PublicCertificate : 
+PublicCertificate :
 MetaData          :
 ```
 

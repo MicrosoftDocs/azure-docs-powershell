@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Network
 Module Guid: eb75c732-e274-4a20-b502-e9958e63484a
-Download Help Link: https://docs.microsoft.com/powershell/module/az.network
+Download Help Link: https://learn.microsoft.com/powershell/module/az.network
 Help Version: 5.4.2.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Az.Network.md
@@ -68,7 +68,7 @@ Adds a delegation to a subnet.
 Adds an ExpressRoute circuit authorization.
 
 ### [Add-AzExpressRouteCircuitConnectionConfig](Add-AzExpressRouteCircuitConnectionConfig.md)
-Adds a circuit connection configuration to Private Peering of an Express Route Circuit. 
+Adds a circuit connection configuration to Private Peering of an Express Route Circuit.
 
 ### [Add-AzExpressRouteCircuitPeeringConfig](Add-AzExpressRouteCircuitPeeringConfig.md)
 Adds a peering configuration to an ExpressRoute circuit.
@@ -116,7 +116,7 @@ Adds a route filter rule to a route filter.
 Adds a service endpoint policy definition to a specified policy.
 
 ### [Add-AzVirtualHubRoute](Add-AzVirtualHubRoute.md)
-Creates a VirtualHubRoute object which can be passed as parameter to the Add-AzVirtualHubRouteTable command. 
+Creates a VirtualHubRoute object which can be passed as parameter to the Add-AzVirtualHubRouteTable command.
 
 ### [Add-AzVirtualHubRouteTable](Add-AzVirtualHubRouteTable.md)
 Creates a Virtual Hub Route Table resource which is a child of VirtualHub.
@@ -594,7 +594,7 @@ Gets an existing VpnServerConfiguration for point to site connectivity.
 Gets an existing AzVpnServerConfigurationPolicyGroup of VpnServerConfiguration for point to site connectivity.
 
 ### [Get-AzVpnSite](Get-AzVpnSite.md)
-Gets an Azure VpnSite resource by name OR lists all VpnSites in a ResourceGroup or SubscriptionId. 
+Gets an Azure VpnSite resource by name OR lists all VpnSites in a ResourceGroup or SubscriptionId.
 
 This is an RM representation of customer branches that are uploaded to Azure for S2S connectivity with a Cortex virtual hub.
 
@@ -623,7 +623,7 @@ Creates back-end HTTP setting for an application gateway.
 Creates a new connection draining configuration for back-end HTTP settings.
 
 ### [New-AzApplicationGatewayCustomError](New-AzApplicationGatewayCustomError.md)
-Creates a custom error with http status code and custom error page url 
+Creates a custom error with http status code and custom error page url
 
 ### [New-AzApplicationGatewayFirewallCondition](New-AzApplicationGatewayFirewallCondition.md)
 Creates a match condition for custom rule
@@ -914,7 +914,7 @@ Create a connection monitor test group.
 Create or update a flow log resource for the specified network security group.
 
 ### [New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile](New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile.md)
-Creates a new network configuration diagnostic profile object. 
+Creates a new network configuration diagnostic profile object.
 This object is used to restrict the network configuration during a diagnostic session using the specified criteria.
 
 ### [New-AzNetworkWatcherPacketCapture](New-AzNetworkWatcherPacketCapture.md)
@@ -1435,7 +1435,7 @@ Modifies the WAF configuration of an application gateway.
 Modifies an ExpressRoute circuit.
 
 ### [Set-AzExpressRouteCircuitConnectionConfig](Set-AzExpressRouteCircuitConnectionConfig.md)
-Updates a circuit connection configuration created in Private Peerings for an Express Route Circuit. 
+Updates a circuit connection configuration created in Private Peerings for an Express Route Circuit.
 
 ### [Set-AzExpressRouteCircuitPeeringConfig](Set-AzExpressRouteCircuitPeeringConfig.md)
 Saves a modified ExpressRoute peering configuration.

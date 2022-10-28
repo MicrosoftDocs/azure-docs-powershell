@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Kusto
-online version: https://docs.microsoft.com/powershell/module/az.kusto/update-azkustomanagedprivateendpoint
+online version: https://learn.microsoft.com/powershell/module/az.kusto/update-azkustomanagedprivateendpoint
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/help/Update-AzKustoManagedPrivateEndpoint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/help/Update-AzKustoManagedPrivateEndpoint.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates a managed private endpoint.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.kusto/update-azkustomanagedprivateendpoint) for up-to-date information.
 
 ## SYNTAX
 
@@ -330,7 +333,7 @@ INPUTOBJECT `<IKustoIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
 PARAMETER `<IManagedPrivateEndpoint>`: Class representing a managed private endpoint.
-  - `[AzureAsyncOperation <String>]`: 
+  - `[AzureAsyncOperation <String>]`:
   - `[GroupId <String>]`: The groupId in which the managed private endpoint is created.
   - `[PrivateLinkResourceId <String>]`: The ARM resource ID of the resource for which the managed private endpoint is created.
   - `[PrivateLinkResourceRegion <String>]`: The region of the resource to which the managed private endpoint is created.

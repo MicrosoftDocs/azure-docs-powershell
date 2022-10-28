@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/get-azsynapsekustopooldataconnection
+online version: https://learn.microsoft.com/powershell/module/az.synapse/get-azsynapsekustopooldataconnection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Get-AzSynapseKustoPoolDataConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Get-AzSynapseKustoPoolDataConnection.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Returns a data connection.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/get-azsynapsekustopooldataconnection) for up-to-date information.
 
 ## SYNTAX
 
@@ -45,8 +48,8 @@ Get-AzSynapseKustoPoolDataConnection -ResourceGroupName testrg -WorkspaceName te
 ```
 
 ```output
-Kind     Location  Name                                                                                                              
-----     --------  ----                                             
+Kind     Location  Name
+----     --------  ----
 EventHub East US 2 testws/testkustopool/mykustodatabase/eventhubdc
 ```
 
@@ -58,8 +61,8 @@ Get-AzSynapseKustoPoolDataConnection -ResourceGroupName testrg -WorkspaceName te
 ```
 
 ```output
-Kind     Location  Name                                                                                                             
-----     --------  ----                                             
+Kind     Location  Name
+----     --------  ----
 EventHub East US 2 testws/testkustopool/mykustodatabase/mykustodataconnection
 ```
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.AnalysisServices.dll-Help.xml
 Module Name: Az.AnalysisServices
-online version: https://docs.microsoft.com/powershell/module/az.analysisservices/suspend-azanalysisservicesserver
+online version: https://learn.microsoft.com/powershell/module/az.analysisservices/suspend-azanalysisservicesserver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AnalysisServices/AnalysisServices/help/Suspend-AzAnalysisServicesServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AnalysisServices/AnalysisServices/help/Suspend-AzAnalysisServicesServer.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Suspends an instance of Analysis Services server
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.analysisservices/suspend-azanalysisservicesserver) for up-to-date information.
 
 ## SYNTAX
 

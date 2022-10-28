@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 7A1B92F5-C698-4D5E-ACD7-4013F1BC6247
-online version: https://docs.microsoft.com/powershell/module/az.compute/add-azvmssdiagnosticsextension
+online version: https://learn.microsoft.com/powershell/module/az.compute/add-azvmssdiagnosticsextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssDiagnosticsExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssDiagnosticsExtension.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Adds a diagnostics extension to the VMSS.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/add-azvmssdiagnosticsextension) for up-to-date information.
 
 ## SYNTAX
 

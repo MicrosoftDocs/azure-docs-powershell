@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.TimeSeriesInsights
-online version: https://docs.microsoft.com/powershell/module/az.timeseriesinsights/get-aztimeseriesinsightseventsource
+online version: https://learn.microsoft.com/powershell/module/az.timeseriesinsights/get-aztimeseriesinsightseventsource
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/help/Get-AzTimeSeriesInsightsEventSource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/help/Get-AzTimeSeriesInsightsEventSource.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the event source with the specified name in the specified environment.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.timeseriesinsights/get-aztimeseriesinsightseventsource) for up-to-date information.
 
 ## SYNTAX
 
@@ -44,9 +47,9 @@ Get-AzTimeSeriesInsightsEventSource -ResourceGroupName testgroup -EnvironmentNam
 ```output
 ConsumerGroupName     : testgroup2
 EventHubName          : hubname001
-EventSourceResourceId : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup2/providers/Microsoft.EventHub/namespaces/spacename001/eventhubs/hu 
+EventSourceResourceId : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup2/providers/Microsoft.EventHub/namespaces/spacename001/eventhubs/hu
                         bname001
-Id                    : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/tsitest001/eve 
+Id                    : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/tsitest001/eve
                         ntsources/estest001
 KeyName               : RootManageSharedAccessKey
 Kind                  : Microsoft.EventHub
@@ -59,7 +62,7 @@ Type                  : Microsoft.TimeSeriesInsights/Environments/EventSources
 
 ConsumerGroupName     : testgroup2
 EventSourceResourceId : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup2/providers/Microsoft.Devices/IotHubs/iotname001
-Id                    : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/tsitest001/eve 
+Id                    : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/tsitest001/eve
                         ntsources/iots001
 IotHubName            : iotname001
 KeyName               : RootManageSharedAccessKey

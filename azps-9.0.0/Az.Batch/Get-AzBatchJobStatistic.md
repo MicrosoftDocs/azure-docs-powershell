@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: E655684D-9601-4A0B-BB09-EFB787EB2B1B
-online version: https://docs.microsoft.com/powershell/module/az.batch/get-azbatchjobstatistic
+online version: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchjobstatistic
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchJobStatistic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchJobStatistic.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets job summary statistics for a Batch account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/get-azbatchjobstatistic) for up-to-date information.
 
 ## SYNTAX
 

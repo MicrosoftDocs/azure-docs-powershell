@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
 ms.assetid: C2A7F37B-5713-4430-B83F-C6745692396D
-online version: https://docs.microsoft.com/powershell/module/az.recoveryservices/set-azrecoveryservicesvaultproperty
+online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/set-azrecoveryservicesvaultproperty
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesVaultProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesVaultProperty.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates properties of a Vault.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/set-azrecoveryservicesvaultproperty) for up-to-date information.
 
 ## SYNTAX
 
@@ -31,7 +34,7 @@ Set-AzRecoveryServicesVaultProperty [-VaultId <String>] [-DefaultProfile <IAzure
 ```
 
 ## DESCRIPTION
-The **Set-AzRecoveryServicesVaultProperty** cmdlet updates properties of a Recovery services vault. This cmdlet can be used to enable/disable soft delete or set CMK encryption for a vault with two different parameter sets. 
+The **Set-AzRecoveryServicesVaultProperty** cmdlet updates properties of a Recovery services vault. This cmdlet can be used to enable/disable soft delete or set CMK encryption for a vault with two different parameter sets.
 **SoftDeleteFeatureState** property of a vault can be disabled only if there are no registered containers in the vault. InfrastructurEncryption can only be set the first time a user updates the CMK vault.
 
 ## EXAMPLES
@@ -49,20 +52,20 @@ The second command Updates the SoftDeleteFeatureState property of the vault to "
 
 ```powershell
 $vault = Get-AzRecoveryServicesVault -ResourceGroupName "rgName" -Name "vaultName"
-$keyVault = Get-AzKeyVault -VaultName "keyVaultName" -ResourceGroupName "RGName" 
-$key = Get-AzKeyVaultKey -VaultName "keyVaultName" -Name "keyName" 
+$keyVault = Get-AzKeyVault -VaultName "keyVaultName" -ResourceGroupName "RGName"
+$key = Get-AzKeyVaultKey -VaultName "keyVaultName" -Name "keyName"
 Set-AzRecoveryServicesVaultProperty -EncryptionKeyId $key.ID -InfrastructureEncryption -VaultId $vault.ID -UseSystemAssignedIdentity $true
 ```
 
 First cmdlet gets the RSVault to update encryption properties. Second cmdlet gets the azure key vault. Third cmdlet gets the key from the key vault.
-Fourth cmdlet updates the customer managed encryption key within the RSVault to be accessed via SystemAssigned identity. Use -InfrastructureEncryption param to enable infrastructure encryption for the first time update. 
+Fourth cmdlet updates the customer managed encryption key within the RSVault to be accessed via SystemAssigned identity. Use -InfrastructureEncryption param to enable infrastructure encryption for the first time update.
 
 ### Example 3: Update CMK encryption of a vault to use userAssigned MSIdentity
 
 ```powershell
 $vault = Get-AzRecoveryServicesVault -ResourceGroupName "rgName" -Name "vaultName"
-$keyVault = Get-AzKeyVault -VaultName "keyVaultName" -ResourceGroupName "RGName" 
-$key = Get-AzKeyVaultKey -VaultName "keyVaultName" -Name "keyName" 
+$keyVault = Get-AzKeyVault -VaultName "keyVaultName" -ResourceGroupName "RGName"
+$key = Get-AzKeyVaultKey -VaultName "keyVaultName" -Name "keyName"
 Set-AzRecoveryServicesVaultProperty -EncryptionKeyId $key.ID -VaultId $vault.ID -UseSystemAssignedIdentity $false -UserAssignedIdentity $vault.Identity.UserAssignedIdentities.Keys[0]
 ```
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
 Module Name: Az.HDInsight
 ms.assetid: 606C5453-F841-4574-95F8-5CC29A4186E1
-online version: https://docs.microsoft.com/powershell/module/az.hdinsight/get-azhdinsightproperty
+online version: https://learn.microsoft.com/powershell/module/az.hdinsight/get-azhdinsightproperty
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Get-AzHDInsightProperty.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Get-AzHDInsightProperty.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets properties about the HDInsight service, such as available locations and capacity.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hdinsight/get-azhdinsightproperty) for up-to-date information.
 
 ## SYNTAX
 

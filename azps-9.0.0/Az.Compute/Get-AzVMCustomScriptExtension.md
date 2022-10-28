@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 1017A74D-6420-4E51-A4A4-1AD3AD6D8122
-online version: https://docs.microsoft.com/powershell/module/az.compute/get-azvmcustomscriptextension
+online version: https://learn.microsoft.com/powershell/module/az.compute/get-azvmcustomscriptextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMCustomScriptExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMCustomScriptExtension.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets information about a custom script extension.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/get-azvmcustomscriptextension) for up-to-date information.
 
 ## SYNTAX
 

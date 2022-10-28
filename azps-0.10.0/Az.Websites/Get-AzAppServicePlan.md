@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.WebSites
 ms.assetid: 89ED4231-7616-47D0-BDAA-D849C245DC79
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.websites/get-Azappserviceplan
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.websites/get-Azappserviceplan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Get-AzAppServicePlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Get-AzAppServicePlan.md
@@ -63,12 +63,12 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Location 
+Location
 
 ```yaml
 Type: String
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -83,7 +83,7 @@ App Service Plan Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -98,7 +98,7 @@ Resource Group Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0

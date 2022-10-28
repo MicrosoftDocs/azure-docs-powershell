@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: BDEEF1EA-A785-4E17-9887-C2000BDFCF57
-online version: https://docs.microsoft.com/powershell/module/az.storage/set-azstoragecontaineracl
+online version: https://learn.microsoft.com/powershell/module/az.storage/set-azstoragecontaineracl
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageContainerAcl.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageContainerAcl.md
@@ -148,10 +148,10 @@ Anonymous users can read blobs in a publicly available container without authent
 The acceptable values for this parameter are:
 --Container.
 Provides full read access to a container and its blobs.
-Clients can enumerate blobs in the container through anonymous request, but cannot enumerate containers in the storage account. 
+Clients can enumerate blobs in the container through anonymous request, but cannot enumerate containers in the storage account.
 --Blob.
 Provides read access to blob data in a container through anonymous request, but does not provide access to container data.
-Clients cannot enumerate blobs in the container by using anonymous request. 
+Clients cannot enumerate blobs in the container by using anonymous request.
 --Off.
 Restricts access to only the storage account owner.
 

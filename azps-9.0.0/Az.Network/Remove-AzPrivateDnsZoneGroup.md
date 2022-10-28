@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azprivatednszonegroup
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azprivatednszonegroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzPrivateDnsZoneGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzPrivateDnsZoneGroup.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes a DNS zone group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-azprivatednszonegroup) for up-to-date information.
+
 ## SYNTAX
 
 ```
@@ -20,13 +23,13 @@ Remove-AzPrivateDnsZoneGroup -ResourceGroupName <String> -PrivateEndpointName <S
 ```
 
 ## DESCRIPTION
-The **Remove-AzPrivateDnsZoneGroup** cmdlet removes a DNS zone group. 
+The **Remove-AzPrivateDnsZoneGroup** cmdlet removes a DNS zone group.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Remove-AzPrivateDnsZoneGroup -ResourceGroupName "rg" -PrivateEndpointName "test-pr-endpoint" -name dnsgroup1 
+Remove-AzPrivateDnsZoneGroup -ResourceGroupName "rg" -PrivateEndpointName "test-pr-endpoint" -name dnsgroup1
 ```
 
 Above example removes a DNS zone grup named dnsgroup1 from endpoint test-pr-endpoint.

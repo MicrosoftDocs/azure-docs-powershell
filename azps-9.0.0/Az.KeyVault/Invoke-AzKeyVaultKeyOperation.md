@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
-online version: https://docs.microsoft.com/powershell/module/az.keyvault/invoke-azkeyvaultkeyoperation
+online version: https://learn.microsoft.com/powershell/module/az.keyvault/invoke-azkeyvaultkeyoperation
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Invoke-AzKeyVaultKeyOperation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Invoke-AzKeyVaultKeyOperation.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Performs operation like "Encrypt", "Decrypt", "Wrap" or "Unwrap" using a specified key stored in a key vault or managed hsm.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/invoke-azkeyvaultkeyoperation) for up-to-date information.
 
 ## SYNTAX
 
@@ -71,11 +74,11 @@ Result    : test
 Algorithm : RSA1_5
 ```
 
-Decrypts encrypted data that is encrypted using test-key stored in test-kv. 
+Decrypts encrypted data that is encrypted using test-key stored in test-kv.
 
 ### Encrypts using an encryption key
 ```powershell
-$result = Invoke-AzKeyVaultKeyOperation -Operation Encrypt -Algorithm RSA1_5 -VaultName test-kv -Name test-key -Value (ConvertTo-SecureString -String "test" -AsPlainText -Force) 
+$result = Invoke-AzKeyVaultKeyOperation -Operation Encrypt -Algorithm RSA1_5 -VaultName test-kv -Name test-key -Value (ConvertTo-SecureString -String "test" -AsPlainText -Force)
 
 $result | Format-List
 ```
@@ -90,7 +93,7 @@ Encrypts string "test" using test-key stored in test-kv. The returned result is 
 
 ### Wraps a symmetric key using a specified key
 ```powershell
-$result = Invoke-AzKeyVaultKeyOperation -Operation Wrap -Algorithm RSA1_5 -VaultName test-kv -Name test-key -Value (ConvertTo-SecureString -String "ovQIlbB0DgWhZA7sgkPxbg9H-Ly-VlNGPSgGrrZvlIo" -AsPlainText -Force) 
+$result = Invoke-AzKeyVaultKeyOperation -Operation Wrap -Algorithm RSA1_5 -VaultName test-kv -Name test-key -Value (ConvertTo-SecureString -String "ovQIlbB0DgWhZA7sgkPxbg9H-Ly-VlNGPSgGrrZvlIo" -AsPlainText -Force)
 
 $result | Format-List
 ```
@@ -105,7 +108,7 @@ Wraps a symmetric key using key named test-key stored in test-kv. The returned r
 
 ### Unwraps a symmetric key using a specified key
 ```powershell
-Invoke-AzKeyVaultKeyOperation -Operation Unwrap -Algorithm RSA1_5 -VaultName test-kv -Name test-key -Value (ConvertTo-SecureString -String $result.Result -AsPlainText -Force) 
+Invoke-AzKeyVaultKeyOperation -Operation Unwrap -Algorithm RSA1_5 -VaultName test-kv -Name test-key -Value (ConvertTo-SecureString -String $result.Result -AsPlainText -Force)
 ```
 
 ```output
@@ -114,7 +117,7 @@ Result    : ovQIlbB0DgWhZA7sgkPxbg9H-Ly-VlNGPSgGrrZvlIo
 Algorithm : RSA1_5
 ```
 
- Unwraps a symmetric key using a specified key test-key stored in test-kv. 
+ Unwraps a symmetric key using a specified key test-key stored in test-kv.
 
 ## PARAMETERS
 

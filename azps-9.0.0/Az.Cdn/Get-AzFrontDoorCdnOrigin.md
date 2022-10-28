@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Cdn
-online version: https://docs.microsoft.com/powershell/module/az.cdn/get-azfrontdoorcdnorigin
+online version: https://learn.microsoft.com/powershell/module/az.cdn/get-azfrontdoorcdnorigin
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Get-AzFrontDoorCdnOrigin.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Get-AzFrontDoorCdnOrigin.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets an existing origin within an origin group.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/get-azfrontdoorcdnorigin) for up-to-date information.
 
 ## SYNTAX
 
@@ -36,7 +39,7 @@ Gets an existing origin within an origin group.
 
 ## EXAMPLES
 
-### Example 1: List AzureFrontDoor origins under the origin group 
+### Example 1: List AzureFrontDoor origins under the origin group
 ```powershell
  Get-AzFrontDoorCdnOrigin -ResourceGroupName testps-rg-da16jm -ProfileName fdp-v542q6 -OriginGroupName org001
 ```

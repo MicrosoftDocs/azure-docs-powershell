@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Migrate
-online version: https://docs.microsoft.com/powershell/module/az.migrate/remove-azmigrateproject
+online version: https://learn.microsoft.com/powershell/module/az.migrate/remove-azmigrateproject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/help/Remove-AzMigrateProject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/help/Remove-AzMigrateProject.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Delete the migrate project.
 Deleting non-existent project is a no-operation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.migrate/remove-azmigrateproject) for up-to-date information.
 
 ## SYNTAX
 

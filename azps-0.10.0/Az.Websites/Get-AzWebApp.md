@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az.WebSites
 ms.assetid: A87ED954-9C09-4329-A005-ABFF36C45E6E
-online version: https://docs.microsoft.com/en-us/powershell/module/Az.websites/get-Azwebapp
+online version: https://learn.microsoft.com/en-us/powershell/module/Az.websites/get-Azwebapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Get-AzWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Get-AzWebApp.md
@@ -52,7 +52,7 @@ App Service Plan object
 ```yaml
 Type: AppServicePlan
 Parameter Sets: S2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -82,7 +82,7 @@ Location
 ```yaml
 Type: String
 Parameter Sets: S3
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -97,7 +97,7 @@ WebApp Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -112,7 +112,7 @@ Resource Group Name
 ```yaml
 Type: String
 Parameter Sets: S1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0

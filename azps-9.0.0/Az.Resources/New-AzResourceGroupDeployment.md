@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 6E2F0D5E-E683-46F3-B48B-55C4864F3308
-online version: https://docs.microsoft.com/powershell/module/az.resources/new-azresourcegroupdeployment
+online version: https://learn.microsoft.com/powershell/module/az.resources/new-azresourcegroupdeployment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzResourceGroupDeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzResourceGroupDeployment.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Adds an Azure deployment to a resource group.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/new-azresourcegroupdeployment) for up-to-date information.
 
 ## SYNTAX
 

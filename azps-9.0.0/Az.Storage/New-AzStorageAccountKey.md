@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: FDD2CE98-6C7E-4B95-BA5B-B03B6AC6EAEF
-online version: https://docs.microsoft.com/powershell/module/az.storage/new-azstorageaccountkey
+online version: https://learn.microsoft.com/powershell/module/az.storage/new-azstorageaccountkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageAccountKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageAccountKey.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Regenerates a storage key for an Azure Storage account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/new-azstorageaccountkey) for up-to-date information.
 
 ## SYNTAX
 

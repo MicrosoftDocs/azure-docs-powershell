@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ElasticSan
-online version: https://docs.microsoft.com/powershell/module/az.elasticsan/add-azelasticsanvolumegroupnetworkrule
+online version: https://learn.microsoft.com/powershell/module/az.elasticsan/add-azelasticsanvolumegroupnetworkrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Remove-AzElasticSanVolumeGroupNetworkRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/help/Remove-AzElasticSanVolumeGroupNetworkRule.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Remove a list of virtual network rules from a VolumeGroup
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.elasticsan/remove-azelasticsanvolumegroupnetworkrule) for up-to-date information.
 
 ## SYNTAX
 
@@ -33,9 +36,9 @@ Remove a list of virtual network rules from a VolumeGroup
 
 ## EXAMPLES
 
-### Example 1: Remove network rules by NetworkAclsVirtualNetworkRule objects  
+### Example 1: Remove network rules by NetworkAclsVirtualNetworkRule objects
 ```powershell
-# Initialze network rule objects 
+# Initialze network rule objects
 $virtualNetworkRule1 =  New-AzElasticSanVirtualNetworkRuleObject -VirtualNetworkResourceId  "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1" -Action Allow
 $virtualNetworkRule2 =  New-AzElasticSanVirtualNetworkRuleObject -VirtualNetworkResourceId  "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet2" -Action Allow
 $virtualNetworkRule3 =  New-AzElasticSanVirtualNetworkRuleObject -VirtualNetworkResourceId  "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet3" -Action Allow
@@ -47,8 +50,8 @@ Remove-AzElasticSanVolumeGroupNetworkRule -ResourceGroupName myresourcegroup -El
 ```
 
 ```output
-Action State VirtualNetworkResourceId                                                                                                                       
------- ----- ------------------------                                                                                                                       
+Action State VirtualNetworkResourceId
+------ ----- ------------------------
 Allow        /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet3
 ```
 
@@ -62,7 +65,7 @@ $virtualNetworkRule2 =  New-AzElasticSanVirtualNetworkRuleObject -VirtualNetwork
 $virtualNetworkRule3 =  New-AzElasticSanVirtualNetworkRuleObject -VirtualNetworkResourceId  "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet3" -Action Allow
 $virtualNetworkRuleResourceId1 = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1"
 $virtualNetworkRuleResourceId2 = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet2"
-# Update the volume group to contain the network rules 
+# Update the volume group to contain the network rules
 $volGroup = Update-AzElasticSanVolumeGroup -ResourceGroupName myresourcegroup -ElasticSanName myelasticsan -Name myvolumegroup -NetworkAclsVirtualNetworkRule $virtualNetworkRule1,$virtualNetworkRule2,$virtualNetworkRule3
 
 # Remove some of the network rules from the volume group
@@ -70,8 +73,8 @@ Remove-AzElasticSanVolumeGroupNetworkRule -ResourceGroupName myresourcegroup -El
 ```
 
 ```output
-Action State VirtualNetworkResourceId                                                                                                                       
------- ----- ------------------------                                                                                                                       
+Action State VirtualNetworkResourceId
+------ ----- ------------------------
 Allow        /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet3
 ```
 

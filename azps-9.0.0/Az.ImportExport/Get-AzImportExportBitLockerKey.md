@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ImportExport
-online version: https://docs.microsoft.com/powershell/module/az.importexport/get-azimportexportbitlockerkey
+online version: https://learn.microsoft.com/powershell/module/az.importexport/get-azimportexportbitlockerkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/help/Get-AzImportExportBitLockerKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/help/Get-AzImportExportBitLockerKey.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Returns the BitLocker Keys for all drives in the specified job.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.importexport/get-azimportexportbitlockerkey) for up-to-date information.
 
 ## SYNTAX
 
@@ -26,7 +29,7 @@ Returns the BitLocker Keys for all drives in the specified job.
 
 ### Example 1: List all BitLocker Keys in specified ImportExport job
 ```powershell
-Get-AzImportExportBitLockerKey -JobName test-job -ResourceGroupName ImportTestRG 
+Get-AzImportExportBitLockerKey -JobName test-job -ResourceGroupName ImportTestRG
 ```
 
 ```output

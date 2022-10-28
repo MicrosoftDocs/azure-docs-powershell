@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ConfidentialLedger
-online version: https://docs.microsoft.com/powershell/module/az.confidentialledger/new-azconfidentialledger
+online version: https://learn.microsoft.com/powershell/module/az.confidentialledger/new-azconfidentialledger
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/help/New-AzConfidentialLedger.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/help/New-AzConfidentialLedger.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a  Confidential Ledger with the specified ledger parameters.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.confidentialledger/new-azconfidentialledger) for up-to-date information.
 
 ## SYNTAX
 
@@ -34,13 +37,13 @@ New-AzConfidentialLedger `
   -SubscriptionId 00000000-0000-0000-0000-000000000000 `
   -AadBasedSecurityPrincipal `
       @{
-          LedgerRoleName="Administrator"; 
-          PrincipalId="34621747-6fc8-4771-a2eb-72f31c461f2e"; 
+          LedgerRoleName="Administrator";
+          PrincipalId="34621747-6fc8-4771-a2eb-72f31c461f2e";
           TenantId="bce123b9-2b7b-4975-8360-5ca0b9b1cd08"
       } `
   -CertBasedSecurityPrincipal `
       @{
-          Cert="-----BEGIN CERTIFICATE-----********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-----END CERTIFICATE-----"; 
+          Cert="-----BEGIN CERTIFICATE-----********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-----END CERTIFICATE-----";
           LedgerRoleName="Reader"
       } `
   -LedgerType Public `

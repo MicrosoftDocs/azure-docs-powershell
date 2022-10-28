@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.CustomProviders
-online version: https://docs.microsoft.com/powershell/module/az.customproviders/new-azcustomprovider
+online version: https://learn.microsoft.com/powershell/module/az.customproviders/new-azcustomprovider
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomProviders/help/New-AzCustomProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomProviders/help/New-AzCustomProvider.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates or updates the custom resource provider.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.customproviders/new-azcustomprovider) for up-to-date information.
 
 ## SYNTAX
 

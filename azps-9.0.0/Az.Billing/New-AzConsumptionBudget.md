@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Consumption.dll-Help.xml
 Module Name: Az.Billing
-online version: https://docs.microsoft.com/powershell/module/az.billing/new-azconsumptionbudget
+online version: https://learn.microsoft.com/powershell/module/az.billing/new-azconsumptionbudget
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/New-AzConsumptionBudget.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/New-AzConsumptionBudget.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create a budget in either a subscription or a resource group.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.billing/new-azconsumptionbudget) for up-to-date information.
 
 ## SYNTAX
 
@@ -43,7 +46,7 @@ New-AzConsumptionBudget -Amount 60 -Name PSBudget -Category Cost -StartDate 2018
 ```
 
 ```output
-Amount:  60		
+Amount:  60
 Category:  Cost
 CurrentSpend:  null
 Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/providers/Microsoft.Consumption/budgets/PSBudget
@@ -60,7 +63,7 @@ New-AzConsumptionBudget -ResourceGroupName RGBudgets -Amount 60 -Name PSBudgetRG
 ```
 
 ```output
-Amount:  60		
+Amount:  60
 Category:  Cost
 CurrentSpend:  null
 Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/resourceGroups/RGBudgets/providers/Microsoft.Consumption/budgets/PSBudgetRG

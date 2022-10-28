@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/new-azstackhciextension
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/new-azstackhciextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/New-AzStackHciExtension.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/New-AzStackHciExtension.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create Extension for HCI cluster.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.stackhci/new-azstackhciextension) for up-to-date information.
 
 ## SYNTAX
 
@@ -28,7 +31,7 @@ Create Extension for HCI cluster.
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 New-AzStackHciExtension -ArcSettingName "default" -ClusterName "myCluster" -Name "MicrosoftMonitoringAgent" -ResourceGroupName test-rg
 ```

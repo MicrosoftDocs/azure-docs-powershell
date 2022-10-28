@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: E53D5040-C1E8-4DC1-8371-F41C00B666E3
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageaccount
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageAccount.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a Storage account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/get-azstorageaccount) for up-to-date information.
 
 ## SYNTAX
 
@@ -66,8 +69,8 @@ PS C:\> $account = Get-AzStorageAccount -ResourceGroupName "myresourcegoup" -Nam
 
 PS C:\> $account.BlobRestoreStatus
 
-Status     RestoreId                            FailureReason Parameters.TimeToRestore     Parameters.BlobRanges                 
-------     ---------                            ------------- ------------------------     ---------------------                 
+Status     RestoreId                            FailureReason Parameters.TimeToRestore     Parameters.BlobRanges
+------     ---------                            ------------- ------------------------     ---------------------
 InProgress a70cd4a1-f223-4c86-959f-cc13eb4795a8               2020-02-10T13:45:04.7155962Z [container1/blob1 -> container2/blob2]
 ```
 

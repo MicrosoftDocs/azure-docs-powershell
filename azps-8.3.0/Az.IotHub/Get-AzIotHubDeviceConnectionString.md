@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/get-aziothubdeviceconnectionstring
+online version: https://learn.microsoft.com/powershell/module/az.iothub/get-aziothubdeviceconnectionstring
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubDeviceConnectionString.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubDeviceConnectionString.md
@@ -48,7 +48,7 @@ Get-AzIotHubDeviceConnectionString -ResourceGroupName "myresourcegroup" -IotHubN
 ```output
 Device Id Connection String
 --------- -----------------
-device1   HostName=myiothub.azure-devices.net;DeviceId=device1;SharedAccessKey=/X4y******     
+device1   HostName=myiothub.azure-devices.net;DeviceId=device1;SharedAccessKey=/X4y******
 device2   HostName=myiothub.azure-devices.net;DeviceId=device2;x509=true
 ```
 

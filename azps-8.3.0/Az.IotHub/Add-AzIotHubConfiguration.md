@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
 Module Name: Az.IotHub
-online version: https://docs.microsoft.com/powershell/module/az.iothub/add-aziothubconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.iothub/add-aziothubconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Add-AzIotHubConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Add-AzIotHubConfiguration.md
@@ -39,13 +39,13 @@ Add-AzIotHubConfiguration [-ResourceId] <String> -Name <String> [-DeviceContent 
 ```
 
 ## DESCRIPTION
-Configuration content is json and slighty varies based on device or module intent. 
+Configuration content is json and slighty varies based on device or module intent.
 Device configurations are in the form of {"deviceContent":{...}}
 Module configurations are in the form of {"moduleContent":{...}}
 Configurations can be defined with user provided metrics for on demand evaluation.
 User metrics are json and in the form of {"queries":{...}} or {"metrics":{"queries":{...}}}.
 
-Note: Target condition for modules must start with "from devices.modules where". See https://docs.microsoft.com/azure/iot-hub/iot-hub-automatic-device-management for more information.
+Note: Target condition for modules must start with "from devices.modules where". See https://learn.microsoft.com/azure/iot-hub/iot-hub-automatic-device-management for more information.
 
 ## EXAMPLES
 

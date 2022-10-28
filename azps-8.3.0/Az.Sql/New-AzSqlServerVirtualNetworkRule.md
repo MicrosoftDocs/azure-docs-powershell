@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/new-azsqlservervirtualnetworkrule
+online version: https://learn.microsoft.com/powershell/module/az.sql/new-azsqlservervirtualnetworkrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlServerVirtualNetworkRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlServerVirtualNetworkRule.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzSqlServerVirtualNetworkRule
 
 ## SYNOPSIS
-Creates an Azure SQL Server Virtual Network Rule. 
+Creates an Azure SQL Server Virtual Network Rule.
 
 > [!NOTE]
 >This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/new-azsqlservervirtualnetworkrule) for up-to-date information.
@@ -24,7 +24,7 @@ New-AzSqlServerVirtualNetworkRule -VirtualNetworkRuleName <String> -VirtualNetwo
 ```
 
 ## DESCRIPTION
-Creates an Azure SQL Server Virtual Network Rule. Virtual Network Rules are used to connect the Azure SQL Server to a specific Virtual Network in order to restrict the access on the Azure SQL Server to only be available within the Virtual Network. 
+Creates an Azure SQL Server Virtual Network Rule. Virtual Network Rules are used to connect the Azure SQL Server to a specific Virtual Network in order to restrict the access on the Azure SQL Server to only be available within the Virtual Network.
 
 ## EXAMPLES
 

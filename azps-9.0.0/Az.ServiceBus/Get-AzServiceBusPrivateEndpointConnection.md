@@ -1,7 +1,7 @@
 ---
 external help file: Az.ServiceBus-help.xml
 Module Name: Az.ServiceBus
-online version: https://docs.microsoft.com/powershell/module/az.servicebus/get-azservicebusprivateendpointconnection
+online version: https://learn.microsoft.com/powershell/module/az.servicebus/get-azservicebusprivateendpointconnection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Get-AzServiceBusPrivateEndpointConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Get-AzServiceBusPrivateEndpointConnection.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets a description for the specified Private Endpoint Connection.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/get-azservicebusprivateendpointconnection) for up-to-date information.
 
 ## SYNTAX
 

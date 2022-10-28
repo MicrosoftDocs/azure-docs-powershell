@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/New-azstorageobjectreplicationpolicyrule
+online version: https://learn.microsoft.com/powershell/module/az.storage/New-azstorageobjectreplicationpolicyrule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageObjectReplicationPolicyRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageObjectReplicationPolicyRule.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an object replication policy rule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/new-azstorageobjectreplicationpolicyrule) for up-to-date information.
 
 ## SYNTAX
 
@@ -28,7 +31,7 @@ The **Get-AzStorageObjectReplicationPolicy** cmdlet creates an object replicatio
 ### Example 1: Create an object replication policy rule with only source and destination account, and show its properties
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\> $rule1 = New-AzStorageObjectReplicationPolicyRule -SourceContainer src1 -DestinationContainer dest1 
+PS C:\> $rule1 = New-AzStorageObjectReplicationPolicyRule -SourceContainer src1 -DestinationContainer dest1
 
 PS C:\> $rule1
 

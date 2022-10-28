@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: C7EC21C7-1C7E-49B2-9B33-486532FCDAEC
-online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/remove-azactivitylogalert
+online version: https://learn.microsoft.com/en-us/powershell/module/az.monitor/remove-azactivitylogalert
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Remove-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Remove-AzActivityLogAlert.md
@@ -52,7 +52,7 @@ Removes an activity log alert using name and resource group name as inputs.
 
 ### Example 2: Remove an activity log alert using a PSActivityLogAlertResource as input
 ```
-PS C:\>Get-AzActivityLogAlert -ResourceGroup "Default-activityLogAlerts" -Name "alert1" | Remove-AzActivityLogAlert 
+PS C:\>Get-AzActivityLogAlert -ResourceGroup "Default-activityLogAlerts" -Name "alert1" | Remove-AzActivityLogAlert
 RequestId                                                                                                    StatusCode
 ---------                                                                                                    ----------
 5c371547-80b0-4185-9b95-700b129de9d4                                                                                 OK

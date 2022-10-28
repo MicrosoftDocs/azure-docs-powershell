@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DesktopVirtualization
-online version: https://docs.microsoft.com/powershell/module/az.desktopvirtualization/update-azwvdmsixpackage
+online version: https://learn.microsoft.com/powershell/module/az.desktopvirtualization/update-azwvdmsixpackage
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/help/Update-AzWvdMsixPackage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/help/Update-AzWvdMsixPackage.md
@@ -35,7 +35,7 @@ Update an  MSIX Package.
 
 ## EXAMPLES
 
-### Example 1: Update a MSIX Package 
+### Example 1: Update a MSIX Package
 ```powershell
 Update-AzWvdMsixPackage -HostPoolName HostPoolName `
         -ResourceGroupName ResourceGroupName `

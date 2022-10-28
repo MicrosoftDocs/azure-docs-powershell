@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Support.dll-Help.xml
 Module Name: Az.Support
-online version: https://docs.microsoft.com/powershell/module/az.support/get-azsupportproblemclassification
+online version: https://learn.microsoft.com/powershell/module/az.support/get-azsupportproblemclassification
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Get-AzSupportProblemClassification.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Get-AzSupportProblemClassification.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get problem classifications for the service specified.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.support/get-azsupportproblemclassification) for up-to-date information.
 
 ## SYNTAX
 
@@ -56,7 +59,7 @@ f47d6b99-6f4b-d21a-feee-1800ad391e10 Cannot start or stop my VM / I received an 
 
 ### Example 2: Get all problem classificaitons for a service using parent service object
 ```powershell
-Get-AzSupportService -Id "{vm_running_windows_service_guid}" | Get-AzSupportProblemClassification 
+Get-AzSupportService -Id "{vm_running_windows_service_guid}" | Get-AzSupportProblemClassification
 ```
 ```output
 Name                                 DisplayName

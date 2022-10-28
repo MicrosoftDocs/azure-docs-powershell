@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/set-azprivatelinkservice
+online version: https://learn.microsoft.com/powershell/module/az.network/set-azprivatelinkservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzPrivateLinkService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzPrivateLinkService.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates a private link service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/set-azprivatelinkservice) for up-to-date information.
 
 ## SYNTAX
 
@@ -30,15 +33,15 @@ $vnet = Get-AzVirtualNetwork -ResourceName "myvnet" -ResourceGroupName "myresour
 $IPConfig = New-AzPrivateLinkServiceIpConfig -Name "IP-Config" -Subnet $vnet.subnets[1] -PrivateIpAddress "10.0.0.5"
 $publicip = Get-AzPublicIpAddress -ResourceGroupName "myresourcegroup"
 $frontend = New-AzLoadBalancerFrontendIpConfig -Name "FrontendIpConfig01" -PublicIpAddress $publicip
-$lb = New-AzLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "myresourcegroup" -Location "West US" -FrontendIpConfiguration $frontend  
+$lb = New-AzLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "myresourcegroup" -Location "West US" -FrontendIpConfiguration $frontend
 $privateLinkService = New-AzPrivateLinkService -ServiceName "mypls" -ResourceGroupName myresourcegroup -Location "West US" -LoadBalancerFrontendIpConfiguration $frontend -IpConfiguration $IPConfig
 
-$newIPConfig = New-AzPrivateLinkServiceIpConfig -Name "New-IP-Config" -Subnet $vnet.subnets[0] 
+$newIPConfig = New-AzPrivateLinkServiceIpConfig -Name "New-IP-Config" -Subnet $vnet.subnets[0]
 $privateLinkService.IpConfigurations[0] = $newIPConfig
 $privateLinkService | Set-AzPrivateLinkService
 ```
 
-This example creates a private link service called mypls. Then it replace its ipConfigurations from the in-memory ipConfiguratiuon object. The Set-AzPrivateLinkService cmdlet is then used to write the modified private link service state on the service side. 
+This example creates a private link service called mypls. Then it replace its ipConfigurations from the in-memory ipConfiguratiuon object. The Set-AzPrivateLinkService cmdlet is then used to write the modified private link service state on the service side.
 
 ## PARAMETERS
 

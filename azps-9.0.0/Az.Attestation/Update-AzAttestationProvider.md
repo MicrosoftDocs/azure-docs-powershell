@@ -1,7 +1,7 @@
 ---
 external help file: Az.Attestation-help.xml
 Module Name: Az.Attestation
-online version: https://docs.microsoft.com/powershell/module/az.attestation/update-azattestationprovider
+online version: https://learn.microsoft.com/powershell/module/az.attestation/update-azattestationprovider
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Update-AzAttestationProvider.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Update-AzAttestationProvider.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates the Attestation Provider.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.attestation/update-azattestationprovider) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,19 +41,19 @@ Update-AzAttestationProvider -Name testprovider -ResourceGroupName test-rg -Tag 
 
 ```output
 AttestUri                    : https://testprovider.eus.attest.azure.net
-Id                           : /subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Attestation/ 
+Id                           : /subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Attestation/
                                attestationProviders/testprovider
 Location                     : eastus
 Name                         : testprovider
-PrivateEndpointConnection    : 
+PrivateEndpointConnection    :
 ResourceGroupName            : test-rg
 Status                       : Ready
-SystemDataCreatedAt          : 
-SystemDataCreatedBy          : 
-SystemDataCreatedByType      : 
-SystemDataLastModifiedAt     : 
-SystemDataLastModifiedBy     : 
-SystemDataLastModifiedByType : 
+SystemDataCreatedAt          :
+SystemDataCreatedBy          :
+SystemDataCreatedByType      :
+SystemDataLastModifiedAt     :
+SystemDataLastModifiedBy     :
+SystemDataLastModifiedByType :
 Tag                          : {
                                  "k": "v"
                                }
@@ -67,19 +70,19 @@ Get-AzAttestationProvider -Name testprovider -ResourceGroupName test-rg | Update
 
 ```output
 AttestUri                    : https://testprovider.eus.attest.azure.net
-Id                           : /subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Attestation/ 
+Id                           : /subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Attestation/
                                attestationProviders/testprovider
 Location                     : eastus
 Name                         : testprovider
-PrivateEndpointConnection    : 
+PrivateEndpointConnection    :
 ResourceGroupName            : test-rg
 Status                       : Ready
-SystemDataCreatedAt          : 
-SystemDataCreatedBy          : 
-SystemDataCreatedByType      : 
-SystemDataLastModifiedAt     : 
-SystemDataLastModifiedBy     : 
-SystemDataLastModifiedByType : 
+SystemDataCreatedAt          :
+SystemDataCreatedBy          :
+SystemDataCreatedByType      :
+SystemDataLastModifiedAt     :
+SystemDataLastModifiedBy     :
+SystemDataLastModifiedByType :
 Tag                          : {
                                  "k": "v"
                                }

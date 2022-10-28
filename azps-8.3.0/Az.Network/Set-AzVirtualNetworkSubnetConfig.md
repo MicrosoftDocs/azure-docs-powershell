@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: D1D51DEF-05DE-45C4-9013-A02A5B248EAC
-online version: https://docs.microsoft.com/powershell/module/az.network/set-azvirtualnetworksubnetconfig
+online version: https://learn.microsoft.com/powershell/module/az.network/set-azvirtualnetworksubnetconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualNetworkSubnetConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualNetworkSubnetConfig.md
@@ -56,9 +56,9 @@ Set-AzVirtualNetworkSubnetConfig -Name frontendSubnet -VirtualNetwork $virtualNe
 $virtualNetwork | Set-AzVirtualNetwork
 ```
 
-This example creates a virtual network with one subnet. Then is calls 
-    Set-AzVirtualNetworkSubnetConfig to modify the AddressPrefix of the subnet. This 
-    only impacts the in-memory representation of the virtual network. 
+This example creates a virtual network with one subnet. Then is calls
+    Set-AzVirtualNetworkSubnetConfig to modify the AddressPrefix of the subnet. This
+    only impacts the in-memory representation of the virtual network.
     Set-AzVirtualNetwork is then called to modify the virtual network in Azure.
 
 ### 2: Add a network security group to a subnet
@@ -78,11 +78,11 @@ Set-AzVirtualNetworkSubnetConfig -Name frontendSubnet -VirtualNetwork $virtualNe
 $virtualNetwork | Set-AzVirtualNetwork
 ```
 
-This example creates a resource group with one virtual network containing just one 
-    subnet. It then creates a network security group with an allow rule for RDP traffic. The 
-    Set-AzVirtualNetworkSubnetConfig cmdlet is used to modify the in-memory 
-    representation of the frontend subnet so that it points to the newly created network 
-    security group. The Set-AzVirtualNetwork cmdlet is then called to write the modified 
+This example creates a resource group with one virtual network containing just one
+    subnet. It then creates a network security group with an allow rule for RDP traffic. The
+    Set-AzVirtualNetworkSubnetConfig cmdlet is used to modify the in-memory
+    representation of the frontend subnet so that it points to the newly created network
+    security group. The Set-AzVirtualNetwork cmdlet is then called to write the modified
     state back to the service.
 
 ### 3: Attach a Nat Gateway to a subnet
@@ -93,11 +93,11 @@ $pip = New-AzPublicIpAddress -Name "pip" -ResourceGroupName "natgateway_test" `
 $natGateway = New-AzNatGateway -ResourceGroupName "natgateway_test" -Name "nat_gateway" `
    -IdleTimeoutInMinutes 4 -Sku "Standard" -Location "eastus2" -PublicIpAddress $pip
 
-$frontendSubnet = New-AzVirtualNetworkSubnetConfig -Name frontendSubnet -AddressPrefix "10.0.1.0/24" 
+$frontendSubnet = New-AzVirtualNetworkSubnetConfig -Name frontendSubnet -AddressPrefix "10.0.1.0/24"
 
 $virtualNetwork = New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $frontendSubnet
 
-Set-AzVirtualNetworkSubnetConfig -Name frontendSubnet -VirtualNetwork $virtualNetwork -InputObject $natGateway 
+Set-AzVirtualNetworkSubnetConfig -Name frontendSubnet -VirtualNetwork $virtualNetwork -InputObject $natGateway
 
 $virtualNetwork | Set-AzVirtualNetwork
 ```

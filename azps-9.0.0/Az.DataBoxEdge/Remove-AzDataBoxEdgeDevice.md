@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataBoxEdge.dll-Help.xml
 Module Name: Az.DataBoxEdge
-online version: https://docs.microsoft.com/powershell/module/az.databoxedge/remove-azdataboxedgedevice
+online version: https://learn.microsoft.com/powershell/module/az.databoxedge/remove-azdataboxedgedevice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBoxEdge/DataBoxEdge/help/Remove-AzDataBoxEdgeDevice.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBoxEdge/DataBoxEdge/help/Remove-AzDataBoxEdgeDevice.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes a Data Box Edge device.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.databoxedge/remove-azdataboxedgedevice) for up-to-date information.
 
 ## SYNTAX
 
@@ -36,7 +39,7 @@ Remove-AzDataBoxEdgeDevice -InputObject <PSDataBoxEdgeDevice> [-AsJob]
 The **Remove-AzDataBoxEdgeDevice** cmdlet removes the configuration for a Data Box Edge device.
 Note that the device can only be deleted after you have placed the order and before the device is prepared by Microsoft for shipment.
 
-Refer the documentation on Deleting the resource before using this [cmdlet](https://docs.microsoft.com/azure/databox-online/data-box-edge-return-device#delete-the-resource)
+Refer the documentation on Deleting the resource before using this [cmdlet](https://learn.microsoft.com/azure/databox-online/data-box-edge-return-device#delete-the-resource)
 
 ## EXAMPLES
 

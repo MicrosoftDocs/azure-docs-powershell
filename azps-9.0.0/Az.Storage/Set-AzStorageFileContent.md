@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: FA98E64B-D589-4653-9ACC-86573FAF4550
-online version: https://docs.microsoft.com/powershell/module/az.storage/set-azstoragefilecontent
+online version: https://learn.microsoft.com/powershell/module/az.storage/set-azstoragefilecontent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageFileContent.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageFileContent.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Uploads the contents of a file.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/set-azstoragefilecontent) for up-to-date information.
 
 ## SYNTAX
 

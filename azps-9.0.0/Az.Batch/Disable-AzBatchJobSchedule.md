@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: B4737AE8-F57C-4B95-B81E-74802EF8E7AE
-online version: https://docs.microsoft.com/powershell/module/az.batch/disable-azbatchjobschedule
+online version: https://learn.microsoft.com/powershell/module/az.batch/disable-azbatchjobschedule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Disable-AzBatchJobSchedule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Disable-AzBatchJobSchedule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Disables a Batch job schedule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/disable-azbatchjobschedule) for up-to-date information.
 
 ## SYNTAX
 

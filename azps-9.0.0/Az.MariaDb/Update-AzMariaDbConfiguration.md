@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.MariaDb
-online version: https://docs.microsoft.com/powershell/module/az.mariadb/update-azmariadbconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.mariadb/update-azmariadbconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MariaDb/help/Update-AzMariaDbConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MariaDb/help/Update-AzMariaDbConfiguration.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates a configuration of a server.
 Use Update-AzMariaDbServer instead if you want update AdministratorLoginPassword, sku, etc.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mariadb/update-azmariadbconfiguration) for up-to-date information.
 
 ## SYNTAX
 
@@ -36,7 +39,7 @@ Use Update-AzMariaDberver instead if you want update AdministratorLoginPassword,
 
 ### Example 1: Update MariaDB configuration
 ```powershell
-Update-AzMariaDbConfiguration -Name delayed_insert_timeout -Value 200 -ServerName mariadb-test-h3pame -ResourceGroupName mariadb-test-qu5ov0 
+Update-AzMariaDbConfiguration -Name delayed_insert_timeout -Value 200 -ServerName mariadb-test-h3pame -ResourceGroupName mariadb-test-qu5ov0
 ```
 
 ```output

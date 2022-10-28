@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.MixedReality.dll-Help.xml
 Module Name: Az.MixedReality
-online version: https://docs.microsoft.com/powershell/module/az.mixedreality/get-azremoterenderingaccount
+online version: https://learn.microsoft.com/powershell/module/az.mixedreality/get-azremoterenderingaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/Get-AzRemoteRenderingAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/Get-AzRemoteRenderingAccount.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get Remote Rendering Account
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mixedreality/get-azremoterenderingaccount) for up-to-date information.
 
 ## SYNTAX
 
@@ -74,7 +77,7 @@ Name                : foobar
 Type                : Microsoft.MixedReality/RemoteRenderingAccounts
 ```
 
-List all Remote Rendering Account in Resource Group "rg1". 
+List all Remote Rendering Account in Resource Group "rg1".
 
 ### Example 2
 ```powershell
@@ -93,7 +96,7 @@ Name                : example
 Type                : Microsoft.MixedReality/RemoteRenderingAccounts
 ```
 
-Get Remote Rendering Account "example" in Resource Group "rg1". 
+Get Remote Rendering Account "example" in Resource Group "rg1".
 
 ## PARAMETERS
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DiskPool
-online version: https://docs.microsoft.com/powershell/module/az.diskpool/remove-azdiskpool
+online version: https://learn.microsoft.com/powershell/module/az.diskpool/remove-azdiskpool
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/help/Remove-AzDiskPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/help/Remove-AzDiskPool.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Delete a Disk pool; attached disks are not affected.
 This delete operation can take 10 minutes to complete.
 This is expected service behavior.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.diskpool/remove-azdiskpool) for up-to-date information.
 
 ## SYNTAX
 
@@ -37,7 +40,7 @@ This is expected service behavior.
 
 ### Example 1: Delete a Disk Pool
 ```powershell
-Remove-AzDiskPool -Name 'disk-pool-1' -ResourceGroupName 'storagepool-rg-test' 
+Remove-AzDiskPool -Name 'disk-pool-1' -ResourceGroupName 'storagepool-rg-test'
 ```
 
 This command deletes a Disk Pool.

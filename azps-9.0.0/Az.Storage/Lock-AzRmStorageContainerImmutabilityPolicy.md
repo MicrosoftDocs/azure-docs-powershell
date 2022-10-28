@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/lock-azrmstoragecontainerimmutabilitypolicy
+online version: https://learn.microsoft.com/powershell/module/az.storage/lock-azrmstoragecontainerimmutabilitypolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Lock-AzRmStorageContainerImmutabilityPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Lock-AzRmStorageContainerImmutabilityPolicy.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Locks ImmutabilityPolicy of a Storage blob containers
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/lock-azrmstoragecontainerimmutabilitypolicy) for up-to-date information.
 
 ## SYNTAX
 
@@ -59,7 +62,7 @@ PS C:\>$policy = Get-AzRmStorageContainerImmutabilityPolicy -StorageAccount $acc
 PS C:\>Lock-AzRmStorageContainerImmutabilityPolicy -StorageAccount $accountObject -ContainerName "myContainer" -Etag $policy.Etag -Force
 ```
 
-This command locks ImmutabilityPolicy of a Storage blob container, with Storage account object. 
+This command locks ImmutabilityPolicy of a Storage blob container, with Storage account object.
 
 ### Example 3: Lock ImmutabilityPolicyof a Storage blob container, with container object
 ```
@@ -75,7 +78,7 @@ This command locks ImmutabilityPolicy of a Storage blob container with Storage c
 PS C:\>Get-AzRmStorageContainerImmutabilityPolicy -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount" -ContainerName "myContainer" | Lock-AzRmStorageContainerImmutabilityPolicy -Force
 ```
 
-This command locks ImmutabilityPolicy of a Storage blob container, with ImmutabilityPolicy object. 
+This command locks ImmutabilityPolicy of a Storage blob container, with ImmutabilityPolicy object.
 
 ## PARAMETERS
 

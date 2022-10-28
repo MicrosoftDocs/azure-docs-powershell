@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azstorageencryptionscope
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageencryptionscope
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageEncryptionScope.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageEncryptionScope.md
@@ -42,8 +42,8 @@ PS C:\> Get-AzStorageEncryptionScope -ResourceGroupName "myresourcegroup" -Accou
 
    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
 
-Name      State    Source             KeyVaultKeyUri                                         
-----      -----    ------             --------------                                         
+Name      State    Source             KeyVaultKeyUri
+----      -----    ------             --------------
 testscope Disabled Microsoft.Keyvault https://keyvalutname.vault.azure.net:443/keys/keyname
 ```
 
@@ -52,13 +52,13 @@ This command gets a single encryption scope.
 ### Example 2: List all encryption scopes of a Storage account
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\> Get-AzStorageEncryptionScope -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" 
+PS C:\> Get-AzStorageEncryptionScope -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount"
 
 
    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
 
-Name      State    Source             KeyVaultKeyUri                                         
-----      -----    ------             --------------                                         
+Name      State    Source             KeyVaultKeyUri
+----      -----    ------             --------------
 testscope Disabled Microsoft.Keyvault https://keyvalutname.vault.azure.net:443/keys/keyname
 scope2    Enabled  Microsoft.Storage
 ```

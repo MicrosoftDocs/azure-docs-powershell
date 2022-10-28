@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: 3D4E44E3-0B55-4699-944F-412EE80CEEEF
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/set-azintegrationaccountschema
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/set-azintegrationaccountschema
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Set-AzIntegrationAccountSchema.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Set-AzIntegrationAccountSchema.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Modifies an integration account schema.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logicapp/set-azintegrationaccountschema) for up-to-date information.
 
 ## SYNTAX
 

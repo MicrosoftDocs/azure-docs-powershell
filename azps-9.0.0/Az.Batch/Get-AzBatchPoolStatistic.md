@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 8188C617-4895-4B43-8D3B-FA6FC5B868DD
-online version: https://docs.microsoft.com/powershell/module/az.batch/get-azbatchpoolstatistic
+online version: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchpoolstatistic
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchPoolStatistic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchPoolStatistic.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets pool summary statistics for a Batch account.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/get-azbatchpoolstatistic) for up-to-date information.
 
 ## SYNTAX
 

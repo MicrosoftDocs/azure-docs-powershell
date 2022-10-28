@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Reservations
-online version: https://docs.microsoft.com/powershell/module/az.reservations/invoke-azreservationcalculateexchange
+online version: https://learn.microsoft.com/powershell/module/az.reservations/invoke-azreservationcalculateexchange
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Invoke-AzReservationCalculateExchange.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/help/Invoke-AzReservationCalculateExchange.md
@@ -80,8 +80,8 @@ Invoke-AzReservationCalculateExchange -ReservationsToExchange $reservationsToRet
 ```
 
 ```output
-SessionId                            Status   
----------                            ------   
+SessionId                            Status
+---------                            ------
 8982593c-679e-4d4e-b971-c48b6d824cba Succeeded
 ```
 
@@ -249,7 +249,7 @@ To create the parameters described below, construct a hash table containing the 
     - `[Quantity <Int32?>]`: Quantity of the SKUs that are part of the Reservation.
     - `[Renew <Boolean?>]`: Setting this to true will automatically purchase a new reservation on the expiration date time.
     - `[ReservedResourceType <ReservedResourceType?>]`: The type of the resource that is being reserved.
-    - `[Sku <String>]`: 
+    - `[Sku <String>]`:
     - `[Term <ReservationTerm?>]`: Represent the term of Reservation.
 
 `RESERVATIONSTOEXCHANGE <IReservationToReturn[]>`: List of reservations that are being returned in this exchange.
@@ -267,7 +267,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[Quantity <Int32?>]`: Quantity of the SKUs that are part of the Reservation.
   - `[Renew <Boolean?>]`: Setting this to true will automatically purchase a new reservation on the expiration date time.
   - `[ReservedResourceType <ReservedResourceType?>]`: The type of the resource that is being reserved.
-  - `[Sku <String>]`: 
+  - `[Sku <String>]`:
   - `[Term <ReservationTerm?>]`: Represent the term of Reservation.
 
 ## RELATED LINKS

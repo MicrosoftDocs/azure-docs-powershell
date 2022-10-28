@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-aznetworkmanagerscopeconnection
+online version: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkmanagerscopeconnection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerScopeConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerScopeConnection.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a scope connection.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-aznetworkmanagerscopeconnection) for up-to-date information.
 
 ## SYNTAX
 
@@ -27,7 +30,7 @@ The **New-AzNetworkManagerScopeConnection** cmdlet creates a scope connection.
 
 ### Example 1
 ```powershell
-New-AzNetworkManagerScopeConnection -ResourceGroupName psResourceGroup -NetworkManagerName psNetworkManager -Name "subConnection" -TenantId "72f988bf-86f1-41af-91ab-2d7cd011db47" -ResourceId "/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884" -Description "SampleDescription" 
+New-AzNetworkManagerScopeConnection -ResourceGroupName psResourceGroup -NetworkManagerName psNetworkManager -Name "subConnection" -TenantId "72f988bf-86f1-41af-91ab-2d7cd011db47" -ResourceId "/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884" -Description "SampleDescription"
 ```
 ```output
 TenantId          : 72f988bf-86f1-41af-91ab-2d7cd011db47
@@ -54,7 +57,7 @@ Creates a scope connection to a cross-tenant subscription.
 
 ### Example 2
 ```powershell
-New-AzNetworkManagerScopeConnection -ResourceGroupName psResourceGroup -NetworkManagerName psNetworkManager -Name "mgConnection" -TenantId "72f988bf-86f1-41af-91ab-2d7cd011db47" -ResourceId "/providers/Microsoft.Management/managementGroups/newMG" -Description "SampleDescription" 
+New-AzNetworkManagerScopeConnection -ResourceGroupName psResourceGroup -NetworkManagerName psNetworkManager -Name "mgConnection" -TenantId "72f988bf-86f1-41af-91ab-2d7cd011db47" -ResourceId "/providers/Microsoft.Management/managementGroups/newMG" -Description "SampleDescription"
 ```
 ```output
 TenantId          : 72f988bf-86f1-41af-91ab-2d7cd011db47

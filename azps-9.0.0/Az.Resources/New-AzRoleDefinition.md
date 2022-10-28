@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 8300B143-E322-419E-BC98-DBA56DD90A59
-online version: https://docs.microsoft.com/powershell/module/az.resources/new-azroledefinition
+online version: https://learn.microsoft.com/powershell/module/az.resources/new-azroledefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzRoleDefinition.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzRoleDefinition.md
@@ -16,6 +16,9 @@ Provide either a JSON role definition file or a PSRoleDefinition object as input
 First, use the Get-AzRoleDefinition command to generate a baseline role definition object.
 Then, modify its properties as required.
 Finally, use this command to create a custom role using role definition.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/new-azroledefinition) for up-to-date information.
 
 ## SYNTAX
 

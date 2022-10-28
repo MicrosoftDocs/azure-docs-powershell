@@ -1,7 +1,7 @@
 ---
 external help file: Az.DiagnosticSetting.psm1-help.xml
 Module Name: Az.Monitor
-online version: https://docs.microsoft.com/powershell/module/az.monitor/get-azeventcategory
+online version: https://learn.microsoft.com/powershell/module/az.monitor/get-azeventcategory
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzEventCategory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzEventCategory.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get the list of available event categories supported in the Activity Logs Service.
 The current list includes the following: Administrative, Security, ServiceHealth, Alert, Recommendation, Policy.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/get-azeventcategory) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ConnectedNetwork
-online version: https://docs.microsoft.com/powershell/module/az.connectednetwork/new-azconnectednetworkfunction
+online version: https://learn.microsoft.com/powershell/module/az.connectednetwork/new-azconnectednetworkfunction
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/help/New-AzConnectedNetworkFunction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/help/New-AzConnectedNetworkFunction.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Creates or updates a network function resource.
 This operation can take up to 6 hours to complete.
 This is expected service behavior.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectednetwork/new-azconnectednetworkfunction) for up-to-date information.
 
 ## SYNTAX
 

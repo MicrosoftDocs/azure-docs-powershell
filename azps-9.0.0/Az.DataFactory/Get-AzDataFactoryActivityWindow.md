@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: F8C67F7B-64C5-45E4-A0BF-32212BEBE885
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryactivitywindow
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryactivitywindow
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryActivityWindow.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryActivityWindow.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets information about activity windows associated with a data factory.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/get-azdatafactoryactivitywindow) for up-to-date information.
 
 ## SYNTAX
 
@@ -49,7 +52,7 @@ DataFactoryName   : WikiADF
 PipelineName      : DP_WikipediaSamplePipeline
 ActivityName      : BlobToSqlCopyActivity
 ActivityType      : Copy
-LinkedServiceName : 
+LinkedServiceName :
 WindowState       : Waiting
 WindowSubstate    : ConcurrencyLimit
 Duration          : 00:00:00
@@ -68,7 +71,7 @@ DataFactoryName   : WikiADF
 PipelineName      : DP_WikipediaSamplePipeline
 ActivityName      : BlobToSqlCopyActivity
 ActivityType      : Copy
-LinkedServiceName : 
+LinkedServiceName :
 WindowState       : Waiting
 WindowSubstate    : ConcurrencyLimit
 Duration          : 00:00:00
@@ -89,7 +92,7 @@ ActivityName      : WikiHiveActivity
 ActivityType      : HDInsightHive
 LinkedServiceName : HDILinkedService
 WindowState       : Ready
-WindowSubstate    : 
+WindowSubstate    :
 Duration          : 00:03:37.8020000
 InputDatasets     : {DA_WikipediaClickEvents}
 OutputDatasets    : {DA_CuratedWikiData}

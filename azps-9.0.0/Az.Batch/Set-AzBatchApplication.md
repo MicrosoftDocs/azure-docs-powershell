@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: DCA1FD7A-54AF-48B1-A245-BFA9C43ACA9B
-online version: https://docs.microsoft.com/powershell/module/az.batch/set-azbatchapplication
+online version: https://learn.microsoft.com/powershell/module/az.batch/set-azbatchapplication
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Set-AzBatchApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Set-AzBatchApplication.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates settings for the specified application.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/set-azbatchapplication) for up-to-date information.
 
 ## SYNTAX
 

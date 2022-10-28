@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ResourceMover
-online version: https://docs.microsoft.com/powershell/module/az.resourcemover/invoke-azresourcemovercommit
+online version: https://learn.microsoft.com/powershell/module/az.resourcemover/invoke-azresourcemovercommit
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Invoke-AzResourceMoverCommit.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/help/Invoke-AzResourceMoverCommit.md
@@ -38,13 +38,13 @@ Invoke-AzResourceMoverCommit -ResourceGroupName "RG-MoveCollection-demoRMS" -Mov
 ```
 
 ```output
-AdditionalInfo : 
-Code           : 
-Detail         : 
+AdditionalInfo :
+Code           :
+Detail         :
 EndTime        : 2/10/2021 12:38:26 PM
 Id             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralu
                  s-demoRMS/operations/c194298b-b2eb-4aab-80b4-129d1473b75c
-Message        : 
+Message        :
 Name           : c194298b-b2eb-4aab-80b4-129d1473b75c
 Property       : Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Any
 StartTime      : 2/10/2021 12:38:25 PM
@@ -60,13 +60,13 @@ Invoke-AzResourceMoverCommit -ResourceGroupName "RG-MoveCollection-demoRMS" -Mov
 ```
 
 ```output
-AdditionalInfo : 
-Code           : 
-Detail         : 
+AdditionalInfo :
+Code           :
+Detail         :
 EndTime        : 2/10/2021 12:41:13 PM
 Id             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralu
                  s-demoRMS/operations/80c04850-7f3f-4e9c-aa68-b868978b59f3
-Message        : 
+Message        :
 Name           : 80c04850-7f3f-4e9c-aa68-b868978b59f3
 Property       : Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Any
 StartTime      : 2/10/2021 12:41:05 PM
@@ -83,13 +83,13 @@ Invoke-AzResourceMoverCommit -ResourceGroupName "RG-MoveCollection-demoRMS" -Mov
 ```
 
 ```output
-AdditionalInfo : 
-Code           : 
-Detail         : 
+AdditionalInfo :
+Code           :
+Detail         :
 EndTime        : 2/10/2021 12:42:46 PM
 Id             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/RG-MoveCollection-demoRMS/providers/Microsoft.Migrate/moveCollections/PS-centralus-westcentralu
                  s-demoRMS/operations/d36ca519-8ced-48c9-a968-cb5e9c4db731
-Message        : 
+Message        :
 Name           : d36ca519-8ced-48c9-a968-cb5e9c4db731
 Property       : Microsoft.Azure.PowerShell.Cmdlets.ResourceMover.Models.Any
 StartTime      : 2/10/2021 12:42:41 PM

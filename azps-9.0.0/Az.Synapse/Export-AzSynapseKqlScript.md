@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/export-azsynapsekqlscript
+online version: https://learn.microsoft.com/powershell/module/az.synapse/export-azsynapsekqlscript
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Export-AzSynapseKqlScript.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Export-AzSynapseKqlScript.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Exports KQL script.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/export-azsynapsekqlscript) for up-to-date information.
 
 ## SYNTAX
 
@@ -33,7 +36,7 @@ Export-AzSynapseKqlScript -InputObject <PSKqlScriptResource> -OutputFolder <Stri
 ```
 
 ## DESCRIPTION
-The **Export-AzSynapseKqlScript** cmdlet exports an Azure Synapse KQL script to a kusto query (.kql) file. 
+The **Export-AzSynapseKqlScript** cmdlet exports an Azure Synapse KQL script to a kusto query (.kql) file.
 The name of the KQL script becomes the name of the exported file. If you specify the name of a KQL script, the cmdlet exports that KQL script. If you do not specify a name, the cmdlet export all KQL scripts in the workspace.
 
 ## EXAMPLES

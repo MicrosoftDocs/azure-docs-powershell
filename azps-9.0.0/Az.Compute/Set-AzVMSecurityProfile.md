@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
-online version: https://docs.microsoft.com/powershell/module/az.compute/set-azvmsecurityprofile
+online version: https://learn.microsoft.com/powershell/module/az.compute/set-azvmsecurityprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMSecurityProfile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMSecurityProfile.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Sets the SecurityType enum for Virtual Machines.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/set-azvmsecurityprofile) for up-to-date information.
 
 ## SYNTAX
 
@@ -36,13 +39,13 @@ The second command sets the SecurityType enum to "TrustedLaunch". Trusted launch
 
 ### Example 2: Create a ConfidentialVM Virtual Machine and the Disk encrypted with the VMGuestStateOnly type.
 ```powershell
-$vmSize = "Standard_DC2as_v5";         
-$DNSNameLabel = "cvm1" +$ResourceGroupName; 
+$vmSize = "Standard_DC2as_v5";
+$DNSNameLabel = "cvm1" +$ResourceGroupName;
 $SubnetAddressPrefix = "10.0.0.0/24";
 $VnetAddressPrefix = "10.0.0.0/16";
 
 # Credential setup.
-$password = "Password" |ConvertTo-SecureString -AsPlainText -Force; 
+$password = "Password" |ConvertTo-SecureString -AsPlainText -Force;
 $securePassword = ConvertTo-SecureString $password -AsPlainText -Force;
 $credential = New-Object System.Management.Automation.PSCredential ($user, $securePassword);
 
@@ -60,11 +63,11 @@ $VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id;
 $VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -PublisherName 'MicrosoftWindowsServer' -Offer 'windowsserver' -Skus '2022-datacenter-smalldisk-g2' -Version 'latest';
 $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -StorageAccountType "StandardSSD_LRS" -CreateOption "FromImage";
 
-# Set the SecurityType and necessary values on the Uefi settings. 
+# Set the SecurityType and necessary values on the Uefi settings.
 $VirtualMachine = Set-AzVmSecurityProfile -VM $VirtualMachine -SecurityType $SecurityType;
 $VirtualMachine = Set-AzVmUefi -VM $VirtualMachine -EnableVtpm $true -EnableSecureBoot $true;
 
-# Set the Disk Encryption Type. 
+# Set the Disk Encryption Type.
 $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -StorageAccountType "StandardSSD_LRS" -CreateOption "FromImage" -SecurityEncryptionType $vmDiskSEcurityEncryptionType;
 
 $vm = New-AzVM -ResourceGroupName $rgname -Location $LocationName -VM $VirtualMachine;

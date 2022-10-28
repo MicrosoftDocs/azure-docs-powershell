@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DataBox
-online version: https://docs.microsoft.com/powershell/module/az.DataBox/new-AzDataBoxHeavyJobDetailsObject
+online version: https://learn.microsoft.com/powershell/module/az.DataBox/new-AzDataBoxHeavyJobDetailsObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/New-AzDataBoxHeavyJobDetailsObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/help/New-AzDataBoxHeavyJobDetailsObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create an in-memory object for DataBoxHeavyJobDetails.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.databox/new-azdataboxheavyjobdetailsobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -26,7 +29,7 @@ Create an in-memory object for DataBoxHeavyJobDetails.
 
 ## EXAMPLES
 
-### Example 1: Create a in-memory object for DataBoxHeavyJobDetails 
+### Example 1: Create a in-memory object for DataBoxHeavyJobDetails
 ```powershell
 $contactDetail = New-AzDataBoxContactDetailsObject -ContactName "random" -EmailList @("emailId") -Phone "1234567891"
 $ShippingDetails = New-AzDataBoxShippingAddressObject -StreetAddress1 "101 TOWNSEND ST" -StateOrProvince "CA" -Country "US" -City "San Francisco" -PostalCode "94107" -AddressType "Commercial"
@@ -35,8 +38,8 @@ New-AzDataBoxHeavyJobDetailsObject -Type "DataBoxHeavy"  -DataImportDetail  @(@{
 ```
 
 ```output
-Action ChainOfCustodySasKey ExpectedDataSizeInTeraByte ReverseShipmentLabelSasKey Type         DevicePassword 
------- -------------------- -------------------------- -------------------------- ----         -------------- 
+Action ChainOfCustodySasKey ExpectedDataSizeInTeraByte ReverseShipmentLabelSasKey Type         DevicePassword
+------ -------------------- -------------------------- -------------------------- ----         --------------
                             10                                                    DataBoxHeavy randm@423jarABC
 ```
 Create a in-memory object for DataBoxHeavyJobDetails

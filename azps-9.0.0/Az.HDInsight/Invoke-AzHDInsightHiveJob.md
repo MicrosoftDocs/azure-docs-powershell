@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
 Module Name: Az.HDInsight
 ms.assetid: 3C6DCC81-82F7-4044-AFBC-4EE1BCC306F2
-online version: https://docs.microsoft.com/powershell/module/az.hdinsight/invoke-azhdinsighthivejob
+online version: https://learn.microsoft.com/powershell/module/az.hdinsight/invoke-azhdinsighthivejob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Invoke-AzHDInsightHiveJob.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Invoke-AzHDInsightHiveJob.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Submits a Hive query to an HDInsight cluster and retrieves query results in one operation.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hdinsight/invoke-azhdinsighthivejob) for up-to-date information.
 
 ## SYNTAX
 

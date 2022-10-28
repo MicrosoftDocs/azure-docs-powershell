@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: 585371E3-D4CE-452E-B0B0-92B3ABD127E7
-online version: https://docs.microsoft.com/en-us/powershell/module/az.storage/new-azstorageblobsastoken
+online version: https://learn.microsoft.com/en-us/powershell/module/az.storage/new-azstorageblobsastoken
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/New-AzStorageBlobSASToken.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/New-AzStorageBlobSASToken.md
@@ -191,8 +191,8 @@ Accept wildcard characters: False
 ```
 
 ### -Permission
-Specifies the permissions for a storage blob. 
-It is important to note that this is a string, like `rwd` (for Read, Write and Delete). 
+Specifies the permissions for a storage blob.
+It is important to note that this is a string, like `rwd` (for Read, Write and Delete).
 
 ```yaml
 Type: System.String

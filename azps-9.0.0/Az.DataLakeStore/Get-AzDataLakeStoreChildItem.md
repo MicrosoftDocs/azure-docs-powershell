@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
 Module Name: Az.DataLakeStore
 ms.assetid: CC0E73BD-2063-4CA2-BBBA-1FB6AE04DADE
-online version: https://docs.microsoft.com/powershell/module/az.datalakestore/get-azdatalakestorechilditem
+online version: https://learn.microsoft.com/powershell/module/az.datalakestore/get-azdatalakestorechilditem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Get-AzDataLakeStoreChildItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Get-AzDataLakeStoreChildItem.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the list of items in a folder in Data Lake Store.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/get-azdatalakestorechilditem) for up-to-date information.
 
 ## SYNTAX
 

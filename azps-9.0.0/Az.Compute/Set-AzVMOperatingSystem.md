@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 39AADD19-2EDD-4C1F-BC9E-22186DD9A085
-online version: https://docs.microsoft.com/powershell/module/az.compute/set-azvmoperatingsystem
+online version: https://learn.microsoft.com/powershell/module/az.compute/set-azvmoperatingsystem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMOperatingSystem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMOperatingSystem.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Sets operating system properties during the creation of a new virtual machine.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/set-azvmoperatingsystem) for up-to-date information.
 
 ## SYNTAX
 
@@ -65,8 +68,8 @@ You can specify logon credentials, computer name, and operating system type.
 ### Example 1: Set operating system properties for a new virtual machine
 ```powershell
 $SecurePassword = ConvertTo-SecureString "Password" -AsPlainText -Force
-$Credential = New-Object System.Management.Automation.PSCredential ("FullerP", $SecurePassword); 
-$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03" 
+$Credential = New-Object System.Management.Automation.PSCredential ("FullerP", $SecurePassword);
+$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03"
 $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id
 $ComputerName = "ContosoVM122"
 $WinRMCertUrl = "http://keyVaultName.vault.azure.net/secrets/secretName/secretVersion"
@@ -93,8 +96,8 @@ The command uses variables assigned in previous commands for some parameters.
 ### Example 2: Set operating system properties for a new virtual machine with hot patching enabled
 ```powershell
 $SecurePassword = ConvertTo-SecureString "Password" -AsPlainText -Force
-$Credential = New-Object System.Management.Automation.PSCredential ("FullerP", $SecurePassword); 
-$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03" 
+$Credential = New-Object System.Management.Automation.PSCredential ("FullerP", $SecurePassword);
+$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03"
 $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id
 $ComputerName = "ContosoVM122"
 $WinRMCertUrl = "http://keyVaultName.vault.azure.net/secrets/secretName/secretVersion"
@@ -122,8 +125,8 @@ The command enables Hotpatching on the virtual machine.
 ### Example 3: Set operating system properties for a new Linux virtual machine
 ```powershell
 $SecurePassword = ConvertTo-SecureString "Password" -AsPlainText -Force
-$Credential = New-Object System.Management.Automation.PSCredential ("FullerP", $SecurePassword); 
-$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03" 
+$Credential = New-Object System.Management.Automation.PSCredential ("FullerP", $SecurePassword);
+$AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03"
 $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id
 $ComputerName = "ContosoVM122"
 $CustomData = "echo 'Hello World'"
@@ -194,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomData
-Specifies a string to be passed to the virtual machine. For more information see [Custom Data on Azure VMs](https://docs.microsoft.com/azure/virtual-machines/custom-data).
+Specifies a string to be passed to the virtual machine. For more information see [Custom Data on Azure VMs](https://learn.microsoft.com/azure/virtual-machines/custom-data).
 **Note: It is not recommended to store sensitive information in custom data.**
 
 
@@ -337,7 +340,7 @@ Accept wildcard characters: False
 
 ### -TimeZone
 Specifies the time zone of the virtual machine. e.g. \"Pacific Standard Time\". <br>
-Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
+Possible values can be [TimeZoneInfo.Id](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
 
 ```yaml
 Type: System.String

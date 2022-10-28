@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/new-azloadbalancerbackendaddresspool
+online version: https://learn.microsoft.com/powershell/module/az.network/new-azloadbalancerbackendaddresspool
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzLoadBalancerBackendAddressPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzLoadBalancerBackendAddressPool.md
@@ -10,7 +10,10 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzLoadBalancerBackendAddressPool
 
 ## SYNOPSIS
-Creates a backend address pool on a loadbalancer. 
+Creates a backend address pool on a loadbalancer.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azloadbalancerbackendaddresspool) for up-to-date information.
 
 ## SYNTAX
 
@@ -29,7 +32,7 @@ New-AzLoadBalancerBackendAddressPool -LoadBalancer <PSLoadBalancer> -Name <Strin
 ```
 
 ## DESCRIPTION
-Creates a backend address pool on a loadbalancer. Allows for specifiying a array of PSLoadBalancerBackendAddress. 
+Creates a backend address pool on a loadbalancer. Allows for specifiying a array of PSLoadBalancerBackendAddress.
 ## EXAMPLES
 
 ### Example 1

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DesktopVirtualization
-online version: https://docs.microsoft.com/powershell/module/az.desktopvirtualization/get-azwvdsessionhost
+online version: https://learn.microsoft.com/powershell/module/az.desktopvirtualization/get-azwvdsessionhost
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/help/Get-AzWvdSessionHost.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/help/Get-AzWvdSessionHost.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get a session host.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.desktopvirtualization/get-azwvdsessionhost) for up-to-date information.
 
 ## SYNTAX
 

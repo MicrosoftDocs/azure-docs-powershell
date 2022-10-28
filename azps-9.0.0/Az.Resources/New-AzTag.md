@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Tags.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 23DB0AD2-7EB7-4373-BB8D-BB6CB651DD54
-online version: https://docs.microsoft.com/powershell/module/az.resources/new-aztag
+online version: https://learn.microsoft.com/powershell/module/az.resources/new-aztag
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzTag.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzTag.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a predefined Azure tag or adds values to an existing tag | Creates or updates the entire set of tags on a resource or subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/new-aztag) for up-to-date information.
 
 ## SYNTAX
 
@@ -56,7 +59,7 @@ New-AzTag -Name "FY2015"
 ```
 
 ```output
-Name   ValuesTable Count Values 
+Name   ValuesTable Count Values
 ----   ----------- ----- ------
 FY2015             0     {}
 ```
@@ -74,7 +77,7 @@ New-AzTag -Name "Department" -Value "Finance"
 ```output
 Name:   Department
 Count:  0
-Values: 
+Values:
 
         Name        Count
         =========   =====
@@ -92,14 +95,14 @@ New-AzTag -Name "Department" -Value "Finance"
 
 Name:   Department
 Count:  0
-Values: 
+Values:
         Name        Count
         =========   =====
-        Finance     0 
+        Finance     0
 New-AzTag -Name "Department" -Value "IT"
 Name:   Department
 Count:  0
-Values: 
+Values:
         Name        Count
         =========   =====
         Finance     0
@@ -118,48 +121,48 @@ New-AzTag -Name "CostCenter" -Value "0001"
 
 Name:   CostCenter
 Count:  0
-Values: 
+Values:
         Name        Count
         =========   =====
-        0001        0 
+        0001        0
 
 Set-AzResourceGroup -Name "EngineerBlog" -Tag @{Name="CostCenter";Value="0001"}
 
 Name:      EngineerBlog
 Location:  East US
-Resources: 
-            
+Resources:
+
   Name             Type                     Location
     ===============  =======================  ========
     EngineerBlog     Microsoft.Web/sites      West US
     EngSvr01         Microsoft.Sql/servers    West US
     EngDB02          Microsoft.Sql/databases  West US
-Tags: 
+Tags:
     Name         Value
     ==========   =====
-    CostCenter   0001 
+    CostCenter   0001
 
 Get-AzTag -Name "CostCenter"
 
 Name:   CostCenter
 Count:  1
-Values: 
+Values:
         Name        Count
         =========   =====
-        0001        1 
+        0001        1
 
 Get-AzResourceGroup -Tag @{Name="CostCenter"}
 
 Name:      EngineerBlog
 Location:  East US
-Resources: 
+Resources:
      Name             Type                     Location
     ===============  =======================  ========
     EngineerBlog     Microsoft.Web/sites      West US
 
     EngSvr01         Microsoft.Sql/servers    West US
     EngDB02          Microsoft.Sql/databases  West US
-Tags: 
+Tags:
     Name         Value
     ==========   =====
     CostCenter   0001

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Tags.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 726E01DD-D73C-4D4B-8FC0-52767927367C
-online version: https://docs.microsoft.com/powershell/module/az.resources/get-aztag
+online version: https://learn.microsoft.com/powershell/module/az.resources/get-aztag
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzTag.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzTag.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets predefined Azure tags | Gets the entire set of tags on a resource or subscription.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-aztag) for up-to-date information.
 
 ## SYNTAX
 
@@ -66,7 +69,7 @@ Get-AzTag -Name "Department"
 ```output
 Name:   Department
 Count:  5
-Values: 
+Values:
 
         Name        Count
         ==========  =====
@@ -86,7 +89,7 @@ Get-AzTag -Detailed
 ```output
 Name:   Department
 Count:  5
-Values: 
+Values:
 
         Name        Count
         ==========  =====
@@ -101,7 +104,7 @@ Count:  2
 
 Name:   CostCenter
 Count:  20
-Values: 
+Values:
 
         Name        Count
         ==========  =====

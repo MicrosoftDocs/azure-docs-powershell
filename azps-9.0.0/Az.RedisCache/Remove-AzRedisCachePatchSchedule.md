@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
 ms.assetid: 2EA765B8-D82B-4789-8F10-88F79BDF44D0
-online version: https://docs.microsoft.com/powershell/module/az.rediscache/remove-azrediscachepatchschedule
+online version: https://learn.microsoft.com/powershell/module/az.rediscache/remove-azrediscachepatchschedule
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Remove-AzRedisCachePatchSchedule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Remove-AzRedisCachePatchSchedule.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Removes the patch schedule.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.rediscache/remove-azrediscachepatchschedule) for up-to-date information.
 
 ## SYNTAX
 

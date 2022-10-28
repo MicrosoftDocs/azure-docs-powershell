@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/set-aznetworkwatcherconfigflowlog
+online version: https://learn.microsoft.com/powershell/module/az.network/set-aznetworkwatcherconfigflowlog
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzNetworkWatcherConfigFlowLog.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzNetworkWatcherConfigFlowLog.md
@@ -98,9 +98,9 @@ Set-AzNetworkWatcherConfigFlowLog -Location <String> -TargetResourceId <String> 
 ```
 
 ## DESCRIPTION
-The Set-AzNetworkWatcherConfigFlowLog configures flow logging for a target resource. 
-Properties to configure include: whether or not flow logging is enabled for the resource provided, the configured storage account to send logs, the flow logging format, and the retention policy for the logs. 
-Currently Network Security Groups are supported for flow logging. 
+The Set-AzNetworkWatcherConfigFlowLog configures flow logging for a target resource.
+Properties to configure include: whether or not flow logging is enabled for the resource provided, the configured storage account to send logs, the flow logging format, and the retention policy for the logs.
+Currently Network Security Groups are supported for flow logging.
 
 ## EXAMPLES
 

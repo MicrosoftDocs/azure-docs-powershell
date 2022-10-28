@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.CloudService
-online version: https://docs.microsoft.com/powershell/module/az.cloudservice/get-azcloudserviceroleinstanceview
+online version: https://learn.microsoft.com/powershell/module/az.cloudservice/get-azcloudserviceroleinstanceview
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/help/Get-AzCloudServiceRoleInstanceView.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/help/Get-AzCloudServiceRoleInstanceView.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Retrieves information about the run-time state of a role instance in a cloud service.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cloudservice/get-azcloudserviceroleinstanceview) for up-to-date information.
 
 ## SYNTAX
 

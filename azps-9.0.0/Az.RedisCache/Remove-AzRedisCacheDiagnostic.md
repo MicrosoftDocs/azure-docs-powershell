@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
 ms.assetid: BCF989AE-A718-4AFE-B7C0-8B148468D4EE
-online version: https://docs.microsoft.com/powershell/module/az.rediscache/remove-azrediscachediagnostic
+online version: https://learn.microsoft.com/powershell/module/az.rediscache/remove-azrediscachediagnostic
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Remove-AzRedisCacheDiagnostic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Remove-AzRedisCacheDiagnostic.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Disables diagnostics on an Azure Redis Cache.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.rediscache/remove-azrediscachediagnostic) for up-to-date information.
 
 ## SYNTAX
 

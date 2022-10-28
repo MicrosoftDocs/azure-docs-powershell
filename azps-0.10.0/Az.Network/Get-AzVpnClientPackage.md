@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 2B4A3E2A-1868-492F-9F77-932319D2CE6D
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-azvpnclientpackage
+online version: https://learn.microsoft.com/en-us/powershell/module/az.network/get-azvpnclientpackage
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzVpnClientPackage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzVpnClientPackage.md
@@ -60,7 +60,7 @@ Valid values are Amd64 and X86.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Amd64, X86
 
 Required: True
@@ -78,7 +78,7 @@ Resource groups categorize items to help simplify inventory management and gener
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,7 +93,7 @@ Specifies the name of the virtual network gateway where the client package infor
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -115,7 +115,7 @@ Parameter 'VirtualNetworkGatewayName' accepts value of type 'String' from the pi
 
 ## OUTPUTS
 
-###  
+### System.String
 **Get-AzVpnClientPackage** returns instances of the System.String object.
 
 ## NOTES

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.MachineLearning.dll-Help.xml
 Module Name: Az.MachineLearning
-online version: https://docs.microsoft.com/powershell/module/az.machinelearning/get-azmlcommitmentplan
+online version: https://learn.microsoft.com/powershell/module/az.machinelearning/get-azmlcommitmentplan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearning/MachineLearning/help/Get-AzMlCommitmentPlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearning/MachineLearning/help/Get-AzMlCommitmentPlan.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Retrieves the summary information for one or more commitment plans.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearning/get-azmlcommitmentplan) for up-to-date information.
 
 ## SYNTAX
 

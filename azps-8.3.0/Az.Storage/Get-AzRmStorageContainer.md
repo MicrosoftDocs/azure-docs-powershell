@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/get-azrmstoragecontainer
+online version: https://learn.microsoft.com/powershell/module/az.storage/get-azrmstoragecontainer
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzRmStorageContainer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzRmStorageContainer.md
@@ -63,8 +63,8 @@ PS C:\>Get-AzRmStorageContainer -ResourceGroupName "myResourceGroup" -AccountNam
 
    ResourceGroupName: myResourceGroup, StorageAccountName: myStorageAccount
 
-Name         PublicAccess LastModified         HasLegalHold HasImmutabilityPolicy Deleted VersionId  
-----         ------------ ------------         ------------ --------------------- ------- ---------  
+Name         PublicAccess LastModified         HasLegalHold HasImmutabilityPolicy Deleted VersionId
+----         ------------ ------------         ------------ --------------------- ------- ---------
 testcon      None         2020-08-28 10:18:13Z False        False                 False   01D685BC91A88F22
 testcon2     None         2020-09-04 12:52:37Z False        False                 True    01D67D248986B6DA
 ```

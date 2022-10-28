@@ -1,7 +1,7 @@
 ---
 external help file: Az.Autoscale.psm1-help.xml
 Module Name: Az.Monitor
-online version: https://docs.microsoft.com/powershell/module/az.monitor/get-azautoscalepredictivemetric
+online version: https://learn.microsoft.com/powershell/module/az.monitor/get-azautoscalepredictivemetric
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzAutoscalePredictiveMetric.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzAutoscalePredictiveMetric.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 get predictive autoscale metric future data
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/get-azautoscalepredictivemetric) for up-to-date information.
 
 ## SYNTAX
 

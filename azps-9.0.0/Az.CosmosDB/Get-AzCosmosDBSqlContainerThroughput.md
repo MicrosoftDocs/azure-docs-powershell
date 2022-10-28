@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
 Module Name: Az.CosmosDB
-online version: https://docs.microsoft.com/powershell/module/az.cosmosdb/get-azcosmosdbsqlcontainerthroughput
+online version: https://learn.microsoft.com/powershell/module/az.cosmosdb/get-azcosmosdbsqlcontainerthroughput
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBSqlContainerThroughput.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBSqlContainerThroughput.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the throughput settings corresponding to a CosmosDB Sql Container.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cosmosdb/get-azcosmosdbsqlcontainerthroughput) for up-to-date information.
 
 ## SYNTAX
 
@@ -27,7 +30,7 @@ Get-AzCosmosDBSqlContainerThroughput [-Name <String>] -InputObject <PSSqlContain
 ```
 
 ## DESCRIPTION
-The **Get-AzCosmosDBSqlContainerThroughput** cmdlet gets the throughput settings corresponding to a CosmosDB Sql Container. 
+The **Get-AzCosmosDBSqlContainerThroughput** cmdlet gets the throughput settings corresponding to a CosmosDB Sql Container.
 
 ## EXAMPLES
 
@@ -40,7 +43,7 @@ Get-AzCosmosDBSqlContainerThroughput  -AccountName "accountName" -ResourceGroupN
 Throughput          : {throughputValue}
 MinimumThroughput   :
 OfferReplacePending :
-Id                  : 
+Id                  :
 Name                : {Name}
 Type                : Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings
 Location            :

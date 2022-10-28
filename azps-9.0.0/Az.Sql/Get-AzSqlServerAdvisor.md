@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
 ms.assetid: DAEF11C1-281B-4BED-9283-2296E0B57018
-online version: https://docs.microsoft.com/powershell/module/az.sql/get-azsqlserveradvisor
+online version: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlserveradvisor
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlServerAdvisor.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlServerAdvisor.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets one or more Advisors for an Azure SQL Server.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/get-azsqlserveradvisor) for up-to-date information.
 
 ## SYNTAX
 
@@ -106,10 +109,10 @@ AutoExecuteStatus              : Disabled
 AutoExecuteStatusInheritedFrom : Database
 LastChecked                    : 8/1/2016 2:36:47 PM
 RecommendationsStatus          : Ok
-RecommendedActions             : {IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893, 
-                                 IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893, 
-                                 IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893, 
-                                 IR_[test_schema]_[test_table_0.437714]_6C7AE8CC9C87E7FD5893...} 
+RecommendedActions             : {IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893,
+                                 IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893,
+                                 IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893,
+                                 IR_[test_schema]_[test_table_0.437714]_6C7AE8CC9C87E7FD5893...}
 
 ResourceGroupName              : WIRunnersProd
 ServerName                     : wi-runner-australia-east
@@ -119,10 +122,10 @@ AutoExecuteStatus              : Disabled
 AutoExecuteStatusInheritedFrom : Database
 LastChecked                    : 7/31/2016 8:41:19 PM
 RecommendationsStatus          : Ok
-RecommendedActions             : {IR_[test_schema]_[test_table_0.0288891]_38724E1DCF2178318957, 
-                                 IR_[test_schema]_[test_table_0.140264]_38724E1DCF2178318957, 
-                                 IR_[test_schema]_[test_table_0.412191]_38724E1DCF2178318957, 
-                                 IR_[test_schema]_[test_table_0.442075]_38724E1DCF2178318957...} 
+RecommendedActions             : {IR_[test_schema]_[test_table_0.0288891]_38724E1DCF2178318957,
+                                 IR_[test_schema]_[test_table_0.140264]_38724E1DCF2178318957,
+                                 IR_[test_schema]_[test_table_0.412191]_38724E1DCF2178318957,
+                                 IR_[test_schema]_[test_table_0.442075]_38724E1DCF2178318957...}
 
 ResourceGroupName              : WIRunnersProd
 ServerName                     : wi-runner-australia-east
@@ -161,9 +164,9 @@ AutoExecuteStatus              : Disabled
 AutoExecuteStatusInheritedFrom : Database
 LastChecked                    : 8/1/2016 2:36:47 PM
 RecommendationsStatus          : Ok
-RecommendedActions             : {IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893, 
-                                 IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893, 
-                                 IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893, 
+RecommendedActions             : {IR_[test_schema]_[test_table_0.0361551]_6C7AE8CC9C87E7FD5893,
+                                 IR_[test_schema]_[test_table_0.236046]_6C7AE8CC9C87E7FD5893,
+                                 IR_[test_schema]_[test_table_0.239359]_6C7AE8CC9C87E7FD5893,
                                  IR_[test_schema]_[test_table_0.437714]_6C7AE8CC9C87E7FD5893...}
 ```
 
@@ -301,5 +304,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AzSqlServerAdvisorAutoExecuteStatus](./Set-AzSqlServerAdvisorAutoExecuteStatus.md)
 
-[SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/)
+[SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)
 

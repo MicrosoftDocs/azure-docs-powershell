@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version: https://docs.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementdiagnostic
+online version: https://learn.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementdiagnostic
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementDiagnostic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementDiagnostic.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get details of the Diagnostic configured at the service level or the Api Level. Diagnostics are used to log requests/responses from Api Management gateway.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/get-azapimanagementdiagnostic) for up-to-date information.
 
 ## SYNTAX
 
@@ -57,7 +60,7 @@ LoggerId                     : azuremonitor
 EnableHttpCorrelationHeaders :
 SamplingSetting              : Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSamplingSetting
 FrontendSetting              :
-BackendSetting               : 
+BackendSetting               :
 Id                           : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/diagnostics/azuremonitor
 ResourceGroupName            : Api-Default-WestUS
 ServiceName                  : contoso

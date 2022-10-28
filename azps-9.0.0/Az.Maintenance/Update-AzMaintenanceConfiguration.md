@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Maintenance.dll-Help.xml
 Module Name: Az.Maintenance
-online version: https://docs.microsoft.com/powershell/module/az.maintenance/update-azmaintenanceconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.maintenance/update-azmaintenanceconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maintenance/Maintenance/help/Update-AzMaintenanceConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maintenance/Maintenance/help/Update-AzMaintenanceConfiguration.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Patch configuration record
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.maintenance/update-azmaintenanceconfiguration) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Cdn
-online version: https://docs.microsoft.com/powershell/module/az.cdn/test-azcdnprobe
+online version: https://learn.microsoft.com/powershell/module/az.cdn/test-azcdnprobe
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Test-AzCdnProbe.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/help/Test-AzCdnProbe.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Check if the probe path is a valid path and the file can be accessed.
 Probe path is the path to a file hosted on the origin server to help accelerate the delivery of dynamic content via the CDN endpoint.
 This path is relative to the origin path specified in the endpoint configuration.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/test-azcdnprobe) for up-to-date information.
 
 ## SYNTAX
 

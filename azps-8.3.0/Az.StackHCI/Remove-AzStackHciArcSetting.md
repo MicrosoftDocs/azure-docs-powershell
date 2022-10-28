@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.StackHCI
-online version: https://docs.microsoft.com/powershell/module/az.stackhci/remove-azstackhciarcsetting
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/remove-azstackhciarcsetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Remove-AzStackHciArcSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/help/Remove-AzStackHciArcSetting.md
@@ -35,7 +35,7 @@ Delete ArcSetting resource details of HCI Cluster.
 
 ## EXAMPLES
 
-### Example 1: 
+### Example 1:
 ```powershell
 Remove-AzStackHciArcSetting -ResourceGroupName test-rg -ClusterName myCluster -Name default
 ```

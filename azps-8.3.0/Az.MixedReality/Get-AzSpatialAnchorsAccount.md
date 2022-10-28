@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.MixedReality.dll-Help.xml
 Module Name: Az.MixedReality
-online version: https://docs.microsoft.com/powershell/module/az.mixedreality/get-azspatialanchorsaccount
+online version: https://learn.microsoft.com/powershell/module/az.mixedreality/get-azspatialanchorsaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/Get-AzSpatialAnchorsAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/Get-AzSpatialAnchorsAccount.md
@@ -77,7 +77,7 @@ Name                : foobar
 Type                : Microsoft.MixedReality/SpatialAnchorsAccounts
 ```
 
-List all Spatial Anchors Account in Resource Group "rg1". 
+List all Spatial Anchors Account in Resource Group "rg1".
 
 ### Example 2
 ```powershell
@@ -96,7 +96,7 @@ Name                : example
 Type                : Microsoft.MixedReality/SpatialAnchorsAccounts
 ```
 
-Get Spatial Anchors Account "example" in Resource Group "rg1". 
+Get Spatial Anchors Account "example" in Resource Group "rg1".
 
 ## PARAMETERS
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
 Module Name: Az.Compute
 ms.assetid: D5943E9F-E4E6-4A1F-A144-44691CF32FC8
-online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/remove-azvmdatadisk
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/remove-azvmdatadisk
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Remove-AzVMDataDisk.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Remove-AzVMDataDisk.md
@@ -27,7 +27,7 @@ The **Remove-AzVMDataDisk** cmdlet removes a data disk from a virtual machine.
 
 ### Example 1: Remove a data disk from a virtual machine
 ```
-PS C:\> $VirtualMachine = Get-AzVM -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07" 
+PS C:\> $VirtualMachine = Get-AzVM -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07"
 PS C:\> Remove-AzVMDataDisk -VM $VirtualMachine -Name "Disk3"
 PS C:\> Update-AzVM -ResourceGroupName "ResourceGroup11" -VM $VirtualMachine
 ```

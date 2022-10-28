@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.SecurityInsights
-online version: https://docs.microsoft.com/powershell/module/az.securityinsights/get-azsentinelmetadata
+online version: https://learn.microsoft.com/powershell/module/az.securityinsights/get-azsentinelmetadata
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Get-AzSentinelMetadata.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/help/Get-AzSentinelMetadata.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Get a Metadata.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.securityinsights/get-azsentinelmetadata) for up-to-date information.
 
 ## SYNTAX
 
@@ -46,7 +49,7 @@ Get a Metadata.
 ```output
 Etag    Name                                                SystemDataCreatedAt     SystemDataCreatedBy SystemDataCreatedByType
 ----    ----                                                -------------------     ------------------- -----------
-        azuresentinel.azure-sentinel-solution-slackaudit    3/11/2022 11:20:19 PM   user@domain.local   User       
+        azuresentinel.azure-sentinel-solution-slackaudit    3/11/2022 11:20:19 PM   user@domain.local   User
 ```
 
 This command lists all Solution metadata for a workspace.

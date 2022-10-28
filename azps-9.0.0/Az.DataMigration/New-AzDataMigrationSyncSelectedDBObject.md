@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
 Module Name: Az.DataMigration
-online version: https://docs.microsoft.com/powershell/module/az.datamigration/New-AzDataMigrationSyncSelectedDBObject
+online version: https://learn.microsoft.com/powershell/module/az.datamigration/New-AzDataMigrationSyncSelectedDBObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationSyncSelectedDBObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationSyncSelectedDBObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a database info object specific to the sync scenario to be used for a migration task.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/new-azdatamigrationsyncselecteddbobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -39,7 +42,7 @@ $selectedDbs = New-AzDataMigrationSyncSelectedDBObject `
 	-SourceDatabaseName DatabaseName
 ```
 
-This example creates a database metadata object describing the migrating settings for $DatabaseName to database $DatabaseName.  
+This example creates a database metadata object describing the migrating settings for $DatabaseName to database $DatabaseName.
 
 ## PARAMETERS
 

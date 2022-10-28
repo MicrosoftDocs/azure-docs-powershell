@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: FB9ACBA2-081E-4876-A21A-F5BA11CBEDA2
-online version: https://docs.microsoft.com/powershell/module/az.compute/publish-azvmdscconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.compute/publish-azvmdscconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Publish-AzVMDscConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Publish-AzVMDscConfiguration.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Uploads a DSC script to Azure blob storage.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/publish-azvmdscconfiguration) for up-to-date information.
 
 ## SYNTAX
 

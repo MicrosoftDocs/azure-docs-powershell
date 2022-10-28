@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://docs.microsoft.com/powershell/module/az.purview/update-azpurviewaccount
+online version: https://learn.microsoft.com/powershell/module/az.purview/update-azpurviewaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/Update-AzPurviewAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/Update-AzPurviewAccount.md
@@ -47,7 +47,7 @@ EndpointCatalog                  : https://test-pa.catalog.purview.azure.com
 EndpointGuardian                 : https://test-pa.guardian.purview.azure.com
 EndpointScan                     : https://test-pa.scan.purview.azure.com
 FriendlyName                     : test-pa
-Id                               : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/bez-rg/providers/Microsoft.Purview/a 
+Id                               : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/bez-rg/providers/Microsoft.Purview/a
                                    ccounts/bez-pa
 Identity                         : {
                                      "principalId": "xxxxxxxx-7956-4978-87e8-9ddd82cfe2b7",
@@ -58,11 +58,11 @@ IdentityPrincipalId              : xxxxxxxx-7956-4978-87e8-9ddd82cfe2b7
 IdentityTenantId                 : xxxxxxxx-38d6-4fb2-bad9-b7b93a3e9c5a
 IdentityType                     : SystemAssigned
 Location                         : eastus
-ManagedResourceEventHubNamespace : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso 
+ManagedResourceEventHubNamespace : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso
                                    ft.EventHub/namespaces/Atlas-2bb7cf0b-5348-4811-a336-759242a25d37
 ManagedResourceGroup             : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj
 ManagedResourceGroupName         : managed-rg-bbcpgdj
-ManagedResourceStorageAccount    : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso 
+ManagedResourceStorageAccount    : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso
                                    ft.Storage/storageAccounts/scaneastusnkcccgc
 Name                             : test-pa
 PrivateEndpointConnection        : {}
@@ -95,7 +95,7 @@ Update the tag of a purview account named 'test-pa'
 
 ### Example 2: Update a purview account by InputObject
 ```powershell
-$get = Get-AzPurviewAccount -Name test-pa -ResourceGroupName test-rg 
+$get = Get-AzPurviewAccount -Name test-pa -ResourceGroupName test-rg
 Update-AzPurviewAccount -InputObject $get -Tag @{"k"="v"}
 ```
 
@@ -108,7 +108,7 @@ EndpointCatalog                  : https://test-pa.catalog.purview.azure.com
 EndpointGuardian                 : https://test-pa.guardian.purview.azure.com
 EndpointScan                     : https://test-pa.scan.purview.azure.com
 FriendlyName                     : test-pa
-Id                               : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/bez-rg/providers/Microsoft.Purview/a 
+Id                               : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/bez-rg/providers/Microsoft.Purview/a
                                    ccounts/bez-pa
 Identity                         : {
                                      "principalId": "xxxxxxxx-7956-4978-87e8-9ddd82cfe2b7",
@@ -119,11 +119,11 @@ IdentityPrincipalId              : xxxxxxxx-7956-4978-87e8-9ddd82cfe2b7
 IdentityTenantId                 : xxxxxxxx-38d6-4fb2-bad9-b7b93a3e9c5a
 IdentityType                     : SystemAssigned
 Location                         : eastus
-ManagedResourceEventHubNamespace : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso 
+ManagedResourceEventHubNamespace : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso
                                    ft.EventHub/namespaces/Atlas-2bb7cf0b-5348-4811-a336-759242a25d37
 ManagedResourceGroup             : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj
 ManagedResourceGroupName         : managed-rg-bbcpgdj
-ManagedResourceStorageAccount    : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso 
+ManagedResourceStorageAccount    : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso
                                    ft.Storage/storageAccounts/scaneastusnkcccgc
 Name                             : test-pa
 PrivateEndpointConnection        : {}

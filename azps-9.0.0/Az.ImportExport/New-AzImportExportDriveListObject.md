@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ImportExport
-online version: https://docs.microsoft.com/powershell/module/az.importexport/new-AzImportExportDriveListObject
+online version: https://learn.microsoft.com/powershell/module/az.importexport/new-AzImportExportDriveListObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/help/New-AzImportExportDriveListObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/help/New-AzImportExportDriveListObject.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create a DriverList Object for ImportExport.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.importexport/new-azimportexportdrivelistobject) for up-to-date information.
 
 ## SYNTAX
 
@@ -32,8 +35,8 @@ New-AzImportExportDriveListObject -DriveId "9CA995BA" -BitLockerKey "238810-6623
 ```
 
 ```output
-BitLockerKey                                            BytesSucceeded CopyStatus DriveHeaderHash DriveId  ErrorLogUri ManifestFile        ManifestHash                     ManifestUri PercentComplete State VerboseLogUri  
-------------                                            -------------- ---------- --------------- -------  ----------- ------------        ------------                     ----------- --------------- ----- ------- 
+BitLockerKey                                            BytesSucceeded CopyStatus DriveHeaderHash DriveId  ErrorLogUri ManifestFile        ManifestHash                     ManifestUri PercentComplete State VerboseLogUri
+------------                                            -------------- ---------- --------------- -------  ----------- ------------        ------------                     ----------- --------------- ----- -------
 238810-662376-448998-450120-652806-203390-606320-483076 0                                         9CA995BA             \\DriveManifest.xml 109B21108597EF36D5785F08303F3638             0
 ```
 

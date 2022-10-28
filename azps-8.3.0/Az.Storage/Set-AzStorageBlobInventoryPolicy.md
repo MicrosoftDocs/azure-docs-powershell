@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/set-azstorageblobinventorypolicy
+online version: https://learn.microsoft.com/powershell/module/az.storage/set-azstorageblobinventorypolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageBlobInventoryPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageBlobInventoryPolicy.md
@@ -83,9 +83,9 @@ Rules              : {Test1, Test2}
 
 PS C:\> $policy.Rules
 
-Name  Enabled Destination   ObjectType Format  Schedule IncludeSnapshots IncludeBlobVersions BlobTypes               PrefixMatch  SchemaFields                                           
-----  ------- -----------   ---------- ------  -------- ---------------- ------------------- ---------               -----------  ------------                                           
-Test1 False   containername Container  Csv     Daily                                                                 {con1, con2} {Name, Metadata, PublicAccess, Last-Modified...}       
+Name  Enabled Destination   ObjectType Format  Schedule IncludeSnapshots IncludeBlobVersions BlobTypes               PrefixMatch  SchemaFields
+----  ------- -----------   ---------- ------  -------- ---------------- ------------------- ---------               -----------  ------------
+Test1 False   containername Container  Csv     Daily                                                                 {con1, con2} {Name, Metadata, PublicAccess, Last-Modified...}
 Test2 True    containername Blob       Parquet Weekly   True             True                {blockBlob, appendBlob} {aaa, bbb}   {Name, Creation-Time, Last-Modified, Content-Length...}
 ```
 
@@ -142,10 +142,10 @@ LastModifiedTime   : 5/12/2021 9:02:21 AM
 Enabled            : True
 Rules              : {Test1, Test2}
 
-PS C:\> $policy.Rules 
+PS C:\> $policy.Rules
 
-Name  Enabled Destination   ObjectType Format  Schedule IncludeSnapshots IncludeBlobVersions BlobTypes               PrefixMatch        SchemaFields                                 
-----  ------- -----------   ---------- ------  -------- ---------------- ------------------- ---------               -----------        ------------                                 
+Name  Enabled Destination   ObjectType Format  Schedule IncludeSnapshots IncludeBlobVersions BlobTypes               PrefixMatch        SchemaFields
+----  ------- -----------   ---------- ------  -------- ---------------- ------------------- ---------               -----------        ------------
 Test1 True    containername Blob       Csv     Weekly   True             True                {blockBlob, appendBlob} {prefix1, prefix2} {name, Content-Length, BlobType, Snapshot...}
 Test2 False   containername Container  Parquet Daily                                                                 {conpre1, conpre2} {name, Metadata, PublicAccess}                                                                                       {name, Metadata, PublicAccess}
 ```

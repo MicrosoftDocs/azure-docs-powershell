@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DevTestLabs.dll-Help.xml
 Module Name: Az.DevTestLabs
 ms.assetid: 52DD0511-915F-4144-B47F-E4B7AF403AA5
-online version: https://docs.microsoft.com/powershell/module/az.devtestlabs/get-azdtlautoshutdownpolicy
+online version: https://learn.microsoft.com/powershell/module/az.devtestlabs/get-azdtlautoshutdownpolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevTestLabs/DevTestLabs/help/Get-AzDtlAutoShutdownPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevTestLabs/DevTestLabs/help/Get-AzDtlAutoShutdownPolicy.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the auto shutdown policy of a lab in DevTest Labs.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.devtestlabs/get-azdtlautoshutdownpolicy) for up-to-date information.
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.GuestConfiguration
-online version: https://docs.microsoft.com/powershell/module/az.guestconfiguration/new-azguestconfigurationassignment
+online version: https://learn.microsoft.com/powershell/module/az.guestconfiguration/new-azguestconfigurationassignment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/GuestConfiguration/help/New-AzGuestConfigurationAssignment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/GuestConfiguration/help/New-AzGuestConfigurationAssignment.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates an association between a VM and guest configuration
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.guestconfiguration/new-azguestconfigurationassignment) for up-to-date information.
 
 ## SYNTAX
 

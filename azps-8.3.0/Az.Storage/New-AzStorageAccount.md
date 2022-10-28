@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
 ms.assetid: A3DA1205-B8FB-4B4C-9C40-AD303D038EDF
-online version: https://docs.microsoft.com/powershell/module/az.storage/new-azstorageaccount
+online version: https://learn.microsoft.com/powershell/module/az.storage/new-azstorageaccount
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageAccount.md
@@ -193,7 +193,7 @@ PS C:\> $a.AllowSharedKeyAccess
 False
 ```
 
-The command create account with MinimumTlsVersion, AllowBlobPublicAccess, and disable SharedKey access to the account, and then show the the 3 properties of the created account 
+The command create account with MinimumTlsVersion, AllowBlobPublicAccess, and disable SharedKey access to the account, and then show the the 3 properties of the created account
 
 ### Example 10: Create a Storage account with RoutingPreference setting
 <!-- Skip: Output cannot be splitted from code -->
@@ -233,8 +233,8 @@ PS C:\>$account = New-AzStorageAccount -ResourceGroupName "myresourcegroup" -Nam
 
 PS C:\>$account.ExtendedLocation
 
-Name                 Type    
-----                 ----    
+Name                 Type
+----                 ----
 microsoftlosangeles1 EdgeZone
 
 PS C:\> $account.AllowCrossTenantReplication
@@ -280,14 +280,14 @@ PS C:\> $account = New-AzStorageAccount -ResourceGroupName $resourceGroupName -N
 
 PS C:\> $account.Encryption.EncryptionIdentity
 
-EncryptionUserAssignedIdentity                                                                                                                 
------------------------------- 
+EncryptionUserAssignedIdentity
+------------------------------
 /subscriptions/{subscription-id}/resourceGroups/myresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuserid
 
 PS C:\> $account.Encryption.KeyVaultProperties
 
 KeyName                       : wrappingKey
-KeyVersion                    : 
+KeyVersion                    :
 KeyVaultUri                   : https://mykeyvault.vault.azure.net:443
 CurrentVersionedKeyIdentifier : https://mykeyvault.vault.azure.net/keys/wrappingKey/8e74036e0d534e58b3bd84b319e31d8f
 LastKeyRotationTimestamp      : 4/12/2021 8:17:57 AM
@@ -302,12 +302,12 @@ This command first create a keyvault and a user assigned identity, then create a
 ```
 PS C:\> $account = New-AzStorageAccount -ResourceGroupName "MyResourceGroup" -Name "mystorageaccount" -SkuName Standard_LRS  -Location centraluseuap -Kind StorageV2 -EnableNfsV3 $true -EnableHierarchicalNamespace $true -EnableHttpsTrafficOnly $false -NetworkRuleSet (@{bypass="Logging,Metrics";
         virtualNetworkRules=(@{VirtualNetworkResourceId="$vnet1";Action="allow"});
-        defaultAction="deny"}) 
+        defaultAction="deny"})
 PS C:\> $account.EnableNfsV3
 True
 ```
 
-The command create account with EnableNfsV3 as true, and then show the EnableNfsV3 property of the created account 
+The command create account with EnableNfsV3 as true, and then show the EnableNfsV3 property of the created account
 
 ### Example 14: Create account with disable PublicNetworkAccess
 <!-- Skip: Output cannot be splitted from code -->
@@ -334,13 +334,13 @@ True
 
 PS C:\> $account.ImmutableStorageWithVersioning.ImmutabilityPolicy
 
-ImmutabilityPeriodSinceCreationInDays State    
-------------------------------------- -----    
+ImmutabilityPeriodSinceCreationInDays State
+------------------------------------- -----
                                     1 Unlocked
 ```
 
 The command creates an account and enable account level immutability with versioning by '-EnableAccountLevelImmutability', then all the containers under this account will have object-level immutability enabled by default.
-The account is also created with a default account-level immutability policy which is inherited and applied to objects that do not possess an explicit immutability policy at the object level. 
+The account is also created with a default account-level immutability policy which is inherited and applied to objects that do not possess an explicit immutability policy at the object level.
 
 ### Example 16: Create a Storage account with enable Azure Files Active Directory Domain Service Kerberos Authentication.
 ```
@@ -736,9 +736,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLargeFileShare
-Indicates whether or not the storage account can support large file shares with more than 5 TiB capacity. 
-Once the account is enabled, the feature cannot be disabled. 
-Currently only supported for LRS and ZRS replication types, hence account conversions to geo-redundant accounts would not be possible. 
+Indicates whether or not the storage account can support large file shares with more than 5 TiB capacity.
+Once the account is enabled, the feature cannot be disabled.
+Currently only supported for LRS and ZRS replication types, hence account conversions to geo-redundant accounts would not be possible.
 Learn more in https://go.microsoft.com/fwlink/?linkid=2086047
 
 ```yaml
@@ -800,8 +800,8 @@ Accept wildcard characters: False
 
 ### -EncryptionKeyTypeForQueue
 Set the Encryption KeyType for Queue. The default value is Service.
--Account: Queue will be encrypted with account-scoped encryption key. 
--Service: Queue will always be encrypted with Service-Managed keys. 
+-Account: Queue will be encrypted with account-scoped encryption key.
+-Service: Queue will always be encrypted with Service-Managed keys.
 
 ```yaml
 Type: System.String
@@ -818,8 +818,8 @@ Accept wildcard characters: False
 
 ### -EncryptionKeyTypeForTable
 Set the Encryption KeyType for Table. The default value is Service.
-- Account: Table will be encrypted with account-scoped encryption key. 
-- Service: Table will always be encrypted with Service-Managed keys. 
+- Account: Table will be encrypted with account-scoped encryption key.
+- Service: Table will always be encrypted with Service-Managed keys.
 
 ```yaml
 Type: System.String
@@ -851,7 +851,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImmutabilityPeriod
-The immutability period for the blobs in the container since the policy creation in days. 
+The immutability period for the blobs in the container since the policy creation in days.
 This property can only be only be specified with '-EnableAccountLevelImmutability'.
 
 ```yaml
@@ -867,9 +867,9 @@ Accept wildcard characters: False
 ```
 
 ### -ImmutabilityPolicyState
-The mode of the policy. Possible values include: 'Unlocked', 'Disabled. 
-Disabled state disablesthe policy. 
-Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property. 
+The mode of the policy. Possible values include: 'Unlocked', 'Disabled.
+Disabled state disablesthe policy.
+Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property.
 A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states.
 This property can only be specified with '-EnableAccountLevelImmutability'.
 

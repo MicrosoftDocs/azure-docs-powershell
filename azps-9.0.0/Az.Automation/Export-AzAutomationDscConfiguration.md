@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 595D3304-3331-4F44-BA57-AE090FB8A132
-online version: https://docs.microsoft.com/powershell/module/az.automation/export-azautomationdscconfiguration
+online version: https://learn.microsoft.com/powershell/module/az.automation/export-azautomationdscconfiguration
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Export-AzAutomationDscConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Export-AzAutomationDscConfiguration.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Exports a DSC configuration from Automation to a local file.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/export-azautomationdscconfiguration) for up-to-date information.
 
 ## SYNTAX
 
@@ -128,9 +131,9 @@ Accept wildcard characters: False
 
 ### -Slot
 Specifies which version of the DSC configuration that this cmdlet exports.
-Valid values are: 
+Valid values are:
 - Draft
-- Published 
+- Published
 The default value is Published.
 
 ```yaml

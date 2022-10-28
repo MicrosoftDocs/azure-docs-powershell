@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.ContainerInstance
-online version: https://docs.microsoft.com/powershell/module/az.containerinstance/update-azcontainergroup
+online version: https://learn.microsoft.com/powershell/module/az.containerinstance/update-azcontainergroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/help/Update-AzContainerGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/help/Update-AzContainerGroup.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Updates container group tags with specified values.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerinstance/update-azcontainergroup) for up-to-date information.
 
 ## SYNTAX
 
@@ -32,7 +35,7 @@ Updates container group tags with specified values.
 
 ## EXAMPLES
 
-### Example 1: Update a container group 
+### Example 1: Update a container group
 ```powershell
 $container = Update-AzContainerGroup -Name test-cg -ResourceGroupName test-rg -Tag @{"k"="v"}
 $container.Tag | Format-List

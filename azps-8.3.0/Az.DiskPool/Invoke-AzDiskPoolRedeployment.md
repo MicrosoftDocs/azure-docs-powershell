@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DiskPool
-online version: https://docs.microsoft.com/powershell/module/az.diskpool/invoke-azdiskpoolredeployment
+online version: https://learn.microsoft.com/powershell/module/az.diskpool/invoke-azdiskpoolredeployment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/help/Invoke-AzDiskPoolRedeployment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/help/Invoke-AzDiskPoolRedeployment.md

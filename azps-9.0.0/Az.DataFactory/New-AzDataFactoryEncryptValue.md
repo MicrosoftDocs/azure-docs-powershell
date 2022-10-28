@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 5BF24BC2-DEB6-4830-BDEA-841BAB070388
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/new-azdatafactoryencryptvalue
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/new-azdatafactoryencryptvalue
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/New-AzDataFactoryEncryptValue.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/New-AzDataFactoryEncryptValue.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Encrypts sensitive data.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/new-azdatafactoryencryptvalue) for up-to-date information.
 
 ## SYNTAX
 
@@ -38,7 +41,7 @@ The **New-AzDataFactoryEncryptValue** cmdlet encrypts sensitive data, such as a 
 
 ### Example 1: Encrypt a non-ODBC connection string
 ```powershell
-$Value = ConvertTo-SecureString 'Data Source=ContosoServer;Initial Catalog=catalog;user id =user123;password=password123' -AsPlainText -Force 
+$Value = ConvertTo-SecureString 'Data Source=ContosoServer;Initial Catalog=catalog;user id =user123;password=password123' -AsPlainText -Force
 New-AzDataFactoryEncryptValue -GatewayName "WikiGateway" -DataFactoryName "WikiAdf" -Value $value -ResourceGroupName "ADF" -Type OnPremisesSqlLinkedService
 ```
 
@@ -259,14 +262,14 @@ Accept wildcard characters: False
 Specifies the linked service type.
 This cmdlet encrypts data for the linked service type that this parameter specifies.
 The acceptable values for this parameter are:
-- OnPremisesSqlLinkedService 
-- OnPremisesFileSystemLinkedService 
-- OnPremisesOracleLinkedService 
-- OnPremisesOdbcLinkedService 
-- OnPremisesPostgreSqlLinkedService 
-- OnPremisesTeradataLinkedService 
-- OnPremisesMySQLLinkedService 
-- OnPremisesDB2LinkedService 
+- OnPremisesSqlLinkedService
+- OnPremisesFileSystemLinkedService
+- OnPremisesOracleLinkedService
+- OnPremisesOdbcLinkedService
+- OnPremisesPostgreSqlLinkedService
+- OnPremisesTeradataLinkedService
+- OnPremisesMySQLLinkedService
+- OnPremisesDB2LinkedService
 - OnPremisesSybaseLinkedService
 
 ```yaml

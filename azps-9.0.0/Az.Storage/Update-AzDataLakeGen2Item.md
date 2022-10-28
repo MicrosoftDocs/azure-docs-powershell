@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/update-azdatalakegen2item
+online version: https://learn.microsoft.com/powershell/module/az.storage/update-azdatalakegen2item
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Update-AzDataLakeGen2Item.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Update-AzDataLakeGen2Item.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Update a file or directory on properties, metadata, permission, ACL, and owner.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/update-azdatalakegen2item) for up-to-date information.
 
 ## SYNTAX
 
@@ -39,17 +42,17 @@ This cmdlet only works if Hierarchical Namespace is enabled for the Storage acco
 ### Example 1: Create an ACL object with 3 ACL entry, and update ACL to all items in a Filesystem recursively
 <!-- Skip: Output cannot be splitted from code -->
 ```
-PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType user -Permission rwx 
-PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType group -Permission rw- -InputObject $acl 
+PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType user -Permission rwx
+PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType group -Permission rw- -InputObject $acl
 PS C:\>$acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType other -Permission "rw-" -InputObject $acl
 PS C:\>Get-AzDataLakeGen2ChildItem -FileSystem "filesystem1" -Recurse | Update-AzDataLakeGen2Item -ACL $acl
 
    FileSystem Name: filesystem1
 
-Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
-----                 -----------  ------          ------------         -----------  -----                -----               
-dir1                 True                         2020-03-13 13:07:34Z rwxrw-rw-    $superuser           $superuser           
-dir1/file1           False        1024            2020-03-23 09:29:18Z rwxrw-rw-    $superuser           $superuser          
+Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+----                 -----------  ------          ------------         -----------  -----                -----
+dir1                 True                         2020-03-13 13:07:34Z rwxrw-rw-    $superuser           $superuser
+dir1/file1           False        1024            2020-03-23 09:29:18Z rwxrw-rw-    $superuser           $superuser
 dir2                 True                         2020-03-23 09:28:36Z rwxrw-rw-    $superuser           $superuser
 ```
 
@@ -70,17 +73,17 @@ PS C:\> $file
 
    FileSystem Name: filesystem1
 
-Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
-----                 -----------  ------          ------------         -----------  -----                -----               
-dir1/file1           False        1024            2020-03-23 09:57:33Z rwxrw-rw-    $superuser           $superuser          
+Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+----                 -----------  ------          ------------         -----------  -----                -----
+dir1/file1           False        1024            2020-03-23 09:57:33Z rwxrw-rw-    $superuser           $superuser
 
 PS C:\> $file.ACL
 
 DefaultScope AccessControlType EntityId Permissions
 ------------ ----------------- -------- -----------
-False        User                       rwx        
-False        Group                      rw-        
-False        Other                      rw-        
+False        User                       rwx
+False        Group                      rw-
+False        Other                      rw-
 
 PS C:\> $file.Permissions
 
@@ -92,8 +95,8 @@ ExtendedAcls : False
 
 PS C:\> $file.Properties.Metadata
 
-Key  Value 
----  ----- 
+Key  Value
+---  -----
 tag2 value2
 tag1 value1
 
@@ -104,10 +107,10 @@ LastModified          : 3/23/2020 9:57:33 AM +00:00
 CreatedOn             : 3/23/2020 9:29:18 AM +00:00
 Metadata              : {[tag2, value2], [tag1, value1]}
 CopyCompletedOn       : 1/1/0001 12:00:00 AM +00:00
-CopyStatusDescription : 
-CopyId                : 
-CopyProgress          : 
-CopySource            : 
+CopyStatusDescription :
+CopyId                :
+CopyProgress          :
+CopySource            :
 CopyStatus            : Pending
 IsIncrementalCopy     : False
 LeaseDuration         : Infinite
@@ -123,9 +126,9 @@ ContentLanguage       : EN-US
 CacheControl          : READ
 AcceptRanges          : bytes
 IsServerEncrypted     : True
-EncryptionKeySha256   : 
+EncryptionKeySha256   :
 AccessTier            : Cool
-ArchiveStatus         : 
+ArchiveStatus         :
 AccessTierChangedOn   : 1/1/0001 12:00:00 AM +00:00
 ```
 
@@ -138,15 +141,15 @@ This command updates all properties on a file (ACL, permission,owner, group, met
 PS C:\> $acl = (Get-AzDataLakeGen2Item -FileSystem "filesystem1" -Path 'dir1/dir3/').ACL
 
 # Update permission of a new ACL entry (if ACL entry with same AccessControlType/EntityId/DefaultScope not exist, will add a new ACL entry, else update permission of existing ACL entry)
-PS C:\> $acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType user -EntityId $id -Permission rw- -InputObject $acl  
+PS C:\> $acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType user -EntityId $id -Permission rw- -InputObject $acl
 
 # set the new acl to the directory
 PS C:\> Update-AzDataLakeGen2Item -FileSystem "filesystem1" -Path 'dir1/dir3/' -ACL $acl
 
    FileSystem Name: filesystem1
 
-Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group               
-----                 -----------  ------          ------------         -----------  -----                -----               
+Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+----                 -----------  ------          ------------         -----------  -----                -----
 dir1/dir3            True                         2020-03-23 09:34:31Z rwxrw-rw-+   $superuser           $superuser
 ```
 
@@ -312,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -Property
-Specifies properties for the directory or file. 
+Specifies properties for the directory or file.
 The supported properties for file are: CacheControl, ContentDisposition, ContentEncoding, ContentLanguage, ContentMD5, ContentType.
 The supported properties for directory are: CacheControl, ContentDisposition, ContentEncoding, ContentLanguage.
 

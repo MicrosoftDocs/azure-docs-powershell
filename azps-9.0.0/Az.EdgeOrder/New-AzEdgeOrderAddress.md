@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.EdgeOrder
-online version: https://docs.microsoft.com/powershell/module/az.edgeorder/new-azedgeorderaddress
+online version: https://learn.microsoft.com/powershell/module/az.edgeorder/new-azedgeorderaddress
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/help/New-AzEdgeOrderAddress.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/help/New-AzEdgeOrderAddress.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a new address with the specified parameters.
 Existing address can be updated with this API
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.edgeorder/new-azedgeorderaddress) for up-to-date information.
 
 ## SYNTAX
 
@@ -42,7 +45,7 @@ $DebugPreference = "Continue"
 #     ],
 #     "Target": null
 #   }
-# } 
+# }
 $address = New-AzEdgeOrderAddress -Name "TestPwAddress" -ResourceGroupName "resourceGroupName" -ContactDetail $contactDetail -SubscriptionId SubscriptionId -ShippingAddress $ShippingDetails -Location "eastus"
 $address | Format-List
 ```

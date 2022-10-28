@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.Synapse
-online version: https://docs.microsoft.com/powershell/module/az.synapse/new-azsynapsekustopool
+online version: https://learn.microsoft.com/powershell/module/az.synapse/new-azsynapsekustopool
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/New-AzSynapseKustoPool.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/New-AzSynapseKustoPool.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Create or update a Kusto pool.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/new-azsynapsekustopool) for up-to-date information.
 
 ## SYNTAX
 
@@ -35,7 +38,7 @@ New-AzSynapseKustoPool -ResourceGroupName testrg -WorkspaceName testws -Name tes
 ```output
 Location  Name                    Type                                    Etag
 --------  ----                    ----                                    ----
-East US 2 testws/testnewkustopool Microsoft.Synapse/workspaces/kustoPools 
+East US 2 testws/testnewkustopool Microsoft.Synapse/workspaces/kustoPools
 ```
 
 The above command creates a new Kusto pool named "testnewkustopool" in the workspace "testws".

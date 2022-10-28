@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 5490BB24-127E-4C21-B85F-B70D817B659A
-online version: https://docs.microsoft.com/powershell/module/az.datafactory/save-azdatafactorylog
+online version: https://learn.microsoft.com/powershell/module/az.datafactory/save-azdatafactorylog
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Save-AzDataFactoryLog.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Save-AzDataFactoryLog.md
@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Downloads log files from Azure HDInsight processing.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/save-azdatafactorylog) for up-to-date information.
 
 ## SYNTAX
 

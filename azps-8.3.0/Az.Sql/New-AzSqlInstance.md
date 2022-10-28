@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
 Module Name: Az.Sql
-online version: https://docs.microsoft.com/powershell/module/az.sql/new-azsqlinstance
+online version: https://learn.microsoft.com/powershell/module/az.sql/new-azsqlinstance
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlInstance.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlInstance.md
@@ -672,7 +672,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinimalTlsVersion
-The minimal TLS version to enforce for Managed instance 
+The minimal TLS version to enforce for Managed instance
 
 ```yaml
 Type: System.String

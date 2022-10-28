@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DnsResolver
-online version: https://docs.microsoft.com/powershell/module/az.dnsresolver/remove-azdnsforwardingruleset
+online version: https://learn.microsoft.com/powershell/module/az.dnsresolver/remove-azdnsforwardingruleset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/Remove-AzDnsForwardingRuleset.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/help/Remove-AzDnsForwardingRuleset.md
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Deletes a DNS forwarding ruleset.
 WARNING: This operation cannot be undone.
 All forwarding rules within the ruleset will be deleted.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dnsresolver/remove-azdnsforwardingruleset) for up-to-date information.
 
 ## SYNTAX
 
@@ -46,7 +49,7 @@ This command removes a DNS forwarding ruleset by name.
 ### Example 2: Remove a DNS forwarding ruleset by identity
 ```powershell
 $dnsResolverDnsForwardingRulesetObject = Get-AzDnsForwardingRuleset -Name dnsForwardingRuleset -ResourceGroupName sampleRG
-Remove-AzDnsForwardingRuleset -InputObject $dnsResolverDnsForwardingRulesetObject 
+Remove-AzDnsForwardingRuleset -InputObject $dnsResolverDnsForwardingRulesetObject
 ```
 
 This command removes a DNS forwarding ruleset by identity.

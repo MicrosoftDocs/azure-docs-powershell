@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/powershell/module/az.network/remove-azvirtualappliancesite
+online version: https://learn.microsoft.com/powershell/module/az.network/remove-azvirtualappliancesite
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVirtualApplianceSite.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzVirtualApplianceSite.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Remove a virtual appliance site from a Network Virtual Appliance resource.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-azvirtualappliancesite) for up-to-date information.
 
 ## SYNTAX
 
@@ -43,7 +46,7 @@ The Remove-AzVirtualApplianceSite command removes a Virtual Appliance site from 
 Remove-AzVirtualApplianceSite -Name testsite -ResourceGroupName testrg -NetworkVirtualApplianceId $nva.Id
 ```
 
-Delete a Virtual Appliance site resource. 
+Delete a Virtual Appliance site resource.
 
 ## PARAMETERS
 

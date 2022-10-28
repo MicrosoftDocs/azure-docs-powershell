@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
 Module Name: Az.Storage
-online version: https://docs.microsoft.com/powershell/module/az.storage/new-azstoragelocalusersshpublickey
+online version: https://learn.microsoft.com/powershell/module/az.storage/new-azstoragelocalusersshpublickey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageLocalUserSshPublicKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageLocalUserSshPublicKey.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Creates a SSH public key object, which can be used in Set-AzStorageLocalUser.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/new-azstoragelocalusersshpublickey) for up-to-date information.
 
 ## SYNTAX
 
@@ -39,19 +42,19 @@ PS C:\> $localuser
 
    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
 
-Name      Sid                                          HomeDirectory HasSharedKey HasSshKey HasSshPassword PermissionScopes SshAuthorizedKeys             
-----      ---                                          ------------- ------------ --------- -------------- ---------------- -----------------             
+Name      Sid                                          HomeDirectory HasSharedKey HasSshKey HasSshPassword PermissionScopes SshAuthorizedKeys
+----      ---                                          ------------- ------------ --------- -------------- ---------------- -----------------
 testuser1 S-1-2-0-0000000000-000000000-0000000000-0000 /                                                                    [ssh-rsa keykeykeykeykey=,...]
 
-PS C:\> $localuser.SshAuthorizedKeys 
+PS C:\> $localuser.SshAuthorizedKeys
 
-Description       Key                     
------------       ---                     
+Description       Key
+-----------       ---
 sshpulickey name1 ssh-rsa keykeykeykeykey=
 sshpulickey name2 ssh-rsa keykeykeykeykew=
 ```
 
-This first 2 commands create 2 SSH public key objects. 
+This first 2 commands create 2 SSH public key objects.
 The following commands create or update a local user with the SSH public key objects, then show the updated local user properties.
 
 ## PARAMETERS

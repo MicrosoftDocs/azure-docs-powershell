@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll-Help.xml
 Module Name: Az.DataShare
-online version: https://docs.microsoft.com/powershell/module/az.datashare/remove-azdatasharetrigger
+online version: https://learn.microsoft.com/powershell/module/az.datashare/remove-azdatasharetrigger
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Remove-AzDataShareTrigger.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Remove-AzDataShareTrigger.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 removes a trigger
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datashare/remove-azdatasharetrigger) for up-to-date information.
 
 ## SYNTAX
 
@@ -44,11 +47,11 @@ Remove-AzDataShareTrigger -ResourceGroupName "ADS" -AccountName "WikiAds" -Share
 ```
 
 ```output
-Are you sure you want to remove trigger "AdsTrigger"? 
+Are you sure you want to remove trigger "AdsTrigger"?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```
 
-This commands removes a trigger named AdsTrigger from share subscription AdsShareSubscription. 
+This commands removes a trigger named AdsTrigger from share subscription AdsShareSubscription.
 
 ## PARAMETERS
 

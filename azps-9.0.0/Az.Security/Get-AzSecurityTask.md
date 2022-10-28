@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
 Module Name: Az.Security
-online version: https://docs.microsoft.com/powershell/module/az.security/Get-AzSecurityTask
+online version: https://learn.microsoft.com/powershell/module/az.security/Get-AzSecurityTask
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityTask.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityTask.md
@@ -11,6 +11,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 ## SYNOPSIS
 Gets the security tasks that Azure Security Center recommends you to do in order to strengthen your security posture.
+
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/get-azsecuritytask) for up-to-date information.
 
 ## SYNTAX
 
@@ -69,7 +72,7 @@ Get-AzSecurityTask -ResourceGroupName "myService1"
 
 ```output
 Id                                                                                                                                                                        Name                                 RecommendationType                   ResourceI
-                                                                                                                                                                                                                                                    d        
+                                                                                                                                                                                                                                                    d
 --                                                                                                                                                                        ----                                 ------------------                   ---------
 /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.Security/locations/centralus/tasks/22ef553d-f13a-5227-ee4c-7cc861d28c96 22ef553d-f13a-5227-ee4c-7cc861d28c96 Enable DDoS protection standard      /subsc...
 /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.Security/locations/centralus/tasks/47f736fa-0ec8-a372-de49-8cf18527930c 47f736fa-0ec8-a372-de49-8cf18527930c ConfigureTier2Waf                    /subsc...
@@ -92,8 +95,8 @@ Get-AzSecurityTask -ResourceGroupName "myService1" -Name "22ef553d-f13a-5227-ee4
 ```
 
 ```output
-Id                                                                                                                                                                        Name                                 RecommendationType              ResourceId    
---                                                                                                                                                                        ----                                 ------------------              ----------    
+Id                                                                                                                                                                        Name                                 RecommendationType              ResourceId
+--                                                                                                                                                                        ----                                 ------------------              ----------
 /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.Security/locations/centralus/tasks/22ef553d-f13a-5227-ee4c-7cc861d28c96 22ef553d-f13a-5227-ee4c-7cc861d28c96 Enable DDoS protection standard /subscripti...
 ```
 

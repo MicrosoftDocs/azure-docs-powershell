@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: F523CFA0-427B-41AF-9C2D-EB54EC96C04B
-online version: https://docs.microsoft.com/powershell/module/az.logicapp/get-azlogicapptriggercallbackurl
+online version: https://learn.microsoft.com/powershell/module/az.logicapp/get-azlogicapptriggercallbackurl
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzLogicAppTriggerCallbackUrl.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzLogicAppTriggerCallbackUrl.md
@@ -37,8 +37,8 @@ Get-AzLogicAppTriggerCallbackUrl -ResourceGroupName "ResourceGroup11" -Name "Log
 ```
 
 ```output
-Value                                                                                                                                                                                                               
------                                                                                                                                                                                                               
+Value
+-----
 https://prod-03.westus.logic.azure.com:443/workflows/c4ed9335bc864140a11f4508d19acea3/triggers/manual/run?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=<value>
 ```
 
