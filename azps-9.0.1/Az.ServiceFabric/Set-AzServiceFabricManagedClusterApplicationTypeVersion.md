@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Update a service fabric managed application type version. This allows you to update the tags and package Url. Only supports ARM deployed application type versions.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicefabric/set-azservicefabricmanagedclusterapplicationtypeversion) for up-to-date information.
+
 ## SYNTAX
 
 ### ByResourceGroup (Default)

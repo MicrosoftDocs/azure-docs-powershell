@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the specified spacecraft in a specified resource group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.orbital/get-azorbitalspacecraft) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Regenerate EndpointAuthKeys for an Endpoint using Key-based authentication (asynchronous).
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/new-azmlworkspaceonlineendpointkey) for up-to-date information.
+
 ## SYNTAX
 
 ```

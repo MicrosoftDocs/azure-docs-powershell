@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets a Virtual Hub Route Table in a virtual hub or lists all route tables in a virtual hub.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvirtualhubroutetable) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVirtualHubName (Default)

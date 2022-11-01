@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Synchronizes credentials among integration runtime nodes.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/sync-azdatafactoryv2integrationruntimecredential) for up-to-date information.
+
 ## SYNTAX
 
 ### ByIntegrationRuntimeName (Default)

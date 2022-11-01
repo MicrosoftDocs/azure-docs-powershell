@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes the specified routing policy from a routing intent resource associated with a VirtualHub.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-azroutingpolicy) for up-to-date information.
+
 ## SYNTAX
 
 ### ByRoutingIntentObject

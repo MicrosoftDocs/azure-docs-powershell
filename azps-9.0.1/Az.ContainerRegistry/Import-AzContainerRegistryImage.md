@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Import image from a public/azure registry to an azure container registry.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerregistry/import-azcontainerregistryimage) for up-to-date information.
+
 ## SYNTAX
 
 ### ImportImageByResourceId (Default)

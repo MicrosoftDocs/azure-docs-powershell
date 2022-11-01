@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Adds a target to a target group
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/add-azsqlelasticjobtarget) for up-to-date information.
+
 ## SYNTAX
 
 ### SqlDatabase (Default)

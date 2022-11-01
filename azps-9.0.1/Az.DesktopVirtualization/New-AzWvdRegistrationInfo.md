@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create Windows virtual desktop registration info.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.desktopvirtualization/new-azwvdregistrationinfo) for up-to-date information.
+
 ## SYNTAX
 
 ```

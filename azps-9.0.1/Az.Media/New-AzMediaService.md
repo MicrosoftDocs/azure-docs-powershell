@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a media service if the media service already exists, all its properties are updated with the input provided.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.media/new-azmediaservice) for up-to-date information.
+
 ## SYNTAX
 
 ### StorageAccountIdParamSet
