@@ -15,6 +15,9 @@ Update operation requires latest eTag to be set in the request.
 You may obtain the latest eTag by performing a get operation.
 Create operation does not require eTag.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.costmanagement/new-azcostmanagementexport) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -22,6 +22,9 @@ The cmdlet may call below Microsoft Graph API according to input parameters:
 
 Please notice that this cmdlet will mark `ObjectType` as `Unknown` in output if the object of role assignment is not found or current account has insufficient privileges to get object type.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/set-azroleassignment) for up-to-date information.
+
 ## SYNTAX
 
 ### RoleAssignmentParameterSet (Default)

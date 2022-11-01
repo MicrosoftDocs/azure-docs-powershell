@@ -1,7 +1,7 @@
 ---
 description: This migration guide contains a list of Azure PowerShell changes for the Azure AD to Microsoft Graph migration in Az.Resources 5.1.0.
 ms.custom: devx-track-azurepowershell
-ms.date: 10/28/2022
+ms.date: 11/01/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

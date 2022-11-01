@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes an alert processing rule
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.alertsmanagement/remove-azalertprocessingrule) for up-to-date information.
+
 ## SYNTAX
 
 ### ByName (Default)

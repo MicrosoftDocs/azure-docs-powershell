@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a in memory PSObject to be used for creating or modifying a Peering.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.peering/new-azpeeringexchangeconnectionobject) for up-to-date information.
+
 ## SYNTAX
 
 ### IPv4Address (Default)

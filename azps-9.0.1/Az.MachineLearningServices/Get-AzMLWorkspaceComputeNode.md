@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get the details (e.g IP address, port etc) of all the compute nodes in the compute.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/get-azmlworkspacecomputenode) for up-to-date information.
+
 ## SYNTAX
 
 ```

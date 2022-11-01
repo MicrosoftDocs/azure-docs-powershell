@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 List the compute resources currently being monitored by the Logz sub account resource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logz/get-azlogzsubaccountvmhost) for up-to-date information.
+
 ## SYNTAX
 
 ```

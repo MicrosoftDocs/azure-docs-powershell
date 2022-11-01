@@ -1,7 +1,7 @@
 ---
 description: Learn the steps and tools for migrating Azure PowerShell scripts from AzureRM to the new Az PowerShell module.
 ms.custom: devx-track-azurepowershell, contperf-fy21q2
-ms.date: 10/28/2022
+ms.date: 11/01/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

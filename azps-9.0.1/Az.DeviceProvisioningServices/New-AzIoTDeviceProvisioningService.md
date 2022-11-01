@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create an Azure IoT Hub device provisioning service.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.deviceprovisioningservices/new-aziotdeviceprovisioningservice) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get reservation summaries for daily or monthly grain.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.billing/get-azconsumptionreservationsummary) for up-to-date information.
+
 ## SYNTAX
 
 ```

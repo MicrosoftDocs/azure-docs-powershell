@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Deletes an outbound endpoint for a DNS resolver.
 WARNING: This operation cannot be undone.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dnsresolver/remove-azdnsresolveroutboundendpoint) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

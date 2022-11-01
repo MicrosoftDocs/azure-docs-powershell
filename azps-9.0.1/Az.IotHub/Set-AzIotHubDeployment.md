@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Update the mutable fields of IoT Edge deployment.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/set-aziothubdeployment) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceSet (Default)

@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a configuration object for SQL Server automatic backup.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/new-azvmsqlserverautobackupconfig) for up-to-date information.
+
 ## SYNTAX
 
 ### StorageUriSqlServerAutoBackup (Default)

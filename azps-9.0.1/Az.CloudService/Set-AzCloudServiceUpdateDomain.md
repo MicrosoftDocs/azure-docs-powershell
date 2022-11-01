@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates the role instances in the specified update domain.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cloudservice/set-azcloudserviceupdatedomain) for up-to-date information.
+
 ## SYNTAX
 
 ```

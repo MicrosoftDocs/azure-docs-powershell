@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Restores a deleted web app to a new or existing web app.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/restore-azdeletedwebapp) for up-to-date information.
+
 ## SYNTAX
 
 ### FromDeletedResourceName (Default)

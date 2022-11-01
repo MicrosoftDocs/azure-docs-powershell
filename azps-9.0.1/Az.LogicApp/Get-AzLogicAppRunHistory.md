@@ -14,6 +14,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 Gets the run history of a logic app.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.logicapp/get-azlogicapprunhistory) for up-to-date information.
+
 ## SYNTAX
 
 ```powershell

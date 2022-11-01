@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Change directory (tenant) of `ReservationOrder` and all `Reservation` under it to specified tenant id
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.reservations/move-azreservationdirectory) for up-to-date information.
+
 ## SYNTAX
 
 ### ChangeExpanded (Default)

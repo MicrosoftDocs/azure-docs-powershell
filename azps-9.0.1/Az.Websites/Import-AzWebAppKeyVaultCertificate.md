@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Import an SSL certificate to a web app from Key Vault.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.websites/import-azwebappkeyvaultcertificate) for up-to-date information.
+
 ## SYNTAX
 
 ```

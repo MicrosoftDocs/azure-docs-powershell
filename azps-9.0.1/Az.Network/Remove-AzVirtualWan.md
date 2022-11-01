@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes an Azure Virtual WAN.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-azvirtualwan) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVirtualWanName (Default)
