@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Stops the VMSS or a set of virtual machines within the VMSS.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/stop-azvmss) for up-to-date information.
+
 ## SYNTAX
 
 ### DefaultParameter (Default)

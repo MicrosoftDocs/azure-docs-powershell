@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Adds new entity to servicePrincipals
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/new-azadserviceprincipal) for up-to-date information.
+
 ## SYNTAX
 
 ### SimpleParameterSet (Default)

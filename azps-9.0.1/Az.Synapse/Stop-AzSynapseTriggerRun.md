@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Stops a trigger run in a synapse workspace.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/stop-azsynapsetriggerrun) for up-to-date information.
+
 ## SYNTAX
 
 ### StopByName (Default)

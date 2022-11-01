@@ -17,6 +17,9 @@ First, use the Get-AzRoleDefinition command to generate a baseline role definiti
 Then, modify its properties as required.
 Finally, use this command to create a custom role using role definition.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/new-azroledefinition) for up-to-date information.
+
 ## SYNTAX
 
 ### InputFileParameterSet

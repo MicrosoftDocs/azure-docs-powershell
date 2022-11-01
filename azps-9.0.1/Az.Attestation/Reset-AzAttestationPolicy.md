@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Resets the policy from a tenant in Azure Attestationn.}
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.attestation/reset-azattestationpolicy) for up-to-date information.
+
 ## SYNTAX
 
 ### NameParameterSet

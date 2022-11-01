@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create new deny list custom alert rule for device security group (IoT Security)
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/new-azdevicesecuritygroupdenylistcustomalertruleobject) for up-to-date information.
+
 ## SYNTAX
 
 ```

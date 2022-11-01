@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets an EventHub Consumer Group
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventhub/set-azeventhubconsumergroup) for up-to-date information.
+
 ## SYNTAX
 
 ### SetExpanded (Default)

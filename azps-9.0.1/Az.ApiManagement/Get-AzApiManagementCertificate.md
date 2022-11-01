@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets API Management certificates configured for Mutual Authentication with Backend in the service.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/get-azapimanagementcertificate) for up-to-date information.
+
 ## SYNTAX
 
 ### ContextParameterSet (Default)

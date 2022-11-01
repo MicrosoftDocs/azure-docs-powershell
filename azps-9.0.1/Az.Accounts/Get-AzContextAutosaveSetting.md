@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Display metadata about the context autosave feature, including whether the context is
 automatically saved, and where saved context and credential information can be found.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.accounts/get-azcontextautosavesetting) for up-to-date information.
+
 ## SYNTAX
 
 ```

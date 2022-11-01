@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Links a data store or a cloud service to workspace.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/set-azsynapselinkedservice) for up-to-date information.
+
 ## SYNTAX
 
 ### SetByName (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 List all Azure resources associated to the same Datadog organization as the target resource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datadog/get-azdatadogmonitorlinkedresource) for up-to-date information.
+
 ## SYNTAX
 
 ```

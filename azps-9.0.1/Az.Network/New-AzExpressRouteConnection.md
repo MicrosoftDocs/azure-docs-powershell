@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates an ExpressRoute connection that connects an ExpressRoute gateway to an on premise ExpressRoute circuit
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azexpressrouteconnection) for up-to-date information.
+
 ## SYNTAX
 
 ### ByExpressRouteGatewayName (Default)

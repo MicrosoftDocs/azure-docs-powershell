@@ -14,6 +14,9 @@ Create or Update Disk pool.
 This create or update operation can take 15 minutes to complete.
 This is expected service behavior.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.diskpool/new-azdiskpool) for up-to-date information.
+
 ## SYNTAX
 
 ```

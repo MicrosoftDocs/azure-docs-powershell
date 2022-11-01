@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 The Reimage Role Instance asynchronous operation reinstalls the operating system on instances of web roles or worker roles.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cloudservice/invoke-azcloudserviceroleinstancereimage) for up-to-date information.
+
 ## SYNTAX
 
 ### Reimage (Default)

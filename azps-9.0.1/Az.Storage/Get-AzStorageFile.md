@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Lists directories and files for a path.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/get-azstoragefile) for up-to-date information.
+
 ## SYNTAX
 
 ### ShareName (Default)

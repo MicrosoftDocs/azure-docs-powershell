@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create a in-memory object for NetworkFunctionUserConfiguration
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.connectednetwork/new-azconnectednetworkfunctionuserconfigurationobject) for up-to-date information.
+
 ## SYNTAX
 
 ```

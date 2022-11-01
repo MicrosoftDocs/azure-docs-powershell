@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Uploads a local workspace package file to an Azure Synapse workspace.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/new-azsynapseworkspacepackage) for up-to-date information.
+
 ## SYNTAX
 
 ### CreateByNameParameterSet (Default)

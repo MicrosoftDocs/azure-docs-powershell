@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates the destinations or nexthop for the specified Routing Policy of a Routing Intent object.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/set-azroutingpolicy) for up-to-date information.
+
 ## SYNTAX
 
 ### (Default)
