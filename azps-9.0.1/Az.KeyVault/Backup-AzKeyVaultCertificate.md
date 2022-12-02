@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Backs up a certificate in a key vault.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/backup-azkeyvaultcertificate) for up-to-date information.
+
 ## SYNTAX
 
 ### ByCertificateName (Default)

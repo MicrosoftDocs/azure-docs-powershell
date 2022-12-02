@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 Update the cluster resource vmImage setting which maps the appropriate runtime package to be delivered based on the target operating system.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicefabric/update-azservicefabricvmimage) for up-to-date information.
+
 ## SYNTAX
 
 ```

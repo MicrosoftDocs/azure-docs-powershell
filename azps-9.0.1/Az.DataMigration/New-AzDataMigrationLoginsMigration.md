@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Migrate logins from the source Sql Servers to the target Azure Sql Servers.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/new-azdatamigrationloginsmigration) for up-to-date information.
+
 ## SYNTAX
 
 ### ConfigFile (Default)

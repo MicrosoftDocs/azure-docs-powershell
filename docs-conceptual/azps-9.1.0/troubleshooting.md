@@ -1,7 +1,7 @@
 ---
 description: Troubleshooting the Azure Az PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 10/28/2022
+ms.date: 11/01/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -36,12 +36,14 @@ module.
 ### Az and AzureRM coexistence
 
 > [!WARNING]
-> We do not support having both the AzureRM and Az modules installed for PowerShell 5.1 on Windows
-> at the same time.
+> We do not support having both the AzureRM and Az PowerShell modules installed in Windows
+> PowerShell 5.1 at the same time.
 
-In a scenario where you want to install both AzureRM and the Az PowerShell module on the same
-system, AzureRM must be installed only in the user scope for Windows PowerShell. Install the Az
-PowerShell module for PowerShell 7.0.6 LTS, PowerShell 7.1.3, or higher on the same system.
+In a scenario where you need to install both the AzureRM and Az PowerShell module on the same
+Windows system:
+
+- AzureRM must be installed only in the current user scope of Windows PowerShell 5.1.
+- Install the Az PowerShell module in PowerShell 7.0.6 LTS, PowerShell 7.1.3, or higher.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 

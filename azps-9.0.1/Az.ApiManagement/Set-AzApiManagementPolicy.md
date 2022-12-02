@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets the specified scope policy for API Management.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.apimanagement/set-azapimanagementpolicy) for up-to-date information.
+
 ## SYNTAX
 
 ### SetTenantLevel (Default)

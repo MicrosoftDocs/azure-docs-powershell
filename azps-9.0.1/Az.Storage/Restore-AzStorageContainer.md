@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Restores a previously deleted Azure storage blob container.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/restore-azstoragecontainer) for up-to-date information.
+
 ## SYNTAX
 
 ```

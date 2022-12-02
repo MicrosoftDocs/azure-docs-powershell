@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Migrate an existing Storage blob containers to enable immutable Storage with versioning.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/invoke-azrmstoragecontainerimmutablestoragewithversioningmigration) for up-to-date information.
+
 ## SYNTAX
 
 ### AccountName (Default)

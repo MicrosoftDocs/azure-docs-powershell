@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Remove an application from the cluster. This will remove all the services under the application. Only supports ARM deployed applications.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicefabric/remove-azservicefabricapplication) for up-to-date information.
+
 ## SYNTAX
 
 ### ByResourceGroup (Default)

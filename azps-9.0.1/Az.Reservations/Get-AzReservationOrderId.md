@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get applicable `Reservation`s that are applied to this subscription or a resource group under this subscription.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.reservations/get-azreservationorderid) for up-to-date information.
+
 ## SYNTAX
 
 ### Get (Default)

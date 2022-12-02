@@ -14,6 +14,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Gets the specified trusted identity provider in the specified Data Lake Store.
 If no provider is specified, then lists all providers for the account.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/get-azdatalakestoretrustedidprovider) for up-to-date information.
+
 ## SYNTAX
 
 ```

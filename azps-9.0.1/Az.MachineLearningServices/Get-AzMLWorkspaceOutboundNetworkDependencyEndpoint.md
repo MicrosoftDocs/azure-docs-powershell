@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Called by Client (Portal, CLI, etc) to get a list of all external outbound dependencies (FQDNs) programmatically.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/get-azmlworkspaceoutboundnetworkdependencyendpoint) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Add non-edge devices as a children to the edge device.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/add-aziothubdevicechildren) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceSet (Default)

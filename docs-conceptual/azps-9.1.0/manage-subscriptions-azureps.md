@@ -1,7 +1,7 @@
 ---
 description: Manage Azure subscriptions with Azure PowerShell
 ms.custom: devx-track-azurepowershell
-ms.date: 10/28/2022
+ms.date: 11/01/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

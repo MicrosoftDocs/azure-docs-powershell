@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 List all Event Hubs Namespace IDs in an Event Hubs Dedicated Cluster.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventhub/get-azeventhubclusternamespace) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Adds an authenticated account to use for Azure Analysis Services server cmdlet requests.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.analysisservices/add-azanalysisservicesaccount) for up-to-date information.
+
 ## SYNTAX
 
 ### UserParameterSetName (Default)

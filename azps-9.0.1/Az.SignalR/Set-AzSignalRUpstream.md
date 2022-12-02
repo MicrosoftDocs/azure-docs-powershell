@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Set the upstream settings of a SignalR service.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.signalr/set-azsignalrupstream) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceGroupParameterSet (Default)
@@ -249,4 +252,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[How to use splatting to pass parameters to commands in PowerShell](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_splatting?view=powershell-7)
+[How to use splatting to pass parameters to commands in PowerShell](/powershell/module/microsoft.powershell.core/about/about_splatting)

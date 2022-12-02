@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Executes a command for a specific container instance in a specified resource group and container group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerinstance/invoke-azcontainerinstancecommand) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get the regions and skus that are available for RI purchase for the specified Azure subscription.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.reservations/get-azreservationcatalog) for up-to-date information.
+
 ## SYNTAX
 
 ### Get (Default)

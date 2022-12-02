@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes the specified trusted identity provider in the specified Data Lake Store.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datalakestore/remove-azdatalakestoretrustedidprovider) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get endpoints and metadata for an instance of Azure services.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.accounts/get-azenvironment) for up-to-date information.
+
 ## SYNTAX
 
 ```

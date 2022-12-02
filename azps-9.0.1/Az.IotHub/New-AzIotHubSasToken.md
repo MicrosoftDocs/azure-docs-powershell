@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Generate a SAS token for a target IoT Hub, device or module.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/new-aziothubsastoken) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceSet (Default)

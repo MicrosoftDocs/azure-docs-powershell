@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Deletes a forwarding rule in a DNS forwarding ruleset.
 WARNING: This operation cannot be undone.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dnsresolver/remove-azdnsforwardingrulesetforwardingrule) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

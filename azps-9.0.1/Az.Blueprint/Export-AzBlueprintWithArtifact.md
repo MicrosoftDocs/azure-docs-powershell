@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Export specified blueprint definition to the specified output location as a JSON file.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.blueprint/export-azblueprintwithartifact) for up-to-date information.
+
 ## SYNTAX
 
 ```

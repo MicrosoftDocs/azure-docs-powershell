@@ -1,7 +1,7 @@
 ---
 description: How to use Azure PowerShell to manage resources with the Invoke-AzRestMethod cmdlet.
 ms.custom: devx-track-azurepowershell
-ms.date: 10/28/2022
+ms.date: 11/28/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -109,7 +109,7 @@ $specificIpParams = @{
          } ]
       }
   } }'
-  -Method = 'PATCH'
+  Method = 'PATCH'
 }
 Invoke-AzRestMethod @specificIpParams
 ```

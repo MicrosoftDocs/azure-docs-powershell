@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Restarts all containers in a container group in place.
 If container image has updates, new image will be downloaded.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerinstance/restart-azcontainergroup) for up-to-date information.
+
 ## SYNTAX
 
 ### Restart (Default)

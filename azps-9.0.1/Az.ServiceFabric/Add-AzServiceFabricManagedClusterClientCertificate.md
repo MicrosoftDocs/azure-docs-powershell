@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Add certificate common name or thumbprint to the cluster. This will register the certificate agains the cluster for client authentication purposes.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicefabric/add-azservicefabricmanagedclusterclientcertificate) for up-to-date information.
+
 ## SYNTAX
 
 ### ClientCertByTpByObj (Default)

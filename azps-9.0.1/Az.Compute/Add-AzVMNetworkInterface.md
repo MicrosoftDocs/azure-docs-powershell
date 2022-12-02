@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Adds a network interface to a virtual machine.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/add-azvmnetworkinterface) for up-to-date information.
+
 ## SYNTAX
 
 ### GetNicFromNicId (Default)
