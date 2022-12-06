@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Archiving a `Reservation` moves it to `Archived` state.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.reservations/invoke-azreservationarchivereservation) for up-to-date information.
+
 ## SYNTAX
 
 ### Archive (Default)

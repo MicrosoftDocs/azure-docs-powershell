@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Stops a copy operation to the specified destination file.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/stop-azstoragefilecopy) for up-to-date information.
+
 ## SYNTAX
 
 ### ShareName

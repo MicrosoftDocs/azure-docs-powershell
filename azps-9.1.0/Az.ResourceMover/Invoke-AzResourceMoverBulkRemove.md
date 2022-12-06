@@ -14,6 +14,9 @@ Removes the set of move resources included in the request body from move collect
 The orchestration is done by service.
 To aid the user to prerequisite the operation the client can call operation with validateOnly property set to true.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resourcemover/invoke-azresourcemoverbulkremove) for up-to-date information.
+
 ## SYNTAX
 
 ```

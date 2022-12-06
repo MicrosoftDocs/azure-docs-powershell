@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets an outbound rule configuration in a load balancer.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azloadbalanceroutboundruleconfig) for up-to-date information.
+
 ## SYNTAX
 
 ```

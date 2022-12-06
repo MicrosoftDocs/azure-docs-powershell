@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Creates a new Azure NetApp Files (ANF) VolumeGroup along with requisite volumes.
 Creating volume group will create all the volumes specified in request body implicitly. Once volumes are created using volume group, those will be treated as regular volumes thereafter.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.netappfiles/new-aznetappfilesvolumegroup) for up-to-date information.
+
 ## SYNTAX
 
 ### ByFieldsParameterSet (Default)

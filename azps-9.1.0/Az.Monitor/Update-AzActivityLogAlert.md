@@ -14,6 +14,9 @@ Updates 'tags' and 'enabled' fields in an existing Alert rule.
 This method is used to update the Alert rule tags, and to enable or disable the Alert rule.
 To update other fields use CreateOrUpdate operation.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/update-azactivitylogalert) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)

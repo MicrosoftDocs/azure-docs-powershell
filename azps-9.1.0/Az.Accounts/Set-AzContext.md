@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets the tenant, subscription, and environment for cmdlets to use in the current session.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.accounts/set-azcontext) for up-to-date information.
+
 ## SYNTAX
 
 ### Context (Default)
