@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Start the deployment.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.springcloud/start-azspringcloudappdeployment) for up-to-date information.
+
 ## SYNTAX
 
 ### Start (Default)

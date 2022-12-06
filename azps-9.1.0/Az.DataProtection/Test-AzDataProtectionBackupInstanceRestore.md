@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Validates if Restore can be triggered for a DataSource
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/test-azdataprotectionbackupinstancerestore) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -1,7 +1,7 @@
 ---
 description: Details about the support lifecycle of the Azure PowerShell modules
 ms.custom: devx-track-azurepowershell
-ms.date: 12/02/2022
+ms.date: 12/06/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

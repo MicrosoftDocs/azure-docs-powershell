@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the diagnostic settings category for the specified resource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/get-azdiagnosticsettingcategory) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

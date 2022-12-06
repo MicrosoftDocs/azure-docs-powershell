@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 This operation disables the Disaster Recovery and stops replicating changes from primary to secondary namespaces
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/set-azservicebusgeodrconfigurationbreakpair) for up-to-date information.
+
 ## SYNTAX
 
 ### Break (Default)

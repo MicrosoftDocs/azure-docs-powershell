@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a service unit under the specified service and service topology.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.deploymentmanager/new-azdeploymentmanagerserviceunit) for up-to-date information.
+
 ## SYNTAX
 
 ### ByTopologyAndServiceNames (Default)

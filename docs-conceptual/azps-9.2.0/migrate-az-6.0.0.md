@@ -1,7 +1,7 @@
 ---
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 6.0.0 release.
 ms.custom: devx-track-azurepowershell
-ms.date: 12/02/2022
+ms.date: 12/06/2022
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

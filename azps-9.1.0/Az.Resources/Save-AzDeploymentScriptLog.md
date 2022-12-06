@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Saves the log of a deployment script execution to disk.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/save-azdeploymentscriptlog) for up-to-date information.
+
 ## SYNTAX
 
 ### SaveDeploymentScriptLogByName (Default)

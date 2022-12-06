@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets a Virtual Network Connection in a virtual hub or lists all virtual network connections in a virtual hub.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azvirtualhubvnetconnection) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVirtualHubName (Default)
