@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates or updates azure databricks accessConnector.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.databricks/new-azdatabricksaccessconnector) for up-to-date information.
+
 ## SYNTAX
 
 ```

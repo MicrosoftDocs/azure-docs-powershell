@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Enable delete retention policy for the Azure Storage Blob service.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/enable-azstorageblobdeleteretentionpolicy) for up-to-date information.
+
 ## SYNTAX
 
 ### AccountName (Default)

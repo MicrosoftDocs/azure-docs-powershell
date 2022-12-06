@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 
 Create a gallery image version.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/new-azgalleryimageversion) for up-to-date information.
+
 ## SYNTAX
 
 ```

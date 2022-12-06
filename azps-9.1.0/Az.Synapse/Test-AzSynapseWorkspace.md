@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Checks for the existence of a Synapse Analytics workspace.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.synapse/test-azsynapseworkspace) for up-to-date information.
+
 ## SYNTAX
 
 ```

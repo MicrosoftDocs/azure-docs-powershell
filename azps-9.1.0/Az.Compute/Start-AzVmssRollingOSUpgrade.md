@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Starts a rolling upgrade to move all virtual machine scale set instances to the latest available Platform Image OS version.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.compute/start-azvmssrollingosupgrade) for up-to-date information.
+
 ## SYNTAX
 
 ```

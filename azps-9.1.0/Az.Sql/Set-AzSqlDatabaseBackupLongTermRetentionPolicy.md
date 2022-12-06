@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sets a server long term retention policy.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/set-azsqldatabasebackuplongtermretentionpolicy) for up-to-date information.
+
 ## SYNTAX
 
 ### WeeklyRetentionRequired (Default)

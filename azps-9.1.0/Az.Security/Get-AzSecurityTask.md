@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the security tasks that Azure Security Center recommends you to do in order to strengthen your security posture.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.security/get-azsecuritytask) for up-to-date information.
+
 ## SYNTAX
 
 ### SubscriptionScope (Default)

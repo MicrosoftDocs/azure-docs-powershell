@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates the CosmosDB Cassandra Keyspace. Performs a client side patch operation by reading the existing Keyspace.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cosmosdb/update-azcosmosdbcassandrakeyspace) for up-to-date information.
+
 ## SYNTAX
 
 ### ByNameParameterSet (Default)
