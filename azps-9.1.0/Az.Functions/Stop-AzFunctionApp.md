@@ -244,7 +244,7 @@ To create the parameters described below, construct a hash table containing the 
       - `[ConnectionString <String>]`: Connection string value.
       - `[Name <String>]`: Name of connection string.
       - `[Type <ConnectionStringType?>]`: Type of database.
-    - `[CorAllowedOrigin <String[]>]`: Gets or sets the list of origins that should be allowed to make cross-origin         calls (for example: http://example.com:12345). Use "*" to allow all.
+    - `[CorAllowedOrigin <String[]>]`: Gets or sets the list of origins that should be allowed to make cross-origin         calls (for example: `http://example.com:12345`). Use "*" to allow all.
     - `[CorSupportCredentials <Boolean?>]`: Gets or sets whether CORS requests with credentials are allowed. See         https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials         for more details.
     - `[CustomActionExe <String>]`: Executable to be run.
     - `[CustomActionParameter <String>]`: Parameters for the executable.
