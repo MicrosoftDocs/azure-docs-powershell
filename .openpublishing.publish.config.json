@@ -22,12 +22,6 @@
       "branch_mapping": {},
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft"
-    },
-    {
-      "branch": "live",
-      "branch_mapping": {},
-      "path_to_root": "dotnet-xref",
-      "url": "https://github.com/MicrosoftDocs/dotnet-xref"
     }
   ],
   "dest": "_site",

@@ -252,4 +252,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[How to use splatting to pass parameters to commands in PowerShell](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_splatting?view=powershell-7)
+[How to use splatting to pass parameters to commands in PowerShell](/powershell/module/microsoft.powershell.core/about/about_splatting)
