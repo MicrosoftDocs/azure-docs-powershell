@@ -78,8 +78,6 @@ $queryResults.Render
 $queryResults.Statistics
 ```
 
-See [https://dev.loganalytics.io/documentation/Using-the-API/RequestOptions](https://dev.loganalytics.io/documentation/Using-the-API/RequestOptions) for details on the render and statistics info.
-
 ## PARAMETERS
 
 ### -AsJob
@@ -174,7 +172,6 @@ Accept wildcard characters: False
 
 ### -Wait
 Puts an upper bound on the amount of time the server will spend processing the query.
-See: https://dev.loganalytics.io/documentation/Using-the-API/Timeouts
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
