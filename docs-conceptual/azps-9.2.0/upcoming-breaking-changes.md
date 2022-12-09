@@ -126,7 +126,7 @@ title: Upcoming breaking changes in Azure PowerShell
 ### `New-AzVmss`
 
 - Cmdlet breaking-change will happen to all parameter set
-  - Starting in May 2023 the "New-AzVmss" cmdlet will deploy with the Trusted Launch configuration by default. To know more about Trusted Launch, please visit https://docs.microsoft.com/en-us/azure/virtual-machines/trusted-launch
+  - Starting in May 2023 the "New-AzVmss" cmdlet will deploy with the Trusted Launch configuration by default. To know more about Trusted Launch, please visit [https://learn.microsoft.com/azure/virtual-machines/trusted-launch](/azure/virtual-machines/trusted-launch).
 
 ## Az.DataLakeStore
 
