@@ -13,7 +13,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Removes a hybrid runbook worker group.
 
 > [!NOTE]
->This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/remove-azautomationhybridrunbookworkergroup) for up-to-date information.
+>- Use the latest PowerShell cmdlet [Remove-AzAutomationHybridWorkerGroup](../../azps-9.2.0/Az.Automation/Remove-AzAutomationHybridWorkerGroup.md) to remove Hybrid Runbook Worker group.
+>- This is the previous version of our documentation. See [the most recent version](/powershell/module/az.automation/remove-azautomationhybridrunbookworkergroup) for up-to-date information.
 
 ## SYNTAX
 

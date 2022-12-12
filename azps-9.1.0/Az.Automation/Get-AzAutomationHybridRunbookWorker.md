@@ -120,6 +120,12 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
+### Example 2
+It returns list of Hybrid Workers in the Hybrid Worker group
+```powershell
+Get-AzAutomationHybridRunbookWorker -WorkerGroup "RunbookWorkerGroupName" -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01"
+```
+
 ## INPUTS
 
 ### System.String

@@ -104,6 +104,9 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
+>[!NOTE]
+>It returns only Hybrid Runbook Worker group properties. To get list of Hybrid Workers in the Hybrid Worker group, see [Example 2](Get-AzAutomationHybridRunbookWorker.md#example-2).
+
 ## INPUTS
 
 ### System.String

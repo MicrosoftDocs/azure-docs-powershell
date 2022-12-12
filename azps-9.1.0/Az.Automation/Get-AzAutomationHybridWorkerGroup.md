@@ -14,7 +14,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Gets hybrid runbook worker groups.
 
 > [!NOTE]
->This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/get-azautomationhybridworkergroup) for up-to-date information.
+>- Use the latest PowerShell cmdlet [Get-AzAutomationHybridRunbookWorkerGroup](Get-AzAutomationHybridRunbookWorkerGroup.md) to get Hybrid Runbook Worker group.
+>- This is the previous version of our documentation. See [the most recent version](/powershell/module/az.automation/get-azautomationhybridworkergroup) for up-to-date information.
 
 ## SYNTAX
 
