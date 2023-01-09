@@ -76,7 +76,7 @@ Import-AzConfig -Path $HOME\AzConfig.json
 ## Clearing configuration
 
 To reset the configuration setting of one or more Azure PowerShell global settings to the default,
-you use the `Clear-AzConfig` cmdlet. In the following example, the **DefaultSubscriptionForLogin**
+use the `Clear-AzConfig` cmdlet. In the following example, the **DefaultSubscriptionForLogin**
 setting is cleared.
 
 ```azurepowershell-interactive
