@@ -10,7 +10,7 @@ title: Configure Azure PowerShell global settings
 
 # Configure Azure PowerShell global settings
 
-Azure PowerShell supports several possible global settings like disabling breaking change warning
+Azure PowerShell supports several global settings like disabling breaking change warning
 messages. Prior to Az PowerShell module version 9, there wasn't a centralized or granular way to
 configure global settings for Azure PowerShell.
 
