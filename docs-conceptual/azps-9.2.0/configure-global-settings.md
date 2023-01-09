@@ -66,7 +66,7 @@ export the settings to a JSON file.
 Export-AzConfig -Path $HOME\AzConfig.json
 ```
 
-To import your settings, you use the `Import-AzConfig` cmdlet and reference the previously exported
+To import your settings, use the `Import-AzConfig` cmdlet and reference the previously exported
 JSON file.
 
 ```azurepowershell-interactive
