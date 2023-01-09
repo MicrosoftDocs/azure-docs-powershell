@@ -28,7 +28,7 @@ the Az.Accounts PowerShell module:
 ## Granular settings
 
 Besides the usual PowerShell scopes, you can apply the settings to all Az PowerShell modules or only
-a single module. With the `AppliesTo` parameter, you can specify how broad you want the setting
+a single module. With the **AppliesTo** parameter, you can specify how broad you want the setting
 applied. The value `Az` indicates the setting is applied to all modules available as part of Azure
 PowerShell.
 
