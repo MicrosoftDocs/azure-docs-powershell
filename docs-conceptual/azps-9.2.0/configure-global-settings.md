@@ -60,7 +60,7 @@ Update-AzConfig -DefaultSubscriptionForLogin <Subscription ID or Name>
 ## Replicating settings
 
 To replicate your settings from one environment to another, you use the `Export-AzConfig` cmdlet to
-export the settings that are supported by AzConfig to a file in JSON format.
+export the settings to a JSON file.
 
 ```azurepowershell-interactive
 Export-AzConfig -Path $HOME\AzConfig.json
