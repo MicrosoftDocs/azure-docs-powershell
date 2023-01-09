@@ -16,8 +16,7 @@ configure global settings for Azure PowerShell.
 
 ## Centralized configuration
 
-The Az PowerShell module version 9 and higher includes cmdlets for performing centralized and
-granular configuration of global settings for Azure PowerShell. These AzConfig cmdlets are part of
+The Az PowerShell module version 9 and higher includes cmdlets for managing the configuration of global settings for Azure PowerShell. These `*-AzConfig` cmdlets are part of
 the Az.Accounts PowerShell module:
 
 - [Get-AzConfig][get-azconfig]
