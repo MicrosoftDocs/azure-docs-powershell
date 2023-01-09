@@ -41,7 +41,7 @@ Update-AzConfig -DisplayBreakingChangeWarning $false -AppliesTo Az.Compute
 ```
 
 In this scenario, the breaking change warning message remains active for cmdlets in all Az
-PowerShell modules except Az.Compute.
+PowerShell modules except **Az.Compute**.
 
 ## Default subscription
 
