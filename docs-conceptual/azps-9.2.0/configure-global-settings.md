@@ -29,7 +29,7 @@ the Az.Accounts PowerShell module:
 
 Besides the usual PowerShell scopes, you can apply the settings to all Az PowerShell modules or only
 a single module. With the **AppliesTo** parameter, you can specify how broad you want the setting
-applied. The value `Az` indicates the setting is applied to all modules available as part of Azure
+applied. The value `Az` indicates the setting is applied to all modules available that are part of Azure
 PowerShell.
 
 To disable the breaking change warning message for cmdlets in the Az.Compute module, you use the
