@@ -32,7 +32,7 @@ a single module. With the **AppliesTo** parameter, you can specify how broad you
 applied. The value `Az` indicates the setting is applied to all modules available that are part of Azure
 PowerShell.
 
-To disable the breaking change warning message for cmdlets in the Az.Compute module, you use the
+To disable the breaking change warning message for cmdlets in the **Az.Compute** module, use the
 `Update-AzConfig` cmdlet with the `DisplayBreakingChangeWarning` and `AppliesTo` parameters as shown
 in the following example.
 
