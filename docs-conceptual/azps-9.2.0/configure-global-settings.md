@@ -51,7 +51,7 @@ first subscription that is returned by Azure is used unless you specify a subscr
 is a production environment.
 
 To configure your default subscription, you use the `Update-AzConfig` cmdlet with the
-`DefaultSubscriptionForLogin` parameter as shown in the following example.
+**DefaultSubscriptionForLogin** parameter as shown in the following example.
 
 ```azurepowershell-interactive
 Update-AzConfig -DefaultSubscriptionForLogin <Subscription ID or Name>
