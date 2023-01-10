@@ -1,7 +1,7 @@
 ---
 description: How to query for resources in Azure and format the results.
 ms.custom: devx-track-azurepowershell
-ms.date: 01/06/2023
+ms.date: 01/10/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
