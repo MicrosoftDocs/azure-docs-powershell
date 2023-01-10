@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Retrieves the default definition of a function based on the parameters specified.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.streamanalytics/get-azstreamanalyticsdefaultfunctiondefinition) for up-to-date information.
+
 ## SYNTAX
 
 ```

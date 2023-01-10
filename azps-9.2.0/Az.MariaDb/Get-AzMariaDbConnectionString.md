@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get connection string of a MariaDB under a given framework.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mariadb/get-azmariadbconnectionstring) for up-to-date information.
+
 ## SYNTAX
 
 ### ServerName (Default)

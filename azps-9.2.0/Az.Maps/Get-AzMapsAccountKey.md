@@ -14,6 +14,9 @@ Get the keys to use with the Maps APIs.
 A key is used to authenticate and authorize access to the Maps REST APIs.
 Only one key is needed at a time; two are given to provide seamless key regeneration.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.maps/get-azmapsaccountkey) for up-to-date information.
+
 ## SYNTAX
 
 ```

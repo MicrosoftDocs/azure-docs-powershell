@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets details of an Azure NetApp Files (ANF) Active Directory configuration.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.netappfiles/get-aznetappfilesactivedirectory) for up-to-date information.
+
 ## SYNTAX
 
 ### ByFieldsParameterSet (Default)

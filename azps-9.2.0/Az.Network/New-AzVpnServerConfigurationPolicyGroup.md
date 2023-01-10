@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create a new P2SVpnGateway under VirtualHub for point to site connectivity.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azvpnserverconfigurationpolicygroup) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVirtualHubNameByVpnServerConfigurationObject (Default)

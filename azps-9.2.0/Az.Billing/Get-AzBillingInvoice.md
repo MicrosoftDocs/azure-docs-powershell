@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Get billing invoices of the subscription.
 Get billing invoices of a billing account and billing profile
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.billing/get-azbillinginvoice) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

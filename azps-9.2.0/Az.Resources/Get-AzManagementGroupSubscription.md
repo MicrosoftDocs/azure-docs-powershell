@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the details of Subscription(s) under a Management Group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-azmanagementgroupsubscription) for up-to-date information.
+
 ## SYNTAX
 
 ```
