@@ -1,7 +1,7 @@
 ---
 description: Configure Azure PowerShell global settings using centralized and granular AzConfig cmdlets
 ms.custom: devx-track-azurepowershell
-ms.date: 12/30/2022
+ms.date: 01/09/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -16,8 +16,9 @@ configure global settings for Azure PowerShell.
 
 ## Centralized configuration
 
-The Az PowerShell module version 9 and higher includes cmdlets for managing the configuration of global settings for Azure PowerShell. These `*-AzConfig` cmdlets are part of
-the Az.Accounts PowerShell module:
+The Az PowerShell module version 9 and higher includes cmdlets for managing the configuration of
+global settings for Azure PowerShell. These `*-AzConfig` cmdlets are part of the Az.Accounts
+PowerShell module:
 
 - [Get-AzConfig][get-azconfig]
 - [Update-AzConfig][update-azconfig]
@@ -27,14 +28,18 @@ the Az.Accounts PowerShell module:
 
 ## Granular settings
 
+You can apply settings that are only effective in a particular scope. The valid values for the
+**Scope** parameter are **MachinePolicy**, **UserPolicy**, **Process**, **CurrentUser**, and
+**LocalMachine**. **LocalMachine** is the default when applying a setting.
+
 Besides the usual PowerShell scopes, you can apply the settings to all Az PowerShell modules or only
 a single module. With the **AppliesTo** parameter, you can specify how broad you want the setting
-applied. The value `Az` indicates the setting is applied to all modules available that are part of Azure
-PowerShell.
+applied. The value `Az` indicates the setting is applied to all modules available that are part of
+Azure PowerShell.
 
 To disable the breaking change warning message for cmdlets in the **Az.Compute** module, use the
-`Update-AzConfig` cmdlet with the **DisplayBreakingChangeWarning** and **AppliesTo** parameters as shown
-in the following example.
+`Update-AzConfig` cmdlet with the **DisplayBreakingChangeWarning** and **AppliesTo** parameters as
+shown in the following example.
 
 ```azurepowershell-interactive
 Update-AzConfig -DisplayBreakingChangeWarning $false -AppliesTo Az.Compute
