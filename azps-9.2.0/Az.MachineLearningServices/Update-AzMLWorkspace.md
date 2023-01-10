@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates a machine learning workspace with the specified parameters.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/update-azmlworkspace) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)

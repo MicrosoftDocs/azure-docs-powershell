@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Regenerates secret keys and returns them for the DirectLine Channel of a particular BotService resource
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.botservice/new-azbotservicedirectlinekey) for up-to-date information.
+
 ## SYNTAX
 
 ```

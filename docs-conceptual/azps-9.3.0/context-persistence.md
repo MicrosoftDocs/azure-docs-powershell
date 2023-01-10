@@ -1,7 +1,7 @@
 ---
 description: Learn how to reuse Azure credentials and other information across multiple PowerShell sessions.
 ms.custom: devx-track-azurepowershell
-ms.date: 01/06/2023
+ms.date: 01/10/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

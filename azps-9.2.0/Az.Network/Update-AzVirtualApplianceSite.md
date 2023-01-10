@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Change or Modify a Virtual Appliance site connected to a Network Virtual Appliance resource.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/update-azvirtualappliancesite) for up-to-date information.
+
 ## SYNTAX
 
 ```

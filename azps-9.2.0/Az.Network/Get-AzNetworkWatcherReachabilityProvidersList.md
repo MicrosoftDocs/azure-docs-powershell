@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Lists all available internet service providers for a specified Azure region.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-aznetworkwatcherreachabilityproviderslist) for up-to-date information.
+
 ## SYNTAX
 
 ### SetByName (Default)

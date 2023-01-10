@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get the list of CPU/memory/GPU capabilities of a region.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.containerinstance/get-azcontainerinstancecapability) for up-to-date information.
+
 ## SYNTAX
 
 ```

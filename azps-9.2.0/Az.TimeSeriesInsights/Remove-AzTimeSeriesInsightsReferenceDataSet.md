@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes the reference data set with the specified name in the specified subscription, resource group, and environment
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.timeseriesinsights/remove-aztimeseriesinsightsreferencedataset) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

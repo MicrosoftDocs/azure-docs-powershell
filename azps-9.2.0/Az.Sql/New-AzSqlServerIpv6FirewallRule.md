@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates an IPv6 firewall rule for a SQL Database server.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/new-azsqlserveripv6firewallrule) for up-to-date information.
+
 ## SYNTAX
 
 ### UserSpecifiedRuleSet

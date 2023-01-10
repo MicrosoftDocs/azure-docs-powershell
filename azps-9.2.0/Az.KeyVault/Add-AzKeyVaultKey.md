@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a key in a key vault or imports a key into a key vault.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/add-azkeyvaultkey) for up-to-date information.
+
 ## SYNTAX
 
 ### InteractiveCreate (Default)

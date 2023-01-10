@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Update or add an offer to a specific collection of the private store.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.marketplace/set-azmarketplaceprivatestorecollectionoffer) for up-to-date information.
+
 ## SYNTAX
 
 ```
