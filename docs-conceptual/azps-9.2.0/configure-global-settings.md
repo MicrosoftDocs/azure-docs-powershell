@@ -30,7 +30,7 @@ PowerShell module:
 
 You can apply settings that are only effective in a particular scope. The valid values for the
 **Scope** parameter are **MachinePolicy**, **UserPolicy**, **Process**, **CurrentUser**, and
-**LocalMachine**. **LocalMachine** is the default when applying a setting.
+**LocalMachine**. **CurrentUser** is the default when applying a setting.
 
 Besides the usual PowerShell scopes, you can apply the settings to all Az PowerShell modules or only
 a single module. With the **AppliesTo** parameter, you can specify how broad you want the setting
