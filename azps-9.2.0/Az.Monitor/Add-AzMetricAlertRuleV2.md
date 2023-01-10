@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Adds or updates a V2 (non-classic) metric-based alert rule.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/add-azmetricalertrulev2) for up-to-date information.
+
 ## SYNTAX
 
 ### CreateAlertByResourceId (Default)

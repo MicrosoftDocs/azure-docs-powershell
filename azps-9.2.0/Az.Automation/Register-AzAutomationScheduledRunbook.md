@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Associates a runbook to a schedule.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/register-azautomationscheduledrunbook) for up-to-date information.
+
 ## SYNTAX
 
 ### ByRunbookName (Default)

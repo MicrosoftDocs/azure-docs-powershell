@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get per subscription settings needed to host bot in compute resource such as Azure App Service
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.botservice/get-azbotservicehostsetting) for up-to-date information.
+
 ## SYNTAX
 
 ```

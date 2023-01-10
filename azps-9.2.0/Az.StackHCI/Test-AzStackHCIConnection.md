@@ -16,6 +16,9 @@ Note: Test-AzStackhHCIConnection is deprecated.
 Please use 'Invoke-AzStackHciConnectivityValidation' from 'AzStackHCI.EnvironmentChecker' module for enhanced connectivity verification tests.
 For more information, see https://learn.microsoft.com/en-us/azure-stack/hci/whats-new#new-azure-stack-hci-environment-checker-tool.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.stackhci/test-azstackhciconnection) for up-to-date information.
+
 ## SYNTAX
 
 ```

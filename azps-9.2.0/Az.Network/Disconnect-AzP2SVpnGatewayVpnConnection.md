@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Disconnect given connected vpn client connections with a given p2s vpn gateway
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/disconnect-azp2svpngatewayvpnconnection) for up-to-date information.
+
 ## SYNTAX
 
 ### ByP2SVpnGatewayName (Default)

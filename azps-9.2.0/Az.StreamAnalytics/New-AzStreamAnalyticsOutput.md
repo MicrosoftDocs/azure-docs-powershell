@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates an output or replaces an already existing output under an existing streaming job.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.streamanalytics/new-azstreamanalyticsoutput) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets details of the vCenter servers registered for discovery on the Configuration server specified by the ASR fabric.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/get-azrecoveryservicesasrvcenter) for up-to-date information.
+
 ## SYNTAX
 
 ### ByFabricObject (Default)

@@ -14,6 +14,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Adds or updates a classic webtest alert rule (already retired on public cloud).
 To create a new webtest alert rule, use the [Add-AzMetricAlertRuleV2](./Add-AzMetricAlertRuleV2.md) cmdlet, passing a criteria object for webtest (created via the [New-AzMetricAlertRuleV2Criteria](./New-AzMetricAlertRuleV2Criteria.md) cmdlet with a "-WebTest" criteria type).
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.monitor/add-azwebtestalertrule) for up-to-date information.
+
 ## SYNTAX
 
 ```
