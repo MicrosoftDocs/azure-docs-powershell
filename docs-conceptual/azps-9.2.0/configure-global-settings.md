@@ -29,8 +29,8 @@ PowerShell module:
 ## Granular settings
 
 You can apply settings that are only effective in a particular scope. The valid values for the
-**Scope** parameter are **CurrentUser**, **Default**, **Environment**, and **Process**.
-**CurrentUser** is the default when applying a setting.
+**Scope** parameter are `CurrentUser`, `Default`, `Environment`, and `Process`.
+`CurrentUser` is the default when applying a setting.
 
 Besides scopes, you can apply the settings to all Az PowerShell modules or only a single module.
 With the **AppliesTo** parameter, you can specify how broad you want the setting applied. The value
