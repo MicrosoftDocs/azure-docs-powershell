@@ -29,13 +29,12 @@ PowerShell module:
 ## Granular settings
 
 You can apply settings that are only effective in a particular scope. The valid values for the
-**Scope** parameter are **MachinePolicy**, **UserPolicy**, **Process**, **CurrentUser**, and
-**LocalMachine**. **CurrentUser** is the default when applying a setting.
+**Scope** parameter are **CurrentUser**, **Default**, **Environment**, and **Process**.
+**CurrentUser** is the default when applying a setting.
 
-Besides the usual PowerShell scopes, you can apply the settings to all Az PowerShell modules or only
-a single module. With the **AppliesTo** parameter, you can specify how broad you want the setting
-applied. The value `Az` indicates the setting is applied to all modules available that are part of
-Azure PowerShell.
+Besides scopes, you can apply the settings to all Az PowerShell modules or only a single module.
+With the **AppliesTo** parameter, you can specify how broad you want the setting applied. The value
+`Az` indicates the setting is applied to all modules available that are part of Azure PowerShell.
 
 To disable the breaking change warning message for cmdlets in the **Az.Compute** module, use the
 `Update-AzConfig` cmdlet with the **DisplayBreakingChangeWarning** and **AppliesTo** parameters as
