@@ -95,10 +95,12 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Use the Az PowerShell module behind a proxy
-            url: az-powershell-proxy.md
+          - text: Configure global settings
+            url: configure-global-settings.md
           - text: Intelligent command completion
             url: az-predictor.md
+          - text: Use the Az PowerShell module behind a proxy
+            url: az-powershell-proxy.md
   - title: Deploy
     linkLists:
       - linkListType: deploy
