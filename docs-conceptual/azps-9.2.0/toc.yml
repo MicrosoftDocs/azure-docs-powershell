@@ -34,10 +34,12 @@
   items:
   - name: Configuration
     items:
-    - name: Use the Az PowerShell module behind a proxy
-      href: az-powershell-proxy.md
+    - name: Configure global settings
+      href: configure-global-settings.md
     - name: Intelligent command completion
       href: az-predictor.md
+    - name: Use the Az PowerShell module behind a proxy
+      href: az-powershell-proxy.md
   - name: Authentication and Identity
     items:
     - name: Authentication methods
