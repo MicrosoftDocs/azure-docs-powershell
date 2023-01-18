@@ -65,6 +65,9 @@ To configure your default subscription, you use the `Update-AzConfig` cmdlet wit
 Update-AzConfig -DefaultSubscriptionForLogin <Subscription ID or Name>
 ```
 
+Note: not to be confused with "the subscription of the default context", the
+**DefaultSubscriptionForLogin** configuration takes effect only when authenticating to Azure.
+
 ## Replicating settings
 
 To replicate your settings from one environment to another, you use the `Export-AzConfig` cmdlet to
