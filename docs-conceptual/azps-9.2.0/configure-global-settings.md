@@ -1,7 +1,7 @@
 ---
 description: Configure Azure PowerShell global settings using centralized and granular AzConfig cmdlets
 ms.custom: devx-track-azurepowershell
-ms.date: 01/17/2023
+ms.date: 02/01/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -64,6 +64,10 @@ To configure your default subscription, you use the `Update-AzConfig` cmdlet wit
 ```azurepowershell-interactive
 Update-AzConfig -DefaultSubscriptionForLogin <Subscription ID or Name>
 ```
+
+> [!NOTE]
+> Not to be confused with **the subscription of the default context**, the
+> **DefaultSubscriptionForLogin** configuration takes effect only when authenticating to Azure.
 
 ## Replicating settings
 
