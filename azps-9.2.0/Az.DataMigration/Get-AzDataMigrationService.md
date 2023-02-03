@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Retrieves the properties associated with an instance of the Azure Database Migration Service. 
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/get-azdatamigrationservice) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceGroupSet (Default)

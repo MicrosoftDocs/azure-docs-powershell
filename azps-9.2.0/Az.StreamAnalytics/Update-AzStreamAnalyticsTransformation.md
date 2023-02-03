@@ -14,6 +14,9 @@ Updates an existing transformation under an existing streaming job.
 This can be used to partially update (ie.
 update one or two properties) a transformation without affecting the rest the job or transformation definition.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.streamanalytics/update-azstreamanalyticstransformation) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)

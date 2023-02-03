@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the details of an Event Grid partner namespace, or lists partner namespaces at the scope of the current Azure subscription or specified resource group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventgrid/get-azeventgridpartnernamespace) for up-to-date information.
+
 ## SYNTAX
 
 ### PartnerNamespaceListBySubscriptionParameterSet (Default)

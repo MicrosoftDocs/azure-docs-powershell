@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets Key Vault keys. Please notes that detailed information about a key, like key type or key size, only available when querying a specific key version.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/get-azkeyvaultkey) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVaultName (Default)

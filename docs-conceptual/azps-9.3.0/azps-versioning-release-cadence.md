@@ -1,7 +1,7 @@
 ---
 description: This article contains Azure PowerShell versioning, release cadence, and breaking change information for the Az PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 01/06/2023
+ms.date: 01/30/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -77,6 +77,7 @@ Various types of breaking changes can occur in cmdlets. For more information, se
 For detailed information about breaking changes in major releases of the Az PowerShell module, see
 the following articles.
 
+- [AZ 9.0.1 breaking changes](migrate-az-9.0.1.md)
 - [Az 8.0.0 breaking changes](migrate-az-8.0.0.md)
 - [Az 7.0.0 breaking changes](migrate-az-7.0.0.md)
 - [Az 6.0.0 breaking changes](migrate-az-6.0.0.md)

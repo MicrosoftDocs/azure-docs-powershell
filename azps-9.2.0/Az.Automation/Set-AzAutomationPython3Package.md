@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Update Python3 Package in Automation account
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/set-azautomationpython3package) for up-to-date information.
+
 ## SYNTAX
 
 ```

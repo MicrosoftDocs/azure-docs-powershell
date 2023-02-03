@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Gets compute definition by its name.
 Any secrets (storage keys, service credentials, etc) are not returned - use 'keys' nested resource to get them.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/get-azmlworkspacecompute) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

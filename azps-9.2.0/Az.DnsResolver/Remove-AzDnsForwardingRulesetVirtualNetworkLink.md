@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Deletes a virtual network link to a DNS forwarding ruleset.
 WARNING: This operation cannot be undone.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dnsresolver/remove-azdnsforwardingrulesetvirtualnetworklink) for up-to-date information.
+
 ## SYNTAX
 
 ### Delete (Default)

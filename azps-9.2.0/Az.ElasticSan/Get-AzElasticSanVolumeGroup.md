@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get either a list of all volume groups from an Elastic SAN or get a single volume group from an Elastic SAN.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.elasticsan/get-azelasticsanvolumegroup) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)
