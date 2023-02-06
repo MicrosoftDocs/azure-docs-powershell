@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get the marketplace registration definition for the marketplace identifier.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.managedservices/get-azmanagedservicesmarketplacedefinition) for up-to-date information.
+
 ## SYNTAX
 
 ### ListWithScope (Default)

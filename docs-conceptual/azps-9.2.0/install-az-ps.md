@@ -50,6 +50,11 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ## Installation
 
+> [!IMPORTANT]
+> If you have the AzureRM PowerShell module installed, see
+> [Az and AzureRM coexistence](troubleshooting.md#az-and-azurerm-coexistence)
+> before proceeding.
+
 Using the [Install-Module](/powershell/module/powershellget/install-module) cmdlet is the preferred
 installation method for the Az PowerShell module. Install the Az module for the current user only.
 This is the recommended installation scope. This method works the same on Windows, Linux, and macOS
@@ -66,11 +71,6 @@ and `Install-Module` is the recommended installation option, there are additiona
 options if needed.
 
 ### Installation on Windows PowerShell
-
-> [!IMPORTANT]
-> If you have the AzureRM PowerShell module installed, see
-> [Az and AzureRM coexistence](troubleshooting.md#az-and-azurerm-coexistence)
-> before proceeding.
 
 The Azure Az PowerShell module is also supported for use with PowerShell 5.1 on Windows. To use the
 Azure Az PowerShell module in PowerShell 5.1 on Windows:

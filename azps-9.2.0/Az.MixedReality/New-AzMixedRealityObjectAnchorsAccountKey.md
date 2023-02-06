@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Regenerate specified Key of an object anchors Account
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mixedreality/new-azmixedrealityobjectanchorsaccountkey) for up-to-date information.
+
 ## SYNTAX
 
 ### RegenerateExpanded (Default)

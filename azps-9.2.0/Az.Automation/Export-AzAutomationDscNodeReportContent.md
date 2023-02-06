@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Exports the raw content of a DSC report sent from a DSC node to Automation.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/export-azautomationdscnodereportcontent) for up-to-date information.
+
 ## SYNTAX
 
 ```

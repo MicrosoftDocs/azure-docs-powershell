@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get an addon by name in a private cloud
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.vmware/get-azvmwareaddon) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

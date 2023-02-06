@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Starts a sync group synchronization.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/start-azsqlsyncgroupsync) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the details of a specific Event Grid verified partner or gets the details of all verified partners in the current azure subscription.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventgrid/get-azeventgridverifiedpartner) for up-to-date information.
+
 ## SYNTAX
 
 ### VerifiedPartnerNameParameterSet (Default)

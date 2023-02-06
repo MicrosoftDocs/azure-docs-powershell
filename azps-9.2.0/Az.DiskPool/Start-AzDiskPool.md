@@ -14,6 +14,9 @@ The operation to start a Disk Pool.
 This start operation can take 10 minutes to complete.
 This is expected service behavior.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.diskpool/start-azdiskpool) for up-to-date information.
+
 ## SYNTAX
 
 ### Start (Default)

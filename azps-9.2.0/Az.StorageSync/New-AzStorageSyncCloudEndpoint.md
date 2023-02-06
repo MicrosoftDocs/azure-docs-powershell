@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 This command creates an Azure File Sync cloud endpoint in a sync group.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storagesync/new-azstoragesynccloudendpoint) for up-to-date information.
+
 ## SYNTAX
 
 ### StringParameterSet (Default)

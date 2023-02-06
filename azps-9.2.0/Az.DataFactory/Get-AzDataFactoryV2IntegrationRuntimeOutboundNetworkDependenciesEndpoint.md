@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the list of outbound network dependencies for a given Azure-SSIS integration runtime.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datafactory/get-azdatafactoryv2integrationruntimeoutboundnetworkdependenciesendpoint) for up-to-date information.
+
 ## SYNTAX
 
 ### ByIntegrationRuntimeName (Default)

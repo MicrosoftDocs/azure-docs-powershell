@@ -14,6 +14,9 @@ Generates the reservations details report for provided date range asynchronously
 The Reservation usage details can be viewed only by certain enterprise roles.
 For more details on the roles see, https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/understand-ea-roles#usage-and-costs-access-by-role
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.costmanagement/invoke-azcostmanagementreservationdetailreport) for up-to-date information.
+
 ## SYNTAX
 
 ### By (Default)
