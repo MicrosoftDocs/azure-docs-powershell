@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the delivery attributes for partner topic event subscription
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventgrid/get-azeventgridpartnertopiceventsubscriptiondeliveryattribute) for up-to-date information.
+
 ## SYNTAX
 
 ### PartnerTopicNameParameterSet (Default)

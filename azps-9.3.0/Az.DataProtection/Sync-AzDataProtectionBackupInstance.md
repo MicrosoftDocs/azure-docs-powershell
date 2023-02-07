@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Sync backup instance again in case of failure\r\nThis action will retry last failed operation and will bring backup instance to valid state
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.dataprotection/sync-azdataprotectionbackupinstance) for up-to-date information.
+
 ## SYNTAX
 
 ```

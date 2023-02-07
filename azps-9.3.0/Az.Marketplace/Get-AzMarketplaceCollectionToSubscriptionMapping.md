@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 For a given subscriptions list, the API will return a map of collections and the related subscriptions from the supplied list.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.marketplace/get-azmarketplacecollectiontosubscriptionmapping) for up-to-date information.
+
 ## SYNTAX
 
 ### CollectionsExpanded (Default)

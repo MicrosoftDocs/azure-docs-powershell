@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Tests whether an output’s datasource is reachable and usable by the Azure Stream Analytics service.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.streamanalytics/test-azstreamanalyticsoutput) for up-to-date information.
+
 ## SYNTAX
 
 ```

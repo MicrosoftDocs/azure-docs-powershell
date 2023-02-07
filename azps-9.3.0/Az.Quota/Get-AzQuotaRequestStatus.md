@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Get the quota request details and status by quota request ID for the resources of the resource provider at a specific location.
 The quota request ID **id** is returned in the response of the PUT operation.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.quota/get-azquotarequeststatus) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

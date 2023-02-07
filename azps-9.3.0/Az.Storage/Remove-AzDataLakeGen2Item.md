@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Remove a file or directory.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/remove-azdatalakegen2item) for up-to-date information.
+
 ## SYNTAX
 
 ### ReceiveManual (Default)

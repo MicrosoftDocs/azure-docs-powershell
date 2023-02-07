@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
  Add IpRules or VirtualNetworkRules to the NetworkRule property of a Storage account
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/add-azstorageaccountnetworkrule) for up-to-date information.
+
 ## SYNTAX
 
 ### NetWorkRuleString (Default)

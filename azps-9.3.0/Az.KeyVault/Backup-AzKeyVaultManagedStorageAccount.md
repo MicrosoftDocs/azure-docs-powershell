@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Backs up a KeyVault-managed storage account.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.keyvault/backup-azkeyvaultmanagedstorageaccount) for up-to-date information.
+
 ## SYNTAX
 
 ### ByStorageAccountName (Default)

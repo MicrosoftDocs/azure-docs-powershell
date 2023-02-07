@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Deletes entity from users.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/remove-azaduser) for up-to-date information.
+
 ## SYNTAX
 
 ### UPNOrObjectIdParameterSet (Default)

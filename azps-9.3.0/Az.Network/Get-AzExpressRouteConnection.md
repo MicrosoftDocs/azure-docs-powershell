@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets a ExpressRoute connection by name or lists all ExpressRoute connections connected to a ExpressRouteGateway.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azexpressrouteconnection) for up-to-date information.
+
 ## SYNTAX
 
 ### ByExpressRouteGatewayName (Default)

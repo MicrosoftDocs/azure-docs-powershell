@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets an ExpressRoute circuit connection configuration associated with Private Peering of ExpressRouteCircuit.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/get-azexpressroutecircuitconnectionconfig) for up-to-date information.
+
 ## SYNTAX
 
 ```

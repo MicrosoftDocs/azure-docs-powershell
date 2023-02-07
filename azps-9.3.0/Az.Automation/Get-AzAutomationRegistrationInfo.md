@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets registration information for onboarding a DSC node or hybrid worker to Automation.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/get-azautomationregistrationinfo) for up-to-date information.
+
 ## SYNTAX
 
 ```
