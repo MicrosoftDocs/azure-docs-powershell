@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates or updates a specified local user in a storage account.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/set-azstoragelocaluser) for up-to-date information.
+
 ## SYNTAX
 
 ### AccountName (Default)

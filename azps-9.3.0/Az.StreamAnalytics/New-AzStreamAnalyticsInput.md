@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates an input or replaces an already existing input under an existing streaming job.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.streamanalytics/new-azstreamanalyticsinput) for up-to-date information.
+
 ## SYNTAX
 
 ```

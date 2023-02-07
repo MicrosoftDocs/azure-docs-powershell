@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Remove the Windows virtual desktop registration info.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.desktopvirtualization/remove-azwvdregistrationinfo) for up-to-date information.
+
 ## SYNTAX
 
 ```

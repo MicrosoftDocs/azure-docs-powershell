@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Starts an interactive SSH session to an Azure Resource (such as Azure VMs or Arc Servers).
 Users can login using AAD accounts, or local user accounts via standard SSH authentication. Use AAD account login for the best security and convenience.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.ssh/enter-azvm) for up-to-date information.
+
 ## SYNTAX
 
 ### Interactive (Default)

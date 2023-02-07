@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes DSC configurations from Automation.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.automation/remove-azautomationdscconfiguration) for up-to-date information.
+
 ## SYNTAX
 
 ```

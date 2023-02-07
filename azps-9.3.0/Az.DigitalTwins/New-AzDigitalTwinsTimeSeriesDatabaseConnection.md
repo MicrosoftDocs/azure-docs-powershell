@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create or update a time series database connection.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.digitaltwins/new-azdigitaltwinstimeseriesdatabaseconnection) for up-to-date information.
+
 ## SYNTAX
 
 ### Create (Default)

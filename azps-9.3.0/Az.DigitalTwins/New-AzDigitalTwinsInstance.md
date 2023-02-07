@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Create or update the metadata of a DigitalTwinsInstance.
 The usual pattern to modify a property is to retrieve the DigitalTwinsInstance and security metadata, and then combine them with the modified values in a new body to update the DigitalTwinsInstance.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.digitaltwins/new-azdigitaltwinsinstance) for up-to-date information.
+
 ## SYNTAX
 
 ### CreateExpanded (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get one or more private store's offer.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.marketplace/get-azmarketplaceprivatestoreoffer) for up-to-date information.
+
 ## SYNTAX
 
 ```

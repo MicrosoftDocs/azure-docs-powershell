@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Get the specified private link resource for the given Digital Twin.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.digitaltwins/get-azdigitaltwinsprivatelinkresource) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Copies data from a vault in one region to a vault in another region.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/copy-azrecoveryservicesvault) for up-to-date information.
+
 ## SYNTAX
 
 ### AzureRSVaultDataMoveParameterSet (Default)

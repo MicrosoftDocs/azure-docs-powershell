@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Customer data is always masked if query at subscription or resource group level.
 For query on a single resource, customer data is masked if the user doesn’t have access.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.changeanalysis/get-azchangeanalysis) for up-to-date information.
+
 ## SYNTAX
 
 ### List2 (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the full URL for partner topic event subscription
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventgrid/get-azeventgridfullurlforpartnertopiceventsubscription) for up-to-date information.
+
 ## SYNTAX
 
 ### PartnerTopicEventSubscriptionParameterSet (Default)
