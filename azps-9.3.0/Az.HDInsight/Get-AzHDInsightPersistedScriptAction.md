@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the persisted script actions for a cluster and lists them in chronological order, or gets details for a specified persisted script action.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hdinsight/get-azhdinsightpersistedscriptaction) for up-to-date information.
+
 ## SYNTAX
 
 ```

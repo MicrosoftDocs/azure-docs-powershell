@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Delete a virtual hub route table resource associated with a virtual hub.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-azvirtualhubroutetable) for up-to-date information.
+
 ## SYNTAX
 
 ### ByVirtualHubRouteTableName (Default)

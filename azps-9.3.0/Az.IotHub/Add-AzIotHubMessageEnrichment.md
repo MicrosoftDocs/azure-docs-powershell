@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a message enrichment for chosen endpoints in your IoT Hub.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/add-aziothubmessageenrichment) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceSet (Default)

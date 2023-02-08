@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Lists all of the streaming jobs in the given cluster.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.streamanalytics/get-azstreamanalyticsclusterstreamingjob) for up-to-date information.
+
 ## SYNTAX
 
 ```

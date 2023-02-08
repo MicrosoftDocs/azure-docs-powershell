@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Generate an Azure IoT Hub key.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.iothub/new-aziothubkey) for up-to-date information.
+
 ## SYNTAX
 
 ### ResourceSet (Default)

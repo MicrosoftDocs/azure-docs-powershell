@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Delete the integration runtime node.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.datamigration/remove-azdatamigrationsqlservicenode) for up-to-date information.
+
 ## SYNTAX
 
 ### DeleteExpanded (Default)

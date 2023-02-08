@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates or updates an existing virtual network rule.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.mysql/update-azmysqlvirtualnetworkrule) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)

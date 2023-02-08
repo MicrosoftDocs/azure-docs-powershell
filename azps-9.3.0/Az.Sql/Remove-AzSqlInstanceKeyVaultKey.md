@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes a Key Vault key from a SQL managed instance
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/remove-azsqlinstancekeyvaultkey) for up-to-date information.
+
 ## SYNTAX
 
 ### AddAzureRmSqlManagedInstanceKeyVaultKeyDefaultParameterSet (Default)

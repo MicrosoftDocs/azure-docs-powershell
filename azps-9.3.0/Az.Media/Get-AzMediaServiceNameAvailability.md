@@ -14,6 +14,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Checks whether a media service name is available.
 Media service names are globally unique.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.media/get-azmediaservicenameavailability) for up-to-date information.
+
 ## SYNTAX
 
 ```

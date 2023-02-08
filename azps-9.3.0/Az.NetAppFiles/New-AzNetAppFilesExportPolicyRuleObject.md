@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates export policy rule object.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.netappfiles/new-aznetappfilesexportpolicyruleobject) for up-to-date information.
+
 ## SYNTAX
 
 ```

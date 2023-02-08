@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Lists blobs in a storage account across containers, with a blob tag filter sql expression.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/get-azstorageblobbytag) for up-to-date information.
+
 ## SYNTAX
 
 ```

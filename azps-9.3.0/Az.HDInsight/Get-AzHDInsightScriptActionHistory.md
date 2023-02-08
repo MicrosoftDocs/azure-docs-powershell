@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Gets the script action history for a cluster and lists it in reverse chronological order, or gets details of a previously executed script action.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.hdinsight/get-azhdinsightscriptactionhistory) for up-to-date information.
+
 ## SYNTAX
 
 ```

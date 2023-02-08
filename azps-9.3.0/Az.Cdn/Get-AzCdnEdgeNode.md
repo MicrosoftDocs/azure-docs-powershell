@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Edgenodes are the global Point of Presence (POP) locations used to deliver CDN content to end users.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.cdn/get-azcdnedgenode) for up-to-date information.
+
 ## SYNTAX
 
 ```
