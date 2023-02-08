@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Creates or updates a Service Bus queue.
 This operation is idempotent.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.servicebus/new-azservicebusqueue) for up-to-date information.
+
 ## SYNTAX
 
 ```

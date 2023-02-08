@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Applies a simple Structured Query Language (SQL) statement on a blob's contents and save only the queried subset of the data to a local file.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storage/get-azstorageblobqueryresult) for up-to-date information.
+
 ## SYNTAX
 
 ### NamePipeline (Default)

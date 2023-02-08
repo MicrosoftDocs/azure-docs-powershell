@@ -19,6 +19,9 @@ A call to poll the report operation will provide a 202 response with a 'Location
 Once the report generation operation completes, the polling endpoint will provide a 200 response along with details on the report blob(s) that are available for download.
 The details on the file(s) available for download will be available in the polling response body.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.costmanagement/new-azcostmanagementdetailreport) for up-to-date information.
+
 ## SYNTAX
 
 ```

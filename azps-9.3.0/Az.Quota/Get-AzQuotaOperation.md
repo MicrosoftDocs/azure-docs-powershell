@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 List all the operations supported by the Microsoft.Quota resource provider.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.quota/get-azquotaoperation) for up-to-date information.
+
 ## SYNTAX
 
 ```

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes an Azure Event Grid Channel.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.eventgrid/remove-azeventgridchannel) for up-to-date information.
+
 ## SYNTAX
 
 ### ChannelNameParameterSet (Default)

@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a backend address pool configuration for a load balancer.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azloadbalancerbackendaddresspoolconfig) for up-to-date information.
+
 ## SYNTAX
 
 ```

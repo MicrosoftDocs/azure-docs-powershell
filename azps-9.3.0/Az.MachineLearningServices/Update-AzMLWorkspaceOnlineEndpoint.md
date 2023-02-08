@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Update Online Endpoint (asynchronous).
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.machinelearningservices/update-azmlworkspaceonlineendpoint) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)
