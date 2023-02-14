@@ -1,7 +1,7 @@
 ---
 description: How to use the Azure Az PowerShell module behind a proxy server
 ms.custom: devx-track-azurepowershell
-ms.date: 09/06/2022
+ms.date: 02/14/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -15,7 +15,7 @@ configuration for different platforms:
 
 |      **Platform**       |                          **Recommended Proxy Settings**                           |                                               **Comment**                                                |
 | ----------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| Windows PowerShell 5.1  | System proxy settings                                                             | Do not suggest setting HTTP_PROXY/HTTPS_PROXY environment variables.                                     |
+| Windows PowerShell 5.1  | System proxy settings                                                             | Use the system proxy settings (internet options).                                                        |
 | PowerShell 7 on Windows | System proxy settings                                                             | Proxy could be configured by setting both HTTP_PROXY and HTTPS_PROXY environment variables.              |
 | PowerShell 7 on macOS   | System proxy settings                                                             | Proxy could be configured by setting both HTTP_PROXY and HTTPS_PROXY environment variables.              |
 | PowerShell 7 on Linux   | Set both HTTP_PROXY and HTTPS_PROXY environment variables, plus optional NO_PROXY | The environment variables should be set before starting PowerShell, otherwise they may not be respected. |
