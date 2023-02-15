@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 02/07/2023
+  ms.date: 02/15/2023
   ms.devlang: powershell
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
@@ -35,7 +35,7 @@ landingContent:
     linkLists:
       - linkListType: download
         links:
-          - text: Install with PowerShellGet
+          - text: Install with PowerShell
             url: install-az-ps.md
           - text: Install with MSI
             url: install-az-ps-msi.md
