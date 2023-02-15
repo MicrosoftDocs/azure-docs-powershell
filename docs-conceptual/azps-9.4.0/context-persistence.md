@@ -1,7 +1,7 @@
 ---
 description: Learn how to reuse Azure credentials and other information across multiple PowerShell sessions.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/07/2023
+ms.date: 02/15/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -109,15 +109,15 @@ Get-AzContext -Name 'mycontext' | Select-AzContext # Set a context with a piped 
 ```
 
 Like many other account and context management commands in Azure PowerShell, `Set-AzContext` and
-`Select-AzContext` support the `Scope` parameter so that you can control how long the context is
-active. `Scope` lets you change a single session's active context without changing your default:
+`Select-AzContext` support the **Scope** parameter so that you can control how long the context is
+active. **Scope** lets you change a single session's active context without changing your default:
 
 ```azurepowershell-interactive
 Get-AzContext -Name 'mycontext' | Select-AzContext -Scope Process
 ```
 
-To avoid switching contexts for a whole PowerShell session, all Azure PowerShell commands can be run
-against a given context with the `AzContext` parameter:
+To avoid switching contexts for a whole PowerShell session, Azure PowerShell commands with an
+**AzContext** parameter can be run against a given context:
 
 ```azurepowershell-interactive
 $context = Get-AzContext -Name "mycontext"
@@ -165,7 +165,7 @@ in the following ways:
 > cmdlet. For more on removing saved contexts, see
 > [Remove contexts and credentials](#remove-azure-contexts-and-stored-credentials).
 
-Each of these commands supports the `Scope` parameter, which can take a value of `Process` to only
+Each of these commands supports the **Scope** parameter, which can take a value of `Process` to only
 apply to the current running process. For example, to ensure that newly created contexts aren't
 saved after exiting a PowerShell session:
 
