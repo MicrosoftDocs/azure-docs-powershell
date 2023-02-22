@@ -1,7 +1,7 @@
 ---
 description: Details about the support lifecycle of the Azure PowerShell modules
 ms.custom: devx-track-azurepowershell
-ms.date: 02/07/2023
+ms.date: 02/22/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -27,24 +27,20 @@ the Az PowerShell module.
 The following table identifies the supported platforms for the Az, AzureRM, and Azure PowerShell
 modules.
 
-- The ![Supported][1] icon indicates that the version of Azure PowerShell is still supported on the
-  specified version of PowerShell.
-- The ![Out of Support][4] icon indicates the version of Azure PowerShell is no longer supported on
-  that version of PowerShell.
-- The ![In Test][2] icon indicates that we haven't finished testing Azure PowerShell on that version
-  of PowerShell.
-- The ![Not Supported][3] icon indicates that the version of Azure PowerShell or PowerShell isn't
-  supported.
-- When both the version of Azure PowerShell and the version of PowerShell have a ![Supported][1]
-  icon, that combination is supported.
+- The ![Supported][1] icon indicates supported version combinations of Azure PowerShell and
+  PowerShell.
+- The ![Out of Support][4] icon indicates version combinations of Azure PowerShell and PowerShell
+  that are no longer supported.
+- The ![Not Supported][3] icon indicates unsupported version combinations of Azure PowerShell and
+  PowerShell.
 
-|        Azure PowerShell        | PowerShell <br/> >= 7.1.3 | PowerShell <br/> >= 7.0.6 (LTS) | PowerShell <br/> <= 7.0.5 | Windows PowerShell <br/> 5.1 |
-| ------------------------------ | :-----------------------: | :-----------------------------: | :-----------------------: | :--------------------------: |
-| ![Supported][1] Az 9.x         |      ![Supported][1]      |         ![Supported][1]         |    ![Not Supported][3]    |       ![Supported][1]        |
-| ![Supported][1] Az 8.x         |      ![Supported][1]      |         ![Supported][1]         |    ![Not Supported][3]    |       ![Supported][1]        |
-| ![Out of Support][4] <= Az 7.x |   ![Out of Support][4]    |      ![Out of Support][4]       |    ![Not Supported][3]    |     ![Out of Support][4]     |
-| ![Supported][1] AzureRM 6.13.2 |    ![Not Supported][3]    |       ![Not Supported][3]       |    ![Not Supported][3]    |       ![Supported][1]        |
-| ![Supported][1] Azure 5.3.1    |    ![Not Supported][3]    |       ![Not Supported][3]       |    ![Not Supported][3]    |       ![Supported][1]        |
+|        Azure PowerShell        | PowerShell <br/> <= 7.1 | PowerShell <br/> >= 7.2 | Windows PowerShell <br/> 5.1 |
+| ------------------------------ | :---------------------: | :---------------------: | :--------------------------: |
+| ![Supported][1] Az 9.x         |  ![Out of Support][4]   |     ![Supported][1]     |       ![Supported][1]        |
+| ![Supported][1] Az 8.x         |  ![Out of Support][4]   |     ![Supported][1]     |       ![Supported][1]        |
+| ![Out of Support][4] <= Az 7.x |  ![Out of Support][4]   |  ![Out of Support][4]   |     ![Out of Support][4]     |
+| ![Supported][1] AzureRM 6.13.2 |   ![Not Supported][3]   |   ![Not Supported][3]   |       ![Supported][1]        |
+| ![Supported][1] Azure 5.3.1    |   ![Not Supported][3]   |   ![Not Supported][3]   |       ![Supported][1]        |
 
 > [!NOTE]
 > PowerShell 6.2 reached its end of life as of September 4, 2020. The Az PowerShell modules are not
