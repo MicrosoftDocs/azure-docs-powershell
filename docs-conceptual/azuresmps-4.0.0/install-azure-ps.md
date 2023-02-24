@@ -3,7 +3,7 @@ title: Install and configure the Azure PowerShell Service Management module | Mi
 description: How to install and configure Azure PowerShell for first time use.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/12/2022
+ms.date: 02/24/2023
 ms.custom: devx-track-azurepowershell
 ---
 
@@ -16,7 +16,7 @@ the preferred method of installation.
 
 > [!IMPORTANT]
 > The Azure PowerShell Service Management module only works with Windows PowerShell. It is not
-> cross-platform and does not run on Linux or macOS.
+> compatible with PowerShell version 6 or higher and does not run on Linux or macOS.
 
 ## Step 1: Install PowerShellGet
 
