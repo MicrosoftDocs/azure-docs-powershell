@@ -1,7 +1,7 @@
 ---
 description: Learn how to run Azure PowerShell cmdlets in parallel or as background tasks, using -AsJob and Start-Job.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/07/2023
+ms.date: 02/15/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -40,8 +40,8 @@ these methods:
   }
   ```
 
-- Use the `AzContext` parameter with any Azure PowerShell cmdlet to provide an Azure context
-  object:
+- Provide an Azure context object with any Azure PowerShell cmdlet that has an **AzContext**
+  parameter:
 
   ```azurepowershell-interactive
   $context = Get-AzContext -Name 'mycontext' # Get an Azure context object
@@ -52,9 +52,9 @@ these methods:
   }
   ```
 
-  If context persistence is disabled, the `AzContext` parameter is required.
+  If context persistence is disabled, the **AzContext** parameter is required.
 
-- Use the `AsJob` parameter provided by some Azure PowerShell cmdlets. This switch automatically
+- Use the **AsJob** parameter provided by some Azure PowerShell cmdlets. This switch automatically
   starts the cmdlet as a PowerShell Job, using the active Azure context:
 
   ```azurepowershell-interactive
@@ -62,7 +62,7 @@ these methods:
   $job = New-AzVM -Name MyVm -Credential $vmadmin -AsJob
   ```
 
-  To see if a cmdlet supports `AsJob`, check its reference documentation. The `AsJob` parameter
+  To see if a cmdlet supports **AsJob**, check its reference documentation. The **AsJob** parameter
   doesn't require context autosave to be enabled.
 
 You can check the status of a running job with the
