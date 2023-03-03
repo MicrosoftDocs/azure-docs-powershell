@@ -3,7 +3,7 @@ author: mikefrobbins
 description: Learn how to automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module.
 ms.author: mirobb
 ms.custom: devx-track-azurepowershell, mode-api
-ms.date: 02/07/2023
+ms.date: 03/03/2023
 ms.service: azure-powershell
 ms.topic: quickstart
 title: Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module
@@ -85,8 +85,8 @@ upgraded automatically.
 $Plan | Where-Object PlanResult -ne ReadyToUpgrade | Format-List
 ```
 
-The items shown in the following output will not be upgraded automatically without manually
-correcting the issues first.
+The items shown in the following output won't be upgraded automatically without manually correcting
+the issues first.
 
 ```Output
 Order                  : 42

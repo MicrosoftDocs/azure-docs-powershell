@@ -1,7 +1,7 @@
 ---
 description: Configure Azure PowerShell global settings using centralized and granular AzConfig cmdlets
 ms.custom: devx-track-azurepowershell
-ms.date: 02/07/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -10,9 +10,9 @@ title: Configure Azure PowerShell global settings
 
 # Configure Azure PowerShell global settings
 
-Azure PowerShell supports several global settings like disabling breaking change warning
-messages. Prior to Az PowerShell module version 9, there wasn't a centralized or granular way to
-configure global settings for Azure PowerShell.
+Azure PowerShell supports several global settings like disabling breaking change warning messages.
+Before Az PowerShell module version 9, there wasn't a centralized or granular way to configure
+global settings for Azure PowerShell.
 
 ## Centralized configuration
 
@@ -54,7 +54,7 @@ PowerShell modules except **Az.Compute**.
 ## Default subscription
 
 By default, when you authenticate to Azure, all subscriptions that you can access are retrieved. The
-first subscription that is returned by Azure is used unless you specify a subscription with
+first subscription that's returned by Azure is used unless you specify a subscription with
 `Connect-AzAccount`. This behavior can be dangerous, for example if the first subscription returned
 is a production environment.
 
