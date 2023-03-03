@@ -1,7 +1,7 @@
 ---
 description: Learn the steps and tools for migrating Azure PowerShell scripts from AzureRM to the new Az PowerShell module.
 ms.custom: devx-track-azurepowershell, contperf-fy21q2
-ms.date: 02/07/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -48,7 +48,7 @@ module was created, see [Introducing the new Azure PowerShell Az module](new-azu
 
 The new cmdlet names have been designed to be easy to learn. Instead of using `AzureRm` or `Azure`
 in cmdlet names, use `Az`. For example, the old cmdlet `New-AzureRMVm` has become `New-AzVm`.
-However, migration is more than just becoming familiar with the new cmdlet names, though. There are
+However, migration is more than becoming familiar with the new cmdlet names, though. There are
 renamed modules, parameters, and other important changes.
 
 To see the full list of breaking changes between AzureRM and Az, see the
@@ -56,11 +56,11 @@ To see the full list of breaking changes between AzureRM and Az, see the
 
 ## Ensure existing scripts work with the latest AzureRM release
 
-Before taking any migration steps, check which versions of AzureRM are installed on your system.
+Before taking any migration steps, determine what versions of AzureRM are installed on your system.
 Doing so allows you to make sure scripts are already running on the latest release and let you know
-which versions of AzureRM must be uninstalled.
+what versions of AzureRM must be uninstalled.
 
-To check which version(s) of AzureRM you have installed, run the following example:
+To determine what versions of AzureRM you have installed, run the following example:
 
 ```powershell
 Get-Module -Name AzureRM -ListAvailable -All
@@ -106,7 +106,7 @@ persist compatibility aliases across PowerShell sessions. For more information, 
 > [!IMPORTANT]
 > Even though the cmdlet names are aliased, there may still be new (or renamed) parameters or
 > changed return values for the Az cmdlets. Don't expect enabling aliases to take care of the
-> migration for you! See the [full breaking changes list](migrate-az-1.0.0.md) to find where your
+> migration for you. See the [full breaking changes list](migrate-az-1.0.0.md) to find where your
 > scripts may require updates.
 
 ## Option 3: Migrate your scripts in Visual Studio Code with the Azure PowerShell extension

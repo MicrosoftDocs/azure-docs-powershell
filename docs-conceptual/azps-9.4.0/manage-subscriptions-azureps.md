@@ -10,9 +10,9 @@ title: Manage Azure subscriptions with Azure PowerShell
 
 # Use multiple Azure subscriptions
 
-Most Azure users will only ever have a single subscription. However, if you are part of more than
-one organization or your organization has divided up access to certain resources across groupings,
-you may have multiple subscriptions within Azure.
+Most Azure users only have a single subscription. However, if you are part of more than one
+organization or your organization has divided up access to certain resources across groupings, you
+may have multiple subscriptions within Azure.
 
 For detailed information on subscriptions, billing, and cost management, see the
 [billing and cost management documentation](/azure/billing/).
@@ -51,6 +51,6 @@ Set-AzContext -Subscription <subscription name or id>
 You can use the [Get-AzSubscription](/powershell/module/az.accounts/get-azsubscription) cmdlet to
 retrieve a list of your Azure subscriptions.
 
-To learn more about Azure PowerShell contexts, including how to save them and quickly switch between
-them for working with multiple subscriptions, see
+To learn more about Azure PowerShell contexts, including how to save them and switch between them
+for working with multiple subscriptions, see
 [Persist credentials with Azure PowerShell contexts](context-persistence.md).

@@ -1,7 +1,7 @@
 ---
 description: This article contains Azure PowerShell versioning, release cadence, and breaking change information for the Az PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/07/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -56,7 +56,7 @@ version 6.2.1.
 
 > [!IMPORTANT]
 > Breaking changes may occur at any point for non-GA preview and feature preview modules. Non-GA
-> modules are not required to adhere to breaking change policies.
+> modules aren't required to adhere to breaking change policies.
 
 ### When do breaking changes occur
 

@@ -1,7 +1,7 @@
 ---
 description: Details about the support lifecycle of the Azure PowerShell modules
 ms.custom: devx-track-azurepowershell
-ms.date: 02/22/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -12,9 +12,9 @@ title: Azure PowerShell support lifecycle
 
 ## Az PowerShell modules
 
-The _"Az PowerShell modules"_ are comprised of the module named _"Az"_ and the dependent modules
-signed by _"Microsoft Corporation"_. The Az PowerShell modules are identifiable by their names, that
-start with _"Az."_. For the current list of Az PowerShell modules, see
+The _"Az PowerShell modules"_ consist of the module named _"Az"_ and the dependent modules signed by
+_"Microsoft Corporation"_. The Az PowerShell modules are identifiable by their names, that start
+with _"Az."_. For the current list of Az PowerShell modules, see
 [Azure PowerShell Modules](https://github.com/Azure/azure-powershell/blob/master/documentation/azure-powershell-modules.md).
 
 The Az PowerShell modules support lifecycle falls under the
@@ -48,7 +48,7 @@ modules.
 
 ### Information about CVE-2021-26701
 
-The Az PowerShell modules use components impacted by security advisory
+The Az PowerShell modules use components affected by security advisory
 [CVE-2021-26701](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26701) which has
 been fixed in PowerShell 7.0.6 and 7.1.3. For more information, see
 [Microsoft Security Advisory CVE-2021-26701: .NET Core Remote Code Execution Vulnerability](https://github.com/PowerShell/Announcements/issues/23).
@@ -65,7 +65,7 @@ further information, go to [https://aka.ms/azpslifecyle](https://aka.ms/azpslife
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 To avoid service interruptions, [update your scripts](https://aka.ms/azpsmigrate) that use AzureRM
-PowerShell modules to use Az PowerShell modules by 29 February 2024. To automatically update your
+PowerShell modules to use Az PowerShell modules by February 29, 2024. To automatically update your
 scripts, follow the
 [quickstart guide](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).
 
