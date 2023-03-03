@@ -1,7 +1,7 @@
 ---
 description: Introducing the Az PowerShell module, recommended for interacting with Azure, and the replacement for the AzureRM PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/07/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -94,21 +94,22 @@ the migration:
 
 Az is the most current PowerShell module for Azure. Issues or feature requests can be logged
 directly on the [GitHub repository](https://github.com/Azure/azure-powershell), or via Microsoft
-support if you have a support contract. Feature requests will be implemented in the latest version
-of Az. Critical issues will be implemented on the last two versions of Az.
+support if you have a support contract. Feature requests are implemented in the latest version of
+Az. Critical issues are implemented on the last two versions of Az.
 
 Because Az PowerShell modules now have all the capabilities of AzureRM PowerShell modules and more,
-we'll retire AzureRM PowerShell modules on 29 February 2024.
+we'll retire AzureRM PowerShell modules on February 29, 2024.
 
 To avoid service interruptions, [update your scripts](https://aka.ms/azpsmigrate) that use AzureRM
-PowerShell modules to use Az PowerShell modules by 29 February 2024. To automatically update your
-scripts, follow the [quickstart guide](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).
+PowerShell modules to use Az PowerShell modules by February 29, 2024. To automatically update your
+scripts, follow the
+[quickstart guide](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).
 
 ## Data collection
 
 Azure PowerShell collects telemetry data by default. Microsoft aggregates collected data to identify
 patterns of usage to identify common issues and to improve the experience of Azure PowerShell.
-Microsoft Azure PowerShell does not collect any private or personal data. For example, the usage
+Microsoft Azure PowerShell doesn't collect any private or personal data. For example, the usage
 data helps identify issues such as cmdlets with low success and helps prioritize our work.
 
 While we appreciate the insights this data provides, we also understand that not everyone wants to

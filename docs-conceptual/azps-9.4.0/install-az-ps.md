@@ -1,7 +1,7 @@
 ---
 description: How to install the Azure Az PowerShell module from the PowerShell Gallery
 ms.custom: devx-track-azurepowershell
-ms.date: 02/07/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -33,7 +33,7 @@ Azure PowerShell has no additional requirements when run on PowerShell 7.0.6 LTS
  [latest version of PowerShell](/powershell/scripting/install/installing-powershell) available for
  your operating system.
 
-To check your PowerShell version, run the following command from within a PowerShell session:
+To determine your PowerShell version, run the following command from within a PowerShell session:
 
 ```powershell
 $PSVersionTable.PSVersion
@@ -113,19 +113,19 @@ example, if you originally used `Install-Module`, then you should use
 [Update-Module](/powershell/module/powershellget/update-module) to get the latest version. If you
 originally used the MSI package, then you should download and install the new MSI package.
 
-The PowerShellGet cmdlets cannot update modules that were installed from an MSI package. MSI
-packages do not update modules that were installed using PowerShellGet. If you have any issues
+The PowerShellGet cmdlets can't update modules that were installed from an MSI package. MSI
+packages don't update modules that were installed using PowerShellGet. If you have any issues
 updating using PowerShellGet, then you should **reinstall**, rather than **update**. Reinstalling is
 done the same way as installing. Ensure you use the `Force` parameter with `Install-Module` when
 reinstalling.
 
-Unlike MSI-based installations, installing or updating using PowerShellGet does not remove older
+Unlike MSI-based installations, installing or updating using PowerShellGet doesn't remove older
 versions that may exist on your system.
 
 > [!NOTE]
 > Uninstallation can be complicated if you have more than one version of the Az PowerShell module
 > installed. Because of this complexity, we only support uninstalling all versions of the Az
-> PowerShell module that are currently installed.
+> PowerShell module that are installed.
 
 To remove all versions of the Az PowerShell module from your system, see
 [Uninstall the Azure PowerShell module](uninstall-az-ps.md). For more information about MSI-based

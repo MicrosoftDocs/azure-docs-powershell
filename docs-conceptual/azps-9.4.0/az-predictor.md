@@ -1,7 +1,7 @@
 ---
 description: Using Az Predictor for intelligent context-aware command completion in Azure PowerShell.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/07/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -96,7 +96,7 @@ To uninstall the Az.Tools.Predictor module:
 
 ### Privacy
 
-Az predictor uses the previous two Az cmdlets to make suggestions and ignores any cmdlet that is not
+Az predictor uses the previous two Az cmdlets to make suggestions and ignores any cmdlet that's not
 part of the [Az PowerShell](https://www.powershellgallery.com/packages/Az) module. Only the names of
 cmdlets and parameters are sent to our API to obtain the suggestion. Parameter values are discarded.
 The resource group name and location used are kept locally and reused with subsequent cmdlets for
@@ -107,7 +107,7 @@ is used to assess the quality of suggestions.
 ### Data collection
 
 The current version of Az Predictor collects anonymized information about its usage to identify
-common issues and improve the experience of future releases. Az Predictor does not collect any
+common issues and improve the experience of future releases. Az Predictor doesn't collect any
 private or personal data.
 
 For example, the usage data helps identify inaccurate suggestions and issues like interferences with

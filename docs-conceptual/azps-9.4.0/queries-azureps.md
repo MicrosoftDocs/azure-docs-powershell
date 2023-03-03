@@ -1,7 +1,7 @@
 ---
 description: How to query for resources in Azure and format the results.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/07/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -15,14 +15,14 @@ explicitly `Get-` operations might return a value that can be inspected, to give
 resource that was created or modified. While most cmdlets return a single object, some return an
 array that should be iterated through.
 
-In almost all cases, you query output from Azure PowerShell with the
+Usually, you query output from Azure PowerShell with the
 [Select-Object](/powershell/module/Microsoft.PowerShell.Utility/Select-Object) cmdlet. Output can be
 filtered with [Where-Object](/powershell/module/Microsoft.PowerShell.Core/Where-Object).
 
 ## Select simple properties
 
-In the default table format, Azure PowerShell cmdlets don't display all of their available
-properties. You can get the full properties using the
+In the default table format, Azure PowerShell cmdlets don't display all their available properties.
+You can get the full properties using the
 [Format-List](/powershell/module/microsoft.powershell.utility/format-list) cmdlet, or by piping
 output to `Select-Object -Property *`:
 
