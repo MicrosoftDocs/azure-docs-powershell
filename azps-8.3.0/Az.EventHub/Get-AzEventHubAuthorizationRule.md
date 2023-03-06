@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.EventHub
 online version: https://learn.microsoft.com/powershell/module/az.eventhub/get-azeventhubauthorizationrule
 schema: 2.0.0

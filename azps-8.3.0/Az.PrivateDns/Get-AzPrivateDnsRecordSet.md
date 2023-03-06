@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.PrivateDns.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.PrivateDns
 online version: https://learn.microsoft.com/powershell/module/az.privatedns/get-azprivatednsrecordset
 schema: 2.0.0

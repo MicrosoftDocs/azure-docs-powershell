@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.AnalysisServices.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.AnalysisServices
 online version: https://learn.microsoft.com/powershell/module/az.analysisservices/new-azanalysisservicesserver
 schema: 2.0.0

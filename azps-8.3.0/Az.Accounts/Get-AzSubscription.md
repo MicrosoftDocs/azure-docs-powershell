@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Accounts
 online version: https://learn.microsoft.com/powershell/module/az.accounts/get-azsubscription
 schema: 2.0.0

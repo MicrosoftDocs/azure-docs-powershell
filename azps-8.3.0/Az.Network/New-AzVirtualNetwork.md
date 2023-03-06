@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 81D55C43-C9A3-4DA7-A469-A3A7550FE9A4
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.network/new-azvirtualnetwork
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualNetwork.md

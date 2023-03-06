@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.App
 online version: https://learn.microsoft.com/powershell/module/az.app/new-azcontainerapp
 schema: 2.0.0
@@ -650,4 +650,3 @@ TEMPLATEVOLUME <IVolume[]>: List of volume definitions for the Container App.
   - `[StorageType <StorageType?>]`: Storage type for the volume. If not provided, use EmptyDir.
 
 ## RELATED LINKS
-

@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.DiskPool
 online version: https://learn.microsoft.com/powershell/module/az.diskpool/get-azdiskpool
 schema: 2.0.0
@@ -206,4 +206,3 @@ INPUTOBJECT `<IDiskPoolIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: The ID of the target subscription.
 
 ## RELATED LINKS
-

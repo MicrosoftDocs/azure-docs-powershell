@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 8F7AF1B8-D769-452C-92CF-4486C3EB894D
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.compute/set-azvmosdisk
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMOSDisk.md
@@ -488,5 +489,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzAvailabilitySet](./Get-AzAvailabilitySet.md)
 
 [New-AzVMConfig](./New-AzVMConfig.md)
-
-

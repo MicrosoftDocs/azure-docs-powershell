@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: BA40BD11-8167-48D7-AC71-72B2FD9924F2
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.resources/new-azpolicyassignment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzPolicyAssignment.md
@@ -556,5 +557,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzPolicyAssignment](./Remove-AzPolicyAssignment.md)
 
 [Set-AzPolicyAssignment](./Set-AzPolicyAssignment.md)
-
-

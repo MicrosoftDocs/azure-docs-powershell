@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ConnectedNetwork
 online version: https://learn.microsoft.com/powershell/module/az.connectednetwork/new-azconnectednetworkvendorfunction
 schema: 2.0.0
@@ -275,4 +275,3 @@ VENDORCONFIGURATION <INetworkFunctionVendorConfiguration[]>: An array of network
     - `[Path <String>]`: Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys
 
 ## RELATED LINKS
-

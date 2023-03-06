@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: EAFB9C98-000C-4EAC-A32D-6B0F1939AA2F
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.monitor/get-azmetric
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzMetric.md
@@ -458,5 +459,3 @@ https://learn.microsoft.com/azure/azure-monitor/platform/metrics-supported
 
 [Get-AzMetricDefinition](./Get-AzMetricDefinition.md)
 [New-AzMetricFilter](./New-AzMetricFilter.md)
-
-

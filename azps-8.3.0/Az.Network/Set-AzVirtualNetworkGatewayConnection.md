@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: D7065B04-1A01-4BB4-A519-1DA9002CDE02
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.network/set-azvirtualnetworkgatewayconnection
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualNetworkGatewayConnection.md
@@ -439,5 +440,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzVirtualNetworkGatewayConnection](./New-AzVirtualNetworkGatewayConnection.md)
 
 [Remove-AzVirtualNetworkGatewayConnection](./Remove-AzVirtualNetworkGatewayConnection.md)
-
-

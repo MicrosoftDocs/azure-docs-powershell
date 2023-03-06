@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.EdgeOrder
 online version: https://learn.microsoft.com/powershell/module/az.edgeorder/new-azedgeorderitem
 schema: 2.0.0
@@ -370,4 +370,3 @@ ORDERITEMDETAIL `<IOrderItemDetails>`: Represents order item details.
       - `PreferredShipmentType <TransportShipmentTypes>`: Indicates Shipment Logistics type that the customer preferred.
 
 ## RELATED LINKS
-

@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.App
 online version: https://learn.microsoft.com/powershell/module/az.app/new-azcontainerappmanagedenv
 schema: 2.0.0
@@ -405,4 +405,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ALIASES
 
 ## RELATED LINKS
-

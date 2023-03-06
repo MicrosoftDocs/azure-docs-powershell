@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: 8679240C-EA47-41C5-B8C1-A3C99547F42B
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.logicapp/new-azlogicapp
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/New-AzLogicApp.md
@@ -381,5 +382,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzLogicApp](./Set-AzLogicApp.md)
 
 [Start-AzLogicApp](./Start-AzLogicApp.md)
-
-

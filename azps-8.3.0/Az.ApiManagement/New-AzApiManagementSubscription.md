@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
 ms.assetid: B85BF332-503D-41CB-A3B7-221B85B9BE30
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementsubscription
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementSubscription.md
@@ -267,5 +268,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzApiManagementSubscription](./Remove-AzApiManagementSubscription.md)
 
 [Set-AzApiManagementSubscription](./Set-AzApiManagementSubscription.md)
-
-

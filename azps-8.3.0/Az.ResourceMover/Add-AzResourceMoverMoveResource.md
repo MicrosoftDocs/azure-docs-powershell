@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ResourceMover
 online version: https://learn.microsoft.com/powershell/module/az.resourcemover/add-azresourcemovermoveresource
 schema: 2.0.0
@@ -384,4 +384,3 @@ RESOURCESETTING `<IResourceSettings>`: Gets or sets the resource settings.
   - `TargetResourceName <String>`: Gets or sets the target Resource name.
 
 ## RELATED LINKS
-

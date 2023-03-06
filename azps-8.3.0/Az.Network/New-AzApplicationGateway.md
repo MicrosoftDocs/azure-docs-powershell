@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 1F5066C6-9756-47B4-886C-C52755809926
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.network/new-azapplicationgateway
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGateway.md

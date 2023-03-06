@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.RedisEnterpriseCache
 online version: https://learn.microsoft.com/powershell/module/az.redisenterprisecache/new-azredisenterprisecache
 schema: 2.0.0
@@ -535,4 +535,3 @@ To create the parameters described below, construct a hash table containing the 
   - `[Arg <String>]`: Configuration options for the module, e.g. 'ERROR_RATE 0.01 INITIAL_SIZE 400'.
 
 ## RELATED LINKS
-

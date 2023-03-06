@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.DataProtection
 online version: https://learn.microsoft.com/powershell/module/az.dataprotection/initialize-azdataprotectionrestorerequest
 schema: 2.0.0
@@ -465,4 +465,3 @@ BACKUPINSTANCE `<BackupInstanceResource>`: Backup Instance object to trigger ori
     - `[ValidationType <ValidationType?>]`: Specifies the type of validation. In case of DeepValidation, all validations from /validateForBackup API will run again.
 
 ## RELATED LINKS
-

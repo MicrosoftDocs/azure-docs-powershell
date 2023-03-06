@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.DataLakeAnalytics
 online version: https://learn.microsoft.com/powershell/module/az.datalakeanalytics/get-azdatalakeanalyticscatalogitemaclentry
 schema: 2.0.0

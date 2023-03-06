@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
 ms.assetid: 12F8A120-7282-4844-90E0-1C3393336E8A
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupjob
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupJob.md

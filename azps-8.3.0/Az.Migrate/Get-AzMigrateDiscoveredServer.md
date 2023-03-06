@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Migrate
 online version: https://learn.microsoft.com/powershell/module/az.migrate/get-azmigratediscoveredserver
 schema: 2.0.0
@@ -302,4 +302,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ALIASES
 
 ## RELATED LINKS
-

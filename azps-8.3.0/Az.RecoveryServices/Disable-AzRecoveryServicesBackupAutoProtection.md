@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.RecoveryServices
 online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/disable-azrecoveryservicesbackupautoprotection
 schema: 2.0.0

@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Functions
 online version: https://learn.microsoft.com/powershell/module/az.functions/update-azfunctionapp
 schema: 2.0.0
@@ -496,4 +496,3 @@ INPUTOBJECT `<ISite>`:
   - `[ServerFarmId <String>]`: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
 
 ## RELATED LINKS
-

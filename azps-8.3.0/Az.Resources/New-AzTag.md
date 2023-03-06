@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Tags.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 23DB0AD2-7EB7-4373-BB8D-BB6CB651DD54
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.resources/new-aztag
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzTag.md

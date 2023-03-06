@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Functions
 online version: https://learn.microsoft.com/powershell/module/az.functions/get-azfunctionapp
 schema: 2.0.0
@@ -217,4 +217,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ALIASES
 
 ## RELATED LINKS
-

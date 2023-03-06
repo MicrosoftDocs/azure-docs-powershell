@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 40E56EC1-3327-4DFF-8262-E2EEBB5E4447
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.network/set-azfirewall
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzFirewall.md

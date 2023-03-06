@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Confluent
 online version: https://learn.microsoft.com/powershell/module/az.confluent/get-azconfluentorganization
 schema: 2.0.0
@@ -212,4 +212,3 @@ INPUTOBJECT `<IConfluentIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: Microsoft Azure subscription id
 
 ## RELATED LINKS
-

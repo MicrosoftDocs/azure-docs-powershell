@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ManagedServices
 online version: https://learn.microsoft.com/powershell/module/az.managedservices/new-azmanagedservicesdefinition
 schema: 2.0.0
@@ -342,4 +342,3 @@ ELIGIBLEAUTHORIZATION <IEligibleAuthorization[]>: The collection of eligible aut
   - `[PrincipalIdDisplayName <String>]`: The display name of the Azure Active Directory principal.
 
 ## RELATED LINKS
-

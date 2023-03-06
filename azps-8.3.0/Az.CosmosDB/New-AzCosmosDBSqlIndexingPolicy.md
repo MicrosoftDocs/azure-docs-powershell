@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.CosmosDB
 online version: https://learn.microsoft.com/powershell/module/az.cosmosdb/new-azcosmosdbsqlindexingpolicy
 schema: 2.0.0

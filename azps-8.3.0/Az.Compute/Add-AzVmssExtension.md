@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 7EC166C7-151D-4DA0-9B10-165E735D4F12
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.compute/add-azvmssextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssExtension.md

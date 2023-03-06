@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ApplicationInsights
 online version: https://learn.microsoft.com/powershell/module/az.applicationinsights/get-azapplicationinsightswebtest
 schema: 2.0.0
@@ -264,4 +264,3 @@ INPUTOBJECT `<IApplicationInsightsIdentity>`: Identity Parameter
   - `[WebTestName <String>]`: The name of the Application Insights WebTest resource.
 
 ## RELATED LINKS
-

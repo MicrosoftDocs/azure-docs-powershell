@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
 ms.assetid: B78F3E8B-C7D2-458C-AB23-06F584FE97E0
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.dns/new-azdnszone
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/New-AzDnsZone.md

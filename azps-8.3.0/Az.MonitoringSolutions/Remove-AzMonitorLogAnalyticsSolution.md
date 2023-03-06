@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.MonitoringSolutions
 online version: https://learn.microsoft.com/powershell/module/az.monitoringsolutions/remove-azmonitorloganalyticssolution
 schema: 2.0.0
@@ -214,4 +214,3 @@ INPUTOBJECT `<IMonitoringSolutionsIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
 ## RELATED LINKS
-

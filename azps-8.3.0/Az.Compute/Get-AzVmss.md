@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: FC6BC096-DBC4-48DA-A366-B87EB18A0496
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.compute/get-azvmss
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVmss.md
@@ -365,5 +366,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-AzVmss](./Stop-AzVmss.md)
 
 [Update-AzVmss](./Update-AzVmss.md)
-
-

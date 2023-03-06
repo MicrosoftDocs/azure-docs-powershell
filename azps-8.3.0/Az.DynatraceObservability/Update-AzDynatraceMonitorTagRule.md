@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.DynatraceObservability
 online version: https://learn.microsoft.com/powershell/module/az.dynatraceobservability/update-azdynatracemonitortagrule
 schema: 2.0.0
@@ -300,4 +300,3 @@ To create the parameters described below, construct a hash table containing the 
   - `[Value <String>]`: The value of the tag.
 
 ## RELATED LINKS
-

@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ImportExport
 online version: https://learn.microsoft.com/powershell/module/az.importexport/get-azimportexport
 schema: 2.0.0
@@ -251,4 +251,3 @@ INPUTOBJECT `<IImportExportIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: The subscription ID for the Azure user.
 
 ## RELATED LINKS
-

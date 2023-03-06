@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Billing.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Billing
 online version: https://learn.microsoft.com/powershell/module/az.billing/get-azbillinginvoice
 schema: 2.0.0

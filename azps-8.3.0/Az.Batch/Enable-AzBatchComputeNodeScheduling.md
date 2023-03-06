@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 36EB9CE6-EAC9-471C-97D6-14E882E0F710
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.batch/enable-azbatchcomputenodescheduling
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Enable-AzBatchComputeNodeScheduling.md
@@ -156,5 +157,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Disable-AzBatchComputeNodeScheduling](./Disable-AzBatchComputeNodeScheduling.md)
-
-

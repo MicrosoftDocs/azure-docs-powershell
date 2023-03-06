@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
 Module Name: Az.HDInsight
 ms.assetid: A40AB6AB-D3CB-4A6C-B614-0B22085759DA
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.hdinsight/add-azhdinsightclusteridentity
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Add-AzHDInsightClusterIdentity.md
@@ -229,5 +230,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-AzHDInsightClusterConfig](./New-AzHDInsightClusterConfig.md)
-
-

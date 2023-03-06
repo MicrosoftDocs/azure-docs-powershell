@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ADDomainServices
 online version: https://learn.microsoft.com/powershell/module/az.addomainservices/get-azaddomainservice
 schema: 2.0.0
@@ -205,4 +205,3 @@ INPUTOBJECT `<IAdDomainServicesIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: Gets subscription credentials which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
 ## RELATED LINKS
-

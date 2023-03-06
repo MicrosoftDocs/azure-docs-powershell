@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.MachineLearningServices
 online version: https://learn.microsoft.com/powershell/module/az.MLWorkspace/new-AzMLWorkspaceCommandJobObject
 schema: 2.0.0
@@ -455,4 +455,3 @@ TAG `<IResourceBaseTags>`: Tag dictionary. Tags can be added, removed, and updat
   - `[(Any) <String>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS
-

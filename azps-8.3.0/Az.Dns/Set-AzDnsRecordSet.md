@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
 ms.assetid: 99E6C4DD-11AF-4DC0-848B-39811240BE06
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.dns/set-azdnsrecordset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Set-AzDnsRecordSet.md

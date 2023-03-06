@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ApiManagement
 online version: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementdiagnostic
 schema: 2.0.0

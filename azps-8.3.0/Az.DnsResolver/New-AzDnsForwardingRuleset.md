@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.DnsResolver
 online version: https://learn.microsoft.com/powershell/module/az.dnsresolver/new-azdnsforwardingruleset
 schema: 2.0.0
@@ -282,4 +282,3 @@ To create the parameters described below, construct a hash table containing the 
   - `Id <String>`: Resource ID.
 
 ## RELATED LINKS
-

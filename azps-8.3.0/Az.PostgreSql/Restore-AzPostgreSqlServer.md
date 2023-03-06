@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.PostgreSql
 online version: https://learn.microsoft.com/powershell/module/az.postgresql/restore-azpostgresqlserver
 schema: 2.0.0
@@ -342,4 +342,3 @@ INPUTOBJECT `<IServer>`: The source server object to restore from.
   - `[Version <ServerVersion?>]`: Server version.
 
 ## RELATED LINKS
-

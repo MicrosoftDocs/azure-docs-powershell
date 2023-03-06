@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Relay.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Relay
 online version: https://learn.microsoft.com/powershell/module/az.relay/set-azrelayauthorizationrule
 schema: 2.0.0

@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: E460D108-2BF9-4F57-AF3D-13868DC73EA0
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.resources/new-azroleassignment
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzRoleAssignment.md

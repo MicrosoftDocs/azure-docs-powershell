@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Maps
 online version: https://learn.microsoft.com/powershell/module/az.maps/get-azmapscreator
 schema: 2.0.0
@@ -200,4 +200,3 @@ INPUTOBJECT `<IMapsIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: The ID of the target subscription.
 
 ## RELATED LINKS
-

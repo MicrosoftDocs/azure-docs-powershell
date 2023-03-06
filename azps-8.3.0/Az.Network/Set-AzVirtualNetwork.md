@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 93D8A341-540A-43F1-8C62-28323EAA58E0
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.network/set-azvirtualnetwork
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualNetwork.md
@@ -113,5 +114,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzVirtualNetwork](./New-AzVirtualNetwork.md)
 
 [Remove-AzVirtualNetwork](./Remove-AzVirtualNetwork.md)
-
-

@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ContainerInstance
 online version: https://learn.microsoft.com/powershell/module/az.containerinstance/new-azcontainergroup
 schema: 2.0.0
@@ -805,4 +805,3 @@ VOLUME <IVolume[]>: The list of volumes that can be mounted by containers in thi
     - `[(Any) <String>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS
-

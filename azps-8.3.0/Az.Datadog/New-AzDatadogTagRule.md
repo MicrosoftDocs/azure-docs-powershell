@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Datadog
 online version: https://learn.microsoft.com/powershell/module/az.datadog/new-azdatadogtagrule
 schema: 2.0.0
@@ -318,4 +318,3 @@ METRICRULEFILTERINGTAG <IFilteringTag[]>: List of filtering tags to be used for 
   - `[Value <String>]`: The value of the tag.
 
 ## RELATED LINKS
-

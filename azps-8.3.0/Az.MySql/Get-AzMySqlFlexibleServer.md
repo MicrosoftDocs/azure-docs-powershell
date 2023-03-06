@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.MySql
 online version: https://learn.microsoft.com/powershell/module/az.mysql/get-azmysqlflexibleserver
 schema: 2.0.0
@@ -212,4 +212,3 @@ INPUTOBJECT `<IMySqlIdentity>`: Identity Parameter
   - `[VirtualNetworkRuleName <String>]`: The name of the virtual network rule.
 
 ## RELATED LINKS
-

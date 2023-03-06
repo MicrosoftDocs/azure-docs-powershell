@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.HanaOnAzure
 online version: https://learn.microsoft.com/powershell/module/az.hanaonazure/get-azsapmonitorproviderinstance
 schema: 2.0.0
@@ -221,4 +221,3 @@ INPUTOBJECT `<IHanaOnAzureIdentity>`: Identity Parameter
   - `[VaultName <String>]`: Name of the vault
 
 ## RELATED LINKS
-

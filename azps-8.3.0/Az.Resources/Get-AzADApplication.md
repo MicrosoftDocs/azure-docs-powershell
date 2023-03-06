@@ -1,5 +1,6 @@
 ---
 external help file: Az.Resources-help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Resources
 online version: https://learn.microsoft.com/powershell/module/az.resources/get-azadapplication
 schema: 2.0.0

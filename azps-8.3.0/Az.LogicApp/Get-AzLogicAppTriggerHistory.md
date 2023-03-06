@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
 Module Name: Az.LogicApp
 ms.assetid: C1F6BBF9-0DB5-46FD-B8A8-9029B0AB6166
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.logicapp/get-azlogicapptriggerhistory
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzLogicAppTriggerHistory.md

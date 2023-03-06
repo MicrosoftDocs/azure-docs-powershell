@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.CognitiveServices.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.CognitiveServices
 online version: https://learn.microsoft.com/powershell/module/az.cognitiveservices/remove-azcognitiveservicesaccountnetworkrule
 schema: 2.0.0

@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ConnectedNetwork
 online version: https://learn.microsoft.com/powershell/module/az.ConnectedNetwork/new-AzConnectedNetworkFunctionUserConfigurationObject
 schema: 2.0.0
@@ -148,4 +148,3 @@ NETWORKINTERFACE <INetworkInterface[]>: The network interface configuration.
   - `[VMSwitchType <VMSwitchType?>]`: The type of the VM switch.
 
 ## RELATED LINKS
-

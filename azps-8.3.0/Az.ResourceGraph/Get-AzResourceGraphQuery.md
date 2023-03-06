@@ -1,5 +1,6 @@
 ---
 external help file: Az.ResourceGraph-help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ResourceGraph
 online version: https://learn.microsoft.com/powershell/module/az.resourcegraph/get-azresourcegraphquery
 schema: 2.0.0

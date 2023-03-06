@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
 ms.assetid: 505562A4-30BC-44E7-94EF-579763B8D794
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.dns/remove-azdnsrecordset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Remove-AzDnsRecordSet.md

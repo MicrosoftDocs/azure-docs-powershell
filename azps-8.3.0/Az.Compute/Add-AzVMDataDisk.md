@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 169E6694-82CD-4FCB-AB3D-E8A74001B8DB
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.compute/add-azvmdatadisk
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVMDataDisk.md

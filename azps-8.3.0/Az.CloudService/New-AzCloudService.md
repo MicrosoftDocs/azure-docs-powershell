@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.CloudService
 online version: https://learn.microsoft.com/powershell/module/az.cloudservice/new-azcloudservice
 schema: 2.0.0
@@ -715,4 +715,3 @@ ROLEPROFILE `<ICloudServiceRoleProfile>`: Describes the role profile for the clo
     - `[SkuTier <String>]`: Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**
 
 ## RELATED LINKS
-

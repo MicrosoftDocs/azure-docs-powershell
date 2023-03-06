@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 5BF24BC2-DEB6-4830-BDEA-841BAB070388
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.datafactory/new-azdatafactoryencryptvalue
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/New-AzDataFactoryEncryptValue.md
@@ -322,5 +323,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-AzDataFactoryEncryptValue](./New-AzDataFactoryEncryptValue.md)
-
-

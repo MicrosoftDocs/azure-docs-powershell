@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 8C1C12AD-5130-42E7-99BB-B13900D7A712
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.compute/remove-azvmssextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Remove-AzVmssExtension.md

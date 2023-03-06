@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
 Module Name: Az.Dns
 ms.assetid: 40179CF3-7896-4C45-BC18-4CB653B245B6
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.dns/get-azdnsrecordset
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Get-AzDnsRecordSet.md
@@ -216,5 +217,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzDnsRecordSet](./Remove-AzDnsRecordSet.md)
 
 [Set-AzDnsRecordSet](./Set-AzDnsRecordSet.md)
-
-

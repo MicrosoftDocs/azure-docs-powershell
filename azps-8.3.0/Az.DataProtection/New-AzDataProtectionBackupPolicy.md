@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.DataProtection
 online version: https://learn.microsoft.com/powershell/module/az.dataprotection/new-azdataprotectionbackuppolicy
 schema: 2.0.0
@@ -247,4 +247,3 @@ POLICY `<IBackupPolicy>`: Policy Request Object
     - `[IsDefault <Boolean?>]`:
 
 ## RELATED LINKS
-

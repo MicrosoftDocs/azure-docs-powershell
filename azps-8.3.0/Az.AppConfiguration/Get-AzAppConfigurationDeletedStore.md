@@ -1,5 +1,6 @@
 ---
 external help file: Az.AppConfiguration-help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.AppConfiguration
 online version: https://learn.microsoft.com/powershell/module/az.appconfiguration/get-azappconfigurationdeletedstore
 schema: 2.0.0

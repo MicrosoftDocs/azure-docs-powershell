@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ConnectedMachine
 online version: https://learn.microsoft.com/powershell/module/az.connectedmachine/new-azconnectedmachineextension
 schema: 2.0.0
@@ -621,4 +621,3 @@ INPUTOBJECT `<IConnectedMachineIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: The ID of the target subscription.
 
 ## RELATED LINKS
-

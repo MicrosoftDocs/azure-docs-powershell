@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: C650E465-7CDE-47F8-B85A-8FA3E1756FAF
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.compute/set-azvmsqlserverextension
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMSqlServerExtension.md
@@ -224,5 +225,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzVMSqlServerExtension](./Remove-AzVMSqlServerExtension.md)
 
 [Update-AzVM](./Update-AzVM.md)
-
-

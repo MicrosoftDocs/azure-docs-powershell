@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.PostgreSql
 online version: https://learn.microsoft.com/powershell/module/az.postgresql/restart-azpostgresqlflexibleserver
 schema: 2.0.0
@@ -318,4 +318,3 @@ PARAMETER `<IRestartParameter>`: Represents server restart parameters.
   - `[RestartWithFailover <Boolean?>]`: Indicates whether to restart the server with failover.
 
 ## RELATED LINKS
-

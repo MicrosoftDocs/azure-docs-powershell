@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.FrontDoor
 online version: https://learn.microsoft.com/powershell/module/az.frontdoor/remove-azfrontdoorrulesengine
 schema: 2.0.0

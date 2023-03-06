@@ -1,5 +1,6 @@
 ---
 external help file: Az.Purview-help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Purview
 online version: https://learn.microsoft.com/powershell/module/az.purview/get-azpurviewaccount
 schema: 2.0.0

@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Cdn
 online version: https://learn.microsoft.com/powershell/module/az.cdn/new-azfrontdoorcdnroute
 schema: 2.0.0
@@ -453,4 +453,3 @@ RULESET <IResourceReference[]>: rule sets referenced by this endpoint.
   - `[Id <String>]`: Resource ID.
 
 ## RELATED LINKS
-

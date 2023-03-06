@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.LabServices
 online version: https://learn.microsoft.com/powershell/module/az.labservices/get-azlabserviceslab
 schema: 2.0.0
@@ -281,4 +281,3 @@ LABPLAN `<LabPlan>`:
     - `[(Any) <String>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS
-

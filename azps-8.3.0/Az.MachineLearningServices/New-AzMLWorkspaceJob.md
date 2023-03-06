@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.MachineLearningServices
 online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/new-azmlworkspacejob
 schema: 2.0.0
@@ -212,4 +212,3 @@ JOB `<IJobBaseProperties>`: [Required] Additional attributes of the entity.
     - `[(Any) <IJobService>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS
-

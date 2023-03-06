@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.MachineLearningServices
 online version: https://learn.microsoft.com/powershell/module/az.MLWorkspace/new-AzMLWorkspaceSweepJobObject
 schema: 2.0.0
@@ -612,4 +612,3 @@ TRIALENVIRONMENTVARIABLE `<ITrialComponentEnvironmentVariables>`: Environment va
   - `[(Any) <String>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS
-

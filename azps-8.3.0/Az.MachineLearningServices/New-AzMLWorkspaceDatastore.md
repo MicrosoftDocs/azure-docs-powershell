@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.MachineLearningServices
 online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/new-azmlworkspacedatastore
 schema: 2.0.0
@@ -225,4 +225,3 @@ DATASTORE `<IDatastoreProperties>`: [Required] Additional attributes of the enti
     - `[(Any) <String>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS
-

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Accounts
 online version: https://learn.microsoft.com/en-us/powershell/module/az.accounts/connect-azaccount
 schema: 2.0.0

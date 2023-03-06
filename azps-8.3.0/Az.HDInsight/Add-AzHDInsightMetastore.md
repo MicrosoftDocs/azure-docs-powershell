@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
 Module Name: Az.HDInsight
 ms.assetid: 8BD3B8BD-DC87-4A94-9FCA-611D11D5E065
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.hdinsight/add-azhdinsightmetastore
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Add-AzHDInsightMetastore.md
@@ -245,5 +246,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-AzHDInsightClusterConfig](./New-AzHDInsightClusterConfig.md)
-
-

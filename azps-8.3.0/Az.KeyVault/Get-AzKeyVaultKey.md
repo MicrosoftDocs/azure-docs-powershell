@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 2BE34AE1-06FA-4F66-8FDB-CED22C2E0978
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultKey.md

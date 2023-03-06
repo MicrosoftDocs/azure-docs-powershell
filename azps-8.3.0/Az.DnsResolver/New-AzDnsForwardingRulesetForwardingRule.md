@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.DnsResolver
 online version: https://learn.microsoft.com/powershell/module/az.dnsresolver/new-azdnsforwardingrulesetforwardingrule
 schema: 2.0.0
@@ -284,4 +284,3 @@ To create the parameters described below, construct a hash table containing the 
   - `[Port <Int32?>]`: DNS server port.
 
 ## RELATED LINKS
-

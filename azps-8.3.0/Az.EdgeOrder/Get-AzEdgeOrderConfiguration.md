@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.EdgeOrder
 online version: https://learn.microsoft.com/powershell/module/az.edgeorder/get-azedgeorderconfiguration
 schema: 2.0.0
@@ -180,4 +180,3 @@ CUSTOMERSUBSCRIPTIONDETAIL `<ICustomerSubscriptionDetails>`: Customer subscripti
     - `[State <String>]`: State of subscription registered feature
 
 ## RELATED LINKS
-

@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
 Module Name: Az.Monitor
 ms.assetid: A4C605DD-9B2E-4EE9-BD1F-1352D605C33F
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.monitor/new-azautoscaleprofile
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleProfile.md
@@ -383,5 +384,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzAutoscaleRule](./New-AzAutoscaleRule.md)
 
 [Remove-AzAutoscaleSetting](./Remove-AzAutoscaleSetting.md)
-
-

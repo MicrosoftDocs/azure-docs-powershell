@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Quota
 online version: https://learn.microsoft.com/powershell/module/az.quota/update-azquota
 schema: 2.0.0
@@ -275,4 +275,3 @@ INPUTOBJECT `<IQuotaIdentity>`: Identity Parameter
   - `[Scope <String>]`: The target Azure resource URI. For example, `/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/qms-test/providers/Microsoft.Batch/batchAccounts/testAccount/`. This is the target Azure resource URI for the List GET operation. If a `{resourceName}` is added after `/quotas`, then it's the target Azure resource URI in the GET operation for the specific resource.
 
 ## RELATED LINKS
-

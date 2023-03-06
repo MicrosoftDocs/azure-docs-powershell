@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ConnectedNetwork
 online version: https://learn.microsoft.com/powershell/module/az.connectednetwork/new-azconnectednetworkdevice
 schema: 2.0.0
@@ -276,4 +276,3 @@ PROPERTY `<IDevicePropertiesFormat>`: Device properties.
   - `DeviceType <DeviceType>`: The type of the device.
 
 ## RELATED LINKS
-

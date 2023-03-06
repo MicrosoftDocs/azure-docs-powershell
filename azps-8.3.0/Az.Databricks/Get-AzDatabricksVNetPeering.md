@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Databricks
 online version: https://learn.microsoft.com/powershell/module/az.databricks/get-azdatabricksvnetpeering
 schema: 2.0.0
@@ -219,4 +219,3 @@ INPUTOBJECT `<IDatabricksIdentity>`: Identity Parameter
   - `[WorkspaceName <String>]`: The name of the workspace.
 
 ## RELATED LINKS
-

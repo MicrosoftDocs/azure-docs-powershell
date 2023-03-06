@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Cdn
 online version: https://learn.microsoft.com/powershell/module/az.cdn/update-azfrontdoorcdnsecuritypolicy
 schema: 2.0.0
@@ -260,4 +260,3 @@ INPUTOBJECT `<ICdnIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: Azure Subscription ID.
 
 ## RELATED LINKS
-

@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.MySql
 online version: https://learn.microsoft.com/powershell/module/az.mysql/new-azmysqlreplica
 schema: 2.0.0
@@ -273,4 +273,3 @@ MASTER `<IServer>`: The source server object to create replica from.
   - `[Version <ServerVersion?>]`: Server version.
 
 ## RELATED LINKS
-

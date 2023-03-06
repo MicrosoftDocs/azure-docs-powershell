@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Network
 online version: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkwatcherpacketcapture
 schema: 2.0.0
@@ -397,5 +398,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, network, networkin
 [Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
 [Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)
-
-

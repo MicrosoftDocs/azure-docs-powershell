@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 880D321E-30F2-4CAE-B14A-5F6DD8E1DB99
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.resources/remove-azresourcegroup
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Remove-AzResourceGroup.md
@@ -219,5 +220,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzResourceGroup](./New-AzResourceGroup.md)
 
 [Set-AzResourceGroup](./Set-AzResourceGroup.md)
-
-

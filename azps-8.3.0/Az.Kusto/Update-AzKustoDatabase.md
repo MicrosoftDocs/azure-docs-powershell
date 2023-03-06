@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Kusto
 online version: https://learn.microsoft.com/powershell/module/az.kusto/update-azkustodatabase
 schema: 2.0.0
@@ -348,4 +348,3 @@ INPUTOBJECT `<IKustoIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
 ## RELATED LINKS
-

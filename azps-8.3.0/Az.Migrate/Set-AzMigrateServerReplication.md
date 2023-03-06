@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Migrate
 online version: https://learn.microsoft.com/powershell/module/az.migrate/set-azmigrateserverreplication
 schema: 2.0.0
@@ -515,4 +515,3 @@ To create the parameters described below, construct a hash table containing the 
   - `[(Any) <String>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS
-

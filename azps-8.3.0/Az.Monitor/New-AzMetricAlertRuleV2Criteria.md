@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Monitor
 online version: https://learn.microsoft.com/powershell/module/az.monitor/new-azmetricalertrulev2criteria
 schema: 2.0.0

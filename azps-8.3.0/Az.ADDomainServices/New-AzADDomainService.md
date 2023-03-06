@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ADDomainServices
 online version: https://learn.microsoft.com/powershell/module/az.addomainservices/new-azaddomainservice
 schema: 2.0.0
@@ -560,4 +560,3 @@ REPLICASET <IReplicaSet[]>: List of ReplicaSets
   - `[SubnetId <String>]`: The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.
 
 ## RELATED LINKS
-

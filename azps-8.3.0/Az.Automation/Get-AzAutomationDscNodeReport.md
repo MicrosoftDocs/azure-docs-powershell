@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
 Module Name: Az.Automation
 ms.assetid: 1246C3AC-A123-4EA1-B99E-458A85789109
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationdscnodereport
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationDscNodeReport.md
@@ -220,5 +221,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzAutomationDscNode](./Get-AzAutomationDscNode.md)
 
 [Export-AzAutomationDscNodeReportContent](./Export-AzAutomationDscNodeReportContent.md)
-
-

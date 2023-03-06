@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.DiskPool
 online version: https://learn.microsoft.com/powershell/module/az.diskpool/update-azdiskpooliscsitarget
 schema: 2.0.0
@@ -320,4 +320,3 @@ STATICACL <IAcl[]>: Access Control List (ACL) for an iSCSI Target; defines LUN m
   - `MappedLun <String[]>`: List of LUN names mapped to the ACL.
 
 ## RELATED LINKS
-

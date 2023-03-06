@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
 Module Name: Az.RedisCache
 ms.assetid: 6234F211-6ED4-443F-9B83-DEB9AC51B763
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.rediscache/set-azrediscache
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Set-AzRedisCache.md
@@ -638,5 +639,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzRedisCache](./New-AzRedisCache.md)
 
 [Remove-AzRedisCache](./Remove-AzRedisCache.md)
-
-

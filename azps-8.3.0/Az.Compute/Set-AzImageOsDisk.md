@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Compute
 online version: https://learn.microsoft.com/powershell/module/az.compute/set-azimageosdisk
 schema: 2.0.0

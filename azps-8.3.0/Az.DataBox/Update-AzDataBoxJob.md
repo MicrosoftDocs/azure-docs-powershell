@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.DataBox
 online version: https://learn.microsoft.com/powershell/module/az.databox/update-azdataboxjob
 schema: 2.0.0
@@ -386,4 +386,3 @@ SHIPPINGADDRESS `<IShippingAddress>`: Shipping address of the customer.
   - `[ZipExtendedCode <String>]`: Extended Zip Code.
 
 ## RELATED LINKS
-

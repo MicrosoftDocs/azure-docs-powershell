@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactories.dll-Help.xml
 Module Name: Az.DataFactory
 ms.assetid: 5224BDF5-D492-4160-893E-4BB5F76C22F3
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactorypipeline
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryPipeline.md
@@ -239,5 +240,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzDataFactoryPipelineActivePeriod](./Set-AzDataFactoryPipelineActivePeriod.md)
 
 [Suspend-AzDataFactoryPipeline](./Suspend-AzDataFactoryPipeline.md)
-
-

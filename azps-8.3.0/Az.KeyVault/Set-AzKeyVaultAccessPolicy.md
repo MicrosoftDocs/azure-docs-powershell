@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 636FAD5B-8C39-4E5C-8978-6845C6B89BC0
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Set-AzKeyVaultAccessPolicy.md
@@ -731,4 +732,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzKeyVault](./Get-AzKeyVault.md)
 
 [Remove-AzKeyVaultAccessPolicy](./Remove-AzKeyVaultAccessPolicy.md)
-

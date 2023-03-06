@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
 Module Name: Az.Compute
 ms.assetid: 39AADD19-2EDD-4C1F-BC9E-22186DD9A085
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.compute/set-azvmoperatingsystem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMOperatingSystem.md
@@ -458,5 +459,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzVM](./Get-AzVM.md)
 
 [New-AzVMConfig](./New-AzVMConfig.md)
-
-

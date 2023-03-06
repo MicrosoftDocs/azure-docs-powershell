@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ManagedServiceIdentity
 online version: https://learn.microsoft.com/powershell/module/az.managedserviceidentity/get-azuserassignedidentity
 schema: 2.0.0
@@ -206,4 +206,3 @@ INPUTOBJECT `<IManagedServiceIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: The Id of the Subscription to which the identity belongs.
 
 ## RELATED LINKS
-

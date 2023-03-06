@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ConnectedNetwork
 online version: https://learn.microsoft.com/powershell/module/az.ConnectedNetwork/new-AzConnectedNetworkFunctionRoleConfigurationObject
 schema: 2.0.0
@@ -452,4 +452,3 @@ STORAGEPROFILEDATADISK <IDataDisk[]>: Specifies the parameters that are used to 
   - `[Name <String>]`: The name of data disk.
 
 ## RELATED LINKS
-

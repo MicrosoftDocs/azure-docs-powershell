@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 1CE2A30A-6DF8-4C4C-8348-C3C1CD4D0146
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.network/set-azroutetable
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzRouteTable.md
@@ -203,5 +204,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzRouteTable](./New-AzRouteTable.md)
 
 [Remove-AzRouteTable](./Remove-AzRouteTable.md)
-
-

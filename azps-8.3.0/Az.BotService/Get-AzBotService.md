@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.BotService
 online version: https://learn.microsoft.com/powershell/module/az.botservice/get-azbotservice
 schema: 2.0.0
@@ -210,4 +210,3 @@ INPUTOBJECT `<IBotServiceIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: Azure Subscription ID.
 
 ## RELATED LINKS
-

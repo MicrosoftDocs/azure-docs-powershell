@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
 Module Name: Az.RecoveryServices
 ms.assetid: F49FA524-28BC-464F-BD0A-F898E99C83D8
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.recoveryservices/restore-azrecoveryservicesbackupitem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Restore-AzRecoveryServicesBackupItem.md

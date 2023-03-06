@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.DataBox
 online version: https://learn.microsoft.com/powershell/module/az.databox/new-azdataboxjob
 schema: 2.0.0
@@ -589,4 +589,3 @@ DETAIL `<IJobDetails>`: Details of a job run. This field will only be sent for e
     - `[ZipExtendedCode <String>]`: Extended Zip Code.
 
 ## RELATED LINKS
-

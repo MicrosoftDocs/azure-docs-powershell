@@ -1,5 +1,6 @@
 ---
 external help file: Az.Compute-help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Compute
 online version: https://learn.microsoft.com/powershell/module/az.compute/update-azgalleryapplicationversion
 schema: 2.0.0

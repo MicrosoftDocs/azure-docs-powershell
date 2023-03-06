@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.MachineLearningServices
 online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/new-azmlworkspacecompute
 schema: 2.0.0
@@ -386,4 +386,3 @@ COMPUTE `<ICompute>`: Compute properties
   - `[ResourceId <String>]`: ARM resource id of the underlying compute
 
 ## RELATED LINKS
-

@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: 07811B64-6A77-452C-B148-DE8C13E73DEF
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchremoteloginsetting
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchRemoteLoginSetting.md

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.DataFactory
 online version: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryv2integrationruntime
 schema: 2.0.0

@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ConnectedNetwork
 online version: https://learn.microsoft.com/powershell/module/az.connectednetwork/new-azconnectednetworkfunction
 schema: 2.0.0
@@ -371,4 +371,3 @@ USERCONFIGURATION <INetworkFunctionUserConfiguration[]>: The network function co
   - `[UserDataParameter <IAny>]`: The user data parameters from the customer.
 
 ## RELATED LINKS
-

@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ApplicationInsights
 online version: https://learn.microsoft.com/powershell/module/az.applicationinsights/new-azapplicationinsightswebtest
 schema: 2.0.0
@@ -606,4 +606,3 @@ REQUESTHEADER <IHeaderField[]>: List of headers and their values to add to the W
   - `[Value <String>]`: The value of the header.
 
 ## RELATED LINKS
-

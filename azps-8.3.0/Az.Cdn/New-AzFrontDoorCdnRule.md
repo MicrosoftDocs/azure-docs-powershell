@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Cdn
 online version: https://learn.microsoft.com/powershell/module/az.cdn/new-azfrontdoorcdnrule
 schema: 2.0.0
@@ -301,4 +301,3 @@ CONDITION <IDeliveryRuleCondition[]>: A list of conditions that must be matched 
   - `Name <MatchVariable>`: The name of the condition for the delivery rule.
 
 ## RELATED LINKS
-

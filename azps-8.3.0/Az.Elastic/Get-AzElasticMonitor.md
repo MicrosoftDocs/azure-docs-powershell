@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Elastic
 online version: https://learn.microsoft.com/powershell/module/az.elastic/get-azelasticmonitor
 schema: 2.0.0
@@ -211,4 +211,3 @@ INPUTOBJECT `<IElasticIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: The Azure subscription ID. This is a GUID-formatted string (e.g. 00000000-0000-0000-0000-000000000000)
 
 ## RELATED LINKS
-

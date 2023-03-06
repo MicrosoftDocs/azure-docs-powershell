@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.PostgreSql
 online version: https://learn.microsoft.com/powershell/module/az.postgresql/get-azpostgresqlflexibleserver
 schema: 2.0.0
@@ -214,4 +214,3 @@ INPUTOBJECT `<IPostgreSqlIdentity>`: Identity Parameter
   - `[VirtualNetworkRuleName <String>]`: The name of the virtual network rule.
 
 ## RELATED LINKS
-

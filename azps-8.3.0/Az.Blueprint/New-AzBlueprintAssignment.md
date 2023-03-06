@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Blueprint.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Blueprint
 online version: https://learn.microsoft.com/powershell/module/az.blueprint/new-azblueprintassignment
 schema: 2.0.0

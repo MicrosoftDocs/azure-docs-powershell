@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Network
 online version: https://learn.microsoft.com/powershell/module/az.network/set-azprivatelinkservice
 schema: 2.0.0
@@ -110,5 +111,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzPrivateLinkService](./New-AzPrivateLinkService.md)
 
 [Remove-AzPrivateLinkService](./Remove-AzPrivateLinkService.md)
-
-

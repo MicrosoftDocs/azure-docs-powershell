@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.IotHub
 online version: https://learn.microsoft.com/powershell/module/az.iothub/add-aziothubconfiguration
 schema: 2.0.0

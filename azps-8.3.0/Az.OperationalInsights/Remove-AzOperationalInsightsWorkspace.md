@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
 Module Name: Az.OperationalInsights
 ms.assetid: 0C35E679-B991-49A8-890F-C8DAB68A8240
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.operationalinsights/remove-azoperationalinsightsworkspace
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/Remove-AzOperationalInsightsWorkspace.md
@@ -178,5 +179,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Azure Operational Insights Cmdlets](./Az.OperationalInsights.md)
 
 [Get-AzOperationalInsightsWorkspace](./Get-AzOperationalInsightsWorkspace.md)
-
-

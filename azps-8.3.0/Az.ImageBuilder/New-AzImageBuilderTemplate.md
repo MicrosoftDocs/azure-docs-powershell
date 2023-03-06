@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ImageBuilder
 online version: https://learn.microsoft.com/powershell/module/az.imagebuilder/new-azimagebuildertemplate
 schema: 2.0.0
@@ -606,4 +606,3 @@ To create the parameters described below, construct a hash table containing the 
   - `[Name <String>]`: Friendly Name to provide context on what this validation step does
 
 ## RELATED LINKS
-

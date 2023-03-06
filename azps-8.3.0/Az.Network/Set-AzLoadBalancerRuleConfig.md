@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
 ms.assetid: 2638B226-B974-43B6-ACC2-D67573CF6B56
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.network/set-azloadbalancerruleconfig
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzLoadBalancerRuleConfig.md
@@ -387,5 +388,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzLoadBalancerRuleConfig](./New-AzLoadBalancerRuleConfig.md)
 
 [Remove-AzLoadBalancerRuleConfig](./Remove-AzLoadBalancerRuleConfig.md)
-
-

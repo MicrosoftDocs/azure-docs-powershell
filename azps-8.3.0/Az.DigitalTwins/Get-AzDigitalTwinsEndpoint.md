@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.DigitalTwins
 online version: https://learn.microsoft.com/powershell/module/az.digitaltwins/get-azdigitaltwinsendpoint
 schema: 2.0.0
@@ -202,4 +202,3 @@ INPUTOBJECT `<IDigitalTwinsIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: The subscription identifier.
 
 ## RELATED LINKS
-

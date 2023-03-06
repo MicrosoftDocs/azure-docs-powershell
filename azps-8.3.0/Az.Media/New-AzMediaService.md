@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
 Module Name: Az.Media
 ms.assetid: 5CEA7323-4CF7-42B2-BA94-BB3C8F73D2E9
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.media/new-azmediaservice
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Media/Media/help/New-AzMediaService.md
@@ -265,5 +266,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzMediaService](./Remove-AzMediaService.md)
 
 [Set-AzMediaService](./Set-AzMediaService.md)
-
-

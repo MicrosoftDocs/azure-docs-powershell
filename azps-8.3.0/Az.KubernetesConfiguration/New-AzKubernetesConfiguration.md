@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.KubernetesConfiguration
 online version: https://learn.microsoft.com/powershell/module/az.kubernetesconfiguration/new-azkubernetesconfiguration
 schema: 2.0.0
@@ -352,4 +352,3 @@ ALIASES
 New-AzK8sConfiguration
 
 ## RELATED LINKS
-

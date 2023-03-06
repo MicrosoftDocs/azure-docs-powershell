@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
 Module Name: Az.Batch
 ms.assetid: C9E2D9EC-3B6A-492D-B183-9856185548CD
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchnodefilecontent
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchNodeFileContent.md

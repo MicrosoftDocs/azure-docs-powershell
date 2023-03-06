@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Advisor.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Advisor
 online version: https://learn.microsoft.com/powershell/module/az.advisor/set-azadvisorConfiguration
 schema: 2.0.0

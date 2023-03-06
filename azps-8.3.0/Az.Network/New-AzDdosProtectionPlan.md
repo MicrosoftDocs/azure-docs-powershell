@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Network
 online version: https://learn.microsoft.com/powershell/module/az.network/new-azddosprotectionplan
 schema: 2.0.0

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Peering.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.Peering
 online version: https://learn.microsoft.com/powershell/module/az.peering/update-azpeering
 schema: 2.0.0

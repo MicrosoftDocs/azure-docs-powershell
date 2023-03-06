@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
 Module Name: Az.KeyVault
 ms.assetid: 817BF177-519F-47BA-86CF-4591FB402E2Dl
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.keyvault/remove-azkeyvaultkey
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Remove-AzKeyVaultKey.md
@@ -267,4 +268,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzKeyVaultKey](./Get-AzKeyVaultKey.md)
 
 [Undo-AzKeyVaultKeyRemoval](./Undo-AzKeyVaultKeyRemoval.md)
-

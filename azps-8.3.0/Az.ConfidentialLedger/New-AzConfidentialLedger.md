@@ -1,5 +1,5 @@
 ---
-external help file:
+ms.custom: devx-track-azurepowershell
 Module Name: Az.ConfidentialLedger
 online version: https://learn.microsoft.com/powershell/module/az.confidentialledger/new-azconfidentialledger
 schema: 2.0.0
@@ -317,4 +317,3 @@ CERTBASEDSECURITYPRINCIPAL <ICertBasedSecurityPrincipal[]>: Array of all cert ba
   - `[LedgerRoleName <LedgerRoleName?>]`: LedgerRole associated with the Security Principal of Ledger
 
 ## RELATED LINKS
-

@@ -1,5 +1,6 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.DataBoxEdge.dll-Help.xml
+ms.custom: devx-track-azurepowershell
 Module Name: Az.DataBoxEdge
 online version: https://learn.microsoft.com/powershell/module/az.databoxedge/get-azdataboxedgestorageaccount
 schema: 2.0.0

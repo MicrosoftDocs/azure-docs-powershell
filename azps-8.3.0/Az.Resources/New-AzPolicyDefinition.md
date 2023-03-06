@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
 Module Name: Az.Resources
 ms.assetid: 31F2AF24-488D-4CAF-A9C8-C8DAE76E031F
+ms.custom: devx-track-azurepowershell
 online version: https://learn.microsoft.com/powershell/module/az.resources/new-azpolicydefinition
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzPolicyDefinition.md
@@ -332,5 +333,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzPolicyDefinition](./Remove-AzPolicyDefinition.md)
 
 [Set-AzPolicyDefinition](./Set-AzPolicyDefinition.md)
-
-
