@@ -30,7 +30,9 @@ landingContent:
       - linkListType: learn
         links:
           - text: Automate Azure tasks from PowerShell
-            url: /learn/modules/automate-azure-tasks-with-powershell/
+            url: /training/modules/automate-azure-tasks-with-powershell/
+          - text: Choose the best Azure command line tools for managing and provisioning your cloud infrastructure
+            url: /training/modules/azure-command-line-tools-intro/
   - title: Installation
     linkLists:
       - linkListType: download
