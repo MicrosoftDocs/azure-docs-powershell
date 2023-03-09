@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 The Get Domain Service operation retrieves a json representation of the Domain Service.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.addomainservices/get-azaddomainservice) for up-to-date information.
+
 ## SYNTAX
 
 ### List (Default)

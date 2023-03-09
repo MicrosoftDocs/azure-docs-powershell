@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Get the Triggers configured on a device
  
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.databoxedge/get-azdataboxedgetrigger) for up-to-date information.
+
 ## SYNTAX
 
 ### ListParameterSet (Default)

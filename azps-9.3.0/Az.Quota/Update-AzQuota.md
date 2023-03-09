@@ -16,6 +16,9 @@ These steps are detailed in [this example](https://techcommunity.microsoft.com/t
 Use this PUT operation to update the quota limit.
 Please check the URI in location header for the detailed status of the request.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.quota/update-azquota) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)

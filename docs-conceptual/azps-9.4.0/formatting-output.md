@@ -1,7 +1,7 @@
 ---
 description: How to format cmdlet output for Azure PowerShell.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/03/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -324,9 +324,9 @@ version="1.0" encoding="utf-8" Objects
 
 ### Conversion to HTML
 
-Converting an object to HTML produces output that will be rendered as an HTML table. Rendering of
-the HTML will depend on your browser behavior for rendering tables which contain no width
-information. No custom class objects are expanded.
+Converting an object to HTML produces output that's rendered as an HTML table. Rendering of the HTML
+depends on your browser behavior for rendering tables which contain no width information. No custom
+class objects are expanded.
 
 ```azurepowershell-interactive
 Get-AzVM | ConvertTo-HTML

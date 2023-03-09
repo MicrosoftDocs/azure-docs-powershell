@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates a workbook that has already been added.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.applicationinsights/update-azapplicationinsightsworkbook) for up-to-date information.
+
 ## SYNTAX
 
 ### UpdateExpanded (Default)

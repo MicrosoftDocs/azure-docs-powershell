@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Lists key credentials and password credentials for an service principal.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.resources/get-azadspcredential) for up-to-date information.
+
 ## SYNTAX
 
 ### ObjectIdParameterSet (Default)

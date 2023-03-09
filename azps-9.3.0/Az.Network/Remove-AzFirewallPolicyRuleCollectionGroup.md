@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Removes a Azure Firewall Policy Rule Collection Group in a Azure firewall policy
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/remove-azfirewallpolicyrulecollectiongroup) for up-to-date information.
+
 ## SYNTAX
 
 ### RemoveByNameParameterSet (Default)

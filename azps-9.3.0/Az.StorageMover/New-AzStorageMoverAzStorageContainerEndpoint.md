@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates an AzStorageContainer endpoint resource, which represents a data transfer source or destination.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storagemover/new-azstoragemoverazstoragecontainerendpoint) for up-to-date information.
+
 ## SYNTAX
 
 ```

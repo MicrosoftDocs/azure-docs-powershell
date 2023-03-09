@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Updates a circuit connection configuration created in Private Peerings for an Express Route Circuit. 
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/set-azexpressroutecircuitconnectionconfig) for up-to-date information.
+
 ## SYNTAX
 
 ### SetByResource (Default)

@@ -1,7 +1,7 @@
 ---
 description: Learn how to create and use service principals with Azure PowerShell.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/03/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -46,8 +46,8 @@ creating a service principal, you choose the type of sign-in authentication it u
 
 > [!NOTE]
 > If your account doesn't have permission to create a service principal, `New-AzADServicePrincipal`
-> will return an error message containing "Insufficient privileges to complete the operation".
-> Contact your Azure Active Directory admin to create a service principal.
+> returns an error message containing "Insufficient privileges to complete the operation". Contact
+> your Azure Active Directory admin to create a service principal.
 
 There are two types of authentication available for service principals: Password-based
 authentication, and certificate-based authentication.
@@ -72,7 +72,7 @@ password. Make sure that you store this value somewhere secure to authenticate w
 principal. Its value _won't_ be displayed in the console output. If you lose the password,
 [reset the service principal credentials](#reset-credentials).
 
-The following code will allow you to export the secret:
+The following code allows you to export the secret:
 
 ```powershell-interactive
 $sp.PasswordCredentials.SecretText
@@ -158,7 +158,7 @@ Remove-AzRoleAssignment -ObjectId <service principal object ID> -RoleDefinitionN
 
 > [!NOTE]
 > If your account doesn't have permission to assign a role, you see an error message that your
-> account "does not have authorization to perform action
+> account "doesn't have authorization to perform action
 > 'Microsoft.Authorization/roleAssignments/write'". Contact your Azure Active Directory admin to
 > manage roles.
 
@@ -174,7 +174,7 @@ Get-AzRoleAssignment -ServicePrincipalName ServicePrincipalName
 ## Sign in using a service principal
 
 Test the new service principal's credentials and permissions by signing in. To sign in with a
-service principal, you need the `applicationId` value associated with it, and the tenant it was
+service principal, you need the `applicationId` value associated with it, and the tenant it's
 created under.
 
 To sign in with a service principal using a password:
@@ -199,7 +199,7 @@ For instructions on importing a certificate into a credential store accessible b
 
 If you forget the credentials for a service principal, use
 [New-AzADSpCredential](/powershell/module/az.resources/new-azadspcredential) to add a new credential
-with a random password. This cmdlet does not support user-defined credentials when resetting the
+with a random password. This cmdlet doesn't support user-defined credentials when resetting the
 password.
 
 > [!IMPORTANT]

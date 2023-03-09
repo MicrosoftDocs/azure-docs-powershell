@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Enables task scheduling on the specified compute node.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.batch/enable-azbatchcomputenodescheduling) for up-to-date information.
+
 ## SYNTAX
 
 ### Id (Default)

@@ -14,6 +14,9 @@ Updates an existing output under an existing streaming job.
 This can be used to partially update (ie.
 update one or two properties) an output without affecting the rest the job or output definition.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.streamanalytics/update-azstreamanalyticsoutput) for up-to-date information.
+
 ## SYNTAX
 
 ### Update (Default)

@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Use for troubleshooting only. This command will roll the storage sync server certificate used to describe the server identity to the storage sync service.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.storagesync/reset-azstoragesyncservercertificate) for up-to-date information.
+
 ## SYNTAX
 
 ### StringParameterSet (Default)

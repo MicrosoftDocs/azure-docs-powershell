@@ -1,7 +1,7 @@
 ---
 description: How to use Azure PowerShell that is preinstalled in a Docker image.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/03/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -15,14 +15,14 @@ get started using Azure PowerShell in the Docker container.
 
 ## Finding available images
 
-The released images require Docker 17.05 or newer. It is also expected that you are able to run
+The released images require Docker 17.05 or newer. It's also expected that you are able to run
 Docker without `sudo` or local administrative rights. Please follow Docker's official
 [instructions][install] to install `docker` correctly.
 
 The latest container image contains the latest version of PowerShell and the latest Azure PowerShell
 modules supported with the Az module.
 
-For each new release of the Az module we are releasing an image for the following operating systems:
+For each new release of the Az module we're releasing an image for the following operating systems:
 
 - Ubuntu 20.04 (default)
 - Debian 9

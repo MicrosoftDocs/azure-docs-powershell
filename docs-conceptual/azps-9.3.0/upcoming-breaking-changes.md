@@ -1,7 +1,7 @@
 ---
 description: Learn about upcoming breaking changes to the Azure Az PowerShell module
 ms.custom: devx-track-azurepowershell
-ms.date: 01/10/2023
+ms.date: 02/10/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -430,7 +430,7 @@ title: Upcoming breaking changes in Azure PowerShell
 ### `Get-AzNetAppFilesVault`
 
 - Cmdlet breaking-change will happen to all parameter set
-  - The output type is changing from the existing type :'Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesBackupPolicy' to the new type :'PSNetAppFilesVault'
+  - The cmdlet is being deprecated. There will be no replacement for it.
 
 ### `New-AzNetAppFilesBackupPolicy`
 
@@ -1242,3 +1242,5 @@ title: Upcoming breaking changes in Azure PowerShell
 
 - Cmdlet breaking-change will happen to all parameter set
   - The cmdlet is being deprecated. There will be no replacement for it.
+
+

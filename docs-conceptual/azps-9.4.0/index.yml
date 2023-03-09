@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 01/10/2023
+  ms.date: 02/15/2023
   ms.devlang: powershell
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
@@ -30,12 +30,14 @@ landingContent:
       - linkListType: learn
         links:
           - text: Automate Azure tasks from PowerShell
-            url: /learn/modules/automate-azure-tasks-with-powershell/
+            url: /training/modules/automate-azure-tasks-with-powershell/
+          - text: Choose the best Azure command line tools for managing and provisioning your cloud infrastructure
+            url: /training/modules/azure-command-line-tools-intro/
   - title: Installation
     linkLists:
       - linkListType: download
         links:
-          - text: Install with PowerShellGet
+          - text: Install with PowerShell
             url: install-az-ps.md
           - text: Install with MSI
             url: install-az-ps-msi.md
@@ -58,7 +60,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Cmdlet reference
-            url: /powershell/module/?view=azps-9.3.0
+            url: /powershell/module/?view=azps-9.4.0
   - title: Identity and Authentication
     linkLists:
       - linkListType: whats-new

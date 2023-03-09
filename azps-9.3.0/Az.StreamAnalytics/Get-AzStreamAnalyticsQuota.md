@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Retrieves the subscription's current quota information in a particular region.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.streamanalytics/get-azstreamanalyticsquota) for up-to-date information.
+
 ## SYNTAX
 
 ```

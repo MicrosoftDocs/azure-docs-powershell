@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Refreshes (Refresh server) the information received from the Azure Site Recovery Services Provider.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.recoveryservices/update-azrecoveryservicesasrservicesprovider) for up-to-date information.
+
 ## SYNTAX
 
 ```

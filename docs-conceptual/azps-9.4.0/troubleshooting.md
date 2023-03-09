@@ -1,7 +1,7 @@
 ---
 description: Troubleshooting the Azure Az PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/03/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -78,8 +78,8 @@ To install the package, your proxy needs to allow HTTPS connections to [www.powe
 ## Object reference not set to an instance of an object
 
 The message "_object reference not set to an instance of an object_" means that you are referring to
-an object that is null or an Azure resource that does not exist or that you do not have permissions
-to access.
+an object that's null or an Azure resource that doesn't exist or that you don't have permissions to
+access.
 
 ```azurepowershell
 $resourceId =  '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/<resource-group-name>/providers/Microsoft.Web/sites/<webapp-name>/privateEndpointConnections/<endpoint-name>'
@@ -111,7 +111,7 @@ previously referenced links.
 
 ## Get-AzAdGroupMember doesn't return service principals
 
-Due to limitations with the current Graph API, service principals are not returned by
+Due to limitations with the current Graph API, service principals aren't returned by
 [Get-AzAdGroupMember](/powershell/module/az.resources/get-azadgroupmember) in Az 7.x. As a
 workaround, [Invoke-AzRestMethod](/powershell/module/az.accounts/invoke-azrestmethod) can be used
 with the beta version of the Microsoft Graph API.
@@ -141,7 +141,7 @@ same version of PowerShell.
 
 > [!IMPORTANT]
 > When AzureRM is installed in the `AllUsers` scope of Windows PowerShell, it's installed in a
-> location that's part of the `$env:PSModulePath` for PowerShell 7. This is not supported due to
+> location that's part of the `$env:PSModulePath` for PowerShell 7. This isn't supported due to
 > conflicts between the AzureRM and Az PowerShell modules.
 
 Both Az and AzureRM may coexist on the same Windows system, but only if AzureRM is installed in the
@@ -159,9 +159,9 @@ sign in to your Azure account from a PowerShell session.
 DeviceCodeCredential authentication failed: Persistence check failed. Reason: KeyChain authorization/authentication failed. .Error code: -25293. OS error code -25293.
 ```
 
-As a workaround for this issue, you can disable storing credentials between sessions by running
-the following command. After making this change however, you will need to run `Connect-AzAccount`
-each time you start a new PowerShell session.
+As a workaround for this issue, you can disable storing credentials between sessions by running the
+following command. After making this change however, you need to run `Connect-AzAccount` each time
+you start a new PowerShell session.
 
 ```azurepowershell
 Disable-AzContextAutosave
@@ -182,11 +182,11 @@ You can also upgrade to Az PowerShell module version 6.0 or greater.
 
 ### Timeline
 
-The requirement will be in effect starting 10/15/2021.
+The requirement went into effect October 15, 2021.
 
 ### Impacted versions
 
-The following versions of Azure PowerShell are impacted by the AzureAD breaking change:
+The following versions of Azure PowerShell are affected by the AzureAD breaking change:
 
 - Az.Resources PowerShell module version 3.5.1-preview or lesser.
 - Az PowerShell module version 5.9.0 or lesser.
@@ -196,7 +196,7 @@ If you are still encountering issues after upgrading, feel free to open an
 
 ### Workaround
 
-If you cannot upgrade to the PowerShell modules described above, you may follow those steps when
+If you can't upgrade to the PowerShell modules described previously, you may follow those steps when
 creating a service principal:
 
 - If needed, [add your custom domain name using Azure Active Directory portal](/azure/active-directory/fundamentals/add-custom-domain)

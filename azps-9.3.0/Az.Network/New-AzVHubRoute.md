@@ -12,6 +12,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Creates a VHubRoute object which can be passed as parameter to the New-AzVHubRouteTable command.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.network/new-azvhubroute) for up-to-date information.
+
 ## SYNTAX
 
 ```powershell

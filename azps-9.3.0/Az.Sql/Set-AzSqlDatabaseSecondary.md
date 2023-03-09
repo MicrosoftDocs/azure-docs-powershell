@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Switches a secondary database to be primary in order to initiate failover.
 
+> [!NOTE]
+>This is the previous version of our documentation. Please consult [the most recent version](/powershell/module/az.sql/set-azsqldatabasesecondary) for up-to-date information.
+
 ## SYNTAX
 
 ### NoOptionsSet (Default)

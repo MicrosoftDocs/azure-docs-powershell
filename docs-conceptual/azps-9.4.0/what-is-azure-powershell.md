@@ -1,7 +1,7 @@
 ---
 description: This article is an introduction to Azure PowerShell and its features.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/03/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: overview
@@ -66,7 +66,7 @@ information, see [Query output of Azure PowerShell](/powershell/azure/queries-az
 
 ## Other modules
 
-The AzureAD and MSOnline PowerShell modules are not part of the Az PowerShell module. For more
+The AzureAD and MSOnline PowerShell modules aren't part of the Az PowerShell module. For more
 information about those modules, see the documentation for
 [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/overview).
 
@@ -86,7 +86,7 @@ features are no longer being added, and it's not cross platform. For more inform
 > The cmdlets in the Azure PowerShell module are for managing legacy Azure resources that use
 > Service Management APIs.
 
-Some of the cmdlets in the Azure PowerShell module have been deprecated and others have been
-deprecated for new customers with retirement announced for existing customers as noted on their
-corresponding reference documentation pages. For more information, see
+Some cmdlets in the Azure PowerShell module have been deprecated and others have been deprecated for
+new customers with retirement announced for existing customers as noted on their corresponding
+reference documentation pages. For more information, see
 [Overview of the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/overview)

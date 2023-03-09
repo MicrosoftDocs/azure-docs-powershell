@@ -1,7 +1,7 @@
 ---
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.custom: devx-track-azurepowershell
-ms.date: 02/03/2023
+ms.date: 02/21/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -79,9 +79,8 @@ $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName
 ```
 
 > [!WARNING]
-> The provided service principal secret will be included in the `AzureRmContext.json` file found in
-> the user profile ( `$env:USERPROFILE\.Azure` ). Please ensure that this directory has appropriate
-> protections.
+> The provided service principal secret is stored in the `AzureRmContext.json` file in your user
+> profile (`$env:USERPROFILE\.Azure`). Ensure this directory has appropriate protections.
 
 To get the service principal's credentials as the appropriate object, use the
 [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This
@@ -116,20 +115,20 @@ local certificate store based on a certificate thumbprint.
 Connect-AzAccount -ApplicationId $appId -Tenant $tenantId -CertificateThumbprint <thumbprint>
 ```
 
-When using a service principal instead of a registered application, specify the `ServicePrincipal`
-parameter and provide the service principal's Application ID as the `-ApplicationId` parameter's
-value.
+When using a service principal instead of a registered application, specify the **ServicePrincipal**
+parameter and provide the service principal's Application ID as the value for the **ApplicationId**
+parameter.
 
 ```azurepowershell-interactive
 Connect-AzAccount -ServicePrincipal -ApplicationId $servicePrincipalId -Tenant $tenantId -CertificateThumbprint <thumbprint>
 ```
 
-In PowerShell 5.1, the certificate store can be managed and inspected with the
-[PKI](/powershell/module/pki) module. For PowerShell 6.x and later, the process is more complicated.
+In Windows PowerShell 5.1, the certificate store can be managed and inspected with the
+[PKI](/powershell/module/pki) module. For PowerShell 7.x and later, the process is more complicated.
 The following scripts show you how to import an existing certificate into the certificate store
 accessible by PowerShell.
 
-#### Import a certificate in PowerShell 5.1
+#### Import a certificate in Windows PowerShell 5.1
 
 ```powershell-interactive
 # Import a PFX
@@ -137,7 +136,7 @@ $credentials = Get-Credential -Message 'Provide PFX private key password'
 Import-PfxCertificate -FilePath <path to certificate> -Password $credentials.Password -CertStoreLocation cert:\CurrentUser\My
 ```
 
-#### Import a certificate in PowerShell Core 6.x and later
+#### Import a certificate in PowerShell 7.x and later
 
 ```powershell-interactive
 # Import a PFX
@@ -157,8 +156,8 @@ $store.Close()
 
 Managed identities are a feature of Azure Active Directory. Managed identities are service
 principals assigned to resources that run in Azure. You can use a managed identity service principal
-for sign-in, and acquire an app-only access token to access other resources. Managed identities are
-only available on resources running in an Azure cloud.
+for sign-in, and an app-only access token to access other resources. Managed identities are only
+available on resources running in an Azure cloud.
 
 This example connects using the managed identity of the host environment. For example, if executed
 on a VirtualMachine with an assigned Managed Service Identity, this allows the code to sign in using
@@ -168,9 +167,9 @@ that assigned identity.
  Connect-AzAccount -Identity
 ```
 
-This example connects using the Managed Service Identity of myUserAssignedIdentity. It adds the user
-assigned identity to the virtual machine, then connects using the ClientId of the user assigned
-identity. For more information, see
+The following example connects using the Managed Service Identity of `myUserAssignedIdentity`. It
+adds the user assigned identity to the virtual machine, then connects using the `ClientId` of the
+user assigned identity. For more information, see
 [Configure managed identities for Azure resources on an Azure VM](/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm).
 
 ```azurepowershell-interactive
@@ -185,13 +184,13 @@ yyyy-yyyy-yyyy-yyyy    Subscription1    xxxx-xxxx-xxxx-xxxx     AzureCloud
 
 ## Sign in with a non-default tenant or as a Cloud Solution Provider (CSP)
 
-If your account is associated with more than one tenant, sign-in requires the `Tenant` parameter to
-be specified when connecting. This parameter works with any sign-in method. When logging in, this
+If your account is associated with more than one tenant, sign-in requires the **Tenant** parameter
+to be specified when connecting. This parameter works with any sign-in method. When logging in, this
 parameter value can either be the Azure object ID of the tenant (Tenant ID) or the fully qualified
 domain name of the tenant.
 
 If you're a [Cloud Solution Provider (CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/), the
-value for the `Tenant` parameter **must** be a tenant ID.
+value for the **Tenant** parameter must be a tenant ID.
 
 ```azurepowershell-interactive
 Connect-AzAccount -Tenant '00000000-0000-0000-0000-000000000000'
@@ -200,14 +199,14 @@ Connect-AzAccount -Tenant '00000000-0000-0000-0000-000000000000'
 ## Sign in to another Cloud
 
 Azure cloud services offer environments compliant with regional data-handling laws. For accounts in
-a regional cloud, set the environment when you sign in with the `Environment` parameter. This
+a regional cloud, set the environment when you sign in with the **Environment** parameter. This
 parameter works with any sign-in method. For example, if your account is in Azure China 21Vianet:
 
 ```azurepowershell-interactive
 Connect-AzAccount -Environment AzureChinaCloud
 ```
 
-The following command gets a list of available environments:
+The following command returns a list of available environments:
 
 ```azurepowershell-interactive
 Get-AzEnvironment | Select-Object -Property Name
