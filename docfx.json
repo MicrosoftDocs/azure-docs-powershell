@@ -572,8 +572,8 @@
                 "docs-conceptual/azuresmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
-                "azps-9.4.0/**/*": "GitHub",
-                "azps-9.5.0/**/*": "None",
+                "azps-9.5.0/**/*": "GitHub",
+                "azps-9.4.0/**/*": "None",
                 "azps-8.3.0/**/*": "None",
                 "azps-0.10.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
@@ -607,7 +607,7 @@
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new",
             "ms.topic": "reference",
             "uhfHeaderId": "Azure",
-            "ms.date": "02/07/2023"
+            "ms.date": "03/09/2023"
         },
         "dest": "azureps",
         "lruSize": 0,
