@@ -126,7 +126,7 @@ title: Upcoming breaking changes in Azure PowerShell
 ### `New-AzVmss`
 
 - Cmdlet breaking-change will happen to all parameter set
-  - Starting May 2023, the "New-AzVmss" cmdlet will use new defaults: Flexible orchestration mode, use of Trusted Launch, and enable NATv2 configuration for Load Balancer. To learn more about Flexible Orchestration modes, visit https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes. For Trusted Launch, visit https://learn.microsoft.com/azure/virtual-machines/trusted-launch.
+  - Starting May 2023, the "New-AzVmss" cmdlet will use new defaults: Flexible orchestration mode, use of Trusted Launch, and enable NATv2 configuration for Load Balancer. To learn more about Flexible Orchestration modes, visit [https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes). For Trusted Launch, visit [https://learn.microsoft.com/azure/virtual-machines/trusted-launch](/azure/virtual-machines/trusted-launch).
 
 ## Az.DataLakeStore
 
