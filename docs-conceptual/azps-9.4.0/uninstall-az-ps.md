@@ -1,7 +1,7 @@
 ---
 description: How to perform a complete uninstall of Azure PowerShell
 ms.custom: devx-track-azurepowershell
-ms.date: 02/07/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -38,7 +38,7 @@ should follow the instructions outlined in option 2.
 ### Option 2: Uninstall the Az PowerShell module from PowerShellGet
 
 When the Az PowerShell module is installed, it installs numerous PowerShell modules for different
-Azure services. All of the modules begin with an Az prefix.
+Azure services. All the modules begin with an Az prefix.
 
 > [!IMPORTANT]
 > Run PowerShell elevated as an admin if any version of the Az PowerShell module is installed in the
@@ -52,7 +52,7 @@ PowerShell module completely, you must uninstall each module individually.
 > [!NOTE]
 > Uninstallation can be complicated if you have more than one version of the Az PowerShell module
 > installed. Because of this complexity, we only support uninstalling all versions of the Az
-> PowerShell module that are currently installed.
+> PowerShell module that are installed.
 
 First, you'll need a list of all the Az PowerShell module versions installed on your system.
 
@@ -114,11 +114,11 @@ If you installed AzureRM with PowerShellGet, then you can remove the modules wit
 [Uninstall-AzureRM](/powershell/module/az.accounts/uninstall-azurerm) cmdlet, available as part of
 the `Az.Accounts` module.
 
-In order to use `Uninstall-AzureRM` from the `Az.Accounts` module, you will need to have the Az
-PowerShell module installed. Having both the AzureRM and the Az modules installed at the same time
-is not supported, however the Az module can be used to immediately uninstall the AzureRM module. You
-can install the Az module and bypass the AzureRM module warning with the following command if you do
-not have the Az module installed already:
+To use `Uninstall-AzureRM` from the `Az.Accounts` module, you need to have the Az PowerShell module
+installed. Having both the AzureRM and the Az modules installed at the same time isn't supported,
+however the Az module can be used to immediately uninstall the AzureRM module. You can install the
+Az module and bypass the AzureRM module warning with the following command if you don't have the Az
+module installed already:
 
 ```powershell
 Install-Module -Name Az -AllowClobber -Scope CurrentUser

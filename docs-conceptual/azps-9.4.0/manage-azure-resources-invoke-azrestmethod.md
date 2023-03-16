@@ -41,9 +41,8 @@ Invoke-AzRestMethod @getParams
 ```
 
 To allow maximum flexibility, most of the parameters for `Invoke-AzRestMethod` are optional.
-However, when you're managing resources within a resource group, you'll most likely need to provide
-either the full ID to the resource or parameters like resource group, resource provider, and
-resource type.
+However, when you're managing resources within a resource group, you'll need to provide either the
+full ID to the resource or parameters like resource group, resource provider, and resource type.
 
 The `ResourceType` and `Name` parameters can take multiple values when targeting resources that
 require more than one name. For example, to manipulate a saved search in a Log Analytics workspace,
@@ -118,15 +117,15 @@ Invoke-AzRestMethod @specificIpParams
 
 The `*-AzResource` cmdlets allow you to customize the REST API call to Azure by specifying the
 resource type, the API version, and the properties to be updated. However, the properties need to be
-created first as a `PSObject`. This process adds an additional level of complexity and can easily
-become complicated.
+created first as a `PSObject`. This process adds an additional level of complexity and can become
+complicated.
 
-`Invoke-AzRestMethod` offers a simple way to manage Azure resources. As shown in the previous
-example, you can build a JSON string and use it to customize the REST API call without having to
-precreate any `PSObjects`.
+`Invoke-AzRestMethod` offers a way to manage Azure resources. As shown in the previous example, you
+can build a JSON string and use it to customize the REST API call without having to pre-create any
+`PSObjects`.
 
-If you're already familiar with the `*-AzResource` cmdlets, you can continue using them. We have no
-plans to stop supporting them. With `Invoke-AzRestMethod`, we have added a new cmdlet to your toolkit.
+If you're already familiar with the `*-AzResource` cmdlets, you can continue using them. We've no
+plans to stop supporting them. With `Invoke-AzRestMethod`, we've added a new cmdlet to your toolkit.
 
 ## See Also
 

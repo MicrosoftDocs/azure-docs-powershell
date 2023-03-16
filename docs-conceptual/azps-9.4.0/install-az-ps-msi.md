@@ -1,7 +1,7 @@
 ---
 description: How to install Azure PowerShell on Windows using an MSI
 ms.custom: devx-track-azurepowershell
-ms.date: 02/15/2023
+ms.date: 03/03/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -20,7 +20,7 @@ For instructions on using PowerShell to install Azure PowerShell, see
 
 The MSI installer on Windows is designed to install Azure PowerShell for PowerShell 5.1 only. For
 installation on non-Windows platforms or later versions of PowerShell,
-[Install with PowerShell](install-az-ps.md). To check your PowerShell version, run the command:
+[Install with PowerShell](install-az-ps.md). To determine your PowerShell version, run the command:
 
 ```powershell-interactive
 $PSVersionTable.PSVersion
@@ -39,9 +39,9 @@ The MSI package for Azure PowerShell is available from
 
 1. Go to https://github.com/Azure/azure-powershell/releases.
 1. Look for the most recent Gallery Module for Azure PowerShell (these are listed chronologically
-   and are typically just a release version with no name like "4.7.0").
-1. Scroll down to the bottom of the patch notes and click on the arrow next to "Assets" to reveal
-   the MSI options.
+   and are typically a release version with no name like "4.7.0").
+1. Scroll down to the bottom of the patch notes and click the arrow next to "Assets" to reveal the
+   MSI options.
 1. Click on the Az-Cmdlets MSI of your choice to start the download.
 
 If you have installed earlier versions of Azure PowerShell using the MSI, the installer
