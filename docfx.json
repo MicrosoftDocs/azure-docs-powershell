@@ -164,7 +164,7 @@
                 "az*-*/ApiManagement.ServiceManagement/*.yml": "api-management",
                 "az*-*/Azure.Storage/*.yml": "storage",
                 "az*-*/Azure.aks/*.yml": "container-service",
-                "az*-*/Az*.AnalysisServices/*.yml": "azure-analysis-services",
+                "az*-*/Az*.AnalysisServices/*.yml": "azure-services",
                 "az*-*/Az*.ApiManagement/*.yml": "api-management",
                 "az*-*/Az*.ApplicationInsights/*.yml": "azure-monitor",
                 "az*-*/Az*.Automation/*.yml": "automation",
