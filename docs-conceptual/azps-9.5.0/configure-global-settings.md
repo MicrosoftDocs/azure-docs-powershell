@@ -69,6 +69,24 @@ Update-AzConfig -DefaultSubscriptionForLogin <Subscription ID or Name>
 > Not to be confused with **the subscription of the default context**, the
 > **DefaultSubscriptionForLogin** configuration takes effect only when authenticating to Azure.
 
+## Azure region identification
+
+Azure customers can choose to deploy resources in many different regions. In some cases, customers
+may be able to reduce costs by selecting nearby regions offering the same services. If a nearby
+region is identified, a message will display the region to select for future deployments.
+
+### Disabling region recommendation message
+
+In the following example, the `Update-AzConfig` cmdlet is used to disable the region recommendation
+message:
+
+```azurepowershell-interactive
+Update-AzConfig -DisplayRegionIdentified $false
+```
+
+For more information about Azure regions, see
+[choose the right Azure region for you](https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview).
+
 ## Replicating settings
 
 To replicate your settings from one environment to another, you use the `Export-AzConfig` cmdlet to
