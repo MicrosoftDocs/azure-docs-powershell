@@ -16,8 +16,14 @@
     href: azureps-support-lifecycle.md
 - name: Install
   items:
+  - name: Install
+    href: install-azure-powershell.md
   - name: Install - Windows
     href: install-azps-windows.md
+  - name: Install - Linux
+    href: install-azps-linux.md
+  - name: Install - macOS
+    href: install-azps-macos.md
   - name: Run in Azure Cloud Shell
     href: https://shell.azure.com
   - name: Azure PowerShell in Docker
