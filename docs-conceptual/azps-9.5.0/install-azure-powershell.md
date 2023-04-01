@@ -23,7 +23,7 @@ The current version of Azure PowerShell is 9.5.0. For information about the late
 - [Install on Linux](install-azps-linux.md)
 - [Install on macOS](install-azps-macos.md)
 - [Run in Azure Cloud Shell](https://shell.azure.com/)
-- [Run in Docker container](azureps-in-docker)
+- [Run in Docker container](azureps-in-docker.md)
 
 PowerShell version 7 or higher is the recommended version of PowerShell for use with the Az
 PowerShell module on all platforms including Windows, macOS, and Linux.
