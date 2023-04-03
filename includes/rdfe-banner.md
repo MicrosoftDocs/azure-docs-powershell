@@ -1,5 +1,6 @@
 ---
 ms.topic: include
+ms.custom: devx-track-azurepowershell
 ms.date: 07/19/2021
 ---
 
