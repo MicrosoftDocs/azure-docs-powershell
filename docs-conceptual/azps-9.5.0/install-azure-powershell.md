@@ -16,7 +16,7 @@ generally available modules and makes their cmdlets available for use.
 
 ## Install
 
-The current version of Azure PowerShell is 9.5.0. For information about the latest release, see the
+[!INCLUDE [current-version](../includes/current-version.md)] For information about the latest release, see the
 [release notes](release-notes-azureps.md).
 
 - [Install on Windows](install-azps-windows.md)
