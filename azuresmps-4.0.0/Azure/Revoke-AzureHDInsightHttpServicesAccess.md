@@ -1,22 +1,22 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 6818F49E-0A51-4D99-BC3D-5A90F1F30C33
+ms.assetid: A1DFA523-B532-4902-838D-74C8CA97A335
 online version:
 schema: 2.0.0
 ---
 
-# Revoke-AzureHDInsightRdpAccess
+# Revoke-AzureHDInsightHttpServicesAccess
 
 ## SYNOPSIS
-Disables RDP access to an HDInsight cluster.
+Disables HTTP access to a cluster.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 ## SYNTAX
 
 ```
-Revoke-AzureHDInsightRdpAccess [-Certificate <X509Certificate2>] [-HostedService <String>] [-Endpoint <Uri>]
- [-IgnoreSslErrors <Boolean>] -Location <String> -Name <String> [-Subscription <String>]
+Revoke-AzureHDInsightHttpServicesAccess [-Certificate <X509Certificate2>] [-HostedService <String>]
+ [-IgnoreSslErrors <Boolean>] [-Endpoint <Uri>] -Location <String> -Name <String> [-Subscription <String>]
  [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
@@ -27,9 +27,9 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
 
-The **Revoke-AzureHDInsightRdpAccess** cmdlet disables Remote Desktop Protocol (RDP) access to an Azure HDInsight cluster.
+The **Revoke-AzureHDInsightHttpServicesAccess** cmdlet disables HTTP access to a cluster for ODBC, Ambari, Oozie and WebHCatalog web services.
 
 ## EXAMPLES
 
@@ -67,8 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostedService
-Specifies the namespace of an HDInsight service.
-If you do not specify this parameter, this cmdlet uses the default namespace.
+Specifies the namespace of an HDInsight service if you do not want to use the default namespace.
 
 ```yaml
 Type: String
@@ -98,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the Azure region in which a cluster is located.
+Specifies the region in which an HDInsight cluster is located.
 
 ```yaml
 Type: String
@@ -113,7 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of an Azure HDInsight cluster.
+Specifies the name of a cluster.
+This cmdlet disables HTTP access to the cluster that this parameter specifies.
 
 ```yaml
 Type: String
@@ -144,8 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -Subscription
-Specifies a subscription.
-This cmdlet revokes Remote Desktop Protocol (RDP) access for the subscription that this parameter specifies.
+Specifies the subscription account that contains the HDInsight cluster to revoke.
 
 ```yaml
 Type: String
@@ -170,6 +169,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-AzureHdinsightRdpAccess](./Grant-AzureHdinsightRdpAccess.md)
+[Grant-AzureHDInsightHttpServicesAccess](./Grant-AzureHDInsightHttpServicesAccess.md)
 
 

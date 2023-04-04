@@ -1,29 +1,29 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: EE2ADA86-B2A3-4F6F-96EF-BB61D6DC550F
+ms.assetid: 3E3C9626-7AED-4B15-93D0-0B79AD17A834
 online version:
 schema: 2.0.0
 ---
 
-# Stop-AzureHDInsightJob
+# Get-AzureHDInsightJob
 
 ## SYNOPSIS
-Stops an HDInsight job.
+Gets HDInsight jobs.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 ## SYNTAX
 
-### Start jobDetails on an HDInsight Cluster (Default)
+### Get jobDetails History of a HDInsight Cluster (Default)
 ```
-Stop-AzureHDInsightJob -Cluster <String> [-Credential <PSCredential>] -JobId <String>
- [-Profile <AzureSMProfile>] [<CommonParameters>]
+Get-AzureHDInsightJob -Cluster <String> [-Credential <PSCredential>] [-IgnoreSslErrors <Boolean>]
+ [-JobId <String>] [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-### Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
+### Get jobDetails History of a HDInsight Cluster (with Specific Subscription Credential)
 ```
-Stop-AzureHDInsightJob [-Certificate <X509Certificate2>] [-HostedService <String>] -Cluster <String>
- [-Endpoint <Uri>] [-IgnoreSslErrors <Boolean>] -JobId <String> [-Subscription <String>]
+Get-AzureHDInsightJob [-Certificate <X509Certificate2>] [-HostedService <String>] -Cluster <String>
+ [-Endpoint <Uri>] [-IgnoreSslErrors <Boolean>] [-JobId <String>] [-Subscription <String>]
  [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
@@ -34,9 +34,9 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
 
-The **Stop-AzureHDInsightJob** cmdlet stops an Azure HDInsight job on the specified cluster.
+The **Get-AzureHDInsightJob** cmdlet gets recent Azure HDInsight jobs for a specified cluster and displays them in reverse chronological order.
 
 ## EXAMPLES
 
@@ -47,7 +47,7 @@ Specifies the management certificate for an Azure subscription.
 
 ```yaml
 Type: X509Certificate2
-Parameter Sets: Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
+Parameter Sets: Get jobDetails History of a HDInsight Cluster (with Specific Subscription Credential)
 Aliases: Cert
 
 Required: False
@@ -59,17 +59,17 @@ Accept wildcard characters: False
 
 ### -Cluster
 Specifies a cluster.
-This cmdlet stops a job that runs on the cluster that this parameter specifies.
+This cmdlet gets HDInsight jobs that run on the cluster that this parameter specifies.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: ClusterName
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -79,7 +79,7 @@ You can specify this parameter instead of the *Subscription* parameter to authen
 
 ```yaml
 Type: PSCredential
-Parameter Sets: Start jobDetails on an HDInsight Cluster
+Parameter Sets: Get jobDetails History of a HDInsight Cluster
 Aliases: Cred
 
 Required: False
@@ -95,7 +95,7 @@ If you do not specify this parameter, this cmdlet uses the default endpoint.
 
 ```yaml
 Type: Uri
-Parameter Sets: Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
+Parameter Sets: Get jobDetails History of a HDInsight Cluster (with Specific Subscription Credential)
 Aliases:
 
 Required: False
@@ -110,7 +110,7 @@ Specifies the namespace of an HDInsight service if you do not want to use the de
 
 ```yaml
 Type: String
-Parameter Sets: Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
+Parameter Sets: Get jobDetails History of a HDInsight Cluster (with Specific Subscription Credential)
 Aliases: CloudServiceName
 
 Required: False
@@ -125,7 +125,7 @@ Indicates whether Secure Sockets Layer (SSL) errors are ignored.
 
 ```yaml
 Type: Boolean
-Parameter Sets: Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -136,17 +136,17 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-Specifies the ID of the HDInsight job to stop.
+Specifies the ID of a job to get.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: Id
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -167,12 +167,11 @@ Accept wildcard characters: False
 ```
 
 ### -Subscription
-Specifies a subscription.
-This cmdlet stops a job for the subscription that this parameter specifies.
+Specifies the subscription that contains the HDInsight jobs to get.
 
 ```yaml
 Type: String
-Parameter Sets: Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
+Parameter Sets: Get jobDetails History of a HDInsight Cluster (with Specific Subscription Credential)
 Aliases: Sub
 
 Required: False
@@ -193,9 +192,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureHDInsightJob](./Get-AzureHDInsightJob.md)
-
 [Start-AzureHDInsightJob](./Start-AzureHDInsightJob.md)
+
+[Stop-AzureHDInsightJob](./Stop-AzureHDInsightJob.md)
 
 [Wait-AzureHDInsightJob](./Wait-AzureHDInsightJob.md)
 

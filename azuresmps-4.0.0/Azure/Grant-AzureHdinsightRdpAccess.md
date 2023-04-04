@@ -1,23 +1,23 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 7D73D37B-17EE-4FF8-9A21-D2014D5417D6
+ms.assetid: 95CCEB79-EAC4-4F56-B289-5401F976E5F5
 online version:
 schema: 2.0.0
 ---
 
-# Remove-AzureHDInsightCluster
+# Grant-AzureHDInsightRdpAccess
 
 ## SYNOPSIS
-Deletes an HDInsight cluster from a subscription.
+Grants RDP access to an HDInsight cluster.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 ## SYNTAX
 
 ```
-Remove-AzureHDInsightCluster [-Certificate <X509Certificate2>] [-HostedService <String>] [-Endpoint <Uri>]
- [-IgnoreSslErrors <Boolean>] -Name <String> [-Subscription <String>] [-Profile <AzureSMProfile>]
- [<CommonParameters>]
+Grant-AzureHDInsightRdpAccess [-Certificate <X509Certificate2>] [-HostedService <String>]
+ -RdpCredential <PSCredential> -RdpAccessExpiry <DateTime> [-Endpoint <Uri>] [-IgnoreSslErrors <Boolean>]
+ -Location <String> -Name <String> [-Subscription <String>] [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,20 +27,11 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
 
-The **Remove-AzureHDInsightCluster** cmdlet deletes the specified HDInsight service cluster from a subscription.
-This operation also deletes any data stored in the Hadoop Distributed File System (HDFS) on the cluster.
-Data stored in the associated Azure Storage account is not deleted.
+The **Grant-AzureHDInsightRdpAccess** cmdlet grants Remote Desktop Protocol (RDP) access to an Azure HDInsight cluster.
 
 ## EXAMPLES
-
-### Example 1: Remove a cluster
-```
-PS C:\>Remove-AzureHDInsightCluster -Name "HDICluster"
-```
-
-This command deletes the HDInsight cluster named HDICluster.
 
 ## PARAMETERS
 
@@ -76,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -HostedService
-Specifies the namespace of an HDInsight service if you do not want to use the default namespace.
+Specifies the namespace of an HDInsight service.
+If you do not specify this parameter, this cmdlet uses the default namespace.
 
 ```yaml
 Type: String
@@ -105,8 +97,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Location
+Specifies the Azure region in which a cluster is located.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
-Specifies the name of the HDInsight cluster to remove.
+Specifies the name of an Azure HDInsight cluster.
 
 ```yaml
 Type: String
@@ -136,8 +143,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RdpAccessExpiry
+Specifies the expiration, as a **DateTime** object, for Remote Desktop Protocol (RDP) access to a cluster.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RdpCredential
+Specifies the credentials for RDP access to a cluster.
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Subscription
-Specifies the subscription account that contains the HDInsight cluster to remove.
+Specifies the subscription that contains the HDInsight cluster to which to grant access.
 
 ```yaml
 Type: String
@@ -162,10 +199,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureHDInsightCluster](./Get-AzureHDInsightCluster.md)
-
-[New-AzureHDInsightCluster](./New-AzureHDInsightCluster.md)
-
-[Use-AzureHDInsightCluster](./Use-AzureHDInsightCluster.md)
+[Revoke-AzureHdinsightRdpAccess](./Revoke-AzureHdinsightRdpAccess.md)
 
 

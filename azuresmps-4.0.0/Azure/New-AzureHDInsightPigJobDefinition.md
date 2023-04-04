@@ -1,22 +1,22 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: E11AAB11-0CBF-4746-91D7-4D5E64801C29
+ms.assetid: 227D933A-9272-4C53-89AF-711379B47A74
 online version:
 schema: 2.0.0
 ---
 
-# New-AzureHDInsightSqoopJobDefinition
+# New-AzureHDInsightPigJobDefinition
 
 ## SYNOPSIS
-Defines a new Sqoop job.
+Defines a new Pig job for an HDInsight service.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 ## SYNTAX
 
 ```
-New-AzureHDInsightSqoopJobDefinition [-Command <String>] [-File <String>] [-Files <String[]>]
- [-StatusFolder <String>] [-Profile <AzureSMProfile>] [<CommonParameters>]
+New-AzureHDInsightPigJobDefinition [-Arguments <String[]>] [-File <String>] [-Files <String[]>]
+ [-Query <String>] [-StatusFolder <String>] [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,31 +26,35 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
 
-The **New-AzureHDInsightSqoopJobDefinition** cmdlet creates a Sqoop job to run on an Azure HDInsight cluster.
-
-Sqoop is a tool to transfer data between Hadoop clusters and relational databases.
-You can use Sqoop to import data from a SQL Server database to a Hadoop Distributed File System (HDFS), transform the data with Hadoop MapReduce, and then export the data from the HDFS back to the SQL Server database.
+The **New-AzureHDInsightPigJobDefinition** defines a Pig job for an Azure HDInsight service.
 
 ## EXAMPLES
 
-### Example 1: Import data
+### Example 1: Define a new Pig job
 ```
-PS C:\>$SqoopJobDef = New-AzureHDInsightSqoopJobDefinition -Command "import --connect jdbc:sqlserver://<SQLDatabaseServerName>.database.windows.net:1433;username=<SQLDatabasUsername>@<SQLDatabaseServerName>; password=<SQLDatabasePassword>; database=<SQLDatabaseDatabaseName> --table <TableName> --target-dir wasb://<ContainerName>@<WindowsAzureStorageAccountName>.blob.core.windows.net/<Path>"
+PS C:\>$0 = '$0';
+PS C:\> $QueryString =  "LOGS = LOAD 'wasb:///example/data/sample.log';" + "LEVELS = foreach LOGS generate REGEX_EXTRACT($0, '(TRACE|DEBUG|INFO|WARN|ERROR|FATAL)', 1) as LOGLEVEL;" + "FILTEREDLEVELS = FILTER LEVELS by LOGLEVEL is not null;" + "GROUPEDLEVELS = GROUP FILTEREDLEVELS by LOGLEVEL;" + "FREQUENCIES = foreach GROUPEDLEVELS generate group as LOGLEVEL, COUNT(FILTEREDLEVELS.LOGLEVEL) as COUNT;" + "RESULT = order FREQUENCIES by COUNT desc;" + "DUMP RESULT;"
+PS C:\> $PigJobDefinition = New-AzureHDInsightPigJobDefinition -Query $QueryString
 ```
 
-This command defines a Sqoop job that imports all of the rows in a table from an AzureSQL Server database to an HDInsight cluster, and then stores the job definition in the $SqoopJobDef variable.
+The first command declares a string value, and then stores in the $0 variable.
+
+The second command creates a Pig job query, and then stores it in the $QueryString variable.
+
+The final command creates a Pig job definition that uses the query in $QueryString, and then stores the job definition in the $PigJobDefinition variable.
 
 ## PARAMETERS
 
-### -Command
-Specifies a Sqoop command and its arguments.
+### -Arguments
+Specifies an array of arguments for a Pig job.
+The arguments are passed as command-line arguments to each task.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: Args
 
 Required: False
 Position: Named
@@ -60,8 +64,8 @@ Accept wildcard characters: False
 ```
 
 ### -File
-Specifies the path to a script file that contains the commands to run.
-The script file must be located on WASB.
+Specifies the path to a file that contains a query to run.
+You can use this parameter instead of the *Query* parameter.
 
 ```yaml
 Type: String
@@ -76,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Files
-Specifies the collection of WASB files that are required for a job.
+Specifies a collection of files that are associated with a Pig job.
 
 ```yaml
 Type: String[]
@@ -98,6 +102,21 @@ If you do not specify a profile, this cmdlet reads from the local default profil
 Type: AzureSMProfile
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Query
+Specifies a Pig job query.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: QueryText
 
 Required: False
 Position: Named
@@ -136,7 +155,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-AzureHDInsightMapReduceJobDefinition](./New-AzureHDInsightMapReduceJobDefinition.md)
 
-[New-AzureHDInsightPigJobDefinition](./New-AzureHDInsightPigJobDefinition.md)
+[New-AzureHDInsightSqoopJobDefinition](./New-AzureHDInsightSqoopJobDefinition.md)
 
 [New-AzureHDInsightStreamingMapReduceJobDefinition](./New-AzureHDInsightStreamingMapReduceJobDefinition.md)
 
