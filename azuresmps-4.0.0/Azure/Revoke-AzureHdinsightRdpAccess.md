@@ -1,23 +1,23 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 95CCEB79-EAC4-4F56-B289-5401F976E5F5
+ms.assetid: 6818F49E-0A51-4D99-BC3D-5A90F1F30C33
 online version:
 schema: 2.0.0
 ---
 
-# Grant-AzureHDInsightRdpAccess
+# Revoke-AzureHDInsightRdpAccess
 
 ## SYNOPSIS
-Grants RDP access to an HDInsight cluster.
+Disables RDP access to an HDInsight cluster.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 ## SYNTAX
 
 ```
-Grant-AzureHDInsightRdpAccess [-Certificate <X509Certificate2>] [-HostedService <String>]
- -RdpCredential <PSCredential> -RdpAccessExpiry <DateTime> [-Endpoint <Uri>] [-IgnoreSslErrors <Boolean>]
- -Location <String> -Name <String> [-Subscription <String>] [-Profile <AzureSMProfile>] [<CommonParameters>]
+Revoke-AzureHDInsightRdpAccess [-Certificate <X509Certificate2>] [-HostedService <String>] [-Endpoint <Uri>]
+ [-IgnoreSslErrors <Boolean>] -Location <String> -Name <String> [-Subscription <String>]
+ [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,9 +27,9 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
 
-The **Grant-AzureHDInsightRdpAccess** cmdlet grants Remote Desktop Protocol (RDP) access to an Azure HDInsight cluster.
+The **Revoke-AzureHDInsightRdpAccess** cmdlet disables Remote Desktop Protocol (RDP) access to an Azure HDInsight cluster.
 
 ## EXAMPLES
 
@@ -143,38 +143,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RdpAccessExpiry
-Specifies the expiration, as a **DateTime** object, for Remote Desktop Protocol (RDP) access to a cluster.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RdpCredential
-Specifies the credentials for RDP access to a cluster.
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Subscription
-Specifies the subscription that contains the HDInsight cluster to which to grant access.
+Specifies a subscription.
+This cmdlet revokes Remote Desktop Protocol (RDP) access for the subscription that this parameter specifies.
 
 ```yaml
 Type: String
@@ -199,6 +170,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Revoke-AzureHdinsightRdpAccess](./Revoke-AzureHdinsightRdpAccess.md)
+[Grant-AzureHdinsightRdpAccess](./Grant-AzureHdinsightRdpAccess.md)
 
 

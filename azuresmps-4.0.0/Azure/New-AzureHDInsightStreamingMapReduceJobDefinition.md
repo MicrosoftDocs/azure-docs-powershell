@@ -1,22 +1,23 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 0DFCB891-7431-4C00-98DD-263DC2794354
+ms.assetid: 824F6302-6285-4AEC-A63C-E2519DE4C7CC
 online version:
 schema: 2.0.0
 ---
 
-# New-AzureHDInsightHiveJobDefinition
+# New-AzureHDInsightStreamingMapReduceJobDefinition
 
 ## SYNOPSIS
-Defines a new Hive job for an HDInsight service.
+Defines a new streaming MapReduce job.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 ## SYNTAX
 
 ```
-New-AzureHDInsightHiveJobDefinition [-Arguments <String[]>] [-Defines <Hashtable>] [-File <String>]
- [-Files <String[]>] [-JobName <String>] [-Query <String>] [-RunAsFileJob] [-StatusFolder <String>]
+New-AzureHDInsightStreamingMapReduceJobDefinition [-Arguments <String[]>] [-CmdEnv <String[]>]
+ [-Combiner <String>] [-Defines <Hashtable>] [-Files <String[]>] [-InputPath <String>] [-JobName <String>]
+ [-Mapper <String>] [-OutputPath <String>] [-Reducer <String>] [-StatusFolder <String>]
  [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
@@ -27,24 +28,39 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
 
-The **New-AzureHDInsightHiveJobDefinition** cmdlet defines a Hive job for an Azure HDInsight service.
+The **New-AzureHDInsightStreamingMapReduceJobDefinition** cmdlet defines a new job definition object that represents the parameters of a Hadoop streaming job.
 
 ## EXAMPLES
 
-### Example 1: Create a Hive job definition
+### Example 1: Create a streaming MapReduce job definition
 ```
-PS C:\>$HiveJobDefinition = New-AzureHDInsightHiveJobDefinition -Query $QueryString
+PS C:\>$StreamingWordCount = New-AzureHDInsightStreamingMapReduceJobDefinition -Files "/Example/Apps/WordCount.exe", "/Example/Apps/Cat.exe" -InputPath "/Example/Data/Gutenberg/Davinci.txt" -OutputPath "/Example/Data/StreamingOutput/WordCount.txt" -Mapper "Cat.exe" -Reducer "WordCount.exe"
 ```
 
-This command creates a Hive job definition that uses a pre-defined query string, and then stores it in the $HiveJobDefinition variable.
+This command creates the specified streaming MapReduce job definition, and then stores it in the $StreamingWordCount variable.
 
 ## PARAMETERS
 
 ### -Arguments
 Specifies an array of arguments for a Hadoop job.
 The arguments are passed as command-line arguments to each task.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: Args
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CmdEnv
+Specifies an array of command-line environment variables to set when a job runs on data nodes.
 
 ```yaml
 Type: String[]
@@ -58,8 +74,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Combiner
+Specifies a Combiner file name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Defines
-Specifies Hadoop configuration values to set for when a job runs.
+Specifies Hadoop configuration values to set when the job runs.
 
 ```yaml
 Type: Hashtable
@@ -73,24 +104,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -File
-Specifies the path to a file that contains a query to run.
-You can use this parameter instead of the *Query* parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: QueryFile
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Files
-Specifies a collection of files that are associated with a Hive job.
+Specifies an array of files that are required for a job.
 
 ```yaml
 Type: String[]
@@ -104,14 +119,59 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputPath
+Specifies the WASB path to the input files.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Input
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -JobName
-Specifies the name of the Hive job to define.
-If you do not specify this parameter, the default name is used: "Hive: \<first 100 characters of query\>".
+Specifies the name of the new MapReduce job definition.
+This parameter is optional.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: Name
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Mapper
+Specifies a Mapper file name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutputPath
+Specifies the WASB path for the job output.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Output
 
 Required: False
 Position: Named
@@ -136,29 +196,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Query
-Specifies a Hive query.
+### -Reducer
+Specifies a Reducer file name.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: QueryText
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RunAsFileJob
-Indicates that this cmdlet creates a file in the default Azure storage account in which to store a query.
-This cmdlet submits the job that references this file as a script to run.
-
-You can use this functionality to handle special characters such as percent sign (%) that would fail on a job submission through Templeton, because Templeton interprets a query with a percent sign as a URL parameter.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -170,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatusFolder
-Specifies the location of the folder that contains standard outputs and error outputs for a job, including its exit code and task logs.
+Specifies the folder that contains the standard outputs and error outputs for the job, including its exit code and task logs.
 
 ```yaml
 Type: String
@@ -195,12 +237,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-AzureHDInsightHiveJobDefinition](./New-AzureHDInsightHiveJobDefinition.md)
+
 [New-AzureHDInsightMapReduceJobDefinition](./New-AzureHDInsightMapReduceJobDefinition.md)
 
 [New-AzureHDInsightPigJobDefinition](./New-AzureHDInsightPigJobDefinition.md)
 
 [New-AzureHDInsightSqoopJobDefinition](./New-AzureHDInsightSqoopJobDefinition.md)
-
-[New-AzureHDInsightStreamingMapReduceJobDefinition](./New-AzureHDInsightStreamingMapReduceJobDefinition.md)
 
 

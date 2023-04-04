@@ -1,22 +1,22 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 325DE85D-B9CB-4584-8C61-DA417736ABBF
+ms.assetid: 0BF58D9C-814E-4276-823F-D566DC99391C
 online version:
 schema: 2.0.0
 ---
 
-# Get-AzureHDInsightProperties
+# Use-AzureHDInsightCluster
 
 ## SYNOPSIS
-Gets properties specific to an HDInsight service.
+Selects an HDInsight cluster for the Invoke-AzureHDInsightHiveJob cmdlet to use to submit jobs.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 ## SYNTAX
 
 ```
-Get-AzureHDInsightProperties [-Certificate <X509Certificate2>] [-HostedService <String>] [-Endpoint <Uri>]
- [-IgnoreSslErrors <Boolean>] [-Locations] [-Subscription <String>] [-Versions] [-Profile <AzureSMProfile>]
+Use-AzureHDInsightCluster [-Certificate <X509Certificate2>] [-HostedService <String>] [-Endpoint <Uri>]
+ [-IgnoreSslErrors <Boolean>] -Name <String> [-Subscription <String>] [-Profile <AzureSMProfile>]
  [<CommonParameters>]
 ```
 
@@ -27,21 +27,11 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
 
-The **Get-AzureHDInsightProperties** cmdlet gets properties specific to an Azure HDInsight service, such as a list of available Azure regions, HDInsight cluster versions, and available compute capacity.
+The **Use-AzureHDInsightCluster** cmdlet selects the Azure HDInsight cluster for the **Invoke-AzureHDInsightHiveJob** cmdlet to use to submit jobs.
 
 ## EXAMPLES
-
-### Example 1: Get HDInsight properties for a subscription
-```
-PS C:\>$SubName = Get-AzureSubscription -Current | %{ $_.SubscriptionName }
-PS C:\> Get-AzureHDInsightProperties -Subscription $SubName
-```
-
-The first command gets the name of the current Azure subscription, and then stores it in the $SubName variable.
-
-The second command gets the HDInsight properties for the subscription in $SubName.
 
 ## PARAMETERS
 
@@ -78,7 +68,7 @@ Accept wildcard characters: False
 
 ### -HostedService
 Specifies the namespace of an HDInsight service.
-If you do not specify this parameter, this cmdlet uses the default namespace.
+If you do not specify this parameter, the default namespace is used.
 
 ```yaml
 Type: String
@@ -107,18 +97,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Locations
-Indicates that this cmdlet gets the list of Azure regions where the HDInsight service is available.
+### -Name
+Specifies the name of the cluster that is used by the **Invoke-AzureHDInsightHiveJob** cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: ClusterName, DnsName
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -139,27 +129,12 @@ Accept wildcard characters: False
 ```
 
 ### -Subscription
-Specifies the subscription that contains the HDInsight properties to get.
+Specifies the subscription that contains the HDInsight clusters to use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: Sub
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Versions
-Indicates that this cmdlet gets the list of HDInsight cluster versions that are available in the service for a subscription.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -178,4 +153,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AzureHDInsightCluster](./Get-AzureHDInsightCluster.md)
+
+[New-AzureHDInsightCluster](./New-AzureHDInsightCluster.md)
+
+[Remove-AzureHDInsightCluster](./Remove-AzureHDInsightCluster.md)
+
 

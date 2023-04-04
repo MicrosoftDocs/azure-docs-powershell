@@ -1,5 +1,5 @@
 ---
-Module Name: Azure.Service
+Module Name: Azure
 Module Guid: D48CF693-4125-4D2D-8790-1514F44CE325
 Download Help Link: None
 Help Version: 4.0.0.0
@@ -7,11 +7,11 @@ Locale: en-US
 ms.assetid: 70B87755-FEEF-45CE-BAE9-32088C408B41
 ---
 
-# Azure.Service Module
+# Azure Module
 ## Description
 This topic displays help topics for the Azure Service Management Cmdlets.
 
-## Azure.Service Cmdlets
+## Azure Cmdlets
 ### [Add-AzureCertificate](./Add-AzureCertificate.md)
 Uploads a certificate to an Azure cloud service.
 

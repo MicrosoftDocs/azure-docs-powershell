@@ -1,23 +1,22 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 0BF58D9C-814E-4276-823F-D566DC99391C
+ms.assetid: E11AAB11-0CBF-4746-91D7-4D5E64801C29
 online version:
 schema: 2.0.0
 ---
 
-# Use-AzureHDInsightCluster
+# New-AzureHDInsightSqoopJobDefinition
 
 ## SYNOPSIS
-Selects an HDInsight cluster for the Invoke-AzureHDInsightHiveJob cmdlet to use to submit jobs.
+Defines a new Sqoop job.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 ## SYNTAX
 
 ```
-Use-AzureHDInsightCluster [-Certificate <X509Certificate2>] [-HostedService <String>] [-Endpoint <Uri>]
- [-IgnoreSslErrors <Boolean>] -Name <String> [-Subscription <String>] [-Profile <AzureSMProfile>]
- [<CommonParameters>]
+New-AzureHDInsightSqoopJobDefinition [-Command <String>] [-File <String>] [-Files <String[]>]
+ [-StatusFolder <String>] [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,35 +26,29 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
 
-The **Use-AzureHDInsightCluster** cmdlet selects the Azure HDInsight cluster for the **Invoke-AzureHDInsightHiveJob** cmdlet to use to submit jobs.
+The **New-AzureHDInsightSqoopJobDefinition** cmdlet creates a Sqoop job to run on an Azure HDInsight cluster.
+
+Sqoop is a tool to transfer data between Hadoop clusters and relational databases.
+You can use Sqoop to import data from a SQL Server database to a Hadoop Distributed File System (HDFS), transform the data with Hadoop MapReduce, and then export the data from the HDFS back to the SQL Server database.
 
 ## EXAMPLES
 
+### Example 1: Import data
+```
+PS C:\>$SqoopJobDef = New-AzureHDInsightSqoopJobDefinition -Command "import --connect jdbc:sqlserver://<SQLDatabaseServerName>.database.windows.net:1433;username=<SQLDatabasUsername>@<SQLDatabaseServerName>; password=<SQLDatabasePassword>; database=<SQLDatabaseDatabaseName> --table <TableName> --target-dir wasb://<ContainerName>@<WindowsAzureStorageAccountName>.blob.core.windows.net/<Path>"
+```
+
+This command defines a Sqoop job that imports all of the rows in a table from an AzureSQL Server database to an HDInsight cluster, and then stores the job definition in the $SqoopJobDef variable.
+
 ## PARAMETERS
 
-### -Certificate
-Specifies the management certificate for an Azure subscription.
+### -Command
+Specifies a Sqoop command and its arguments.
 
 ```yaml
-Type: X509Certificate2
-Parameter Sets: (All)
-Aliases: Cert
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Endpoint
-Specifies the endpoint to use to connect to Azure.
-If you do not specify this parameter, this cmdlet uses the default endpoint.
-
-```yaml
-Type: Uri
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -66,14 +59,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HostedService
-Specifies the namespace of an HDInsight service.
-If you do not specify this parameter, the default namespace is used.
+### -File
+Specifies the path to a script file that contains the commands to run.
+The script file must be located on WASB.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: CloudServiceName
+Aliases: QueryFile
 
 Required: False
 Position: Named
@@ -82,11 +75,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IgnoreSslErrors
-Indicates whether Secure Sockets Layer (SSL) errors are ignored.
+### -Files
+Specifies the collection of WASB files that are required for a job.
 
 ```yaml
-Type: Boolean
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -94,21 +87,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the cluster that is used by the **Invoke-AzureHDInsightHiveJob** cmdlet.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ClusterName, DnsName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -128,13 +106,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Subscription
-Specifies the subscription that contains the HDInsight clusters to use.
+### -StatusFolder
+Specifies the location of the folder that contains standard outputs and error outputs for a job, including its exit code and task logs.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: Sub
+Aliases:
 
 Required: False
 Position: Named
@@ -154,10 +132,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureHDInsightCluster](./Get-AzureHDInsightCluster.md)
+[New-AzureHDInsightHiveJobDefinition](./New-AzureHDInsightHiveJobDefinition.md)
 
-[New-AzureHDInsightCluster](./New-AzureHDInsightCluster.md)
+[New-AzureHDInsightMapReduceJobDefinition](./New-AzureHDInsightMapReduceJobDefinition.md)
 
-[Remove-AzureHDInsightCluster](./Remove-AzureHDInsightCluster.md)
+[New-AzureHDInsightPigJobDefinition](./New-AzureHDInsightPigJobDefinition.md)
+
+[New-AzureHDInsightStreamingMapReduceJobDefinition](./New-AzureHDInsightStreamingMapReduceJobDefinition.md)
 
 

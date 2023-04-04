@@ -1,23 +1,22 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 824F6302-6285-4AEC-A63C-E2519DE4C7CC
+ms.assetid: BB01591D-4E1A-4C89-8B2A-5A242C29B125
 online version:
 schema: 2.0.0
 ---
 
-# New-AzureHDInsightStreamingMapReduceJobDefinition
+# Invoke-AzureHDInsightHiveJob
 
 ## SYNOPSIS
-Defines a new streaming MapReduce job.
+Submits Hive queries to an HDInsight cluster, shows progress of the query execution, and gets query results in one operation.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 ## SYNTAX
 
 ```
-New-AzureHDInsightStreamingMapReduceJobDefinition [-Arguments <String[]>] [-CmdEnv <String[]>]
- [-Combiner <String>] [-Defines <Hashtable>] [-Files <String[]>] [-InputPath <String>] [-JobName <String>]
- [-Mapper <String>] [-OutputPath <String>] [-Reducer <String>] [-StatusFolder <String>]
+Invoke-AzureHDInsightHiveJob [-Arguments <String[]>] [-Defines <Hashtable>] [-File <String>]
+ [-Files <String[]>] [-JobName <String>] [-Query <String>] [-RunAsFileJob] [-StatusFolder <String>]
  [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
@@ -28,18 +27,22 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
 
-The **New-AzureHDInsightStreamingMapReduceJobDefinition** cmdlet defines a new job definition object that represents the parameters of a Hadoop streaming job.
+The **Invoke-AzureHDInsightHiveJob** cmdlet submits Hive queries to an HDInsight cluster, displays the progress of the query execution, and gets the query results in one operation.
+You must run the Use-AzureHDInsightCluster cmdlet before running **Invoke-AzureHDInsightHiveJob** to specify the HDInsight cluster to which to submit a query.
 
 ## EXAMPLES
 
-### Example 1: Create a streaming MapReduce job definition
+### Example 1: Submit a Hive query
 ```
-PS C:\>$StreamingWordCount = New-AzureHDInsightStreamingMapReduceJobDefinition -Files "/Example/Apps/WordCount.exe", "/Example/Apps/Cat.exe" -InputPath "/Example/Data/Gutenberg/Davinci.txt" -OutputPath "/Example/Data/StreamingOutput/WordCount.txt" -Mapper "Cat.exe" -Reducer "WordCount.exe"
+PS C:\>Use-AzureHDInsightCluster "Cluster01" -Subscription (Get-AzureSubscription -Current).SubscriptionId
+PS C:\> Invoke-AzureHDInsightHiveJob "select * from hivesampletable limit 10"
 ```
 
-This command creates the specified streaming MapReduce job definition, and then stores it in the $StreamingWordCount variable.
+The first command uses the **Use-AzureHDInsightCluster** cmdlet to specify a cluster in the current subscription to use for a Hive query.
+
+The second command uses the **Invoke-AzureHDInsightHiveJob** cmdlet to submit the Hive query.
 
 ## PARAMETERS
 
@@ -49,36 +52,6 @@ The arguments are passed as command-line arguments to each task.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases: Args
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CmdEnv
-Specifies an array of command-line environment variables to set when a job runs on data nodes.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Combiner
-Specifies a Combiner file name.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -90,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Defines
-Specifies Hadoop configuration values to set when the job runs.
+Specifies Hadoop configuration values to set when a job runs.
 
 ```yaml
 Type: Hashtable
@@ -104,8 +77,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -File
+Specifies the Windows Azure Storage Blob (WASB) path to a file in Azure blob storage that contains the query to run.
+You can use this parameter instead of the *Query* parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: QueryFile
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Files
-Specifies an array of files that are required for a job.
+Specifies a collection of files that are required for a Hive job.
 
 ```yaml
 Type: String[]
@@ -119,59 +108,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InputPath
-Specifies the WASB path to the input files.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: Input
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -JobName
-Specifies the name of the new MapReduce job definition.
-This parameter is optional.
+Specifies the name of a Hive job.
+If you do not specify this parameter, this cmdlet uses the default value: "Hive: \<first 100 characters of Query\>".
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: Name
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Mapper
-Specifies a Mapper file name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OutputPath
-Specifies the WASB path for the job output.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: Output
 
 Required: False
 Position: Named
@@ -196,11 +140,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Reducer
-Specifies a Reducer file name.
+### -Query
+Specifies a Hive query.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: QueryText
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RunAsFileJob
+Indicates that this cmdlet creates a file in the default Azure storage account in which to store a query.
+This cmdlet submits the job that references this file as a script to run.
+
+You can use this functionality to handle special characters such as percent sign (%) that would fail on a job submission through Templeton, because Templeton interprets a query with a percent sign as a URL parameter.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -212,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatusFolder
-Specifies the folder that contains the standard outputs and error outputs for the job, including its exit code and task logs.
+Specifies the location of the folder that contains standard outputs and error outputs for a job, including its exit code and task logs.
 
 ```yaml
 Type: String
@@ -239,10 +201,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-AzureHDInsightHiveJobDefinition](./New-AzureHDInsightHiveJobDefinition.md)
 
-[New-AzureHDInsightMapReduceJobDefinition](./New-AzureHDInsightMapReduceJobDefinition.md)
-
-[New-AzureHDInsightPigJobDefinition](./New-AzureHDInsightPigJobDefinition.md)
-
-[New-AzureHDInsightSqoopJobDefinition](./New-AzureHDInsightSqoopJobDefinition.md)
+[Use-AzureHDInsightCluster](./Use-AzureHDInsightCluster.md)
 
 

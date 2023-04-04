@@ -1,23 +1,35 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: A1DFA523-B532-4902-838D-74C8CA97A335
+ms.assetid: 771B7CB2-88F6-4FC5-9DB0-E623D231E51A
 online version:
 schema: 2.0.0
 ---
 
-# Revoke-AzureHDInsightHttpServicesAccess
+# Set-AzureHDInsightClusterSize
 
 ## SYNOPSIS
-Disables HTTP access to a cluster.
+Sets the number of data nodes for an HDInsight cluster.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 ## SYNTAX
 
+### Set cluster size in nodes with name.
 ```
-Revoke-AzureHDInsightHttpServicesAccess [-Certificate <X509Certificate2>] [-HostedService <String>]
- [-IgnoreSslErrors <Boolean>] [-Endpoint <Uri>] -Location <String> -Name <String> [-Subscription <String>]
+Set-AzureHDInsightClusterSize -ClusterSizeInNodes <Int32> -Name <String> [-Force] [-Profile <AzureSMProfile>]
+ [<CommonParameters>]
+```
+
+### Set cluster size in nodes with cluster from pipeline.
+```
+Set-AzureHDInsightClusterSize -ClusterSizeInNodes <Int32> [-Force] -Cluster <AzureHDInsightCluster>
  [-Profile <AzureSMProfile>] [<CommonParameters>]
+```
+
+### Cluster By Name (with Specific Subscription Credential)
+```
+Set-AzureHDInsightClusterSize [-Certificate <X509Certificate2>] [-Subscription <String>] [-Endpoint <Uri>]
+ [-IgnoreSslErrors <Boolean>] [-Name <String>] [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,9 +39,9 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
 
-The **Revoke-AzureHDInsightHttpServicesAccess** cmdlet disables HTTP access to a cluster for ODBC, Ambari, Oozie and WebHCatalog web services.
+The **Set-AzureHDInsightClusterSize** cmdlet sets the number of data nodes for an Azure HDInsight cluster.
 
 ## EXAMPLES
 
@@ -40,10 +52,52 @@ Specifies the management certificate for an Azure subscription.
 
 ```yaml
 Type: X509Certificate2
-Parameter Sets: (All)
+Parameter Sets: Cluster By Name (with Specific Subscription Credential)
 Aliases: Cert
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Cluster
+Specifies the cluster to resize.
+
+```yaml
+Type: AzureHDInsightCluster
+Parameter Sets: Set cluster size in nodes with cluster from pipeline.
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -ClusterSizeInNodes
+Specifies the number of data nodes to create for a cluster.
+
+```yaml
+Type: Int32
+Parameter Sets: Set cluster size in nodes with name.
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: Int32
+Parameter Sets: Set cluster size in nodes with cluster from pipeline.
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -56,7 +110,7 @@ If you do not specify this parameter, this cmdlet uses the default endpoint.
 
 ```yaml
 Type: Uri
-Parameter Sets: (All)
+Parameter Sets: Cluster By Name (with Specific Subscription Credential)
 Aliases:
 
 Required: False
@@ -66,13 +120,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HostedService
-Specifies the namespace of an HDInsight service if you do not want to use the default namespace.
+### -Force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: CloudServiceName
+Type: SwitchParameter
+Parameter Sets: Set cluster size in nodes with name., Set cluster size in nodes with cluster from pipeline.
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +140,7 @@ Indicates whether Secure Sockets Layer (SSL) errors are ignored.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Cluster By Name (with Specific Subscription Credential)
 Aliases:
 
 Required: False
@@ -96,13 +150,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Location
-Specifies the region in which an HDInsight cluster is located.
+### -Name
+Specifies the name of the HDInsight cluster to resize.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Set cluster size in nodes with name.
+Aliases: ClusterName, DnsName
 
 Required: True
 Position: Named
@@ -111,19 +165,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-Specifies the name of a cluster.
-This cmdlet disables HTTP access to the cluster that this parameter specifies.
-
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Cluster By Name (with Specific Subscription Credential)
 Aliases: ClusterName, DnsName
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -144,11 +194,12 @@ Accept wildcard characters: False
 ```
 
 ### -Subscription
-Specifies the subscription account that contains the HDInsight cluster to revoke.
+Specifies a subscription.
+This cmdlet sets the cluster size for the subscription that this parameter specifies.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Cluster By Name (with Specific Subscription Credential)
 Aliases: Sub
 
 Required: False
@@ -168,7 +219,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Grant-AzureHDInsightHttpServicesAccess](./Grant-AzureHDInsightHttpServicesAccess.md)
-
 

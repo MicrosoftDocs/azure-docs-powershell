@@ -1,22 +1,23 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
-ms.assetid: 227D933A-9272-4C53-89AF-711379B47A74
+ms.assetid: 325DE85D-B9CB-4584-8C61-DA417736ABBF
 online version:
 schema: 2.0.0
 ---
 
-# New-AzureHDInsightPigJobDefinition
+# Get-AzureHDInsightProperties
 
 ## SYNOPSIS
-Defines a new Pig job for an HDInsight service.
+Gets properties specific to an HDInsight service.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
 ## SYNTAX
 
 ```
-New-AzureHDInsightPigJobDefinition [-Arguments <String[]>] [-File <String>] [-Files <String[]>]
- [-Query <String>] [-StatusFolder <String>] [-Profile <AzureSMProfile>] [<CommonParameters>]
+Get-AzureHDInsightProperties [-Certificate <X509Certificate2>] [-HostedService <String>] [-Endpoint <Uri>]
+ [-IgnoreSslErrors <Boolean>] [-Locations] [-Subscription <String>] [-Versions] [-Profile <AzureSMProfile>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,35 +27,31 @@ Please use the newer version of Azure PowerShell HDInsight.
 
 For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-create-linux-clusters-azure-powershell/).
 For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/) (https://azure.microsoft.com/en-us/documentation/articles/hdinsight-submit-hadoop-jobs-programmatically/).
-For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure.service/?view=azuresmps-4.0.0#hd-insights).
+For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
 
-The **New-AzureHDInsightPigJobDefinition** defines a Pig job for an Azure HDInsight service.
+The **Get-AzureHDInsightProperties** cmdlet gets properties specific to an Azure HDInsight service, such as a list of available Azure regions, HDInsight cluster versions, and available compute capacity.
 
 ## EXAMPLES
 
-### Example 1: Define a new Pig job
+### Example 1: Get HDInsight properties for a subscription
 ```
-PS C:\>$0 = '$0';
-PS C:\> $QueryString =  "LOGS = LOAD 'wasb:///example/data/sample.log';" + "LEVELS = foreach LOGS generate REGEX_EXTRACT($0, '(TRACE|DEBUG|INFO|WARN|ERROR|FATAL)', 1) as LOGLEVEL;" + "FILTEREDLEVELS = FILTER LEVELS by LOGLEVEL is not null;" + "GROUPEDLEVELS = GROUP FILTEREDLEVELS by LOGLEVEL;" + "FREQUENCIES = foreach GROUPEDLEVELS generate group as LOGLEVEL, COUNT(FILTEREDLEVELS.LOGLEVEL) as COUNT;" + "RESULT = order FREQUENCIES by COUNT desc;" + "DUMP RESULT;"
-PS C:\> $PigJobDefinition = New-AzureHDInsightPigJobDefinition -Query $QueryString
+PS C:\>$SubName = Get-AzureSubscription -Current | %{ $_.SubscriptionName }
+PS C:\> Get-AzureHDInsightProperties -Subscription $SubName
 ```
 
-The first command declares a string value, and then stores in the $0 variable.
+The first command gets the name of the current Azure subscription, and then stores it in the $SubName variable.
 
-The second command creates a Pig job query, and then stores it in the $QueryString variable.
-
-The final command creates a Pig job definition that uses the query in $QueryString, and then stores the job definition in the $PigJobDefinition variable.
+The second command gets the HDInsight properties for the subscription in $SubName.
 
 ## PARAMETERS
 
-### -Arguments
-Specifies an array of arguments for a Pig job.
-The arguments are passed as command-line arguments to each task.
+### -Certificate
+Specifies the management certificate for an Azure subscription.
 
 ```yaml
-Type: String[]
+Type: X509Certificate2
 Parameter Sets: (All)
-Aliases: Args
+Aliases: Cert
 
 Required: False
 Position: Named
@@ -63,14 +60,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -File
-Specifies the path to a file that contains a query to run.
-You can use this parameter instead of the *Query* parameter.
+### -Endpoint
+Specifies the endpoint to use to connect to Azure.
+If you do not specify this parameter, this cmdlet uses the default endpoint.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HostedService
+Specifies the namespace of an HDInsight service.
+If you do not specify this parameter, this cmdlet uses the default namespace.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: QueryFile
+Aliases: CloudServiceName
 
 Required: False
 Position: Named
@@ -79,11 +92,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Files
-Specifies a collection of files that are associated with a Pig job.
+### -IgnoreSslErrors
+Indicates whether Secure Sockets Layer (SSL) errors are ignored.
 
 ```yaml
-Type: String[]
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Locations
+Indicates that this cmdlet gets the list of Azure regions where the HDInsight service is available.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -110,13 +138,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Query
-Specifies a Pig job query.
+### -Subscription
+Specifies the subscription that contains the HDInsight properties to get.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: QueryText
+Aliases: Sub
 
 Required: False
 Position: Named
@@ -125,11 +153,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StatusFolder
-Specifies the location of the folder that contains standard outputs and error outputs for a job, including its exit code and task logs.
+### -Versions
+Indicates that this cmdlet gets the list of HDInsight cluster versions that are available in the service for a subscription.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -150,13 +178,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[New-AzureHDInsightHiveJobDefinition](./New-AzureHDInsightHiveJobDefinition.md)
-
-[New-AzureHDInsightMapReduceJobDefinition](./New-AzureHDInsightMapReduceJobDefinition.md)
-
-[New-AzureHDInsightSqoopJobDefinition](./New-AzureHDInsightSqoopJobDefinition.md)
-
-[New-AzureHDInsightStreamingMapReduceJobDefinition](./New-AzureHDInsightStreamingMapReduceJobDefinition.md)
-
 
