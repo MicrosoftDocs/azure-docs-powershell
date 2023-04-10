@@ -1,11 +1,11 @@
 ---
-description: How to install the Azure PowerShell Az module on Windows
+description: Learn how to install and run Azure PowerShell on Windows. You can install Azure PowerShell on Windows with one command.
 ms.custom: devx-track-azurepowershell
-ms.date: 03/31/2023
+ms.date: 04/10/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-title: Install Azure PowerShell on Windows
+title: Install Azure PowerShell on Windows | Microsoft Docs
 zone_pivot_group_filename: azure/zone-pivot-groups.json
 zone_pivot_groups: install-azps-windows
 ---
@@ -33,7 +33,7 @@ This article explains how to install the Az PowerShell module on Windows from th
   $PSVersionTable.PSVersion
   ```
 
-- Determine if you have the AzureRM PowerShell module installed
+- Determine if you have the AzureRM PowerShell module installed:
 
   ```powershell
   Get-Module -Name AzureRM -ListAvailable
@@ -64,7 +64,7 @@ This article explains how to install the Az PowerShell module on Windows from th
 
 ---
 
-- Set the PowerShell script execution to remote signed or less restrictive
+- Set the PowerShell execution policy to remote signed or less restrictive
 
   - Check the PowerShell execution policy:
 
@@ -89,19 +89,6 @@ PowerShell module:
 ```powershell
 Install-Module -Name Az -Repository PSGallery -Force
 ```
-
-## Offline Installation
-
-In some environments, it's not possible to connect to the PowerShell Gallery. In those situations,
-you can install the Az PowerShell module offline using the following method:
-
-- Download the modules to another location in your network and use that location as an installation
-  source. This method allows you to cache PowerShell modules on a single server or file share to be
-  deployed with PowerShellGet to any disconnected systems. Learn how to set up a local repository
-  and install on disconnected systems with
-  [Working with local PowerShellGet repositories](/powershell/scripting/gallery/how-to/working-with-local-psrepositories).
-- Use [Save-Module](/powershell/module/PowershellGet/Save-Module) to save the modules to a file
-  share or other location and manually copy them to the other systems.
 
 ## Update the Az PowerShell module
 
