@@ -22,6 +22,26 @@
     },
     {
       "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/install-azure-powershell/",
+      "source_path": "docs-conceptual/azps-9.6.0/install-az-ps.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/install-azure-powershell/",
+      "source_path": "docs-conceptual/azps-9.5.0/install-az-ps.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/install-azure-powershell/",
+      "source_path": "docs-conceptual/azps-9.6.0/install-az-ps-msi.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/install-azure-powershell/",
+      "source_path": "docs-conceptual/azps-9.5.0/install-az-ps-msi.md"
+    },
+    {
+      "redirect_document_id": false,
       "redirect_url": "/powershell/azure/azurerm/overview",
       "source_path": "docs-conceptual/azurermps-2.5.0/index.md"
     },
