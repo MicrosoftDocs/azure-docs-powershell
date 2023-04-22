@@ -23,7 +23,7 @@ The recommended installation method and PowerShell version for the Az PowerShell
 ::: zone pivot="windows-psgallery"
 
 This article explains how to install the Az PowerShell module on Windows from the
-[PowerShell Gallery](/powershell/scripting/gallery/overview).
+[PowerShell Gallery][01].
 
 ## Prerequisites
 
@@ -40,27 +40,25 @@ This article explains how to install the Az PowerShell module on Windows from th
   ```
 
   > [!IMPORTANT]
-  > If you have the AzureRM PowerShell module installed, see
-  > [Az and AzureRM coexistence](troubleshooting.md#az-and-azurerm-coexistence) before proceeding.
+  > If you have the AzureRM PowerShell module installed, see [Az and AzureRM coexistence][02] before
+  > proceeding.
 
 # [PowerShell 7](#tab/powershell)
 
-- Install a supported version of
-  [PowerShell version 7 or higher](/powershell/scripting/install/installing-powershell-on-windows)
+- Install a supported version of [PowerShell version 7 or higher][03]
 
 # [Windows PowerShell](#tab/windowspowershell)
 
-- Update to
-   [Windows PowerShell 5.1](/powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell)
-- Install [.NET Framework 4.7.2 or later](/dotnet/framework/install)
+- Update to [Windows PowerShell 5.1][04]
+- Install [.NET Framework 4.7.2 or later][05]
 - Update PowerShellGet
 
-   Launch Windows PowerShell 5.1 elevated as an administrator and run the following command to
-   update PowerShellGet:
+  Launch Windows PowerShell 5.1 elevated as an administrator and run the following command to
+  update PowerShellGet:
 
-   ```powershell
-   Install-Module -Name PowerShellGet -Force
-   ```
+  ```powershell
+  Install-Module -Name PowerShellGet -Force
+  ```
 
 ---
 
@@ -78,13 +76,11 @@ This article explains how to install the Az PowerShell module on Windows from th
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
     ```
 
-  For more information about execution policies, see
-  [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+  For more information about execution policies, see [about_Execution_Policies][06].
 
 ## Installation
 
-Use the [Install-Module](/powershell/module/powershellget/install-module) cmdlet to install the Az
-PowerShell module:
+Use the [Install-Module][07] cmdlet to install the Az PowerShell module:
 
 ```powershell
 Install-Module -Name Az -Repository PSGallery -Force
@@ -92,8 +88,7 @@ Install-Module -Name Az -Repository PSGallery -Force
 
 ## Update the Az PowerShell module
 
-Use [Update-Module](/powershell/module/powershellget/update-module) to update to the latest version
-of the Az PowerShell module:
+Use [Update-Module][08] to update to the latest version of the Az PowerShell module:
 
 ```powershell
 Update-Module -Name Az -Force
@@ -105,7 +100,7 @@ PowerShell module from your system.
 ## Uninstallation
 
 To remove the Az PowerShell module, see
-[Uninstall the Azure PowerShell module](uninstall-az-ps.md).
+[Uninstall the Azure PowerShell module][09].
 
 ::: zone-end
 
@@ -134,12 +129,11 @@ firewall, or an offline installer is needed.
   ```
 
   > [!IMPORTANT]
-  > If you have the AzureRM PowerShell module installed, see
-  > [Az and AzureRM coexistence](troubleshooting.md#az-and-azurerm-coexistence) before proceeding.
+  > If you have the AzureRM PowerShell module installed, see [Az and AzureRM coexistence][02] before
+  > proceeding.
 
-- Update to
-   [Windows PowerShell 5.1](/powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell)
-- Install [.NET Framework 4.7.2 or later](/dotnet/framework/install)
+- Update to [Windows PowerShell 5.1][04]
+- Install [.NET Framework 4.7.2 or later][05]
 
 - Set the PowerShell script execution to remote signed or less restrictive
 
@@ -156,16 +150,15 @@ firewall, or an offline installer is needed.
     ```
 
   For more information about execution policies, see
-  [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+  [about_Execution_Policies][06].
 
 ## Installation and update
 
-The MSI package for Azure PowerShell is available from
-[GitHub](https://github.com/Azure/azure-powershell/releases):
+The MSI package for Azure PowerShell is available from [GitHub][14]:
 
-1. Visit
-   [github.com/Azure/azure-powershell/releases](https://github.com/Azure/azure-powershell/releases)
-1. Locate the most recent Az PowerShell module. They are listed chronologically with no name. For example, `9.5.0`
+1. Visit [github.com/Azure/azure-powershell/releases][14]
+1. Locate the most recent Az PowerShell module. They are listed chronologically with no name. For
+   example, `9.5.0`
 1. Scroll down to the end of the patch notes and click the arrow next to "Assets" to reveal the
    MSI options.
 1. Click on the Az-Cmdlets MSI of your choice to start the download
@@ -187,23 +180,37 @@ Connect-AzAccount
 Use your Azure account login credentials to log into the browser window that opens.
 
 You'll need to repeat this step for every new PowerShell session you start. To learn how to persist
-your Azure sign-in across PowerShell sessions, see
-[Azure PowerShell context objects](context-persistence.md).
+your Azure sign-in across PowerShell sessions, see [Azure PowerShell context objects][16].
 
 ## Troubleshooting
 
 For solutions to common installation issues with the Az PowerShell module, see
-[Troubleshoot installation problems with the Azure Az PowerShell module](troubleshooting.md#installation).
+[Troubleshoot installation problems with the Azure Az PowerShell module][17].
 
 ## Provide feedback
 
-To file an issue about the Az PowerShell module, see:
-[file an issue on GitHub](https://github.com/Azure/azure-powershell/issues)
+To file an issue about the Az PowerShell module, see: [file an issue on GitHub][18]
 
-To provide feedback from within a PowerShell session, use the
-[Send-Feedback](/powershell/module/az.accounts/send-feedback) cmdlet.
+To provide feedback from within a PowerShell session, use the [Send-Feedback][19] cmdlet.
 
 ## Next Steps
 
 To learn more about managing your Azure resources with the Az PowerShell module, see
-[Get Started with Azure PowerShell](get-started-azureps.md).
+[Get Started with Azure PowerShell][20].
+
+<!-- updated link references -->
+[01]: /powershell/gallery/overview
+[02]: troubleshooting.md#az-and-azurerm-coexistence
+[03]: /powershell/scripting/install/installing-powershell-on-windows
+[04]: /powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell
+[05]: /dotnet/framework/install
+[06]: /powershell/module/microsoft.powershell.core/about/about_execution_policies
+[07]: /powershell/module/powershellget/install-module
+[08]: /powershell/module/powershellget/update-module
+[09]: uninstall-az-ps.md
+[14]: https://github.com/Azure/azure-powershell/releases
+[16]: context-persistence.md
+[17]: troubleshooting.md#installation
+[18]: https://github.com/Azure/azure-powershell/issues
+[19]: /powershell/module/az.accounts/send-feedback
+[20]: get-started-azureps.md
