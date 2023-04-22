@@ -144,15 +144,15 @@
                 "docs-conceptual/includes/*.md": "mikefrobbins"
             },
             "ms.manager": {
-                "azps-*/**/*.yml": "mkluck",
-                "azurermps-*/**/*.yml": "mkluck",
-                "azuresmps-*/**/*.yml": "mkluck",
+                "azps-*/**/*.yml": "jasongroce",
+                "azurermps-*/**/*.yml": "jasongroce",
+                "azuresmps-*/**/*.yml": "jasongroce",
                 "azurestackps-*/**/*.yml": "femila",
-                "docs-conceptual/azps-*/*.md": "mkluck",
-                "docs-conceptual/azurermps-*/*.md": "mkluck",
-                "docs-conceptual/azuresmps-*/*.md": "mkluck",
+                "docs-conceptual/azps-*/*.md": "jasongroce",
+                "docs-conceptual/azurermps-*/*.md": "jasongroce",
+                "docs-conceptual/azuresmps-*/*.md": "jasongroce",
                 "docs-conceptual/azurestackps-*/*.md": "femila",
-                "docs-conceptual/includes/*.md": "mkluck"
+                "docs-conceptual/includes/*.md": "jasongroce"
             },
             "ms.service": {
                 "docs-conceptual/azurestackps-*/**/*.md": "azure-stack",
