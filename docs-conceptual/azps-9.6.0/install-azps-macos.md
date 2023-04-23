@@ -11,7 +11,7 @@ title: Install Azure PowerShell on macOS | Microsoft Docs
 # Install Azure PowerShell on macOS
 
 This article explains how to install the Azure PowerShell Az module from
-[the PowerShell Gallery](/powershell/scripting/gallery/overview) on macOS.
+[the PowerShell Gallery][01] on macOS.
 
 The Az PowerShell module is a rollup module. Installing it downloads the generally available Az
 PowerShell modules and makes their cmdlets available for use.
@@ -19,14 +19,13 @@ PowerShell modules and makes their cmdlets available for use.
 ## Prerequisites
 
 - Install a supported version of
-  [PowerShell version 7 or higher](/powershell/scripting/install/installing-powershell-on-macos)
+  [PowerShell version 7 or higher][02]
 
 ## Installation
 
 Open the Terminal or other shell host application and run `pwsh` to start PowerShell.
 
-Use the [Install-Module](/powershell/module/powershellget/install-module) cmdlet to install the Az
-PowerShell module:
+Use the [Install-Module][03] cmdlet to install the Az PowerShell module:
 
 ```powershell
 Install-Module -Name Az -Repository PSGallery -Force
@@ -34,7 +33,7 @@ Install-Module -Name Az -Repository PSGallery -Force
 
 ## Update the Azure PowerShell module
 
-Use the [Update-Module](/powershell/module/powershellget/update-module) cmdlet to update to the
+Use the [Update-Module][04] cmdlet to update to the
 latest version of the Az PowerShell module.
 
 ```powershell
@@ -47,7 +46,7 @@ PowerShell module from your system.
 ## Uninstallation
 
 To remove the Az PowerShell module from your system, see
-[Uninstall the Azure PowerShell module](uninstall-az-ps.md).
+[Uninstall the Azure PowerShell module][05].
 
 ## Sign in
 
@@ -61,23 +60,32 @@ Connect-AzAccount
 Use your Azure account login credentials to log into the browser window that opens.
 
 You'll need to repeat this step for every new PowerShell session you start. To learn how to persist
-your Azure sign-in across PowerShell sessions, see
-[Azure PowerShell context objects](/powershell/azure/context-persistence).
+your Azure sign-in across PowerShell sessions, see [Azure PowerShell context objects][06].
 
 ## Troubleshooting
 
 For solutions to common installation issues with the Az PowerShell module, see
-[Troubleshoot installation problems with the Az PowerShell module](troubleshooting.md#installation).
+[Troubleshoot installation problems with the Az PowerShell module][07].
 
 ## Provide feedback
 
-To file an issue about the Az PowerShell module, see:
-[file an issue on GitHub](https://github.com/Azure/azure-powershell/issues).
+To file an issue about the Az PowerShell module, see: [file an issue on GitHub][08].
 
-To provide feedback from within a PowerShell session, use the
-[Send-Feedback](/powershell/module/az.accounts/send-feedback) cmdlet.
+To provide feedback from within a PowerShell session, use the [Send-Feedback][09] cmdlet.
 
 ## Next steps
 
 To learn more about managing your Azure resources with the Az PowerShell module, see
-[Get Started with Azure PowerShell](get-started-azureps.md).
+[Get Started with Azure PowerShell][10].
+
+<!-- link references -->
+[01]: /powershell/scripting/gallery/overview
+[02]: /powershell/scripting/install/installing-powershell-on-macos
+[03]: /powershell/module/powershellget/install-module
+[04]: /powershell/module/powershellget/update-module
+[05]: uninstall-az-ps.md
+[06]: /powershell/azure/context-persistence
+[07]: troubleshooting.md#installation
+[08]: https://github.com/Azure/azure-powershell/issues
+[09]: /powershell/module/az.accounts/send-feedback
+[10]: get-started-azureps.md
