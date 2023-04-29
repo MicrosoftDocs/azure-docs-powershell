@@ -37,13 +37,17 @@ landingContent:
     linkLists:
       - linkListType: download
         links:
-          - text: Install with PowerShell
-            url: install-az-ps.md
-          - text: Install with MSI
-            url: install-az-ps-msi.md
+          - text: Install
+            url: install-azure-powershell.md
+          - text: Install - Windows
+            url: install-azps-windows.md
+          - text: Install - Linux
+            url: install-azps-linux.md
+          - text: Install - macOS
+            url: install-azps-macos.md
           - text: Run in Azure Cloud Shell
             url: https://shell.azure.com
-          - text: Run in Docker
+          - text: Azure PowerShell in Docker
             url: azureps-in-docker.md
   - title: What's new
     linkLists:
