@@ -605,7 +605,7 @@
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new",
             "ms.topic": "reference",
             "uhfHeaderId": "Azure",
-            "ms.date": "04/04/2023"
+            "ms.date": "04/28/2023"
         },
         "dest": "azureps",
         "lruSize": 0,
