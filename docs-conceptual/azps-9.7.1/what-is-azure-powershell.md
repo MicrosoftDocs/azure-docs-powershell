@@ -1,7 +1,7 @@
 ---
 description: This article is an introduction to Azure PowerShell and its features.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/23/2023
+ms.date: 04/28/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: overview

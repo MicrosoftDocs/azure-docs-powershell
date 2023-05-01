@@ -1,12 +1,11 @@
 ---
 description: Azure PowerShell is available to install for Windows, Linux, and macOS. It can also be run from Azure Cloud Shell and in a Docker container.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/23/2023
+ms.date: 04/28/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-title: How to install Azure PowerShell | Microsoft Docs
-keywords: azure powershell, install azure powershell, azure powershell download, download azure powershell
+title: How to install Azure PowerShell
 ---
 
 # How to install Azure PowerShell
