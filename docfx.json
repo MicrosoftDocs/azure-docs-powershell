@@ -570,8 +570,8 @@
                 "docs-conceptual/azuredmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
-                "azps-9.6.0/**/*": "GitHub",
-                "azps-9.7.0/**/*": "None",
+                "azps-9.7.0/**/*": "GitHub",
+                "azps-9.6.0/**/*": "None",
                 "azps-8.3.0/**/*": "None",
                 "azps-0.10.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
