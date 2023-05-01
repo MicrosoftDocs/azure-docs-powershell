@@ -8,7 +8,7 @@ ms.topic: conceptual
 title: Azure PowerShell release notes
 ---
 # Azure PowerShell release notes
-## 9.7.0 - May 2023
+## 9.7.1 - May 2023
 #### Az.Accounts 2.12.2
 * Fixed 'AzureSynapseAnalyticsEndpointResourceId' of 'USGovernment' environment.
 * Updated Azure.Core to 1.31.0.
@@ -21,7 +21,7 @@ title: Azure PowerShell release notes
 * Added parameter '-NodePodSubnetID' for 'New-AzAksCluster', '-PodSubnetID' for 'New-AzAksNodePool'
 
 #### Az.Compute 5.7.1
-* Added a breaking change warning to the 'Get-AzVM' cmdlet to show that the 'NextLink' parameter and parameter set will be removed in June 2023. The parameter has been non-functional for a long time. 
+* Added a breaking change warning to the 'Get-AzVM' cmdlet to show that the 'NextLink' parameter and parameter set will be removed in June 2023. The parameter has been non-functional for a long time.
 * Updated the breaking change warning in 'New-AzVM' and 'New-AzVmss' regarding using the new versioned image aliases to indicate that certain aliases will be removed next breaking change release.
 * Updated the 'Get-AzVMRunCommand' to include the 'ProvisioningState' value. Fix [#21473]
 * Updated Azure.Core to 1.31.0.
@@ -33,7 +33,7 @@ title: Azure PowerShell release notes
 * Updated Azure.Core to 1.31.0.
 
 #### Az.KeyVault 4.9.3
-* Added breaking changes for 'Invoke-AzKeyVaultKeyOperation'. The encoded/decoded way between string and bytes in 'Invoke-AzKeyVaultKeyOperation' will change to UTF8. 
+* Added breaking changes for 'Invoke-AzKeyVaultKeyOperation'. The encoded/decoded way between string and bytes in 'Invoke-AzKeyVaultKeyOperation' will change to UTF8.
     - This change will take effect on 5/23/2023
     - The change is expected to take effect from the version 5.0.0
 * Updated Azure.Core to 1.31.0.
@@ -67,18 +67,18 @@ title: Azure PowerShell release notes
 * Supported rename file and directory
     - 'Rename-AzStorageFile'
     - 'Rename-AzStorageDirectory'
-* Added a warning message for an upcoming breaking change when getting a single blob 
+* Added a warning message for an upcoming breaking change when getting a single blob
     - 'Get-AzStorageBlob'
-* Fixed the issue of listing blobs with leading slashes 
+* Fixed the issue of listing blobs with leading slashes
     - 'Get-AzStorageBlob'
-* Added support for sticky bit 
+* Added support for sticky bit
     - 'New-AzDataLakeGen2Item'
     - 'New-AzDataLakeGen2ACLObject'
     - 'Update-AzDataLakeGen2Item'
-* Added warning messages for an upcoming cmdlet breaking change 
+* Added warning messages for an upcoming cmdlet breaking change
     - 'New-AzStorageAccount'
     - 'Set-AzStorageAccount'
-* Allowed to clear blob tags on a blob 
+* Allowed to clear blob tags on a blob
     - 'Set-AzStorageBlobTag'
 * Updated Azure.Core to 1.31.0
 
@@ -92,7 +92,7 @@ title: Azure PowerShell release notes
 * @geologyrocks
   * Update IsCustom property on example role defintion (#21514)
   * Fix Assignment/Definition typo in Output (#21442)
-  
+
 ## 9.6.0 - April 2023
 #### Az.Aks 5.3.2
 * Fixed the issue that system variable 'True' is undefined in 'Windows PowerShell'.
@@ -111,10 +111,10 @@ title: Azure PowerShell release notes
 #### Az.Compute 5.7.0
 * Addressed bug in 'Remove-AzVmss' to throw error when '-InstanceId' is null. [#21162]
 * Added '-CustomData', '-AdminPassword', and '-ExactVersion' parameters to 'Invoke-AzVMReimage'.
-* Removed the image alias 'CoreOS' as the publisher CoreOS no longer has any images for Azure. 
+* Removed the image alias 'CoreOS' as the publisher CoreOS no longer has any images for Azure.
   Updated the names of the 'openSUSE-Leap' and 'SLES' aliases to 'OpenSuseLeap154' and 'SuseSles15SP4' respectively. Updated these aliases to point to an image that actually exists.
-* Added a breaking change warning to 'New-AzVM' and 'New-AzVmss' for future planned image alias removals due to the images reaching their End of Support date. 
-* Added new descriptive and versioned alias names for the Linux image aliases, including a new alias for  the 'Kinvolk' publisher. 
+* Added a breaking change warning to 'New-AzVM' and 'New-AzVmss' for future planned image alias removals due to the images reaching their End of Support date.
+* Added new descriptive and versioned alias names for the Linux image aliases, including a new alias for  the 'Kinvolk' publisher.
 
 #### Az.ContainerRegistry 3.0.3
 * Added breaking change attributes for cmdlets
@@ -222,7 +222,7 @@ title: Azure PowerShell release notes
 * General availability for module Az.Automanage
 
 #### Az.Automation 1.9.1
-* Fixed bug: Runbooks Name Pattern failures. 
+* Fixed bug: Runbooks Name Pattern failures.
 
 #### Az.CloudService 1.2.0
 * Upgraded the api version to 2022-09-04.
@@ -309,8 +309,8 @@ title: Azure PowerShell release notes
 * Fixed a bug for 'Set-AzServiceBusQueue'
 
 #### Az.ServiceFabric 3.1.1
-* Added support for Windows 2022 server vm image. 
-    - This enables cluster operations with Windows 2022 server vm image 
+* Added support for Windows 2022 server vm image.
+    - This enables cluster operations with Windows 2022 server vm image
 
 #### Az.Sql 4.4.0
 * Fixed identity assignment in 'Set-AzSqlDatabase' cmdlet
@@ -375,13 +375,13 @@ title: Azure PowerShell release notes
 * Added parameter validation for 'Get-AzApplicationInsights' [#20697]
 
 #### Az.Compute 5.4.0
-* Added '-SkipIdentity', '-PathUserIdentity', '-IsTest' parameter to 'Set-AzVMAEMExtension' 
+* Added '-SkipIdentity', '-PathUserIdentity', '-IsTest' parameter to 'Set-AzVMAEMExtension'
 * Added 'ConsistencyMode' parameter to 'New-AzRestorePoint'.
 * Updated the storage account type value in several locations from the outdated 'StandardLRS' to the current 'Standard_LRS'.
 * Filled in missing parameter descriptions across multiple parameters and improved some existing parameter descriptions.
-* Updated Compute PS to use the new .Net SDK version 59.0.0. This includes an approved breaking change for a non-functional feature. 
+* Updated Compute PS to use the new .Net SDK version 59.0.0. This includes an approved breaking change for a non-functional feature.
   - The type of the property 'Source' of type 'Microsoft.Azure.Management.Compute.Models.GalleryDataDiskImage', 'Microsoft.Azure.Management.Compute.Models.GalleryOSDiskImage', and 'Microsoft.Azure.Management.Compute.Models.GalleryImageVersionStorageProfile' has changed from 'Microsoft.Azure.Management.Compute.Models.GalleryArtifactVersionSource' to 'Microsoft.Azure.Management.Compute.Models.GalleryDiskImageSource'.
-* Updated the broken 'UbuntuLTS' image alias to use its original sku version of '16.04-LTS' instead of the nonexistent image '20.04-LTS'. This fixes an issue introduced in the version 5.3.0 release. 
+* Updated the broken 'UbuntuLTS' image alias to use its original sku version of '16.04-LTS' instead of the nonexistent image '20.04-LTS'. This fixes an issue introduced in the version 5.3.0 release.
 * Updated Set-AzVMRunCommand and Set-AzVmssRunCommand ScriptLocalPath parameter set to work with Linux and with files that have comments.
 * Added '-TargetExtendedLocation' parameter to 'New-AzGalleryImageVersion' and 'Update-AzGalleryImageVersion'
 * Added '-AllowDeletionOfReplicatedLocation' to 'Update-AzGalleryImageVersion'
@@ -447,7 +447,7 @@ title: Azure PowerShell release notes
     - 'New-AzStorageAccount'
 * Removed the ValidateSet of StandardBlobTier parameter
     - 'Copy-AzStorageBlob'
-    - 'Set-AzStorageBlobContent' 
+    - 'Set-AzStorageBlobContent'
     - 'Start-AzStorageBlobCopy'
 
 #### Az.TrafficManager 1.2.0
@@ -521,9 +521,9 @@ title: Azure PowerShell release notes
 * Fixed a bug for DestinationPortBehavior in 'Get-AzNetworkWatcherConnectionMonitor', 'New-AzNetworkWatcherConnectionMonitor' powershell command by adding this properties to get and set the DestinationPortBehavior information. [#15996]
 
 #### Az.RedisCache
-* Added optional parameter 'PreferredDataArchiveAuthMethod' in 'Export-AzRedisCache'  
-* Added optional parameter 'PreferredDataArchiveAuthMethod' in 'Import-AzRedisCache'  
-* Added 4 additional properties for a geo replication link: 'PrimaryHostName', 'GeoReplicatedPrimaryHostName', 'ServerRole', and 'LinkedRedisCacheLocation'in 'Get-AzRedisCacheLink' and 'New-AzRedisCacheLink' 
+* Added optional parameter 'PreferredDataArchiveAuthMethod' in 'Export-AzRedisCache'
+* Added optional parameter 'PreferredDataArchiveAuthMethod' in 'Import-AzRedisCache'
+* Added 4 additional properties for a geo replication link: 'PrimaryHostName', 'GeoReplicatedPrimaryHostName', 'ServerRole', and 'LinkedRedisCacheLocation'in 'Get-AzRedisCacheLink' and 'New-AzRedisCacheLink'
 
 #### Az.Resources
 * Fixed issue introduced in previous fix for 'Set-AzPolicySetDefinition' InternalServerError when the initiative is too large [#20238], which will remove space in value.
@@ -645,7 +645,7 @@ title: Azure PowerShell release notes
 * Added deprecation message for the command Test-AzStackHCIConnection. Customers can use Invoke-AzStackHciConnectivityValidation from the module AzStackHCI.EnvironmentChecker for connectivity verification tests.
 
 #### Az.Storage
-* Supported MaxPageSize, Include, and Filter parameters for listing encryption scopes 
+* Supported MaxPageSize, Include, and Filter parameters for listing encryption scopes
     - 'Get-AzStorageEncryptionScope'
 * Supported excludePrefix, includeDeleted, and many new schema fields in Blob Inventory
     - 'New-AzStorageBlobInventoryPolicyRule'
@@ -678,7 +678,7 @@ title: Azure PowerShell release notes
 * Updated CognitiveServices PowerShell to use 2022-10-01 version.
 
 #### Az.Compute
-* Fixed EdgeZone does not pass to VM for 'New-AzVM' 'SimpleParameterSet' [#18978] 
+* Fixed EdgeZone does not pass to VM for 'New-AzVM' 'SimpleParameterSet' [#18978]
 * Added 'ScriptFilePath' parameter set for 'Set-AzVMRunCommand' and 'Set-AzVmssVMRunCommand' to allow users to pass in the path of the file that has the run command script
 * Added '-AsJob' optional parameter to 'Remove-AzVMExtension' cmdlet.
 * Added '-EdgeZone' optional parameter for 'Get-AzComputeResourceSku' and 'New-AzSnapshotUpdateConfig' cmdlets.
@@ -713,7 +713,7 @@ title: Azure PowerShell release notes
     - Channels
 
 #### Az.EventHub
-* Added readonly Status property in EventHub Namespace 
+* Added readonly Status property in EventHub Namespace
 
 #### Az.Functions
 * Added warning logs to detect Az context switching in Get-AzFunctionApp
@@ -915,7 +915,7 @@ title: Azure PowerShell release notes
   * 'New-AzDiagnosticDetailSetting' replaced by 'New-AzDiagnosticSettingLogSettingsObject' and 'New-AzDiagnosticSettingMetricSettingsObject'
   * 'Get-AzSubscriptionDiagnosticSettingCategory' replaced by 'Get-AzEventCategory'
 * [Breaking Change] Upgraded API version for Autoscale from 2015-04-01 to 2022-10-01
-  * 'Get-AzAutoscaleSetting' 
+  * 'Get-AzAutoscaleSetting'
   * 'Remove-AzAutoscaleSetting'
   * 'Add-AzAutoscaleSetting' replaced by 'New-AzAutoscaleSetting'
   * 'New-AzAutoscaleNotification' replaced by 'New-AzAutoscaleNotificationObject'
@@ -1075,7 +1075,7 @@ title: Azure PowerShell release notes
 #### Az.Compute
 * Added Trusted Launch Generic Breaking Change warning for 'New-AzVM', 'New-AzDisk' and 'New-AzVMSS' cmdlets.
 * 'Get-AzVMRunCommand' now shows all the properties of VMRunCommand in a list format.
-* Added new Parameter '-PublicIpSku' to the 'NewAzVM' cmdlet with acceptable values : 'Basic' and 'Standard'. 
+* Added new Parameter '-PublicIpSku' to the 'NewAzVM' cmdlet with acceptable values : 'Basic' and 'Standard'.
 * Added Generic Breaking Change PublicIpSku Warning and Overridden '-Zone' logic when '-PublicIpSku' is explicitly provided.
 * Added Disk Delete Optional parameters 'OsDisk Deletion Option' and 'Delete Option' to the 'Set-AzVmssStorageProfile' (OS Disk) and 'Add-AzVmssDataDisk' (Data Disk)
 * Improved printed output for 'Get-AzComputeResourceSku'
@@ -1121,7 +1121,7 @@ for a better powershell experience and as a result would witness breaking change
 * Added a warning message for an upcoming breaking change to 'Get-AzMarketplaceTerms'.
 
 #### Az.Monitor
-* Added breaking change warning messages for 
+* Added breaking change warning messages for
     - 'ActivityLogAlert'
     - 'DiagnosticSetting'
     - 'ScheduledQueryRule'
@@ -1135,7 +1135,7 @@ for a better powershell experience and as a result would witness breaking change
 * Added new property 'DefaultDataCollectionRuleResourceId' to 'Set-AzOperationalInsightsWorkspace' and to 'New-AzOperationalInsightsWorkspace' cmdlets
 
 #### Az.PolicyInsights
-* Updated parameter documentation for Get-AzPolicyState 
+* Updated parameter documentation for Get-AzPolicyState
 
 #### Az.RecoveryServices
 * Added support for Archive smart tiering for AzureVM and MSSQL workloads.
@@ -1143,7 +1143,7 @@ for a better powershell experience and as a result would witness breaking change
 #### Az.Resources
 * Fixed bug '-Password' overwrite '-PasswordProfile' in 'New-AzADUser' [#19265]
 * Exposed 'EmployeeOrgData' 'Manager' for 'Get-AzADUSer' [#18205]
-* Exposed parameter '-Count' for 'Get-AzADUser' [#16874] 
+* Exposed parameter '-Count' for 'Get-AzADUser' [#16874]
 
 #### Az.ServiceBus
 * In the upcoming major breaking change release in October 2022, Az.ServiceBus would be migrating most cmdlets to a new format
