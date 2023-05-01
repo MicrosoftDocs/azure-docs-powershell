@@ -1,11 +1,11 @@
 ---
 description: Learn how to install and run Azure PowerShell on Linux. You can install Azure PowerShell on Linux with one command.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/23/2023
+ms.date: 04/28/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-title: Install Azure PowerShell on Linux | Microsoft Docs
+title: Install Azure PowerShell on Linux
 ---
 
 

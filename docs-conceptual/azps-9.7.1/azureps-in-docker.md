@@ -1,7 +1,7 @@
 ---
 description: How to use Azure PowerShell that is preinstalled in a Docker image.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/23/2023
+ms.date: 04/28/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
