@@ -52,7 +52,7 @@ Windows system:
 Older versions of Visual Studio may install Azure PowerShell as part of the Azure development
 workload, which installs the AzureRM module. Azure PowerShell can be removed using the Visual Studio
 installer or by using "Uninstall" in Apps & features. If you have already installed PowerShell 7.x,
-you may need to [manually install](install-az-ps.md#installation) the Azure Az PowerShell module.
+you may need to [manually install](install-azure-powershell.md) the Azure Az PowerShell module.
 
 ### Proxy blocks connection
 

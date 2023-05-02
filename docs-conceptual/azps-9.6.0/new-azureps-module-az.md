@@ -23,8 +23,8 @@ interacting with Azure.
 
 You can use the Az PowerShell module with one of the following methods:
 
-- [Install the Az PowerShell module via PowerShellGet](install-az-ps.md) (recommended option).
-- [Install the Az PowerShell module with MSI](install-az-ps-msi.md).
+- [Install the Az PowerShell module via PowerShellGet](install-azure-powershell.md) (recommended option).
+- [Install the Az PowerShell module with MSI](install-azure-powershell.md).
 - [Use Azure Cloud Shell](/azure/cloud-shell/overview).
 - [Use the Az PowerShell Docker container](azureps-in-docker.md).
 
@@ -70,12 +70,12 @@ available to experiment with Az:
   PowerShell 7 or later. Windows PowerShell 5.1 and PowerShell 7 and later use separate
   collections of modules. Follow the instructions to install the
   [latest version of PowerShell](/powershell/scripting/install/installing-powershell) and then
-  [install the Az module](install-az-ps.md) from PowerShell 7 or later.
+  [install the Az module](install-azure-powershell.md) from PowerShell 7 or later.
 
 To upgrade from an existing AzureRM install:
 
 1. [Uninstall the Azure PowerShell AzureRM module](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
-1. [Install the Azure PowerShell Az module](install-az-ps.md)
+1. [Install the Azure PowerShell Az module](install-azure-powershell.md)
 1. **OPTIONAL**: Enable compatibility mode to add aliases for AzureRM cmdlets with
    [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) while you become
    familiar with the new command set. For more information, see the next section or
