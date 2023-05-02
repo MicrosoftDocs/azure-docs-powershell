@@ -25,7 +25,7 @@ environment. To get up and running with Cloud Shell, see
 Shell runs PowerShell on a Linux container, so Windows-specific functionality isn't available.
 
 When you're ready to install Azure PowerShell on your local machine, follow the instructions in
-[Install the Azure PowerShell module](install-az-ps.md).
+[Install the Azure PowerShell module](install-azure-powershell.md).
 
 ## Sign in to Azure
 

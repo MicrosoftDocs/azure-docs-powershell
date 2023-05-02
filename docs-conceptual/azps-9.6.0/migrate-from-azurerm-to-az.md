@@ -11,7 +11,7 @@ title: Migrate Azure PowerShell scripts from AzureRM to Az
 # Migrate Azure PowerShell from AzureRM to Az
 
 All versions of the AzureRM PowerShell module are outdated. The [Az PowerShell
-module](install-az-ps.md) is now the recommended PowerShell module for interacting with Azure.
+module](install-azure-powershell.md) is now the recommended PowerShell module for interacting with Azure.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
@@ -125,4 +125,4 @@ Install the [Azure PowerShell extension for VSCode](https://marketplace.visualst
 ## Next steps
 
 - [Uninstall AzureRM](uninstall-az-ps.md#uninstall-the-azurerm-module)
-- [Install Azure PowerShell](install-az-ps.md)
+- [Install Azure PowerShell](install-azure-powershell.md)
