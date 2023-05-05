@@ -2,24 +2,31 @@
     "build": {
         "content": [
 
+            { "files": ["toc.yml"], "src": "azps-9.7.1", "version": "azps-9.7.1", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-9.7.1", "version": "azps-9.7.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-9.7.1", "version": "azps-9.7.1", "dest": "azure" },
 
+            { "files": ["toc.yml"], "src": "azps-9.6.0", "version": "azps-9.6.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-9.6.0", "version": "azps-9.6.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-9.6.0", "version": "azps-9.6.0", "dest": "azure" },
 
+            { "files": ["toc.yml"], "src": "azps-8.3.0", "version": "azps-8.3.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-8.3.0", "version": "azps-8.3.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-8.3.0", "version": "azps-8.3.0", "dest": "azure" },
 
+            { "files": ["toc.yml"], "src": "azps-0.10.0", "version": "azps-0.10.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-0.10.0", "version": "azps-0.10.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-0.10.0", "version": "azps-0.10.0", "dest": "azure" },
 
+            { "files": ["toc.yml"], "src": "azurermps-6.13.0", "version": "azurermps-6.13.0", "dest": "module/azure-rm" },
             { "files": ["**/*.yml"], "src": "azurermps-6.13.0", "version": "azurermps-6.13.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurermps-6.13.0", "version": "azurermps-6.13.0", "dest": "azure/azurerm" },
 
+            { "files": ["toc.yml"], "src": "azurermps-2.5.0", "version": "azurermps-2.5.0", "dest": "module/azure-rm" },
             { "files": ["**/*.yml"], "src": "azurermps-2.5.0", "version": "azurermps-2.5.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurermps-2.5.0", "version": "azurermps-2.5.0", "dest": "azure/azurerm" },
 
+            { "files": ["toc.yml"], "src": "azuresmps-4.0.0", "version": "azuresmps-4.0.0", "dest": "module/servicemanagement" },
             { "files": ["**/*.yml"], "src": "azuresmps-4.0.0", "version": "azuresmps-4.0.0", "exclude": ["docs-conceptual/**"], "dest": "module/servicemanagement" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azuresmps-4.0.0", "version": "azuresmps-4.0.0", "dest": "azure/servicemanagement" },
 
