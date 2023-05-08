@@ -1,30 +1,30 @@
 {
-    "azps-9.7.0": {
-        "conceptualToc": "docs-conceptual/azps-9.7.0/toc.yml",
+    "azps-9.7.1": {
+        "conceptualToc": "docs-conceptual/azps-9.7.1/toc.yml",
         "conceptualTocUrl": "/powershell/azure/toc.json",
-        "packageRoot": "azps-9.7.0",
-        "referenceTocUrl": "/powershell/module/toc.json",
-        "serviceMap": "mapping/az-groupMapping-9.7.0.json"
+        "packageRoot": "azps-9.7.1",
+        "referenceTocUrl": "/powershell/module/azure-powershell/toc.json",
+        "serviceMap": "mapping/az-groupMapping-9.7.1.json"
     },
     "azps-9.6.0": {
         "conceptualToc": "docs-conceptual/azps-9.6.0/toc.yml",
         "conceptualTocUrl": "/powershell/azure/toc.json",
         "packageRoot": "azps-9.6.0",
-        "referenceTocUrl": "/powershell/module/toc.json",
+        "referenceTocUrl": "/powershell/module/azure-powershell/toc.json",
         "serviceMap": "mapping/az-groupMapping-9.6.0.json"
     },
     "azps-8.3.0": {
         "conceptualToc": "docs-conceptual/azps-8.3.0/toc.yml",
         "conceptualTocUrl": "/powershell/azure/toc.json",
         "packageRoot": "azps-8.3.0",
-        "referenceTocUrl": "/powershell/module/toc.json",
+        "referenceTocUrl": "/powershell/module/azure-powershell/toc.json",
         "serviceMap": "mapping/az-groupMapping-8.3.0.json"
     },
     "azps-0.10.0": {
         "conceptualToc": "docs-conceptual/azps-0.10.0/toc.yml",
         "conceptualTocUrl": "/powershell/azure/toc.json",
         "packageRoot": "azps-0.10.0",
-        "referenceTocUrl": "/powershell/module/toc.json",
+        "referenceTocUrl": "/powershell/module/azure-powershell/toc.json",
         "serviceMap": "mapping/az-groupMapping-0.10.0.json"
     },
     "azuredmps-0.9.0-preview": {
@@ -38,14 +38,14 @@
         "conceptualToc": "docs-conceptual/azurermps-2.5.0/toc.yml",
         "conceptualTocUrl": "/powershell/azure/azurerm/toc.json",
         "packageRoot": "azurermps-2.5.0",
-        "referenceTocUrl": "/powershell/module/toc.json",
+        "referenceTocUrl": "/powershell/module/azure-powershell/toc.json",
         "serviceMap": "mapping/rm-groupMapping-2.5.0.json"
     },
     "azurermps-6.13.0": {
         "conceptualToc": "docs-conceptual/azurermps-6.13.0/toc.yml",
         "conceptualTocUrl": "/powershell/azure/azurerm/toc.json",
         "packageRoot": "azurermps-6.13.0",
-        "referenceTocUrl": "/powershell/module/toc.json",
+        "referenceTocUrl": "/powershell/module/azure-powershell/toc.json",
         "serviceMap": "mapping/rm-groupMapping-6.13.0.json"
     },
     "azuresmps-4.0.0": {
