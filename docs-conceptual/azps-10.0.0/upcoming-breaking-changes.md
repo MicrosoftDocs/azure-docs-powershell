@@ -9,5 +9,4 @@ title: Upcoming breaking changes in Azure PowerShell
 ---
 # Upcoming breaking changes in Azure PowerShell
 
-There is currently no planned breaking change for the next major release of Azure PowerShell - Az 11.
-
+There are currently no planned breaking changes for the next major release of Azure PowerShell, Az PowerShell module version 11.0.0.
