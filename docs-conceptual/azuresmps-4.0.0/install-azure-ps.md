@@ -1,9 +1,9 @@
 ---
 title: Install and configure the Azure PowerShell Service Management module | Microsoft Docs
-description: How to install and configure Azure PowerShell for first time use.
+description: How to install and configure the Azure PowerShell Service Management module.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 02/24/2023
+ms.date: 05/16/2023
 ms.custom: devx-track-azurepowershell
 ---
 
@@ -11,99 +11,96 @@ ms.custom: devx-track-azurepowershell
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
-Installing Azure PowerShell from the [PowerShell Gallery](https://www.powershellgallery.com/) is
-the preferred method of installation.
+The Azure PowerShell Service Management module is a rollup module. Installing the Azure PowerShell
+Service Management module downloads the generally available modules for managing legacy Azure
+resources that use Service Management APIs and makes their cmdlets available for use.
+
+
+## Prerequisites
 
 > [!IMPORTANT]
 > The Azure PowerShell Service Management module only works with Windows PowerShell. It is not
 > compatible with PowerShell version 6 or higher and does not run on Linux or macOS.
 
-## Step 1: Install PowerShellGet
+- Run the following command from PowerShell to determine your PowerShell version:
 
-Installing items from the PowerShell Gallery requires the PowerShellGet module. Make sure you have
-the appropriate version of PowerShellGet and other system requirements. Run the following command
-to see if you have PowerShellGet installed on your system.
+  ```powershell
+  $PSVersionTable.PSVersion
+  ```
 
-```powershell
-Get-InstalledModule -Name PowerShellGet -AllVersions |
-  Select-Object -Property Name, Version, Path
-```
+- Update to
+   [Windows PowerShell 5.1](/powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell)
 
-You should see something similar to the following output:
+- Set the PowerShell execution policy to remote signed or less restrictive
 
-```Output
-Name          Version Path
-----          ------- ----
-PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
-```
+  - Check the PowerShell execution policy:
 
-If you do not have PowerShellGet installed, see the
-[How to get PowerShellGet](#how-to-get-powershellget).
+    ```powershell
+    Get-ExecutionPolicy -List
+    ```
 
-## Step 2: Install Azure PowerShell
+  - Set the PowerShell execution policy to remote signed:
 
-Run the following command from the Windows PowerShell console running as Administrator:
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    ```
 
-```powershell
-Install-Module -Name Azure
-```
+  For more information about execution policies, see
+  [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-The Azure module is a rollup module for the Azure Service Management cmdlets. When you install the
-AzureRM module, any other Azure modules that have not previously been installed will be downloaded
-and installed from the PowerShell Gallery.
+## Installation
 
-The Azure Service Management module shares dependencies with the Azure PowerShell Resource Manager
-modules. If you have installed the Azure PowerShell Resource Manager modules, you will need to add
-the `AllowClobber` parameter to the install command. This allows the existing shared dependencies to
-be updated. Without this parameter, installation of the module fails.
+Use the [Install-Module](/powershell/module/powershellget/install-module) cmdlet to install the
+Azure PowerShell Service Management module:
 
 ```powershell
-Install-Module -Name Azure -AllowClobber
+Install-Module -Name Azure, Azure.Storage -Repository PSGallery -AllowClobber -Force
 ```
 
-After you install this module, you can import the module by running the following command:
+The Azure PowerShell Service Management module shares dependencies with the Azure PowerShell
+Resource Manager modules. If you have installed the Azure PowerShell Resource Manager modules, the
+**AllowClobber** parameter as shown in the previous command is required. This allows the existing
+shared dependencies to be updated. Without this parameter, installation of the module fails.
+
+After you install the Azure PowerShell Service Management module, import the module:
 
 ```powershell
 Import-Module -Name Azure
 ```
 
-## To use the cmdlets
+## Sign in
 
-To start working with the Azure Service Management cmdlets, first log on to your Azure account. To
-log on to your account, run the following command:
+To start managing your legacy Azure resources with the Azure PowerShell Service Management module,
+launch a PowerShell session and run
+[Add-AzureAccount](/powershell/module/servicemanagement/azure/add-azureaccount) to sign in to Azure:
 
-```powershell
+```azurepowershell
 Add-AzureAccount
 ```
 
-After logging into Azure, Azure PowerShell creates a context for the given session. That context
-contains the Azure PowerShell environment, account, tenant, and subscription that will be used for
-all cmdlets within that session. Now you are ready to use the modules below.
+After logging into Azure, the Azure PowerShell Service Management module creates a context for the
+given session. That context contains the Azure environment, account, tenant, and subscription used
+for all cmdlets within that session.
 
-## Azure Service Management cmdlets
+## Troubleshooting
 
-If you notice that the online cmdlet help includes cmdlets or parameters that are not in your
-module, download and install the latest version of the module.
-
-For sample scripts that can help you automate some of the common tasks in Azure, see the
-[Windows Azure Script Center](https://www.windowsazure.com/documentation/scripts/).
-
-For general information about installing, learning, using, and customizing Windows PowerShell, see
-[Scripting with Windows PowerShell](/powershell/scripting/learn/ps101/00-introduction).
-
-### How to get PowerShellGet
-
-|                    OS Version                     |                                     Install instructions                                      |
-| ------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| I have Windows 10, Windows Server 2016, or higher | Built into Windows Management Framework (WMF) 5.x included in the OS                          |
-| I want to upgrade to PowerShell 5                 | [Install the latest version of WMF](https://www.microsoft.com/download/details.aspx?id=54616) |
-
-### Checking the version of Azure PowerShell
-
-To determine the version of Azure PowerShell you have installed, run
-`Get-InstalledModule -Name Azure` from PowerShell.
+If you receive the error _"The specified module 'Azure.Storage' with version '4.3.0' was not loaded
+because no valid module file was found in any module directory."_, you need to install the
+Azure.Storage PowerShell module:
 
 ```powershell
-Get-InstalledModule -Name Azure -AllVersions |
-  Select-Object -Property Name,Version,Path
+Install-Module -Name Azure.Storage -Repository PSGallery -AllowClobber -Force
 ```
+
+If you receive the error _"The 'Install-Module' command was found in the module 'PowerShellGet', but
+the module could not be loaded."_, you need to set the PowerShell execution policy to remote signed
+or less restrictive:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+## See also
+
+For more information about commands in the Azure PowerShell Service Management module, see [the
+cmdlet reference documentation](/powershell/module/servicemanagement/azure/).
