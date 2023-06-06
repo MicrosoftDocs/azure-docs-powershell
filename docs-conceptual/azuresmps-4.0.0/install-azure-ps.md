@@ -45,8 +45,10 @@ resources that use Service Management APIs and makes their cmdlets available for
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
     ```
 
-  For more information about execution policies, see
-  [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+    For more information about execution policies, see
+    [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+
+- [Update PowerShellGet for Windows PowerShell 5.1](/powershell/gallery/powershellget/update-powershell-51)
 
 ## Installation
 
