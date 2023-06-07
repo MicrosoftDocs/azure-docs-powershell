@@ -1,7 +1,7 @@
 ---
 description: Learn how to run a Docker container hosting Azure PowerShell. Docker gets you started quickly with an isolated environment in which to run Azure PowerShell.
 ms.custom: devx-track-azurepowershell
-ms.date: 05/19/2023
+ms.date: 05/25/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -11,22 +11,21 @@ title: How to run Azure PowerShell in a Docker container
 # Using Azure PowerShell in a Docker container
 
 We publish Docker images with Azure PowerShell preinstalled. You can use Docker to run a standalone
-Linux container with Azure PowerShell pre-installed.This article shows you how to get started using
-Azure PowerShell in the Docker container.
+Linux container with Azure PowerShell preinstalled. This article shows you how to use Azure
+PowerShell in the Docker container.
 
 ## Finding available images
 
-The released images require Docker 17.05 or newer. It's also expected that you are able to run
-Docker without `sudo` or local administrative rights. Please follow Docker's official
-[instructions][install] to install Docker correctly.
+The released images require Docker 17.05 or newer. You must be able to run Docker without `sudo` or
+local administrative rights. Follow Docker's official [instructions][install] to install Docker.
 
-The release containers derive from the official distribution image, then install dependencies, and
-finally install the Azure PowerShell package.
+The release containers derive from the official distribution image, install dependencies, and
+install the Azure PowerShell module.
 
 The latest container image contains the latest version of PowerShell and the latest Azure PowerShell
 modules supported with the Az PowerShell module.
 
-A full list of Azure PowerShell Docker images can be found on our [Docker image][az image] page.
+You can find a complete list of Azure PowerShell Docker images on our [Docker image][az image] page.
 
 ## Using Azure PowerShell in a container
 
@@ -64,12 +63,12 @@ PowerShell session.
 ---
 
 For Windows Docker hosts, you must enable Docker file sharing to allow local drives on Windows to be
-shared with Linux containers. For more information see
+shared with Linux containers. For more information, see
 [Get started with Docker for Windows][file-sharing].
 
 ### Remove the image when no longer needed
 
-The following command is used to delete the Docker container when you no longer need it.
+The following command deletes the Docker container when you no longer need it.
 
 # [amd64](#tab/amd64)
 
