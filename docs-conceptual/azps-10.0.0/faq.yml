@@ -51,3 +51,22 @@ sections:
           ```azurepowershell-interactive
           [System.Environment]::SetEnvironmentVariable('SuppressAzureRmModulesRetiringWarning', 'true', [System.EnvironmentVariableTarget]::User)
           ```
+
+
+      - question: |
+          How do I determinate max HTTP retry times to service client in Azure PowerShell?
+        answer: |
+          For general HTTP response (except response status code is 429), Azure PowerShell respects AZURE_PS_HTTP_MAX_RETRIES defined in environment variable. 
+          Its minimal value is 0. If not specified, Azure PowerShell uses SDK default parameter.
+          
+          ```azurepowershell-interactive
+          Set-Item -Path Env:\AZURE_PS_HTTP_MAX_RETRIES -Value 3
+          ```
+          
+          If response status code is 429, Azure PowerShell respects AZURE_PS_HTTP_MAX_RETRIES_FOR_429 defined in environment variable. 
+          Its minimal value is 1. Notice that the total retry times of 429 should be (AZURE_PS_HTTP_MAX_RETRIES + 1) * AZURE_PS_HTTP_MAX_RETRIES_FOR_429 - 1. 
+          If not specified, Azure PowerShell uses SDK default parameter.
+
+          ```azurepowershell-interactive
+          Set-Item -Path Env:\AZURE_PS_HTTP_MAX_RETRIES_FOR_429 -Value 2
+          ```
