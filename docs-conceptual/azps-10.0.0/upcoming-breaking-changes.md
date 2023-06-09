@@ -1,7 +1,7 @@
 ---
 description: Learn about upcoming breaking changes to the Azure Az PowerShell module
 ms.custom: devx-track-azurepowershell
-ms.date: 06/08/2023
+ms.date: 06/09/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -36,6 +36,47 @@ title: Upcoming breaking changes in Azure PowerShell
   - Starting November 2023, the "New-AzVmss" cmdlet will default to Trusted Launch VMSS. For more info, visit [aka.ms/trustedLaunchVMSS](https://aka.ms/trustedLaunchVMSS).
   - Starting November 2023, the "New-AzVmss" cmdlet will use new defaults: Flexible orchestration mode and enable NATv2 configuration for Load Balancer. To learn more about Flexible Orchestration modes, visit [aka.ms/orchestrationModeVMSS](https://aka.ms/orchestrationModeVMSS).
   - Consider using the image alias including the version of the distribution you want to use in the "-ImageName" parameter of the "New-AzVmss" cmdlet. On April 30, 2023, the image deployed using `UbuntuLTS` will reach its end of life. In November 2023, the aliases `UbuntuLTS`, `CentOS`, `Debian`, and `RHEL` will be removed.
+
+## Az.DesktopVirtualization
+
+### `New-AzWvdScalingPlan`
+
+- Parameter breaking-change will happen to all parameter sets
+  - `-HostPoolType`
+    - The parameter : 'HostPoolType' is changing.
+    - The change is expected to take effect from the version : '4.0.0'
+
+## Az.PowerBIEmbedded
+
+### `Get-AzPowerBIWorkspace`
+
+- Cmdlet breaking-change will happen to all parameter set
+  - The cmdlet is being deprecated. There will be no replacement for it.
+
+### `Get-AzPowerBIWorkspaceCollection`
+
+- Cmdlet breaking-change will happen to all parameter set
+  - The cmdlet is being deprecated. There will be no replacement for it.
+
+### `Get-AzPowerBIWorkspaceCollectionAccessKey`
+
+- Cmdlet breaking-change will happen to all parameter set
+  - The cmdlet is being deprecated. There will be no replacement for it.
+
+### `New-AzPowerBIWorkspaceCollection`
+
+- Cmdlet breaking-change will happen to all parameter set
+  - The cmdlet is being deprecated. There will be no replacement for it.
+
+### `Remove-AzPowerBIWorkspaceCollection`
+
+- Cmdlet breaking-change will happen to all parameter set
+  - The cmdlet is being deprecated. There will be no replacement for it.
+
+### `Reset-AzPowerBIWorkspaceCollectionAccessKey`
+
+- Cmdlet breaking-change will happen to all parameter set
+  - The cmdlet is being deprecated. There will be no replacement for it.
 
 ## Az.Storage
 
