@@ -66,5 +66,5 @@ sections:
           If not specified, Azure PowerShell uses SDK default parameter.
 
           ```azurepowershell-interactive
-[System.Environment]::SetEnvironmentVariable('AZURE_PS_HTTP_MAX_RETRIES_FOR_429 ', 3, [System.EnvironmentVariableTarget]::User)```
+          [System.Environment]::SetEnvironmentVariable('AZURE_PS_HTTP_MAX_RETRIES_FOR_429 ', 3, [System.EnvironmentVariableTarget]::User)
           ```
