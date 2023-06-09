@@ -51,6 +51,7 @@ sections:
           ```azurepowershell-interactive
           [System.Environment]::SetEnvironmentVariable('SuppressAzureRmModulesRetiringWarning', 'true', [System.EnvironmentVariableTarget]::User)
           ```
+
       - question: |
           How do I determinate max HTTP retry times to service client in Azure PowerShell?
         answer: |
