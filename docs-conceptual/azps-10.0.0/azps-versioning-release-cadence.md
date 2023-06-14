@@ -1,7 +1,7 @@
 ---
 description: This article contains Azure PowerShell versioning, release cadence, and breaking change information for the Az PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 06/13/2023
+ms.date: 06/14/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -31,16 +31,15 @@ There are two Az PowerShell rollup modules:
 - [AzPreview](https://www.powershellgallery.com/packages/AzPreview/). Installs all GA and preview
   modules for managing Azure resources. Doesn't include feature preview modules.
 
-The version of AzPreview module is always the same version and released at the same time as the Az
-module.
+The AzPreview module is always the same version and is released at the same time as the Az module.
 
 ## Release cadence
 
 Planned updates to the Az PowerShell module are released on the first Tuesday of each month. These
 12 planned updates per calendar year are in two categories:
 
-- Major versions. At most, two per calendar year that introduce breaking changes. The first number
-  in the version number is updated. For example, version 6.6.0 to version 7.0.0.
+- Major versions. At most, two per calendar year introduce breaking changes. The first number in the
+  version number is updated. For example, version 6.6.0 to version 7.0.0.
 - Minor versions. 10 per calendar year that don't introduce breaking changes. The second number in
   the version number is updated. For example, version 7.0.0 to version 7.1.0.
 
@@ -89,8 +88,8 @@ the following articles.
 
 ### Breaking change warning messages
 
-Breaking change warning messages are a way for Azure PowerShell cmdlet author's to communicate
-upcoming breaking changes with end users.
+Breaking change warning messages allow Azure PowerShell cmdlet author's to communicate upcoming
+breaking changes with end users.
 
 ### Suppress breaking change warning messages
 
