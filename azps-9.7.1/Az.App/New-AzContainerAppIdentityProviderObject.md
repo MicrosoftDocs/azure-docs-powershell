@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.App
 online version: https://learn.microsoft.com/powershell/module/az.app/new-azcontainerappidentityproviderobject
 schema: 2.0.0
@@ -655,7 +655,7 @@ Accept wildcard characters: False
 ### -RegistrationOpenIdIssuer
 The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
         When using Azure Active Directory, this value is the URI of the directory tenant, e.g.
-https://login.microsoftonline.com/v2.0/{tenant-guid}/.
+`https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
         This URI is a case-sensitive identifier for the token issuer.
         More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html.
 
