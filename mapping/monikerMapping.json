@@ -27,13 +27,6 @@
         "referenceTocUrl": "/powershell/module/deploymentmanager/toc.json",
         "serviceMap": "mapping/dm-groupMapping-0.9.0.json"
     },
-    "azurermps-2.5.0": {
-        "conceptualToc": "docs-conceptual/azurermps-2.5.0/toc.yml",
-        "conceptualTocUrl": "/powershell/azure/azurerm/toc.json",
-        "packageRoot": "azurermps-2.5.0",
-        "referenceTocUrl": "/powershell/module/azure-powershell/toc.json",
-        "serviceMap": "mapping/rm-groupMapping-2.5.0.json"
-    },
     "azurermps-6.13.0": {
         "conceptualToc": "docs-conceptual/azurermps-6.13.0/toc.yml",
         "conceptualTocUrl": "/powershell/azure/azurerm/toc.json",
