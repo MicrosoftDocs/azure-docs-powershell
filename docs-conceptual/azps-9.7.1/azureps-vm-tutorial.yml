@@ -7,7 +7,7 @@ metadata:
     level: Beginner
     displayType: two-column
     interactive: azurepowershell
-    ms.date: 04/28/2023
+    ms.date: 06/22/2023
     ms.devlang: powershell
     ms.custom: devx-track-azurepowershell
     ms.service: azure-powershell
@@ -115,7 +115,7 @@ items:
         Once the VM is ready, we can view the results in the Azure Portal or by inspecting the
         `$newVM1` variable.
 
-        ```powershell-interactive
+        ```azurepowershell-interactive
         $newVM1
         ```
 
@@ -143,8 +143,8 @@ items:
         Let's get some more detailed information from the VM we just created. In this example, we verify
         the Name of the VM and the admin account we created.
 
-        ```powershell-interactive
-        $newVM1.OSProfile | Select-Object -Property ComputerName,AdminUserName
+        ```azurepowershell-interactive
+        $newVM1.OSProfile | Select-Object -Property ComputerName, AdminUserName
         ```
 
         ```Output
