@@ -3,7 +3,7 @@ title: Install Azure PowerShell with PowerShellGet
 description: How to install Azure PowerShell with PowerShellGet
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 02/26/2020
+ms.date: 06/22/2023
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -138,7 +138,7 @@ To install the package, your proxy needs to allow HTTPS connections to the follo
 
 To start working with Azure PowerShell, sign in with your Azure credentials.
 
-```powershell-interactive
+```azurepowershell-interactive
 # Connect to Azure with a browser sign in token
 Connect-AzAccount
 ```
