@@ -10,9 +10,8 @@ ms.service: azure-powershell
 
 # Install Azure PowerShell
 
-This article explains how to install the Azure PowerShell modules using
-[PowerShellGet][01]. These instructions work on Windows,
-macOS, and Linux platforms.
+This article explains how to install the Azure PowerShell modules using [PowerShellGet][01]. These
+instructions work on Windows, Linux, and macOS platforms.
 
 Azure PowerShell is also available in Azure [Cloud Shell][02].
 
@@ -46,7 +45,7 @@ To use Azure PowerShell in PowerShell 5.1 on Windows:
 
 Using the PowerShellGet cmdlets is the preferred installation method. Install the Az module for the
 current user only. This is the recommended installation scope. This method works the same on
-Windows, macOS, and Linux platforms. Run the following command from a PowerShell session:
+Windows, Linux, and macOS platforms. Run the following command from a PowerShell session:
 
 ```powershell-interactive
 if (Get-Module -Name AzureRM -ListAvailable) {
