@@ -3,8 +3,8 @@ title: Install Azure PowerShell with an MSI
 description: How to install Azure PowerShell without PowerShellGet using an MSI
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/10/2020 
-ms.custom: devx-track-azurepowershell 
+ms.date: 06/22/2023
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 
@@ -41,7 +41,7 @@ package installs modules in `${env:ProgramFiles}\WindowsPowerShell\Modules`.
 
 To start working with Azure PowerShell, sign in with your Azure credentials.
 
-```powershell-interactive
+```azurepowershell-interactive
 # Connect to Azure with an interactive dialog for sign-in
 Connect-AzAccount
 ```

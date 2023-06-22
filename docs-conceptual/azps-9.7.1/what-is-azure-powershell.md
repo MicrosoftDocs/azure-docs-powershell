@@ -1,7 +1,7 @@
 ---
 description: This article is an introduction to Azure PowerShell and its features.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/28/2023
+ms.date: 06/22/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: overview
@@ -21,14 +21,14 @@ for automation.
 > platforms.
 
 The Az PowerShell module is based on the .NET Standard, and works with PowerShell 7.0.6 LTS and
-PowerShell 7.1.3 or higher on all platforms including Windows, macOS, and Linux. It's also
+PowerShell 7.1.3 or higher on all platforms including Windows, Linux, and macOS. It's also
 compatible with Windows PowerShell 5.1.
 
 > [!NOTE]
 > PowerShell 7.0.6 LTS and PowerShell 7.1.3 or higher is the recommended version of PowerShell for
 > use with the Az PowerShell module on all platforms.
 
-You can install the Az PowerShell module locally on Windows, macOS, and Linux. It can also be used
+You can install the Az PowerShell module locally on Windows, Linux, and macOS. It can also be used
 from a browser through [Azure Cloud Shell](/azure/cloud-shell/overview) or
 [inside a Docker container](/powershell/azure/azureps-in-docker). For more information, see the
 [Azure PowerShell documentation](/powershell/azure/).

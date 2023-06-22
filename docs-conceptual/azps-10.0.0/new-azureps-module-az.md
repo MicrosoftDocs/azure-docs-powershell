@@ -1,7 +1,7 @@
 ---
 description: Introducing the Az PowerShell module, recommended for interacting with Azure, and the replacement for the AzureRM PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 05/23/2023
+ms.date: 06/22/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -51,7 +51,7 @@ The Az PowerShell module features the following benefits:
 > use with the Azure Az PowerShell module on all platforms.
 
 The Az PowerShell module is based on the .NET Standard library and works with PowerShell 7 and later
-on all platforms including Windows, macOS, and Linux. It's also compatible with Windows PowerShell
+on all platforms including Windows, Linux, and macOS. It's also compatible with Windows PowerShell
 5.1.
 
 We're committed to bringing Azure support to all platforms and all Az PowerShell modules are

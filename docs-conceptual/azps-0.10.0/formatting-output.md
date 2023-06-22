@@ -3,8 +3,8 @@ title: Format Azure PowerShell cmdlet output
 description: How to format cmdlet output for Azure PowerShell.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 01/07/2019 
-ms.custom: devx-track-azurepowershell 
+ms.date: 06/22/2023
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 
@@ -25,7 +25,7 @@ Formatting is used for display in a PowerShell terminal, and conversion is used 
 
 By default, Azure PowerShell cmdlets output in the table format. This format doesn't display all information of the requested resource:
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzVM
 ```
 
@@ -40,7 +40,7 @@ QueryExample        WinExampleVM  westus2 Standard_DS1_v2 Windows   winexamplevm
 The amount of data displayed by `Format-Table` can be affected by the width of your PowerShell session window. To restrict the output to specific properties
 and order them, property names can be provided as arguments to `Format-Table`:
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzVM -ResourceGroupName QueryExample | Format-Table Name,ResourceGroupName,Location
 ```
 
@@ -56,7 +56,7 @@ WinExampleVM   QueryExample      westus2
 
 List output format produces two columns, property names followed by the value. For complex objects, the type of the object is displayed instead.
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzVM | Format-List
 ```
 
@@ -88,7 +88,7 @@ Location                 : westus2
 
 Like `Format-Table`, property names can be provided to order and restrict the output:
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzVM | Format-List ResourceGroupName,Name,Location
 ```
 
@@ -110,7 +110,7 @@ Location          : westus2
 
 Wide output format produces only one property name per query. Which property is displayed can be controlled by giving a property as an argument.
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzVM | Format-Wide
 ```
 
@@ -119,7 +119,7 @@ ExampleLinuxVM                                  RHELExample
 WinExampleVM
 ```
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzVM | Format-Wide ResourceGroupName
 ```
 
@@ -132,7 +132,7 @@ QueryExample
 
 The `Custom-Format` output type is meant for formatting custom objects. Without any arguments, it behaves like `Format-List` but displays the property names of custom classes.
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzVM | Format-Custom
 ```
 
@@ -157,7 +157,7 @@ StorageProfile    : {ImageReference, OsDisk, DataDisks}
 
 Giving property names as arguments to `Custom-Format` displays the property/value pairs for custom objects set as values:
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzVM | Format-Custom Name,ResourceGroupName,Location,OSProfile
 ```
 
@@ -296,7 +296,7 @@ The following output has some fields removed.
 
 ### Conversion to XML
 
-The `ConvertTo-XML` cmdlet converts the Azure PowerShell response object into a pure XML object, which can be handled like any other XML object within PowerShell. 
+The `ConvertTo-XML` cmdlet converts the Azure PowerShell response object into a pure XML object, which can be handled like any other XML object within PowerShell.
 
 ```azurepowershell-interactive
 Get-AzVM | ConvertTo-XML
