@@ -61,7 +61,7 @@ New-AzVM [[-ResourceGroupName] <String>] [[-Location] <String>] [-EdgeZone <Stri
 ## DESCRIPTION
 The **New-AzVM** cmdlet creates a virtual machine in Azure.
 This cmdlet takes a virtual machine object as input. The **New-AzVM** cmdlet will create a new storage account for boot diagnostics if one does not already exist. <br> <br>
-Use the **[New-AzVMConfig](https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmconfig)** cmdlet to create a virtual machine object. <br> 
+Use the **[New-AzVMConfig](https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmconfig)** cmdlet to create a virtual machine object. <br>
 Then use the following cmdlets to set different properties of the virtual machine object:
 - **[Add-AzVMNetworkInterface](https://learn.microsoft.com/en-us/powershell/module/az.compute/add-azvmnetworkinterface)** to set the network profile.<br>
 - **[Set-AzVMOperatingSystem](https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmoperatingsystem)** to set the OS profile. <br>
@@ -161,7 +161,7 @@ You can confirm your login status by using the **Get-AzSubscription** cmdlet.
 ```powershell
 $VMLocalAdminUser = "LocalAdminUser"
 $VMLocalAdminSecurePassword = ConvertTo-SecureString "password" -AsPlainText -Force
-$LocationName = "westus"
+$LocationName = "eastus2"
 $ResourceGroupName = "MyResourceGroup"
 $ComputerName = "MyVM"
 $VMName = "MyVM"
@@ -214,7 +214,7 @@ New-AzVM -ResourceGroupName $ResourceGroupName -Name $VMName -Credential $cred -
 $vm = Get-AzVM -ResourceGroupName $ResourceGroupName -Name $VMName -UserData;
 ```
 
-The UserData value must always be Base64 encoded. 
+The UserData value must always be Base64 encoded.
 
 ### Example 5: Creating a new VM with an existing subnet in another resource group
 ```powershell
@@ -285,7 +285,7 @@ $vmGADefaultIDentity = "SystemAssigned";
 
 # Credential
 $password = <PASSWORD>;
-$securePassword = $password | ConvertTo-SecureString -AsPlainText -Force;  
+$securePassword = $password | ConvertTo-SecureString -AsPlainText -Force;
 $user = <USER NAME>;
 $cred = New-Object System.Management.Automation.PSCredential ($user, $securePassword);
 
@@ -340,7 +340,7 @@ $vm = New-AzVM -ResourceGroupName $rgname -Name $vmname -Credential $cred -Image
 $vm = Get-AzVM -ResourceGroupName $rgname -Name $vmname
 ```
 
-This example creates a new VM using the -Image parameter, providing many default values to the VM. 
+This example creates a new VM using the -Image parameter, providing many default values to the VM.
 
 ## PARAMETERS
 
@@ -597,8 +597,8 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionAtHost
-EncryptionAtHost property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. 
-This will enable the encryption for all the disks including Resource/Temp disk at host itself. 
+EncryptionAtHost property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set.
+This will enable the encryption for all the disks including Resource/Temp disk at host itself.
 Default: The Encryption at host will be disabled unless this property is set to true for the resource.
 
 ```yaml
@@ -723,9 +723,9 @@ Specifies a license type, which indicates that the image or disk for the virtual
 Possible values for Windows Server are:
 - Windows_Client
 - Windows_Server
-Possible values for Linux Server operating system are: 
-- RHEL_BYOS (for RHEL) 
-- SLES_BYOS (for SUSE) 
+Possible values for Linux Server operating system are:
+- RHEL_BYOS (for RHEL)
+- SLES_BYOS (for SUSE)
 
 ```yaml
 Type: System.String
