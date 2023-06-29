@@ -3,16 +3,15 @@ title: Install Azure PowerShell with PowerShellGet
 description: How to install Azure PowerShell with PowerShellGet
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 02/26/2020
+ms.date: 06/22/2023
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 
 # Install Azure PowerShell
 
-This article explains how to install the Azure PowerShell modules using
-[PowerShellGet][01]. These instructions work on Windows,
-macOS, and Linux platforms.
+This article explains how to install the Azure PowerShell modules using [PowerShellGet][01]. These
+instructions work on Windows, Linux, and macOS platforms.
 
 Azure PowerShell is also available in Azure [Cloud Shell][02].
 
@@ -46,7 +45,7 @@ To use Azure PowerShell in PowerShell 5.1 on Windows:
 
 Using the PowerShellGet cmdlets is the preferred installation method. Install the Az module for the
 current user only. This is the recommended installation scope. This method works the same on
-Windows, macOS, and Linux platforms. Run the following command from a PowerShell session:
+Windows, Linux, and macOS platforms. Run the following command from a PowerShell session:
 
 ```powershell-interactive
 if (Get-Module -Name AzureRM -ListAvailable) {
@@ -138,7 +137,7 @@ To install the package, your proxy needs to allow HTTPS connections to the follo
 
 To start working with Azure PowerShell, sign in with your Azure credentials.
 
-```powershell-interactive
+```azurepowershell-interactive
 # Connect to Azure with a browser sign in token
 Connect-AzAccount
 ```

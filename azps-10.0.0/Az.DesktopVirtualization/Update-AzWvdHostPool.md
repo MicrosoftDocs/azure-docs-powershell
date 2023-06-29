@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file:
 Module Name: Az.DesktopVirtualization
 online version: https://learn.microsoft.com/powershell/module/az.desktopvirtualization/update-azwvdhostpool
 schema: 2.0.0
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -AgentUpdateMaintenanceWindowTimeZone
-Time zone for maintenance as defined in https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.findsystemtimezonebyidview=net-5.0.
+Time zone for maintenance as defined in https://learn.microsoft.com/dotnet/api/system.timezoneinfo.findsystemtimezonebyid.
 Must be set if useLocalTime is true.
 
 ```yaml
