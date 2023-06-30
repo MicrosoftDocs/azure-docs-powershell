@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 05/19/2023
+  ms.date: 05/23/2023
   ms.devlang: powershell
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
@@ -55,8 +55,8 @@ landingContent:
         links:
           - text: Release notes
             url: release-notes-azureps.md
-          - text: Az 9.0.1 migration guide
-            url: migrate-az-9.0.1.md
+          - text: Az 10.0.0 migration guide
+            url: migrate-az-10.0.0.md
           - text: Upcoming breaking changes
             url: upcoming-breaking-changes.md
   - title: Azure PowerShell Reference
@@ -64,7 +64,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Cmdlet reference
-            url: /powershell/module/?view=azps-9.7.1
+            url: /powershell/module/?view=azps-10.0.0
   - title: Identity and Authentication
     linkLists:
       - linkListType: whats-new

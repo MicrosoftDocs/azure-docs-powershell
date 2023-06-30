@@ -1,10 +1,10 @@
 ---
 title: Uninstall Azure PowerShell
 description: How to perform a complete uninstall of Azure PowerShell
-ms.date: 09/15/2020
+ms.date: 06/22/2023
 ms.devlang: powershell
-ms.topic: conceptual 
-ms.custom: devx-track-azurepowershell 
+ms.topic: conceptual
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 # Uninstall the Azure PowerShell module
@@ -54,7 +54,7 @@ The following script queries the PowerShell Gallery to get a list of dependent s
 the script uninstalls the correct version of each submodule. You need to have administrator access
 to run this script in a scope other than **Process** or **Current User**.
 
-```powershell-interactive
+```azurepowershell-interactive
 function Uninstall-AzModule {
   [CmdletBinding(SupportsShouldProcess)]
   param(
@@ -152,7 +152,7 @@ To use this function, copy and paste the code into your PowerShell session. The 
 shows how to run the function to remove an older version of the Az PowerShell module and its
 submodules.
 
-```powershell-interactive
+```azurepowershell-interactive
 Uninstall-AzModule -Name Az -Version 1.8.0
 ```
 
@@ -213,6 +213,6 @@ If you installed AzureRM with PowerShellGet, then you can remove the modules wit
 the `Az.Accounts` module. The following example removes _all_ AzureRM modules from your machine. It
 requires administrator privileges.
 
-```powershell-interactive
+```azurepowershell-interactive
 Uninstall-AzureRm
 ```

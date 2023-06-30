@@ -3,8 +3,8 @@ title: Manage Azure subscriptions with Azure PowerShell
 description: Manage Azure subscriptions with Azure PowerShell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 02/04/2019 
-ms.custom: devx-track-azurepowershell 
+ms.date: 06/22/2023
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 # Use multiple Azure subscriptions
@@ -38,7 +38,7 @@ and then the current context changed with [Set-AzContext](/powershell/module/az.
 
 The next example shows how to get a subscription in the currently active tenant, and set it as the active session:
 
-```powershell-interactive
+```azurepowershell-interactive
 $context = Get-AzSubscription -SubscriptionId ...
 Set-AzContext $context
 ```

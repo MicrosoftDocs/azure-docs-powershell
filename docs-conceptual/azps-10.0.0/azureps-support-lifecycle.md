@@ -1,7 +1,7 @@
 ---
 description: Details about the support lifecycle of the Azure PowerShell modules
 ms.custom: devx-track-azurepowershell
-ms.date: 05/19/2023
+ms.date: 05/30/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -36,9 +36,9 @@ modules.
 
 |        Azure PowerShell        | PowerShell <br/> <= 7.1 | PowerShell <br/> >= 7.2 | Windows PowerShell <br/> 5.1 |
 | ------------------------------ | :---------------------: | :---------------------: | :--------------------------: |
-| ![Supported][1] Az 9.x         |  ![Out of Support][4]   |     ![Supported][1]     |       ![Supported][1]        |
-| ![Supported][1] Az 8.x         |  ![Out of Support][4]   |     ![Supported][1]     |       ![Supported][1]        |
-| ![Out of Support][4] <= Az 7.x |  ![Out of Support][4]   |  ![Out of Support][4]   |     ![Out of Support][4]     |
+| ![Supported][1] Az 10.x        |   ![Not Supported][3]   |     ![Supported][1]     |       ![Supported][1]        |
+| ![Supported][1] Az 9.x         |   ![Not Supported][3]   |     ![Supported][1]     |       ![Supported][1]        |
+| ![Out of Support][4] <= Az 8.x |  ![Out of Support][4]   |  ![Out of Support][4]   |     ![Out of Support][4]     |
 | ![Supported][1] AzureRM 6.13.2 |   ![Not Supported][3]   |   ![Not Supported][3]   |       ![Supported][1]        |
 | ![Supported][1] Azure 5.3.1    |   ![Not Supported][3]   |   ![Not Supported][3]   |       ![Supported][1]        |
 

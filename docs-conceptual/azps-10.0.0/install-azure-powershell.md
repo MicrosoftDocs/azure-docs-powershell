@@ -1,7 +1,7 @@
 ---
 description: Azure PowerShell is available to install for Windows, Linux, and macOS. It can also be run from Azure Cloud Shell and in a Docker container.
 ms.custom: devx-track-azurepowershell
-ms.date: 05/19/2023
+ms.date: 06/22/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -27,7 +27,7 @@ release, see the [release notes](release-notes-azureps.md).
 A supported version of
 [PowerShell version 7 or higher](/powershell/scripting/install/installing-powershell-on-windows) is
 the recommended version of PowerShell for use with the Az PowerShell module on all platforms
-including Windows, macOS, and Linux.
+including Windows, Linux, and macOS.
 
 The Az PowerShell module is preinstalled in Azure [Cloud Shell](/azure/cloud-shell/overview) and in
 [Docker images](azureps-in-docker.md).

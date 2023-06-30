@@ -4,7 +4,7 @@ metadata:
   description: Frequently Asked Questions about Azure PowerShell.
   ms.devlang: powershell
   ms.topic: faq
-  ms.date: 05/19/2023
+  ms.date: 06/12/2023
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
 
@@ -51,3 +51,23 @@ sections:
           ```azurepowershell-interactive
           [System.Environment]::SetEnvironmentVariable('SuppressAzureRmModulesRetiringWarning', 'true', [System.EnvironmentVariableTarget]::User)
           ```
+
+      - question: |
+          How do I determine the max HTTP retry times in Azure PowerShell?
+        answer: |
+          For general HTTP response (except response status code is 429), Azure PowerShell uses the value defined in the `AZURE_PS_HTTP_MAX_RETRIES` environment variable. Its minimum value is 0. If not specified, Azure PowerShell uses the SDK default value.
+
+          ```azurepowershell-interactive
+          [System.Environment]::SetEnvironmentVariable('AZURE_PS_HTTP_MAX_RETRIES ', 3, [System.EnvironmentVariableTarget]::User)
+          ```
+
+          If the HTTP response status code is 429, Azure PowerShell uses the value defined in the `AZURE_PS_HTTP_MAX_RETRIES_FOR_429` environment variable. Its minimum value is 1. The total retry times of status code 429 is (`AZURE_PS_HTTP_MAX_RETRIES` + 1) * `AZURE_PS_HTTP_MAX_RETRIES_FOR_429` - 1. If not specified, Azure PowerShell uses the SDK default value.
+
+          ```azurepowershell-interactive
+          [System.Environment]::SetEnvironmentVariable('AZURE_PS_HTTP_MAX_RETRIES_FOR_429 ', 3, [System.EnvironmentVariableTarget]::User)
+          ```
+
+
+
+
+

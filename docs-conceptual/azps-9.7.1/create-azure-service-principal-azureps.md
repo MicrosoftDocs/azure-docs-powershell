@@ -1,7 +1,7 @@
 ---
 description: Learn how to create and use service principals with Azure PowerShell.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/28/2023
+ms.date: 06/22/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -74,7 +74,7 @@ principal. Its value _won't_ be displayed in the console output. If you lose the
 
 The following code allows you to export the secret:
 
-```powershell-interactive
+```azurepowershell-interactive
 $sp.PasswordCredentials.SecretText
 ```
 

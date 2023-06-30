@@ -1,7 +1,7 @@
 ---
 description: How to format cmdlet output for Azure PowerShell.
 ms.custom: devx-track-azurepowershell
-ms.date: 05/19/2023
+ms.date: 06/22/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -166,7 +166,7 @@ StorageProfile    : {ImageReference, OsDisk, DataDisks}
 Giving property names as arguments to `Custom-Format` displays the property/value pairs for custom
 objects set as values:
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzVM | Format-Custom -Property Name, ResourceGroupName, Location, OSProfile
 ```
 

@@ -3,8 +3,8 @@ title: Migrate Azure PowerShell scripts from AzureRM to Az
 description: Learn the steps and tools for migrating scripts from the AzureRM module to the new Az module.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/10/2019 
-ms.custom: devx-track-azurepowershell 
+ms.date: 06/22/2023
+ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
 
@@ -68,10 +68,10 @@ To install the Azure PowerShell Az module, follow the instructions in [Install t
 
 ## Enable AzureRM compatibility aliases
 
-With AzureRM uninstalled and your scripts working with the latest AzureRM version, the next step is to 
+With AzureRM uninstalled and your scripts working with the latest AzureRM version, the next step is to
 enable the compatibility mode for the Az module. Compatibility is enabled with the command:
 
-```powershell-interactive
+```azurepowershell-interactive
 Enable-AzureRmAlias -Scope CurrentUser
 ```
 

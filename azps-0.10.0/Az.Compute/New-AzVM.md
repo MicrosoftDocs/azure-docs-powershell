@@ -67,7 +67,7 @@ PS C:\> ## VM Account
 $VMLocalAdminUser = "LocalAdminUser"
 $VMLocalAdminSecurePassword = ConvertTo-SecureString "Password" -AsPlainText -Force
 ## Azure Account
-$LocationName = "westus"
+$LocationName = "eastus2"
 $ResourceGroupName = "MyResourceGroup"
 # This a Premium_LRS storage account.
 # It is required in order to run a client VM with efficiency and high performance.
