@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Country
-Name of the Country.
+Name of the Country/Region.
 
 ```yaml
 Type: System.String

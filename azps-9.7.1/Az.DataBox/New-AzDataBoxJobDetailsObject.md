@@ -274,7 +274,7 @@ PREFERENCE `<IPreferences>`: Preferences for the order.
   - `[TransportPreferencePreferredShipmentType <TransportShipmentTypes?>]`: Indicates Shipment Logistics type that the customer preferred.
 
 SHIPPINGADDRESS `<IShippingAddress>`: Shipping address of the customer.
-  - `Country <String>`: Name of the Country.
+  - `Country <String>`: Name of the Country/Region.
   - `StreetAddress1 <String>`: Street Address line 1.
   - `[AddressType <AddressType?>]`: Type of address.
   - `[City <String>]`: Name of the City.

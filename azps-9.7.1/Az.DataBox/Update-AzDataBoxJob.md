@@ -371,7 +371,7 @@ KEYENCRYPTIONKEY `<IKeyEncryptionKey>`: Key encryption key for the job.
   - `[KekVaultResourceId <String>]`: Kek vault resource id. It is required in case of Customer managed KekType.
 
 SHIPPINGADDRESS `<IShippingAddress>`: Shipping address of the customer.
-  - `Country <String>`: Name of the Country.
+  - `Country <String>`: Name of the Country/Region.
   - `StreetAddress1 <String>`: Street Address line 1.
   - `[AddressType <AddressType?>]`: Type of address.
   - `[City <String>]`: Name of the City.

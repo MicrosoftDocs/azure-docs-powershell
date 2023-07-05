@@ -285,7 +285,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[ContactDetailPhone <String>]`: Phone number of the contact person.
   - `[ContactDetailPhoneExtension <String>]`: Phone extension number of the contact person.
   - `[ShippingAddress <IShippingAddress>]`: Shipping address where customer wishes to receive the device.
-    - `Country <String>`: Name of the Country.
+    - `Country <String>`: Name of the Country/Region.
     - `StreetAddress1 <String>`: Street Address line 1.
     - `[AddressType <AddressType?>]`: Type of address.
     - `[City <String>]`: Name of the City.
@@ -299,7 +299,7 @@ To create the parameters described below, construct a hash table containing the 
     - `[ZipExtendedCode <String>]`: Extended Zip Code.
 
 `SHIPPINGADDRESS <IShippingAddress>`: Shipping address of the customer.
-  - `Country <String>`: Name of the Country.
+  - `Country <String>`: Name of the Country/Region.
   - `StreetAddress1 <String>`: Street Address line 1.
   - `[AddressType <AddressType?>]`: Type of address.
   - `[City <String>]`: Name of the City.

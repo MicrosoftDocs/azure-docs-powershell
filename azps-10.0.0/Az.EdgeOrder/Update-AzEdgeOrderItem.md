@@ -312,7 +312,7 @@ FORWARDADDRESSCONTACTDETAIL `<IContactDetails>`: Contact details for the address
   - `[PhoneExtension <String>]`: Phone extension number of the contact person.
 
 FORWARDADDRESSSHIPPINGADDRESS `<IShippingAddress>`: Shipping details for the address
-  - `Country <String>`: Name of the Country.
+  - `Country <String>`: Name of the Country/Region.
   - `StreetAddress1 <String>`: Street Address line 1.
   - `[AddressType <AddressType?>]`: Type of address.
   - `[City <String>]`: Name of the City.

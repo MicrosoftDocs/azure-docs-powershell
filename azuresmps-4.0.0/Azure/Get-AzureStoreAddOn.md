@@ -56,7 +56,7 @@ This example gets an add-on named MyAddOn from the purchased add-on instance in 
 ## PARAMETERS
 
 ### -Country
-If specified, returns only the Azure Store add-on instances available in the specified country.
+If specified, returns only the Azure Store add-on instances available in the specified country/region.
 The default is "US".
 
 ```yaml
