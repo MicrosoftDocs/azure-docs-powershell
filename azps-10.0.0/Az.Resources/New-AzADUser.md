@@ -828,7 +828,7 @@ Accept wildcard characters: False
 
 ### -UsageLocation
 A two letter country code (ISO standard 3166).
-Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.
+Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries/regions.
 Examples include: US, JP, and GB.
 Not nullable.
 Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
