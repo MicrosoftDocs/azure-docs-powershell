@@ -47,7 +47,7 @@ Lists all of the RP unbilled prefixes for the specified peering
 Gets an existing peering service with the specified name under the given subscription and resource group.
 
 ### [Get-AzPeeringServiceCountry](Get-AzPeeringServiceCountry.md)
-Lists all of the available countries for peering service.
+Lists all of the available countries/regions for peering service.
 
 ### [Get-AzPeeringServiceLocation](Get-AzPeeringServiceLocation.md)
 Lists all of the available locations for peering service.

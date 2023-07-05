@@ -81,12 +81,12 @@ Ishikawa  Ishikawa  Japan   Japan West
 ...
 ```
 
-Retrieves all peering service locations for a specific country
+Retrieves all peering service locations for a specific country/region
 
 ## PARAMETERS
 
 ### -Country
-The country of interest, in which the locations are to be present.
+The country/region of interest, in which the locations are to be present.
 
 ```yaml
 Type: System.String

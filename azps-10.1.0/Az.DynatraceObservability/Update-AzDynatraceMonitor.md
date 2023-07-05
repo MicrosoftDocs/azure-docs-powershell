@@ -425,7 +425,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserCountry
-Country of the user
+Country/region of the user
 
 ```yaml
 Type: System.String

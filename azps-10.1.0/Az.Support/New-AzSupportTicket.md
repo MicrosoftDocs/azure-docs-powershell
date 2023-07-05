@@ -366,7 +366,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomerCountry
-Customer country.
+Customer country/region.
 This must be a valid ISO Alpha-3 country code (ISO 3166).
 
 ```yaml

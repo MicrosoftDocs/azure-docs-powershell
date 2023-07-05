@@ -596,7 +596,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[KekVaultResourceId <String>]`: Kek vault resource id. It is required in case of Customer managed KekType.
 
 `REVERSESHIPPINGDETAIL <IShippingAddress>`: Shipping address where customer wishes to receive the device.
-  - `Country <String>`: Name of the Country.
+  - `Country <String>`: Name of the Country/Region.
   - `StreetAddress1 <String>`: Street Address line 1.
   - `[AddressType <AddressType?>]`: Type of address.
   - `[City <String>]`: Name of the City.
@@ -610,7 +610,7 @@ To create the parameters described below, construct a hash table containing the 
   - `[ZipExtendedCode <String>]`: Extended Zip Code.
 
 `SHIPPINGADDRESS <IShippingAddress>`: Shipping address of the customer.
-  - `Country <String>`: Name of the Country.
+  - `Country <String>`: Name of the Country/Region.
   - `StreetAddress1 <String>`: Street Address line 1.
   - `[AddressType <AddressType?>]`: Type of address.
   - `[City <String>]`: Name of the City.

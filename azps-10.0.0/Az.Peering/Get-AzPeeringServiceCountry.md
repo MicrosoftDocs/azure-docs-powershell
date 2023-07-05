@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzPeeringServiceCountry
 
 ## SYNOPSIS
-Lists all of the available countries for peering service.
+Lists all of the available countries/regions for peering service.
 
 ## SYNTAX
 
@@ -19,11 +19,11 @@ Get-AzPeeringServiceCountry [-SubscriptionId <String[]>] [-DefaultProfile <PSObj
 ```
 
 ## DESCRIPTION
-Lists all of the available countries for peering service.
+Lists all of the available countries/regions for peering service.
 
 ## EXAMPLES
 
-### Example 1: Lists all the peering service countries
+### Example 1: Lists all the peering service countries/regions
 ```powershell
 Get-AzPeeringServiceCountry
 ```
@@ -49,7 +49,7 @@ New Zealand
 ...
 ```
 
-Lists the countries available for peering service.
+Lists the countries/regions available for peering service.
 
 ## PARAMETERS
 

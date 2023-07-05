@@ -284,7 +284,7 @@ INPUTOBJECT `<IEdgeOrderIdentity>`: Identity Parameter
   - `[SubscriptionId <String>]`: The ID of the target subscription.
 
 SHIPPINGADDRESS `<IShippingAddress>`: Shipping details for the address
-  - `Country <String>`: Name of the Country.
+  - `Country <String>`: Name of the Country/Region.
   - `StreetAddress1 <String>`: Street Address line 1.
   - `[AddressType <AddressType?>]`: Type of address.
   - `[City <String>]`: Name of the City.

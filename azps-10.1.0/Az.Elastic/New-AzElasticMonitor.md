@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompanyInfoCountry
-Country of the company location.
+Country/region of the company location.
 
 ```yaml
 Type: System.String
