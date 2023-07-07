@@ -12,10 +12,15 @@ title: Upcoming breaking changes in Azure PowerShell
 
 ## General
 
-Starting from Az version 10.2, Azure PowerShell will stop including the *.deps.json files in the modules' binary. This is because of two major reasons:
+Beginning with Az version 10.2, Azure PowerShell will no longer include the `*.deps.json` files in
+the modules' binary because of two major reasons:
 
-1. The purpose of *.deps.json files is to [guide the default probing of .NET](https://learn.microsoft.com/en-us/dotnet/core/dependency-loading/default-probing#how-are-the-properties-populated). However, Azure PowerShell never utilized that feature.
-2. Some code scanning tools rely on *.deps.json files to scan for outdated dependencies, but the files are not accurate enough because they describe the assemblies that Azure PowerShell requires, rather than what it's shipped with. This inaccuracy caused many false positives being reported.
+1. The purpose of `*.deps.json` files is to
+   [guide the default probing of .NET](/dotnet/core/dependency-loading/default-probing#how-are-the-properties-populated).
+   However, Azure PowerShell never utilized that feature.
+1. Some code scanning tools rely on `*.deps.json` files to scan for outdated dependencies, but the
+   files are not accurate enough because they describe the assemblies that Azure PowerShell requires
+   rather than what it's shipped with. This inaccuracy caused many false positives to be reported.
 
 ## Az.Aks
 
