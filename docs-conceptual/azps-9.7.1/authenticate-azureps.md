@@ -1,7 +1,7 @@
 ---
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/28/2023
+ms.date: 07/18/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -64,8 +64,8 @@ To learn how to create a service principal for use with Azure PowerShell, see
 [Create an Azure service principal with Azure PowerShell](create-azure-service-principal-azureps.md).
 
 To sign in with a service principal, use the `ServicePrincipal` parameter of the `Connect-AzAccount`
-cmdlet. You'll also need the service principal's application ID, sign-in credentials, and the tenant
-ID associate with the service principal. How you sign in with a service principal depends on whether
+cmdlet. You'll also need the service principal's AppId, sign-in credentials, and the tenant ID
+associate with the service principal. How you sign in with a service principal depends on whether
 it's configured for password-based or certificate-based authentication.
 
 ### Password-based authentication
@@ -84,7 +84,7 @@ $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName
 
 To get the service principal's credentials as the appropriate object, use the
 [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. This
-cmdlet presents a prompt for a username and password. Use the service principal's `applicationID`
+cmdlet presents a prompt for a username and password. Use the service principal's `AppId`
 for the username and convert its `secret` to plain text for the password.
 
 ```azurepowershell-interactive
@@ -116,7 +116,7 @@ Connect-AzAccount -ApplicationId $appId -Tenant $tenantId -CertificateThumbprint
 ```
 
 When using a service principal instead of a registered application, specify the **ServicePrincipal**
-parameter and provide the service principal's Application ID as the value for the **ApplicationId**
+parameter and provide the service principal's AppId as the value for the **ApplicationId**
 parameter.
 
 ```azurepowershell-interactive
@@ -159,12 +159,19 @@ principals assigned to resources that run in Azure. You can use a managed identi
 for sign-in, and an app-only access token to access other resources. Managed identities are only
 available on resources running in an Azure cloud.
 
-This example connects using the managed identity of the host environment. For example, if executed
-on a VirtualMachine with an assigned Managed Service Identity, this allows the code to sign in using
-that assigned identity.
+This example connects using a system-assigned managed identity of the host environment. For example,
+if executed on a VirtualMachine with an assigned Managed Service Identity, this allows the code to
+sign in using that assigned identity.
 
 ```azurepowershell-interactive
  Connect-AzAccount -Identity
+```
+
+When using a user-assigned managed identity, you must specify the **AccountId** parameter in
+addition to the **Identity** parameter as shown in the following example.
+
+```azurepowershell-interactive
+ Connect-AzAccount -Identity -AccountId <user-assigned-identity-clientId-or-resourceId>
 ```
 
 The following example connects using the Managed Service Identity of `myUserAssignedIdentity`. It
