@@ -1,7 +1,7 @@
 ---
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.custom: devx-track-azurepowershell
-ms.date: 07/17/2023
+ms.date: 07/18/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -159,12 +159,19 @@ principals assigned to resources that run in Azure. You can use a managed identi
 for sign-in, and an app-only access token to access other resources. Managed identities are only
 available on resources running in an Azure cloud.
 
-This example connects using the managed identity of the host environment. For example, if executed
-on a VirtualMachine with an assigned Managed Service Identity, this allows the code to sign in using
-that assigned identity.
+This example connects using a system-assigned managed identity of the host environment. For example,
+if executed on a VirtualMachine with an assigned Managed Service Identity, this allows the code to
+sign in using that assigned identity.
 
 ```azurepowershell-interactive
  Connect-AzAccount -Identity
+```
+
+When using a user-assigned managed identity, you must specify the **AccountId** parameter in
+addition to the **Identity** parameter as shown in the following example.
+
+```azurepowershell-interactive
+ Connect-AzAccount -Identity -AccountId <user-assigned-identity-clientId-or-resourceId>
 ```
 
 The following example connects using the Managed Service Identity of `myUserAssignedIdentity`. It
