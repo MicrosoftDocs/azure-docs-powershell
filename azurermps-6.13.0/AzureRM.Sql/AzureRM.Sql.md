@@ -152,7 +152,7 @@ Returns information about Azure SQL Managed Instance database.
 Returns information about SQL Database servers.
 
 ### [Get-AzureRmSqlServerActiveDirectoryAdministrator](Get-AzureRmSqlServerActiveDirectoryAdministrator.md)
-Gets information about an Azure AD administrator for SQL Server.
+Gets information about a Microsoft Entra administrator for SQL Server.
 
 ### [Get-AzureRmSqlServerAdvancedThreatProtectionPolicy](Get-AzureRmSqlServerAdvancedThreatProtectionPolicy.md)
 Gets Advanced Threat Protection policy of a server.
@@ -329,7 +329,7 @@ Removes an Azure SQL Managed Instance database.
 Removes an Azure SQL Database server.
 
 ### [Remove-AzureRmSqlServerActiveDirectoryAdministrator](Remove-AzureRmSqlServerActiveDirectoryAdministrator.md)
-Removes an Azure AD administrator for SQL Server.
+Removes a Microsoft Entra administrator for SQL Server.
 
 ### [Remove-AzureRmSqlServerAuditing](Remove-AzureRmSqlServerAuditing.md)
 Removes the auditing of a SQL server.
@@ -431,7 +431,7 @@ Sets properties for an Azure SQL Database Managed Instance.
 Modifies properties of a SQL Database server.
 
 ### [Set-AzureRmSqlServerActiveDirectoryAdministrator](Set-AzureRmSqlServerActiveDirectoryAdministrator.md)
-Provisions an Azure AD administrator for SQL Server.
+Provisions a Microsoft Entra administrator for SQL Server.
 
 ### [Set-AzureRmSqlServerAdvisorAutoExecuteStatus](Set-AzureRmSqlServerAdvisorAutoExecuteStatus.md)
 Updates the auto execute status of an Azure SQL Server Advisor.
@@ -515,4 +515,3 @@ If "SyncMemberName" is specified, it will refresh the member database schema; if
 
 ### [Use-AzureRmSqlServerAuditingPolicy](Use-AzureRmSqlServerAuditingPolicy.md)
 Specifies that a database uses the auditing policy of its host server.
-

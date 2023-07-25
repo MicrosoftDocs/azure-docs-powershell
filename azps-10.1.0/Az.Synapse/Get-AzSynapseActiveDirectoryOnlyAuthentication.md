@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzSynapseActiveDirectoryOnlyAuthentication
 
 ## SYNOPSIS
-Gets Azure Active Directory (Azure AD) only authentication for a specific Synapse workspace.
+Gets Microsoft Entra ID only authentication for a specific Synapse workspace.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Get-AzSynapseActiveDirectoryOnlyAuthentication -ResourceId <String> [-DefaultPro
 ```
 
 ## DESCRIPTION
-The **Get-AzSynapseActiveDirectoryOnlyAuthentication** cmdlet gets Azure Active Directory (Azure AD) only authentication for a specific Synapse workspace.
+The **Get-AzSynapseActiveDirectoryOnlyAuthentication** cmdlet gets Microsoft Entra ID only authentication for a specific Synapse workspace.
 
 ## EXAMPLES
 
@@ -46,7 +46,7 @@ WorkspaceName     AzureADOnlyAuthenticationProperty State      CreationDate
 -------------     --------------------------------- -----      ------------
 ContosoWorkspace                               True Consistent 3/23/2022 8:27:47 AM
 ```
-This command gets Azure AD only authentication status for Synapse workspace ContosoWorkspace.
+This command gets Microsoft Entra ID only authentication status for Synapse workspace ContosoWorkspace.
 
 ### Example 2
 ```powershell
@@ -58,7 +58,7 @@ WorkspaceName     AzureADOnlyAuthenticationProperty State      CreationDate
 -------------     --------------------------------- -----      ------------
 ContosoWorkspace                               True Consistent 3/23/2022 8:27:47 AM
 ```
-This command gets Azure AD only authentication status for Synapse workspace ContosoWorkspace through pipeline.
+This command gets Microsoft Entra ID only authentication status for Synapse workspace ContosoWorkspace through pipeline.
 
 ### Example 3
 ```powershell
@@ -69,7 +69,7 @@ WorkspaceName     AzureADOnlyAuthenticationProperty State      CreationDate
 -------------     --------------------------------- -----      ------------
 ContosoWorkspace                               True Consistent 3/23/2022 8:27:47 AM
 ```
-This command gets Azure AD only authentication for workspace ContosoWorkspace by ResourceId.
+This command gets Microsoft Entra ID only authentication for workspace ContosoWorkspace by ResourceId.
 
 ## PARAMETERS
 

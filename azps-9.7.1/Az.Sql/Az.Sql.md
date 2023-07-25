@@ -71,7 +71,7 @@ Disables uploading ledger digests to Azure Blob storage or to Azure Confidential
 Disables (dismisses) sensitivity recommendations on columns in the database.
 
 ### [Disable-AzSqlInstanceActiveDirectoryOnlyAuthentication](Disable-AzSqlInstanceActiveDirectoryOnlyAuthentication.md)
-Disables Azure AD only authentication for a specific SQL Managed Instance.
+Disables Microsoft Entra ID only authentication for a specific SQL Managed Instance.
 
 ### [Disable-AzSqlInstanceAdvancedDataSecurity](Disable-AzSqlInstanceAdvancedDataSecurity.md)
 Disables Advanced Data Security on a managed instance.
@@ -80,7 +80,7 @@ Disables Advanced Data Security on a managed instance.
 Disables (dismisses) sensitivity recommendations on columns in the Azure SQL Managed Instance database.
 
 ### [Disable-AzSqlServerActiveDirectoryOnlyAuthentication](Disable-AzSqlServerActiveDirectoryOnlyAuthentication.md)
-Disables Azure AD only authentication for a specific SQL Server.
+Disables Microsoft Entra ID only authentication for a specific SQL Server.
 
 ### [Disable-AzSqlServerAdvancedDataSecurity](Disable-AzSqlServerAdvancedDataSecurity.md)
 Disables Advanced Data Security on a server.
@@ -92,7 +92,7 @@ Enables uploading ledger digests to an Azure Storage account or to Azure Confide
 Enables sensitivity recommendations on columns (recommendations are enabled by default on all columns) in the database.
 
 ### [Enable-AzSqlInstanceActiveDirectoryOnlyAuthentication](Enable-AzSqlInstanceActiveDirectoryOnlyAuthentication.md)
-Enables Azure AD only authentication for a specific SQL Managed Instance.
+Enables Microsoft Entra ID only authentication for a specific SQL Managed Instance.
 
 ### [Enable-AzSqlInstanceAdvancedDataSecurity](Enable-AzSqlInstanceAdvancedDataSecurity.md)
 Enables Advanced Data Security on a managed instance.
@@ -101,7 +101,7 @@ Enables Advanced Data Security on a managed instance.
 Enables sensitivity recommendations on columns (recommendations are enabled by default on all columns) in the Azure SQL Managed Instance database.
 
 ### [Enable-AzSqlServerActiveDirectoryOnlyAuthentication](Enable-AzSqlServerActiveDirectoryOnlyAuthentication.md)
-Enables Azure AD only authentication for a specific SQL Server.
+Enables Microsoft Entra ID only authentication for a specific SQL Server.
 
 ### [Enable-AzSqlServerAdvancedDataSecurity](Enable-AzSqlServerAdvancedDataSecurity.md)
 Enables Advanced Data Security on a server.
@@ -245,10 +245,10 @@ Gets one or more recommended actions for an Azure SQL Elastic Pool Advisor.
 Returns information about Azure SQL Managed Database Instance.
 
 ### [Get-AzSqlInstanceActiveDirectoryAdministrator](Get-AzSqlInstanceActiveDirectoryAdministrator.md)
-Gets information about an Azure AD administrator for SQL Managed Instance.
+Gets information about a Microsoft Entra administrator for SQL Managed Instance.
 
 ### [Get-AzSqlInstanceActiveDirectoryOnlyAuthentication](Get-AzSqlInstanceActiveDirectoryOnlyAuthentication.md)
-Gets Azure AD only authentication for a specific SQL Managed Instance.
+Gets Microsoft Entra ID only authentication for a specific SQL Managed Instance.
 
 ### [Get-AzSqlInstanceAdvancedDataSecurityPolicy](Get-AzSqlInstanceAdvancedDataSecurityPolicy.md)
 Gets Advanced Data Security policy of a managed instance.
@@ -326,10 +326,10 @@ Gets the vulnerability assessment settings of a managed instance.
 Returns information about SQL Database servers.
 
 ### [Get-AzSqlServerActiveDirectoryAdministrator](Get-AzSqlServerActiveDirectoryAdministrator.md)
-Gets information about an Azure AD administrator for SQL Server.
+Gets information about a Microsoft Entra administrator for SQL Server.
 
 ### [Get-AzSqlServerActiveDirectoryOnlyAuthentication](Get-AzSqlServerActiveDirectoryOnlyAuthentication.md)
-Gets Azure AD only authentication for a specific SQL Server.
+Gets Microsoft Entra ID only authentication for a specific SQL Server.
 
 ### [Get-AzSqlServerAdvancedDataSecurityPolicy](Get-AzSqlServerAdvancedDataSecurityPolicy.md)
 Gets Advanced Data Security policy of a server.
@@ -587,7 +587,7 @@ Deletes an elastic database pool.
 Removes an Azure SQL Managed Database Instance.
 
 ### [Remove-AzSqlInstanceActiveDirectoryAdministrator](Remove-AzSqlInstanceActiveDirectoryAdministrator.md)
-Removes an Azure AD administrator for SQL Managed Instance.
+Removes a Microsoft Entra administrator for SQL Managed Instance.
 
 ### [Remove-AzSqlInstanceDatabase](Remove-AzSqlInstanceDatabase.md)
 Removes an Azure SQL Managed Instance database.
@@ -614,7 +614,7 @@ Removes a server trust certificate.
 Removes an Azure SQL Database server.
 
 ### [Remove-AzSqlServerActiveDirectoryAdministrator](Remove-AzSqlServerActiveDirectoryAdministrator.md)
-Removes an Azure AD administrator for SQL Server.
+Removes a Microsoft Entra administrator for SQL Server.
 
 ### [Remove-AzSqlServerAudit](Remove-AzSqlServerAudit.md)
 Removes the auditing settings of an Azure SQL server.
@@ -740,7 +740,7 @@ Updates the state of an Azure SQL Elastic Pool recommended action.
 Sets properties for an Azure SQL Managed Instance.
 
 ### [Set-AzSqlInstanceActiveDirectoryAdministrator](Set-AzSqlInstanceActiveDirectoryAdministrator.md)
-Provisions an Azure AD administrator for SQL Managed Instance.
+Provisions a Microsoft Entra administrator for SQL Managed Instance.
 
 ### [Set-AzSqlInstanceDatabase](Set-AzSqlInstanceDatabase.md)
 Updated an Azure SQL Managed Instance database.
@@ -770,7 +770,7 @@ Sets the Transparent Data Encryption (TDE) protector for a SQL managed instance.
 Modifies properties of a SQL Database server.
 
 ### [Set-AzSqlServerActiveDirectoryAdministrator](Set-AzSqlServerActiveDirectoryAdministrator.md)
-Provisions an Azure AD administrator for SQL Server.
+Provisions a Microsoft Entra administrator for SQL Server.
 
 ### [Set-AzSqlServerAdvisorAutoExecuteStatus](Set-AzSqlServerAdvisorAutoExecuteStatus.md)
 Updates the auto execute status of an Azure SQL Server Advisor.
@@ -893,4 +893,3 @@ Updates an Azure SQL Database Sync Member.
 Update the sync schema for a sync member database or a sync hub database.
 It will get the latest database schema from the real database and then use it refresh the schema cached by Sync metadata database.
 If "SyncMemberName" is specified, it will refresh the member database schema; if not, it will refresh the hub database schema.
-

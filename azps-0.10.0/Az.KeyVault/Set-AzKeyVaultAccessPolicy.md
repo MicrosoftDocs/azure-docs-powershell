@@ -82,7 +82,7 @@ PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalNam
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToKeys @() -PassThru
 ```
 
-The first command grants permissions for a user in your Azure Active Directory, PattiFuller@contoso.com, to perform operations on keys and secrets with a key vault named Contoso03Vault.
+The first command grants permissions for a user in your Microsoft Entra ID, PattiFuller@contoso.com, to perform operations on keys and secrets with a key vault named Contoso03Vault.
 
 The second command modifies the permissions that were granted to PattiFuller@contoso.com in the first command, to now allow getting secrets in addition to setting and deleting them. The permissions to key operations remain unchanged after this command. The *PassThru* parameter results in the updated object being returned by the cmdlet.
 
@@ -95,7 +95,7 @@ PS C:\>Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ServicePrincipalN
 
 This command grants permissions for an application for a key vault named Contoso03Vault.
 
-The *ServicePrincipalName* parameter specifies the application. The application must be registered in your Azure Active Directory. The value of the *ServicePrincipalName* parameter must be either the service principal name of the application or the application ID GUID.
+The *ServicePrincipalName* parameter specifies the application. The application must be registered in your Microsoft Entra ID. The value of the *ServicePrincipalName* parameter must be either the service principal name of the application or the application ID GUID.
 
 This example specifies the service principal name `http://payroll.contoso.com`, and the command grants the application permissions to read and write secrets.
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassObjectIdValidation
-Enables you to specify an object ID without validating that the object exists in Azure Active Directory.
+Enables you to specify an object ID without validating that the object exists in Microsoft Entra ID.
 
 Use this parameter only if you want to grant access to your key vault to an object ID that refers to a delegated security group from another Azure tenant.
 
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Specifies the object ID of the user or service principal in Azure Active Directory for which to grant permissions.
+Specifies the object ID of the user or service principal in Microsoft Entra ID for which to grant permissions.
 
 ```yaml
 Type: String
@@ -515,4 +515,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzKeyVault](./Get-AzKeyVault.md)
 
 [Remove-AzKeyVaultAccessPolicy](./Remove-AzKeyVaultAccessPolicy.md)
-

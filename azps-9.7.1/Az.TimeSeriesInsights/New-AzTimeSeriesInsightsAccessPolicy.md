@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrincipalObjectId
-The objectId of the principal in Azure Active Directory.
+The objectId of the principal in Microsoft Entra ID.
 
 ```yaml
 Type: System.String
@@ -204,4 +204,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ALIASES
 
 ## RELATED LINKS
-

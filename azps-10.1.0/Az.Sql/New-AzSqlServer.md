@@ -48,7 +48,9 @@ Tags                     :
 
 This command creates a version 12 Azure SQL Database server.
 
-### Example 2: Create a new Azure SQL Database server with External(Azure Active Directory) Administrator, Azure Active Directory Only Authentication and no SqlAdministratorCredentials
+<a name='example-2-create-a-new-azure-sql-database-server-with-externalazure-active-directory-administrator-azure-active-directory-only-authentication-and-no-sqladministratorcredentials'></a>
+
+### Example 2: Create a new Azure SQL Database server with External(Microsoft Entra ID) Administrator, Microsoft Entra ID Only Authentication and no SqlAdministratorCredentials
 <!-- Skip: Output cannot be splitted from code -->
 ```powershell
 New-AzSqlServer -ResourceGroupName "ResourceGroup01" -Location "Central US" -ServerName "server01" -ServerVersion "12.0" -ExternalAdminName DummyLogin -EnableActiveDirectoryOnlyAuthentication
@@ -80,7 +82,7 @@ TenantId                  : f553829b-6d84-481b-86a9-42db57c1dc73
 AzureADOnlyAuthentication : True
 ```
 
-This command creates a version 12 Azure SQL Database server with external administrator properties and azure active directory only authentication enabled.
+This command creates a version 12 Azure SQL Database server with external administrator properties and Microsoft Entra ID only authentication enabled.
 
 ### Example 3: Create a new Azure SQL Database server with TDE CMK
 ```powershell
@@ -120,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignIdentity
-Generate and assign an Azure Active Directory Identity for this server for use with key management services like Azure KeyVault.
+Generate and assign a Microsoft Entra ID Identity for this server for use with key management services like Azure KeyVault.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -165,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalAdminName
-Specifies the display name of the user, group or application which is the Azure Active Directory administrator for the server. This display name must exist in the active directory associated with the current subscription.
+Specifies the display name of the user, group or application which is the Microsoft Entra administrator for the server. This display name must exist in the active directory associated with the current subscription.
 
 ```yaml
 Type: System.String
@@ -180,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalAdminSID
-Specifies the object ID of the user, group or application which is the Azure Active Directory administrator.
+Specifies the object ID of the user, group or application which is the Microsoft Entra administrator.
 
 ```yaml
 Type: System.Nullable`1[System.Guid]

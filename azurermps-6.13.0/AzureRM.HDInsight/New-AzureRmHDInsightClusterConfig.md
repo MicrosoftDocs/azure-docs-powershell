@@ -74,7 +74,7 @@ This command creates a cluster configuration object.
 ## PARAMETERS
 
 ### -AadTenantId
-Specifies the Azure AD Tenant ID that will be used when accessing Azure Data Lake Store.
+Specifies the Microsoft Entra tenant ID that will be used when accessing Azure Data Lake Store.
 
 ```yaml
 Type: System.Guid
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Specifies the Azure AD object ID (a GUID) of the Azure AD Service Principal that represents the cluster.
+Specifies the Microsoft Entra object ID (a GUID) of the Microsoft Entra Service Principal that represents the cluster.
 The cluster will use this when accessing Azure Data Lake Store.
 
 ```yaml
@@ -365,5 +365,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Add-AzureRmHDInsightStorage](./Add-AzureRmHDInsightStorage.md)
-
-

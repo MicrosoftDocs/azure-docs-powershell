@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl
 # Remove-AzADServicePrincipal
 
 ## SYNOPSIS
-Deletes the azure active directory service principal.
+Deletes the Microsoft Entra service principal.
 
 ## SYNTAX
 
@@ -52,7 +52,7 @@ Remove-AzADServicePrincipal -ApplicationObject <PSADApplication> [-PassThru] [-F
 ```
 
 ## DESCRIPTION
-Deletes the azure active directory service principal.
+Deletes the Microsoft Entra service principal.
 
 ## EXAMPLES
 

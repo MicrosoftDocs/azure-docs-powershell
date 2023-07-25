@@ -597,7 +597,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendCertificateChain
-Specifies if the x5c claim (public key of the certificate) should be sent to the STS to achieve easy certificate rollover in Azure AD.
+Specifies if the x5c claim (public key of the certificate) should be sent to the STS to achieve easy certificate rollover in Microsoft Entra ID.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

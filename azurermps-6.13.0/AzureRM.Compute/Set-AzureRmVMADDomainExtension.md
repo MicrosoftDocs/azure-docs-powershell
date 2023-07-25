@@ -25,7 +25,7 @@ Set-AzureRmVMADDomainExtension -DomainName <String> [-OUPath <String>] [-JoinOpt
 ```
 
 ## DESCRIPTION
-The **Set-AzureRmVMADDomainExtension** cmdlet adds an Azure Active Directory (AD) domain virtual machine extension to a virtual machine.
+The **Set-AzureRmVMADDomainExtension** cmdlet adds a Microsoft Entra domain virtual machine extension to a virtual machine.
 This extension lets your virtual machine join a domain.
 
 ## EXAMPLES

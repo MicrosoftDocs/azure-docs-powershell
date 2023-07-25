@@ -335,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -SingleSignOnAadDomain
-array of Aad(azure active directory) domains
+array of Microsoft Entra ID(Microsoft Entra ID) domains
 
 ```yaml
 Type: System.String[]
@@ -559,4 +559,3 @@ To create the parameters described below, construct a hash table containing the 
   - `[SubscriptionId <String>]`: The ID of the target subscription.
 
 ## RELATED LINKS
-

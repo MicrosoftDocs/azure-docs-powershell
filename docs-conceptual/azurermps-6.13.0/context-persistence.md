@@ -25,7 +25,7 @@ context consists of five parts:
 
 - An *Account* - the UserName or Service Principal used to authenticate communications with Azure
 - A *Subscription* - The Azure Subscription with the Resources being acted upon.
-- A *Tenant* - The Azure Active Directory tenant that contains your subscription. Tenants are more
+- A *Tenant* - The Microsoft Entra tenant that contains your subscription. Tenants are more
   important to ServicePrincipal authentication.
 - An *Environment* - The particular Azure Cloud being targeted, usually the Azure global Cloud.
   However, the environment setting allows you to target National, Government, and on-premises

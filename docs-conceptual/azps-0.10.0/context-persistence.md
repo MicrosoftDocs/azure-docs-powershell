@@ -11,7 +11,7 @@ ms.service: azure-powershell
 
 Azure PowerShell uses _Azure PowerShell context objects_ (Azure contexts) to hold subscription and authentication information. If you have more than one subscription, Azure contexts let you select the subscription to run Azure PowerShell cmdlets on. Azure contexts are also used to store sign-in information across multiple PowerShell sessions and run background tasks.
 
-This article covers managing Azure contexts, not the management of subscriptions or accounts. If you're looking to manage users, subscriptions, tenants, or other account information, see the [Azure Active Directory](/azure/active-directory) documentation. To learn about using contexts for running background or parallel tasks, see [Use Azure PowerShell cmdlets in PowerShell jobs](using-psjobs.md) after becoming familiar with Azure contexts.
+This article covers managing Azure contexts, not the management of subscriptions or accounts. If you're looking to manage users, subscriptions, tenants, or other account information, see the [Microsoft Entra ID](/azure/active-directory) documentation. To learn about using contexts for running background or parallel tasks, see [Use Azure PowerShell cmdlets in PowerShell jobs](using-psjobs.md) after becoming familiar with Azure contexts.
 
 ## Overview of Azure context objects
 
@@ -21,7 +21,7 @@ Azure contexts are PowerShell objects representing your active subscription to r
 * The active _subscription_, a service agreement with Microsoft to create and run Azure resources, which are associated with a _tenant_. Tenants are often referred to as _organizations_ in documentation or when working with Active Directory.
 * A reference to a _token cache_, a stored authentication token for accessing an Azure cloud. Where this token is stored and how long it persists for is determined by the [context autosave settings](#save-azure-contexts-across-powershell-sessions).
 
-For more information on these terms, see [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology). Authentication tokens used by Azure contexts are the same as other stored tokens that are part of a persistent session.
+For more information on these terms, see [Microsoft Entra Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology). Authentication tokens used by Azure contexts are the same as other stored tokens that are part of a persistent session.
 
 When you sign in with `Connect-AzAccount`, at least one Azure context is created for your default subscription. The object returned by `Connect-AzAccount` is the default Azure context used for the rest of the PowerShell session.
 
@@ -167,5 +167,5 @@ To clear Azure contexts and credentials:
 ## See also
 
 * [Run Azure PowerShell cmdlets in PowerShell Jobs](using-psjobs.md)
-* [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology)
+* [Microsoft Entra Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology)
 * [Az.Accounts reference](/powershell/module/az.accounts)

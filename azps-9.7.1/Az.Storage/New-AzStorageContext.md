@@ -99,7 +99,7 @@ New-AzStorageContext [-UseConnectedAccount] [-BlobEndpoint <String>] [-FileEndpo
 
 ## DESCRIPTION
 The **New-AzStorageContext** cmdlet creates an Azure Storage context.
-The default Authentication of a Storage Context is OAuth (Azure AD), if only input Storage account name.
+The default Authentication of a Storage Context is OAuth (Microsoft Entra ID), if only input Storage account name.
 See details of authentication of the Storage Service in https://learn.microsoft.com/rest/api/storageservices/authorization-for-the-azure-storage-services.
 
 ## EXAMPLES
@@ -187,7 +187,7 @@ Connect-AzAccount
 $Context = New-AzStorageContext -StorageAccountName "myaccountname" -UseConnectedAccount
 ```
 
-This command creates a context by using the OAuth (Azure AD) Authentication.
+This command creates a context by using the OAuth (Microsoft Entra ID) Authentication.
 
 ### Example 11: Create a context by specifying a storage account name, storage account key and custom blob endpoint
 ```powershell
@@ -446,7 +446,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseConnectedAccount
-Indicates that this cmdlet creates an Azure Storage context with OAuth (Azure AD) Authentication.
+Indicates that this cmdlet creates an Azure Storage context with OAuth (Microsoft Entra ID) Authentication.
 The cmdlet will use OAuth Authentication by default, when other authentication not specified.
 
 ```yaml
@@ -479,5 +479,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzStorageBlob](./Get-AzStorageBlob.md)
 
 [New-AzStorageContainerSASToken](./New-AzStorageContainerSASToken.md)
-
-

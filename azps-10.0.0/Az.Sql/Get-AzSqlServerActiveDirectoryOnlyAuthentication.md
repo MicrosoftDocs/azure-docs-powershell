@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzSqlServerActiveDirectoryOnlyAuthentication
 
 ## SYNOPSIS
-Gets Azure AD only authentication for a specific SQL Server.
+Gets Microsoft Entra ID only authentication for a specific SQL Server.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Get-AzSqlServerActiveDirectoryOnlyAuthentication [-ResourceId] <String>
 ```
 
 ## DESCRIPTION
-The **Get-AzSqlServerActiveDirectoryOnlyAuthentication** cmdlet gets Azure Active Directory (Azure AD) only authentication requirement for an AzureSQL Server in the current subscription.
+The **Get-AzSqlServerActiveDirectoryOnlyAuthentication** cmdlet gets Microsoft Entra ID only authentication requirement for an AzureSQL Server in the current subscription.
 
 ## EXAMPLES
 
@@ -48,7 +48,7 @@ ResourceGroupName ServerName AzureADOnlyAuthentication
 ResourceGroup01   Server01   True
 ```
 
-This command gets Azure Active Directory (Azure AD) only authentication requirement for an AzureSQL server named Server01 that is associated with a resource group named ResourceGroup01.
+This command gets Microsoft Entra ID only authentication requirement for an AzureSQL server named Server01 that is associated with a resource group named ResourceGroup01.
 
 ## PARAMETERS
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-The name of the Azure SQL Server the Azure Active Directory only authentication is in.
+The name of the Azure SQL Server the Microsoft Entra ID only authentication is in.
 
 ```yaml
 Type: System.String

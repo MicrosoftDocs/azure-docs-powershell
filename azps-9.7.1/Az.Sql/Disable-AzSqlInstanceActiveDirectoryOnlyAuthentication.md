@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Disable-AzSqlInstanceActiveDirectoryOnlyAuthentication
 
 ## SYNOPSIS
-Disables Azure AD only authentication for a specific SQL Managed Instance.
+Disables Microsoft Entra ID only authentication for a specific SQL Managed Instance.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Disable-AzSqlInstanceActiveDirectoryOnlyAuthentication [-ResourceId] <String>
 ```
 
 ## DESCRIPTION
-The **Disable-AzSqlInstanceActiveDirectoryOnlyAuthentication** cmdlet disables Azure Active Directory (Azure AD) only authentication requirement for an AzureSQL Managed Instance in the current subscription.
+The **Disable-AzSqlInstanceActiveDirectoryOnlyAuthentication** cmdlet disables Microsoft Entra ID only authentication requirement for an AzureSQL Managed Instance in the current subscription.
 
 ## EXAMPLES
 
@@ -48,7 +48,7 @@ ResourceGroupName InstanceName        AzureADOnlyAuthentication
 ResourceGroup01   ManagedInstance01   True
 ```
 
-This command disables Azure Active Directory (Azure AD) only authentication requirement for an AzureSQL Managed Instance named ManagedInstance01 that is associated with a resource group named ResourceGroup01.
+This command disables Microsoft Entra ID only authentication requirement for an AzureSQL Managed Instance named ManagedInstance01 that is associated with a resource group named ResourceGroup01.
 
 ## PARAMETERS
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceName
-The name of the Azure SQL Managed Instance the Azure Active Directory only authentication is in.
+The name of the Azure SQL Managed Instance the Microsoft Entra ID only authentication is in.
 
 ```yaml
 Type: System.String

@@ -34,7 +34,7 @@ Create a service principal with the [New-AzADServicePrincipal](/powershell/modul
 > [!NOTE]
 >
 > If your account doesn't have permission to create a service principal, `New-AzADServicePrincipal` will return an error message containing
-> "Insufficient privileges to complete the operation." Contact your Azure Active Directory admin to create a service principal.
+> "Insufficient privileges to complete the operation." Contact your Microsoft Entra admin to create a service principal.
 
 There are two types of authentication available for service principals: Password-based authentication, and certificate-based authentication.
 
@@ -55,7 +55,7 @@ $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($sp.Secret)
 $UnsecureSecret = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
 ```
 
-For user-supplied passwords, the `-PasswordCredential` argument takes `Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential` objects. These objects must have a valid `StartDate` and `EndDate`, and take a plaintext `Password`. When creating a password, make sure you follow the [Azure Active Directory password rules and restrictions](/azure/active-directory/active-directory-passwords-policy). Don't use a weak password or reuse a password.
+For user-supplied passwords, the `-PasswordCredential` argument takes `Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential` objects. These objects must have a valid `StartDate` and `EndDate`, and take a plaintext `Password`. When creating a password, make sure you follow the [Microsoft Entra password rules and restrictions](/azure/active-directory/active-directory-passwords-policy). Don't use a weak password or reuse a password.
 
 ```azurepowershell-interactive
 Import-Module Az.Resources # Imports the PSADPasswordCredential object
@@ -131,7 +131,7 @@ Remove-AzRoleAssignment -ApplicationId <service principal application ID> -RoleD
 
 > [!NOTE]
 > If your account doesn't have permission to assign a role, you see an error message that your account "does not have authorization to
-> perform action 'Microsoft.Authorization/roleAssignments/write'." Contact your Azure Active Directory admin to manage roles.
+> perform action 'Microsoft.Authorization/roleAssignments/write'." Contact your Microsoft Entra admin to manage roles.
 
 Adding a role _doesn't_ restrict previously assigned permissions. When restricting a service principal's permissions, the __Contributor__ role should be removed.
 

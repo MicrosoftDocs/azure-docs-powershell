@@ -45,5 +45,5 @@ You can also watch this video:
 
 ## Other Azure PowerShell modules
 
-- [Azure Active Directory](/powershell/module/activedirectory/)
+- [Microsoft Entra ID](/powershell/module/activedirectory/)
 - [Azure Service Fabric](/powershell/module/AzureRM.ServiceFabric/)

@@ -39,7 +39,7 @@ TenantId      : "Tenant Id"
 ## PARAMETERS
 
 ### -AppKey
-Azure Active Directory Key
+Microsoft Entra Key
 
 ```yaml
 Type: System.Security.SecureString
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-Azure Active Directory Application Id
+Microsoft Entra Application Id
 
 ```yaml
 Type: System.String

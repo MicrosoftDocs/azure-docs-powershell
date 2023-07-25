@@ -89,7 +89,9 @@ $params | Set-AzureRmVmDiskEncryptionExtension
 
 This example demonstrates sending parameters using pipelined input to enable encryption without specifying AD credentials.
 
-### Example 3: Enable encryption using Azure AD Client ID and Client Secret
+<a name='example-3-enable-encryption-using-azure-ad-client-id-and-client-secret'></a>
+
+### Example 3: Enable encryption using Microsoft Entra Client ID and Client Secret
 ```
 $RGName = "MyResourceGroup"
 $VMName = "MyTestVM"
@@ -102,9 +104,11 @@ $KeyVaultResourceId = $KeyVault.ResourceId
 Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $RGName -VMName $VMName -AadClientID $AADClientID -AadClientSecret $AADClientSecret -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId
 ```
 
-This example enables encryption using Azure AD client ID, and client secret.
+This example enables encryption using Microsoft Entra client ID, and client secret.
 
-### Example 4: Enable encryption using Azure AD client ID and client certification thumbprint
+<a name='example-4-enable-encryption-using-azure-ad-client-id-and-client-certification-thumbprint'></a>
+
+### Example 4: Enable encryption using Microsoft Entra client ID and client certification thumbprint
 ```
 $RGName = "MyResourceGroup"
 $VMName = "MyTestVM"
@@ -114,7 +118,7 @@ $KeyVault = Get-AzureRmKeyVault -VaultName $VaultName -ResourceGroupName $RGName
 $DiskEncryptionKeyVaultUrl = $KeyVault.VaultUri
 $KeyVaultResourceId = $KeyVault.ResourceId
 
-# create Azure AD application and associate the certificate
+# create Microsoft Entra application and associate the certificate
 $CertPath = "C:\certificates\examplecert.pfx"
 $CertPassword = "Password"
 $Cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($CertPath, $CertPassword)
@@ -154,9 +158,11 @@ Update-AzureRmVM -VM $VM -ResourceGroupName $RGName
 Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $RGName -VMName $VMName -AadClientID $AADClientID -AadClientCertThumbprint $AADClientCertThumbprint -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId
 ```
 
-This example enables encryption using Azure AD client ID and client certification thumbprints.
+This example enables encryption using Microsoft Entra client ID and client certification thumbprints.
 
-### Example 5: Enable encryption using Azure AD client ID, client secret, and wrap disk encryption key by using key encryption key
+<a name='example-5-enable-encryption-using-azure-ad-client-id-client-secret-and-wrap-disk-encryption-key-by-using-key-encryption-key'></a>
+
+### Example 5: Enable encryption using Microsoft Entra client ID, client secret, and wrap disk encryption key by using key encryption key
 ```
 $RGName = "MyResourceGroup"
 $VMName = "MyTestVM"
@@ -176,9 +182,11 @@ $KeyEncryptionKeyUrl = $KEK.Key.kid
 Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $RGName -VMName $VMName -AadClientID $AADClientID -AadClientSecret $AADClientSecret -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId -KeyEncryptionKeyUrl $KeyEncryptionKeyUrl -KeyEncryptionKeyVaultId $KeyVaultResourceId
 ```
 
-This example enables encryption using Azure AD client ID, client secret, and wrap disk encryption key by using the key encryption key.
+This example enables encryption using Microsoft Entra client ID, client secret, and wrap disk encryption key by using the key encryption key.
 
-### Example 6: Enable encryption using Azure AD client ID, client cert thumbprint, and wrap disk encryptionkey by using key encryption key
+<a name='example-6-enable-encryption-using-azure-ad-client-id-client-cert-thumbprint-and-wrap-disk-encryptionkey-by-using-key-encryption-key'></a>
+
+### Example 6: Enable encryption using Microsoft Entra client ID, client cert thumbprint, and wrap disk encryptionkey by using key encryption key
 ```
 $RGName = "MyResourceGroup"
 $VMName = "MyTestVM"
@@ -191,7 +199,7 @@ $KEKName = "MyKeyEncryptionKey"
 $KEK = Add-AzureKeyVaultKey -VaultName $VaultName -Name $KEKName -Destination "Software"
 $KeyEncryptionKeyUrl = $KEK.Key.kid
 
-# create Azure AD application and associate the certificate
+# create Microsoft Entra application and associate the certificate
 $CertPath = "C:\certificates\examplecert.pfx"
 $CertPassword = "Password"
 $Cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($CertPath, $CertPassword)
@@ -230,13 +238,13 @@ Update-AzureRmVM -VM $VM -ResourceGroupName $RGName
 Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $RGname -VMName $VMName -AadClientID $AADClientID -AadClientCertThumbprint $AADClientCertThumbprint -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId -KeyEncryptionKeyUrl $KeyEncryptionKeyUrl -KeyEncryptionKeyVaultId $KeyVaultResourceId
 ```
 
-This example enables encryption using Azure AD client ID, client cert thumbprint, and wrap disk encryption key by using key encryption key.
+This example enables encryption using Microsoft Entra client ID, client cert thumbprint, and wrap disk encryption key by using key encryption key.
 
 ## PARAMETERS
 
 ### -AadClientCertThumbprint
-Specifies the thumbprint of the AzureActive Directory (Azure AD) application client certificate that has permissions to write secrets to **KeyVault**.
-As a prerequisite, the Azure AD client certificate must be previously deployed to the virtual machine's local computer `my` certificate store.
+Specifies the thumbprint of the AzureActive Directory (Microsoft Entra ID) application client certificate that has permissions to write secrets to **KeyVault**.
+As a prerequisite, the Microsoft Entra client certificate must be previously deployed to the virtual machine's local computer `my` certificate store.
 The Add-AzureRmVMSecret cmdlet can be used to deploy a certificate to a virtual machine in Azure.
 For more details, see the **Add-AzureRmVMSecret** cmdlet help.
 The certificate must be previously deployed to the virtual machine local computer my certificate store.
@@ -254,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -AadClientID
-Specifies the client ID of the Azure AD application that has permissions to write secrets to **KeyVault**.
+Specifies the client ID of the Microsoft Entra application that has permissions to write secrets to **KeyVault**.
 
 ```yaml
 Type: System.String
@@ -269,7 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -AadClientSecret
-Specifies the client secret of the Azure AD application that has permissions to write secrets to **KeyVault**.
+Specifies the client secret of the Microsoft Entra application that has permissions to write secrets to **KeyVault**.
 
 ```yaml
 Type: System.String
@@ -632,5 +640,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRmVMDiskEncryptionStatus](./Get-AzureRmVMDiskEncryptionStatus.md)
 
 [Remove-AzureRmVMDiskEncryptionExtension](./Remove-AzureRmVMDiskEncryptionExtension.md)
-
-

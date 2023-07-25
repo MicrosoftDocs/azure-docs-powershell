@@ -352,7 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### -SingleSignOnAadDomain
-array of Aad(azure active directory) domains
+array of Microsoft Entra ID(Microsoft Entra ID) domains
 
 ```yaml
 Type: System.String[]
@@ -576,4 +576,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ALIASES
 
 ## RELATED LINKS
-

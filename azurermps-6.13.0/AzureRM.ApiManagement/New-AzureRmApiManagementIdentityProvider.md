@@ -40,7 +40,7 @@ This takes as input the ClientId and ClientSecret of the Facebook app.
 ## PARAMETERS
 
 ### -AllowedTenants
-List of allowed Azure Active Directory Tenants
+List of allowed Microsoft Entra tenants
 
 ```yaml
 Type: System.String[]
