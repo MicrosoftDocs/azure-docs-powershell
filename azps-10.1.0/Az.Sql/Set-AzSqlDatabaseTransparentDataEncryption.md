@@ -172,8 +172,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AzSqlDatabaseTransparentDataEncryption](./Get-AzSqlDatabaseTransparentDataEncryption.md)
 
-[Get-AzSqlDatabaseTransparentDataEncryptionActivity](./Get-AzSqlDatabaseTransparentDataEncryptionActivity.md)
-
 [SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)
-
-

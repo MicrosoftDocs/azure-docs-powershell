@@ -1,7 +1,7 @@
 ---
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.custom: devx-track-azurepowershell
-ms.date: 06/30/2023
+ms.date: 07/05/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -7531,7 +7531,7 @@ to enable create Azure-SSIS IR with static public IP addresses.
 ### Highlights since the last major release
 * General availability of `Az` module
 * For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
-* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/
+* Added Location, ResourceGroup, and ResourceName completers.
 * Added wildcard support to Get cmdlets for Az.Compute and Az.Network
 * Added interactive and username/password authentication for Windows PowerShell 5.1 only
 * Added support for Python 2 runbooks in Az.Automation
@@ -7635,7 +7635,7 @@ to enable create Azure-SSIS IR with static public IP addresses.
 ### Highlights since the last major release
 * General availability of `Az` module
 * For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
-* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/
+* Added Location, ResourceGroup, and ResourceName completers.
 * Added wildcard support to Get cmdlets for Az.Compute and Az.Network
 * Added interactive and username/password authentication for Windows PowerShell 5.1 only
 * Added support for Python 2 runbooks in Az.Automation
@@ -7692,7 +7692,7 @@ to enable create Azure-SSIS IR with static public IP addresses.
 ### Highlights since the last major release
 * General availability of `Az` module
 * For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
-* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/
+* Added Location, ResourceGroup, and ResourceName completers.
 * Added wildcard support to Get cmdlets for Az.Compute and Az.Network
 * Added interactive and username/password authentication for Windows PowerShell 5.1 only
 * Added support for Python 2 runbooks in Az.Automation
@@ -7749,7 +7749,7 @@ to enable create Azure-SSIS IR with static public IP addresses.
 ### Highlights since the last major release
 * General availability of `Az` module
 * For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
-* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/
+* Added Location, ResourceGroup, and ResourceName completers.
 * Added wildcard support to Get cmdlets for Az.Compute and Az.Network
 * Added interactive and username/password authentication for Windows PowerShell 5.1 only
 * Added support for Python 2 runbooks in Az.Automation
@@ -7804,7 +7804,7 @@ to enable create Azure-SSIS IR with static public IP addresses.
 ### Highlights since the last major release
 * General availability of `Az` module
 * For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
-* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/
+* Added Location, ResourceGroup, and ResourceName completers.
 * Added interactive and username/password authentication for Windows PowerShell 5.1 only
 * Added support for Python 2 runbooks in Az.Automation
 * Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration
@@ -7878,7 +7878,7 @@ to enable create Azure-SSIS IR with static public IP addresses.
 ### Highlights since the last major release
 * General availability of `Az` module
 * For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
-* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/
+* Added Location, ResourceGroup, and ResourceName completers.
 * Added interactive and username/password authentication for Windows PowerShell 5.1 only
 * Added support for Python 2 runbooks in Az.Automation
 
@@ -7911,7 +7911,7 @@ General availability for Az.RecoveryServices module.
 ### Highlights since the last major release
 * General availability of `Az` module
 * For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
-* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/
+* Added Location, ResourceGroup, and ResourceName completers.
 * Added interactive and username/password authentication for Windows PowerShell 5.1 only
 * Added support for Python 2 runbooks in Az.Automation
 
@@ -7929,7 +7929,7 @@ General availability for Az.RecoveryServices module.
 ### Highlights since the last major release
 * General availability of `Az` module
 * For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
-* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/
+* Added Location, ResourceGroup, and ResourceName completers.
 * Added interactive and username/password authentication for Windows PowerShell 5.1 only
 * Added support for Python 2 runbooks in Az.Automation
 
@@ -8015,7 +8015,7 @@ General availability for Az.RecoveryServices module.
 ### Highlights since the last major release
 * General availability of `Az` module
 * For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
-* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/
+* Added Location, ResourceGroup, and ResourceName completers.
 
 #### Az.Accounts
 * Add 'Local' Scope to Enable-AzureRmAlias
@@ -8077,4 +8077,4 @@ General availability for Az.RecoveryServices module.
 ### Highlights since the last major release
 * General availability of `Az` module
 * For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce
-* Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/
+* Added Location, ResourceGroup, and ResourceName completers.
