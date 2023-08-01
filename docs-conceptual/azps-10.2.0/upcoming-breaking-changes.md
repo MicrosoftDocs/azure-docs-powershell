@@ -1,7 +1,7 @@
 ---
 description: Learn about upcoming breaking changes to the Azure Az PowerShell module
 ms.custom: devx-track-azurepowershell
-ms.date: 07/28/2023
+ms.date: 08/01/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -24,7 +24,7 @@ title: Upcoming breaking changes in Azure PowerShell
 ### `New-AzDisk`
 
 - Cmdlet breaking-change will happen to all parameter set
-  - Starting in November 2023 the "New-AzDisk" cmdlet will deploy with the Trusted Launch configuration by default. This includes defaulting the "HyperVGeneration" parameter to "v2". To know more about Trusted Launch, please visit https://learn.microsoft.com/en-us/azure/virtual-machines/trusted-launch
+  - Starting in November 2023 the "New-AzDisk" cmdlet will deploy with the Trusted Launch configuration by default. This includes defaulting the "HyperVGeneration" parameter to "v2". To know more about Trusted Launch, please visit [learn.microsoft.com/azure/virtual-machines/trusted-launch](/azure/virtual-machines/trusted-launch)
   - This change is expected to take effect from Az.Compute version: 7.0.0 and Az version: 11.0.0
 
 ### `New-AzVM`
@@ -32,15 +32,15 @@ title: Upcoming breaking changes in Azure PowerShell
 - Cmdlet breaking-change will happen to all parameter set
   - Consider using the image alias including the version of the distribution you want to use in the "-Image" parameter of the "New-AzVM" cmdlet. On April 30, 2023, the image deployed using `UbuntuLTS` will reach its end of life. In October 2023, the aliases `UbuntuLTS`, `CentOS`, `Debian`, and `RHEL` will be removed.
   - This change is expected to take effect from Az.Compute version: 7.0.0 and Az version: 11.0.0
-  - Starting in November 2023 the "New-AzVM" cmdlet will deploy with the Trusted Launch configuration by default. To know more about Trusted Launch, please visit https://docs.microsoft.com/en-us/azure/virtual-machines/trusted-launch
+  - Starting in November 2023 the "New-AzVM" cmdlet will deploy with the Trusted Launch configuration by default. To know more about Trusted Launch, please visit [learn.microsoft.com/azure/virtual-machines/trusted-launch](/azure/virtual-machines/trusted-launch)
   - This change is expected to take effect from Az.Compute version: 7.0.0 and Az version: 11.0.0
 
 ### `New-AzVmss`
 
 - Cmdlet breaking-change will happen to all parameter set
-  - Starting November 2023, the "New-AzVmss" cmdlet will default to Trusted Launch VMSS. For more info, visit https://aka.ms/trustedLaunchVMSS.
+  - Starting November 2023, the "New-AzVmss" cmdlet will default to Trusted Launch VMSS. For more info, visit [aka.ms/trustedLaunchVMSS](https://aka.ms/trustedLaunchVMSS).
   - This change is expected to take effect from Az.Compute version: 7.0.0 and Az version: 11.0.0
-  - Starting November 2023, the "New-AzVmss" cmdlet will use new defaults: Flexible orchestration mode and enable NATv2 configuration for Load Balancer. To learn more about Flexible Orchestration modes, visit https://aka.ms/orchestrationModeVMSS.
+  - Starting November 2023, the "New-AzVmss" cmdlet will use new defaults: Flexible orchestration mode and enable NATv2 configuration for Load Balancer. To learn more about Flexible Orchestration modes, visit [aka.ms/orchestrationModeVMSS](https://aka.ms/orchestrationModeVMSS).
   - This change is expected to take effect from Az.Compute version: 7.0.0 and Az version: 11.0.0
   - Consider using the image alias including the version of the distribution you want to use in the "-ImageName" parameter of the "New-AzVmss" cmdlet. On April 30, 2023, the image deployed using `UbuntuLTS` will reach its end of life. In November 2023, the aliases `UbuntuLTS`, `CentOS`, `Debian`, and `RHEL` will be removed.
   - This change is expected to take effect from Az.Compute version: 7.0.0 and Az version: 11.0.0
@@ -115,7 +115,7 @@ title: Upcoming breaking changes in Azure PowerShell
   - Default value of AllowBlobPublicAccess and AllowCrossTenantReplication will be changed from True to False in a future release.
   When AllowBlobPublicAccess is False on a storage account, it is not permitted to configure container ACLs to allow anonymous access to blobs within the storage account.
   When AllowCrossTenantReplication is False on a storage account, cross AAD tenant object replication is not allowed.
-  - This change is expected to take effect from Az.Storage version: 6.0.0 and Az version: 11.0.0
+  - This change is occurring to the Azure Storage service. For more information, see [Azure Storage updating some default security settings on new accounts](https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-storage-updating-some-default-security-settings-on-new/ba-p/3819554).
 
 ### `New-AzStorageAccountSASToken`
 

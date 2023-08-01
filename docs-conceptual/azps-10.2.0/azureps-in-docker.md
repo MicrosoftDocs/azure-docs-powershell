@@ -1,7 +1,7 @@
 ---
 description: Learn how to run a Docker container hosting Azure PowerShell. Docker gets you started quickly with an isolated environment in which to run Azure PowerShell.
 ms.custom: devx-track-azurepowershell
-ms.date: 07/28/2023
+ms.date: 08/01/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
