@@ -1,0 +1,73 @@
+### YamlMime:FAQ
+metadata:
+  title: Frequently Asked Questions (FAQ)
+  description: Frequently Asked Questions about Azure PowerShell.
+  ms.devlang: powershell
+  ms.topic: faq
+  ms.date: 08/01/2023
+  ms.custom: devx-track-azurepowershell
+  ms.service: azure-powershell
+
+title: Frequently asked questions about Azure PowerShell
+summary: |
+
+sections:
+  - name: Ignored
+    questions:
+      - question: |
+          What is Azure PowerShell?
+        answer: |
+          Azure PowerShell is a set of cmdlets that allows you to manage Azure resources directly with
+          PowerShell. In December 2018, the Az PowerShell module became generally available. It's now the
+          recommended PowerShell module for interacting with Azure. To learn more about the Az PowerShell
+          module, see
+          [Introducing the new Azure PowerShell Az module](/powershell/azure/new-azureps-module-az).
+
+      - question: |
+          How do I disable breaking change warning messages in Azure PowerShell?
+        answer: |
+          To suppress the breaking change warning messages in Azure PowerShell, you'll need to set the
+          environment variable `SuppressAzurePowerShellBreakingChangeWarnings` to `true`.
+
+          ```azurepowershell
+          Set-Item -Path Env:\SuppressAzurePowerShellBreakingChangeWarnings -Value $true
+          ```
+
+      - question: |
+          How do I disable the AzureRM retirement warning message in Azure PowerShell?
+        answer: |
+          To suppress the AzureRM retirement warning message in Azure PowerShell, you'll need to set the
+          environment variable `SuppressAzureRmModulesRetiringWarning` to `true`.
+
+          ```azurepowershell-interactive
+          Set-Item -Path Env:\SuppressAzureRmModulesRetiringWarning -Value $true
+          ```
+
+          One disadvantage of the previous example is you'll need to run the command for each new PowerShell
+          session unless you add it to your PowerShell profile.
+
+          To set the environment variable permanently, you can also use the following example.
+
+          ```azurepowershell-interactive
+          [System.Environment]::SetEnvironmentVariable('SuppressAzureRmModulesRetiringWarning', 'true', [System.EnvironmentVariableTarget]::User)
+          ```
+
+      - question: |
+          How do I determine the max HTTP retry times in Azure PowerShell?
+        answer: |
+          For general HTTP response (except response status code is 429), Azure PowerShell uses the value defined in the `AZURE_PS_HTTP_MAX_RETRIES` environment variable. Its minimum value is 0. If not specified, Azure PowerShell uses the SDK default value.
+
+          ```azurepowershell-interactive
+          [System.Environment]::SetEnvironmentVariable('AZURE_PS_HTTP_MAX_RETRIES ', 3, [System.EnvironmentVariableTarget]::User)
+          ```
+
+          If the HTTP response status code is 429, Azure PowerShell uses the value defined in the `AZURE_PS_HTTP_MAX_RETRIES_FOR_429` environment variable. Its minimum value is 1. The total retry times of status code 429 is (`AZURE_PS_HTTP_MAX_RETRIES` + 1) * `AZURE_PS_HTTP_MAX_RETRIES_FOR_429` - 1. If not specified, Azure PowerShell uses the SDK default value.
+
+          ```azurepowershell-interactive
+          [System.Environment]::SetEnvironmentVariable('AZURE_PS_HTTP_MAX_RETRIES_FOR_429 ', 3, [System.EnvironmentVariableTarget]::User)
+          ```
+
+
+
+
+

@@ -1,0 +1,157 @@
+###YamlMime:Landing
+
+title: Azure PowerShell Documentation
+summary: |
+  Official product documentation for Azure PowerShell. Azure PowerShell is a collection of modules for managing Azure resources from PowerShell.
+
+metadata:
+  title: Azure PowerShell Documentation
+  description: Official product documentation for Azure PowerShell. Azure PowerShell is a collection of modules for managing Azure resources from PowerShell.
+  ms.topic: landing-page
+  author: mikefrobbins
+  ms.author: mirobb
+  ms.date: 08/01/2023
+  ms.devlang: powershell
+  ms.custom: devx-track-azurepowershell
+  ms.service: azure-powershell
+landingContent:
+  - title: About Azure PowerShell
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Get started
+            url: get-started-azureps.md
+          - text: What is Azure PowerShell?
+            url: what-is-azure-powershell.md
+          - text: Support Lifecycle
+            url: azureps-support-lifecycle.md
+      - linkListType: learn
+        links:
+          - text: Automate Azure tasks from PowerShell
+            url: /training/modules/automate-azure-tasks-with-powershell/
+          - text: Choose the best Azure command line tools for managing and provisioning your cloud infrastructure
+            url: /training/modules/azure-command-line-tools-intro/
+  - title: Installation
+    linkLists:
+      - linkListType: download
+        links:
+          - text: Install
+            url: install-azure-powershell.md
+          - text: Install - Windows
+            url: install-azps-windows.md
+          - text: Install - Linux
+            url: install-azps-linux.md
+          - text: Install - macOS
+            url: install-azps-macos.md
+          - text: Run in Azure Cloud Shell
+            url: https://shell.azure.com
+          - text: Azure PowerShell in Docker
+            url: azureps-in-docker.md
+  - title: What's new
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: Release notes
+            url: release-notes-azureps.md
+          - text: Az 10.0.0 migration guide
+            url: migrate-az-10.0.0.md
+          - text: Upcoming breaking changes
+            url: upcoming-breaking-changes.md
+  - title: Azure PowerShell Reference
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Cmdlet reference
+            url: /powershell/module/?view=azps-10.2.0
+  - title: Identity and Authentication
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: Azure AD to Microsoft Graph Migration changes
+            url: azps-msgraph-migration-changes.md
+      - linkListType: how-to-guide
+        links:
+          - text: Authentication methods
+            url: authenticate-azureps.md
+          - text: Create a service principal
+            url: create-azure-service-principal-azureps.md
+          - text: Credential Contexts
+            url: context-persistence.md
+  - title: Concepts
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Manage subscriptions
+            url: manage-subscriptions-azureps.md
+          - text: Manage Azure resources with Invoke-AzRestMethod
+            url: manage-azure-resources-invoke-azrestmethod.md
+          - text: Filter cmdlet results
+            url: queries-azureps.md
+          - text: Format output
+            url: formatting-output.md
+          - text: PowerShell jobs
+            url: using-psjobs.md
+      - linkListType: tutorial
+        links:
+          - text: Create virtual machines
+            url: azureps-vm-tutorial.yml
+  - title: Configuration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Configure global settings
+            url: configure-global-settings.md
+          - text: Intelligent command completion
+            url: az-predictor.md
+          - text: Use the Az PowerShell module behind a proxy
+            url: az-powershell-proxy.md
+  - title: Deploy
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Deploy resource manager templates
+            url: /azure/azure-resource-manager/templates/deploy-powershell?toc=/powershell/azure/toc.json
+          - text: Export resource manager templates
+            url: /azure/azure-resource-manager/management/manage-resources-powershell?toc=/powershell/azure/toc.json
+          - text: Deploy private resource manager templates
+            url: /azure/azure-resource-manager/templates/secure-template-with-sas-token?toc=/powershell/azure/toc.json
+  - title: Samples
+    linkLists:
+      - linkListType: sample
+        links:
+          - text: Azure App Service
+            url: /azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json
+          - text: SQL databases
+            url: /azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json
+          - text: Cosmos DB
+            url: /azure/cosmos-db/sql/powershell-samples?toc=/powershell/azure/toc.json
+          - text: Samples repo
+            url: /samples/browse/?terms=azure%20powershell
+  - title: Migrate from AzureRM
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Introducing the Az PowerShell module
+            url: new-azureps-module-az.md
+          - text: Changes between AzureRM and Az
+            url: migrate-az-1.0.0.md
+      - linkListType: how-to-guide
+        links:
+          - text: Migration steps
+            url: migrate-from-azurerm-to-az.md
+      - linkListType: quickstart
+        links:
+          - text: Automatically migrate PowerShell scripts
+            url: quickstart-migrate-azurerm-to-az-automatically.md
+  - title: Help & Support
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Report product issues
+            url: https://github.com/Azure/azure-powershell/issues
+          - text: Troubleshoot
+            url: troubleshooting.md
+          - text: Follow Azure PowerShell on Twitter
+            url: https://twitter.com/azureposh
+          - text: Azure Tools Blog
+            url: https://techcommunity.microsoft.com/t5/azure-tools-blog/bg-p/AzureToolsBlog
