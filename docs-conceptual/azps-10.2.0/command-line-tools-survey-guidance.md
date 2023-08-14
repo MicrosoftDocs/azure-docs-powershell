@@ -10,7 +10,7 @@ title: Azure command line tools survey guidance
 
 # Azure command line tools survey guidance
 
-When using Azure PowerShell, you may be invited to participate in a survey to tell us about your
+When using Azure PowerShell, you may be invited to participate in [a survey](https://go.microsoft.com/fwlink/?linkid=2201766) to tell us about your
 experience. By responding to the survey, you help to identify common issues and areas for
 improvement. Understanding your experiences and opinions helps to make future releases of Azure
 command line tools better for you and others.
