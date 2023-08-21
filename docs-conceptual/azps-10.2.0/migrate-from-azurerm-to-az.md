@@ -1,7 +1,7 @@
 ---
 description: Learn the steps and tools for migrating Azure PowerShell scripts from AzureRM to the new Az PowerShell module.
 ms.custom: devx-track-azurepowershell, contperf-fy21q2
-ms.date: 08/01/2023
+ms.date: 08/21/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -108,6 +108,9 @@ persist compatibility aliases across PowerShell sessions. For more information, 
 > changed return values for the Az cmdlets. Don't expect enabling aliases to take care of the
 > migration for you. See the [full breaking changes list](migrate-az-1.0.0.md) to find where your
 > scripts may require updates.
+
+Support for `Enable-AzureRmAlias` will not be deprecated with the deprecation of the AzureRM
+PowerShell module.
 
 ## Option 3: Migrate your scripts in Visual Studio Code with the Azure PowerShell extension
 
