@@ -384,7 +384,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-EXTENSION <IVMExtensionParameters>: Parameters used to create a new Virtual Machine Extension Image.
+EXTENSION `<IVMExtensionParameters>`: Parameters used to create a new Virtual Machine Extension Image.
   - `[ComputeRole <String>]`: Compute role
   - `[IsSystemExtension <Boolean?>]`: Indicates if the extension is for the system.
   - `[ProvisioningState <ProvisioningState?>]`: Provisioning state of extension.
@@ -394,7 +394,7 @@ EXTENSION <IVMExtensionParameters>: Parameters used to create a new Virtual Mach
   - `[VMScaleSetEnabled <Boolean?>]`: Value indicating whether the extension is enabled for virtual machine scale set support.
   - `[VmosType <OSType?>]`: Target virtual machine operating system type necessary for deploying the extension handler.
 
-INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
+INPUTOBJECT `<IComputeAdminIdentity>`: Identity Parameter
   - `[DiskId <String>]`: The disk guid as identity.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.

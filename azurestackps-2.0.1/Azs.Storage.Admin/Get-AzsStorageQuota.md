@@ -148,7 +148,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IStorageAdminIdentity>: 
+INPUTOBJECT `<IStorageAdminIdentity>`: 
   - `[AccountId <String>]`: Internal storage account ID, which is not visible to tenant.
   - `[AsyncOperationId <String>]`: Async Operation Id.
   - `[Id <String>]`: Resource identity path

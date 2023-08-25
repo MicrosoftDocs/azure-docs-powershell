@@ -353,7 +353,7 @@ ADDONPLANDEFINITION <IAddonPlanDefinition[]>: References to add-on plans that a 
   - `[MaxAcquisitionCount <Int32?>]`: Maximum number of instances that can be acquired by a single subscription. If not specified, the assumed value is 1.
   - `[PlanId <String>]`: Plan identifier.
 
-OFFERDEFINITION <IOffer>: Represents an offering of services against which a subscription can be created.
+OFFERDEFINITION `<IOffer>`: Represents an offering of services against which a subscription can be created.
   - `[Location <String>]`: Location of the resource
   - `[AddonPlans <IAddonPlanDefinition[]>]`: References to add-on plans that a tenant can optionally acquire as a part of the offer.
     - `[MaxAcquisitionCount <Int32?>]`: Maximum number of instances that can be acquired by a single subscription. If not specified, the assumed value is 1.
