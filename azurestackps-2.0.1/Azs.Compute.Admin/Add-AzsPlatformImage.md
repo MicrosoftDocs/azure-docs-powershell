@@ -381,7 +381,7 @@ DATADISKS <IDataDisk[]>: Data disks used by the platform image.
   - `[Lun <Int32?>]`: Logical unit number.
   - `[Uri <String>]`: Location of the disk template.
 
-INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
+INPUTOBJECT `<IComputeAdminIdentity>`: Identity Parameter
   - `[DiskId <String>]`: The disk guid as identity.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.
@@ -394,7 +394,7 @@ INPUTOBJECT <IComputeAdminIdentity>: Identity Parameter
   - `[Type <String>]`: Type of extension.
   - `[Version <String>]`: The version of the resource.
 
-NEWIMAGE <IPlatformImageParameters>: Parameters used to create a new platform image.
+NEWIMAGE `<IPlatformImageParameters>`: Parameters used to create a new platform image.
   - `[DataDisk <IDataDisk[]>]`: Data disks used by the platform image.
     - `[Lun <Int32?>]`: Logical unit number.
     - `[Uri <String>]`: Location of the disk template.

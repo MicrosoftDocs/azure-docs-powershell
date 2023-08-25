@@ -266,7 +266,7 @@ ALIASES
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <ISubscriptionsAdminIdentity>: Identity Parameter
+INPUTOBJECT `<ISubscriptionsAdminIdentity>`: Identity Parameter
   - `[DelegatedProvider <String>]`: DelegatedProvider identifier.
   - `[DelegatedProviderSubscriptionId <String>]`: Delegated provider subscription identifier.
   - `[Id <String>]`: Resource identity path
@@ -283,7 +283,7 @@ INPUTOBJECT <ISubscriptionsAdminIdentity>: Identity Parameter
   - `[TargetSubscriptionId <String>]`: The target subscription ID.
   - `[Tenant <String>]`: Directory tenant name.
 
-PLANLINK <IPlanLinkDefinition>: Definition for linking and unlinking plans to offers.
+PLANLINK `<IPlanLinkDefinition>`: Definition for linking and unlinking plans to offers.
   - `[MaxAcquisitionCount <Int32?>]`: The maximum acquisition count by subscribers
   - `[PlanLinkType <PlanLinkType?>]`: Type of the plan link.
   - `[PlanName <String>]`: Name of the plan.
