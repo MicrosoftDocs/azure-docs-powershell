@@ -120,13 +120,13 @@
                 "azuredmps-*/**/*.yml": "mirobb",
                 "azurermps-*/**/*.yml": "mirobb",
                 "azuresmps-*/**/*.yml": "mirobb",
-                "azurestackps-*/**/*.yml": "mabrigg",
-                "azurestackps-*/**/*.md": "mabrigg",
+                "azurestackps-*/**/*.yml": "jgerend",
+                "azurestackps-*/**/*.md": "jgerend",
                 "docs-conceptual/azps-*/*.md": "mirobb",
                 "docs-conceptual/azuredmps-*/*.md": "mirobb",
                 "docs-conceptual/azurermps-*/*.md": "mirobb",
                 "docs-conceptual/azuresmps-*/*.md": "mirobb",
-                "docs-conceptual/azurestackps-*/*.md": "mabrigg",
+                "docs-conceptual/azurestackps-*/*.md": "jgerend",
                 "docs-conceptual/includes/*.md": "mirobb"
             },
             "author": {
