@@ -1,7 +1,7 @@
 ---
 description: Learn how to install and run Azure PowerShell on macOS. You can install Azure PowerShell on macOS with one command.
 ms.custom: devx-track-azurepowershell
-ms.date: 08/01/2023
+ms.date: 08/31/2023  
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
