@@ -345,13 +345,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <INetworkAdminIdentity>: Identity Parameter
+INPUTOBJECT `<INetworkAdminIdentity>`: Identity Parameter
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Location of the resource.
   - `[ResourceName <String>]`: Name of the resource.
   - `[SubscriptionId <String>]`: Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
-QUOTA <IQuota>: Network quota resource.
+QUOTA `<IQuota>`: Network quota resource.
   - `[Tag <IResourceTags>]`: List of key value pairs.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
   - `[MaxLoadBalancersPerSubscription <Int64?>]`: Maximum number of load balancers a tenant subscription can provision.

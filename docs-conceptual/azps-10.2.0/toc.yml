@@ -4,9 +4,6 @@
   items:
   - name: What is Azure PowerShell?
     href: what-is-azure-powershell.md
-  - name: Introducing the Az PowerShell module
-    href: new-azureps-module-az.md
-    displayName: intro, introduction, az
   - name: Get started
     href: get-started-azureps.md
     displayName: sign in, signin, log in, login, find, feedback, intro, introduction
@@ -137,6 +134,9 @@
       href: migrate-az-2.0.0.md
   - name: Migrate from AzureRM
     items:
+    - name: Introducing the Az PowerShell module
+      href: new-azureps-module-az.md
+      displayName: intro, introduction, az
     - name: Changes between AzureRM and Az
       href: migrate-az-1.0.0.md
       displayName: breaking, cmdlet, module, names

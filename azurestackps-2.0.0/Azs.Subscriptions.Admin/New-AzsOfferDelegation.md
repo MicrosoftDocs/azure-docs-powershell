@@ -228,7 +228,7 @@ ALIASES
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-OFFERDELEGATIONDEFINITION <IOfferDelegation>: Offer delegation.
+OFFERDELEGATIONDEFINITION `<IOfferDelegation>`: Offer delegation.
   - `[Location <String>]`: Location of the resource
   - `[SubscriptionId <String>]`: Identifier of the subscription receiving the delegated offer.
 

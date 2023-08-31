@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 07/28/2023
+  ms.date: 08/01/2023
   ms.devlang: powershell
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
@@ -23,8 +23,6 @@ landingContent:
             url: get-started-azureps.md
           - text: What is Azure PowerShell?
             url: what-is-azure-powershell.md
-          - text: Introducing the Az PowerShell module
-            url: new-azureps-module-az.md
           - text: Support Lifecycle
             url: azureps-support-lifecycle.md
       - linkListType: learn
@@ -64,7 +62,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Cmdlet reference
-            url: /powershell/module/?view=azps-10.1.0
+            url: /powershell/module/?view=azps-10.2.0
   - title: Identity and Authentication
     linkLists:
       - linkListType: whats-new
@@ -133,6 +131,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
+          - text: Introducing the Az PowerShell module
+            url: new-azureps-module-az.md
           - text: Changes between AzureRM and Az
             url: migrate-az-1.0.0.md
       - linkListType: how-to-guide

@@ -161,7 +161,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-NEWQUOTA <IQuota>: 
+NEWQUOTA `<IQuota>`: 
   - `[Location <String>]`: Location of the resource.
   - `[AvailabilitySetCount <Int32?>]`: Maximum number of availability sets allowed.
   - `[CoresLimit <Int32?>]`: Maximum number of cores allowed.

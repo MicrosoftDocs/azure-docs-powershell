@@ -128,7 +128,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <ISubscriptionIdentity>: Identity Parameter
+INPUTOBJECT `<ISubscriptionIdentity>`: Identity Parameter
   - `[DelegatedProviderId <String>]`: Id of the delegated provider.
   - `[Id <String>]`: Resource identity path
   - `[OfferName <String>]`: Name of the offer.
