@@ -1,10 +1,10 @@
 {
-    "azps-10.1.0": {
-        "conceptualToc": "docs-conceptual/azps-10.1.0/toc.yml",
+    "azps-10.3.0": {
+        "conceptualToc": "docs-conceptual/azps-10.3.0/toc.yml",
         "conceptualTocUrl": "/powershell/azure/toc.json",
-        "packageRoot": "azps-10.1.0",
+        "packageRoot": "azps-10.3.0",
         "referenceTocUrl": "/powershell/module/azure-powershell/toc.json",
-        "serviceMap": "mapping/az-groupMapping-10.1.0.json"
+        "serviceMap": "mapping/az-groupMapping-10.3.0.json"
     },
     "azps-10.2.0": {
         "conceptualToc": "docs-conceptual/azps-10.2.0/toc.yml",
