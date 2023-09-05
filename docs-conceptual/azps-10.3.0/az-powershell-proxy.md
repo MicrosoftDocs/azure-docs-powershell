@@ -1,7 +1,6 @@
 ---
 description: How to use the Azure Az PowerShell module behind a proxy server
-ms.custom:
-ms.date: 08/31/2023  
+ms.date: 09/05/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

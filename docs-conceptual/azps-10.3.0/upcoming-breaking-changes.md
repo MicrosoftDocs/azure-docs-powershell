@@ -1,7 +1,7 @@
 ---
 description: Learn about upcoming breaking changes to the Azure Az PowerShell module
 ms.custom: devx-track-azurepowershell
-ms.date: 08/31/2023  
+ms.date: 09/05/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -60,32 +60,32 @@ title: Upcoming breaking changes in Azure PowerShell
 
 - Cmdlet breaking-change will happen to all parameter set
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
-  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Add-AzHDInsightComponentVersion`
 
 - Cmdlet breaking-change will happen to all parameter set
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
-  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Add-AzHDInsightConfigValue`
 
 - Cmdlet breaking-change will happen to all parameter set
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
-  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Add-AzHDInsightMetastore`
 
 - Cmdlet breaking-change will happen to all parameter set
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
-  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Add-AzHDInsightScriptAction`
@@ -100,16 +100,16 @@ title: Upcoming breaking changes in Azure PowerShell
 
 - Cmdlet breaking-change will happen to all parameter set
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
-  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Add-AzHDInsightStorage`
 
 - Cmdlet breaking-change will happen to all parameter set
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
-  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Disable-AzHDInsightAzureMonitor`
@@ -170,8 +170,8 @@ title: Upcoming breaking changes in Azure PowerShell
 
 - Cmdlet breaking-change will happen to all parameter set
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
-  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Remove-AzHDInsightClusterAutoscaleConfiguration`
@@ -204,8 +204,8 @@ title: Upcoming breaking changes in Azure PowerShell
 
 - Cmdlet breaking-change will happen to all parameter set
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
-  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Set-AzHDInsightGatewayCredential`
