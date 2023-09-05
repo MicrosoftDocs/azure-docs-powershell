@@ -1,7 +1,7 @@
 ---
 description: Learn about upcoming breaking changes to the Azure Az PowerShell module
 ms.custom: devx-track-azurepowershell
-ms.date: 08/31/2023  
+ms.date: 09/05/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
