@@ -167,6 +167,13 @@ you start a new PowerShell session.
 Disable-AzContextAutosave
 ```
 
+## The connection for this site is not secure
+
+When your default browser is Microsoft Edge, you might encounter the following error when attempting
+to login to Azure interactively with `Connect-AzAccount`: "_The connection for this site is not
+secure._" To resolve this issue, visit [edge://net-internals/#hsts](edge://net-internals/#hsts) in
+Microsoft Edge. Add `localhost` under "_Delete domain security policy_" and click <kbd>Delete</kbd>.
+
 ## Service Principal IdentifierUri verified domain error
 
 Error: _Values of identifierUris property must use a verified domain of the organization or its
