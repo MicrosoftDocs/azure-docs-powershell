@@ -38,6 +38,14 @@ You can also use the `$Env:AzSurveyMessage` environment variable to disable the 
 Set-Item -Path Env:\AzSurveyMessage -Value $false
 ```
 
+## Implementation details
+
+The survey message is displayed using PowerShell's information stream to prevent it from altering
+the returned object-based output. Although we've made every effort to ensure the survey doesn't
+impact your experience, there are some scenarios where the survey may affect the usage of
+third-party tools such as Ansible. If you experience issues, we recommend that you
+[disable the survey](#disable-the-survey) in those scenarios.
+
 ## Privacy statement
 
 Your privacy is important to us.
