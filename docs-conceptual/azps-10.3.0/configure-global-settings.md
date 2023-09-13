@@ -1,7 +1,7 @@
 ---
 description: Configure Azure PowerShell global settings using centralized and granular AzConfig cmdlets
 ms.custom: devx-track-azurepowershell
-ms.date: 09/05/2023
+ms.date: 09/13/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -68,6 +68,33 @@ Update-AzConfig -DefaultSubscriptionForLogin <Subscription ID or Name>
 > [!NOTE]
 > Not to be confused with **the subscription of the default context**, the
 > **DefaultSubscriptionForLogin** configuration takes effect only when authenticating to Azure.
+
+## Upgrade notifications
+
+In-tool notifications for version upgrades of Azure PowerShell is a feature released in Az
+PowerShell module version 10.3.0.
+
+When a new version of Azure PowerShell is available, an upgrade notification is displayed in Azure
+PowerShell. To determine if upgrade notifications are enabled, use the `Get-AzConfig` cmdlet with
+the **CheckForUpgrade** parameter, as shown in the following example.
+
+```azurepowershell-interactive
+Get-AzConfig -CheckForUpgrade
+```
+
+To enable upgrade notifications for Azure PowerShell, use the `Update-AzConfig` cmdlet with the
+**CheckForUpgrade** parameter and `$true` for its value, as shown in the following example.
+
+```azurepowershell-interactive
+Update-AzConfig -CheckForUpgrade $true
+```
+
+To turn off upgrade notifications, use the `Update-AzConfig` cmdlet with the **CheckForUpgrade**
+parameter and `$false` for its value, as shown in the following example.
+
+```azurepowershell-interactive
+Update-AzConfig -CheckForUpgrade $false
+```
 
 ## Azure region identification
 
