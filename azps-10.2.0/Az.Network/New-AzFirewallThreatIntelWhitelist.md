@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzFirewallThreatIntelWhitelist
 
 ## SYNOPSIS
-Create a new threat intelligence whitelist for Azure Firewall
+Create a new threat intelligence allowlist for Azure Firewall
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ New-AzFirewallThreatIntelWhitelist [-FQDN <String[]>] [-IpAddress <String[]>]
 ```
 
 ## DESCRIPTION
-The **New-AzFirewallThreatIntelWhitelist** cmdlet creates a threat intel whitelist object, which can be used when creating or setting an Azure Firewall.
+The **New-AzFirewallThreatIntelWhitelist** cmdlet creates a threat intel allowlist object, which can be used when creating or setting an Azure Firewall.
 
 ## EXAMPLES
 
@@ -29,7 +29,7 @@ The **New-AzFirewallThreatIntelWhitelist** cmdlet creates a threat intel whiteli
 New-AzFirewallThreatIntelWhitelist -IpAddress @("2.2.2.2", "3.3.3.3") -FQDN @("bing.com", "yammer.com")
 ```
 
-This example creates a threat intel whitelist containing a FQDN whitelist of two entries and an Ip address whitelist of two entries
+This example creates a threat intel allowlist containing a FQDN allowlist of two entries and an Ip address allowlist of two entries
 
 ## PARAMETERS
 
@@ -49,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -FQDN
-The FQDNs of the Threat Intel Whitelist
+The FQDNs of the Threat Intel allowlist
 
 ```yaml
 Type: System.String[]
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -IpAddress
-The IP Addresses of the Threat Intel Whitelist
+The IP Addresses of the Threat Intel allowlist
 
 ```yaml
 Type: System.String[]
