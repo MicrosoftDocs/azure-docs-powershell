@@ -72,10 +72,10 @@ Update-AzConfig -DefaultSubscriptionForLogin <Subscription ID or Name>
 ## Upgrade notifications
 
 In-tool notifications for version upgrades of Azure PowerShell is a feature released in Az
-PowerShell module version 10.3.0.
+PowerShell module version 10.3.0. When a new version of Azure PowerShell is available, an upgrade
+notification is displayed in your interactive PowerShell session.
 
-When a new version of Azure PowerShell is available, an upgrade notification is displayed in Azure
-PowerShell. To determine if upgrade notifications are enabled, use the `Get-AzConfig` cmdlet with
+To determine if upgrade notifications are enabled, use the `Get-AzConfig` cmdlet with
 the **CheckForUpgrade** parameter, as shown in the following example.
 
 ```azurepowershell-interactive
