@@ -1,7 +1,7 @@
 ---
 description: Learn the steps and tools for migrating Azure PowerShell scripts from AzureRM to the new Az PowerShell module.
 ms.custom: devx-track-azurepowershell, contperf-fy21q2
-ms.date: 04/28/2023
+ms.date: 09/18/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -108,19 +108,6 @@ persist compatibility aliases across PowerShell sessions. For more information, 
 > changed return values for the Az cmdlets. Don't expect enabling aliases to take care of the
 > migration for you. See the [full breaking changes list](migrate-az-1.0.0.md) to find where your
 > scripts may require updates.
-
-## Option 3: Migrate your scripts in Visual Studio Code with the Azure PowerShell extension
-
-### Install the Azure PowerShell extension for Visual Studio Code
-
-Install the [Azure PowerShell extension for VSCode](https://marketplace.visualstudio.com/items?itemName=azps-tools.azps-tools)
-
-### Convert your scripts manually
-
-1. Load your AzureRM script in VSCode
-1. Start the migration by opening the command palette `Ctrl+Shift+P` and select `Migrate Azure PowerShell script`
-1. Select source version `AzureRM`
-1. Follow the recommended actions for each underlined command or parameter.
 
 ## Next steps
 
