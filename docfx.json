@@ -569,7 +569,7 @@
                 "docs-conceptual/azuredmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
-                "azps-10.3.0/**/*": "GitHub",
+                "azps-10.3.0/**/*": "OpenSource",
                 "azps-10.2.0/**/*": "None",
                 "azps-9.7.1/**/*": "None",
                 "azps-0.10.0/**/*": "None",
@@ -587,6 +587,27 @@
                 "docs-conceptual/**/**.md": "microsoftdocs/azure-docs-powershell",
                 "az*/**/**.md": "azure/azure-powershell",
                 "az*/**/**.yml": "azure/azure-powershell"
+            },
+            "open_source_feedback_contributorGuideUrl": {
+                "azps-10.3.0/**/*": "https://learn.microsoft.com/powershell/scripting/community/contributing/powershell-style-guide"
+            },
+            "open_source_feedback_issueUrl": {
+                "azps-10.3.0/**/*": "https://github.com/microsoftdocs/azure-docs-powershell/issues/new?template=03-customer-feedback.yml"
+            },
+            "open_source_feedback_issueTitle": {
+                "azps-10.3.0/**/*": "Customer docs feedback - "
+            },
+            "open_source_feedback_productName": {
+                "azps-10.3.0/**/*": "Azure PowerShell"
+            },
+            "open_source_feedback_productDescription": {
+                "azps-10.3.0/**/*": "A collection of PowerShell modules for managing Azure resources directly from PowerShell."
+            },
+            "open_source_feedback_productLogoLightUrl": {
+                "azps-10.3.0/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg"
+            },
+            "open_source_feedback_productLogoDarkUrl": {
+                "azps-10.3.0/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg"
             }
         },
         "globalMetadata": {
