@@ -570,6 +570,8 @@
             },
             "feedback_system": {
                 "azps-10.3.0/**/*": "OpenSource",
+                "docs-conceptual/**/**.md": "OpenSource",
+                "docs-conceptual/**/**.yml": "OpenSource",
                 "azps-10.2.0/**/*": "None",
                 "azps-9.7.1/**/*": "None",
                 "azps-0.10.0/**/*": "None",
