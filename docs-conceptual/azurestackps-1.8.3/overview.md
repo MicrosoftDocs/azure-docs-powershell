@@ -2,7 +2,7 @@
 title: Overview of Azure Stack Admin PowerShell | Microsoft Docs
 description: An overview of Azure Stack Admin PowerShell with instructions for installation and configuration.
 author: mattbriggs 
-ms.author: mabrigg
+ms.author: jgerend
 manager: femila
 ms.devlang: powershell
 ms.topic: conceptual

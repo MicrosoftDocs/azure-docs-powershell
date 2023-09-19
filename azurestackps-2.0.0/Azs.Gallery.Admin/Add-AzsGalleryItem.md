@@ -160,7 +160,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-GALLERYITEMURIPAYLOAD <IGalleryItemUriPayload>: Location of gallery item payload.
+GALLERYITEMURIPAYLOAD `<IGalleryItemUriPayload>`: Location of gallery item payload.
   - `[GalleryItemUri <String>]`: URI for your gallery package that has already been uploaded online.
 
 ## RELATED LINKS

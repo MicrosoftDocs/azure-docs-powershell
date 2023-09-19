@@ -334,14 +334,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IBackupAdminIdentity>: Identity Parameter
+INPUTOBJECT `<IBackupAdminIdentity>`: Identity Parameter
   - `[Backup <String>]`: Name of the backup.
   - `[Id <String>]`: Resource identity path
   - `[Location <String>]`: Name of the backup location.
   - `[ResourceGroupName <String>]`: Name of the resource group.
   - `[SubscriptionId <String>]`: Subscription credentials that uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
 
-RESTOREOPTION <IRestoreOptions>: Properties for restore options.
+RESTOREOPTION `<IRestoreOptions>`: Properties for restore options.
   - `[DecryptionCertBase64 <String>]`: The certificate file raw data in Base64 string. This should be the .pfx file with the private key.
   - `[DecryptionCertPassword <String>]`: The password for the decryption certificate.
   - `[RoleName <String>]`: The Azure Stack role name for restore, set it to empty for all infrastructure role
