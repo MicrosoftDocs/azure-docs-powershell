@@ -4,7 +4,7 @@ ms.custom: devx-track-azurepowershell
 ms.date: 08/01/2023
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: get-started-article
+ms.topic: get-started
 title: Get started with Azure PowerShell
 ---
 
