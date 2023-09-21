@@ -352,7 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### -SingleSignOnAadDomain
-array of Aad(azure active directory) domains
+array of Azure Active Directory domains
 
 ```yaml
 Type: System.String[]

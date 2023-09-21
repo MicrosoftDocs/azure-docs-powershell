@@ -1,7 +1,7 @@
 ---
 description: This article contains guidance about the Azure command line tools survey.
 ms.custom: devx-track-azurepowershell
-ms.date: 08/31/2023  
+ms.date: 09/19/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -37,6 +37,14 @@ You can also use the `$Env:AzSurveyMessage` environment variable to disable the 
 ```azurepowershell-interactive
 Set-Item -Path Env:\AzSurveyMessage -Value $false
 ```
+
+## Compatibility with third-party tools
+
+The survey message is displayed using PowerShell's information stream to prevent it from altering
+the returned object-based output. Although we've made every effort to ensure the survey doesn't
+impact your experience, there are some scenarios where the survey may affect the usage of
+third-party tools such as Ansible. If you experience issues, we recommend that you
+[disable the survey](#disable-the-survey) in those scenarios.
 
 ## Privacy statement
 

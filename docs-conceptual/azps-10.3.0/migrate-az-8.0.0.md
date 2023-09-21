@@ -1,7 +1,7 @@
 ---
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 8.0.0 release.
 ms.custom: devx-track-azurepowershell
-ms.date: 08/31/2023  
+ms.date: 09/05/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -214,6 +214,34 @@ Set-AzCdnOrigin -ResourceGroupName $resourceGroupName -ProfileName $cdnProfileNa
 ```powershell
 Update-AzCdnOrigin -ResourceGroupName $resourceGroupName -ProfileName $cdnProfileName -EndpointName $endpointName `
     -Name $originName  -HostName "mystorage2.blob.core.windows.net" -HttpPort 456 -HttpsPort 789
+```
+
+### `Unpublish-AzCdnEndpointContent`
+Replaced by command `Clear-AzCdnEndpointContent`
+
+#### Before
+```powershell
+Unpublish-AzCdnEndpointContent -ResourceGroupName $resourceGroupName -ProfileName $cdnProfileName -EndpointName $endpointName `
+   -PurgeContent $PurgeContent   
+```
+#### After
+```powershell
+Clear-AzCdnEndpointContent -ResourceGroupName $resourceGroupName -ProfileName $cdnProfileName -EndpointName $endpointName `
+   -ContentPath $PurgeContent   
+```
+
+### `Publish-AzCdnEndpointContent`
+Replaced by command `Import-AzCdnEndpointContent`
+
+#### Before
+```powershell
+Publish-AzCdnEndpointContent -ResourceGroupName $resourceGroupName -ProfileName $cdnProfileName -EndpointName $endpointName `
+   -LoadContent $LoadContent
+```
+#### After
+```powershell
+Import-AzCdnEndpointContent -ResourceGroupName $resourceGroupName -ProfileName $cdnProfileName -EndpointName $endpointName `
+   -ContentPath $LoadContent
 ```
 
 ## Az.EventHub

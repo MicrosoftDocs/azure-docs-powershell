@@ -1,7 +1,7 @@
 ---
 description: Troubleshooting the Azure Az PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 08/31/2023  
+ms.date: 09/05/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -166,6 +166,13 @@ you start a new PowerShell session.
 ```azurepowershell
 Disable-AzContextAutosave
 ```
+
+## The connection for this site is not secure
+
+When your default browser is Microsoft Edge, you might encounter the following error when attempting
+to login to Azure interactively with `Connect-AzAccount`: "_The connection for this site is not
+secure._" To resolve this issue, visit [edge://net-internals/#hsts](edge://net-internals/#hsts) in
+Microsoft Edge. Add `localhost` under "_Delete domain security policy_" and click <kbd>Delete</kbd>.
 
 ## Service Principal IdentifierUri verified domain error
 
