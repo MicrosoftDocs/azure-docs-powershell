@@ -1,612 +1,876 @@
 {
-    "build": {
-        "content": [
-            { "files": ["toc.yml"], "src": "azps-10.3.0", "version": "azps-10.3.0", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-10.3.0", "version": "azps-10.3.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-10.3.0", "version": "azps-10.3.0", "dest": "azure" },
+  "build": {
+    "content": [
+      {
+        "files": ["toc.yml"],
+        "src": "azps-10.3.0",
+        "version": "azps-10.3.0",
+        "dest": "module/azure-powershell"
+      },
+      {
+        "files": ["**/*.yml"],
+        "src": "azps-10.3.0",
+        "version": "azps-10.3.0",
+        "exclude": ["docs-conceptual/**"],
+        "dest": "module"
+      },
+      {
+        "files": ["**/*.yml", "**/*.md"],
+        "src": "docs-conceptual/azps-10.3.0",
+        "version": "azps-10.3.0",
+        "dest": "azure"
+      },
 
-            { "files": ["toc.yml"], "src": "azps-10.2.0", "version": "azps-10.2.0", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-10.2.0", "version": "azps-10.2.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-10.2.0", "version": "azps-10.2.0", "dest": "azure" },
+      {
+        "files": ["toc.yml"],
+        "src": "azps-10.4.0",
+        "version": "azps-10.4.0",
+        "dest": "module/azure-powershell"
+      },
+      {
+        "files": ["**/*.yml"],
+        "src": "azps-10.4.0",
+        "version": "azps-10.4.0",
+        "exclude": ["docs-conceptual/**"],
+        "dest": "module"
+      },
+      {
+        "files": ["**/*.yml", "**/*.md"],
+        "src": "docs-conceptual/azps-10.4.0",
+        "version": "azps-10.4.0",
+        "dest": "azure"
+      },
 
-            { "files": ["toc.yml"], "src": "azps-9.7.1", "version": "azps-9.7.1", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-9.7.1", "version": "azps-9.7.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-9.7.1", "version": "azps-9.7.1", "dest": "azure" },
+      {
+        "files": ["toc.yml"],
+        "src": "azps-9.7.1",
+        "version": "azps-9.7.1",
+        "dest": "module/azure-powershell"
+      },
+      {
+        "files": ["**/*.yml"],
+        "src": "azps-9.7.1",
+        "version": "azps-9.7.1",
+        "exclude": ["docs-conceptual/**"],
+        "dest": "module"
+      },
+      {
+        "files": ["**/*.yml", "**/*.md"],
+        "src": "docs-conceptual/azps-9.7.1",
+        "version": "azps-9.7.1",
+        "dest": "azure"
+      },
 
-            { "files": ["toc.yml"], "src": "azps-0.10.0", "version": "azps-0.10.0", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-0.10.0", "version": "azps-0.10.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-0.10.0", "version": "azps-0.10.0", "dest": "azure" },
+      {
+        "files": ["toc.yml"],
+        "src": "azps-0.10.0",
+        "version": "azps-0.10.0",
+        "dest": "module/azure-powershell"
+      },
+      {
+        "files": ["**/*.yml"],
+        "src": "azps-0.10.0",
+        "version": "azps-0.10.0",
+        "exclude": ["docs-conceptual/**"],
+        "dest": "module"
+      },
+      {
+        "files": ["**/*.yml", "**/*.md"],
+        "src": "docs-conceptual/azps-0.10.0",
+        "version": "azps-0.10.0",
+        "dest": "azure"
+      },
 
-            { "files": ["toc.yml"], "src": "azurermps-6.13.0", "version": "azurermps-6.13.0", "dest": "module/azure-rm" },
-            { "files": ["**/*.yml"], "src": "azurermps-6.13.0", "version": "azurermps-6.13.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurermps-6.13.0", "version": "azurermps-6.13.0", "dest": "azure/azurerm" },
+      {
+        "files": ["toc.yml"],
+        "src": "azurermps-6.13.0",
+        "version": "azurermps-6.13.0",
+        "dest": "module/azure-rm"
+      },
+      {
+        "files": ["**/*.yml"],
+        "src": "azurermps-6.13.0",
+        "version": "azurermps-6.13.0",
+        "exclude": ["docs-conceptual/**"],
+        "dest": "module"
+      },
+      {
+        "files": ["**/*.yml", "**/*.md"],
+        "src": "docs-conceptual/azurermps-6.13.0",
+        "version": "azurermps-6.13.0",
+        "dest": "azure/azurerm"
+      },
 
-            { "files": ["toc.yml"], "src": "azuresmps-4.0.0", "version": "azuresmps-4.0.0", "dest": "module/servicemanagement" },
-            { "files": ["**/*.yml"], "src": "azuresmps-4.0.0", "version": "azuresmps-4.0.0", "exclude": ["docs-conceptual/**"], "dest": "module/servicemanagement" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azuresmps-4.0.0", "version": "azuresmps-4.0.0", "dest": "azure/servicemanagement" },
+      {
+        "files": ["toc.yml"],
+        "src": "azuresmps-4.0.0",
+        "version": "azuresmps-4.0.0",
+        "dest": "module/servicemanagement"
+      },
+      {
+        "files": ["**/*.yml"],
+        "src": "azuresmps-4.0.0",
+        "version": "azuresmps-4.0.0",
+        "exclude": ["docs-conceptual/**"],
+        "dest": "module/servicemanagement"
+      },
+      {
+        "files": ["**/*.yml", "**/*.md"],
+        "src": "docs-conceptual/azuresmps-4.0.0",
+        "version": "azuresmps-4.0.0",
+        "dest": "azure/servicemanagement"
+      },
 
-            { "files": ["toc.yml"], "src": "azuredmps-0.9.0", "version": "azuredmps-0.9.0-preview", "dest": "module/deploymentmanager" },
-            { "files": ["**/*.md", "**/*.yml"], "src": "docs-conceptual/azuredmps-0.9.0", "version": "azuredmps-0.9.0-preview", "dest": "azure/deploymentmanager" },
-            { "files": ["**/*.yml"], "src": "azuredmps-0.9.0", "version": "azuredmps-0.9.0-preview", "exclude": ["docs-conceptual/**"], "dest": "module" },
+      {
+        "files": ["toc.yml"],
+        "src": "azuredmps-0.9.0",
+        "version": "azuredmps-0.9.0-preview",
+        "dest": "module/deploymentmanager"
+      },
+      {
+        "files": ["**/*.md", "**/*.yml"],
+        "src": "docs-conceptual/azuredmps-0.9.0",
+        "version": "azuredmps-0.9.0-preview",
+        "dest": "azure/deploymentmanager"
+      },
+      {
+        "files": ["**/*.yml"],
+        "src": "azuredmps-0.9.0",
+        "version": "azuredmps-0.9.0-preview",
+        "exclude": ["docs-conceptual/**"],
+        "dest": "module"
+      },
 
-            { "files": ["toc.yml"], "src": "azurestackps-2.2.0", "version": "azurestackps-2.2.0", "dest": "module/azure-stack" },
-            { "files": ["**/*.yml"], "src": "azurestackps-2.2.0", "version": "azurestackps-2.2.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.2.0", "version": "azurestackps-2.2.0", "dest": "azure/azure-stack" },
+      {
+        "files": ["toc.yml"],
+        "src": "azurestackps-2.2.0",
+        "version": "azurestackps-2.2.0",
+        "dest": "module/azure-stack"
+      },
+      {
+        "files": ["**/*.yml"],
+        "src": "azurestackps-2.2.0",
+        "version": "azurestackps-2.2.0",
+        "exclude": ["docs-conceptual/**"],
+        "dest": "module"
+      },
+      {
+        "files": ["**/*.yml", "**/*.md"],
+        "src": "docs-conceptual/azurestackps-2.2.0",
+        "version": "azurestackps-2.2.0",
+        "dest": "azure/azure-stack"
+      },
 
-            { "files": ["toc.yml"], "src": "azurestackps-2.0.2", "version": "azurestackps-2.0.2", "dest": "module/azure-stack" },
-            { "files": ["**/*.yml"], "src": "azurestackps-2.0.2", "version": "azurestackps-2.0.2", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.0.2", "version": "azurestackps-2.0.2", "dest": "azure/azure-stack" },
+      {
+        "files": ["toc.yml"],
+        "src": "azurestackps-2.0.2",
+        "version": "azurestackps-2.0.2",
+        "dest": "module/azure-stack"
+      },
+      {
+        "files": ["**/*.yml"],
+        "src": "azurestackps-2.0.2",
+        "version": "azurestackps-2.0.2",
+        "exclude": ["docs-conceptual/**"],
+        "dest": "module"
+      },
+      {
+        "files": ["**/*.yml", "**/*.md"],
+        "src": "docs-conceptual/azurestackps-2.0.2",
+        "version": "azurestackps-2.0.2",
+        "dest": "azure/azure-stack"
+      },
 
-            { "files": ["toc.yml"], "src": "azurestackps-2.0.1", "version": "azurestackps-2.0.1", "dest": "module/azure-stack" },
-            { "files": ["**/*.yml"], "src": "azurestackps-2.0.1", "version": "azurestackps-2.0.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.0.1", "version": "azurestackps-2.0.1", "dest": "azure/azure-stack" },
+      {
+        "files": ["toc.yml"],
+        "src": "azurestackps-2.0.1",
+        "version": "azurestackps-2.0.1",
+        "dest": "module/azure-stack"
+      },
+      {
+        "files": ["**/*.yml"],
+        "src": "azurestackps-2.0.1",
+        "version": "azurestackps-2.0.1",
+        "exclude": ["docs-conceptual/**"],
+        "dest": "module"
+      },
+      {
+        "files": ["**/*.yml", "**/*.md"],
+        "src": "docs-conceptual/azurestackps-2.0.1",
+        "version": "azurestackps-2.0.1",
+        "dest": "azure/azure-stack"
+      },
 
-            { "files": ["toc.yml"], "src": "azurestackps-2.0.0", "version": "azurestackps-2.0.0", "dest": "module/azure-stack" },
-            { "files": ["**/*.yml"], "src": "azurestackps-2.0.0", "version": "azurestackps-2.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.0.0", "version": "azurestackps-2.0.0", "dest": "azure/azure-stack" },
+      {
+        "files": ["toc.yml"],
+        "src": "azurestackps-2.0.0",
+        "version": "azurestackps-2.0.0",
+        "dest": "module/azure-stack"
+      },
+      {
+        "files": ["**/*.yml"],
+        "src": "azurestackps-2.0.0",
+        "version": "azurestackps-2.0.0",
+        "exclude": ["docs-conceptual/**"],
+        "dest": "module"
+      },
+      {
+        "files": ["**/*.yml", "**/*.md"],
+        "src": "docs-conceptual/azurestackps-2.0.0",
+        "version": "azurestackps-2.0.0",
+        "dest": "azure/azure-stack"
+      },
 
-            { "files": ["toc.yml"], "src": "azurestackps-1.8.3", "version": "azurestackps-1.8.3", "dest": "module/azure-stack" },
-            { "files": ["**/*.yml"], "src": "azurestackps-1.8.3", "version": "azurestackps-1.8.3", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-1.8.3", "version": "azurestackps-1.8.3", "dest": "azure/azure-stack" },
+      {
+        "files": ["toc.yml"],
+        "src": "azurestackps-1.8.3",
+        "version": "azurestackps-1.8.3",
+        "dest": "module/azure-stack"
+      },
+      {
+        "files": ["**/*.yml"],
+        "src": "azurestackps-1.8.3",
+        "version": "azurestackps-1.8.3",
+        "exclude": ["docs-conceptual/**"],
+        "dest": "module"
+      },
+      {
+        "files": ["**/*.yml", "**/*.md"],
+        "src": "docs-conceptual/azurestackps-1.8.3",
+        "version": "azurestackps-1.8.3",
+        "dest": "azure/azure-stack"
+      },
 
-            { "files": ["toc.yml"], "src": "azurestackps-1.8.2", "version": "azurestackps-1.8.2", "dest": "module/azure-stack" },
-            { "files": ["**/*.yml"], "src": "azurestackps-1.8.2", "version": "azurestackps-1.8.2", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-1.8.2", "version": "azurestackps-1.8.2", "dest": "azure/azure-stack" },
+      {
+        "files": ["toc.yml"],
+        "src": "azurestackps-1.8.2",
+        "version": "azurestackps-1.8.2",
+        "dest": "module/azure-stack"
+      },
+      {
+        "files": ["**/*.yml"],
+        "src": "azurestackps-1.8.2",
+        "version": "azurestackps-1.8.2",
+        "exclude": ["docs-conceptual/**"],
+        "dest": "module"
+      },
+      {
+        "files": ["**/*.yml", "**/*.md"],
+        "src": "docs-conceptual/azurestackps-1.8.2",
+        "version": "azurestackps-1.8.2",
+        "dest": "azure/azure-stack"
+      },
 
-            {
-                "files": [
-                    "AADRM/**/*.md",
-                    "AADRM/**/*.yml",
-                    "AzureInformationProtection/**/*.md",
-                    "AzureInformationProtection/**/*.yml",
-                    "AzureAD/**/*.md",
-                    "AzureAD/**/*.yml",
-                    "ElasticDatabaseJobs/**/*.md",
-                    "ElasticDatabaseJobs/**/*.yml",
-                    "MSOnline/**/*.md",
-                    "MSOnline/**/*.yml",
-                    "ResourceManager/**/*.md",
-                    "ResourceManager/**/*.yml",
-                    "ServiceManagement/**/*.md",
-                    "ServiceManagement/**/*.yml",
-                    "AzureStack/**/*.md",
-                    "AzureStack/**/*.yml",
-                    "ServiceFabric/**/*.md",
-                    "ServiceFabric/**/*.yml",
-                    "Storage/**/*.md",
-                    "Storage/**/*.yml",
-                    "azure ad cmdlets/**/*.md",
-                    "bread/toc.yml"
-                ]
-            },
-            { "files": ["**/*.md"], "src": "azureipps", "version": "azureipps" },
-            { "files": ["**/*.md"], "src": "azureservicefabricps", "version": "azureservicefabricps" },
-            { "files": ["**/*.md"], "src": "azureadps-1.0", "version": "azureadps-1.0" },
-            { "files": ["**/*.md"], "src": "azureadps-2.0", "version": "azureadps-2.0" },
-            { "files": ["**/*.md"], "src": "azureadps-2.0-preview", "version": "azureadps-2.0-preview" },
-            { "files": ["**/*.md"], "src": "azureelasticdbjobsps-0.8.33", "version": "azureelasticdbjobsps-0.8.33" }
+      {
+        "files": [
+          "AADRM/**/*.md",
+          "AADRM/**/*.yml",
+          "AzureInformationProtection/**/*.md",
+          "AzureInformationProtection/**/*.yml",
+          "AzureAD/**/*.md",
+          "AzureAD/**/*.yml",
+          "ElasticDatabaseJobs/**/*.md",
+          "ElasticDatabaseJobs/**/*.yml",
+          "MSOnline/**/*.md",
+          "MSOnline/**/*.yml",
+          "ResourceManager/**/*.md",
+          "ResourceManager/**/*.yml",
+          "ServiceManagement/**/*.md",
+          "ServiceManagement/**/*.yml",
+          "AzureStack/**/*.md",
+          "AzureStack/**/*.yml",
+          "ServiceFabric/**/*.md",
+          "ServiceFabric/**/*.yml",
+          "Storage/**/*.md",
+          "Storage/**/*.yml",
+          "azure ad cmdlets/**/*.md",
+          "bread/toc.yml"
+        ]
+      },
+      { "files": ["**/*.md"], "src": "azureipps", "version": "azureipps" },
+      {
+        "files": ["**/*.md"],
+        "src": "azureservicefabricps",
+        "version": "azureservicefabricps"
+      },
+      {
+        "files": ["**/*.md"],
+        "src": "azureadps-1.0",
+        "version": "azureadps-1.0"
+      },
+      {
+        "files": ["**/*.md"],
+        "src": "azureadps-2.0",
+        "version": "azureadps-2.0"
+      },
+      {
+        "files": ["**/*.md"],
+        "src": "azureadps-2.0-preview",
+        "version": "azureadps-2.0-preview"
+      },
+      {
+        "files": ["**/*.md"],
+        "src": "azureelasticdbjobsps-0.8.33",
+        "version": "azureelasticdbjobsps-0.8.33"
+      }
+    ],
+    "resource": [
+      { "files": ["media/**"], "version": "azps-10.3.0" },
+      { "files": ["media/**"], "version": "azps-10.4.0" },
+      { "files": ["media/**"], "version": "azps-9.7.1" },
+      { "files": ["media/**"], "version": "azps-0.10.0" },
+      { "files": ["media/**"], "version": "azurermps-6.13.0" }
+    ],
+    "versions": {
+      "azps-10.3.0": { "dest": "azps-10.3.0" },
+      "azps-10.4.0": { "dest": "azps-10.4.0" },
+      "azps-9.7.1": { "dest": "azps-9.7.1" },
+      "azps-0.10.0": { "dest": "azps-0.10.0" },
+      "azurermps-6.13.0": { "dest": "azurermps-6.13.0" },
+      "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" },
+      "azuredmps-0.9.0-preview": { "dest": "azuredmps-0.9.0-preview" },
+      "azurestackps-2.2.0": { "dest": "azurestackps-2.2.0" },
+      "azurestackps-2.0.2": { "dest": "azurestackps-2.0.2" },
+      "azurestackps-2.0.1": { "dest": "azurestackps-2.0.1" },
+      "azurestackps-2.0.0": { "dest": "azurestackps-2.0.0" },
+      "azurestackps-1.8.2": { "dest": "azurestackps-1.8.2" },
+      "azurestackps-1.8.3": { "dest": "azurestackps-1.8.3" },
+      "azureipps": { "dest": "azureipps" },
+      "azureservicefabricps": { "dest": "azureservicefabricps" },
+      "azureadps-1.0": { "dest": "azureadps-1.0" },
+      "azureadps-2.0": { "dest": "azureadps-2.0" },
+      "azureadps-2.0-preview": { "dest": "azureadps-2.0-preview" },
+      "azureelasticdbjobsps-0.8.33": { "dest": "azureelasticdbjobsps-0.8.33" }
+    },
+    "filemetadata": {
+      "ms.author": {
+        "azps-*/**/*.yml": "mirobb",
+        "azuredmps-*/**/*.yml": "mirobb",
+        "azurermps-*/**/*.yml": "mirobb",
+        "azuresmps-*/**/*.yml": "mirobb",
+        "azurestackps-*/**/*.yml": "jgerend",
+        "azurestackps-*/**/*.md": "jgerend",
+        "docs-conceptual/azps-*/*.md": "mirobb",
+        "docs-conceptual/azuredmps-*/*.md": "mirobb",
+        "docs-conceptual/azurermps-*/*.md": "mirobb",
+        "docs-conceptual/azuresmps-*/*.md": "mirobb",
+        "docs-conceptual/azurestackps-*/*.md": "jgerend",
+        "docs-conceptual/includes/*.md": "mirobb"
+      },
+      "author": {
+        "azps-*/**/*.yml": "mikefrobbins",
+        "azuredmps-*/**/*.yml": "mikefrobbins",
+        "azurermps-*/**/*.yml": "mikefrobbins",
+        "azuresmps-*/**/*.yml": "mikefrobbins",
+        "azurestackps-*/**/*.yml": "mattbriggs",
+        "azurestackps-*/**/*.md": "mattbriggs",
+        "docs-conceptual/azps-*/*.md": "mikefrobbins",
+        "docs-conceptual/azuredmps-*/*.md": "mikefrobbins",
+        "docs-conceptual/azurermps-*/*.md": "mikefrobbins",
+        "docs-conceptual/azuresmps-*/*.md": "mikefrobbins",
+        "docs-conceptual/azurestackps-*/*.md": "mattbriggs",
+        "docs-conceptual/includes/*.md": "mikefrobbins"
+      },
+      "ms.manager": {
+        "azps-*/**/*.yml": "jasongroce",
+        "azurermps-*/**/*.yml": "jasongroce",
+        "azuresmps-*/**/*.yml": "jasongroce",
+        "azurestackps-*/**/*.yml": "femila",
+        "docs-conceptual/azps-*/*.md": "jasongroce",
+        "docs-conceptual/azurermps-*/*.md": "jasongroce",
+        "docs-conceptual/azuresmps-*/*.md": "jasongroce",
+        "docs-conceptual/azurestackps-*/*.md": "femila",
+        "docs-conceptual/includes/*.md": "jasongroce"
+      },
+      "ms.service": {
+        "docs-conceptual/azurestackps-*/**/*.md": "azure-stack",
+        "azurestackps-*/**/*.yml": "azure-stack",
+        "azuresmps-*/**/*.yml": "azure-asm",
+        "docs-conceptual/azuresmps-*/**/*.md": "azure-asm",
+        "docs-conceptual/azurermps-*/**/*.md": "azure-powershell",
+        "az*-*/**/*.yml": "azure-powershell",
+        "az*-*/ApiManagement.ServiceManagement/*.yml": "api-management",
+        "az*-*/Azure.Storage/*.yml": "azure-storage",
+        "az*-*/Azure.aks/*.yml": "container-service",
+        "az*-*/Az*.AnalysisServices/*.yml": "analysis-services",
+        "az*-*/Az*.ApiManagement/*.yml": "api-management",
+        "az*-*/Az*.ApplicationInsights/*.yml": "azure-monitor",
+        "az*-*/Az*.Automation/*.yml": "automation",
+        "az*-*/Az*.AzureStackAdmin/*.yml": "azure-stack",
+        "az*-*/Az*.AzureStackStorage/*.yml": "azure-stack",
+        "az*-*/Az*.Backup/*.yml": "backup",
+        "az*-*/Az*.Batch/*.yml": "batch",
+        "az*-*/Az*.Billing/*.yml": "cost-management-billing",
+        "az*-*/Az*.Cdn/*.yml": "azure-cdn",
+        "az*-*/Az*.CognitiveServices/*.yml": "cognitive-services",
+        "az*-*/Az*.Compute/*.yml": "virtual-machines",
+        "az*-*/Az*.ContainerInstance/*.yml": "container-instances",
+        "az*-*/Az*.ContainerRegistry/*.yml": "container-registry",
+        "az*-*/Az*.Consumption/*.yml": "cost-management-billing",
+        "az*-*/Az*.DataFactories/*.yml": "data-factory",
+        "az*-*/Az*.DataFactoryV2/*.yml": "data-factory",
+        "az*-*/Az*.DataLakeAnalytics/*.yml": "data-lake-analytics",
+        "az*-*/Az*.DataLakeStore/*.yml": "data-lake-store",
+        "az*-*/Az*.DataMigration/*.yml": "dms",
+        "az*-*/Az*.DevSpaces/*.yml": "azure-dev-spaces",
+        "az*-*/Az*.DevTestLabs/*.yml": "devtest-lab",
+        "az*-*/Az*.DeviceProvisioningServices/*.yml": "iot-dps",
+        "az*-*/Az*.DNS/*.yml": "dns",
+        "az*-*/Az*.EventGrid/*.yml": "event-grid",
+        "az*-*/Az*.EventHub/*.yml": "event-hubs",
+        "az*-*/Az*.FrontDoor/*.yml": "frontdoor",
+        "az*-*/Az*.HDInsight/*.yml": "hdinsight",
+        "az*-*/Az*.Insights/*.yml": "azure-monitor",
+        "az*-*/Az*.IotCentral/*.yml": "iot-central",
+        "az*-*/Az*.IotHub/*.yml": "iot-hub",
+        "az*-*/Az*.KeyVault/*.yml": "key-vault",
+        "az*-*/Az*.Kusto/*.yml": "data-explorer",
+        "az*-*/Az*.LogicApp/*.yml": "logic-apps",
+        "az*-*/Az*.MachineLearning*/*.yml": "machine-learning",
+        "az*-*/Az*.ManagedServiceIdentity*/*.yml": "active-directory",
+        "az*-*/Az*.Maps*/*.yml": "azure-maps",
+        "az*-*/Az*.Media/*.yml": "media-services",
+        "az*-*/Az*.Network/*.yml": "virtual-network",
+        "az*-*/Az*.NotificationHubs/*.yml": "notification-hubs",
+        "az*-*/Az*.OperationalInsights/*.yml": "operational-insights",
+        "az*-*/Az*.PolicyInsights/*.yml": "azure-policy",
+        "az*-*/Az*.PowerBIEmbedded/*.yml": "power-bi-embedded",
+        "az*-*/Az*.Profile/*.yml": "azure-resource-manager",
+        "az*-*/Az*.RecoveryServices/*.yml": "site-recovery",
+        "az*-*/Az*.RecoveryServices.Backup/*.yml": "site-recovery",
+        "az*-*/Az*.RedisCache/*.yml": "cache",
+        "az*-*/Az*.Relay/*.yml": "service-bus",
+        "az*-*/Az*.ResourceGraph/*.yml": "resource-graph",
+        "az*-*/Az*.Resources/*.yml": "azure-resource-manager",
+        "az*-*/Az*.Scheduler/*.yml": "scheduler",
+        "az*-*/Az*.Security/*.yml": "security",
+        "az*-*/Az*.ServerManagement/*.yml": "server-management",
+        "az*-*/Az*.ServiceBus/*.yml": "service-bus",
+        "az*-*/Az*.ServiceFabric/*.yml": "service-fabric",
+        "az*-*/Az*.SignalR/*.yml": "signalr",
+        "az*-*/Az*.SiteRecovery/*.yml": "site-recovery",
+        "az*-*/Az*.Sql/*.yml": "sql-database",
+        "az*-*/Az*.Storage/*.yml": "azure-storage",
+        "az*-*/Az*.StreamAnalytics/*.yml": "stream-analytics",
+        "az*-*/Az*.Tags/*.yml": "azure-resource-manager",
+        "az*-*/Az*.TrafficManager/*.yml": "traffic-manager",
+        "az*-*/Az*.UsageAggregates/*.yml": "cost-management-billing",
+        "az*-*/Az*.Websites/*.yml": "app-service"
+      },
+      "products": {
+        "az*-*/Az*.Consumption/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
         ],
-        "resource": [
-            { "files": ["media/**"], "version": "azps-10.3.0" },
-            { "files": ["media/**"], "version": "azps-10.2.0" },
-            { "files": ["media/**"], "version": "azps-9.7.1" },
-            { "files": ["media/**"], "version": "azps-0.10.0" },
-            { "files": ["media/**"], "version": "azurermps-6.13.0" }
+        "az*-*/**/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
         ],
-        "versions": {
-            "azps-10.3.0": { "dest": "azps-10.3.0" },
-            "azps-10.2.0": { "dest": "azps-10.2.0" },
-            "azps-9.7.1": { "dest": "azps-9.7.1" },
-            "azps-0.10.0": { "dest": "azps-0.10.0" },
-            "azurermps-6.13.0": { "dest": "azurermps-6.13.0" },
-            "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" },
-            "azuredmps-0.9.0-preview": { "dest": "azuredmps-0.9.0-preview" },
-            "azurestackps-2.2.0": { "dest": "azurestackps-2.2.0" },
-            "azurestackps-2.0.2": { "dest": "azurestackps-2.0.2" },
-            "azurestackps-2.0.1": { "dest": "azurestackps-2.0.1" },
-            "azurestackps-2.0.0": { "dest": "azurestackps-2.0.0" },
-            "azurestackps-1.8.2": { "dest": "azurestackps-1.8.2" },
-            "azurestackps-1.8.3": { "dest": "azurestackps-1.8.3" },
-            "azureipps": { "dest": "azureipps" },
-            "azureservicefabricps": { "dest": "azureservicefabricps" },
-            "azureadps-1.0": { "dest": "azureadps-1.0" },
-            "azureadps-2.0": { "dest": "azureadps-2.0" },
-            "azureadps-2.0-preview": { "dest": "azureadps-2.0-preview" },
-            "azureelasticdbjobsps-0.8.33": { "dest": "azureelasticdbjobsps-0.8.33" }
-        },
-        "filemetadata": {
-            "ms.author": {
-                "azps-*/**/*.yml": "mirobb",
-                "azuredmps-*/**/*.yml": "mirobb",
-                "azurermps-*/**/*.yml": "mirobb",
-                "azuresmps-*/**/*.yml": "mirobb",
-                "azurestackps-*/**/*.yml": "jgerend",
-                "azurestackps-*/**/*.md": "jgerend",
-                "docs-conceptual/azps-*/*.md": "mirobb",
-                "docs-conceptual/azuredmps-*/*.md": "mirobb",
-                "docs-conceptual/azurermps-*/*.md": "mirobb",
-                "docs-conceptual/azuresmps-*/*.md": "mirobb",
-                "docs-conceptual/azurestackps-*/*.md": "jgerend",
-                "docs-conceptual/includes/*.md": "mirobb"
-            },
-            "author": {
-                "azps-*/**/*.yml": "mikefrobbins",
-                "azuredmps-*/**/*.yml": "mikefrobbins",
-                "azurermps-*/**/*.yml": "mikefrobbins",
-                "azuresmps-*/**/*.yml": "mikefrobbins",
-                "azurestackps-*/**/*.yml": "mattbriggs",
-                "azurestackps-*/**/*.md": "mattbriggs",
-                "docs-conceptual/azps-*/*.md": "mikefrobbins",
-                "docs-conceptual/azuredmps-*/*.md": "mikefrobbins",
-                "docs-conceptual/azurermps-*/*.md": "mikefrobbins",
-                "docs-conceptual/azuresmps-*/*.md": "mikefrobbins",
-                "docs-conceptual/azurestackps-*/*.md": "mattbriggs",
-                "docs-conceptual/includes/*.md": "mikefrobbins"
-            },
-            "ms.manager": {
-                "azps-*/**/*.yml": "jasongroce",
-                "azurermps-*/**/*.yml": "jasongroce",
-                "azuresmps-*/**/*.yml": "jasongroce",
-                "azurestackps-*/**/*.yml": "femila",
-                "docs-conceptual/azps-*/*.md": "jasongroce",
-                "docs-conceptual/azurermps-*/*.md": "jasongroce",
-                "docs-conceptual/azuresmps-*/*.md": "jasongroce",
-                "docs-conceptual/azurestackps-*/*.md": "femila",
-                "docs-conceptual/includes/*.md": "jasongroce"
-            },
-            "ms.service": {
-                "docs-conceptual/azurestackps-*/**/*.md": "azure-stack",
-                "azurestackps-*/**/*.yml": "azure-stack",
-                "azuresmps-*/**/*.yml": "azure-asm",
-                "docs-conceptual/azuresmps-*/**/*.md": "azure-asm",
-                "docs-conceptual/azurermps-*/**/*.md": "azure-powershell",
-                "az*-*/**/*.yml": "azure-powershell",
-                "az*-*/ApiManagement.ServiceManagement/*.yml": "api-management",
-                "az*-*/Azure.Storage/*.yml": "azure-storage",
-                "az*-*/Azure.aks/*.yml": "container-service",
-                "az*-*/Az*.AnalysisServices/*.yml": "analysis-services",
-                "az*-*/Az*.ApiManagement/*.yml": "api-management",
-                "az*-*/Az*.ApplicationInsights/*.yml": "azure-monitor",
-                "az*-*/Az*.Automation/*.yml": "automation",
-                "az*-*/Az*.AzureStackAdmin/*.yml": "azure-stack",
-                "az*-*/Az*.AzureStackStorage/*.yml": "azure-stack",
-                "az*-*/Az*.Backup/*.yml": "backup",
-                "az*-*/Az*.Batch/*.yml": "batch",
-                "az*-*/Az*.Billing/*.yml": "cost-management-billing",
-                "az*-*/Az*.Cdn/*.yml": "azure-cdn",
-                "az*-*/Az*.CognitiveServices/*.yml": "cognitive-services",
-                "az*-*/Az*.Compute/*.yml": "virtual-machines",
-                "az*-*/Az*.ContainerInstance/*.yml": "container-instances",
-                "az*-*/Az*.ContainerRegistry/*.yml": "container-registry",
-                "az*-*/Az*.Consumption/*.yml": "cost-management-billing",
-                "az*-*/Az*.DataFactories/*.yml": "data-factory",
-                "az*-*/Az*.DataFactoryV2/*.yml": "data-factory",
-                "az*-*/Az*.DataLakeAnalytics/*.yml": "data-lake-analytics",
-                "az*-*/Az*.DataLakeStore/*.yml": "data-lake-store",
-                "az*-*/Az*.DataMigration/*.yml": "dms",
-                "az*-*/Az*.DevSpaces/*.yml": "azure-dev-spaces",
-                "az*-*/Az*.DevTestLabs/*.yml": "devtest-lab",
-                "az*-*/Az*.DeviceProvisioningServices/*.yml": "iot-dps",
-                "az*-*/Az*.DNS/*.yml": "dns",
-                "az*-*/Az*.EventGrid/*.yml": "event-grid",
-                "az*-*/Az*.EventHub/*.yml": "event-hubs",
-                "az*-*/Az*.FrontDoor/*.yml": "frontdoor",
-                "az*-*/Az*.HDInsight/*.yml": "hdinsight",
-                "az*-*/Az*.Insights/*.yml": "azure-monitor",
-                "az*-*/Az*.IotCentral/*.yml": "iot-central",
-                "az*-*/Az*.IotHub/*.yml": "iot-hub",
-                "az*-*/Az*.KeyVault/*.yml": "key-vault",
-                "az*-*/Az*.Kusto/*.yml": "data-explorer",
-                "az*-*/Az*.LogicApp/*.yml": "logic-apps",
-                "az*-*/Az*.MachineLearning*/*.yml": "machine-learning",
-                "az*-*/Az*.ManagedServiceIdentity*/*.yml": "active-directory",
-                "az*-*/Az*.Maps*/*.yml": "azure-maps",
-                "az*-*/Az*.Media/*.yml": "media-services",
-                "az*-*/Az*.Network/*.yml": "virtual-network",
-                "az*-*/Az*.NotificationHubs/*.yml": "notification-hubs",
-                "az*-*/Az*.OperationalInsights/*.yml": "operational-insights",
-                "az*-*/Az*.PolicyInsights/*.yml": "azure-policy",
-                "az*-*/Az*.PowerBIEmbedded/*.yml": "power-bi-embedded",
-                "az*-*/Az*.Profile/*.yml": "azure-resource-manager",
-                "az*-*/Az*.RecoveryServices/*.yml": "site-recovery",
-                "az*-*/Az*.RecoveryServices.Backup/*.yml": "site-recovery",
-                "az*-*/Az*.RedisCache/*.yml": "cache",
-                "az*-*/Az*.Relay/*.yml": "service-bus",
-                "az*-*/Az*.ResourceGraph/*.yml": "resource-graph",
-                "az*-*/Az*.Resources/*.yml": "azure-resource-manager",
-                "az*-*/Az*.Scheduler/*.yml": "scheduler",
-                "az*-*/Az*.Security/*.yml": "security",
-                "az*-*/Az*.ServerManagement/*.yml": "server-management",
-                "az*-*/Az*.ServiceBus/*.yml": "service-bus",
-                "az*-*/Az*.ServiceFabric/*.yml": "service-fabric",
-                "az*-*/Az*.SignalR/*.yml": "signalr",
-                "az*-*/Az*.SiteRecovery/*.yml": "site-recovery",
-                "az*-*/Az*.Sql/*.yml": "sql-database",
-                "az*-*/Az*.Storage/*.yml": "azure-storage",
-                "az*-*/Az*.StreamAnalytics/*.yml": "stream-analytics",
-                "az*-*/Az*.Tags/*.yml": "azure-resource-manager",
-                "az*-*/Az*.TrafficManager/*.yml": "traffic-manager",
-                "az*-*/Az*.UsageAggregates/*.yml": "cost-management-billing",
-                "az*-*/Az*.Websites/*.yml": "app-service"
-            },
-            "products": {
-                "az*-*/Az*.Consumption/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/**/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.DNS/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/56421ca4-1511-4101-aef6-352d15722ed5",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.IotHub/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/816835a3-1c5d-4536-835c-4b59dc9c9d97",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.ServerManagement/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.HDInsight/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/31f0a52b-651f-4010-94e9-e671670147d1",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.DevTestLabs/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/1b517c82-7903-4c65-882b-062988a9836b",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Backup/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/aebdc4a3-c54b-4eea-94e3-663d5e166f57",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Azure.Storage/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/de8ce683-cbe1-461b-bae7-77db0888ec6d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.ResourceGraph/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/d3928677-9b71-43a6-875f-004dc4f98b65",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Network/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/20ed8455-bc18-4537-87a4-83784e7b2a39",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.DataMigration/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.DevSpaces/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/370da7f1-c94e-4c53-93ac-84e54eb74153",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.OperationalInsights/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.RecoveryServices.Backup/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/bba62c59-6b53-4be4-8b9d-6624f9184c22",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.SignalR/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/82a8fddb-4a3d-422c-a2ff-5e883e8135cd",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.NotificationHubs/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/d9f9b1db-eed4-493c-a161-3c802931422e",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.ManagedServiceIdentity*/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/b1cfdec6-b0c3-4209-818c-736879856e0e",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.PolicyInsights/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/eea02214-631d-404a-92d1-5a3357c32a26",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.TrafficManager/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/a21829dd-8109-415c-84d3-07c42e4d33fd",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "docs-conceptual/azurestackps-*/**/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/ApiManagement.ServiceManagement/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/bf4dbf7f-261c-4ae9-9fee-5989668a780a",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.StreamAnalytics/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/9f747546-6aa0-47b1-90d7-ee9646fdb207",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Kusto/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/26e1a60c-4ce1-41de-b2d1-e5f3b7e68e6e",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.FrontDoor/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/b5e53e15-0a76-4936-b270-8b2badca62ac",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.DataLakeAnalytics/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/4ef79e2a-6d1f-4255-bfab-1f30062ad80a",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Sql/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/6ab7faaf-d791-4a26-96a2-3b11738538e7",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Automation/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/43093068-2dda-408b-b3fe-dfd705c84f78",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.MachineLearning*/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/d6f38669-3d05-40f2-afd8-e49f7dd20884",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.RecoveryServices/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/bba62c59-6b53-4be4-8b9d-6624f9184c22",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.DataFactoryV2/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/655f39c4-21c5-49d3-8367-a1f9c1a0b930",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.AzureStackStorage/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.ContainerInstance/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/dcc344b3-3794-4849-9766-7ea55b09218c",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Relay/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/828c518e-a2df-46f1-8871-b760959c8fa8",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.UsageAggregates/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.ServiceBus/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/828c518e-a2df-46f1-8871-b760959c8fa8",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.AzureStackAdmin/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Profile/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/4e834929-0ce1-4c1d-9c81-fcb14721edfb",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Media/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/257159d6-c458-401e-89a4-9ec054d5b64a",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.CognitiveServices/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/a94ab64b-48cb-4632-97ad-5f94d09fb030",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Scheduler/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/5f78585d-b424-4082-82e6-8f6af0cf7090",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.EventGrid/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/467aaae1-e916-4fcd-a463-5b27f9d4745c",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Resources/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/4e834929-0ce1-4c1d-9c81-fcb14721edfb",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.EventHub/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/f0234678-3067-4edc-abf7-8142d54bb7d2",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.KeyVault/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/f488294d-f483-456e-94e3-755f933b811b",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.RedisCache/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/f80a1aa9-ec39-45c7-bff1-e6916def6921",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.IotCentral/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/fb0664a1-e4dc-44b0-bd81-3e27f372682a",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Maps*/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/cdf84aa8-8dea-4da6-9d1d-74eaf3cb9ded",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Batch/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/86a4b315-a9f1-4577-b985-6fb0e0e67420",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.ContainerRegistry/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/cb49e66a-8528-497d-adaa-eade2d009d1b",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Compute/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/2ed91286-6cf7-4b83-810d-75d0ee3b09dd",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Billing/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Storage/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/de8ce683-cbe1-461b-bae7-77db0888ec6d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "azuresmps-*/**/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "docs-conceptual/azurermps-*/**/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Azure.aks/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.DeviceProvisioningServices/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/80e1eb26-63c4-488d-bfbb-a542c5c2c3f6",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Security/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8ec9c8c5-6896-4ce1-a3ad-777f6eabcdf7",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.AnalysisServices/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/000aaee4-f890-4b0a-bd33-24fb2aefa882",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.ServiceFabric/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/e23899b2-c37a-45de-abc2-b8ae68bc8d1b",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Tags/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/4e834929-0ce1-4c1d-9c81-fcb14721edfb",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.ApplicationInsights/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/07bb3e10-d135-43ff-bc8b-360497cb39fa",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.PowerBIEmbedded/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/faa132eb-b7da-40a8-bd96-ea68e77ec6fd",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "azurestackps-*/**/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.DataFactories/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/655f39c4-21c5-49d3-8367-a1f9c1a0b930",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Insights/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/07bb3e10-d135-43ff-bc8b-360497cb39fa",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.DataLakeStore/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/5c1f3bfc-fced-4ad1-b4e6-b7200832734d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.LogicApp/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/e60d1924-c4ad-4104-bd1b-973758bbac7a",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.ApiManagement/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/bf4dbf7f-261c-4ae9-9fee-5989668a780a",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.SiteRecovery/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/bba62c59-6b53-4be4-8b9d-6624f9184c22",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "docs-conceptual/azuresmps-*/**/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Cdn/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/befac1c4-b371-401f-bb32-b2c555258404",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "az*-*/Az*.Websites/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/7ebba99b-05c3-4387-8883-f7bbf6632cb8",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ]
-            },
-            "ms.topic": {
-                "azps-*/**/*.yml": "reference",
-                "azuredmps-*/**/*.yml": "reference",
-                "azurermps-*/**/*.yml": "reference",
-                "azuresmps-*/**/*.yml": "reference",
-                "azurestackps-*/**/*.yml": "reference",
-                "docs-conceptual/**/*.md": "conceptual"
-            },
-            "ms.date": {
-                "azps-10.2.0/**/*.yml": "08/01/2023",
-                "azps-10.3.0/**/*.yml": "09/05/2023",
-                "azps-9.7.1/**/*.yml": "04/28/2023",
-                "azps-0.10.0/**/*.yml": "4/14/2020",
-                "azurermps-6.13.0/**/*.yml": "03/23/2021",
-                "azuresmps-4.0.0/**/*.yml": "11/28/2020",
-                "azuredmps-*/**/*.yml": "09/28/2018",
-                "azurestackps-2.2.0/**/*.yml": "09/23/2021",
-                "azurestackps-2.0.2/**/*.yml": "09/23/2021",
-                "azurestackps-2.0.1/**/*.yml": "09/23/2021",
-                "azurestackps-2.0.0/**/*.yml": "09/23/2021",
-                "azurestackps-1.8.3/**/*.yml": "09/23/2021",
-                "azurestackps-1.8.2/**/*.yml": "09/23/2021"
-            },
-            "enable_powershell_try_it": {
-                "azurermps-*/**/*.yml": false,
-                "azps-*/**/*.yml": true
-            },
-            "searchScope": {
-                "az*-*/Az*.Billing/*.yml": ["Billing", "Cost Management", "Azure", "Azure Powershell"],
-                "az*-*/Az*.Compute/*.yml": ["Virtual Machines", "Virtual Machine Scale Sets", "Azure", "Azure Powershell"],
-                "az*-*/Az*.CosmosDB/*.yml": ["Azure Cosmos DB", "Azure", "Azure Powershell"],
-                "az*-*/Az*.DataLakeAnalytics/*.yml": ["Azure Data Lake Analytics", "Azure", "Azure Powershell"],
-                "az*-*/Az*.DataShare/*.yml": ["Azure Data Share", "Azure", "Azure Powershell"],
-                "az*-*/Az*.HDInsight/*.yml": ["Azure HDInsight", "Azure", "Azure Powershell"],
-                "az*-*/Az*.Kusto/*.yml": ["Kusto", "Azure Data Explorer", "Azure", "Azure Powershell"],
-                "az*-*/Az*.RedisCache/*.yml": ["Cache for Redis", "Azure", "Azure Powershell"],
-                "az*-*/Az*.StreamAnalytics/*.yml": ["Stream Analytics", "Azure", "Azure Powershell"],
-                "az*-*/Az*.Websites/*.yml": ["App Service", "Azure", "Azure Powershell"]
-            },
-            "ROBOTS": {
-                "azurermps-*/**/*": "NOINDEX, NOFOLLOW",
-                "docs-conceptual/azurermps-*/**/*": "NOINDEX, NOFOLLOW",
-                "azuredmps-*/**/*": "NOINDEX, NOFOLLOW",
-                "docs-conceptual/azuredmps-*/**/*": "NOINDEX, NOFOLLOW"
-            },
-            "feedback_system": {
-                "azps-10.3.0/**/*": "GitHub",
-                "azps-10.2.0/**/*": "None",
-                "azps-9.7.1/**/*": "None",
-                "azps-0.10.0/**/*": "None",
-                "azurermps-6.13.0/**/*": "None",
-                "azuresmps-4.0.0/**/*": "None",
-                "azuredmps-0.9.0/**/*": "None",
-                "azurestackps-2.2.0/**/*": "None",
-                "azurestackps-2.0.2/**/*": "None",
-                "azurestackps-2.0.1/**/*": "None",
-                "azurestackps-2.0.0/**/*": "None",
-                "azurestackps-1.8.3/**/*": "None",
-                "azurestackps-1.8.2/**/*": "None"
-            },
-            "feedback_github_repo": {
-                "docs-conceptual/**/**.md": "microsoftdocs/azure-docs-powershell",
-                "az*/**/**.md": "azure/azure-powershell",
-                "az*/**/**.yml": "azure/azure-powershell"
-            }
-        },
-        "globalMetadata": {
-            "apiPlatform": "powershell",
-            "brand": "azure",
-            "searchScope": [
-                "Azure",
-                "Azure Powershell"
-            ],
-            "breadcrumb_path": "/powershell/bread/toc.json",
-            "ms.devlang": "powershell",
-            "feedback_system": "GitHub",
-            "feedback_github_repo": "microsoftdocs/azure-docs-powershell",
-            "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new",
-            "ms.topic": "reference",
-            "uhfHeaderId": "Azure",
-            "ms.date": "09/05/2023"
-        },
-        "dest": "azureps",
-        "lruSize": 0,
-        "markdownEngineName": "markdig"
-    }
+        "az*-*/Az*.DNS/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56421ca4-1511-4101-aef6-352d15722ed5",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.IotHub/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/816835a3-1c5d-4536-835c-4b59dc9c9d97",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.ServerManagement/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.HDInsight/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/31f0a52b-651f-4010-94e9-e671670147d1",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.DevTestLabs/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/1b517c82-7903-4c65-882b-062988a9836b",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Backup/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/aebdc4a3-c54b-4eea-94e3-663d5e166f57",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Azure.Storage/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/de8ce683-cbe1-461b-bae7-77db0888ec6d",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.ResourceGraph/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/d3928677-9b71-43a6-875f-004dc4f98b65",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Network/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/20ed8455-bc18-4537-87a4-83784e7b2a39",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.DataMigration/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.DevSpaces/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/370da7f1-c94e-4c53-93ac-84e54eb74153",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.OperationalInsights/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.RecoveryServices.Backup/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/bba62c59-6b53-4be4-8b9d-6624f9184c22",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.SignalR/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/82a8fddb-4a3d-422c-a2ff-5e883e8135cd",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.NotificationHubs/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/d9f9b1db-eed4-493c-a161-3c802931422e",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.ManagedServiceIdentity*/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/b1cfdec6-b0c3-4209-818c-736879856e0e",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.PolicyInsights/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/eea02214-631d-404a-92d1-5a3357c32a26",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.TrafficManager/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/a21829dd-8109-415c-84d3-07c42e4d33fd",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "docs-conceptual/azurestackps-*/**/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/ApiManagement.ServiceManagement/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/bf4dbf7f-261c-4ae9-9fee-5989668a780a",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.StreamAnalytics/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/9f747546-6aa0-47b1-90d7-ee9646fdb207",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Kusto/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/26e1a60c-4ce1-41de-b2d1-e5f3b7e68e6e",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.FrontDoor/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/b5e53e15-0a76-4936-b270-8b2badca62ac",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.DataLakeAnalytics/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/4ef79e2a-6d1f-4255-bfab-1f30062ad80a",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Sql/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/6ab7faaf-d791-4a26-96a2-3b11738538e7",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Automation/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/43093068-2dda-408b-b3fe-dfd705c84f78",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.MachineLearning*/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/d6f38669-3d05-40f2-afd8-e49f7dd20884",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.RecoveryServices/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/bba62c59-6b53-4be4-8b9d-6624f9184c22",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.DataFactoryV2/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/655f39c4-21c5-49d3-8367-a1f9c1a0b930",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.AzureStackStorage/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.ContainerInstance/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/dcc344b3-3794-4849-9766-7ea55b09218c",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Relay/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/828c518e-a2df-46f1-8871-b760959c8fa8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.UsageAggregates/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.ServiceBus/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/828c518e-a2df-46f1-8871-b760959c8fa8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.AzureStackAdmin/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Profile/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/4e834929-0ce1-4c1d-9c81-fcb14721edfb",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Media/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/257159d6-c458-401e-89a4-9ec054d5b64a",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.CognitiveServices/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/a94ab64b-48cb-4632-97ad-5f94d09fb030",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Scheduler/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/5f78585d-b424-4082-82e6-8f6af0cf7090",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.EventGrid/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/467aaae1-e916-4fcd-a463-5b27f9d4745c",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Resources/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/4e834929-0ce1-4c1d-9c81-fcb14721edfb",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.EventHub/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/f0234678-3067-4edc-abf7-8142d54bb7d2",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.KeyVault/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/f488294d-f483-456e-94e3-755f933b811b",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.RedisCache/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/f80a1aa9-ec39-45c7-bff1-e6916def6921",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.IotCentral/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/fb0664a1-e4dc-44b0-bd81-3e27f372682a",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Maps*/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/cdf84aa8-8dea-4da6-9d1d-74eaf3cb9ded",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Batch/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/86a4b315-a9f1-4577-b985-6fb0e0e67420",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.ContainerRegistry/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/cb49e66a-8528-497d-adaa-eade2d009d1b",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Compute/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/2ed91286-6cf7-4b83-810d-75d0ee3b09dd",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Billing/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Storage/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/de8ce683-cbe1-461b-bae7-77db0888ec6d",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "azuresmps-*/**/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "docs-conceptual/azurermps-*/**/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Azure.aks/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.DeviceProvisioningServices/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/80e1eb26-63c4-488d-bfbb-a542c5c2c3f6",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Security/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8ec9c8c5-6896-4ce1-a3ad-777f6eabcdf7",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.AnalysisServices/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/000aaee4-f890-4b0a-bd33-24fb2aefa882",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.ServiceFabric/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/e23899b2-c37a-45de-abc2-b8ae68bc8d1b",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Tags/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/4e834929-0ce1-4c1d-9c81-fcb14721edfb",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.ApplicationInsights/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/07bb3e10-d135-43ff-bc8b-360497cb39fa",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.PowerBIEmbedded/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/faa132eb-b7da-40a8-bd96-ea68e77ec6fd",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "azurestackps-*/**/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.DataFactories/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/655f39c4-21c5-49d3-8367-a1f9c1a0b930",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Insights/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/07bb3e10-d135-43ff-bc8b-360497cb39fa",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.DataLakeStore/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/5c1f3bfc-fced-4ad1-b4e6-b7200832734d",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.LogicApp/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/e60d1924-c4ad-4104-bd1b-973758bbac7a",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.ApiManagement/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/bf4dbf7f-261c-4ae9-9fee-5989668a780a",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.SiteRecovery/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/bba62c59-6b53-4be4-8b9d-6624f9184c22",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "docs-conceptual/azuresmps-*/**/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Cdn/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/befac1c4-b371-401f-bb32-b2c555258404",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ],
+        "az*-*/Az*.Websites/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/7ebba99b-05c3-4387-8883-f7bbf6632cb8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+        ]
+      },
+      "ms.topic": {
+        "azps-*/**/*.yml": "reference",
+        "azuredmps-*/**/*.yml": "reference",
+        "azurermps-*/**/*.yml": "reference",
+        "azuresmps-*/**/*.yml": "reference",
+        "azurestackps-*/**/*.yml": "reference",
+        "docs-conceptual/**/*.md": "conceptual"
+      },
+      "ms.date": {
+        "azps-10.4.0/**/*.yml": "09/21/2023",
+        "azps-10.3.0/**/*.yml": "09/05/2023",
+        "azps-9.7.1/**/*.yml": "04/28/2023",
+        "azps-0.10.0/**/*.yml": "4/14/2020",
+        "azurermps-6.13.0/**/*.yml": "03/23/2021",
+        "azuresmps-4.0.0/**/*.yml": "11/28/2020",
+        "azuredmps-*/**/*.yml": "09/28/2018",
+        "azurestackps-2.2.0/**/*.yml": "09/23/2021",
+        "azurestackps-2.0.2/**/*.yml": "09/23/2021",
+        "azurestackps-2.0.1/**/*.yml": "09/23/2021",
+        "azurestackps-2.0.0/**/*.yml": "09/23/2021",
+        "azurestackps-1.8.3/**/*.yml": "09/23/2021",
+        "azurestackps-1.8.2/**/*.yml": "09/23/2021"
+      },
+      "enable_powershell_try_it": {
+        "azurermps-*/**/*.yml": false,
+        "azps-*/**/*.yml": true
+      },
+      "searchScope": {
+        "az*-*/Az*.Billing/*.yml": [
+          "Billing",
+          "Cost Management",
+          "Azure",
+          "Azure Powershell"
+        ],
+        "az*-*/Az*.Compute/*.yml": [
+          "Virtual Machines",
+          "Virtual Machine Scale Sets",
+          "Azure",
+          "Azure Powershell"
+        ],
+        "az*-*/Az*.CosmosDB/*.yml": [
+          "Azure Cosmos DB",
+          "Azure",
+          "Azure Powershell"
+        ],
+        "az*-*/Az*.DataLakeAnalytics/*.yml": [
+          "Azure Data Lake Analytics",
+          "Azure",
+          "Azure Powershell"
+        ],
+        "az*-*/Az*.DataShare/*.yml": [
+          "Azure Data Share",
+          "Azure",
+          "Azure Powershell"
+        ],
+        "az*-*/Az*.HDInsight/*.yml": [
+          "Azure HDInsight",
+          "Azure",
+          "Azure Powershell"
+        ],
+        "az*-*/Az*.Kusto/*.yml": [
+          "Kusto",
+          "Azure Data Explorer",
+          "Azure",
+          "Azure Powershell"
+        ],
+        "az*-*/Az*.RedisCache/*.yml": [
+          "Cache for Redis",
+          "Azure",
+          "Azure Powershell"
+        ],
+        "az*-*/Az*.StreamAnalytics/*.yml": [
+          "Stream Analytics",
+          "Azure",
+          "Azure Powershell"
+        ],
+        "az*-*/Az*.Websites/*.yml": ["App Service", "Azure", "Azure Powershell"]
+      },
+      "ROBOTS": {
+        "azurermps-*/**/*": "NOINDEX, NOFOLLOW",
+        "docs-conceptual/azurermps-*/**/*": "NOINDEX, NOFOLLOW",
+        "azuredmps-*/**/*": "NOINDEX, NOFOLLOW",
+        "docs-conceptual/azuredmps-*/**/*": "NOINDEX, NOFOLLOW"
+      },
+      "feedback_system": {
+        "azps-10.3.0/**/*": "GitHub",
+        "azps-10.4.0/**/*": "None",
+        "azps-9.7.1/**/*": "None",
+        "azps-0.10.0/**/*": "None",
+        "azurermps-6.13.0/**/*": "None",
+        "azuresmps-4.0.0/**/*": "None",
+        "azuredmps-0.9.0/**/*": "None",
+        "azurestackps-2.2.0/**/*": "None",
+        "azurestackps-2.0.2/**/*": "None",
+        "azurestackps-2.0.1/**/*": "None",
+        "azurestackps-2.0.0/**/*": "None",
+        "azurestackps-1.8.3/**/*": "None",
+        "azurestackps-1.8.2/**/*": "None"
+      },
+      "feedback_github_repo": {
+        "docs-conceptual/**/**.md": "microsoftdocs/azure-docs-powershell",
+        "az*/**/**.md": "azure/azure-powershell",
+        "az*/**/**.yml": "azure/azure-powershell"
+      }
+    },
+    "globalMetadata": {
+      "apiPlatform": "powershell",
+      "brand": "azure",
+      "searchScope": ["Azure", "Azure Powershell"],
+      "breadcrumb_path": "/powershell/bread/toc.json",
+      "ms.devlang": "powershell",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "microsoftdocs/azure-docs-powershell",
+      "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new",
+      "ms.topic": "reference",
+      "uhfHeaderId": "Azure",
+      "ms.date": "09/05/2023"
+    },
+    "dest": "azureps",
+    "lruSize": 0,
+    "markdownEngineName": "markdig"
+  }
 }

@@ -1,12 +1,13 @@
 ---
 description: Learn about upcoming breaking changes to the Azure Az PowerShell module
 ms.custom: devx-track-azurepowershell
-ms.date: 09/06/2023
+ms.date: 09/21/2023
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
 title: Upcoming breaking changes in Azure PowerShell
 ---
+
 # Upcoming breaking changes in Azure PowerShell
 
 ## Az.Aks
@@ -44,6 +45,68 @@ title: Upcoming breaking changes in Azure PowerShell
   - Consider using the image alias including the version of the distribution you want to use in the "-ImageName" parameter of the "New-AzVmss" cmdlet. On April 30, 2023, the image deployed using `UbuntuLTS` will reach its end of life. In November 2023, the aliases `UbuntuLTS`, `CentOS`, `Debian`, and `RHEL` will be removed.
   - This change is expected to take effect from Az.Compute version: 7.0.0 and Az version: 11.0.0
 
+## Az.ContainerInstance
+
+### `Get-AzContainerGroup`
+
+- Cmdlet breaking-change will happen to all parameter sets
+  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20221001Preview.IContainerGroup' is changing
+  - The following properties in the output type are being deprecated : 'PreviouState' 'PreviouStateDetailStatus' 'PreviouStateExitCode' 'PreviouStateFinishTime' 'PreviouStateStartTime'
+  - The following properties are being added to the output type : 'PreviousState' 'PreviousStateDetailStatus' 'PreviousStateExitCode' 'PreviousStateFinishTime' 'PreviousStateStartTime'
+  - Change description : The parameters starts with PreviouState will be corrected as PreviousState.
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.ContainerInstance version : '4.0.0'
+
+### `Remove-AzContainerGroup`
+
+- Cmdlet breaking-change will happen to all parameter sets
+  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20221001Preview.IContainerGroup' is changing
+  - The following properties in the output type are being deprecated : 'PreviouState' 'PreviouStateDetailStatus' 'PreviouStateExitCode' 'PreviouStateFinishTime' 'PreviouStateStartTime'
+  - The following properties are being added to the output type : 'PreviousState' 'PreviousStateDetailStatus' 'PreviousStateExitCode' 'PreviousStateFinishTime' 'PreviousStateStartTime'
+  - Change description : The parameters starts with PreviouState will be corrected as PreviousState.
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.ContainerInstance version : '4.0.0'
+
+### `Restart-AzContainerGroup`
+
+- Cmdlet breaking-change will happen to all parameter sets
+  - The output type 'bool' is changing
+  - The following properties in the output type are being deprecated : 'PreviouState' 'PreviouStateDetailStatus' 'PreviouStateExitCode' 'PreviouStateFinishTime' 'PreviouStateStartTime'
+  - The following properties are being added to the output type : 'PreviousState' 'PreviousStateDetailStatus' 'PreviousStateExitCode' 'PreviousStateFinishTime' 'PreviousStateStartTime'
+  - Change description : The parameters starts with PreviouState will be corrected as PreviousState.
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.ContainerInstance version : '4.0.0'
+
+### `Start-AzContainerGroup`
+
+- Cmdlet breaking-change will happen to all parameter sets
+  - The output type 'bool' is changing
+  - The following properties in the output type are being deprecated : 'PreviouState' 'PreviouStateDetailStatus' 'PreviouStateExitCode' 'PreviouStateFinishTime' 'PreviouStateStartTime'
+  - The following properties are being added to the output type : 'PreviousState' 'PreviousStateDetailStatus' 'PreviousStateExitCode' 'PreviousStateFinishTime' 'PreviousStateStartTime'
+  - Change description : The parameters starts with PreviouState will be corrected as PreviousState.
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.ContainerInstance version : '4.0.0'
+
+### `Stop-AzContainerGroup`
+
+- Cmdlet breaking-change will happen to all parameter sets
+  - The output type 'bool' is changing
+  - The following properties in the output type are being deprecated : 'PreviouState' 'PreviouStateDetailStatus' 'PreviouStateExitCode' 'PreviouStateFinishTime' 'PreviouStateStartTime'
+  - The following properties are being added to the output type : 'PreviousState' 'PreviousStateDetailStatus' 'PreviousStateExitCode' 'PreviousStateFinishTime' 'PreviousStateStartTime'
+  - Change description : The parameters starts with PreviouState will be corrected as PreviousState.
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.ContainerInstance version : '4.0.0'
+
+### `Update-AzContainerGroup`
+
+- Cmdlet breaking-change will happen to all parameter sets
+  - The output type 'Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20221001Preview.IContainerGroup' is changing
+  - The following properties in the output type are being deprecated : 'PreviouState' 'PreviouStateDetailStatus' 'PreviouStateExitCode' 'PreviouStateFinishTime' 'PreviouStateStartTime'
+  - The following properties are being added to the output type : 'PreviousState' 'PreviousStateDetailStatus' 'PreviousStateExitCode' 'PreviousStateFinishTime' 'PreviousStateStartTime'
+  - Change description : The parameters starts with PreviouState will be corrected as PreviousState.
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.ContainerInstance version : '4.0.0'
+
 ## Az.DesktopVirtualization
 
 ### `New-AzWvdScalingPlan`
@@ -51,8 +114,8 @@ title: Upcoming breaking changes in Azure PowerShell
 - Parameter breaking-change will happen to all parameter sets
   - `-HostPoolType`
     - The parameter : 'HostPoolType' is changing.
-    - Change description : The allowed value of this parameter changed from 'BYODesktop, Personal, Pooled' to 'Pooled' 
-    - The change is expected to take effect from the version : '4.0.0'
+    - Change description : The allowed value of this parameter changed from 'BYODesktop, Personal, Pooled' to 'Pooled'
+    - The change is expected to take effect in Az.DesktopVirtualization the version : '4.0.0'
 
 ## Az.HDInsight
 
@@ -60,32 +123,32 @@ title: Upcoming breaking changes in Azure PowerShell
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
-  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Add-AzHDInsightComponentVersion`
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
-  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Add-AzHDInsightConfigValue`
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
-  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Add-AzHDInsightMetastore`
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
-  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Add-AzHDInsightScriptAction`
@@ -93,23 +156,23 @@ title: Upcoming breaking changes in Azure PowerShell
 - Parameter breaking-change will happen to all parameter sets
   - `-NodeType`
     - The parameter : 'NodeType' is changing.
-    The type of the parameter is changing from 'Microsoft.Azure.Management.HDInsight.Models.ClusterNodeType' to 'RuntimeScriptActionClusterNodeType'.
+      The type of the parameter is changing from 'Microsoft.Azure.Management.HDInsight.Models.ClusterNodeType' to 'RuntimeScriptActionClusterNodeType'.
     - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Add-AzHDInsightSecurityProfile`
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
-  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Add-AzHDInsightStorage`
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
-  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Disable-AzHDInsightAzureMonitor`
@@ -157,21 +220,22 @@ title: Upcoming breaking changes in Azure PowerShell
 ### `New-AzHDInsightCluster`
 
 - Cmdlet breaking-change will happen to all parameter sets
+
   - The type of property 'DiskEncryption' of type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightCluster' will change from 'Microsoft.Azure.Management.HDInsight.Models.DiskEncryptionProperties' to 'Azure.ResourceManager.HDInsight.Models.HDInsightDiskEncryptionProperties'.The type of property 'WorkerNodeDataDisksGroups' will change from 'List<Microsoft.Azure.Management.HDInsight.Models.DataDisksGroups>' to 'List<Azure.ResourceManager.HDInsight.Models.HDInsightClusterDataDiskGroup>'.
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 - Parameter breaking-change will happen to all parameter sets
   - `-ScriptActions`
     - The parameter : 'NodeType' is changing.
-    The type of the parameter is changing from 'Microsoft.Azure.Management.HDInsight.Models.ClusterNodeType' to 'RuntimeScriptActionClusterNodeType'.
+      The type of the parameter is changing from 'Microsoft.Azure.Management.HDInsight.Models.ClusterNodeType' to 'RuntimeScriptActionClusterNodeType'.
     - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `New-AzHDInsightClusterConfig`
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
-  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Remove-AzHDInsightClusterAutoscaleConfiguration`
@@ -204,8 +268,8 @@ title: Upcoming breaking changes in Azure PowerShell
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig' is changing
-  - The following properties in the output type are being deprecated : `Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
-  - The following properties are being added to the output type : `Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions`
+  - The following properties in the output type are being deprecated : 'Dictionary<ClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
+  - The following properties are being added to the output type : 'Dictionary<RuntimeScriptActionClusterNodeType, List<AzureHDInsightScriptAction>> ScriptActions'
   - This change is expected to take effect from Az.HDInsight version: 7.0.0 and Az version: 11.0.0
 
 ### `Set-AzHDInsightGatewayCredential`
@@ -278,7 +342,7 @@ title: Upcoming breaking changes in Azure PowerShell
     - This change is expected to take effect from Az.Monitor version: 5.0.0 and Az version: 11.0.0
   - `-Tag`
     - The parameter : 'Tag' is changing.
-    The type of the parameter is changing from 'System.Collections.IDictionary' to 'Hashtable'.
+      The type of the parameter is changing from 'System.Collections.IDictionary' to 'Hashtable'.
     - This change is expected to take effect from Az.Monitor version: 5.0.0 and Az version: 11.0.0
 
 ### `Set-AzDataCollectionRule`
@@ -453,233 +517,242 @@ title: Upcoming breaking changes in Azure PowerShell
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Get-AzSentinelEnrichment`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Get-AzSentinelEntity`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Get-AzSentinelEntityActivity`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Get-AzSentinelEntityInsight`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Get-AzSentinelEntityQuery`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Get-AzSentinelEntityQueryTemplate`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Get-AzSentinelEntityRelation`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Get-AzSentinelEntityTimeline`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Get-AzSentinelIncidentEntity`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Get-AzSentinelSetting`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `New-AzSentinelAlertRule`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - Change description : Parameters of NRT set will be deprecated. 
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - Change description : Parameters of NRT set will be deprecated.
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `New-AzSentinelAutomationRule`
 
 - Cmdlet breaking-change will happen to parameter set `NewAzSentinelAutomationRule_Create`
   The cmdlet parameter set is being deprecated. There will be no replacement for it.
-  - Change description : ParameterSet Create will be deprecated. 
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+
+  - Change description : ParameterSet Create will be deprecated.
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 - Parameter breaking-change will happen to parameter set `NewAzSentinelAutomationRule_CreateExpanded`
   - `-Action`
     - The parameter : 'Action' is becoming mandatory.
-    - Change description : Action is required. 
-    - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-    - The change is expected to take effect from version : '4.0.0'
+    - Change description : Action is required.
+    - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+    - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
   - `-DisplayName`
     - The parameter : 'DisplayName' is becoming mandatory.
-    - Change description : DisplayName is required. 
-    - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-    - The change is expected to take effect from version : '4.0.0'
+    - Change description : DisplayName is required.
+    - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+    - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
   - `-Order`
     - The parameter : 'Order' is becoming mandatory.
-    - Change description : Order is required. 
-    - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-    - The change is expected to take effect from version : '4.0.0'
+    - Change description : Order is required.
+    - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+    - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `New-AzSentinelBookmark`
 
-- Cmdlet breaking-change will happen to all parameter set
-  - Parameter set Create will be deprecated
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+- Cmdlet breaking-change will happen to all parameter sets
+  The cmdlet parameter set is being deprecated. There will be no replacement for it.
+  - Change description : ParameterSet Create will be deprecated.
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `New-AzSentinelBookmarkRelation`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `New-AzSentinelDataConnector`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - Change description : ParameterSets AmazonWebServicesS3, Dynamics365, MicrosoftThreatIntelligence, MicrosoftThreatProtection, OfficeATP, OfficeIRM, ThreatIntelligenceTaxii will be deprecated. 
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - Change description : ParameterSets AmazonWebServicesS3, Dynamics365, MicrosoftThreatIntelligence, MicrosoftThreatProtection, OfficeATP, OfficeIRM, ThreatIntelligenceTaxii will be deprecated.
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `New-AzSentinelEntityQuery`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `New-AzSentinelIncident`
 
-- Cmdlet breaking-change will happen to all parameter set
-  - Parameter set Create will be deprecated
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+- Cmdlet breaking-change will happen to all parameter sets
+  The cmdlet parameter set is being deprecated. There will be no replacement for it.
+  - Change description : ParameterSet Create will be deprecated.
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `New-AzSentinelIncidentTeam`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Remove-AzSentinelBookmarkRelation`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Remove-AzSentinelEntityQuery`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Test-AzSentinelDataConnectorCheckRequirement`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Update-AzSentinelAlertRule`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - Change description : Parameters of NRT set will be deprecated. 
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - Change description : Parameters of NRT set will be deprecated.
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Update-AzSentinelAutomationRule`
 
 - Parameter breaking-change will happen to all parameter sets
   - `-Action`
     - The parameter : 'Action' is becoming mandatory.
-    - Change description : Action is required. 
-    - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-    - The change is expected to take effect from version : '4.0.0'
+    - Change description : Action is required.
+    - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+    - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
   - `-DisplayName`
     - The parameter : 'DisplayName' is becoming mandatory.
-    - Change description : DisplayName is required. 
-    - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-    - The change is expected to take effect from version : '4.0.0'
+    - Change description : DisplayName is required.
+    - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+    - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
   - `-Order`
     - The parameter : 'Order' is becoming mandatory.
-    - Change description : Order is required. 
-    - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-    - The change is expected to take effect from version : '4.0.0'
+    - Change description : Order is required.
+    - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+    - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Update-AzSentinelBookmarkRelation`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Update-AzSentinelDataConnector`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - Change description : ParameterSets AmazonWebServicesS3, Dynamics365, MicrosoftThreatIntelligence, MicrosoftThreatProtection, OfficeATP, OfficeIRM, ThreatIntelligenceTaxii will be deprecated. 
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - Change description : ParameterSets AmazonWebServicesS3, Dynamics365, MicrosoftThreatIntelligence, MicrosoftThreatProtection, OfficeATP, OfficeIRM, ThreatIntelligenceTaxii will be deprecated.
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Update-AzSentinelEntityQuery`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ### `Update-AzSentinelSetting`
 
 - Cmdlet breaking-change will happen to all parameter sets
   The cmdlet is being deprecated. There will be no replacement for it.
-  - This change will take effect on '11/15/2023'- The change is expected to take effect from Az version : '11.0.0'
-  - The change is expected to take effect from version : '4.0.0'
+  - This change will take effect on '11/15/2023'- The change is expected to take effect in Az version : '11.0.0'
+  - The change is expected to take effect in Az.SecurityInsights version : '4.0.0'
 
 ## Az.Storage
+
+### `Get-AzStorageQueueStoredAccessPolicy`
+
+- Cmdlet breaking-change will happen to all parameter sets
+  - Permissions in the ouput access policy will be changed to a string like "raup" in a future release.
+  - This change is expected to take effect from Az.Storage version: 6.0.0 and Az version: 11.0.0
 
 ### `New-AzDataLakeGen2SasToken`
 
@@ -690,9 +763,9 @@ title: Upcoming breaking changes in Azure PowerShell
 ### `New-AzStorageAccount`
 
 - Cmdlet breaking-change will happen to all parameter sets
-  - Default value of AllowBlobPublicAccess and AllowCrossTenantReplication settings on storage account will be changed to False in the future release. 
-  When AllowBlobPublicAccess is False on a storage account, container ACLs cannot be configured to allow anonymous access to blobs within the storage account. 
-  When AllowCrossTenantReplication is False on a storage account, cross AAD tenant object replication is not allowed when setting up Object Replication policies.
+  - Default value of AllowBlobPublicAccess and AllowCrossTenantReplication settings on storage account will be changed to False in the future release.
+    When AllowBlobPublicAccess is False on a storage account, container ACLs cannot be configured to allow anonymous access to blobs within the storage account.
+    When AllowCrossTenantReplication is False on a storage account, cross AAD tenant object replication is not allowed when setting up Object Replication policies.
   - This change is expected to take effect from Az.Storage version: 6.0.0 and Az version: 11.0.0
 
 ### `New-AzStorageAccountSASToken`
@@ -751,4 +824,8 @@ title: Upcoming breaking changes in Azure PowerShell
     - EnableLargeFileShare parameter will be deprecated in a future release.
     - This change is expected to take effect from Az.Storage version: 6.0.0 and Az version: 11.0.0
 
+### `Set-AzStorageQueueStoredAccessPolicy`
 
+- Cmdlet breaking-change will happen to all parameter sets
+  - Permissions in the ouput access policy will be changed to a string like "raup" in a future release.
+  - This change is expected to take effect from Az.Storage version: 6.0.0 and Az version: 11.0.0
