@@ -47,7 +47,6 @@ The second command fetches the resource guard mapping which need to be deleted t
 The third command unlocks the critical operation to disable the MUA.
 
 The fourth command removes the mapping between resource guard and backup vault.
-To understand more on the unlock-azdataprotectionresourceguardoperation command, check https://learn.microsoft.com/powershell/module/az.dataprotection/unlock-azdataprotectionresourceguardoperation
 
 ## PARAMETERS
 
@@ -213,3 +212,4 @@ To create the parameters described below, construct a hash table containing the 
 
 ## RELATED LINKS
 
+[Unlock-AzDataProtectionResourceGuardOperation](Unlock-AzDataProtectionResourceGuardOperation.md)
