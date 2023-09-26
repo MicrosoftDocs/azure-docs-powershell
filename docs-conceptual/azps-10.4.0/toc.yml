@@ -1,0 +1,165 @@
+- name: Azure PowerShell
+  href: index.yml
+- name: Overview
+  items:
+  - name: What is Azure PowerShell?
+    href: what-is-azure-powershell.md
+  - name: Get started
+    href: get-started-azureps.md
+    displayName: sign in, signin, log in, login, find, feedback, intro, introduction
+  - name: Module versioning and release cadence
+    href: azps-versioning-release-cadence.md
+  - name: Support lifecycle
+    href: azureps-support-lifecycle.md
+- name: Install
+  items:
+  - name: Install
+    href: install-azure-powershell.md
+  - name: Install - Windows
+    href: install-azps-windows.md
+  - name: Install - Linux
+    href: install-azps-linux.md
+  - name: Install - macOS
+    href: install-azps-macos.md
+  - name: Run in Azure Cloud Shell
+    href: https://shell.azure.com
+  - name: Azure PowerShell in Docker
+    href: azureps-in-docker.md
+  - name: Uninstall
+    href: uninstall-az-ps.md
+- name: What's New
+  items:
+  - name: Release notes
+    href: release-notes-azureps.md
+  - name: Upcoming breaking changes
+    href: upcoming-breaking-changes.md
+- name: How-to guides
+  items:
+  - name: Configuration
+    items:
+    - name: Configure global settings
+      href: configure-global-settings.md
+    - name: Intelligent command completion
+      href: az-predictor.md
+    - name: Use the Az PowerShell module behind a proxy
+      href: az-powershell-proxy.md
+  - name: Authentication and Identity
+    items:
+    - name: Authentication methods
+      href: authenticate-azureps.md
+      displayName: >-
+        sign in, signin, log in, login, credentials, msi, managed identity,
+        tenant, subscription, region, certificate, service principal,
+        authenticate
+    - name: Create a service principal
+      href: create-azure-service-principal-azureps.md
+      displayName: >-
+        automation, application, web app, script, certificate, sign in,
+        signin, log in, login, devops, dev ops, itpro, it pro, role,
+        aad, authentication, authenticate
+    - name: Credential contexts
+      href: context-persistence.md
+      displayName: >-
+        sign in, signin, log in, login, process, session, context,
+        persist, jobs, background, automation, scripting, task
+  - name: Concepts
+    items:
+    - name: Manage subscriptions
+      href: manage-subscriptions-azureps.md
+      displayName: tenant, user, sign in, signin, log in, login, authenticate, authentication, accounts
+    - name: Manage Azure resources with Invoke-AzRestMethod
+      href: manage-azure-resources-invoke-azrestmethod.md
+    - name: Filter cmdlet results
+      href: queries-azureps.md
+      displayName: filter, search, format, output, variable, scripting, array, dictionary, map, object
+    - name: Format output
+      href: formatting-output.md
+      displayName: object, table, yaml, json, xml, csv, html, list
+    - name: PowerShell jobs
+      href: using-psjobs.md
+      displayName: background, task, scripting, automation, context, process
+  - name: Deploy
+    items:
+    - name: Deploy Resource Manager templates
+      href: /azure/azure-resource-manager/templates/deploy-powershell?toc=/powershell/azure/toc.json
+    - name: Export Resource Manager templates
+      href: /azure/azure-resource-manager/management/manage-resources-powershell?toc=/powershell/azure/toc.json
+    - name: Deploy private Resource Manager templates
+      href: /azure/azure-resource-manager/templates/secure-template-with-sas-token?toc=/powershell/azure/toc.json
+- name: Tutorials
+  items:
+  - name: Create Virtual Machines
+    href: azureps-vm-tutorial.yml
+  - name: Create a virtual network
+    href: /azure/virtual-network/quick-create-powershell?toc=/powershell/azure/toc.json
+  - name: Create a storage account
+    href: /azure/storage/common/storage-account-create?toc=/powershell/azure/toc.json&tabs=azure-powershell
+  - name: Configure a Log Analytics workspace in Azure Monitor
+    href: /azure/azure-monitor/logs/powershell-workspace-configuration?toc=/powershell/azure/toc.json
+  - name: Deploy an Azure Kubernetes Service (AKS) cluster
+    href: /azure/aks/tutorial-kubernetes-deploy-cluster?toc=/powershell/azure/toc.json&tabs=azure-powershell
+  - name: Create a private container registry
+    href: /azure/container-registry/container-registry-get-started-powershell?toc=/powershell/azure/toc.json
+  - name: Deploy a container instance in Azure
+    href: /azure/container-instances/container-instances-quickstart-powershell?toc=/powershell/azure/toc.json
+  - name: Set and retrieve a secret from Azure Key Vault
+    href: /azure/key-vault/secrets/quick-create-powershell?toc=/powershell/azure/toc.json
+- name: Migration
+  items:
+  - name: Azure AD to Microsoft Graph Migration Guide
+    href: azps-msgraph-migration-changes.md
+  - name: Migrate from previous versions of Az
+    items:
+    - name: Az 10.0.0 Migration Guide
+      href: migrate-az-10.0.0.md
+    - name: Az 9.0.1 Migration Guide
+      href: migrate-az-9.0.1.md
+    - name: Az.EventHub Migration Guide
+      href: migrate-az-9.0.1-eventhub.md
+    - name: Az.ServiceBus Migration Guide
+      href: migrate-az-9.0.1-servicebus.md
+    - name: Az 8.0.0 Migration Guide
+      href: migrate-az-8.0.0.md
+    - name: Az 7.0.0 Migration Guide
+      href: migrate-az-7.0.0.md
+    - name: Az 6.0.0 Migration Guide
+      href: migrate-az-6.0.0.md
+    - name: Az 5.0.0 Migration Guide
+      href: migrate-az-5.0.0.md
+    - name: Az 4.1.0 Migration Guide
+      href: migrate-az-4.1.0.md
+    - name: Az 3.0.0 Migration Guide
+      href: migrate-az-3.0.0.md
+    - name: Az 2.0.0 Migration Guide
+      href: migrate-az-2.0.0.md
+  - name: Migrate from AzureRM
+    items:
+    - name: Introducing the Az PowerShell module
+      href: new-azureps-module-az.md
+      displayName: intro, introduction, az
+    - name: Changes between AzureRM and Az
+      href: migrate-az-1.0.0.md
+      displayName: breaking, cmdlet, module, names
+    - name: Migration steps
+      href: migrate-from-azurerm-to-az.md
+      displayName: migrate, azurerm, az
+    - name: Automatically migrate PowerShell scripts
+      href: quickstart-migrate-azurerm-to-az-automatically.md
+      displayName: automatically migrate, azurerm, az
+- name: Samples
+  items:
+  - name: Azure App Service
+    href: /azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json
+  - name: SQL Databases
+    href: /azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json
+  - name: Cosmos DB
+    href: /azure/cosmos-db/sql/powershell-samples?toc=/powershell/azure/toc.json
+    displayName: database, nosql, mongodb, couchdb
+  - name: Samples repo
+    href: https://github.com/Azure/azure-docs-powershell-samples
+- name: Survey Guidance
+  href: command-line-tools-survey-guidance.md
+- name: Troubleshooting
+  href: troubleshooting.md
+- name: Frequently Asked Questions
+  href: faq.yml
