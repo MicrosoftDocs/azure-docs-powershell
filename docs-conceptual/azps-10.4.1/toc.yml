@@ -159,6 +159,10 @@
     href: https://github.com/Azure/azure-docs-powershell-samples
 - name: Survey Guidance
   href: command-line-tools-survey-guidance.md
+- name: Docs Contributor's Guide
+  items:
+  - name: Azure PowerShell docs style guide
+    href: azps-docs-style-guide.md
 - name: Troubleshooting
   href: troubleshooting.md
 - name: Frequently Asked Questions
