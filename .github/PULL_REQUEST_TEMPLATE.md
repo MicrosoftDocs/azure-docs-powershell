@@ -32,4 +32,4 @@
 -->
 
 [contrib]: https://learn.microsoft.com/powershell/scripting/community/contributing/overview
-[style]: https://learn.microsoft.com/powershell/scripting/community/contributing/powershell-style-guide
+[style]: https://learn.microsoft.com/powershell/azure/azps-docs-style-guide
