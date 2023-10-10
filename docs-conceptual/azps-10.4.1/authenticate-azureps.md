@@ -26,6 +26,7 @@ use the [Select-AzContext](/powershell/module/az.accounts/select-azcontext) cmdl
 > [!IMPORTANT]
 > Your credentials are shared among multiple PowerShell sessions as long as you remain signed in.
 > For more information, see [Azure PowerShell context objects](context-persistence.md).
+> DefaultAzureCredential is not supported
 
 ## Sign in interactively
 
