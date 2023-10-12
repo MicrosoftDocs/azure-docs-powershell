@@ -64,51 +64,6 @@
       "redirect_document_id": false,
       "redirect_url": "/powershell/azure/overview",
       "source_path": "docs-conceptual/azuresmps-4.0.0/index.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/overview",
-      "source_path": "docs-conceptual/azurestackps-1.5.0/index.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/overview",
-      "source_path": "docs-conceptual/azurestackps-1.6.0/index.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/overview",
-      "source_path": "docs-conceptual/azurestackps-1.7.2/index.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/overview",
-      "source_path": "docs-conceptual/azurestackps-1.8.0/index.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/overview",
-      "source_path": "docs-conceptual/azurestackps-1.8.1/index.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/overview",
-      "source_path": "docs-conceptual/azurestackps-1.8.2/index.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/overview",
-      "source_path": "docs-conceptual/azurestackps-2.0.0/index.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/overview",
-      "source_path": "docs-conceptual/azurestackps-2.0.1/index.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/overview",
-      "source_path": "docs-conceptual/azurestackps-2.0.2/index.md"
     }
   ]
 }
