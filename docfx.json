@@ -29,30 +29,6 @@
             { "files": ["**/*.md", "**/*.yml"], "src": "docs-conceptual/azuredmps-0.9.0", "version": "azuredmps-0.9.0-preview", "dest": "azure/deploymentmanager" },
             { "files": ["**/*.yml"], "src": "azuredmps-0.9.0", "version": "azuredmps-0.9.0-preview", "exclude": ["docs-conceptual/**"], "dest": "module" },
 
-            { "files": ["toc.yml"], "src": "azurestackps-2.2.0", "version": "azurestackps-2.2.0", "dest": "module/azure-stack" },
-            { "files": ["**/*.yml"], "src": "azurestackps-2.2.0", "version": "azurestackps-2.2.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.2.0", "version": "azurestackps-2.2.0", "dest": "azure/azure-stack" },
-
-            { "files": ["toc.yml"], "src": "azurestackps-2.0.2", "version": "azurestackps-2.0.2", "dest": "module/azure-stack" },
-            { "files": ["**/*.yml"], "src": "azurestackps-2.0.2", "version": "azurestackps-2.0.2", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.0.2", "version": "azurestackps-2.0.2", "dest": "azure/azure-stack" },
-
-            { "files": ["toc.yml"], "src": "azurestackps-2.0.1", "version": "azurestackps-2.0.1", "dest": "module/azure-stack" },
-            { "files": ["**/*.yml"], "src": "azurestackps-2.0.1", "version": "azurestackps-2.0.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.0.1", "version": "azurestackps-2.0.1", "dest": "azure/azure-stack" },
-
-            { "files": ["toc.yml"], "src": "azurestackps-2.0.0", "version": "azurestackps-2.0.0", "dest": "module/azure-stack" },
-            { "files": ["**/*.yml"], "src": "azurestackps-2.0.0", "version": "azurestackps-2.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-2.0.0", "version": "azurestackps-2.0.0", "dest": "azure/azure-stack" },
-
-            { "files": ["toc.yml"], "src": "azurestackps-1.8.3", "version": "azurestackps-1.8.3", "dest": "module/azure-stack" },
-            { "files": ["**/*.yml"], "src": "azurestackps-1.8.3", "version": "azurestackps-1.8.3", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-1.8.3", "version": "azurestackps-1.8.3", "dest": "azure/azure-stack" },
-
-            { "files": ["toc.yml"], "src": "azurestackps-1.8.2", "version": "azurestackps-1.8.2", "dest": "module/azure-stack" },
-            { "files": ["**/*.yml"], "src": "azurestackps-1.8.2", "version": "azurestackps-1.8.2", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurestackps-1.8.2", "version": "azurestackps-1.8.2", "dest": "azure/azure-stack" },
-
             {
                 "files": [
                     "AADRM/**/*.md",
@@ -101,12 +77,6 @@
             "azurermps-6.13.0": { "dest": "azurermps-6.13.0" },
             "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" },
             "azuredmps-0.9.0-preview": { "dest": "azuredmps-0.9.0-preview" },
-            "azurestackps-2.2.0": { "dest": "azurestackps-2.2.0" },
-            "azurestackps-2.0.2": { "dest": "azurestackps-2.0.2" },
-            "azurestackps-2.0.1": { "dest": "azurestackps-2.0.1" },
-            "azurestackps-2.0.0": { "dest": "azurestackps-2.0.0" },
-            "azurestackps-1.8.2": { "dest": "azurestackps-1.8.2" },
-            "azurestackps-1.8.3": { "dest": "azurestackps-1.8.3" },
             "azureipps": { "dest": "azureipps" },
             "azureservicefabricps": { "dest": "azureservicefabricps" },
             "azureadps-1.0": { "dest": "azureadps-1.0" },
@@ -120,13 +90,10 @@
                 "azuredmps-*/**/*.yml": "mirobb",
                 "azurermps-*/**/*.yml": "mirobb",
                 "azuresmps-*/**/*.yml": "mirobb",
-                "azurestackps-*/**/*.yml": "jgerend",
-                "azurestackps-*/**/*.md": "jgerend",
                 "docs-conceptual/azps-*/*.md": "mirobb",
                 "docs-conceptual/azuredmps-*/*.md": "mirobb",
                 "docs-conceptual/azurermps-*/*.md": "mirobb",
                 "docs-conceptual/azuresmps-*/*.md": "mirobb",
-                "docs-conceptual/azurestackps-*/*.md": "jgerend",
                 "docs-conceptual/includes/*.md": "mirobb"
             },
             "author": {
@@ -134,29 +101,22 @@
                 "azuredmps-*/**/*.yml": "mikefrobbins",
                 "azurermps-*/**/*.yml": "mikefrobbins",
                 "azuresmps-*/**/*.yml": "mikefrobbins",
-                "azurestackps-*/**/*.yml": "mattbriggs",
-                "azurestackps-*/**/*.md": "mattbriggs",
                 "docs-conceptual/azps-*/*.md": "mikefrobbins",
                 "docs-conceptual/azuredmps-*/*.md": "mikefrobbins",
                 "docs-conceptual/azurermps-*/*.md": "mikefrobbins",
                 "docs-conceptual/azuresmps-*/*.md": "mikefrobbins",
-                "docs-conceptual/azurestackps-*/*.md": "mattbriggs",
                 "docs-conceptual/includes/*.md": "mikefrobbins"
             },
             "ms.manager": {
                 "azps-*/**/*.yml": "jasongroce",
                 "azurermps-*/**/*.yml": "jasongroce",
                 "azuresmps-*/**/*.yml": "jasongroce",
-                "azurestackps-*/**/*.yml": "femila",
                 "docs-conceptual/azps-*/*.md": "jasongroce",
                 "docs-conceptual/azurermps-*/*.md": "jasongroce",
                 "docs-conceptual/azuresmps-*/*.md": "jasongroce",
-                "docs-conceptual/azurestackps-*/*.md": "femila",
                 "docs-conceptual/includes/*.md": "jasongroce"
             },
             "ms.service": {
-                "docs-conceptual/azurestackps-*/**/*.md": "azure-stack",
-                "azurestackps-*/**/*.yml": "azure-stack",
                 "azuresmps-*/**/*.yml": "azure-asm",
                 "docs-conceptual/azuresmps-*/**/*.md": "azure-asm",
                 "docs-conceptual/azurermps-*/**/*.md": "azure-powershell",
@@ -308,10 +268,6 @@
                 ],
                 "az*-*/Az*.TrafficManager/*.md": [
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/a21829dd-8109-415c-84d3-07c42e4d33fd",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
-                "docs-conceptual/azurestackps-*/**/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
                 ],
                 "az*-*/ApiManagement.ServiceManagement/*.md": [
@@ -482,10 +438,6 @@
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/faa132eb-b7da-40a8-bd96-ea68e77ec6fd",
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
                 ],
-                "azurestackps-*/**/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/116b49c4-6899-494b-8288-83091b123a54",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
                 "az*-*/Az*.DataFactories/*.md": [
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/655f39c4-21c5-49d3-8367-a1f9c1a0b930",
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
@@ -528,7 +480,6 @@
                 "azuredmps-*/**/*.yml": "reference",
                 "azurermps-*/**/*.yml": "reference",
                 "azuresmps-*/**/*.yml": "reference",
-                "azurestackps-*/**/*.yml": "reference",
                 "docs-conceptual/**/*.md": "conceptual"
             },
             "ms.date": {
@@ -538,13 +489,7 @@
                 "azps-0.10.0/**/*.yml": "4/14/2020",
                 "azurermps-6.13.0/**/*.yml": "03/23/2021",
                 "azuresmps-4.0.0/**/*.yml": "11/28/2020",
-                "azuredmps-*/**/*.yml": "09/28/2018",
-                "azurestackps-2.2.0/**/*.yml": "09/23/2021",
-                "azurestackps-2.0.2/**/*.yml": "09/23/2021",
-                "azurestackps-2.0.1/**/*.yml": "09/23/2021",
-                "azurestackps-2.0.0/**/*.yml": "09/23/2021",
-                "azurestackps-1.8.3/**/*.yml": "09/23/2021",
-                "azurestackps-1.8.2/**/*.yml": "09/23/2021"
+                "azuredmps-*/**/*.yml": "09/28/2018"
             },
             "enable_powershell_try_it": {
                 "azurermps-*/**/*.yml": false,
@@ -575,13 +520,7 @@
                 "azps-0.10.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
                 "azuresmps-4.0.0/**/*": "None",
-                "azuredmps-0.9.0/**/*": "None",
-                "azurestackps-2.2.0/**/*": "None",
-                "azurestackps-2.0.2/**/*": "None",
-                "azurestackps-2.0.1/**/*": "None",
-                "azurestackps-2.0.0/**/*": "None",
-                "azurestackps-1.8.3/**/*": "None",
-                "azurestackps-1.8.2/**/*": "None"
+                "azuredmps-0.9.0/**/*": "None"
             },
             "feedback_github_repo": {
                 "docs-conceptual/**/**.md": "microsoftdocs/azure-docs-powershell",
