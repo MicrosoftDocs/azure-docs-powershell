@@ -1,7 +1,7 @@
 ---
 description: This article provides the rules of style for writing Azure PowerShell documentation.
 ms.custom: devx-track-azurepowershell
-ms.date: 09/28/2023
+
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
