@@ -3,7 +3,7 @@ title: Breaking changes for the AzureRM PowerShell module 6.0.0
 description: This migration guide contains a list of breaking changes made to the AzureRM PowerShell module in the version 6 release.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/05/2021
+
 ms.custom: devx-track-azurepowershell
 ---
 # Breaking changes for the AzureRM PowerShell module 6.0.0

@@ -3,7 +3,7 @@ title: Sign into Azure with the AzureRM PowerShell module
 description: How to sign into Azure with the AzureRM PowerShell module as a user, service principal, or with managed identities for Azure resources.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/05/2021
+
 ms.custom:
 ---
 # Sign into Azure with the AzureRM PowerShell module
