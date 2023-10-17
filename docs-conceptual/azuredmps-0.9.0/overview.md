@@ -4,7 +4,7 @@ description: An overview of Azure Deployment Manager PowerShell with links to in
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload:
-ms.date: 09/26/2018
+
 ms.service: deployment-manager
 ---
 # Overview of Azure Deployment Manager

@@ -1,7 +1,7 @@
 ---
 description: Using Az Predictor for intelligent context-aware command completion in Azure PowerShell.
 ms.custom: devx-track-azurepowershell
-ms.date: 09/26/2023
+
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

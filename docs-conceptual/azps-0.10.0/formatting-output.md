@@ -3,7 +3,7 @@ title: Format Azure PowerShell cmdlet output
 description: How to format cmdlet output for Azure PowerShell.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/22/2023
+
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---

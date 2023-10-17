@@ -4,7 +4,7 @@ description: This is a history of changes made to Azure Deployment Manager in th
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload:
-ms.date: 09/26/2018
+
 ms.service: deployment-manager
 ---
 

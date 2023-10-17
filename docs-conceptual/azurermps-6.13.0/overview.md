@@ -3,7 +3,7 @@ title: Overview of the AzureRM PowerShell module | Microsoft Docs
 description: An overview of Azure PowerShell with links to installation and configuration.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/05/2021
+
 ms.custom: devx-track-azurepowershell
 ---
 # Overview of the AzureRM PowerShell module
