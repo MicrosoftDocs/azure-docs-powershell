@@ -257,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentityType
-Type of Azure Active Directory Managed Identity.
+Type of Microsoft Entra managed identity.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.EventHub.Support.CaptureIdentityType
