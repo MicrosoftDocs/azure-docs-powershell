@@ -58,7 +58,7 @@ Creates a new application group `myAppGroup` on namespace `myNamespace` with 2 t
 ## PARAMETERS
 
 ### -ClientAppGroupIdentifier
-The Unique identifier for application group.Supports SAS(SASKeyName=KeyName) or Azure Active Directory (AADAppID=Guid)
+The Unique identifier for application group.Supports SAS(SASKeyName=KeyName) or Microsoft Entra ID (AADAppID=Guid)
 
 ```yaml
 Type: System.String
