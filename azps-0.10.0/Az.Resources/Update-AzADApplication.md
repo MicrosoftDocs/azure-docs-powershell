@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl
 # Update-AzADApplication
 
 ## SYNOPSIS
-Updates an existing azure active directory application.
+Updates an existing Microsoft Entra application.
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ Update-AzADApplication -InputObject <PSADApplication> [-DisplayName <String>] [-
 ```
 
 ## DESCRIPTION
-Updates an existing azure active directory application.
+Updates an existing Microsoft Entra application.
 To update the credentials associated with this application, please use the New-AzADAppCredential cmdlet.
 
 ## EXAMPLES

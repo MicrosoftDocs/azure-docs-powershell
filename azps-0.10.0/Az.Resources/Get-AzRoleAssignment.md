@@ -129,9 +129,9 @@ Use the Get-AzRoleAssignment command to list all role assignments that are effec
 Without any parameters, this command returns all the role assignments made under the subscription.
 This list can  be filtered using filtering parameters for principal, role and scope.
 The subject of the assignment must be specified.
-To specify a user, use SignInName or Azure AD ObjectId parameters.
-To specify a security group, use Azure AD ObjectId parameter.
-And to specify an Azure AD application, use ServicePrincipalName or ObjectId parameters.
+To specify a user, use SignInName or Microsoft Entra ObjectId parameters.
+To specify a security group, use Microsoft Entra ObjectId parameter.
+And to specify a Microsoft Entra application, use ServicePrincipalName or ObjectId parameters.
 The role that is being assigned must be specified using the RoleDefinitionName parameter.
 The scope at which access is being granted may be specified.
 It defaults to the selected subscription.
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-The Azure AD ObjectId of the User, Group or Service Principal.
+The Microsoft Entra ObjectId of the User, Group or Service Principal.
 Filters all assignments that are made to the specified principal.
 
 ```yaml
@@ -389,7 +389,7 @@ Accept wildcard characters: False
 
 ### -ServicePrincipalName
 The ServicePrincipalName of the service principal.
-Filters all assignments that are made to the specified Azure AD application.
+Filters all assignments that are made to the specified Microsoft Entra application.
 
 ```yaml
 Type: System.String
@@ -442,4 +442,3 @@ Keywords: azure, Az, arm, resource, management, manager, resource, group, templa
 [Remove-AzRoleAssignment](./Remove-AzRoleAssignment.md)
 
 [Get-AzRoleDefinition](./Get-AzRoleDefinition.md)
-

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl
 # Update-AzADServicePrincipal
 
 ## SYNOPSIS
-Updates an existing azure active directory service principal.
+Updates an existing Microsoft Entra service principal.
 
 ## SYNTAX
 
@@ -44,7 +44,7 @@ Update-AzADServicePrincipal -InputObject <PSADServicePrincipal> [-DisplayName <S
 ```
 
 ## DESCRIPTION
-Updates an existing azure active directory service principal.
+Updates an existing Microsoft Entra service principal.
 To update the credentials associated with this service principal, please use New-AzADSpCredential cmdlet.
 To update the properties associated with the underlying application, please use Update-AzADApplication cmdlet.
 
