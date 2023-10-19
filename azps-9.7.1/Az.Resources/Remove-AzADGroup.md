@@ -210,14 +210,14 @@ To create the parameters described below, construct a hash table containing the 
     - `[ResourceDisplayName <String>]`: The display name of the resource app's service principal to which the assignment is made.
     - `[ResourceId <String>]`: The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only).
   - `[Classification <String>]`: Describes a classification for the group (such as low, medium or high business impact). Valid values for this property are defined by creating a ClassificationList setting value, based on the template definition.Returned by default. Supports $filter (eq, ne, NOT, ge, le, startsWith).
-  - `[CreatedOnBehalfOf <IMicrosoftGraphDirectoryObject>]`: Represents an Azure Active Directory object. The directoryObject type is the base type for many other directory entity types.
+  - `[CreatedOnBehalfOf <IMicrosoftGraphDirectoryObject>]`: Represents a Microsoft Entra object. The directoryObject type is the base type for many other directory entity types.
     - `[DeletedDateTime <DateTime?>]`: Date and time when this object was deleted. Always null when the object hasn't been deleted.
     - `[DisplayName <String>]`: The name displayed in directory
   - `[Description <String>]`: An optional description for the group. Returned by default. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.
   - `[GroupType <String[]>]`: Specifies the group type and its membership.  If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static.  Returned by default. Supports $filter (eq, NOT).
   - `[HasMembersWithLicenseError <Boolean?>]`: Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true).  Supports $filter (eq).
   - `[IsArchived <Boolean?>]`: 
-  - `[IsAssignableToRole <Boolean?>]`: Indicates whether this group can be assigned to an Azure Active Directory role.This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must also be assigned the Directory.AccessAsUser.All permission to set this property. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, NOT).
+  - `[IsAssignableToRole <Boolean?>]`: Indicates whether this group can be assigned to a Microsoft Entra role.This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must also be assigned the Directory.AccessAsUser.All permission to set this property. For more, see Using a group to manage Microsoft Entra role assignmentsReturned by default. Supports $filter (eq, ne, NOT).
   - `[MailEnabled <Boolean?>]`: Specifies whether the group is mail-enabled. Returned by default. Supports $filter (eq, ne, NOT).
   - `[MailNickname <String>]`: The mail alias for the group, unique in the organization. This property must be specified when a group is created. These characters cannot be used in the mailNickName: @()/[]';:.<>,SPACE. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
   - `[MembershipRule <String>]`: The rule that determines members for this group if the group is a dynamic group (groupTypes contains DynamicMembership). For more information about the syntax of the membership rule, see Membership Rules syntax. Returned by default. Supports $filter (eq, ne, NOT, ge, le, startsWith).
@@ -225,11 +225,11 @@ To create the parameters described below, construct a hash table containing the 
   - `[PermissionGrant <IMicrosoftGraphResourceSpecificPermissionGrant[]>]`: The permissions that have been granted for a group to a specific application. Supports $expand.
     - `[DeletedDateTime <DateTime?>]`: Date and time when this object was deleted. Always null when the object hasn't been deleted.
     - `[DisplayName <String>]`: The name displayed in directory
-    - `[ClientAppId <String>]`: ID of the service principal of the Azure AD app that has been granted access. Read-only.
-    - `[ClientId <String>]`: ID of the Azure AD app that has been granted access. Read-only.
+    - `[ClientAppId <String>]`: ID of the service principal of the Microsoft Entra app that has been granted access. Read-only.
+    - `[ClientId <String>]`: ID of the Microsoft Entra app that has been granted access. Read-only.
     - `[Permission <String>]`: The name of the resource-specific permission. Read-only.
     - `[PermissionType <String>]`: The type of permission. Possible values are: Application, Delegated. Read-only.
-    - `[ResourceAppId <String>]`: ID of the Azure AD app that is hosting the resource. Read-only.
+    - `[ResourceAppId <String>]`: ID of the Microsoft Entra app that is hosting the resource. Read-only.
   - `[PreferredDataLocation <String>]`: The preferred data location for the group. For more information, see  OneDrive Online Multi-Geo. Returned by default.
   - `[PreferredLanguage <String>]`: The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
   - `[SecurityEnabled <Boolean?>]`: Specifies whether the group is a security group. Returned by default. Supports $filter (eq, ne, NOT, in).
