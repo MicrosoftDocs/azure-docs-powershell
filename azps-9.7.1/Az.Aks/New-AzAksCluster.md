@@ -113,7 +113,7 @@ New-AzAksCluster -ResourceGroupName myResourceGroup -Name myAKSCluster -AutoScal
 ```
 
 ### Create an AKS cluster with AadProfile.
-When you create an AKS cluster, you can configure the AAD profile.
+When you create an AKS cluster, you can configure the Microsoft Entra profile.
 
 ```powershell
 $AKSAdminGroup=New-AzADGroup -DisplayName myAKSAdminGroup -MailNickname myAKSAdminGroup
@@ -130,7 +130,7 @@ New-AzAksCluster -ResourceGroupName myResourceGroup -Name myAKSCluster -AadProfi
 ## PARAMETERS
 
 ### -AadProfile
-The Azure Active Directory configuration.
+The Microsoft Entra configuration.
 
 ```yaml
 Type: Microsoft.Azure.Management.ContainerService.Models.ManagedClusterAADProfile
@@ -1271,7 +1271,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalIdAndSecret
-The client id and client secret associated with the AAD application / service principal.
+The client id and client secret associated with the Microsoft Entra application / service principal.
 
 ```yaml
 Type: System.Management.Automation.PSCredential

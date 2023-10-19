@@ -561,7 +561,7 @@ Accept wildcard characters: False
 
 ### -IdentityType
 The identity type.
-Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.
+Set this to 'SystemAssigned' in order to automatically create and assign a Microsoft Entra principal for the resource.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Support.IdentityType
@@ -1497,4 +1497,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ALIASES
 
 ## RELATED LINKS
-
