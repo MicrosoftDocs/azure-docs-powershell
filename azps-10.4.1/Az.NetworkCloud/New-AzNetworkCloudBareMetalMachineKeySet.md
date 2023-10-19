@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureGroupId
-The object ID of Azure Active Directory group that all users in the list must be in for access to be granted.
+The object ID of Microsoft Entra group that all users in the list must be in for access to be granted.
 Users that are not in the group will not have access.
 
 ```yaml
@@ -368,4 +368,3 @@ To create the parameters described below, construct a hash table containing the 
   - `[Description <String>]`: The free-form description for this user.
 
 ## RELATED LINKS
-
