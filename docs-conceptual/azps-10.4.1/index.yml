@@ -67,7 +67,7 @@ landingContent:
     linkLists:
       - linkListType: whats-new
         links:
-          - text: Azure AD to Microsoft Graph Migration changes
+          - text: Microsoft Entra ID to Microsoft Graph Migration changes
             url: azps-msgraph-migration-changes.md
       - linkListType: how-to-guide
         links:
