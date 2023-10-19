@@ -12,7 +12,7 @@ ms.custom: devx-track-azurepowershell
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 If you plan to manage your app or service with Azure PowerShell, you should run it under an Azure
-Active Directory (AAD) service principal, rather than your own credentials. This article steps you
+Microsoft Entra service principal, rather than your own credentials. This article steps you
 through creating a security principal with Azure PowerShell.
 
 > [!NOTE]
@@ -30,7 +30,7 @@ security if you only grant it the minimum permissions level needed to perform it
 
 ## Verify your own permission level
 
-First, you must have sufficient permissions in both your Azure Active Directory and your Azure
+First, you must have sufficient permissions in both your Microsoft Entra ID and your Azure
 subscription. You must be able to create an app in the Active Directory and assign a role to the
 service principal.
 
