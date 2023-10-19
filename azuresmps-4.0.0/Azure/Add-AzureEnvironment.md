@@ -79,7 +79,7 @@ This command creates the ContosoEnv Azure environment.
 ## PARAMETERS
 
 ### -ActiveDirectoryEndpoint
-Specifies the endpoint for Azure Active Directory authentication in the new environment.
+Specifies the endpoint for Microsoft Entra authentication in the new environment.
 
 ```yaml
 Type: String
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveDirectoryServiceEndpointResourceId
-Specifies the resource ID of a management API whose access is managed by Azure Active Directory.
+Specifies the resource ID of a management API whose access is managed by Microsoft Entra ID.
 
 ```yaml
 Type: String
@@ -347,5 +347,3 @@ You can pipe input to this cmdlet by property name, but not by value.
 [Remove-AzureEnvironment](./Remove-AzureEnvironment.md)
 
 [Set-AzureEnvironment](./Set-AzureEnvironment.md)
-
-

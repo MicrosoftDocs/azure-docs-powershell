@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Remove-AzureRmADApplication
 
 ## SYNOPSIS
-Deletes the azure active directory application.
+Deletes the Microsoft Entra application.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
@@ -42,7 +42,7 @@ Remove-AzureRmADApplication -InputObject <PSADApplication> [-PassThru] [-Force]
 ```
 
 ## DESCRIPTION
-Deletes the azure active directory application.
+Deletes the Microsoft Entra application.
 
 ## EXAMPLES
 
@@ -235,4 +235,3 @@ Keywords: azure, azurerm, arm, resource, management, manager, resource, group, t
 
 
 [Remove-AzureRmADAppCredential](./Remove-AzureRmADAppCredential.md)
-

@@ -99,7 +99,7 @@ In this example we are creating a new Azure environment with sample endpoints us
 ## PARAMETERS
 
 ### -ActiveDirectoryEndpoint
-Specifies the base authority for Azure Active Directory authentication.
+Specifies the base authority for Microsoft Entra authentication.
 
 ```yaml
 Type: System.String
@@ -558,4 +558,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzureRMEnvironment](./Remove-AzureRMEnvironment.md)
 
 [Set-AzureRMEnvironment](./Set-AzureRMEnvironment.md)
-

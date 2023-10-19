@@ -23,7 +23,7 @@ Get-AzureRmVMADDomainExtension [-ResourceGroupName] <String> [-VMName] <String> 
 ```
 
 ## DESCRIPTION
-The **Get-AzureRmVMADDomainExtension** cmdlet gets information about the specified Azure Active Directory (AD) domain extension.
+The **Get-AzureRmVMADDomainExtension** cmdlet gets information about the specified Microsoft Entra domain extension.
 
 ## EXAMPLES
 
@@ -122,5 +122,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-AzureRmVMADDomainExtension](./Set-AzureRmVMADDomainExtension.md)
-
-
