@@ -44,8 +44,6 @@ Important note: When connecting to Azure Arc resources, this cmdlet requires the
 
 ## EXAMPLES
 
-<a name='example-1-connect-to-azure-resource-using-aad-issued-certificates'></a>
-
 ### Example 1: Connect to Azure Resource using Microsoft Entra ID issued certificates
 ```powershell
 Enter-AzVM -ResourceGroupName myRg -Name myMachine
@@ -70,8 +68,6 @@ Enter-AzVM -ResourceGroupName myRg -Name myMachine -LocalUser azureuser -Private
 Enter-AzVM -ResourceGroupName myRg -Name myMachine -LocalUser azureuser
 ```
 
-<a name='example-5-connect-to-the-public-ip-of-an-azure-virtual-machine-using-aad-issued-certificates'></a>
-
 ### Example 5: Connect to the Public Ip of an Azure Virtual Machine using Microsoft Entra ID issued certificates
 ```powershell
 Enter-AzVM -Ip 1.2.3.4
@@ -83,8 +79,6 @@ Enter-AzVM -ResourceGroupName myRg -Name myMachine -ResourceType Microsoft.Hybri
 ```
 
 This parameter is useful when there is more than one supported resource with the same name in the Resource Group.
-
-<a name='example-7-connect-to-azure-resource-using-aad-certificate-issued-certificates-and-custom-key-files'></a>
 
 ### Example 7: Connect to Azure Resource using Microsoft Entra certificate issued certificates and custom key files
 ```powershell

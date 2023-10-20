@@ -46,8 +46,6 @@ Important note: When connecting to Azure Arc resources, this cmdlet requires the
 
 ## EXAMPLES
 
-<a name='example-1-export-a-ssh-configuration-file-for-connecting-to-a-resource-using-aad-issued-certificates-for-authentication'></a>
-
 ### Example 1: Export a SSH configuration file for connecting to a resource using Microsoft Entra ID issued certificates for authentication.
 ```powershell
 Export-AzSshConfig -ResourceGroupName myRg -Name myMachine -ConfigFilePath ./sshconfig.config
@@ -55,8 +53,6 @@ Export-AzSshConfig -ResourceGroupName myRg -Name myMachine -ConfigFilePath ./ssh
 
 When a -LocalUser is not supplied, the cmdlet will attempt to create a certificate to login using Microsoft Entra ID. This is currently only supported for resources running Linux OS.
 When using Microsoft Entra ID to login to resource, the Host name in the configuration entry will be "{resource group name}-{resource name}", or "{ip address}" for Azure VMs.
-
-<a name='example-2-export-a-ssh-configuration-file-for-connecting-to-the-public-ip-of-an-azure-virtual-machine-using-aad-issued-certificates'></a>
 
 ### Example 2: Export a SSH configuration file for connecting to the Public Ip of an Azure Virtual Machine using Microsoft Entra ID issued certificates.
 ```powershell
