@@ -42,13 +42,13 @@ PS C:\>Get-AzureRmApiManagementIdentityProvider -Context $apimContext
 
 Get all the identity provider Configuration on the service.
 
-### Get the AAD Type Identity Provider
+### Get the Microsoft Entra ID Type Identity Provider
 ```
 PS C:\>$apimContext = New-AzureRmApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>Get-AzureRmApiManagementIdentityProvider -Context $apimContext -Type Aad
 ```
 
-Gets the Identity Provider Configuration of Azure Active Directory.
+Gets the Identity Provider Configuration of Microsoft Entra ID.
 
 ## PARAMETERS
 
