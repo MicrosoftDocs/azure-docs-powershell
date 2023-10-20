@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzSqlServerActiveDirectoryAdministrator
 
 ## SYNOPSIS
-Removes an Azure AD administrator for SQL Server.
+Removes a Microsoft Entra administrator for SQL Server.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Remove-AzSqlServerActiveDirectoryAdministrator [-Force] [-ServerName] <String> [
 ```
 
 ## DESCRIPTION
-The **Remove-AzSqlServerActiveDirectoryAdministrator** cmdlet removes an Azure Active Directory (Azure AD) administrator for AzureSQL Server in the current subscription.
+The **Remove-AzSqlServerActiveDirectoryAdministrator** cmdlet removes a Microsoft Entra administrator for AzureSQL Server in the current subscription.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ ResourceGroupName ServerName DisplayName ObjectId
 ResourceGroup01   Server01   DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
 ```
 
-This command removes the Azure AD administrator for the server named Server01 associated with the resource group ResourceGroup01.
+This command removes the Microsoft Entra administrator for the server named Server01 associated with the resource group ResourceGroup01.
 
 ## PARAMETERS
 
@@ -155,5 +155,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzSqlServerActiveDirectoryAdministrator](./Set-AzSqlServerActiveDirectoryAdministrator.md)
 
 [SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)
-
-
