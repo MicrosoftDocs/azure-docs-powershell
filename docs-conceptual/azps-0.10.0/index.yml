@@ -92,7 +92,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Azure Active Directory for PowerShell
+          - text: Microsoft Entra ID for PowerShell
             url: /powershell/module/azuread/
           - text: Azure Service Fabric for PowerShell
             url: /powershell/module/servicefabric/

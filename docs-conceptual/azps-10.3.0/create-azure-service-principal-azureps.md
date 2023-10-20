@@ -47,7 +47,7 @@ creating a service principal, you choose the type of sign-in authentication it u
 > [!NOTE]
 > If your account doesn't have permission to create a service principal, `New-AzADServicePrincipal`
 > returns an error message containing "Insufficient privileges to complete the operation". Contact
-> your Azure Active Directory admin to create a service principal.
+> your Microsoft Entra admin to create a service principal.
 
 There are two types of authentication available for service principals: Password-based
 authentication, and certificate-based authentication.
@@ -159,7 +159,7 @@ Remove-AzRoleAssignment -ObjectId <service principal object ID> -RoleDefinitionN
 > [!NOTE]
 > If your account doesn't have permission to assign a role, you see an error message that your
 > account "doesn't have authorization to perform action
-> 'Microsoft.Authorization/roleAssignments/write'". Contact your Azure Active Directory admin to
+> 'Microsoft.Authorization/roleAssignments/write'". Contact your Microsoft Entra admin to
 > manage roles.
 
 Adding a role _doesn't_ restrict previously assigned permissions. When restricting a service
@@ -236,7 +236,7 @@ This error can also occur when you've previously created a service principal for
 Directory application. If you remove the service principal, the application is still available. This
 application prevents you from creating another service principal with the same name.
 
-You can use the following example to verify that an Azure Active Directory application with the same
+You can use the following example to verify that a Microsoft Entra application with the same
 name doesn't exist:
 
 ```azurepowershell-interactive
