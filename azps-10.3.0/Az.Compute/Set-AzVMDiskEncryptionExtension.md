@@ -112,8 +112,6 @@ $params | Set-AzVMDiskEncryptionExtension
 
 This example sends parameters using pipelined input to enable encryption on a VM, without specifying AD credentials.
 
-<a name='example-3-enable-encryption-using-azure-ad-client-id-and-client-secret'></a>
-
 ### Example 3: Enable encryption using Microsoft Entra Client ID and Client Secret
 ```powershell
 $RGName = "MyResourceGroup"
@@ -184,8 +182,6 @@ Set-AzVMDiskEncryptionExtension -ResourceGroupName $RGName -VMName $VMName -AadC
 ```
 
 This example uses Microsoft Entra client ID and client certification thumbprints to enable encryption on a VM.
-
-<a name='example-5-enable-encryption-using-azure-ad-client-id-client-secret-and-wrap-disk-encryption-key-by-using-key-encryption-key'></a>
 
 ### Example 5: Enable encryption using Microsoft Entra client ID, client secret, and wrap disk encryption key by using key encryption key
 ```powershell

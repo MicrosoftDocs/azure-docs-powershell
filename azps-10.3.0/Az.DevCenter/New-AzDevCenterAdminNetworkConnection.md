@@ -36,8 +36,6 @@ Creates or updates a Network Connections resource
 
 ## EXAMPLES
 
-<a name='example-1-create-an-azure-ad-joined-network-connection'></a>
-
 ### Example 1: Create a Microsoft Entra joined network connection
 ```powershell
 New-AzDevCenterAdminNetworkConnection -Name eastusNetwork -ResourceGroupName testRg -Location westus3 -DomainJoinType AzureADJoin -NetworkingResourceGroupName NetworkInterfaces -SubnetId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ExampleRG/providers/Microsoft.Network/virtualNetworks/ExampleVNet/subnets/default"
@@ -53,8 +51,6 @@ New-AzDevCenterAdminNetworkConnection -Name eastusNetwork -ResourceGroupName tes
 ```
 
 This command creates a hybid Microsoft Entra joined network connection named "eastusNetwork" in the resource group "testRg".
-
-<a name='example-3-create-an-azure-ad-joined-network-connection-using-inputobject'></a>
 
 ### Example 3: Create a Microsoft Entra joined network connection using InputObject
 ```powershell
