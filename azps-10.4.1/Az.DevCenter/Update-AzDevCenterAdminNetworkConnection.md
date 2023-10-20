@@ -34,16 +34,12 @@ Partially updates a Network Connection
 
 ## EXAMPLES
 
-<a name='example-1-update-an-azure-ad-joined-network-connection'></a>
-
 ### Example 1: Update a Microsoft Entra joined network connection
 ```powershell
 Update-AzDevCenterAdminNetworkConnection -Name eastusNetwork -ResourceGroupName testRg -SubnetId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ExampleRG/providers/Microsoft.Network/virtualNetworks/ExampleVNet/subnets/default" -DomainPassword $null
 ```
 
 This command updates a Microsoft Entra joined network connection named "eastusNetwork" in the resource group "testRg".
-
-<a name='example-2-update-a-hybid-azure-ad-joined-network-connection'></a>
 
 ### Example 2: Update a hybid Microsoft Entra joined network connection
 ```powershell
@@ -52,8 +48,6 @@ Update-AzDevCenterAdminNetworkConnection -Name eastusNetwork -ResourceGroupName 
 
 This command updates a hybid Microsoft Entra joined network connection named "eastusNetwork" in the resource group "testRg".
 
-<a name='example-3-update-an-azure-ad-joined-network-connection'></a>
-
 ### Example 3: Update a Microsoft Entra joined network connection
 ```powershell
 $networkConnectionInput = Get-AzDevCenterAdminNetworkConnection -ResourceGroupName testRg -Name eastusNetwork
@@ -61,8 +55,6 @@ Update-AzDevCenterAdminNetworkConnection -InputObject $networkConnectionInput -S
 ```
 
 This command updates a Microsoft Entra joined network connection named "eastusNetwork" in the resource group "testRg".
-
-<a name='example-4-update-a-hybid-azure-ad-joined-network-connection'></a>
 
 ### Example 4: Update a hybid Microsoft Entra joined network connection
 ```powershell
