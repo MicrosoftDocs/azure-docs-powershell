@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl
 # Get-AzADApplication
 
 ## SYNOPSIS
-Lists existing azure active directory applications.
+Lists existing Microsoft Entra applications.
 
 ## SYNTAX
 
@@ -52,7 +52,7 @@ Get-AzADApplication -IdentifierUri <String> [-DefaultProfile <IAzureContextConta
 ```
 
 ## DESCRIPTION
-Lists existing azure active directory applications.
+Lists existing Microsoft Entra applications.
 Application lookup can be done by ObjectId, ApplicationId, IdentifierUri or DisplayName.
 If no parameter is provided, it fetches all applications under the tenant.
 
@@ -254,4 +254,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 [New-AzADApplication](./New-AzADApplication.md)
-

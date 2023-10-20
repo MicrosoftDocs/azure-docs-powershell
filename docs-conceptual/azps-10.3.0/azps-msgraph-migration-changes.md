@@ -1,21 +1,21 @@
 ---
-description: This migration guide contains a list of Azure PowerShell changes for the Azure AD to Microsoft Graph migration in Az.Resources 5.1.0.
+description: This migration guide contains a list of Azure PowerShell changes for the Microsoft Entra ID to Microsoft Graph migration in Az.Resources 5.1.0.
 ms.custom: devx-track-azurepowershell
 
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-title: Azure AD to Microsoft Graph migration changes in Azure PowerShell
+title: Microsoft Entra ID to Microsoft Graph migration changes in Azure PowerShell
 ---
 
-# Azure AD to Microsoft Graph migration changes in Azure PowerShell
+# Microsoft Entra ID to Microsoft Graph migration changes in Azure PowerShell
 
 The `Az.Resources` PowerShell module version 5.1.0 of Azure PowerShell introduces changes to
 the identity-related cmdlets. The cmdlets that rely on Azure AD Graph are transitioning to Microsoft
 Graph. This change is occurring to ensure a smooth transition in light of the
 [announcement of the retirement of Azure AD Graph](https://azure.microsoft.com/updates/update-your-apps-to-use-microsoft-graph-before-30-june-2022/).
 For more information, see
-[Azure AD to Microsoft Graph migration for Azure command line tools](https://techcommunity.microsoft.com/t5/azure-tools/azure-ad-to-microsoft-graph-migration-for-azure-command-line/ba-p/2836666).
+[Microsoft Entra ID to Microsoft Graph migration for Azure command line tools](https://techcommunity.microsoft.com/t5/azure-tools/azure-ad-to-microsoft-graph-migration-for-azure-command-line/ba-p/2836666).
 
 The following example installs the latest version of the `Az.Resources` Azure PowerShell module.
 

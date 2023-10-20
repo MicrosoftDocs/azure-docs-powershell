@@ -31,12 +31,12 @@ PS C:\> Add-AzureRemoteAppUser -CollectionName "Contoso" -UserType MicrosoftAcco
 
 This command adds the Microsoft Account PattiFuller@contoso.com to the collection named Contoso.
 
-### Example 2: Add a user using an Azure Active Directory account
+### Example 2: Add a user using a Microsoft Entra account
 ```
 PS C:\> Add-AzureRemoteAppUser -CollectionName "Contoso" -UserType OrgId -UserUpn "PattiFuller@contoso.com"
 ```
 
-This command adds the Azure Active Directory account PattiFuller@contoso.com to the collection named Contoso.
+This command adds the Microsoft Entra account PattiFuller@contoso.com to the collection named Contoso.
 
 ## PARAMETERS
 
@@ -133,5 +133,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzureRemoteAppUser](./Get-AzureRemoteAppUser.md)
 
 [Remove-AzureRemoteAppUser](./Remove-AzureRemoteAppUser.md)
-
-

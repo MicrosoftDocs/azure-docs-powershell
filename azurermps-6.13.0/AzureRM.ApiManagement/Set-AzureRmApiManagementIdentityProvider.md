@@ -39,7 +39,7 @@ The cmdlet updates the Client Secret of the Facebook Identity Provider;
 ## PARAMETERS
 
 ### -AllowedTenants
-List of allowed Azure Active Directory Tenants.
+List of allowed Microsoft Entra tenants.
 
 ```yaml
 Type: System.String[]

@@ -49,7 +49,7 @@ This command changes the values of the **PublishSettingsFileUrl** and **StorageE
 ## PARAMETERS
 
 ### -ActiveDirectoryEndpoint
-Changes the endpoint for Azure Active Directory authentication to the specified value.
+Changes the endpoint for Microsoft Entra authentication to the specified value.
 
 ```yaml
 Type: String
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveDirectoryServiceEndpointResourceId
-Specifies the resource ID of a management API whose access is managed by Azure Active Directory.
+Specifies the resource ID of a management API whose access is managed by Microsoft Entra ID.
 
 ```yaml
 Type: String
@@ -319,5 +319,3 @@ You can pipe input to this cmdlet by property name, but not by value.
 [Get-AzureEnvironment](./Get-AzureEnvironment.md)
 
 [Remove-AzureEnvironment](./Remove-AzureEnvironment.md)
-
-

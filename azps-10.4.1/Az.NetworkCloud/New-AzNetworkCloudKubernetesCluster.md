@@ -82,7 +82,7 @@ This command creates a Kubernetes cluster.
 ## PARAMETERS
 
 ### -AadConfigurationAdminGroupObjectId
-The list of Azure Active Directory group object IDs that will have an administrative role on the Kubernetes cluster.
+The list of Microsoft Entra group object IDs that will have an administrative role on the Kubernetes cluster.
 
 ```yaml
 Type: System.String[]
@@ -740,4 +740,3 @@ To create the parameters described below, construct a hash table containing the 
   - `KeyData <String>`: The SSH public key data.
 
 ## RELATED LINKS
-

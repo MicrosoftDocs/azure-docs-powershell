@@ -63,7 +63,7 @@ This takes as input the ClientId and ClientSecret of the Facebook app.
 ## PARAMETERS
 
 ### -AllowedTenants
-List of allowed Azure Active Directory Tenants
+List of allowed Microsoft Entra tenants
 
 ```yaml
 Type: System.String[]
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Authority
-OpenID Connect discovery endpoint hostname for AAD or AAD B2C. This parameter is optional.
+OpenID Connect discovery endpoint hostname for Microsoft Entra ID or Azure AD B2C. This parameter is optional.
 
 ```yaml
 Type: System.String
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordResetPolicyName
-Password Reset Policy Name. Only applies to AAD B2C Identity Provider. This parameter is optional.
+Password Reset Policy Name. Only applies to Azure AD B2C Identity Provider. This parameter is optional.
 
 ```yaml
 Type: System.String
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileEditingPolicyName
-Profile Editing Policy Name. Only applies to AAD B2C Identity Provider. This parameter is optional.
+Profile Editing Policy Name. Only applies to Azure AD B2C Identity Provider. This parameter is optional.
 
 ```yaml
 Type: System.String
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -SigninPolicyName
-Signin Policy Name. Only applies to AAD B2C Identity Provider. This parameter is optional.
+Signin Policy Name. Only applies to Azure AD B2C Identity Provider. This parameter is optional.
 
 ```yaml
 Type: System.String
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -SigninTenant
-Signin Tenant to override in AAD B2C instead of the `common` Tenant
+Signin Tenant to override in Azure AD B2C instead of the `common` Tenant
 
 ```yaml
 Type: System.String
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignupPolicyName
-Signup Policy Name. Only applies to AAD B2C Identity Provider. This parameter is optional.
+Signup Policy Name. Only applies to Azure AD B2C Identity Provider. This parameter is optional.
 
 ```yaml
 Type: System.String

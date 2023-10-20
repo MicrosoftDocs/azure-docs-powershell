@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignIdentity
-Generate and assign an Azure Active Directory Identity for this policy assignment. The identity will be used when executing deployments for 'deployIfNotExists' policies. Location is required when assigning an identity.
+Generate and assign a Microsoft Entra identity for this policy assignment. The identity will be used when executing deployments for 'deployIfNotExists' policies. Location is required when assigning an identity.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -311,5 +311,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzPolicyAssignment](./New-AzPolicyAssignment.md)
 
 [Remove-AzPolicyAssignment](./Remove-AzPolicyAssignment.md)
-
-

@@ -23,7 +23,7 @@ Captures a resource group as a template and saves it to a file.
 Retrieves a list of credentials associated with an application.
 
 ### [Get-AzADApplication](Get-AzADApplication.md)
-Lists existing azure active directory applications.
+Lists existing Microsoft Entra applications.
 
 ### [Get-AzADGroup](Get-AzADGroup.md)
 Filters active directory groups.
@@ -109,13 +109,13 @@ Moves a resource to a different resource group or subscription.
 Adds a credential to an existing application.
 
 ### [New-AzADApplication](New-AzADApplication.md)
-Creates a new azure active directory application.
+Creates a new Microsoft Entra application.
 
 ### [New-AzADGroup](New-AzADGroup.md)
 Creates a new active directory group.
 
 ### [New-AzADServicePrincipal](New-AzADServicePrincipal.md)
-Creates a new azure active directory service principal.
+Creates a new Microsoft Entra service principal.
 
 ### [New-AzADSpCredential](New-AzADSpCredential.md)
 Adds a credential to an existing service principal.
@@ -179,7 +179,7 @@ Registers a resource provider.
 Removes a credential from an application.
 
 ### [Remove-AzADApplication](Remove-AzADApplication.md)
-Deletes the azure active directory application.
+Deletes the Microsoft Entra application.
 
 ### [Remove-AzADGroup](Remove-AzADGroup.md)
 Deletes an active directory group.
@@ -188,7 +188,7 @@ Deletes an active directory group.
 Removes a user from an AD group.
 
 ### [Remove-AzADServicePrincipal](Remove-AzADServicePrincipal.md)
-Deletes the azure active directory service principal.
+Deletes the Microsoft Entra service principal.
 
 ### [Remove-AzADSpCredential](Remove-AzADSpCredential.md)
 Removes a credential from a service principal.
@@ -293,14 +293,13 @@ Validates a resource group deployment.
 Unregisters a resource provider.
 
 ### [Update-AzADApplication](Update-AzADApplication.md)
-Updates an existing azure active directory application.
+Updates an existing Microsoft Entra application.
 
 ### [Update-AzADServicePrincipal](Update-AzADServicePrincipal.md)
-Updates an existing azure active directory service principal.
+Updates an existing Microsoft Entra service principal.
 
 ### [Update-AzADUser](Update-AzADUser.md)
 Updates an existing active directory user.
 
 ### [Update-AzManagementGroup](Update-AzManagementGroup.md)
 Updates a Management Group
-

@@ -337,7 +337,7 @@ Accept wildcard characters: False
 
 ### -GroupMembershipClaim
 Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects.
-To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Microsoft Entra roles), All (this gets all security groups, distribution groups, and Microsoft Entra directory roles that the signed-in user is a member of).
 
 ```yaml
 Type: System.String
@@ -432,9 +432,9 @@ Accept wildcard characters: False
 ### -IsFallbackPublicClient
 Specifies the fallback application type as public client, such as an installed application running on a mobile device.
 The default value is false which means the fallback application type is confidential client such as a web app.
-There are certain scenarios where Azure AD cannot determine the client application type.
+There are certain scenarios where Microsoft Entra ID cannot determine the client application type.
 For example, the ROPC flow where the application is configured without specifying a redirect URI.
-In those cases Azure AD interprets the application type based on the value of this property.
+In those cases Microsoft Entra ID interprets the application type based on the value of this property.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -674,7 +674,7 @@ Accept wildcard characters: False
 
 ### -TokenEncryptionKeyId
 Specifies the keyId of a public key from the keyCredentials collection.
-When configured, Azure AD encrypts all the tokens it emits by using the key this property points to.
+When configured, Microsoft Entra ID encrypts all the tokens it emits by using the key this property points to.
 The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
 
 ```yaml
@@ -797,7 +797,7 @@ To create the parameters described below, construct a hash table containing the 
 `API <IMicrosoftGraphApiApplication>`: apiApplication
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[AcceptMappedClaim <Boolean?>]`: When true, allows an application to use claims mapping without specifying a custom signing key.
-  - `[KnownClientApplication <String[]>]`: Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
+  - `[KnownClientApplication <String[]>]`: Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Microsoft Entra ID knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
   - `[Oauth2PermissionScope <IMicrosoftGraphPermissionScope[]>]`: The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
     - `[AdminConsentDescription <String>]`: A description of the delegated permissions, intended to be read by an administrator granting the permission on behalf of all users. This text appears in tenant-wide admin consent experiences.
     - `[AdminConsentDisplayName <String>]`: The permission's title, intended to be read by an administrator granting the permission on behalf of all users.

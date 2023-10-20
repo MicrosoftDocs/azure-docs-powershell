@@ -36,7 +36,7 @@ It also gets an access token that allows Windows PowerShell to access your Azure
 When the command completes, you can manage your Azure account in Windows PowerShell.
 
 There are two different ways to make your Azure account available to Windows PowerShell.
-You can use the **Add-AzureAccount** cmdlet, which uses Azure Active Directory (Azure AD) authentication access tokens, or **Import-AzurePublishSettingsFile**, which uses a management certificate.
+You can use the **Add-AzureAccount** cmdlet, which uses Microsoft Entra authentication access tokens, or **Import-AzurePublishSettingsFile**, which uses a management certificate.
 For guidance on which method to use, see [How to: Connect to your subscription](https://azure.microsoft.com/documentation/articles/install-configure-powershell) (https://azure.microsoft.com/documentation/articles/install-configure-powershell/#Connect).
 
 When you run **Add-AzureAccount**, it displays an interactive window that prompts you to sign into your Azure account.
@@ -177,7 +177,7 @@ You cannot pipe input to this cmdlet
 This cmdlet does not return any output.
 
 ## NOTES
-* **Add-AzureAccount** (and the Azure AD authentication method) takes precedence over **Import-AzurePublishSettings** (and the management certificate method). If you use **Add-AzureAccount** even once on your account, the Azure AD authentication method is used and the management certificate is ignored. To remove the Azure AD token and restore the management certificate method, use the **Remove-AzureAccount** cmdlet. For more information, type: **Get-Help Remove-AzureAccount**.
+* **Add-AzureAccount** (and the Microsoft Entra authentication method) takes precedence over **Import-AzurePublishSettings** (and the management certificate method). If you use **Add-AzureAccount** even once on your account, the Microsoft Entra authentication method is used and the management certificate is ignored. To remove the Microsoft Entra token and restore the management certificate method, use the **Remove-AzureAccount** cmdlet. For more information, type: **Get-Help Remove-AzureAccount**.
 * The error, "Your credentials have expired. Please use Add-AzureAccount to log in again." indicates that your access token is expired and Windows PowerShell cannot access your Azure account. To restore access to your account, run **Add-AzureAccount** again.
 * The Azure PowerShell account and subscription cmdlets get their data from the  subscription data file, not from the live Azure account. If you change your account or subscriptions outside of Windows PowerShell, such as by using the Azure Management Portal, run **Add-AzureAccount** again to refresh the subscription data file.
 
@@ -192,5 +192,3 @@ This cmdlet does not return any output.
 [Get-AzureAccount](./Get-AzureAccount.md)
 
 [Remove-AzureAccount](./Remove-AzureAccount.md)
-
-

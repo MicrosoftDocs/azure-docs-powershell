@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl
 # Remove-AzADApplication
 
 ## SYNOPSIS
-Deletes the azure active directory application.
+Deletes the Microsoft Entra application.
 
 ## SYNTAX
 
@@ -40,7 +40,7 @@ Remove-AzADApplication -InputObject <PSADApplication> [-PassThru] [-Force]
 ```
 
 ## DESCRIPTION
-Deletes the azure active directory application.
+Deletes the Microsoft Entra application.
 
 ## EXAMPLES
 
@@ -233,4 +233,3 @@ Keywords: azure, Az, arm, resource, management, manager, resource, group, templa
 
 
 [Remove-AzADAppCredential](./Remove-AzADAppCredential.md)
-

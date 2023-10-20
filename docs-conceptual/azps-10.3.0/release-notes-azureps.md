@@ -1417,7 +1417,7 @@ Added a new API 'CheckTrafficManagerNameAvailabilityV2'.
 ## 9.0.1 - October 2022
 #### Az.Accounts
 * Upgraded Azure.Core to 1.25.0 and Azure.Identity to 1.6.1
-* Upgraded Microsoft.Identity.Client to 4.46.2 and Microsoft.Identity.Client.Extensions.Msal to 2.23.0
+* Upgraded Microsoft.Identity.Client to 4.46.2 and Microsoft.Identity.Client.Extensions.MSAL to 2.23.0
 * Upgraded Microsoft.ApplicationInsights to 2.13.1
 * [Breaking Change] Changed target framework of AuthenticationAssemblyLoadContext to netcoreapp3.1.
 * [Breaking Change] Removed built-in environment of Azure Germany
@@ -1603,7 +1603,7 @@ Added a new API 'CheckTrafficManagerNameAvailabilityV2'.
 * Changed endpoint used in SQL Server and SQL Instance from AD Graph to MS Graph
 
 #### Az.StackHCI
-* Made GraphAccessToken parameter obsolete in Register-AzStackHCI, Unregister-AzStackHCI and Set-AzStackHCI cmdlets. This is because Az.StackHCI module does not depend on Azure AD anymore.
+* Made GraphAccessToken parameter obsolete in Register-AzStackHCI, Unregister-AzStackHCI and Set-AzStackHCI cmdlets. This is because Az.StackHCI module does not depend on Microsoft Entra anymore.
 * Include API version for all Microsoft.AzStackHCI related AZ-Resource calls
 
 #### Az.Storage
@@ -2364,7 +2364,7 @@ Added warning message for upcoming breaking change.
     - 'Get-AzStorageFile'
 
 #### Az.Synapse
-* Added support for Synapse Azure Active Directory (Azure AD) only authentication
+* Added support for Synapse Microsoft Entra-only authentication
     - Added 'Get-AzSynapseActiveDirectoryOnlyAuthentication' cmdlet
     - Added 'Enable-AzSynapseActiveDirectoryOnlyAuthentication' cmdlet
     - Added 'Disable-AzSynapseActiveDirectoryOnlyAuthentication' cmdlet
@@ -2383,7 +2383,7 @@ Added warning message for upcoming breaking change.
 
 ## 7.4.0 - April 2022
 #### Az.Accounts
-* Added 'SshCredentialFactory' to support get ssh credential of vm from msal.
+* Added 'SshCredentialFactory' to support get ssh credential of vm from MSAL.
 * Fixed the bug of cmdlet fails when -DefaultProfile is set to service principal login context. [#16617]
 * Fixed the issue that authorization does not work in Dogfood environment
 
@@ -2562,7 +2562,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
 #### Az.Accounts
 * Fixed the issue that authorization does not work in customized environment [#17157]
 * Enabled Continue Access Evaluation for MSGraph
-* Improved error message when login is blocked by AAD
+* Improved error message when login is blocked by Microsoft Entra ID
 * Improved error message when silent reauthentication failed
 * Loaded System.Private.ServiceModel and System.ServiceModel.Primitives on Windows PowerShell [#17087]
 
@@ -2638,7 +2638,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
     -  'Set-AzStorageAccount'
 
 #### Az.StorageSync
-* Migrated Azure AD features in Az.StorageSync to MSGraph APIs. The cmdlets will call MSGraph API according to input parameters: New-AzStorageSyncCloudEndpoint
+* Migrated Microsoft Entra features in Az.StorageSync to MSGraph APIs. The cmdlets will call MSGraph API according to input parameters: New-AzStorageSyncCloudEndpoint
 * Changed default parameter set of Invoke-AzStorageSyncChangeDetection to use full share detection
 
 #### Az.Synapse
@@ -2721,7 +2721,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
 
 #### Az.Sql
 * Deprecation of Get-AzSqlDatabaseTransparentDataEncryptionActivity cmdlet
-* Fixed cmdlets for Azure Active Directory Admin 'AzureSqlServerActiveDirectoryAdministratorAdapter' and 'AzureSqlInstanceActiveDirectoryAdministratorAdapter' migrate from 'AzureEnvironment.Endpoint.AzureEnvironment.Endpoint.Graph' to 'AzureEnvironment.ExtendedEndpoint.MicrosoftGraphUrl'
+* Fixed cmdlets for Microsoft Entra Admin 'AzureSqlServerActiveDirectoryAdministratorAdapter' and 'AzureSqlInstanceActiveDirectoryAdministratorAdapter' migrate from 'AzureEnvironment.Endpoint.AzureEnvironment.Endpoint.Graph' to 'AzureEnvironment.ExtendedEndpoint.MicrosoftGraphUrl'
 
 #### Az.StackHCI
 * Adding support cmdlet for Remote Support
@@ -2836,7 +2836,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
 #### Az.Storage
 * Fixed the failure of sync copy blob with long destination blob name [#16628]
     -  'Copy-AzStorageBlob'
-* Supported AAD oauth storage context in storage table cmdlets.
+* Supported Microsoft Entra ID OAuth storage context in storage table cmdlets.
     - `Get-AzStorageCORSRule`
     - `Get-AzStorageServiceLoggingProperty`
     - `Get-AzStorageServiceMetricsProperty`
@@ -2857,7 +2857,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
 
 #### Az.Synapse
 * General availability of Az.Synapse
-* Migrated Azure AD features in Az.Synapse to MSGraph APIs. The cmdlets below called MSGraph API according to input parameters:
+* Migrated Microsoft Entra features in Az.Synapse to MSGraph APIs. The cmdlets below called MSGraph API according to input parameters:
     - 'New-AzSynapseRoleAssignment' cmdlet
     - 'Get-AzSynapseRoleAssignment' cmdlet
     - 'Remove-AzSynapseRoleAssignment' cmdlet
@@ -2973,7 +2973,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
 
 #### Az.KeyVault
 * [Breaking Change] Renamed properties of 'PSKeyVaultPermission' type to follow the pattern of Azure RBAC.
-* Migrated AAD Graph API to MSGraph API.
+* Migrated Azure AD Graph API to MSGraph API.
 * Added a message to 'Set-AzKeyVaultAccessPolicy' stating that for the Permissions parameters, using the 'All' option will not include the 'Purge' permission.
 
 #### Az.ManagedServices
@@ -3029,7 +3029,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
 #### Az.Resources
 * Added 'Get-AzProviderPreviewFeature', 'Register-AzProviderPreviewFeature' and 'Unregister-AzProviderPreviewFeature' cmdlets.
 * Fixed a bug when running Get-AzPolicyAlias with empty value of NamespaceMatch parameter [#16370]
-* [Breaking change] Migrated from AAD Graph to Microsoft Graph
+* [Breaking change] Migrated from Azure AD Graph to Microsoft Graph
 * [Breaking change] Changed the returned 'Id' in PSDenyAssignment from GUID string to fully qualified ID
 * Allowed parameter 'Id' in 'Get-AzDenyAssignment' to accept fully qualified ID
 * Added new cmdlet 'Publish-AzBicepModule' for publishing Bicep modules
@@ -3040,7 +3040,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
 
 #### Az.Sql
 * Fixed FirewallRuleName wildcard filtering in 'Get-AzSqlServerFirewallRule' [#16199]
-* Moved SQL Server and SQL Instance AAD from ActiveDirectoryClient to MicrosoftGraphClient
+* Moved SQL Server and SQL Instance Microsoft Entra ID from ActiveDirectoryClient to MicrosoftGraphClient
 
 #### Az.StackHCI
 * Promoted Az.StackHCI to GA
@@ -3078,7 +3078,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
 
 ## 6.6.0 - November 2021
 #### Az.Accounts
-* Added new version of AAD service client using Microsoft Graph API
+* Added new version of Microsoft Entra service client using Microsoft Graph API
 
 #### Az.Aks
 * Added support for new parameters 'NetworkPolicy', 'PodCidr', 'ServiceCidr', 'DnsServiceIP', 'DockerBridgeCidr', 'NodePoolLabel', 'AksCustomHeader' in 'New-AzAksCluster'. [#13795]
@@ -3156,7 +3156,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
 
 #### Az.Resources
 * Fixed a bug about the exitcode of Bicep [#16055]
-* Added breaking change warnings for AAD cmdlets
+* Added breaking change warnings for Microsoft Entra cmdlets
 * Added property 'UIFormDefinition' to Template Spec Versions,  'Export-AzTemplateSpec' will now include a Template Spec Version's UIFormDefinition (if any) as part of the export.
 * Added error catching for role assignment creation fail while creating a Service Principal
 * Performance improvement for Get-AzPolicyAlias when -NamespaceMatch matches a single RP namespace
@@ -3770,7 +3770,7 @@ This release migrates Microsoft.Azure.Graph SDK to MicrosoftGraph SDK.
 #### Az.Sql
 * Added option to support short version of maintenance configuration id for Managed Instance in 'New-AzSqlInstance' and 'Set-AzSqlInstance' cmdlets
 * Added HighAvailabilityReplicaCount to 'New-AzSqlDatabaseSecondary'
-* Added External Administrator and AAD Only Properties to AzSqlServer and AzSqlInstance
+* Added External Administrator and Microsoft Entra-only Properties to AzSqlServer and AzSqlInstance
     - Added option to specify '-ExternalAdminName', '-ExternalAdminSid', '-EnableActiveDirectoryOnlyAuthentication' in 'New-AzSqlInstance' and 'Set-AzSqlInstance' cmdlets
     - Added option to expand external administrators information using '-ExpandActiveDirectoryAdministrator' in 'Get-AzSqlServer' and 'Get-AzSqlInstance' cmdlets
 * Fixed 'Set-AzSqlDatabase' to no longer default ReadScale to Disabled when not specified
@@ -3991,7 +3991,7 @@ Az 6.0.0 (Az.Accounts 2.3.0) is only supported on Windows PowerShell 5.1, PowerS
 * Added cmdlets to support new AFD Premium / Standard SKUs
 
 #### Az.Compute
-* Updated the 'Set-AzVMDiskEncryptionExtension' cmdlet to support ADE extension migration from two pass (version with AAD input parameters) to single pass (version without AAD input parameters).
+* Updated the 'Set-AzVMDiskEncryptionExtension' cmdlet to support ADE extension migration from two pass (version with Microsoft Entra ID input parameters) to single pass (version without Microsoft Entra ID input parameters).
     - Added a switch parameter '-Migrate' to trigger migration workflow.
     - Added a switch parameter '-MigrationRecovery' to trigger recovery workflow for VMs experiencing failures after migration from two pass ADE.
 
@@ -5426,12 +5426,12 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
     - Service Bus Topic As Destination
     - Azure Function As Destination
     - WebHook Batching
-    - Secure webhook (AAD support)
+    - Secure webhook (Microsoft Entra ID support)
     - IpFiltering
 * Updated cmdlets:
     - 'New-AzEventGridSubscription'/'Update-AzEventGridSubscription':
         - Add new optional parameters to support webhook batching.
-        - Add new optional parameters to support secured webhook using AAD.
+        - Add new optional parameters to support secured webhook using Microsoft Entra ID.
         - Add new enum for EndpointType parameter to support azure function and service bus topic as new destinations.
         - Add new optional parameter for delivery schema.
     - 'New-AzEventGridTopic'/'Update-AzEventGridTopic' and 'New-AzEventGridDomain'/'Update-AzEventGridDomain':
@@ -5626,7 +5626,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Fixed help message for '-Name' parameter of deployment create and What-If cmdlets
 
 #### Az.Sql
-* Added support for service principal for Set SQL Server Azure Active Directory Admin cmdlet
+* Added support for service principal for Set SQL Server Microsoft Entra Admin cmdlet
 * Fixed sync issue in Data Classification cmdlets.
 * Supported searching user by mail on 'Set-AzSqlServerActiveDirectoryAdministrator' [#12192]
 
@@ -5697,7 +5697,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 #### Az.Sql
 * Added UsePrivateLinkConnection to 'New-AzSqlSyncGroup', 'Update-AzSqlSyncGroup', 'New-AzSqlSyncMember' and 'Update-AzSqlSyncMember'
 * Added SyncMemberAzureDatabaseResourceId to 'New-AzSqlSyncMember' and 'Update-AzSqlSyncMember'
-* Added Guest user lookup support to Set SQL Server Azure Active Directory Admin cmdlet
+* Added Guest user lookup support to Set SQL Server Microsoft Entra Admin cmdlet
 
 #### Az.Storage
 * Updated assembly version of data plane cmdlets
@@ -6147,7 +6147,7 @@ Supported -EnableNoPublicIP when creating a Databricks workspace
 * Added support for retrieving and configuring Custom Domain on the DeveloperPortal Endpoint [#11007]
 * 'Export-AzApiManagementApi' Added support for downloading Api Definition in Json format [#9987]
 * 'Import-AzApiManagementApi' Added support for importing OpenApi 3.0 definition from Json document
-* 'New-AzApiManagementIdentityProvider' and 'Set-AzApiManagementIdentityProvider' Added support for configuring 'Signin Tenant' for AAD B2C Provider [#9784]
+* 'New-AzApiManagementIdentityProvider' and 'Set-AzApiManagementIdentityProvider' Added support for configuring 'Signin Tenant' for Azure AD B2C Provider [#9784]
 
 #### Az.DataLakeStore
 * Added reference to System.Buffers explicitly in csproj and psd1.
@@ -6873,7 +6873,7 @@ to enable create Azure-SSIS IR with static public IP addresses.
   -AutomationRunbookReceiver
   -AzureAppPushReceiver
 * Use common alert schema enabled for the receivers. This is not applicable for SMS, Azure App push , ITSM and Voice recievers
-* Webhooks now supports Azure active directory authentication .
+* Webhooks now supports Microsoft Entra authentication .
 
 #### Az.Network
 * Add new cmdlet Get-AzAvailableServiceAlias which can be called to get the aliases that can be used for Service Endpoint Policies.
@@ -7331,7 +7331,7 @@ to enable create Azure-SSIS IR with static public IP addresses.
     -  Enable-AzStorageStaticWebsite
 * Update help of Get-AzStorageBlobContent by add an example
 * Show more error information when cmdlet failed with StorageException
-* Support create or update Storage account with Azure Files AAD DS Authentication
+* Support create or update Storage account with Azure Files Microsoft Entra Domain Services Authentication
     -  New-AzStorageAccount
     -  Set-AzStorageAccount
 * Support list or close file handles of a file share, file directory or a file
@@ -7436,10 +7436,10 @@ to enable create Azure-SSIS IR with static public IP addresses.
         - Added parameter -VirtualNetwork which accepts a Virtual Network object
         - Added methods AddPublicIpAddress and RemovePublicIpAddress on firewall object - these accept a Public IP Address object as input
         - Deprecated parameters -PublicIpName and -VirtualNetworkName
-* Updated below commands for feature: Set VpnClient AAD authentication options to Virtual network gateway resource.
-    - Updated New-AzVirtualNetworkGateway: Added optional parameters AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.
-    - Updated Set-AzVirtualNetworkGateway: Added optional parameter AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.
-    - Updated Set-AzVirtualNetworkGateway: Added optional switch parameter RemoveAadAuthentication to remove VpnClient AAD authentication options from Gateway.
+* Updated below commands for feature: Set VpnClient Microsoft Entra authentication options to Virtual network gateway resource.
+    - Updated New-AzVirtualNetworkGateway: Added optional parameters AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient Microsoft Entra authentication options on Gateway.
+    - Updated Set-AzVirtualNetworkGateway: Added optional parameter AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient Microsoft Entra authentication options on Gateway.
+    - Updated Set-AzVirtualNetworkGateway: Added optional switch parameter RemoveAadAuthentication to remove VpnClient Microsoft Entra authentication options from Gateway.
 
 #### Az.OperationalInsights
 * Enable **pergb2018** pricing tier in 'New-AzOperationalInsightsWorkspace' command

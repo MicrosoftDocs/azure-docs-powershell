@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Update-AzureRmADApplication
 
 ## SYNOPSIS
-Updates an existing azure active directory application.
+Updates an existing Microsoft Entra application.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
@@ -38,7 +38,7 @@ Update-AzureRmADApplication -InputObject <PSADApplication> [-DisplayName <String
 ```
 
 ## DESCRIPTION
-Updates an existing azure active directory application.
+Updates an existing Microsoft Entra application.
 To update the credentials associated with this application, please use the New-AzureRmADAppCredential cmdlet.
 
 ## EXAMPLES

@@ -333,7 +333,7 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
-Uniform Resource Identifier of the Azure resources. The target resource needs to support Azure AD authentication and the access token is derived according to resource id. If resource id is not set, its value is derived according to built-in service suffixes in current Azure Environment.
+Uniform Resource Identifier of the Azure resources. The target resource needs to support Microsoft Entra authentication and the access token is derived according to resource id. If resource id is not set, its value is derived according to built-in service suffixes in current Azure Environment.
 
 ```yaml
 Type: System.Uri
