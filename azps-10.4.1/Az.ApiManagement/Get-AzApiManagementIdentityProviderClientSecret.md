@@ -24,8 +24,6 @@ Get the identity provider client secret.
 
 ## EXAMPLES
 
-<a name='example-1-get-the-client-secret-of-aad-type-identity-provider'></a>
-
 ### Example 1: Get the client secret of Microsoft Entra ID Type Identity Provider
 ```powershell
 $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
