@@ -31,8 +31,6 @@ PS C:\> Add-AzureRemoteAppUser -CollectionName "Contoso" -UserType MicrosoftAcco
 
 This command adds the Microsoft Account PattiFuller@contoso.com to the collection named Contoso.
 
-<a name='example-2-add-a-user-using-an-azure-active-directory-account'></a>
-
 ### Example 2: Add a user using a Microsoft Entra account
 ```
 PS C:\> Add-AzureRemoteAppUser -CollectionName "Contoso" -UserType OrgId -UserUpn "PattiFuller@contoso.com"
