@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl
 # New-AzADApplication
 
 ## SYNOPSIS
-Creates a new azure active directory application.
+Creates a new Microsoft Entra application.
 
 ## SYNTAX
 
@@ -51,19 +51,19 @@ New-AzADApplication -DisplayName <String> -IdentifierUris <String[]> [-HomePage 
 ```
 
 ## DESCRIPTION
-Creates a new azure active directory application.
+Creates a new Microsoft Entra application.
 
 ## EXAMPLES
 
-### Example 1 - Create new AAD application.
+### Example 1 - Create new Microsoft Entra application.
 
 ```
 PS C:\> New-AzADApplication -DisplayName "NewApplication" -HomePage "http://www.microsoft.com" -IdentifierUris "http://NewApplication"
 ```
 
-Creates a new azure active directory application without any credentials.
+Creates a new Microsoft Entra application without any credentials.
 
-### Example 2 - Create new AAD application with password.
+### Example 2 - Create new Microsoft Entra application with password.
 
 ```
 PS C:\> $SecureStringPassword = ConvertTo-SecureString -String "password" -AsPlainText -Force
@@ -71,7 +71,7 @@ PS C:\> New-AzADApplication -DisplayName "NewApplication" -HomePage "http://www.
 //NewApplication" -Password $SecureStringPassword
 ```
 
-Creates a new azure active directory application and associates password credentials with it.
+Creates a new Microsoft Entra application and associates password credentials with it.
 
 ## PARAMETERS
 
@@ -330,4 +330,3 @@ Keywords: azure, Az, arm, resource, management, manager, resource, group, templa
 [New-AzADAppCredential](./New-AzADAppCredential.md)
 
 [Remove-AzADAppCredential](./Remove-AzADAppCredential.md)
-

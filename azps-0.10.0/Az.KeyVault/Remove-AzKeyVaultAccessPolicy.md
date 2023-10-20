@@ -70,7 +70,7 @@ PS C:\>Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ServicePrincip
 ```
 
 This command removes all the permissions that an application has on the key vault named Contoso03Vault.
-This example identifies the application by using the service principal name registered in Azure Active Directory, `http://payroll.contoso.com`.
+This example identifies the application by using the service principal name registered in Microsoft Entra ID, `http://payroll.contoso.com`.
 
 ### Example 3: Remove permissions for an application by using its object ID
 ```
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Specifies the object ID of the user or service principal in Azure Active Directory for which to remove permissions.
+Specifies the object ID of the user or service principal in Microsoft Entra ID for which to remove permissions.
 
 ```yaml
 Type: String
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 
 ### -ServicePrincipalName
 Specifies the service principal name of the application whose permissions you want to remove.
-Specify the application ID, also known as client ID, registered for the application in Azure Active Directory.
+Specify the application ID, also known as client ID, registered for the application in Microsoft Entra ID.
 
 ```yaml
 Type: String
@@ -321,4 +321,3 @@ This cmdlet does not accept any input.
 ## RELATED LINKS
 
 [Set-AzKeyVaultAccessPolicy](./Set-AzKeyVaultAccessPolicy.md)
-
