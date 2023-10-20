@@ -55,8 +55,6 @@ Creates a new Microsoft Entra application.
 
 ## EXAMPLES
 
-<a name='example-1---create-new-aad-application'></a>
-
 ### Example 1 - Create new Microsoft Entra application.
 
 ```
@@ -64,8 +62,6 @@ PS C:\> New-AzADApplication -DisplayName "NewApplication" -HomePage "http://www.
 ```
 
 Creates a new Microsoft Entra application without any credentials.
-
-<a name='example-2---create-new-aad-application-with-password'></a>
 
 ### Example 2 - Create new Microsoft Entra application with password.
 

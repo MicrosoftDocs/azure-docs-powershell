@@ -46,8 +46,6 @@ It is advised that you save your work on the virtual machine before you run this
 
 ## EXAMPLES
 
-<a name='example-1-enable-encryption-using-azure-ad-client-id-and-client-secret'></a>
-
 ### Example 1: Enable encryption using Microsoft Entra Client ID and Client Secret
 ```
 $RGName = "MyResourceGroup"
@@ -62,8 +60,6 @@ Set-AzVMDiskEncryptionExtension -ResourceGroupName $RGName -VMName $VMName -AadC
 ```
 
 This example enables encryption using Microsoft Entra client ID, and client secret.
-
-<a name='example-2-enable-encryption-using-azure-ad-client-id-and-client-certification-thumbprint'></a>
 
 ### Example 2: Enable encryption using Microsoft Entra client ID and client certification thumbprint
 ```
@@ -117,8 +113,6 @@ Set-AzVMDiskEncryptionExtension -ResourceGroupName $RGName -VMName $VMName -AadC
 
 This example enables encryption using Microsoft Entra client ID and client certification thumbprints.
 
-<a name='example-3-enable-encryption-using-azure-ad-client-id-client-secret-and-wrap-disk-encryption-key-by-using-key-encryption-key'></a>
-
 ### Example 3: Enable encryption using Microsoft Entra client ID, client secret, and wrap disk encryption key by using key encryption key
 ```
 $RGName = "MyResourceGroup"
@@ -139,8 +133,6 @@ Set-AzVMDiskEncryptionExtension -ResourceGroupName $RGName -VMName $VMName -AadC
 ```
 
 This example enables encryption using Microsoft Entra client ID, client secret, and wrap disk encryption key by using the key encryption key.
-
-<a name='example-4-enable-encryption-using-azure-ad-client-id-client-cert-thumbprint-and-wrap-disk-encryptionkey-by-using-key-encryption-key'></a>
 
 ### Example 4: Enable encryption using Microsoft Entra client ID, client cert thumbprint, and wrap disk encryptionkey by using key encryption key
 ```

@@ -41,8 +41,6 @@ Get-AzApiManagementIdentityProvider -Context $apimContext
 
 Get all the identity provider Configuration on the service.
 
-<a name='example-2-get-the-aad-type-identity-provider'></a>
-
 ### Example 2: Get the Microsoft Entra ID Type Identity Provider
 ```powershell
 $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
@@ -66,8 +64,6 @@ ServiceName              : contoso
 ```
 
 Gets the Identity Provider Configuration of Microsoft Entra ID.
-
-<a name='example-3-get-the-aad-b2c-type-identity-provider'></a>
 
 ### Example 3: Get the Azure AD B2C Type Identity Provider
 ```powershell
