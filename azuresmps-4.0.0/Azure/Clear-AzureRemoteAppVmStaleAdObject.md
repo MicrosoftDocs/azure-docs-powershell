@@ -8,7 +8,7 @@ schema: 2.0.0
 # Clear-AzureRemoteAppVmStaleAdObject
 
 ## SYNOPSIS
-Removes objects in Azure Active Directory that are associated with Azure RemoteApp virtual machines that no longer exist.
+Removes objects in Microsoft Entra ID that are associated with Azure RemoteApp virtual machines that no longer exist.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
@@ -20,8 +20,8 @@ Clear-AzureRemoteAppVmStaleAdObject -CollectionName <String> [-Credential <PSCre
 ```
 
 ## DESCRIPTION
-The **Clear-AzureRemoteAppVmStaleAdObject** cmdlet removes objects in Azure Active Directory that are associated with Azure RemoteApp virtual machines that no longer exist.
-You must use credentials that have rights to remove Azure Active Directory objects.
+The **Clear-AzureRemoteAppVmStaleAdObject** cmdlet removes objects in Microsoft Entra ID that are associated with Azure RemoteApp virtual machines that no longer exist.
+You must use credentials that have rights to remove Microsoft Entra objects.
 If you specify the *Verbose* common parameter, this cmdlet displays the name of each object that it deletes.
 
 ## EXAMPLES
@@ -132,5 +132,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AzureRemoteAppVmStaleAdObject](./Get-AzureRemoteAppVmStaleAdObject.md)
-
-

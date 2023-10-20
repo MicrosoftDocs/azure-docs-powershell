@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Update-AzureRmADServicePrincipal
 
 ## SYNOPSIS
-Updates an existing azure active directory service principal.
+Updates an existing Microsoft Entra service principal.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
@@ -46,7 +46,7 @@ Update-AzureRmADServicePrincipal -InputObject <PSADServicePrincipal> [-DisplayNa
 ```
 
 ## DESCRIPTION
-Updates an existing azure active directory service principal. 
+Updates an existing Microsoft Entra service principal. 
 To update the credentials associated with this service principal, please use New-AzureRmADSpCredential cmdlet. 
 To update the properties associated with the underlying application, please use Update-AzureRmADApplication cmdlet.
 
