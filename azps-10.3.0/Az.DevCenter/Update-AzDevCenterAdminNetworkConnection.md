@@ -41,8 +41,6 @@ Update-AzDevCenterAdminNetworkConnection -Name eastusNetwork -ResourceGroupName 
 
 This command updates a Microsoft Entra joined network connection named "eastusNetwork" in the resource group "testRg".
 
-<a name='example-2-update-a-hybid-azure-ad-joined-network-connection'></a>
-
 ### Example 2: Update a hybid Microsoft Entra joined network connection
 ```powershell
 Update-AzDevCenterAdminNetworkConnection -Name eastusNetwork -ResourceGroupName testRg -DomainName mydomaincontroller.local -DomainUsername testuser@mydomaincontroller.local -SubnetId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ExampleRG/providers/Microsoft.Network/virtualNetworks/ExampleVNet/subnets/default"
@@ -57,8 +55,6 @@ Update-AzDevCenterAdminNetworkConnection -InputObject $networkConnectionInput -S
 ```
 
 This command updates a Microsoft Entra joined network connection named "eastusNetwork" in the resource group "testRg".
-
-<a name='example-4-update-a-hybid-azure-ad-joined-network-connection'></a>
 
 ### Example 4: Update a hybid Microsoft Entra joined network connection
 ```powershell

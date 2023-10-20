@@ -43,8 +43,6 @@ New-AzDevCenterAdminNetworkConnection -Name eastusNetwork -ResourceGroupName tes
 
 This command creates a Microsoft Entra joined network connection named "eastusNetwork" in the resource group "testRg".
 
-<a name='example-2-create-a-hybid-azure-ad-joined-network-connection'></a>
-
 ### Example 2: Create a hybid Microsoft Entra joined network connection
 ```powershell
 New-AzDevCenterAdminNetworkConnection -Name eastusNetwork -ResourceGroupName testRg -Location westus3 -DomainJoinType HybridAzureADJoin -DomainName mydomaincontroller.local -DomainPassword passw0rd123 -DomainUsername testuser@mydomaincontroller.local -NetworkingResourceGroupName NetworkInterfaces -SubnetId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ExampleRG/providers/Microsoft.Network/virtualNetworks/ExampleVNet/subnets/default"
@@ -59,8 +57,6 @@ New-AzDevCenterAdminNetworkConnection -InputObject $networkConnection -Location 
 ```
 
 This command creates a Microsoft Entra joined network connection named "eastusNetwork" in the resource group "testRg".
-
-<a name='example-4-create-a-hybid-azure-ad-joined-network-connection-using-inputobject'></a>
 
 ### Example 4: Create a hybid Microsoft Entra joined network connection using InputObject
 ```powershell
