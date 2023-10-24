@@ -1,14 +1,20 @@
 ---
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.custom: devx-track-azurepowershell
-
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
 title: Azure PowerShell release notes
 ---
 # Azure PowerShell release notes
+
+## 10.4.1 - September 2023
+
+#### Az.Resources 6.11.1
+* Reverted commits that caused regression in 'Get-AzRoleAssignment'.
+
 ## 10.4.0 - September 2023
+
 #### Az.Accounts 2.13.1
 * Added the module name in breaking change messages 
 * Upgraded Microsoft.ApplicationInsights version from 2.13.1 to 2.18.0 
