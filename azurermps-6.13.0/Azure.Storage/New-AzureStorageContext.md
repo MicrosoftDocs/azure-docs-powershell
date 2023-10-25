@@ -321,7 +321,7 @@ Accept wildcard characters: False
 
 ### -UseConnectedAccount
 Indicates that this cmdlet creates an Azure Storage context with OAuth Authentication.
-The cmdlet will use OAuth Authentication by default, when other anthentication not specified.
+The cmdlet will use OAuth Authentication by default, when other authentication is not specified.
 
 ```yaml
 Type: SwitchParameter
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 
 ### -UseConnectedAccount
 Indicates that this cmdlet creates an Azure Storage context with OAuth Authentication.
-The cmdlet will use OAuth Authentication by default, when other anthentication not specified.
+The cmdlet will use OAuth Authentication by default, when other authentication is not specified.
 
 ```yaml
 Type: SwitchParameter
