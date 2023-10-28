@@ -31,7 +31,7 @@ The **Enable-AzureStorageDeleteRetentionPolicy** cmdlet enables delete retention
 C:\PS>Enable-AzureStorageDeleteRetentionPolicy -RetentionDays 3
 ```
 
-This command enables delete retention policy for the Blob service, and set deleted blob retention days to 3.
+This command enables delete retention policy for the Blob service, and sets deleted blob retention days to 3.
 
 ## PARAMETERS
 
