@@ -529,7 +529,7 @@
                 "docs-conceptual/**/*": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide"
             },
             "open_source_feedback_issueUrl": {
-                "azps-10.4.1/**/*": "https://github.com/Azure/azure-powershell/issues/new?template=6-AZ-DOC-FEEDBACK-CONTROL.yml",
+                "azps-10.4.1/**/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml",
                 "docs-conceptual/**/*": "https://github.com/microsoftdocs/azure-docs-powershell/issues/new?template=03-customer-feedback.yml"
             },
             "open_source_feedback_issueTitle": {
