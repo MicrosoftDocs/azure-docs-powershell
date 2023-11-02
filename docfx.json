@@ -514,7 +514,9 @@
                 "docs-conceptual/azuredmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
-                "azps-10.4.1/**/*": "GitHub",
+                "azps-10.4.1/**/*": "OpenSource",
+                "docs-conceptual/**/**.md": "OpenSource",
+                "docs-conceptual/**/**.yml": "OpenSource",
                 "azps-10.3.0/**/*": "None",
                 "azps-9.7.1/**/*": "None",
                 "azps-0.10.0/**/*": "None",
@@ -522,10 +524,33 @@
                 "azuresmps-4.0.0/**/*": "None",
                 "azuredmps-0.9.0/**/*": "None"
             },
-            "feedback_github_repo": {
-                "docs-conceptual/**/**.md": "microsoftdocs/azure-docs-powershell",
-                "az*/**/**.md": "azure/azure-powershell",
-                "az*/**/**.yml": "azure/azure-powershell"
+            "open_source_feedback_contributorGuideUrl": {
+                "azps-10.4.1/**/*": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide",
+                "docs-conceptual/**/*": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide"
+            },
+            "open_source_feedback_issueUrl": {
+                "azps-10.4.1/**/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml",
+                "docs-conceptual/**/*": "https://github.com/microsoftdocs/azure-docs-powershell/issues/new?template=03-customer-feedback.yml"
+            },
+            "open_source_feedback_issueTitle": {
+                "azps-10.4.1/**/*": "",
+                "docs-conceptual/**/*": ""
+            },
+            "open_source_feedback_productName": {
+                "azps-10.4.1/**/*": "Azure PowerShell feedback",
+                "docs-conceptual/**/*": "Azure PowerShell feedback"
+            },
+            "open_source_feedback_productDescription": {
+                "azps-10.4.1/**/*": "Azure PowerShell is an open source project. Select a link to provide feedback:",
+                "docs-conceptual/**/*": "Azure PowerShell is an open source project. Select a link to provide feedback:"
+            },
+            "open_source_feedback_productLogoLightUrl": {
+                "azps-10.4.1/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
+                "docs-conceptual/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg"
+            },
+            "open_source_feedback_productLogoDarkUrl": {
+                "azps-10.4.1/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
+                "docs-conceptual/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg"
             }
         },
         "globalMetadata": {
