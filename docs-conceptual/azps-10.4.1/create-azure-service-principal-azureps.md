@@ -22,7 +22,7 @@ allowing them to log in with a user identity.
 This article shows you the steps for creating, getting information about, and resetting a service
 principal with Azure PowerShell.
 
-> [!WARNING]
+> [!CAUTION]
 > When you create a service principal using the
 > [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) command, the
 > output includes credentials that you must protect. As an alternative, consider using
@@ -193,7 +193,7 @@ Connect-AzAccount -ServicePrincipal -Tenant <TenantId> -CertificateThumbprint <T
 ```
 
 For instructions on importing a certificate into a credential store accessible by PowerShell, see
-[Sign in with Azure PowerShell](authenticate-azureps.md#sign-in-with-a-service-principal)
+[Certificate-based authentication](authenticate-noninteractive.md#certificate-based-authentication)
 
 ## Reset credentials
 
