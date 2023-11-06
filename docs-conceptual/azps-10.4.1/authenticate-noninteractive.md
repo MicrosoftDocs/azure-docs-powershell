@@ -134,13 +134,16 @@ There are two types of managed identities:
 Managed identities provide a secure way to communicate with other Azure services without developers
 needing to manage credentials. They also help in mitigating the risk of credential leaks.
 
+
 Here's how managed identities work in real-world scenarios:
+
 
 - Azure automatically manages the creation and deletion of the credentials used by the managed
   identity.
 - An Azure service enabled with a managed identity may securely access other services, such as Azure
   Key Vault, Azure SQL Database, Azure Blob Storage, etc., using Microsoft Entra tokens.
 - This identity is managed directly within Azure without needing additional provisioning.
+
 
 Managed identities simplify the security model by avoiding the need to store and manage credentials,
 and they play a crucial role in secure cloud operations by reducing the risk associated with
