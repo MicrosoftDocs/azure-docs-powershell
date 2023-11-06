@@ -40,7 +40,7 @@ Create a service principal to use with the examples in this section. For more in
 creating service principals, see
 [Create an Azure service principal with Azure PowerShell][create-service-principal].
 
-```azurepowershell-interactive
+```azurepowershell
 $sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName
 ```
 
@@ -52,8 +52,8 @@ To get the service principal's credentials as an object, use the `Get-Credential
 cmdlet prompts for a username and password. Use the service principal's `AppId` for the username and
 convert its `secret` to plain text for the password.
 
-```azurepowershell-interactive
-# Retrieve the plain text password for use with `Get-Credential` in the next command.
+```azurepowershell
+# Retrieve the plain text password for use with Get-Credential in the next command.
 $sp.PasswordCredentials.SecretText
 
 $pscredential = Get-Credential -UserName $sp.AppId
@@ -63,13 +63,13 @@ Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 For automation scenarios, you need to create credentials from a service principal's `AppId` and
 `SecretText`:
 
-```azurepowershell-interactive
+```azurepowershell
 $SecureStringPwd = $sp.PasswordCredentials.SecretText | ConvertTo-SecureString -AsPlainText -Force
 $pscredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $sp.AppId, $SecureStringPwd
 Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 ```
 
-Use good password storage practices when automating service principal connections.
+Use appropriate password storage practices when automating service principal connections.
 
 ### Certificate-based authentication
 
@@ -79,7 +79,7 @@ To learn how to create a service principal for Azure PowerShell, see
 Certificate-based authentication requires Azure PowerShell to retrieve information from a local
 certificate store based on a certificate thumbprint.
 
-```azurepowershell-interactive
+```azurepowershell
 Connect-AzAccount -ApplicationId $appId -Tenant $tenantId -CertificateThumbprint <thumbprint>
 ```
 
@@ -87,18 +87,18 @@ When using a service principal instead of a registered application, specify the 
 parameter and provide the service principal's AppId as the value for the **ApplicationId**
 parameter.
 
-```azurepowershell-interactive
+```azurepowershell
 Connect-AzAccount -ServicePrincipal -ApplicationId $servicePrincipalId -Tenant $tenantId -CertificateThumbprint <thumbprint>
 ```
 
 In Windows PowerShell 5.1, the certificate store can be managed and inspected with the
-[PKI][pki-module] module. For PowerShell 7.x and later, the process is more complicated. The
-following scripts show you how to import an existing certificate into the certificate store
+[PKI][pki-module] module. For PowerShell 7.x and later, the process is different. The following
+scripts demonstrate how to import an existing certificate into the certificate store that's
 accessible by PowerShell.
 
 #### Import a certificate in Windows PowerShell 5.1
 
-```powershell-interactive
+```powershell
 # Import a PFX
 $credentials = Get-Credential -Message 'Provide PFX private key password'
 Import-PfxCertificate -FilePath <path to certificate> -Password $credentials.Password -CertStoreLocation cert:\CurrentUser\My
@@ -106,7 +106,7 @@ Import-PfxCertificate -FilePath <path to certificate> -Password $credentials.Pas
 
 #### Import a certificate in PowerShell 7.x and later
 
-```powershell-interactive
+```powershell
 # Import a PFX
 $storeName = [System.Security.Cryptography.X509Certificates.StoreName]::My
 $storeLocation = [System.Security.Cryptography.X509Certificates.StoreLocation]::CurrentUser
@@ -123,8 +123,8 @@ $store.Close()
 ## Login with a managed identity
 
 Managed identities are a special type of service principal that provide Azure services with an
-automatically managed identity. Use this identity to authenticate to any Azure service that supports
-managed identities without storing credentials in configuration or code.
+automatically managed identity. Using this type of identity doesn't require storing credentials in
+configuration or code to authenticate to any Azure service that supports managed identities.
 
 There are two types of managed identities:
 
@@ -134,14 +134,16 @@ There are two types of managed identities:
 Managed identities provide a secure way to communicate with other Azure services without developers
 needing to manage credentials. They also help in mitigating the risk of credential leaks.
 
-Here's how managed identities work in practice:
+
+Here's how managed identities work in real-world scenarios:
+
 
 - Azure automatically manages the creation and deletion of the credentials used by the managed
   identity.
 - An Azure service enabled with a managed identity may securely access other services, such as Azure
   Key Vault, Azure SQL Database, Azure Blob Storage, etc., using Microsoft Entra tokens.
-- This identity is managed directly within Azure without needing additional provisioning by an
-  administrator.
+- This identity is managed directly within Azure without needing additional provisioning.
+
 
 Managed identities simplify the security model by avoiding the need to store and manage credentials,
 and they play a crucial role in secure cloud operations by reducing the risk associated with
@@ -157,7 +159,7 @@ The following example connects using a system-assigned managed identity of the h
 executed on a virtual machine with an assigned managed identity, it allows the code to sign in using
 the assigned identity.
 
-```azurepowershell-interactive
+```azurepowershell
  Connect-AzAccount -Identity
 ```
 
@@ -170,15 +172,15 @@ is managed separately from the service instances to which it's assigned.
 When using a user-assigned managed identity, you must specify the **AccountId** parameter and the
 **Identity** parameter, as shown in the following example.
 
-```azurepowershell-interactive
+```azurepowershell
  Connect-AzAccount -Identity -AccountId <user-assigned-identity-clientId-or-resourceId>
 ```
 
-The following example connects using the Managed Service Identity of `myUserAssignedIdentity`. It
-adds the user-assigned identity to the virtual machine and then connects using the **ClientId** of
-the user-assigned identity.
+The following commands connect using the managed identity of `myUserAssignedIdentity`. It adds the
+user-assigned identity to the virtual machine and then connects using the **ClientId** of the
+user-assigned identity.
 
-```azurepowershell-interactive
+```azurepowershell
 $identity = Get-AzUserAssignedIdentity -ResourceGroupName myResourceGroup -Name myUserAssignedIdentity
 Get-AzVM -ResourceGroupName contoso -Name testvm | Update-AzVM -IdentityType UserAssigned -IdentityId $identity.Id
 Connect-AzAccount -Identity -AccountId $identity.ClientId # Run on the virtual machine

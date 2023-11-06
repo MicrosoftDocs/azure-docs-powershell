@@ -12,7 +12,7 @@ title: Sign in to Azure PowerShell interactively
 Interactive logins to Azure offer a more intuitive and flexible user experience. Interactive login
 with Azure PowerShell allows users to authenticate to Azure directly through the PowerShell
 interface, which is useful for ad-hoc management tasks and for environments that require manual
-sign-in, such as those with Multi-Factor Authentication (MFA). This method simplifies access for
+sign-in, such as those with multi-factor authentication (MFA). This method simplifies access for
 script testing, learning, and on-the-fly management without needing to pre-configure service
 principals or other noninteractive authentication methods.
 
@@ -28,22 +28,22 @@ in.
 1. To sign in interactively, use the `Connect-AzAccount` cmdlet, which uses an interactive
    browser-based login prompt by default.
 
-  ```azurepowershell
-  Connect-AzAccount
-  ```
+   ```azurepowershell
+   Connect-AzAccount
+   ```
 
-  If Azure PowerShell can open your default browser, it initiates
-  [authorization code flow][authorization-code-flow] and opens the default browser to load an Azure
-  sign-in page. Otherwise, it initiates [device code flow][device-code-flow] which instructs you to
-  open a browser page at [aka.ms/devicelogin][aka-devicelogin] and enter the code displayed in your
-  PowerShell session.
+   If Azure PowerShell can open your default browser, it initiates
+   [authorization code flow][authorization-code-flow] and opens the default browser to load an Azure
+   sign-in page. Otherwise, it initiates [device code flow][device-code-flow] which instructs you to
+   open a browser page at [aka.ms/devicelogin][aka-devicelogin] and enter the code displayed in your
+   PowerShell session.
 
 1. Sign in with your Azure account credentials in the browser.
 
 If you have access to multiple subscriptions, you're signed in to the first subscription Azure
-returns. Commands are run against this subscription by default. To change your active subscription
-for a session, use the `Set-AzContext` cmdlet. To change your active subscription and have it
-persist between sessions on the same system, use the `Select-AzContext` cmdlet.
+returns. Commands run against this subscription by default. To change your active subscription for a
+session, use the `Set-AzContext` cmdlet. To change your active subscription and have it persist
+between sessions on the same system, use the `Select-AzContext` cmdlet.
 
 > [!IMPORTANT]
 > Your credentials are shared among multiple PowerShell sessions as long as you remain signed in.
@@ -104,7 +104,7 @@ Using WAM offers several benefits:
 - Bug fixes and enhancements shipped with Windows.
 
 > [!NOTE]
-> Signing in with WAM is a preview, opt-in feature.
+> Signing in using WAM is an opt-in preview feature.
 
 Once enabled, the previous browser-based user interface is replaced with a smoother experience
 similar to Windows built-in apps. To enable WAM, run the following commands.
@@ -118,7 +118,7 @@ At the current stage of development, there are a few known limitations to WAM:
 
 - WAM is available on Windows 10 and later, and on Windows Server 2019 and later. On Mac, Linux, and
   earlier versions of Windows, Azure PowerShell automatically defaults to a browser.
-- Microsoft Accounts (for example @outlook.com or @live.com) aren't currently supported. We're
+- Microsoft Accounts (for example, @outlook.com or @live.com) aren't currently supported. We're
   working with the Microsoft Identity team to bring the support later.
 
 ## See also
