@@ -33,6 +33,31 @@
       href: azureps-in-docker.md
     - name: Uninstall
       href: uninstall-az-ps.md
+- name: Authentication and Identity
+  items:
+  - name: Authentication methods
+    items:
+    - name: Overview
+      href: authenticate-azureps.md
+      displayName: >-
+        sign in, signin, log in, login, credentials, msi, managed identity,
+        tenant, subscription, region, certificate, service principal,
+        authenticate
+    - name: Interactive authentication
+      href: authenticate-interactive.md
+    - name: Authentication for automation
+      href: authenticate-noninteractive.md
+  - name: Create a service principal
+  href: create-azure-service-principal-azureps.md
+  displayName: >-
+    automation, application, web app, script, certificate, sign in,
+    signin, log in, login, devops, dev ops, itpro, it pro, role,
+    aad, authentication, authenticate
+  - name: Credential contexts
+  href: context-persistence.md
+  displayName: >-
+    sign in, signin, log in, login, process, session, context,
+    persist, jobs, background, automation, scripting, task
 - name: How-to guides
   items:
     - name: Configuration
@@ -43,31 +68,6 @@
           href: az-predictor.md
         - name: Use the Az PowerShell module behind a proxy
           href: az-powershell-proxy.md
-    - name: Authentication and Identity
-      items:
-        - name: Authentication methods
-          items:
-            - name: Overview
-              href: authenticate-azureps.md
-              displayName: >-
-                sign in, signin, log in, login, credentials, msi, managed identity,
-                tenant, subscription, region, certificate, service principal,
-                authenticate
-            - name: Interactive authentication
-              href: authenticate-interactive.md
-            - name: Noninteractive authentication
-              href: authenticate-noninteractive.md
-        - name: Create a service principal
-          href: create-azure-service-principal-azureps.md
-          displayName: >-
-            automation, application, web app, script, certificate, sign in,
-            signin, log in, login, devops, dev ops, itpro, it pro, role,
-            aad, authentication, authenticate
-        - name: Credential contexts
-          href: context-persistence.md
-          displayName: >-
-            sign in, signin, log in, login, process, session, context,
-            persist, jobs, background, automation, scripting, task
     - name: Concepts
       items:
         - name: Manage subscriptions
