@@ -3,7 +3,7 @@ title: Migration guide for Az 3.0.0
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 3.0 release.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 11/04/2019 
+
 ms.custom: devx-track-azurepowershell 
 ms.service: azure-powershell
 ---

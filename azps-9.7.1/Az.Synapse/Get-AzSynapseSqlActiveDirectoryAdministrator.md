@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzSynapseSqlActiveDirectoryAdministrator
 
 ## SYNOPSIS
-Gets information about an Azure AD administrator for Synapse Analytics Workspace.
+Gets information about a Microsoft Entra administrator for Synapse Analytics Workspace.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Get-AzSynapseSqlActiveDirectoryAdministrator -ResourceId <String> [-DefaultProfi
 ```
 
 ## DESCRIPTION
-The **Get-AzSynapseSqlActiveDirectoryAdministrator** cmdlet gets information about an Azure Active Directory (Azure AD) administrator for an Azure Synapse Analytics Workspace in the current subscription.
+The **Get-AzSynapseSqlActiveDirectoryAdministrator** cmdlet gets information about a Microsoft Entra administrator for an Azure Synapse Analytics Workspace in the current subscription.
 
 ## EXAMPLES
 
@@ -42,7 +42,7 @@ The **Get-AzSynapseSqlActiveDirectoryAdministrator** cmdlet gets information abo
 Get-AzSynapseSqlActiveDirectoryAdministrator -WorkspaceName ContosoWorkspace
 ```
 
-This command gets information about an Azure AD administrator for a workspace named ContosoWorkspace.
+This command gets information about a Microsoft Entra administrator for a workspace named ContosoWorkspace.
 
 ## PARAMETERS
 

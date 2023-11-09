@@ -1,7 +1,7 @@
 ---
 title: Introducing the Azure PowerShell Az module
 description: Introducing the new Azure PowerShell module Az, the replacement for the AzureRM module.
-ms.date: 06/22/2023
+
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell

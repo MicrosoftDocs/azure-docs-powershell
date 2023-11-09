@@ -1,7 +1,7 @@
 ---
 description: Learn how to run Azure PowerShell cmdlets in parallel or as background tasks, using -AsJob and Start-Job.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/28/2023
+
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

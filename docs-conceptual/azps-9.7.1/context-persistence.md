@@ -1,7 +1,7 @@
 ---
 description: Learn how to reuse Azure credentials and other information across multiple PowerShell sessions.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/28/2023
+
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -17,7 +17,7 @@ information across multiple PowerShell sessions and run background tasks.
 
 This article covers managing Azure contexts, not the management of subscriptions or accounts. If
 you're looking to manage users, subscriptions, tenants, or other account information, see the
-[Azure Active Directory](/azure/active-directory) documentation. To learn about using contexts for
+[Microsoft Entra ID](/azure/active-directory) documentation. To learn about using contexts for
 running background or parallel tasks, see
 [Run Azure PowerShell cmdlets in PowerShell Jobs](using-psjobs.md) after becoming familiar with
 Azure contexts.
@@ -40,7 +40,7 @@ context consists of:
   [context autosave settings](#save-azure-contexts-across-powershell-sessions).
 
 For more information on these terms, see
-[Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology).
+[Microsoft Entra Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology).
 Authentication tokens used by Azure contexts are the same as other stored tokens that are part of a
 persistent session.
 
@@ -213,5 +213,5 @@ To clear Azure contexts and credentials:
 ## See also
 
 - [Run Azure PowerShell cmdlets in PowerShell Jobs](using-psjobs.md)
-- [Azure Active Directory Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology)
+- [Microsoft Entra Terminology](/azure/active-directory/fundamentals/active-directory-whatis#terminology)
 - [Az.Accounts reference documentation](/powershell/module/az.accounts)

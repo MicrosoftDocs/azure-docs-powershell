@@ -9,4 +9,4 @@ ms.date: 01/11/2022
 > because of
 > [the retirement announcement of Azure AD Graph](https://azure.microsoft.com/updates/update-your-apps-to-use-microsoft-graph-before-30-june-2022/).
 > For more information, see
-> [Azure AD to Microsoft Graph migration changes in Azure PowerShell](/powershell/azure/azps-msgraph-migration-changes).
+> [Microsoft Entra ID to Microsoft Graph migration changes in Azure PowerShell](/powershell/azure/azps-msgraph-migration-changes).

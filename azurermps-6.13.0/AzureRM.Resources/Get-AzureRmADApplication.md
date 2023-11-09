@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Get-AzureRmADApplication
 
 ## SYNOPSIS
-Lists existing azure active directory applications.
+Lists existing Microsoft Entra applications.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
@@ -54,7 +54,7 @@ Get-AzureRmADApplication -IdentifierUri <String> [-DefaultProfile <IAzureContext
 ```
 
 ## DESCRIPTION
-Lists existing azure active directory applications.
+Lists existing Microsoft Entra applications.
 Application lookup can be done by ObjectId, ApplicationId, IdentifierUri or DisplayName.
 If no parameter is provided, it fetches all applications under the tenant.
 
@@ -256,4 +256,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 [New-AzureRmADApplication](./New-AzureRmADApplication.md)
-

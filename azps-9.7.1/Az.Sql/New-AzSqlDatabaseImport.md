@@ -104,8 +104,8 @@ The acceptable values for this parameter are:
 SQL authentication.
 Set the *AdministratorLogin* and *AdministratorLoginPassword* parameters to the SQL administrator username and password. 
 - ADPassword.
-Azure Active Directory authentication.
-Set *AdministratorLogin* and *AdministratorLoginPassword* to the Azure Active Directory administrator username and password.
+Microsoft Entra authentication.
+Set *AdministratorLogin* and *AdministratorLoginPassword* to the Microsoft Entra administrator username and password.
 This parameter is only available on SQL Database V12 servers.
 
 ```yaml
@@ -381,4 +381,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzSqlDatabaseExport](./New-AzSqlDatabaseExport.md)
 
 [SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)
-

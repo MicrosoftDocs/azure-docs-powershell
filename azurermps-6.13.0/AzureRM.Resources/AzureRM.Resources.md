@@ -23,7 +23,7 @@ Captures a resource group as a template and saves it to a file.
 Retrieves a list of credentials associated with an application.
 
 ### [Get-AzureRmADApplication](Get-AzureRmADApplication.md)
-Lists existing azure active directory applications.
+Lists existing Microsoft Entra applications.
 
 ### [Get-AzureRmADGroup](Get-AzureRmADGroup.md)
 Filters active directory groups.
@@ -109,13 +109,13 @@ Moves a resource to a different resource group or subscription.
 Adds a credential to an existing application.
 
 ### [New-AzureRmADApplication](New-AzureRmADApplication.md)
-Creates a new azure active directory application.
+Creates a new Microsoft Entra application.
 
 ### [New-AzureRmADGroup](New-AzureRmADGroup.md)
 Creates a new active directory group.
 
 ### [New-AzureRmADServicePrincipal](New-AzureRmADServicePrincipal.md)
-Creates a new azure active directory service principal.
+Creates a new Microsoft Entra service principal.
 
 ### [New-AzureRmADSpCredential](New-AzureRmADSpCredential.md)
 Adds a credential to an existing service principal.
@@ -179,7 +179,7 @@ Registers a resource provider.
 Removes a credential from an application.
 
 ### [Remove-AzureRmADApplication](Remove-AzureRmADApplication.md)
-Deletes the azure active directory application.
+Deletes the Microsoft Entra application.
 
 ### [Remove-AzureRmADGroup](Remove-AzureRmADGroup.md)
 Deletes an active directory group.
@@ -188,7 +188,7 @@ Deletes an active directory group.
 Removes a user from an AD group.
 
 ### [Remove-AzureRmADServicePrincipal](Remove-AzureRmADServicePrincipal.md)
-Deletes the azure active directory service principal.
+Deletes the Microsoft Entra service principal.
 
 ### [Remove-AzureRmADSpCredential](Remove-AzureRmADSpCredential.md)
 Removes a credential from a service principal.
@@ -293,14 +293,13 @@ Validates a resource group deployment.
 Unregisters a resource provider.
 
 ### [Update-AzureRmADApplication](Update-AzureRmADApplication.md)
-Updates an existing azure active directory application.
+Updates an existing Microsoft Entra application.
 
 ### [Update-AzureRmADServicePrincipal](Update-AzureRmADServicePrincipal.md)
-Updates an existing azure active directory service principal.
+Updates an existing Microsoft Entra service principal.
 
 ### [Update-AzureRmADUser](Update-AzureRmADUser.md)
 Updates an existing active directory user.
 
 ### [Update-AzureRmManagementGroup](Update-AzureRmManagementGroup.md)
 Updates a Management Group
-

@@ -1,7 +1,7 @@
 ---
 description: Troubleshooting the Azure Az PowerShell module.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/28/2023
+
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -172,7 +172,7 @@ Disable-AzContextAutosave
 Error: _Values of identifierUris property must use a verified domain of the organization or its
 subdomain_ is displayed when running `New-AzADServicePrincipal` or `New-AzADApplication`.
 
-Due to the Azure Active Directory breaking change requiring [AppId Uri in single tenant applications
+Due to the Microsoft Entra breaking change requiring [AppId Uri in single tenant applications
 to require use of default scheme or verified
 domains](/azure/active-directory/develop/reference-breaking-changes#appid-uri-in-single-tenant-applications-will-require-use-of-default-scheme-or-verified-domains)
 you must upgrade the [Az.Resources](https://www.powershellgallery.com/packages/Az.Resources) module
@@ -199,7 +199,7 @@ If you are still encountering issues after upgrading, feel free to open an
 If you can't upgrade to the PowerShell modules described previously, you may follow those steps when
 creating a service principal:
 
-- If needed, [add your custom domain name using Azure Active Directory portal](/azure/active-directory/fundamentals/add-custom-domain)
+- If needed, [add your custom domain name using Microsoft Entra admin center](/azure/active-directory/fundamentals/add-custom-domain)
 - Create an application with an accepted IdentifierUri
 - Create a service principal referring this application
 

@@ -1,7 +1,7 @@
 ---
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 4.1.0 release.
 ms.custom: devx-track-azurepowershell
-ms.date: 04/28/2023
+
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

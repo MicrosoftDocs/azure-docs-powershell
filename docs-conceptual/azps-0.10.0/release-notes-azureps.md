@@ -3,7 +3,7 @@ title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/10/2020
+
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -123,7 +123,7 @@ ms.service: azure-powershell
 * Added support for retrieving and configuring Custom Domain on the DeveloperPortal Endpoint [#11007]
 * 'Export-AzApiManagementApi' Added support for downloading Api Definition in Json format [#9987]
 * 'Import-AzApiManagementApi' Added support for importing OpenApi 3.0 definition from Json document
-* 'New-AzApiManagementIdentityProvider' and 'Set-AzApiManagementIdentityProvider' Added support for configuring 'Signin Tenant' for AAD B2C Provider [#9784]
+* 'New-AzApiManagementIdentityProvider' and 'Set-AzApiManagementIdentityProvider' Added support for configuring 'Signin Tenant' for Azure AD B2C Provider [#9784]
 
 #### Az.DataLakeStore
 * Added reference to System.Buffers explicitly in csproj and psd1.
@@ -838,7 +838,7 @@ to enable create Azure-SSIS IR with static public IP addresses.
     -AutomationRunbookReceiver
     -AzureAppPushReceiver
 * Use common alert schema enabled for the receivers. This is not applicable for SMS, Azure App push , ITSM and Voice recievers
-* Webhooks now supports Azure active directory authentication .
+* Webhooks now supports Microsoft Entra authentication .
 
 #### Az.Network
 * Add new cmdlet Get-AzAvailableServiceAlias which can be called to get the aliases that can be used for Service Endpoint Policies.
@@ -1302,7 +1302,7 @@ https://github.com/Azure/azure-powershell/issues/9752
     -  Enable-AzStorageStaticWebsite
 * Update help of Get-AzStorageBlobContent by add an example
 * Show more error information when cmdlet failed with StorageException
-* Support create or update Storage account with Azure Files AAD DS Authentication
+* Support create or update Storage account with Azure Files Microsoft Entra Domain Services Authentication
     -  New-AzStorageAccount
     -  Set-AzStorageAccount
 * Support list or close file handles of a file share, file directory or a file
@@ -1407,10 +1407,10 @@ https://github.com/Azure/azure-powershell/issues/9752
         - Added parameter -VirtualNetwork which accepts a Virtual Network object
         - Added methods AddPublicIpAddress and RemovePublicIpAddress on firewall object - these accept a Public IP Address object as input
         - Deprecated parameters -PublicIpName and -VirtualNetworkName
-* Updated below commands for feature: Set VpnClient AAD authentication options to Virtual network gateway resource.
-    - Updated New-AzVirtualNetworkGateway: Added optional parameters AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.
-    - Updated Set-AzVirtualNetworkGateway: Added optional parameter AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.
-    - Updated Set-AzVirtualNetworkGateway: Added optional switch parameter RemoveAadAuthentication to remove VpnClient AAD authentication options from Gateway.
+* Updated below commands for feature: Set VpnClient Microsoft Entra authentication options to Virtual network gateway resource.
+    - Updated New-AzVirtualNetworkGateway: Added optional parameters AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient Microsoft Entra authentication options on Gateway.
+    - Updated Set-AzVirtualNetworkGateway: Added optional parameter AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient Microsoft Entra authentication options on Gateway.
+    - Updated Set-AzVirtualNetworkGateway: Added optional switch parameter RemoveAadAuthentication to remove VpnClient Microsoft Entra authentication options from Gateway.
 
 #### Az.OperationalInsights
 * Enable **pergb2018** pricing tier in 'New-AzureRmOperationalInsightsWorkspace' command

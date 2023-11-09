@@ -29,7 +29,7 @@ The **Copy-AzureRemoteAppUserDisk** cmdlet copies the user disk of a user from o
 PS C:\> Copy-AzureRemoteAppUserDisk -DestinationCollectionName "Contoso02" -SourceCollectionName "Contoso01" -UserUpn "PattiFuller@contoso.com" -OverwriteExistingUserDisk
 ```
 
-This command copies the user disk of an Azure Active Directory user who has the UPN PattiFuller@contoso.com from the collection Contoso01 to the collection Contoso02.
+This command copies the user disk of a Microsoft Entra user who has the UPN PattiFuller@contoso.com from the collection Contoso01 to the collection Contoso02.
 If a user disk for PattiFuller@contoso.com already exists on Contoso02, this command overwrites it.
 
 ## PARAMETERS
@@ -122,5 +122,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Remove-AzureRemoteAppUserDisk](./Remove-AzureRemoteAppUserDisk.md)
-
-

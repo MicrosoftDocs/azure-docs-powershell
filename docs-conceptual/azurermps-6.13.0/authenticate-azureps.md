@@ -3,7 +3,7 @@ title: Sign into Azure with the AzureRM PowerShell module
 description: How to sign into Azure with the AzureRM PowerShell module as a user, service principal, or with managed identities for Azure resources.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/05/2021
+
 ms.custom:
 ---
 # Sign into Azure with the AzureRM PowerShell module
@@ -33,7 +33,7 @@ associated with your Azure account. This authentication lasts for the current Po
 ## Sign in with a service principal
 
 Service principals are non-interactive Azure accounts. Like other user accounts, their permissions
-are managed with Azure Active Directory. By granting a service principal only the permissions it
+are managed with Microsoft Entra ID. By granting a service principal only the permissions it
 needs, your automation scripts stay secure.
 
 To learn how to create a service principal for use with Azure PowerShell, see
@@ -53,7 +53,7 @@ Connect-AzureRmAccount -ServicePrincipal -Credential $pscredential -TenantId $te
 
 ## Sign in using an Azure Managed Service Identity
 
-Managed identities for Azure resources is a feature of Azure Active Directory. You can use a managed
+Managed identities for Azure resources is a feature of Microsoft Entra ID. You can use a managed
 identity service principal for sign-in, and acquire an app-only access token to access other
 resources. Managed identities are only available on virtual machines running in an Azure cloud.
 

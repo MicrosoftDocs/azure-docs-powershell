@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview
 # Remove-AzureRmADServicePrincipal
 
 ## SYNOPSIS
-Deletes the azure active directory service principal.
+Deletes the Microsoft Entra service principal.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
@@ -54,7 +54,7 @@ Remove-AzureRmADServicePrincipal -ApplicationObject <PSADApplication> [-PassThru
 ```
 
 ## DESCRIPTION
-Deletes the azure active directory service principal.
+Deletes the Microsoft Entra service principal.
 
 ## EXAMPLES
 

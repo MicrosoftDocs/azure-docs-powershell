@@ -1,7 +1,7 @@
 ---
 description: Manage Azure subscriptions with Azure PowerShell
 ms.custom: devx-track-azurepowershell
-ms.date: 04/28/2023
+
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -20,7 +20,7 @@ For detailed information on subscriptions, billing, and cost management, see the
 ## Tenants, users, and subscriptions
 
 You might have some confusion over the difference between tenants, users, and subscriptions within
-Azure. A _tenant_ is the Azure Active Directory entity that encompasses a whole organization. This
+Azure. A _tenant_ is the Microsoft Entra entity that encompasses a whole organization. This
 tenant has at least one _subscription_ and _user_. A user is an individual and is associated with
 only one tenant, the organization that they belong to. Users are those accounts that sign in to
 Azure to create, manage, and use resources. A user may have access to multiple _subscriptions_,
@@ -29,8 +29,8 @@ associated with a subscription.
 
 To learn more about the differences between tenants, users, and subscriptions, see the
 [Azure cloud terminology dictionary](/azure/azure-glossary-cloud-terminology). To learn how to add a
-new subscription to your Azure Active Directory tenant, see
-[Associate or add an Azure subscription to your Azure Active Directory tenant](/azure/active-directory/active-directory-how-subscriptions-associated-directory).
+new subscription to your Microsoft Entra tenant, see
+[Associate or add an Azure subscription to your Microsoft Entra tenant](/azure/active-directory/active-directory-how-subscriptions-associated-directory).
 To learn how to sign in to a specific tenant, see
 [Sign in with Azure PowerShell](/powershell/azure/authenticate-azureps).
 

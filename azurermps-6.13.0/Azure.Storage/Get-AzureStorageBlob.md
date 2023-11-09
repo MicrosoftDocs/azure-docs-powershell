@@ -34,7 +34,7 @@ Get-AzureStorageBlob [-Prefix <String>] [-Container] <String> [-IncludeDeleted] 
 ```
 
 ## DESCRIPTION
-The **Get-AzureStorageBlob** cmdlet lists blobs in the specified container in an Azure storage account.
+The **Get-AzureStorageBlob** cmdlet lists blob in the specified container in an Azure storage account.
 
 ## EXAMPLES
 

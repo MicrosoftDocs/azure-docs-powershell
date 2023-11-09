@@ -3,7 +3,7 @@ title: Manage Azure subscriptions with Azure PowerShell
 description: Manage Azure subscriptions with Azure PowerShell
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/22/2023
+
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---
@@ -17,7 +17,7 @@ For detailed information on subscriptions, billing, and cost management, see the
 
 ## Tenants, users, and subscriptions
 
-You might have some confusion over the difference between tenants, users, and subscriptions within Azure. A _tenant_ is the Azure Active Directory
+You might have some confusion over the difference between tenants, users, and subscriptions within Azure. A _tenant_ is the Microsoft Entra ID
 entity that encompasses a whole organization. This tenant has at least one _subscription_ and _user_. A user is an individual and is associated
 with only one tenant, the organization that they belong to. Users are those accounts that sign in to Azure to create, manage, and use resources.
 A user may have access to multiple _subscriptions_, which are the agreements with Microsoft to use cloud services, including Azure. Every resource
@@ -26,7 +26,7 @@ is associated with a subscription.
 To learn more about the differences between tenants, users, and subscriptions, see the
 [Azure cloud terminology dictionary](/azure/azure-glossary-cloud-terminology).  To learn how to add a new subscription to your Azure Active
 Directory tenant, see
-[How to add an Azure subscription to Azure Active Directory](/azure/active-directory/active-directory-how-subscriptions-associated-directory).
+[How to add an Azure subscription to Microsoft Entra ID](/azure/active-directory/active-directory-how-subscriptions-associated-directory).
 To learn how to sign in to a specific tenant, see [Sign in with Azure PowerShell](/powershell/azure/authenticate-azureps).
 
 ## Change the active subscription

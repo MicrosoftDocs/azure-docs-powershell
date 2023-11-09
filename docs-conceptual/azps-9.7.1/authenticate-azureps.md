@@ -1,7 +1,7 @@
 ---
 description: How to sign in with Azure PowerShell as a user, service principal, or with managed identities for Azure resources.
 ms.custom: devx-track-azurepowershell
-ms.date: 07/18/2023
+
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -57,7 +57,7 @@ Connect-AzAccount -UseDeviceAuthentication
 ## Sign in with a service principal
 
 Service principals are non-interactive Azure accounts. Like other user accounts, their permissions
-are managed with Azure Active Directory. By granting a service principal only the permissions it
+are managed with Microsoft Entra ID. By granting a service principal only the permissions it
 needs, your automation scripts stay secure.
 
 To learn how to create a service principal for use with Azure PowerShell, see
@@ -154,7 +154,7 @@ $store.Close()
 
 ## Sign in using a managed identity
 
-Managed identities are a feature of Azure Active Directory. Managed identities are service
+Managed identities are a feature of Microsoft Entra ID. Managed identities are service
 principals assigned to resources that run in Azure. You can use a managed identity service principal
 for sign-in, and an app-only access token to access other resources. Managed identities are only
 available on resources running in an Azure cloud.

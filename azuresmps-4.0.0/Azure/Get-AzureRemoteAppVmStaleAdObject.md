@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-AzureRemoteAppVmStaleAdObject
 
 ## SYNOPSIS
-Gets objects in Azure Active Directory that are associated with Azure RemoteApp virtual machines that no longer exist.
+Gets objects in Microsoft Entra ID that are associated with Azure RemoteApp virtual machines that no longer exist.
 
 [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
 
@@ -20,7 +20,7 @@ Get-AzureRemoteAppVmStaleAdObject -CollectionName <String> [-Credential <PSCrede
 ```
 
 ## DESCRIPTION
-The **Get-AzureRemoteAppVmStaleAdObject** cmdlet gets objects in Azure Active Directory that are associated with Azure RemoteApp virtual machines that no longer exist.
+The **Get-AzureRemoteAppVmStaleAdObject** cmdlet gets objects in Microsoft Entra ID that are associated with Azure RemoteApp virtual machines that no longer exist.
 This cmdlet displays the name of each object that it gets.
 
 ## EXAMPLES
@@ -96,5 +96,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Clear-AzureRemoteAppVmStaleAdObject](./Clear-AzureRemoteAppVmStaleAdObject.md)
-
-

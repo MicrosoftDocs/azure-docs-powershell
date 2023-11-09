@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl
 # New-AzADServicePrincipal
 
 ## SYNOPSIS
-Creates a new azure active directory service principal.
+Creates a new Microsoft Entra service principal.
 
 ## SYNTAX
 
@@ -115,7 +115,7 @@ New-AzADServicePrincipal -ApplicationObject <PSADApplication> -KeyCredential <PS
 ```
 
 ## DESCRIPTION
-Creates a new azure active directory service principal. The default parameter set uses default values for parameters if the user does not provide one for them. For more information on the default values used, please see the description for the given parameters below.
+Creates a new Microsoft Entra service principal. The default parameter set uses default values for parameters if the user does not provide one for them. For more information on the default values used, please see the description for the given parameters below.
 This cmdlet has the ability to assign a role to the service principal with the `Role` and `Scope` parameters; if neither of these parameters are provided, no role will be assigned to the service principal. The default values for the `Role` and `Scope` parameters are "Contributor" and the current subscription, respectively (_note_: the defaults are only used when the user provides a value for one of the two parameters, but not the other).
 The cmdlet also implicitly creates an application and sets its properties (if the ApplicationId is not provided). In order to update the application specific parameters please use Set-AzADApplication cmdlet.
 
@@ -601,4 +601,3 @@ Keywords: azure, Az, arm, resource, management, manager, resource, group, templa
 [New-AzADSpCredential](./New-AzADSpCredential.md)
 
 [Remove-AzADSpCredential](./Remove-AzADSpCredential.md)
-
