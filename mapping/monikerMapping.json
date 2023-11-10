@@ -47,5 +47,11 @@
         "packageRoot": "azuresmps-4.0.0",
         "referenceTocUrl": "/powershell/module/servicemanagement/toc.json",
         "serviceMap": "mapping/sm-groupMapping-4.0.0.json"
+    },
+    "aztools": {
+        "conceptualToc": "docs-conceptual/aztools/toc.yml",
+        "conceptualTocUrl": "/powershell/azure/toc.json",
+        "packageRoot": "aztools",
+        "referenceTocUrl": "/powershell/module/aztools/toc.json"
     }
 }
