@@ -29,6 +29,10 @@
             { "files": ["**/*.md", "**/*.yml"], "src": "docs-conceptual/azuredmps-0.9.0", "version": "azuredmps-0.9.0-preview", "dest": "azure/deploymentmanager" },
             { "files": ["**/*.yml"], "src": "azuredmps-0.9.0", "version": "azuredmps-0.9.0-preview", "exclude": ["docs-conceptual/**"], "dest": "module" },
 
+            { "files": ["toc.yml"], "src": "aztools", "version": "aztools", "dest": "module/aztools" },
+            { "files": ["**/*.yml"], "src": "aztools", "version": "aztools", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/aztools", "version": "aztools", "dest": "azure" },
+
             {
                 "files": [
                     "AADRM/**/*.md",
@@ -566,6 +570,10 @@
             "feedback_github_repo": "microsoftdocs/azure-docs-powershell",
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new",
             "ms.topic": "reference",
+            "ms.service": "azure-powershell",
+            "ms.author": "mirobb",
+            "author": "mikefrobbins",
+            "ms.manager": "jasongroce",
             "uhfHeaderId": "Azure",
             "ms.date": "09/26/2023"
         },
