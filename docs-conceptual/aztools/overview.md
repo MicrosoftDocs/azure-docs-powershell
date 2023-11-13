@@ -18,7 +18,7 @@ module.
 This documentation set contains cmdlet references for the following modules.
 
 - [Az.Tools.Installer][az-tools-installer]
-- [Az.Tools.AzPredictor][az-tools-predictor]
+- [Az.Tools.Predictor][az-tools-predictor]
 - [Az.Tools.Migration][az-tools-migration]
 
 <!-- link references -->
