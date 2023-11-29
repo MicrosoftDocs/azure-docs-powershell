@@ -539,9 +539,9 @@
                 "aztools/**/*": ""
             },
             "open_source_feedback_productName": {
-                "azps-*/**/*": "Azure PowerShell feedback",
-                "docs-conceptual/**/*": "Azure PowerShell feedback",
-                "aztools/**/*": "Az Tools feedback"
+                "azps-*/**/*": "Azure PowerShell",
+                "docs-conceptual/**/*": "Azure PowerShell",
+                "aztools/**/*": "Az Tools"
             },
             "open_source_feedback_productDescription": {
                 "azps-*/**/*": "Azure PowerShell is an open source project. Select a link to provide feedback:",
