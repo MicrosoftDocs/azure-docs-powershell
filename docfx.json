@@ -543,11 +543,6 @@
                 "docs-conceptual/**/*": "Azure PowerShell",
                 "aztools/**/*": "Az Tools"
             },
-            "open_source_feedback_productDescription": {
-                "azps-*/**/*": "Azure PowerShell is an open source project. Select a link to provide feedback:",
-                "docs-conceptual/**/*": "Azure PowerShell is an open source project. Select a link to provide feedback:",
-                "aztools/**/*": "Az Tools is an open source project. Select a link to provide feedback:"
-            },
             "open_source_feedback_productLogoLightUrl": {
                 "azps-*/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
                 "docs-conceptual/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
@@ -569,7 +564,6 @@
             "breadcrumb_path": "/powershell/bread/toc.json",
             "ms.devlang": "powershell",
             "feedback_system": "GitHub",
-            "feedback_github_repo": "microsoftdocs/azure-docs-powershell",
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new",
             "ms.topic": "reference",
             "ms.service": "azure-powershell",
