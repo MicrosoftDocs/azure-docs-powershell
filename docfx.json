@@ -9,10 +9,6 @@
             { "files": ["**/*.yml"], "src": "azps-10.4.1", "version": "azps-10.4.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-10.4.1", "version": "azps-10.4.1", "dest": "azure" },
 
-            { "files": ["toc.yml"], "src": "azps-9.7.1", "version": "azps-9.7.1", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-9.7.1", "version": "azps-9.7.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-9.7.1", "version": "azps-9.7.1", "dest": "azure" },
-
             { "files": ["toc.yml"], "src": "azps-0.10.0", "version": "azps-0.10.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-0.10.0", "version": "azps-0.10.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-0.10.0", "version": "azps-0.10.0", "dest": "azure" },
@@ -28,6 +24,10 @@
             { "files": ["toc.yml"], "src": "azuredmps-0.9.0", "version": "azuredmps-0.9.0-preview", "dest": "module/deploymentmanager" },
             { "files": ["**/*.md", "**/*.yml"], "src": "docs-conceptual/azuredmps-0.9.0", "version": "azuredmps-0.9.0-preview", "dest": "azure/deploymentmanager" },
             { "files": ["**/*.yml"], "src": "azuredmps-0.9.0", "version": "azuredmps-0.9.0-preview", "exclude": ["docs-conceptual/**"], "dest": "module" },
+
+            { "files": ["toc.yml"], "src": "aztools", "version": "aztools", "dest": "module/aztools" },
+            { "files": ["**/*.yml"], "src": "aztools", "version": "aztools", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/aztools", "version": "aztools", "dest": "azure" },
 
             {
                 "files": [
@@ -65,14 +65,12 @@
         "resource": [
             { "files": ["media/**"], "version": "azps-11.0.0" },
             { "files": ["media/**"], "version": "azps-10.4.1" },
-            { "files": ["media/**"], "version": "azps-9.7.1" },
             { "files": ["media/**"], "version": "azps-0.10.0" },
             { "files": ["media/**"], "version": "azurermps-6.13.0" }
         ],
         "versions": {
             "azps-11.0.0": { "dest": "azps-11.0.0" },
             "azps-10.4.1": { "dest": "azps-10.4.1" },
-            "azps-9.7.1": { "dest": "azps-9.7.1" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
             "azurermps-6.13.0": { "dest": "azurermps-6.13.0" },
             "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" },
@@ -483,9 +481,8 @@
                 "docs-conceptual/**/*.md": "conceptual"
             },
             "ms.date": {
+                "azps-11.0.0/**/*.yml": "11/14/2023",
                 "azps-10.4.1/**/*.yml": "09/26/2023",
-                "azps-11.0.0/**/*.yml": "11/10/2023",
-                "azps-9.7.1/**/*.yml": "04/28/2023",
                 "azps-0.10.0/**/*.yml": "4/14/2020",
                 "azurermps-6.13.0/**/*.yml": "03/23/2021",
                 "azuresmps-4.0.0/**/*.yml": "11/28/2020",
@@ -514,43 +511,52 @@
                 "docs-conceptual/azuredmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
-                "azps-10.4.1/**/*": "OpenSource",
+                "azps-11.0.0/**/*": "OpenSource",
                 "docs-conceptual/**/**.md": "OpenSource",
                 "docs-conceptual/**/**.yml": "OpenSource",
-                "azps-11.0.0/**/*": "None",
-                "azps-9.7.1/**/*": "None",
+                "azps-10.4.1/**/*": "None",
                 "azps-0.10.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
                 "azuresmps-4.0.0/**/*": "None",
-                "azuredmps-0.9.0/**/*": "None"
+                "azuredmps-0.9.0/**/*": "None",
+                "aztools/Az.Tools.Installer/*": "OpenSource",
+                "aztools/Az.Tools.Predictor/*": "OpenSource",
+                "aztools/Az.Tools.Migration/*": "None"
             },
             "open_source_feedback_contributorGuideUrl": {
-                "azps-10.4.1/**/*": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide",
-                "docs-conceptual/**/*": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide"
+                "azps-*/**/*": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide",
+                "docs-conceptual/**/*": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide",
+                "aztools/**/*": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide"
             },
             "open_source_feedback_issueUrl": {
-                "azps-10.4.1/**/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml",
-                "docs-conceptual/**/*": "https://github.com/microsoftdocs/azure-docs-powershell/issues/new?template=03-customer-feedback.yml"
+                "azps-*/**/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml",
+                "docs-conceptual/**/*": "https://github.com/microsoftdocs/azure-docs-powershell/issues/new?template=03-customer-feedback.yml",
+                "aztools/**/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml"
             },
             "open_source_feedback_issueTitle": {
-                "azps-10.4.1/**/*": "",
-                "docs-conceptual/**/*": ""
+                "azps-*/**/*": "",
+                "docs-conceptual/**/*": "",
+                "aztools/**/*": ""
             },
             "open_source_feedback_productName": {
-                "azps-10.4.1/**/*": "Azure PowerShell feedback",
-                "docs-conceptual/**/*": "Azure PowerShell feedback"
+                "azps-*/**/*": "Azure PowerShell",
+                "docs-conceptual/**/*": "Azure PowerShell",
+                "aztools/**/*": "Az Tools"
             },
             "open_source_feedback_productDescription": {
-                "azps-10.4.1/**/*": "Azure PowerShell is an open source project. Select a link to provide feedback:",
-                "docs-conceptual/**/*": "Azure PowerShell is an open source project. Select a link to provide feedback:"
+                "azps-*/**/*": "Azure PowerShell is an open source project. Select a link to provide feedback:",
+                "docs-conceptual/**/*": "Azure PowerShell is an open source project. Select a link to provide feedback:",
+                "aztools/**/*": "Az Tools is an open source project. Select a link to provide feedback:"
             },
             "open_source_feedback_productLogoLightUrl": {
-                "azps-10.4.1/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
-                "docs-conceptual/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg"
+                "azps-*/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
+                "docs-conceptual/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
+                "aztools/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg"
             },
             "open_source_feedback_productLogoDarkUrl": {
-                "azps-10.4.1/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
-                "docs-conceptual/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg"
+                "azps-*/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
+                "docs-conceptual/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
+                "aztools/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg"
             }
         },
         "globalMetadata": {
@@ -566,8 +572,12 @@
             "feedback_github_repo": "microsoftdocs/azure-docs-powershell",
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new",
             "ms.topic": "reference",
+            "ms.service": "azure-powershell",
+            "ms.author": "mirobb",
+            "author": "mikefrobbins",
+            "ms.manager": "jasongroce",
             "uhfHeaderId": "Azure",
-            "ms.date": "09/26/2023"
+            "ms.date": "11/14/2023"
         },
         "dest": "azureps",
         "lruSize": 0,
