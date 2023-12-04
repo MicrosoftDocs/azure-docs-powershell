@@ -43,7 +43,7 @@ Get-AzUpgradeCmdletSpec -AzureRM
 Returns the dictionary containing cmdlet specification objects for latest Az major version.
 
 ```powershell
-Get-AzUpgradeCmdletSpec -Az 'latest'
+Get-AzUpgradeCmdletSpec -Az -ModuleVersion latest
 ```
 
 ## PARAMETERS
