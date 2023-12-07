@@ -79,5 +79,5 @@ To learn more about the Azure PowerShell modules and their features, see
 <!-- link references -->
 [install]: https://docs.docker.com/engine/installation/
 [powershell image]: https://hub.docker.com/_/microsoft-powershell
-[az-image]: https://hub.docker.com/_/microsoft-azure-powershell
+[az-image]: https://aka.ms/azps-docker-images
 [file-sharing]: https://docs.docker.com/docker-for-windows/#file-sharing
