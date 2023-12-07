@@ -28,7 +28,7 @@ For each new release of the Az module we are releasing an image for the followin
 - Debian 9
 - CentOs 7
 
-A full list of available images can be found on our [Docker image][az image] page.
+A full list of available images can be found on our [Docker image][az-image] page.
 
 ## Using Azure PowerShell in a container
 
@@ -79,5 +79,5 @@ To learn more about the Azure PowerShell modules and their features, see
 <!-- link references -->
 [install]: https://docs.docker.com/engine/installation/
 [powershell image]: https://hub.docker.com/_/microsoft-powershell
-[az image]: https://hub.docker.com/_/microsoft-azure-powershell
+[az-image]: https://hub.docker.com/_/microsoft-azure-powershell
 [file-sharing]: https://docs.docker.com/docker-for-windows/#file-sharing

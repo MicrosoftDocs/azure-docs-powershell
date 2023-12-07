@@ -25,7 +25,7 @@ install the Azure PowerShell module.
 The latest container image contains the latest version of PowerShell and the latest Azure PowerShell
 modules supported with the Az PowerShell module.
 
-You can find a complete list of Azure PowerShell Docker images on our [Docker image][az image] page.
+You can find a complete list of Azure PowerShell Docker images on our [Docker image][az-image] page.
 
 ## Using Azure PowerShell in a container
 
@@ -91,5 +91,5 @@ To learn more about the Azure PowerShell modules and their features, see
 
 <!-- link references -->
 [install]: https://docs.docker.com/engine/installation/
-[az image]: https://hub.docker.com/_/microsoft-azure-powershell
+[az-image]: https://hub.docker.com/_/microsoft-azure-powershell
 [file-sharing]: https://docs.docker.com/docker-for-windows/#file-sharing
