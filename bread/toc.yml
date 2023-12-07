@@ -18,4 +18,4 @@ items:
             topicHref: /powershell/azure/deploymentmanager/overview
           - name: Az Tools
             tocHref: /powershell/module/aztools
-            topicHref: /powershell/azure/aztools/overview
+            topicHref: /powershell/azure/overview?view=aztools&preserve-view=true
