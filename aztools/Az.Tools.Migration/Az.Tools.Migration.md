@@ -3,6 +3,7 @@ Module Name: Az.Tools.Migration
 Module Guid: cb471070-37cc-4484-9665-adf1502b4e3a
 Help Version: 1.0.0.0
 Locale: en-US
+original_content_git_url: https://github.com/Azure/azure-powershell-migration/blob/main/powershell-module/help/Az.Tools.Migration.md
 ---
 
 # Az.Tools.Migration Module
