@@ -3,6 +3,7 @@ external help file: Microsoft.Azure.PowerShell.Tools.AzPredictor.dll-Help.xml
 Module Name: Az.Tools.Predictor
 online version:
 schema: 2.0.0
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/tools/Az.Tools.Predictor/help/Disable-AzPredictor.md
 ---
 
 # Disable-AzPredictor

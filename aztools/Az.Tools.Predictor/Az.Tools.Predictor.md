@@ -3,6 +3,7 @@ Module Name: Az.Tools.Predictor
 Module Guid: 599d1760-4ee1-4ed2-806e-f2a1b1a0ba4d
 Help Version: 1.0.0.0
 Locale: en-US
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/tools/Az.Tools.Predictor/help/Az.Tools.Predictor.md
 ---
 
 # Az.Tools.Predictor Module
