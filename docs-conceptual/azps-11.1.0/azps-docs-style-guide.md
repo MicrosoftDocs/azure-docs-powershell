@@ -1,7 +1,6 @@
 ---
 description: This article provides the rules of style for writing Azure PowerShell documentation.
 ms.custom: devx-track-azurepowershell
-
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -18,7 +17,7 @@ Because most Microsoft Learn documentation doesn't support multiple product vers
 version of the Az PowerShell module should be referenced in articles. Documentation referencing a
 specific version number can become outdated because Azure PowerShell is updated monthly. Only the
 last two major versions of the Az PowerShell module are supported by Microsoft. For more
-information, see [Azure PowerShell support lifecycle](azureps-support-lifecycle.md)
+information, see [Azure PowerShell support lifecycle](azureps-support-lifecycle.md).
 
 If cmdlets used in the article are part of a preview module, that module must be explicitly
 installed because only GA modules ship as part of the Az PowerShell module.
