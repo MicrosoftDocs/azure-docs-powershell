@@ -519,7 +519,7 @@
             },
             "feedback_system": {
                 "azps-11.1.0/**/*": "OpenSource",
-                "azps-11.0.0/**/*": "OpenSource",
+                "azps-11.0.0/**/*": "None",
                 "docs-conceptual/**/**.md": "OpenSource",
                 "docs-conceptual/**/**.yml": "OpenSource",
                 "azps-10.4.1/**/*": "None",
@@ -540,11 +540,6 @@
                 "azps-*/**/*": "Azure PowerShell",
                 "docs-conceptual/**/*": "Azure PowerShell",
                 "aztools/**/*": "Az Tools"
-            },
-            "open_source_feedback_productDescription": {
-                "azps-*/**/*": "Azure PowerShell is an open source project. Select a link to provide feedback:",
-                "docs-conceptual/**/*": "Azure PowerShell is an open source project. Select a link to provide feedback:",
-                "aztools/**/*": "Az Tools is an open source project. Select a link to provide feedback:"
             }
         },
         "globalMetadata": {
@@ -557,7 +552,6 @@
             "breadcrumb_path": "/powershell/bread/toc.json",
             "ms.devlang": "powershell",
             "feedback_system": "GitHub",
-            "feedback_github_repo": "microsoftdocs/azure-docs-powershell",
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new",
             "open_source_feedback_contributorGuideUrl": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide",
             "open_source_feedback_issueTitle": "",
