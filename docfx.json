@@ -529,12 +529,14 @@
                 "azuredmps-0.9.0/**/*": "None",
                 "aztools/Az.Tools.Installer/*": "OpenSource",
                 "aztools/Az.Tools.Predictor/*": "OpenSource",
-                "aztools/Az.Tools.Migration/*": "None"
+                "aztools/Az.Tools.Migration/*": "OpenSource"
             },
             "open_source_feedback_issueUrl": {
                 "azps-*/**/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml",
                 "docs-conceptual/**/*": "https://github.com/microsoftdocs/azure-docs-powershell/issues/new?template=03-customer-feedback.yml",
-                "aztools/**/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml"
+                "aztools/Az.Tools.Installer/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml",
+                "aztools/Az.Tools.Predictor/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml",
+                "aztools/Az.Tools.Migration/*": "https://github.com/Azure/azure-powershell-migration/issues/new?template=doc-bug.yml"
             },
             "open_source_feedback_productName": {
                 "azps-*/**/*": "Azure PowerShell",
