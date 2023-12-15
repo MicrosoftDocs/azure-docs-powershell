@@ -164,7 +164,7 @@
       href: /azure/cosmos-db/sql/powershell-samples?toc=/powershell/azure/toc.json
       displayName: database, nosql, mongodb, couchdb
     - name: Samples repo
-      href: https://github.com/Azure/azure-docs-powershell-samples
+      href: https://github.com/Azure-Samples/azure-docs-powershell-samples
 - name: Survey Guidance
   href: command-line-tools-survey-guidance.md
 - name: Docs Contributor's Guide
