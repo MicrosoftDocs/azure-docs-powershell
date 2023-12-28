@@ -5,9 +5,9 @@
             { "files": ["**/*.yml"], "src": "azps-11.1.0", "version": "azps-11.1.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-11.1.0", "version": "azps-11.1.0", "dest": "azure" },
 
-            { "files": ["toc.yml"], "src": "azps-11.0.0", "version": "azps-11.0.0", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-11.0.0", "version": "azps-11.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-11.0.0", "version": "azps-11.0.0", "dest": "azure" },
+            { "files": ["toc.yml"], "src": "azps-11.2.0", "version": "azps-11.2.0", "dest": "module/azure-powershell" },
+            { "files": ["**/*.yml"], "src": "azps-11.2.0", "version": "azps-11.2.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-11.2.0", "version": "azps-11.2.0", "dest": "azure" },
 
             { "files": ["toc.yml"], "src": "azps-10.4.1", "version": "azps-10.4.1", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-10.4.1", "version": "azps-10.4.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
@@ -68,14 +68,14 @@
         ],
         "resource": [
             { "files": ["media/**"], "version": "azps-11.1.0" },
-            { "files": ["media/**"], "version": "azps-11.0.0" },
+            { "files": ["media/**"], "version": "azps-11.2.0" },
             { "files": ["media/**"], "version": "azps-10.4.1" },
             { "files": ["media/**"], "version": "azps-0.10.0" },
             { "files": ["media/**"], "version": "azurermps-6.13.0" }
         ],
         "versions": {
             "azps-11.1.0": { "dest": "azps-11.1.0" },
-            "azps-11.0.0": { "dest": "azps-11.0.0" },
+            "azps-11.2.0": { "dest": "azps-11.2.0" },
             "azps-10.4.1": { "dest": "azps-10.4.1" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
             "azurermps-6.13.0": { "dest": "azurermps-6.13.0" },
@@ -488,7 +488,7 @@
             },
             "ms.date": {
                 "azps-11.1.0/**/*.yml": "12/05/2023",
-                "azps-11.0.0/**/*.yml": "11/14/2023",
+                "azps-11.2.0/**/*.yml": "12/28/2023",
                 "azps-10.4.1/**/*.yml": "09/26/2023",
                 "azps-0.10.0/**/*.yml": "4/14/2020",
                 "azurermps-6.13.0/**/*.yml": "03/23/2021",
@@ -519,7 +519,7 @@
             },
             "feedback_system": {
                 "azps-11.1.0/**/*": "OpenSource",
-                "azps-11.0.0/**/*": "None",
+                "azps-11.2.0/**/*": "None",
                 "docs-conceptual/**/**.md": "OpenSource",
                 "docs-conceptual/**/**.yml": "OpenSource",
                 "azps-10.4.1/**/*": "None",
