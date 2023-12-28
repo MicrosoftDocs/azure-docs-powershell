@@ -487,7 +487,7 @@
                 "docs-conceptual/**/*.md": "conceptual"
             },
             "ms.date": {
-                "azps-11.1.0/**/*.yml": "11/30/2023",
+                "azps-11.1.0/**/*.yml": "12/05/2023",
                 "azps-11.0.0/**/*.yml": "11/14/2023",
                 "azps-10.4.1/**/*.yml": "09/26/2023",
                 "azps-0.10.0/**/*.yml": "4/14/2020",
@@ -519,7 +519,7 @@
             },
             "feedback_system": {
                 "azps-11.1.0/**/*": "OpenSource",
-                "azps-11.0.0/**/*": "OpenSource",
+                "azps-11.0.0/**/*": "None",
                 "docs-conceptual/**/**.md": "OpenSource",
                 "docs-conceptual/**/**.yml": "OpenSource",
                 "azps-10.4.1/**/*": "None",
@@ -529,42 +529,19 @@
                 "azuredmps-0.9.0/**/*": "None",
                 "aztools/Az.Tools.Installer/*": "OpenSource",
                 "aztools/Az.Tools.Predictor/*": "OpenSource",
-                "aztools/Az.Tools.Migration/*": "None"
-            },
-            "open_source_feedback_contributorGuideUrl": {
-                "azps-*/**/*": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide",
-                "docs-conceptual/**/*": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide",
-                "aztools/**/*": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide"
+                "aztools/Az.Tools.Migration/*": "OpenSource"
             },
             "open_source_feedback_issueUrl": {
                 "azps-*/**/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml",
                 "docs-conceptual/**/*": "https://github.com/microsoftdocs/azure-docs-powershell/issues/new?template=03-customer-feedback.yml",
-                "aztools/**/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml"
-            },
-            "open_source_feedback_issueTitle": {
-                "azps-*/**/*": "",
-                "docs-conceptual/**/*": "",
-                "aztools/**/*": ""
+                "aztools/Az.Tools.Installer/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml",
+                "aztools/Az.Tools.Predictor/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml",
+                "aztools/Az.Tools.Migration/*": "https://github.com/Azure/azure-powershell-migration/issues/new?template=doc-bug.yml"
             },
             "open_source_feedback_productName": {
                 "azps-*/**/*": "Azure PowerShell",
                 "docs-conceptual/**/*": "Azure PowerShell",
                 "aztools/**/*": "Az Tools"
-            },
-            "open_source_feedback_productDescription": {
-                "azps-*/**/*": "Azure PowerShell is an open source project. Select a link to provide feedback:",
-                "docs-conceptual/**/*": "Azure PowerShell is an open source project. Select a link to provide feedback:",
-                "aztools/**/*": "Az Tools is an open source project. Select a link to provide feedback:"
-            },
-            "open_source_feedback_productLogoLightUrl": {
-                "azps-*/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
-                "docs-conceptual/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
-                "aztools/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg"
-            },
-            "open_source_feedback_productLogoDarkUrl": {
-                "azps-*/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
-                "docs-conceptual/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
-                "aztools/**/*": "https://learn.microsoft.com/media/logos/logo-powershell.svg"
             }
         },
         "globalMetadata": {
@@ -577,15 +554,18 @@
             "breadcrumb_path": "/powershell/bread/toc.json",
             "ms.devlang": "powershell",
             "feedback_system": "GitHub",
-            "feedback_github_repo": "microsoftdocs/azure-docs-powershell",
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new",
+            "open_source_feedback_contributorGuideUrl": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide",
+            "open_source_feedback_issueTitle": "",
+            "open_source_feedback_productLogoLightUrl": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
+            "open_source_feedback_productLogoDarkUrl": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
             "ms.topic": "reference",
             "ms.service": "azure-powershell",
             "ms.author": "mirobb",
             "author": "mikefrobbins",
             "ms.manager": "jasongroce",
             "uhfHeaderId": "Azure",
-            "ms.date": "11/14/2023"
+            "ms.date": "12/05/2023"
         },
         "dest": "azureps",
         "lruSize": 0,

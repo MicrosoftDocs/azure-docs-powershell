@@ -4,6 +4,7 @@ Module Guid: 8c7c6fcd-a96f-460b-89e2-ff822a3246c8
 Download Help Link: https://learn.microsoft.com/powershell/module/az.tools.installer
 Help Version: 1.0.0.0
 Locale: en-US
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/tools/Az.Tools.Installer/help/Az.Tools.Installer.md
 ---
 
 # Az.Tools.Installer Module

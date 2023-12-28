@@ -3,6 +3,7 @@ external help file: Az.Tools.Migration-help.xml
 Module Name: az.tools.migration
 online version:
 schema: 2.0.0
+original_content_git_url: https://github.com/Azure/azure-powershell-migration/blob/main/powershell-module/help/Enable-AzUpgradeDataCollection.md
 ---
 
 # Enable-AzUpgradeDataCollection

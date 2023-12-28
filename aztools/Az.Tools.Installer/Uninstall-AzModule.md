@@ -3,6 +3,7 @@ external help file: Az.Tools.Installer-help.xml
 Module Name: Az.Tools.Installer
 online version:
 schema: 2.0.0
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/tools/Az.Tools.Installer/help/Uninstall-AzModule.md
 ---
 
 # Uninstall-AzModule
