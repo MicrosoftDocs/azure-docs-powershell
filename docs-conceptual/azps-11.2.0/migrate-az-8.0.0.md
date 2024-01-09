@@ -1,7 +1,6 @@
 ---
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 8.0.0 release.
 ms.custom: devx-track-azurepowershell
-
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
