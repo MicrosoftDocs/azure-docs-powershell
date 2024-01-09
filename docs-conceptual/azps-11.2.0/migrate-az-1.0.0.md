@@ -1,12 +1,12 @@
 ---
 description: This migration guide contains a list of breaking changes made to Azure PowerShell in the Az version 1 release.
 ms.custom: devx-track-azurepowershell
-
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
 title: All changes from AzureRM to Azure PowerShell Az 1.0.0
 ---
+
 # Breaking changes for Az 1.0.0
 
 This document provides detailed information on the changes between AzureRM 6.x and the new Az

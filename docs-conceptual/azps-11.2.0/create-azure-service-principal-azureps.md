@@ -1,7 +1,6 @@
 ---
 description: Learn how to create and use service principals with Azure PowerShell.
 ms.custom: devx-track-azurepowershell
-
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

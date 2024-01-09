@@ -1,7 +1,6 @@
 ---
 description: Configure Azure PowerShell global settings using centralized and granular AzConfig cmdlets
 ms.custom: devx-track-azurepowershell
-
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
