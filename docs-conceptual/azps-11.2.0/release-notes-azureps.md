@@ -6,6 +6,7 @@ ms.service: azure-powershell
 ms.topic: conceptual
 title: Azure PowerShell release notes
 ---
+
 # Azure PowerShell release notes
 ## 11.2.0 - January 2024
 #### Az.Accounts 2.15.0

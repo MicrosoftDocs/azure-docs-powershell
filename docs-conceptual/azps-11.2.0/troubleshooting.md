@@ -1,7 +1,6 @@
 ---
 description: Troubleshooting the Azure Az PowerShell module.
 ms.custom: devx-track-azurepowershell
-
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

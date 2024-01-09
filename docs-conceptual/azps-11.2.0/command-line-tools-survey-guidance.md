@@ -1,7 +1,6 @@
 ---
 description: This article contains guidance about the Azure command line tools survey.
 ms.custom: devx-track-azurepowershell
-
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
