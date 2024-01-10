@@ -35,9 +35,9 @@ modules.
 
 |        Azure PowerShell        | PowerShell <br/> <= 7.1 | PowerShell <br/> >= 7.2 | Windows PowerShell <br/> 5.1 |
 | ------------------------------ | :---------------------: | :---------------------: | :--------------------------: |
+| ![Supported][1] Az 11.x        |   ![Not Supported][3]   |     ![Supported][1]     |       ![Supported][1]        |
 | ![Supported][1] Az 10.x        |   ![Not Supported][3]   |     ![Supported][1]     |       ![Supported][1]        |
-| ![Supported][1] Az 9.x         |   ![Not Supported][3]   |     ![Supported][1]     |       ![Supported][1]        |
-| ![Out of Support][4] <= Az 8.x |  ![Out of Support][4]   |  ![Out of Support][4]   |     ![Out of Support][4]     |
+| ![Out of Support][4] <= Az 9.x |  ![Out of Support][4]   |  ![Out of Support][4]   |     ![Out of Support][4]     |
 | ![Supported][1] AzureRM 6.13.2 |   ![Not Supported][3]   |   ![Not Supported][3]   |       ![Supported][1]        |
 | ![Supported][1] Azure 5.3.1    |   ![Not Supported][3]   |   ![Not Supported][3]   |       ![Supported][1]        |
 
