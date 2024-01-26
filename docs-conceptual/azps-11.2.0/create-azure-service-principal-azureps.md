@@ -48,15 +48,16 @@ creating a service principal, you choose the type of sign-in authentication it u
 > returns an error message containing "Insufficient privileges to complete the operation". Contact
 > your Microsoft Entra admin to create a service principal.
 >
-> In a Microsoft EntraID directory where user setting **Users can register applications** has been set to **No**, you will need to be a member of one of the following EntraID Built-in Roles (which have the action: 
-`microsoft.directory/applications/createAsOwner` or `microsoft.directory/applications/create`):
-> * [`Application Developer`](/entra/identity/role-based-access-control/permissions-reference#application-developer)	
-> * [`Application Administrator`](/entra/identity/role-based-access-control/permissions-reference#application-administrator)
-> * [`Cloud Application Administrator`](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator)
-> * [`Global Administrator`](/entra/identity/role-based-access-control/permissions-reference#global-administrator)
-> * [`Hybrid Identity Administrator`](/entra/identity/role-based-access-control/permissions-reference#hybrid-identity-administrator)
+> In a Microsoft Entra ID directory where user setting **Users can register applications** has been
+> set to **No**, you must be a member of one of the following Microsoft Entra ID built-in roles
+> (which have the action: `microsoft.directory/applications/createAsOwner` or `microsoft.directory/applications/create`):
+> - [Application Developer](/entra/identity/role-based-access-control/permissions-reference#application-developer)	
+> - [Application Administrator](/entra/identity/role-based-access-control/permissions-reference#application-administrator)
+> - [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator)
+> - [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)
+> - [Hybrid Identity Administrator](/entra/identity/role-based-access-control/permissions-reference#hybrid-identity-administrator)
 >
-> *For more information about User Settings in EntraID see [Restrict who can create applications](/entra/identity/role-based-access-control/delegate-app-roles#restrict-who-can-create-applications)*
+> For more information about user settings in Microsoft Entra ID, see [Restrict who can create applications](/entra/identity/role-based-access-control/delegate-app-roles#restrict-who-can-create-applications).
 
 There are two types of authentication available for service principals: Password-based
 authentication, and certificate-based authentication.
