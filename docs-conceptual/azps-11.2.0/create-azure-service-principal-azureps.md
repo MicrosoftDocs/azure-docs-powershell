@@ -47,6 +47,16 @@ creating a service principal, you choose the type of sign-in authentication it u
 > If your account doesn't have permission to create a service principal, `New-AzADServicePrincipal`
 > returns an error message containing "Insufficient privileges to complete the operation". Contact
 > your Microsoft Entra admin to create a service principal.
+>
+> In a Microsoft EntraID directory where user setting **Users can register applications** has been set to **No**, you will need to be a member of one of the following EntraID Built-in Roles (which have the action: 
+`microsoft.directory/applications/createAsOwner` or `microsoft.directory/applications/create`):
+> * [`Application Developer`](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference#application-developer)	
+> * [`Application Administrator`](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference#application-administrator)
+> * [`Cloud Application Administrator`](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator)
+> * [`Global Administrator`](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference#global-administrator)
+> * [`Hybrid Identity Administrator`](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference#hybrid-identity-administrator)
+>
+> *For more information about User Settings in EntraID see [Restrict who can create applications](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/delegate-app-roles#restrict-who-can-create-applications)*
 
 There are two types of authentication available for service principals: Password-based
 authentication, and certificate-based authentication.
