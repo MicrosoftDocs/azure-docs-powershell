@@ -142,18 +142,20 @@
           href: migrate-az-2.0.0.md
     - name: Migrate from AzureRM
       items:
-        - name: Introducing the Az PowerShell module
-          href: new-azureps-module-az.md
-          displayName: intro, introduction, az
-        - name: Changes between AzureRM and Az
-          href: migrate-az-1.0.0.md
-          displayName: breaking, cmdlet, module, names
+        - name: Overview
+          href: azurerm-retirement-overview.md
         - name: Migration steps
           href: migrate-from-azurerm-to-az.md
           displayName: migrate, azurerm, az
         - name: Automatically migrate PowerShell scripts
           href: quickstart-migrate-azurerm-to-az-automatically.md
           displayName: automatically migrate, azurerm, az
+        - name: Changes between AzureRM and Az
+          href: migrate-az-1.0.0.md
+          displayName: breaking, cmdlet, module, names
+        - name: Introducing the Az PowerShell module
+          href: new-azureps-module-az.md
+          displayName: intro, introduction, az
 - name: Samples
   items:
     - name: Azure App Service
