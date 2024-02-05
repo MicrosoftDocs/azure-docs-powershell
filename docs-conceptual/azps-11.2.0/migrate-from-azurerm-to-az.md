@@ -1,7 +1,6 @@
 ---
 description: Learn the steps and tools for migrating Azure PowerShell scripts from AzureRM to the new Az PowerShell module.
-ms.custom: devx-track-azurepowershell, contperf-fy21q2
-
+ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
@@ -10,41 +9,26 @@ title: Migrate Azure PowerShell scripts from AzureRM to Az
 
 # Migrate Azure PowerShell from AzureRM to Az
 
-All versions of the AzureRM PowerShell module are outdated. The [Az PowerShell
-module](install-azure-powershell.md) is now the recommended PowerShell module for interacting with Azure.
-
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
-## Why a new module?
+## Determine if you're using the AzureRM PowerShell module
 
-The biggest and most important change is that [PowerShell](/powershell/scripting/overview), being
-based on the .NET Standard library, has been a cross-platform product since its introduction.
+Use the following command to determine if you have the AzureRM PowerShell module installed:
 
-Like the PowerShell language, we're committed to bringing Azure support to all platforms. Our
-commitment meant that the Azure PowerShell modules needed to be updated to use .NET Standard and be
-compatible with PowerShell Core. Rather than modifying the existing AzureRM module and introducing
-complex changes to add this support, the Az module was created.
+```powershell
+Get-Module -Name AzureRM -ListAvailable
+```
 
-Creating a new module also allowed our engineers to make the design, naming of cmdlets, and modules
-consistent. All modules now start with the `Az.` prefix and cmdlets all use the `Verb-AzNoun` naming
-convention. Previously, cmdlet names were longer and inconsistent.
+You can also perform a full text search of your scripts for the pattern `*-AzureRM*` to determine if
+any of them are using the AzureRM PowerShell module.
 
-The number of modules were also reduced: Some modules that worked with the same services have been
-combined. Management plane and data plane cmdlets for the same service are now contained within a
-single module. For those of you who manually manage dependencies and imports, this consolidation
-makes things much simpler.
+## Upgrade to the Az PowerShell module
 
-By making these important changes, the team has committed to making it easier than ever before and
-on more platforms than previously possible to use Azure with PowerShell cmdlets.
-
-## Upgrading to Az PowerShell
-
-Scripts written for the AzureRM cmdlets won't automatically work with Az. To make the
-transition easier, the
-[AzureRM to Az migration toolkit](https://github.com/Azure/azure-powershell-migration) was
-developed. No migration to a new command set is ever convenient, but this article will help you get
-started on transitioning to the Az PowerShell module. To learn more about why the Az PowerShell
-module was created, see [Introducing the new Azure PowerShell Az module](new-azureps-module-az.md).
+Scripts written for the AzureRM cmdlets won't automatically work with Az. To make the transition
+easier, the [AzureRM to Az migration toolkit](/powershell/azure/migration-overview) was developed.
+No migration to a new command set is ever convenient, but this article will help you get started on
+transitioning to the Az PowerShell module. To learn more about why the Az PowerShell module was
+created, see [Introducing the new Azure PowerShell Az module](new-azureps-module-az.md).
 
 The new cmdlet names have been designed to be easy to learn. Instead of using `AzureRm` or `Azure`
 in cmdlet names, use `Az`. For example, the old cmdlet `New-AzureRMVm` has become `New-AzVm`.
@@ -78,20 +62,13 @@ earlier version of the AzureRM module, there are migration guides available for 
 
 This recommended option minimizes the effort required to migrate AzureRM scripts to Az.
 
-### Install the AzureRM to Az migration toolkit
-
-```powershell
-Install-Module -Name Az.Tools.Migration
-```
-
-### Convert your scripts automatically
-
 With the AzureRM to Az migration toolkit, you can generate a plan to determine what changes will be
 performed on your scripts before making any modifications to them and before installing the Az
 PowerShell module.
 
-The [Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module](quickstart-migrate-azurerm-to-az-automatically.md) quickstart walks you through the entire process
-of automatically updating your PowerShell scripts from AzureRM to the Az PowerShell module.
+The [Automatically migrate PowerShell scripts from AzureRM to the Az PowerShell module](quickstart-migrate-azurerm-to-az-automatically.md)
+quickstart walks you through the entire process of automatically updating your PowerShell scripts
+from AzureRM to the Az PowerShell module.
 
 ## Option 2: Use compatibility mode with Enable-AzureRmAlias
 
@@ -114,5 +91,8 @@ PowerShell module.
 
 ## Next steps
 
+- [Automatically migrate PowerShell scripts](quickstart-migrate-azurerm-to-az-automatically.md)
+- [Introducing the Az PowerShell module](new-azureps-module-az.md)
+- [Changes between AzureRM and Az](migrate-az-1.0.0.md)
+- [Install the Az PowerShell module](install-azure-powershell.md)
 - [Uninstall AzureRM](uninstall-az-ps.md#uninstall-the-azurerm-module)
-- [Install Azure PowerShell](install-azure-powershell.md)

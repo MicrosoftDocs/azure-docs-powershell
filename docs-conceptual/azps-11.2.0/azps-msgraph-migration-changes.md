@@ -1,7 +1,6 @@
 ---
 description: This migration guide contains a list of Azure PowerShell changes for the Microsoft Entra ID to Microsoft Graph migration in Az.Resources 5.1.0.
 ms.custom: devx-track-azurepowershell
-
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

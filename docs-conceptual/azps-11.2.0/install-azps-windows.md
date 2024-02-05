@@ -1,7 +1,6 @@
 ---
 description: Learn how to install and run Azure PowerShell on Windows. You can install Azure PowerShell on Windows with one command.
 ms.custom: devx-track-azurepowershell
-
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual

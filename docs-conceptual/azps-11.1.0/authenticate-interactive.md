@@ -35,8 +35,8 @@ in.
    If Azure PowerShell can open your default browser, it initiates
    [authorization code flow][authorization-code-flow] and opens the default browser to load an Azure
    sign-in page. Otherwise, it initiates [device code flow][device-code-flow] which instructs you to
-   open a browser page at [aka.ms/devicelogin][aka-devicelogin] and enter the code displayed in your
-   PowerShell session.
+   open a browser page at [microsoft.com/devicelogin][ms-devicelogin] and enter the code displayed
+   in your PowerShell session.
 
 1. Sign in with your Azure account credentials in the browser.
 
@@ -134,7 +134,7 @@ At the current stage of development, there are a few known limitations to WAM:
 [context-persistence]: context-persistence.md
 [authorization-code-flow]: /entra/identity-platform/v2-oauth2-auth-code-flow
 [device-code-flow]: /entra/identity-platform/v2-oauth2-device-code
-[aka-devicelogin]: https://aka.ms/devicelogin
+[ms-devicelogin]: https://microsoft.com/devicelogin
 [connect-azaccount]: /powershell/module/az.accounts/connect-azaccount
 [set-azcontext]: /powershell/module/az.accounts/set-azcontext
 [select-azcontext]: /powershell/module/az.accounts/select-azcontext

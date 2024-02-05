@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 12/28/2023  
+  ms.date: 01/09/2024
   ms.devlang: powershell
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
@@ -62,7 +62,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Cmdlet reference
-            url: /powershell/module/?view=azps-11.1.0
+            url: /powershell/module/?view=azps-11.2.0
   - title: Identity and Authentication
     linkLists:
       - linkListType: whats-new
