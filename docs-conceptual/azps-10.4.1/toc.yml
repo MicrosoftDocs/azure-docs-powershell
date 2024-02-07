@@ -112,7 +112,7 @@
       href: /azure/key-vault/secrets/quick-create-powershell?toc=/powershell/azure/toc.json
 - name: Migration
   items:
-    - name: Microsoft Entra ID to Microsoft Graph Migration Guide
+    - name: Azure AD to Microsoft Graph Migration Guide
       href: azps-msgraph-migration-changes.md
     - name: Migrate from previous versions of Az
       items:
