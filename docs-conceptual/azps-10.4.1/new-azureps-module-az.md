@@ -47,12 +47,12 @@ The Az PowerShell module features the following benefits:
   - Cmdlet available for advanced REST operations with Azure resources
 
 > [!NOTE]
-> PowerShell 7.0.6 LTS, PowerShell 7.1.3, or higher is the recommended version of PowerShell for
-> use with the Azure Az PowerShell module on all platforms.
+> PowerShell 7.2 or higher is the recommended version of PowerShell for use with the Azure
+> PowerShell Az module on all platforms.
 
-The Az PowerShell module is based on the .NET Standard library and works with PowerShell 7 and later
-on all platforms including Windows, Linux, and macOS. It's also compatible with Windows PowerShell
-5.1.
+The Az PowerShell module is based on the .NET Standard library and works with PowerShell 7.2 and
+later on all platforms including Windows, Linux, and macOS. It's also compatible with Windows
+PowerShell 5.1.
 
 We're committed to bringing Azure support to all platforms and all Az PowerShell modules are
 cross-platforms.
