@@ -34,7 +34,7 @@ In the following example, the `Update-AzConfig` cmdlet is used to disable the wa
 Update-AzConfig -<parameter-name> $false
 ```
 
-You can also use the `$Env:<env-variable-name>` environment variable to disable the survey message.
+You can also use the `$Env:<env-variable-name>` environment variable to disable the warning message.
 
 ```azurepowershell
 Set-Item -Path Env:\<env-variable-name> -Value $false
