@@ -89,7 +89,7 @@
         - name: Deploy Resource Manager templates
           href: /azure/azure-resource-manager/templates/deploy-powershell?toc=/powershell/azure/toc.json
         - name: Export Resource Manager templates
-          href: /azure/azure-resource-manager/management/manage-resources-powershell?toc=/powershell/azure/toc.json
+          href: /azure/azure-resource-manager/templates/export-template-powershell?toc=/powershell/azure/toc.json
         - name: Deploy private Resource Manager templates
           href: /azure/azure-resource-manager/templates/secure-template-with-sas-token?toc=/powershell/azure/toc.json
 - name: Tutorials
@@ -112,7 +112,7 @@
       href: /azure/key-vault/secrets/quick-create-powershell?toc=/powershell/azure/toc.json
 - name: Migration
   items:
-    - name: Microsoft Entra ID to Microsoft Graph Migration Guide
+    - name: Azure AD to Microsoft Graph Migration Guide
       href: azps-msgraph-migration-changes.md
     - name: Migrate from previous versions of Az
       items:

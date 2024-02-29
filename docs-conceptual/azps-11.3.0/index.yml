@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 01/09/2024
+  ms.date: 02/06/2024
   ms.devlang: powershell
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
@@ -62,13 +62,9 @@ landingContent:
       - linkListType: reference
         links:
           - text: Cmdlet reference
-            url: /powershell/module/?view=azps-11.2.0
+            url: /powershell/module/?view=azps-11.3.0
   - title: Identity and Authentication
     linkLists:
-      - linkListType: whats-new
-        links:
-          - text: Microsoft Entra ID to Microsoft Graph Migration changes
-            url: azps-msgraph-migration-changes.md
       - linkListType: how-to-guide
         links:
           - text: Authentication methods

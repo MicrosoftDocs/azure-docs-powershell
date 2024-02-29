@@ -42,7 +42,7 @@ In a scenario where you need to install both the AzureRM and Az PowerShell modul
 Windows system:
 
 - AzureRM must be installed only in the current user scope of Windows PowerShell 5.1.
-- Install the Az PowerShell module in PowerShell 7.0.6 LTS, PowerShell 7.1.3, or higher.
+- Install the Az PowerShell module in PowerShell 7.2 or higher.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
