@@ -31,11 +31,12 @@ protect sensitive information when it identifies a potential secret in the outpu
 In the following example, the `Update-AzConfig` cmdlet is used to disable the warning message.
 
 ```azurepowershell-interactive
-Update-AzConfig -<parameter-name> $false
+Update-AzConfig -DisplaySecretsWarning $false
 ```
 
-You can also use the `$Env:<env-variable-name>` environment variable to disable the warning message.
+You can also use the `$Env:AZURE_CLIENTS_SHOW_SECRETS_WARNING` environment variable to disable the
+warning message.
 
 ```azurepowershell
-Set-Item -Path Env:\<env-variable-name> -Value $false
+Set-Item -Path Env:\AZURE_CLIENTS_SHOW_SECRETS_WARNING -Value $false
 ```
