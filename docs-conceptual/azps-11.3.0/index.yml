@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page
   author: mikefrobbins
   ms.author: mirobb
-  ms.date: 02/06/2024
+  ms.date: 03/01/2024
   ms.devlang: powershell
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
@@ -43,6 +43,8 @@ landingContent:
             url: install-azps-linux.md
           - text: Install - macOS
             url: install-azps-macos.md
+          - text: Offline Installation
+            url: install-azps-offline.md
           - text: Run in Azure Cloud Shell
             url: https://shell.azure.com
           - text: Azure PowerShell in Docker
