@@ -138,7 +138,7 @@
                 "az*-*/Az*.Batch/*.yml": "batch",
                 "az*-*/Az*.Billing/*.yml": "cost-management-billing",
                 "az*-*/Az*.Cdn/*.yml": "azure-cdn",
-                "az*-*/Az*.CognitiveServices/*.yml": "cognitive-services",
+                "az*-*/Az*.CognitiveServices/*.yml": "azure-ai-services",
                 "az*-*/Az*.Compute/*.yml": "virtual-machines",
                 "az*-*/Az*.ContainerInstance/*.yml": "container-instances",
                 "az*-*/Az*.ContainerRegistry/*.yml": "container-registry",
