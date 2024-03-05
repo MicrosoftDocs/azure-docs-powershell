@@ -518,12 +518,12 @@
                 "docs-conceptual/azuredmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
-                "azps-11.3.0/**/*": "OpenSource",
+                "azps-11.4.0/**/*": "OpenSource",
                 "docs-conceptual/**/**.md": "None",
                 "docs-conceptual/**/**.yml": "None",
-                "docs-conceptual/azps-11.3.0/**.md": "OpenSource",
-                "docs-conceptual/azps-11.3.0/**.yml": "OpenSource",
-                "azps-11.4.0/**/*": "None",
+                "docs-conceptual/azps-11.4.0/**.md": "OpenSource",
+                "docs-conceptual/azps-11.4.0/**.yml": "OpenSource",
+                "azps-11.3.0/**/*": "None",
                 "azps-10.4.1/**/*": "None",
                 "azps-0.10.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
