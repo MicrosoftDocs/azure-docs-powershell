@@ -27,6 +27,8 @@
       href: install-azps-linux.md
     - name: Install - macOS
       href: install-azps-macos.md
+    - name: Offline Installation
+      href: install-azps-offline.md
     - name: Run in Azure Cloud Shell
       href: https://shell.azure.com
     - name: Azure PowerShell in Docker
