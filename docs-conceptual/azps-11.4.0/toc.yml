@@ -41,6 +41,8 @@
           href: configure-global-settings.md
         - name: Intelligent command completion
           href: az-predictor.md
+        - name: Protect secrets
+          href: protect-secrets.md
         - name: Use the Az PowerShell module behind a proxy
           href: az-powershell-proxy.md
     - name: Authentication and Identity
