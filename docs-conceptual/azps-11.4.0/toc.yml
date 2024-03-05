@@ -27,6 +27,8 @@
       href: install-azps-linux.md
     - name: Install - macOS
       href: install-azps-macos.md
+    - name: Offline Installation
+      href: install-azps-offline.md
     - name: Run in Azure Cloud Shell
       href: https://shell.azure.com
     - name: Azure PowerShell in Docker
@@ -41,6 +43,8 @@
           href: configure-global-settings.md
         - name: Intelligent command completion
           href: az-predictor.md
+        - name: Protect secrets
+          href: protect-secrets.md
         - name: Use the Az PowerShell module behind a proxy
           href: az-powershell-proxy.md
     - name: Authentication and Identity
