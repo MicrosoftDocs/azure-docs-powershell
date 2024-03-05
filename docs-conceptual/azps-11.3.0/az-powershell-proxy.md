@@ -1,6 +1,6 @@
 ---
 description: How to use the Azure Az PowerShell module behind a proxy server
-ms.custom: devx-track-azurepowershell
+ms.custom:
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
