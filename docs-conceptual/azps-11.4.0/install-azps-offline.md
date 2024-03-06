@@ -120,7 +120,7 @@ using Windows PowerShell version 5.1.
 ## Troubleshooting
 
 For solutions to common installation issues with the Az PowerShell module, see
-[Troubleshoot installation problems with the Azure Az PowerShell module](troubleshooting.md#installation).
+[Troubleshoot installation problems with the Azure Az PowerShell module][troubleshoot-install].
 
 ## See also
 
@@ -130,12 +130,14 @@ For solutions to common installation issues with the Az PowerShell module, see
 ## Next Steps
 
 To learn more about managing your Azure resources with the Az PowerShell module, see
-[Get Started with Azure PowerShell](get-started-azureps.md).
+[Get Started with Azure PowerShell][get-started-azps].
 
 <!-- link references -->
 
 [install-powershell]: /powershell/scripting/install/installing-powershell-on-macos
 [private-repositories]: /powershell/scripting/gallery/how-to/working-with-local-psrepositories
 [install-azps-msi]: /powershell/azure/install-azps-windows?tabs=powershell&pivots=windows-msi
+[troubleshoot-install]: troubleshooting.md#installation
 [save-module]: /powershell/module/PowershellGet/Save-Module
 [save-psresource]: /powershell/module/microsoft.powershell.psresourceget/save-psresource
+[get-started-azps]: get-started-azureps.md
