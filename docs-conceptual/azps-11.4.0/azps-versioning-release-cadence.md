@@ -101,7 +101,7 @@ For more information, see
 
 ## Provide feedback
 
-- For general feedback, use the [`Send-Feedback`](/powershell/module/azurerm.profile/send-feedback) cmdlet.
+- For general feedback, use the [`Send-Feedback`](/powershell/module/az.accounts/send-feedback) cmdlet.
 - For product issues, log an [issue in the azure-powershell GitHub repository](https://github.com/Azure/azure-powershell/issues).
 
 ## Other resources

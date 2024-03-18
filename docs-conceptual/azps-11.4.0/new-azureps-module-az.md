@@ -15,15 +15,14 @@ The Az PowerShell module is a set of cmdlets for managing Azure resources direct
 PowerShell provides powerful features for automation that can be leveraged for managing your Azure
 resources, for example in the context of a CI/CD pipeline.
 
-The Az PowerShell module is the replacement of AzureRM and is the recommended version to use for
+The Az PowerShell module is the replacement for AzureRM and is the recommended module to use for
 interacting with Azure.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 You can use the Az PowerShell module with one of the following methods:
 
-- [Install the Az PowerShell module via PowerShellGet](install-azure-powershell.md) (recommended option).
-- [Install the Az PowerShell module with MSI](install-azure-powershell.md).
+- [Install the Az PowerShell module](install-azure-powershell.md).
 - [Use Azure Cloud Shell](/azure/cloud-shell/overview).
 - [Use the Az PowerShell Docker container](azureps-in-docker.md).
 
@@ -46,8 +45,8 @@ The Az PowerShell module features the following benefits:
   - Cmdlet available for advanced REST operations with Azure resources
 
 > [!NOTE]
-> PowerShell 7.2 or higher is the recommended version of PowerShell for use with the Azure
-> PowerShell Az module on all platforms.
+> PowerShell 7.2 or higher is the recommended version of PowerShell for use with the Az PowerShell
+> module on all platforms.
 
 The Az PowerShell module is based on the .NET Standard library and works with PowerShell 7.2 and
 later on all platforms including Windows, Linux, and macOS. It's also compatible with Windows
@@ -74,7 +73,7 @@ available to experiment with Az:
 To upgrade from an existing AzureRM install:
 
 1. [Uninstall the Azure PowerShell AzureRM module](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
-1. [Install the Azure PowerShell Az module](install-azure-powershell.md)
+1. [Install the Az PowerShell module](install-azure-powershell.md)
 1. **OPTIONAL**: Enable compatibility mode to add aliases for AzureRM cmdlets with
    [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) while you become
    familiar with the new command set. For more information, see the next section or
@@ -97,11 +96,10 @@ support if you have a support contract. Feature requests are implemented in the 
 Az. Critical issues are implemented on the last two versions of Az.
 
 Because Az PowerShell modules now have all the capabilities of AzureRM PowerShell modules and more,
-we'll retire AzureRM PowerShell modules on February 29, 2024.
+we've deprecated the AzureRM PowerShell modules as of February 29, 2024.
 
 To avoid service interruptions, [update your scripts](https://aka.ms/azpsmigrate) that use AzureRM
-PowerShell modules to use Az PowerShell modules by February 29, 2024. To automatically update your
-scripts, follow the
+PowerShell modules to use Az PowerShell modules. To automatically update your scripts, follow the
 [quickstart guide](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).
 
 ## Data collection

@@ -1,14 +1,14 @@
 ---
-
 ms.topic: include
-ms.custom:
+ms.custom: devx-track-azurepowershell
+ms.date: 03/18/2024
 ---
 
-> [!NOTE]
-> 
-> Starting in December 2018, no new features will be added to the AzureRM module. AzureRM will continue to be supported and
-> receive bug fixes through December 2020. New features are in the Azure PowerShell Az module. To learn more about the Az module,
-> including how to upgrade from AzureRM, see [the main Azure PowerShell documentation](/powershell/azure).
+> [!WARNING]
+> The AzureRM PowerShell module has been officially deprecated as of February 29, 2024. Users are
+> advised to migrate from AzureRM to the Az PowerShell module to ensure continued support and
+> updates.
 >
-> If using the classic deployment model, install the Service Management version of Azure PowerShell.
-> To learn more, see [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps).
+> Although the AzureRM module may still function, it's no longer maintained or supported, placing
+> any continued use at the user's discretion and risk. Please refer to our
+> [migration resources](https://aka.ms/azpsmigrate) for guidance on transitioning to the Az module.
