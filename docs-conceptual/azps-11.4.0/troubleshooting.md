@@ -144,8 +144,8 @@ same version of PowerShell.
 > conflicts between the AzureRM and Az PowerShell modules.
 
 Both Az and AzureRM may coexist on the same Windows system, but only if AzureRM is installed in the
-`CurrentUser` scope of Windows PowerShell and Az installed in PowerShell 7. For more information, see
-[Install the Azure Az PowerShell module](/powershell/azure/install-az-ps).
+`CurrentUser` scope of Windows PowerShell and Az installed in PowerShell 7. For more information,
+see [Install the Az PowerShell module](install-azure-powershell.md).
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
