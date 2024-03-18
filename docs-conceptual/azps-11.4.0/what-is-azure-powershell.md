@@ -74,8 +74,8 @@ information about those modules, see the documentation for
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
-The AzureRM PowerShell module is no longer recommended as deprecation has been announced, new
-features are no longer being added, and it's not cross platform. For more information, see
+The AzureRM PowerShell module is deprecated, new features are no longer being added, and it's not
+cross platform. For more information, see
 [Overview of the AzureRM PowerShell module](/powershell/azure/azurerm/overview).
 
 ### The Azure PowerShell module
