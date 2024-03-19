@@ -5,10 +5,10 @@ ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-title: Introducing the Azure Az PowerShell module
+title: Introducing the Az PowerShell module
 ---
 
-# Introducing the Azure Az PowerShell module
+# Introducing the Az PowerShell module
 
 ## Overview
 
@@ -48,7 +48,7 @@ The Az PowerShell module features the following benefits:
 
 > [!NOTE]
 > PowerShell 7.0.6 LTS, PowerShell 7.1.3, or higher is the recommended version of PowerShell for
-> use with the Azure Az PowerShell module on all platforms.
+> use with the Az PowerShell module on all platforms.
 
 The Az PowerShell module is based on the .NET Standard library and works with PowerShell 7 and later
 on all platforms including Windows, Linux, and macOS. It's also compatible with Windows PowerShell
@@ -75,7 +75,7 @@ available to experiment with Az:
 To upgrade from an existing AzureRM install:
 
 1. [Uninstall the Azure PowerShell AzureRM module](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
-1. [Install the Azure PowerShell Az module](install-azure-powershell.md)
+1. [Install the Az PowerShell module](install-azure-powershell.md)
 1. **OPTIONAL**: Enable compatibility mode to add aliases for AzureRM cmdlets with
    [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) while you become
    familiar with the new command set. For more information, see the next section or

@@ -1,5 +1,5 @@
 ---
-description: Learn the steps and tools for migrating Azure PowerShell scripts from AzureRM to the new Az PowerShell module.
+description: Learn the steps and tools for migrating Azure PowerShell scripts from AzureRM to the Az PowerShell module.
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
@@ -28,7 +28,7 @@ Scripts written for the AzureRM cmdlets won't automatically work with Az. To mak
 easier, the [AzureRM to Az migration toolkit](/powershell/azure/migration-overview) was developed.
 No migration to a new command set is ever convenient, but this article will help you get started on
 transitioning to the Az PowerShell module. To learn more about why the Az PowerShell module was
-created, see [Introducing the new Azure PowerShell Az module](new-azureps-module-az.md).
+created, see [Introducing the Az PowerShell module](new-azureps-module-az.md).
 
 The new cmdlet names have been designed to be easy to learn. Instead of using `AzureRm` or `Azure`
 in cmdlet names, use `Az`. For example, the old cmdlet `New-AzureRMVm` has become `New-AzVm`.

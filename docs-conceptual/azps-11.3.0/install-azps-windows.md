@@ -11,7 +11,7 @@ zone_pivot_groups: install-azps-windows
 
 # Install Azure PowerShell on Windows
 
-The Azure PowerShell Az module is a rollup module. Installing the Az PowerShell module downloads the
+The Az PowerShell module is a rollup module. Installing the Az PowerShell module downloads the
 generally available modules and makes their cmdlets available for use.
 
 The recommended installation method and PowerShell version for the Az PowerShell module:
@@ -192,7 +192,7 @@ your Azure sign-in across PowerShell sessions, see
 ## Troubleshooting
 
 For solutions to common installation issues with the Az PowerShell module, see
-[Troubleshoot installation problems with the Azure Az PowerShell module](troubleshooting.md#installation).
+[Troubleshoot installation problems with the Az PowerShell module](troubleshooting.md#installation).
 
 ## Provide feedback
 

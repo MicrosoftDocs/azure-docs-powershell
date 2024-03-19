@@ -1,5 +1,5 @@
 ---
-description: Overview of the AzureRM PowerShell module retirement including steps and tools for migrating Azure PowerShell scripts from AzureRM to the new Az PowerShell module.
+description: Overview of the AzureRM PowerShell module retirement including steps and tools for migrating Azure PowerShell scripts from AzureRM to the Az PowerShell module.
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
