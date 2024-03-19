@@ -1,5 +1,5 @@
 ---
-description: Learn about upcoming breaking changes to the Azure Az PowerShell module
+description: Learn about upcoming breaking changes to the Az PowerShell module
 ms.custom: devx-track-azurepowershell
 
 ms.devlang: powershell

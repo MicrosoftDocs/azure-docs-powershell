@@ -53,13 +53,13 @@ PowerShell 5.1 for Windows. Before you install the Az module,
 > 6.x or later instead. PowerShell Core and PowerShell 5.1 for Windows use different module libraries,
 > so there will be no conflicts. You can still [enable aliases](#enable-azurerm-compatibility-aliases) in PowerShell Core.
 
-## Install the Azure PowerShell Az module
+## Install the Az PowerShell module
 
 The first step is to install the Az module on your platform. When you install Az, it's recommended
 that you uninstall AzureRM. In the following steps, you'll learn how to keep running your existing
 scripts and enable compatibility for old cmdlet names.
 
-To install the Azure PowerShell Az module, follow the instructions in [Install the Az module](install-az-ps.md).
+To install the Az PowerShell module, follow the instructions in [Install the Az module](install-az-ps.md).
 
 > [!NOTE]
 > At this point, you might want to run the [Uninstall-AzureRM](/powershell/module/az.accounts/uninstall-azurerm)

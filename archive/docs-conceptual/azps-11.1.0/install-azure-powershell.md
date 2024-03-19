@@ -10,7 +10,7 @@ title: How to install Azure PowerShell
 
 # How to install Azure PowerShell
 
-The Azure PowerShell Az module is a rollup module. Installing the Az PowerShell module downloads the
+The Az PowerShell module is a rollup module. Installing the Az PowerShell module downloads the
 generally available modules and makes their cmdlets available for use.
 
 ## Install

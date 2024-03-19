@@ -4,10 +4,10 @@ ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-title: Introducing the Azure Az PowerShell module
+title: Introducing the Az PowerShell module
 ---
 
-# Introducing the Azure Az PowerShell module
+# Introducing the Az PowerShell module
 
 ## Overview
 
