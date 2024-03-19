@@ -120,7 +120,7 @@ using Windows PowerShell version 5.1.
 ## Troubleshooting
 
 For solutions to common installation issues with the Az PowerShell module, see
-[Troubleshoot installation problems with the Azure Az PowerShell module](troubleshooting.md#installation).
+[Troubleshoot installation problems with the Az PowerShell module](troubleshooting.md#installation).
 
 ## See also
 

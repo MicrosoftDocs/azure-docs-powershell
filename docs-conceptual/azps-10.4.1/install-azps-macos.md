@@ -10,7 +10,7 @@ title: Install Azure PowerShell on macOS
 
 # Install Azure PowerShell on macOS
 
-This article explains how to install the Azure PowerShell Az module from
+This article explains how to install the Az PowerShell module from
 [the PowerShell Gallery](/powershell/scripting/gallery/overview) on macOS.
 
 The Az PowerShell module is a rollup module. Installing it downloads the generally available Az

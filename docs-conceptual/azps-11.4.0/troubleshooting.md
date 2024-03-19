@@ -1,13 +1,13 @@
 ---
-description: Troubleshooting the Azure Az PowerShell module.
+description: Troubleshooting the Az PowerShell module.
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: conceptual
-title: Troubleshooting the Azure Az PowerShell module
+title: Troubleshooting the Az PowerShell module
 ---
 
-# Troubleshooting the Azure Az PowerShell module
+# Troubleshooting the Az PowerShell module
 
 ## Enable debug logging
 
@@ -51,7 +51,7 @@ Windows system:
 Older versions of Visual Studio may install Azure PowerShell as part of the Azure development
 workload, which installs the AzureRM module. Azure PowerShell can be removed using the Visual Studio
 installer or by using "Uninstall" in Apps & features. If you have already installed PowerShell 7.x,
-you may need to [manually install](install-azure-powershell.md) the Azure Az PowerShell module.
+you may need to [manually install](install-azure-powershell.md) the Az PowerShell module.
 
 ### Proxy blocks connection
 
