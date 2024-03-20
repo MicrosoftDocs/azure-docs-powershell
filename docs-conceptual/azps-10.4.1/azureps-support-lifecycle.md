@@ -39,7 +39,7 @@ modules.
 | ![Supported][1] Az 10.x        |   ![Not Supported][3]   |     ![Supported][1]     |       ![Supported][1]        |
 | ![Supported][1] Az 9.x         |   ![Not Supported][3]   |     ![Supported][1]     |       ![Supported][1]        |
 | ![Out of Support][4] <= Az 8.x |  ![Out of Support][4]   |  ![Out of Support][4]   |     ![Out of Support][4]     |
-| ![Supported][1] AzureRM 6.13.2 |   ![Not Supported][3]   |   ![Not Supported][3]   |       ![Supported][1]        |
+| ![Supported][1] AzureRM 6.13.2 |   ![Not Supported][3]   |   ![Not Supported][3]   |    ![Out of Supported][4]    |
 | ![Supported][1] Azure 5.3.1    |   ![Not Supported][3]   |   ![Not Supported][3]   |       ![Supported][1]        |
 
 > [!NOTE]
@@ -65,8 +65,7 @@ further information, go to [https://aka.ms/azpslifecycle](https://aka.ms/azpslif
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 To avoid service interruptions, [update your scripts](https://aka.ms/azpsmigrate) that use AzureRM
-PowerShell modules to use Az PowerShell modules by February 29, 2024. To automatically update your
-scripts, follow the
+PowerShell modules to use Az PowerShell modules. To automatically update your scripts, follow the
 [quickstart guide](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).
 
 <!-- link references -->

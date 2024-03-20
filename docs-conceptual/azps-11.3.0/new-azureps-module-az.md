@@ -97,11 +97,10 @@ support if you have a support contract. Feature requests are implemented in the 
 Az. Critical issues are implemented on the last two versions of Az.
 
 Because Az PowerShell modules now have all the capabilities of AzureRM PowerShell modules and more,
-we'll retire AzureRM PowerShell modules on February 29, 2024.
+we've deprecated the AzureRM PowerShell modules as of February 29, 2024.
 
 To avoid service interruptions, [update your scripts](https://aka.ms/azpsmigrate) that use AzureRM
-PowerShell modules to use Az PowerShell modules by February 29, 2024. To automatically update your
-scripts, follow the
+PowerShell modules to use Az PowerShell modules. To automatically update your scripts, follow the
 [quickstart guide](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).
 
 ## Data collection

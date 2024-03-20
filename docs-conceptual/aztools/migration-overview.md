@@ -13,7 +13,7 @@ The **Az.Tools.Migration** PowerShell module facilitates the transition from the
 module to the newer **Az** module, which is recommended for Azure management.
 
 > [!IMPORTANT]
-> The **AzureRM** PowerShell module is deprecated and will be retired on February 29, 2024.
+> The **AzureRM** PowerShell module is deprecated as of February 29, 2024.
 
 Microsoft introduced **Az.Tools.Migration** in response to customer feedback, particularly
 concerning the effort required to update scripts that were originally written for **AzureRM**.
