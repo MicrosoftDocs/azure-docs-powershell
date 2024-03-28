@@ -4,7 +4,7 @@ metadata:
   description: Frequently Asked Questions about Azure PowerShell.
   ms.devlang: powershell
   ms.topic: faq
-  ms.date: 02/29/2024
+  ms.date: 03/05/2024
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
 
@@ -21,7 +21,7 @@ sections:
           PowerShell. In December 2018, the Az PowerShell module became generally available. It's now the
           recommended PowerShell module for interacting with Azure. To learn more about the Az PowerShell
           module, see
-          [Introducing the new Azure PowerShell Az module](/powershell/azure/new-azureps-module-az).
+          [Introducing the Az PowerShell module](/powershell/azure/new-azureps-module-az).
 
       - question: |
           How do I disable breaking change warning messages in Azure PowerShell?

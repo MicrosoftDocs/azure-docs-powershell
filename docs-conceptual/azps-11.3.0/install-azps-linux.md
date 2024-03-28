@@ -9,8 +9,8 @@ title: Install Azure PowerShell on Linux
 
 # Install Azure PowerShell on Linux
 
-The Azure PowerShell Az module is a rollup module. Installing it downloads the generally available
-Az PowerShell modules and makes their cmdlets available for use.
+The Az PowerShell module is a rollup module. Installing it downloads the generally available Az
+PowerShell modules and makes their cmdlets available for use.
 
 This article explains how to install the Az PowerShell module on Linux.
 
@@ -64,7 +64,7 @@ your Azure sign-in across PowerShell sessions, see
 ## Troubleshooting
 
 For solutions to common installation issues with the Az PowerShell module, see
-[Troubleshoot installation problems with the Azure Az PowerShell module](troubleshooting.md#installation).
+[Troubleshoot installation problems with the Az PowerShell module](troubleshooting.md#installation).
 
 ## Provide feedback
 

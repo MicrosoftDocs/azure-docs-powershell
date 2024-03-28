@@ -1,5 +1,5 @@
 ---
-description: Overview of the AzureRM PowerShell module retirement including steps and tools for migrating Azure PowerShell scripts from AzureRM to the new Az PowerShell module.
+description: Overview of the AzureRM PowerShell module retirement including steps and tools for migrating Azure PowerShell scripts from AzureRM to the Az PowerShell module.
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
@@ -9,8 +9,8 @@ title: AzureRM PowerShell module retirement overview
 
 # AzureRM PowerShell module retirement overview
 
-All versions of the AzureRM PowerShell module are outdated. The [Az PowerShell
-module](install-azure-powershell.md) is now the recommended PowerShell module for interacting with
+All versions of the AzureRM PowerShell module are deprecated. The [Az PowerShell
+module](install-azure-powershell.md) is the recommended PowerShell module for interacting with
 Azure.
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]

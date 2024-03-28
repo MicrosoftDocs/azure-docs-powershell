@@ -17,8 +17,7 @@ ms.service: azure-powershell
 Azure PowerShell is a set of cmdlets that allows you to manage Azure resources directly with
 PowerShell. In December 2018, the Az PowerShell module became generally available. It's now the
 recommended PowerShell module for interacting with Azure. To learn more about the Az PowerShell
-module, see
-[Introducing the new Azure PowerShell Az module](/powershell/azure/new-azureps-module-az).
+module, see [Introducing the Az PowerShell module](/powershell/azure/new-azureps-module-az).
 
 ## How do I disable breaking change warning messages in Azure PowerShell?
 
