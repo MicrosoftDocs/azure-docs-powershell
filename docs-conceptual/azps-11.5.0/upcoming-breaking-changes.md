@@ -34,7 +34,7 @@ title: Upcoming breaking changes in Azure PowerShell
 ### `Get-AzCosmosDBAccountKey`
 
 - Cmdlet breaking-change will happen to all parameter sets
-  - Output type for -Type ConnectionStrings will be changed to List<DatabaseAccountConnectionString> in next major version.
+  - Output type for -Type ConnectionStrings will be changed to List`<DatabaseAccountConnectionString>` in next major version.
   - This change is expected to take effect from Az.CosmosDB version: 2.0.0 and Az version: 12.0.0
 
 ## Az.KeyVault
