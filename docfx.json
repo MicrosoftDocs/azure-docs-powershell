@@ -488,7 +488,7 @@
             },
             "ms.date": {
                 "azps-11.4.0/**/*.yml": "03/05/2024",
-                "azps-11.5.0/**/*.yml": "3/28/2024",
+                "azps-11.5.0/**/*.yml": "04/02/2024",
                 "azps-10.4.1/**/*.yml": "09/26/2023",
                 "azps-0.10.0/**/*.yml": "4/14/2020",
                 "azurermps-6.13.0/**/*.yml": "03/23/2021",
@@ -567,7 +567,7 @@
             "author": "mikefrobbins",
             "ms.manager": "jasongroce",
             "uhfHeaderId": "Azure",
-            "ms.date": "03/05/2024"
+            "ms.date": "04/02/2024"
         },
         "dest": "azureps",
         "lruSize": 0,
