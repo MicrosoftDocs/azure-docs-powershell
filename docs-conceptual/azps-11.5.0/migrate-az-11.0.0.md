@@ -179,16 +179,17 @@ APPINSIGHTS_INSTRUMENTATIONKEY     <guid>
 FUNCTIONS_WORKER_RUNTIME                 powershell
 WEBSITE_CONTENTSHARE                            <share name>
 ```
-```
+
 #### After
 ```powershell
 Update-AzFunctionAppSetting  -Name <AppName> -ResourceGroupName <ResourceGroupName>  -AppSetting @{"foo3"="bar3"}
+```
+
 ```output
 Name                      Value
 ----                           -----
 foo3                         bar3
 ```
-
 
 ## Az.KeyVault
 
