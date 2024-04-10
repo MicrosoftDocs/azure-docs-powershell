@@ -127,6 +127,7 @@ This cmdlet will redact the application settings of the returned function apps a
 #### Before
 ```powershell
 Get-AzFunctionApp  -Name <AppName> -ResourceGroupName <ResourceGroupName>
+```
 ```output
 Name                                                                        Value
 ----                                                                             -----
@@ -138,10 +139,12 @@ APPINSIGHTS_INSTRUMENTATIONKEY     <guid>
 FUNCTIONS_WORKER_RUNTIME                 powershell
 WEBSITE_CONTENTSHARE                            <share name>
 ```
-```
+
 #### After
 ```powershell
 Get-AzFunctionApp  -Name <AppName> -ResourceGroupName <ResourceGroupName>
+```
+
 ```output
 WARNING: App settings have been redacted. Use the Get-AzFunctionAppSetting cmdlet to view them.
 Name                                                                        Value
@@ -154,7 +157,6 @@ APPINSIGHTS_INSTRUMENTATIONKEY
 FUNCTIONS_WORKER_RUNTIME                 
 WEBSITE_CONTENTSHARE                             
 ```
-```
 
 
 ### `Update-AzFunctionAppSetting`
@@ -163,6 +165,8 @@ This cmdlet will only return the updated application settings while previously a
 #### Before
 ```powershell
 Update-AzFunctionAppSetting  -Name <AppName> -ResourceGroupName <ResourceGroupName>  -AppSetting @{"foo3"="bar3"}
+```
+
 ```output
 Name                                                                        Value
 ----                                                                             -----
@@ -175,17 +179,17 @@ APPINSIGHTS_INSTRUMENTATIONKEY     <guid>
 FUNCTIONS_WORKER_RUNTIME                 powershell
 WEBSITE_CONTENTSHARE                            <share name>
 ```
-```
+
 #### After
 ```powershell
 Update-AzFunctionAppSetting  -Name <AppName> -ResourceGroupName <ResourceGroupName>  -AppSetting @{"foo3"="bar3"}
+```
+
 ```output
 Name                      Value
 ----                           -----
 foo3                         bar3
 ```
-```
-
 
 ## Az.KeyVault
 
