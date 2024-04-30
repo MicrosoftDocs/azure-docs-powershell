@@ -64,7 +64,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Cmdlet reference
-            url: /powershell/module/?view=azps-11.5.0
+            url: /powershell/module/?view=azps-11.6.0
   - title: Identity and Authentication
     linkLists:
       - linkListType: how-to-guide
