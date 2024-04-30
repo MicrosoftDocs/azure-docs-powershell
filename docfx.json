@@ -487,7 +487,7 @@
                 "docs-conceptual/**/*.md": "conceptual"
             },
             "ms.date": {
-                "azps-11.6.0/**/*.yml": "04/28/2024",
+                "azps-11.6.0/**/*.yml": "04/30/2024",
                 "azps-11.5.0/**/*.yml": "04/02/2024",
                 "azps-10.4.1/**/*.yml": "09/26/2023",
                 "azps-0.10.0/**/*.yml": "4/14/2020",
@@ -518,12 +518,12 @@
                 "docs-conceptual/azuredmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
-                "azps-11.5.0/**/*": "OpenSource",
+                "azps-11.6.0/**/*": "OpenSource",
                 "docs-conceptual/**/**.md": "None",
                 "docs-conceptual/**/**.yml": "None",
-                "docs-conceptual/azps-11.5.0/**.md": "OpenSource",
-                "docs-conceptual/azps-11.5.0/**.yml": "OpenSource",
-                "azps-11.6.0/**/*": "None",
+                "docs-conceptual/azps-11.6.0/**.md": "OpenSource",
+                "docs-conceptual/azps-11.6.0/**.yml": "OpenSource",
+                "azps-11.5.0/**/*": "None",
                 "azps-10.4.1/**/*": "None",
                 "azps-0.10.0/**/*": "None",
                 "azurermps-6.13.0/**/*": "None",
@@ -567,7 +567,7 @@
             "author": "mikefrobbins",
             "ms.manager": "jasongroce",
             "uhfHeaderId": "Azure",
-            "ms.date": "04/02/2024"
+            "ms.date": "04/30/2024"
         },
         "dest": "azureps",
         "lruSize": 0,
