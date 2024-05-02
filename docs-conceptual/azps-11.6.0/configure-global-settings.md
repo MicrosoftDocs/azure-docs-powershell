@@ -39,6 +39,16 @@ Besides scopes, you can apply the settings to all Az PowerShell modules or only 
 With the **AppliesTo** parameter, you can specify how broad you want the setting applied. The value
 `Az` indicates the setting is applied to all modules available that are part of Azure PowerShell.
 
+## Breaking change warning messages
+
+To disable breaking change warning messages for cmdlets in all **Az** modules, use the
+`Update-AzConfig` cmdlet with the **DisplayBreakingChangeWarning** parameter as shown in the
+following example.
+
+```azurepowershell-interactive
+Update-AzConfig -DisplayBreakingChangeWarning $false
+```
+
 To disable the breaking change warning message for cmdlets in the **Az.Compute** module, use the
 `Update-AzConfig` cmdlet with the **DisplayBreakingChangeWarning** and **AppliesTo** parameters as
 shown in the following example.

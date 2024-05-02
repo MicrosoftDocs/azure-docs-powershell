@@ -75,6 +75,7 @@ Various types of breaking changes can occur in cmdlets. For more information, se
 For detailed information about breaking changes in major releases of the Az PowerShell module, see
 the following articles.
 
+- [Upcoming breaking changes](upcoming-breaking-changes.md)
 - [Az 11.0.0 breaking changes](migrate-az-11.0.0.md)
 - [Az 10.0.0 breaking changes](migrate-az-10.0.0.md)
 - [Az 9.0.1 breaking changes](migrate-az-9.0.1.md)
@@ -94,7 +95,7 @@ breaking changes with end users.
 ### Suppress breaking change warning messages
 
 To suppress breaking change warning messages, see
-[How do I disable breaking change warning messages in Azure PowerShell?](/powershell/azure/faq#how-do-i-disable-breaking-change-warning-messages-in-azure-powershell-).
+[Configure breaking change warning messages in global settings](configure-global-settings.md#breaking-change-warning-messages).
 
 For more information, see
 [Breaking Changes Attribute Help](https://github.com/Azure/azure-powershell/blob/preview/documentation/breaking-changes/breaking-changes-attribute-help.md#supress-the-breaking-change-messages-at-runtime).
