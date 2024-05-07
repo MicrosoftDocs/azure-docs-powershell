@@ -14,6 +14,12 @@ title: Upcoming breaking changes in Azure PowerShell
 - In the upcoming major release of Azure PowerShell (Az 12.0.0), the `DisplaySecretsWarning` configuration option will be activated by default. A warning message will be shown when secrets are detected in the output of a cmdlet.
   For additional context, please visit [Hardening your defense in depth with secrets awareness in Azure command line tools](https://techcommunity.microsoft.com/t5/azure-tools-blog/hardening-your-defense-in-depth-with-secrets-awareness-in-azure/ba-p/4049883).
   For command usage details, please refer to [Protect secrets in Azure PowerShell](https://go.microsoft.com/fwlink/?linkid=2258844).
+- In the upcoming major release of Azure PowerShell (Az 12.0.0), Web Account Manager (WAM) will be
+  enabled by default for interactive logins. For more information, see
+  [Web Account Manager (WAM)](authenticate-interactive.md#web-account-manager-wam)
+- In the upcoming major release of Azure PowerShell (Az 12.0.0), the new login experience will be
+  used for interactive logins. For more information, see
+  [Announcing a new login experience with Azure PowerShell and Azure CLI](https://techcommunity.microsoft.com/t5/azure-tools-blog/announcing-a-new-login-experience-with-azure-powershell-and/ba-p/4109357).
 
 ## Az.Accounts
 
