@@ -23,20 +23,20 @@ history, or version control systems.
 
 ## Warning message
 
-Azure PowerShell displays a warning message by default beginning with version 11.4.0 to help you
-protect sensitive information when it identifies a potential secret in the output of a command.
+Azure PowerShell can display a warning message, beginning with version 11.4.0, to help you protect
+sensitive information when it identifies a potential secret in the output of a command.
 
-### Disable the warning message
+### Enable the warning message
 
-In the following example, the `Update-AzConfig` cmdlet is used to disable the warning message.
+In the following example, the `Update-AzConfig` cmdlet is used to enable the warning message.
 
 ```azurepowershell-interactive
-Update-AzConfig -DisplaySecretsWarning $false
+Update-AzConfig -DisplaySecretsWarning $true
 ```
 
-You can also use the `$Env:AZURE_CLIENTS_SHOW_SECRETS_WARNING` environment variable to disable the
+You can also use the `$Env:AZURE_CLIENTS_SHOW_SECRETS_WARNING` environment variable to enable the
 warning message.
 
 ```azurepowershell
-Set-Item -Path Env:\AZURE_CLIENTS_SHOW_SECRETS_WARNING -Value $false
+Set-Item -Path Env:\AZURE_CLIENTS_SHOW_SECRETS_WARNING -Value $true
 ```
