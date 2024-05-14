@@ -40,10 +40,12 @@ in.
 
 1. Sign in with your Azure account credentials in the browser.
 
-If you have access to multiple subscriptions, you're signed in to the first subscription Azure
-returns. Commands run against this subscription by default. To change your active subscription for a
-session, use the `Set-AzContext` cmdlet. To change your active subscription and have it persist
-between sessions on the same system, use the `Select-AzContext` cmdlet.
+Beginning with Az PowerShell module version 12.0.0, if you have access to multiple subscriptions,
+you're prompted to select a subscription. For more information, see
+[Login experience](#login-experience). Commands run against this subscription by default. To change
+your active subscription for a session, use the `Set-AzContext` cmdlet. To change your active
+subscription and have it persist between sessions on the same system, use the `Select-AzContext`
+cmdlet.
 
 > [!IMPORTANT]
 > Your credentials are shared among multiple PowerShell sessions as long as you remain signed in.
@@ -86,6 +88,71 @@ You can get a list of available environments by running the following command:
 
 ```azurepowershell
 Get-AzEnvironment | Select-Object -Property Name
+```
+
+## Login experience
+
+Beginning with Az PowerShell module version 12.0.0, if you have access to multiple subscriptions,
+you're prompted to select an Azure subscription to login with, as shown in the following example.
+
+```Output
+Please select the account you want to login with.
+
+Retrieving subscriptions for the selection...
+WARNING: To override which subscription Connect-AzAccount selects by default, use
+`Update-AzConfig -DefaultSubscriptionForLogin 00000000-0000-0000-0000-000000000000`.
+Go to https://go.microsoft.com/fwlink/?linkid=2200610 for more information.
+[Tenant and subscription selection]
+
+No    Subscription name                     Subscription ID                           Tenant name
+----  ------------------------------------  ----------------------------------------  --------------
+[1]   Facility Services Subscription        00000000-0000-0000-0000-000000000000      Contoso
+[2] * Finance Department Subscription       00000000-0000-0000-0000-000000000000      Contoso
+[3]   Human Resources Subscription          00000000-0000-0000-0000-000000000000      Contoso
+[4]   Information Technology Subscription   00000000-0000-0000-0000-000000000000      Contoso
+
+The default is marked with an *; the default tenant is 'Contoso' and subscription is
+'Finance Department Subscription (00000000-0000-0000-0000-000000000000)'.
+
+Select a tenant and subscription (type a number or Enter to accept default): 4
+
+Subscription name                       Tenant name
+------------------------------------    --------------------------
+Information Technology Subscription     Contoso
+
+[Announcements]
+With the new Azure PowerShell login experience, you can select the subscription you want to use more easily.
+Learn more about it and its configuration at https://go.microsoft.com/fwlink/?linkid=2271236.
+Share your feedback regarding your experience with `Connect-AzAccount` at: https://aka.ms/azloginfeedback
+
+If you encounter any problem, please open an issue at: https://aka.ms/azpsissue
+
+Subscription name                      Tenant
+-----------------                      ------
+Information Technology Subscription    Contoso
+
+
+The default is marked with an *; the default tenant is 'Contoso' and subscription is
+'Finance Department Subscription (00000000-0000-0000-0000-000000000000)'.
+
+Select a tenant and subscription (type a number or Enter to accept default): 4
+
+Subscription name                       Tenant name
+------------------------------------    --------------------------
+Information Technology Subscription     Contoso
+```
+
+Commands run against this subscription by default. To change your active subscription, use the
+`Set-AzContext` cmdlet. For more information, see
+[Azure PowerShell context objects][context-persistence].
+
+### Configure your default subscription for login
+
+Use `Update-AzConfig` to set your default subscription and prevent being prompted to select a
+subscription each time you log in interactively.
+
+```powershell
+Update-AzConfig -DefaultSubscriptionForLogin '<subscription name or id>'
 ```
 
 ## Web Account Manager (WAM)
