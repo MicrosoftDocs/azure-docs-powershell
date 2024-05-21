@@ -131,7 +131,7 @@ title: Azure PowerShell release notes
 #### Az.Resources 7.1.0
 * Fixed deployment and deployment stack New/Set cmdlets to fail if template/parameter uri fails to downloads.
 * Deployment Stack cmdlets GA release/updates.
-* [Breaking Change] Redesigned CRUD cmdlets for 'PolicyAssignment', 'PolicyDefinition', 'PolicyExemption', 'PolicySetDefinition'. Please see Az 12 migration guide https://learn.microsoft.com/en-us/powershell/azure/migrate-az-12.0.0 for more detail.
+* [Breaking Change] Redesigned CRUD cmdlets for 'PolicyAssignment', 'PolicyDefinition', 'PolicyExemption', 'PolicySetDefinition'. Please see [Az 12 migration guide](migrate-az-12.0.0.md) for more detail.
 * Added null check to the permissions object in the ToPSRoleDefinition method to return if the whole permissions object array is null.
 
 #### Az.ServiceBus 4.0.0
