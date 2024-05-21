@@ -17,8 +17,8 @@
     },
     {
       "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/azps-versioning-release-cadence/",
-      "source_path": "docs-conceptual/azps-12.0.0/azureps-support-lifecycle.md"
+      "redirect_url": "/powershell/azure/azureps-support-lifecycle/",
+      "source_path": "docs-conceptual/azps-12.0.0/azps-versioning-release-cadence.md"
     },
     {
       "redirect_document_id": false,
