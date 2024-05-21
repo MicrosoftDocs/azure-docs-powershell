@@ -7,8 +7,6 @@
     - name: Get started
       href: get-started-azureps.md
       displayName: sign in, signin, log in, login, find, feedback, intro, introduction
-    - name: Module versioning and release cadence
-      href: azps-versioning-release-cadence.md
     - name: Support lifecycle
       href: azureps-support-lifecycle.md
 - name: What's New
