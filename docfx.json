@@ -1,17 +1,13 @@
 {
     "build": {
         "content": [
-            { "files": ["toc.yml"], "src": "azps-11.6.0", "version": "azps-11.6.0", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-11.6.0", "version": "azps-11.6.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-11.6.0", "version": "azps-11.6.0", "dest": "azure" },
-
             { "files": ["toc.yml"], "src": "azps-12.0.0", "version": "azps-12.0.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-12.0.0", "version": "azps-12.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-12.0.0", "version": "azps-12.0.0", "dest": "azure" },
 
-            { "files": ["toc.yml"], "src": "azps-10.4.1", "version": "azps-10.4.1", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-10.4.1", "version": "azps-10.4.1", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-10.4.1", "version": "azps-10.4.1", "dest": "azure" },
+            { "files": ["toc.yml"], "src": "azps-11.6.0", "version": "azps-11.6.0", "dest": "module/azure-powershell" },
+            { "files": ["**/*.yml"], "src": "azps-11.6.0", "version": "azps-11.6.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-11.6.0", "version": "azps-11.6.0", "dest": "azure" },
 
             { "files": ["toc.yml"], "src": "azps-0.10.0", "version": "azps-0.10.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-0.10.0", "version": "azps-0.10.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
@@ -67,16 +63,14 @@
             { "files": ["**/*.md"], "src": "azureelasticdbjobsps-0.8.33", "version": "azureelasticdbjobsps-0.8.33" }
         ],
         "resource": [
-            { "files": ["media/**"], "version": "azps-11.6.0" },
             { "files": ["media/**"], "version": "azps-12.0.0" },
-            { "files": ["media/**"], "version": "azps-10.4.1" },
+            { "files": ["media/**"], "version": "azps-11.6.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" },
             { "files": ["media/**"], "version": "azurermps-6.13.0" }
         ],
         "versions": {
-            "azps-11.6.0": { "dest": "azps-11.6.0" },
             "azps-12.0.0": { "dest": "azps-12.0.0" },
-            "azps-10.4.1": { "dest": "azps-10.4.1" },
+            "azps-11.6.0": { "dest": "azps-11.6.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
             "azurermps-6.13.0": { "dest": "azurermps-6.13.0" },
             "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" },
