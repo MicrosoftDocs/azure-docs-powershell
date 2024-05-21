@@ -35,5 +35,4 @@ The Az PowerShell module is preinstalled in Azure [Cloud Shell](/azure/cloud-she
 
 - [What is Azure PowerShell](what-is-azure-powershell.md)
 - [Get started with Azure PowerShell](get-started-azureps.md)
-- [Versioning, release cadence, and breaking changes](azps-versioning-release-cadence.md)
 - [Support Lifecycle](azureps-support-lifecycle.md)

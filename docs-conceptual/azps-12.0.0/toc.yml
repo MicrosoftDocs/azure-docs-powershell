@@ -7,8 +7,6 @@
     - name: Get started
       href: get-started-azureps.md
       displayName: sign in, signin, log in, login, find, feedback, intro, introduction
-    - name: Module versioning and release cadence
-      href: azps-versioning-release-cadence.md
     - name: Support lifecycle
       href: azureps-support-lifecycle.md
 - name: What's New
@@ -122,6 +120,8 @@
       href: azps-msgraph-migration-changes.md
     - name: Migrate from previous versions of Az
       items:
+        - name: Az 12.0.0 Migration Guide
+          href: migrate-az-11.0.0.md
         - name: Az 11.0.0 Migration Guide
           href: migrate-az-11.0.0.md
         - name: Az 10.0.0 Migration Guide
