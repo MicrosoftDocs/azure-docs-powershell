@@ -13,14 +13,28 @@ This page highlights new features, articles, and learning paths for Azure PowerS
 
 ## Protect sensitive information
 
-Beginning in [Azure PowerShell 11.4.0][az11.4.0-releasenotes], a warning message can be displayed
-when reference commands result in the output of sensitive information. For more information, see
-[Protect secrets in Azure PowerShell][protect-secrets].
+Azure PowerShell displays a warning message by default beginning with Az version 12.0.0 to help you
+protect sensitive information when it identifies a potential secret in the output of a command. For
+more information, see [Protect secrets in Azure PowerShell][protect-secrets].
 
 ## Sign in with Web Account Manager (WAM)
 
-Azure PowerShell now offers preview support for sign-in with Web Account Manager (WAM). Read about
-the benefits of WAM and how to enable the feature in [Sign in with Web Account Manager][wam].
+Beginning with Az PowerShell module version 12.0.0, Azure PowerShell's default login authentication
+method for Windows-based systems is Web Account Manager (WAM). For more information, see
+[Web Account Manager (WAM)][wam].
+
+## New login experience
+
+Beginning with Az PowerShell module version 12.0.0, if you have access to multiple subscriptions,
+you're prompted to select an Azure subscription to login with. For more information, see
+[Login experience][login-experience].
+
+## Support lifecycle
+
+Beginning with Az PowerShell module version 12.0.0, Azure PowerShell ships two types of generally
+available releases. Customers can choose Standard Term Support (STS) or Long Term Support (LTS)
+releases. The quality of all releases is the same. The only difference is the length of support. For
+more information, see [Support of releases][support-of-releases].
 
 ## Upgrade notifications
 
@@ -83,9 +97,10 @@ PowerShell modules to use Az PowerShell modules. To automatically update your sc
 
 <!-- link references -->
 
-[az11.4.0-releasenotes]: /powershell/azure/release-notes-azureps#1140---march-2024
 [protect-secrets]: protect-secrets.md
 [wam]: authenticate-interactive.md#web-account-manager-wam
+[login-experience]: authenticate-interactive.md#login-experience
+[support-of-releases]: azureps-support-lifecycle.md#support-of-releases
 [upgrade-notifications]: configure-global-settings.md#upgrade-notifications
 [az.app]:/powershell/module/az.app
 [az.devcenter]: /powershell/module/az.devcenter
