@@ -1389,7 +1389,7 @@ $ResourceType = $VaultSettings.ResourceType
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyAssignment' is changing
-  - The following properties in the output type are being deprecated : 'Properties'
+  - The following properties in the output type are being deprecated : 'Properties', 'Identity', 'ResourceId', 'ResourceName', 'ResourceType', 'PolicyAssignmentId'
   - The following properties are being added to the output type : 'Description' 'DisplayName' 'EnforcementMode' 'Metadata' 'NonComplianceMessages' 'NotScopes' 'Parameters' 'PolicyDefinitionId' 'Scope'
   - This change is expected to take effect from Az.Resources version: 7.1.0 and Az version: 12.0.0
 
@@ -1397,17 +1397,19 @@ $ResourceType = $VaultSettings.ResourceType
 ```powershell
 $policyAssignment = Get-AzPolicyAssignment -Name MyAssignment
 $description = $policyAssignment.Properties.Description
+$principalId = $policyAssignment.Identity.PrincipalId
 
 ```
 #### After
 ```powershell
 $policyAssignment = Get-AzPolicyAssignment -Name MyAssignment
 $description = $policyAssignment.Description
+$principalId = $policyAssignment.PrincipalId
 
 Compatible option:
 $policyAssignment = Get-AzPolicyAssignment -Name MyAssignment -BackwardCompatible
 $description = $policyAssignment.Properties.Description
-
+$principalId = $policyAssignment.Identity.PrincipalId
 ```
 
 
@@ -1415,7 +1417,7 @@ $description = $policyAssignment.Properties.Description
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyDefinition' is changing
-  - The following properties in the output type are being deprecated : 'Properties'
+  - The following properties in the output type are being deprecated : 'Properties', 'ResourceId', 'ResourceName', 'ResourceType', 'PolicyDefinitionId'
   - The following properties are being added to the output type : 'Description' 'DisplayName' 'Metadata' 'Mode' 'Parameters' 'PolicyRule' 'PolicyType'
   - This change is expected to take effect from Az.Resources version: 7.1.0 and Az version: 12.0.0
 
@@ -1442,7 +1444,7 @@ $policyRule = $policyDefinition.Properties.PolicyRule
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyExemption' is changing
-  - The following properties in the output type are being deprecated : 'Properties'
+  - The following properties in the output type are being deprecated : 'Properties', 'ResourceId', 'ResourceName', 'ResourceType'
   - The following properties are being added to the output type : 'Description' 'DisplayName' 'ExemptionCategory' 'ExpiresOn' 'Metadata' 'PolicyAssignmentId' 'PolicyDefinitionReferenceIds'
   - This change is expected to take effect from Az.Resources version: 7.1.0 and Az version: 12.0.0
 
@@ -1468,7 +1470,7 @@ $expiresOn = $policyExemption.Properties.ExpiresOn
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicySetDefinition' is changing
-  - The following properties in the output type are being deprecated : 'Properties'
+  - The following properties in the output type are being deprecated : 'Properties', 'ResourceId', 'ResourceName', 'ResourceType', 'PolicySetDefinitionId'
   - The following properties are being added to the output type : 'Description' 'DisplayName' 'Metadata' 'Parameter' 'PolicyDefinitionGroup' 'PolicyDefinition' 'PolicyType'
   - This change is expected to take effect from Az.Resources version: 7.1.0 and Az version: 12.0.0
 
@@ -1494,7 +1496,7 @@ $policySetParameters = $policySetDefinition.Properties.Parameters
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyAssignment' is changing
-  - The following properties in the output type are being deprecated : 'Properties'
+  - The following properties in the output type are being deprecated : 'Properties', 'Identity', 'ResourceId', 'ResourceName', 'ResourceType', 'PolicyAssignmentId'
   - The following properties are being added to the output type : 'Description' 'DisplayName' 'EnforcementMode' 'Metadata' 'NonComplianceMessages' 'NotScopes' 'Parameters' 'PolicyDefinitionId' 'Scope'
   - This change is expected to take effect from Az.Resources version: 7.1.0 and Az version: 12.0.0
 
@@ -1502,17 +1504,18 @@ $policySetParameters = $policySetDefinition.Properties.Parameters
 ```powershell
 $policyAssignment = New-AzPolicyAssignment -Name MyAssignment -PolicyDefinition MyPolicyDefinition
 $enforcementMode = $policyAssignment.Properties.EnforcementMode
-
+$principalId = $policyAssignment.Identity.PrincipalId
 ```
 #### After
 ```powershell
 $policyAssignment = New-AzPolicyAssignment -Name MyAssignment -PolicyDefinition MyPolicyDefinition
 $enforcementMode = $policyAssignment.EnforcementMode
+$principalId = $policyAssignment.PrincipalId
 
 Compatible option:
 $policyAssignment = New-AzPolicyAssignment -Name MyAssignment -PolicyDefinition MyPolicyDefinition -BackwardCompatible
 $enforcementMode = $policyAssignment.Properties.EnforcementMode
-
+$principalId = $policyAssignment.Identity.PrincipalId
 ```
 
 
@@ -1520,7 +1523,7 @@ $enforcementMode = $policyAssignment.Properties.EnforcementMode
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyDefinition' is changing
-  - The following properties in the output type are being deprecated : 'Properties'
+  - The following properties in the output type are being deprecated : 'Properties', 'ResourceId', 'ResourceName', 'ResourceType', 'PolicyDefinitionId'
   - The following properties are being added to the output type : 'Description' 'DisplayName' 'Metadata' 'Mode' 'Parameters' 'PolicyRule' 'PolicyType'
   - This change is expected to take effect from Az.Resources version: 7.1.0 and Az version: 12.0.0
 
@@ -1550,7 +1553,7 @@ $policyType = $policyDefinition.Properties.PolicyType
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyExemption' is changing
-  - The following properties in the output type are being deprecated : 'Properties'
+  - The following properties in the output type are being deprecated : 'Properties', 'ResourceId', 'ResourceName', 'ResourceType'
   - The following properties are being added to the output type : 'Description' 'DisplayName' 'ExemptionCategory' 'ExpiresOn' 'Metadata' 'PolicyAssignmentId' 'PolicyDefinitionReferenceIds'
   - This change is expected to take effect from Az.Resources version: 7.1.0 and Az version: 12.0.0
 
@@ -1577,7 +1580,7 @@ $policyDefinitionId = $policyExemption.Properties.PolicyAssignmentId
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicySetDefinition' is changing
-  - The following properties in the output type are being deprecated : 'Properties'
+  - The following properties in the output type are being deprecated : 'Properties', 'ResourceId', 'ResourceName', 'ResourceType', 'PolicySetDefinitionId'
   - The following properties are being added to the output type : 'Description' 'DisplayName' 'Metadata' 'Parameters' 'PolicyDefinitionGroups' 'PolicyDefinitions' 'PolicyType'
   - This change is expected to take effect from Az.Resources version: 7.1.0 and Az version: 12.0.0
 
@@ -1606,7 +1609,7 @@ $policyDefinitionReferenceId = $policySetDefinition.Properties.PolicyDefinitions
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyAssignment' is changing
-  - The following properties in the output type are being deprecated : 'Properties'
+  - The following properties in the output type are being deprecated : 'Properties', 'Identity', 'ResourceId', 'ResourceName', 'ResourceType', 'PolicyAssignmentId'
   - The following properties are being added to the output type : 'Description' 'DisplayName' 'EnforcementMode' 'Metadata' 'NonComplianceMessages' 'NotScopes' 'Parameters' 'PolicyDefinitionId' 'Scope'
   - This change is expected to take effect from Az.Resources version: 7.1.0 and Az version: 12.0.0
 
@@ -1614,18 +1617,19 @@ $policyDefinitionReferenceId = $policySetDefinition.Properties.PolicyDefinitions
 ```powershell
 $policyAssignment = Set-AzPolicyAssignment -Name MyAssignment -DisplayName 'My cool assignment'
 $displayName = $policyAssignment.Properties.DisplayName
-
+$principalId = $policyAssignment.Identity.PrincipalId
 
 ```
 #### After
 ```powershell
 $policyAssignment = Update-AzPolicyAssignment -Name MyAssignment -DisplayName 'My cool assignment'
 $displayName = $policyAssignment.DisplayName
+$principalId = $policyAssignment.PrincipalId
 
 Compatible option:
 $policyAssignment = Set-AzPolicyAssignment -Name MyAssignment -DisplayName 'My cool assignment' -BackwardCompatible
 $displayName = $policyAssignment.Properties.DisplayName
-
+$principalId = $policyAssignment.Identity.PrincipalId
 
 ```
 
@@ -1634,7 +1638,7 @@ $displayName = $policyAssignment.Properties.DisplayName
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyDefinition' is changing
-  - The following properties in the output type are being deprecated : 'Properties'
+  - The following properties in the output type are being deprecated : 'Properties', 'ResourceId', 'ResourceName', 'ResourceType', 'PolicyDefinitionId'
   - The following properties are being added to the output type : 'Description' 'DisplayName' 'Metadata' 'Mode' 'Parameters' 'PolicyRule' 'PolicyType'
   - This change is expected to take effect from Az.Resources version: 7.1.0 and Az version: 12.0.0
 
@@ -1661,7 +1665,7 @@ $description = $policyDefinition.Properties.Description
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicyExemption' is changing
-  - The following properties in the output type are being deprecated : 'Properties'
+  - The following properties in the output type are being deprecated : 'Properties', 'ResourceId', 'ResourceName', 'ResourceType'
   - The following properties are being added to the output type : 'Description' 'DisplayName' 'ExemptionCategory' 'ExpiresOn' 'Metadata' 'PolicyAssignmentId' 'PolicyDefinitionReferenceIds'
   - This change is expected to take effect from Az.Resources version: 7.1.0 and Az version: 12.0.0
 
@@ -1689,7 +1693,7 @@ $exemptionCategory = $policyExemption.Properties.ExemptionCategory
 
 - Cmdlet breaking-change will happen to all parameter sets
   - The output type 'Microsoft.Azure.Commands.ResourceManager.Cmdlets.Implementation.Policy.PsPolicySetDefinition' is changing
-  - The following properties in the output type are being deprecated : 'Properties'
+  - The following properties in the output type are being deprecated : 'Properties', 'ResourceId', 'ResourceName', 'ResourceType', 'PolicySetDefinitionId'
   - The following properties are being added to the output type : 'Description' 'DisplayName' 'Metadata' 'Parameters' 'PolicyDefinitionGroups' 'PolicyDefinitions' 'PolicyType'
   - This change is expected to take effect from Az.Resources version: 7.1.0 and Az version: 12.0.0
 
