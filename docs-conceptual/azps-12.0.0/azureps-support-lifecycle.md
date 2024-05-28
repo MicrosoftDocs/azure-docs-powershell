@@ -67,9 +67,16 @@ businesses, developers, and the community to make strategic decisions when plann
 
 ## Support of releases
 
-Azure PowerShell ships two types of generally available releases. Customers can choose Long Term
-Support (LTS) or Standard Term Support (STS) releases. The quality of all releases is the same. The
-only difference is the length of support.
+Azure PowerShell ships two types of generally available releases. Customers can choose Standard Term
+Support (STS) or Long Term Support (LTS) releases. The quality of all releases is the same. The only
+difference is the length of support.
+
+- **Standard Term Support (STS) releases**
+
+  - Odd-numbered major versions are STS releases.
+  - STS versions are supported until the next major release of Azure PowerShell.
+  - Supported for approximately six months from the original major version release date.
+  - Receives minor version and patch updates until out of support.
 
 - **Long Term Support (LTS) releases**
 
@@ -80,18 +87,11 @@ only difference is the length of support.
   - Receives minor version updates _only for the first 6 months_ and patch updates until out of
     support.
 
-- **Standard Term Support (STS) releases**
-
-  - Odd-numbered major versions are STS releases.
-  - STS versions are supported until the next major release of Azure PowerShell.
-  - Supported for approximately six months from the original major version release date.
-  - Receives minor version and patch updates until out of support.
-
 > [!IMPORTANT]
 > You must install the latest minor and patch version to qualify for support.
 
 The following image illustrates the release cadence and support lifecycle of Azure PowerShell for
-LTS and STS releases.
+STS and LTS releases.
 
 ![Support Lifecycle](../../media/support-lifecycle/support-lifecycle.jpg)
 
