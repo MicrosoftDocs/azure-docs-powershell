@@ -24,8 +24,6 @@
   displayName: sign in, signin, log in, login, find, feedback, intro, introduction
 - name: Cloud Shell
   href: /azure/cloud-shell/overview
-- name: Azure PowerShell in Docker
-  href: azureps-in-docker.md
 - name: Sign in
   items:
     - name: Authentication methods
