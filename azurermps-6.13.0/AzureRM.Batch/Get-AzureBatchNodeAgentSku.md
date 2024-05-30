@@ -32,13 +32,7 @@ You can narrow your search to SKUs that match an Open Data Protocol (OData) filt
 ### Example 1: Get all available node agent SKUs
 ```
 PS C:\>$Context = Get-AzureRmBatchAccountKeys -AccountName "ContosoBatchAccount"
-PS C:\> Get-AzureBatchNodeAgentSku -BatchContext $Context 
-batch.node.centos 7 Linux {7.0, 7.1, 7.2, OL70} 
-batch.node.debian 8 Linux {15.10, 8} 
-batch.node.opensuse 13.2 Linux {13.2} 
-batch.node.opensuse 42.1 Linux {42.1, 12, 12-SP1, 12} 
-batch.node.ubuntu 14.04 Linux {14.04.0-LTS, 14.04.1-LTS, 14.04.2-LTS, 14.04.3-LTS...} 
-batch.node.windows amd64 Windows {2008-R2-SP1, 2012-Datacenter, 2012-R2-Datacenter, Windows-Server-Technical-Preview}
+PS C:\> Get-AzureBatchNodeAgentSku -BatchContext $Context
 ```
 
 The first command gets a batch account context that contains access keys for your subscription by using **Get-AzureRmBatchAccountKeys**.
