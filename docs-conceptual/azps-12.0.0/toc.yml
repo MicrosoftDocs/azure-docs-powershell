@@ -19,7 +19,7 @@
       href: upcoming-breaking-changes.md
 - name: Install
   items:
-    - name: Install
+    - name: Overview
       href: install-azure-powershell.md
     - name: Install - Windows
       href: install-azps-windows.md
