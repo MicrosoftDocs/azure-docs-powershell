@@ -26,8 +26,6 @@ landingContent:
             url: install-az-ps.md
           - text: Install PowerShell
             url: /powershell/scripting/install/installing-powershell
-          - text: Run in Azure Cloud Shell
-            url: https://shell.azure.com
       - linkListType: get-started
         links:
           - text: Get started
