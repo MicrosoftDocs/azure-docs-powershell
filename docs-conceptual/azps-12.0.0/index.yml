@@ -35,7 +35,7 @@ landingContent:
     linkLists:
       - linkListType: download
         links:
-          - text: Install
+          - text: Overview
             url: install-azure-powershell.md
           - text: Install - Windows
             url: install-azps-windows.md
