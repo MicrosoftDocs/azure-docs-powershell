@@ -56,8 +56,7 @@ Adds a virtual IP to a cloud service.
 Adds a new operating system image or a new virtual machine image to the image repository.
 
 
-### [Export-AzureVM](./Export-AzureVM.md)
-Exports an Azure virtual machine state to a file.
+
 
 
 ### [Get-AzureAclConfig](./Get-AzureAclConfig.md)
@@ -180,14 +179,6 @@ Returns the primary and secondary storage account keys for an Azure storage acco
 Gets a list of subnets associated with the specified Azure virtual machine.
 
 
-### [Get-AzureVMAccessExtension](./Get-AzureVMAccessExtension.md)
-Gets the VMAccess extension applied on a virtual machine.
-
-
-### [Get-AzureVMAvailableExtension](./Get-AzureVMAvailableExtension.md)
-Gets information for the latest available extensions for virtual machines.
-
-
 ### [Get-AzureVMBGInfoExtension](./Get-AzureVMBGInfoExtension.md)
 Gets the BGInfo extension applied on a virtual machine.
 
@@ -196,24 +187,12 @@ Gets the BGInfo extension applied on a virtual machine.
 Gets the Chef extension applied on a virtual machine.
 
 
-### [Get-AzureVMCustomScriptExtension](./Get-AzureVMCustomScriptExtension.md)
-Gets information from an Azure virtual machine custom script extension.
-
-
-### [Get-AzureVMDiagnosticsExtension](./Get-AzureVMDiagnosticsExtension.md)
-Gets the settings of the Azure Diagnostics extension on a virtual machine.
-
-
 ### [Get-AzureVMDscExtensionStatus](./Get-AzureVMDscExtensionStatus.md)
 Gets the DSC extension status for all the virtual machines deployed in a cloud service or for a particular virtual machine in the service.
 
 
 ### [Get-AzureVMDscExtension](./Get-AzureVMDscExtension.md)
 Gets the settings of the DSC extension on a virtual machine.
-
-
-### [Get-AzureVMExtension](./Get-AzureVMExtension.md)
-Gets resource extensions applied to virtual machines.
 
 
 ### [Get-AzureVMImageDiskConfigSet](./Get-AzureVMImageDiskConfigSet.md)
@@ -236,10 +215,6 @@ Gets the Puppet extension applied on a virtual machine.
 Gets the settings of the SQL Server IaaS Agent on a particular virtual machine.
 
 
-### [Get-AzureVM](./Get-AzureVM.md)
-Retrieves information from one or more Azure virtual machines.
-
-
 ### [Get-AzureVNetConfig](./Get-AzureVNetConfig.md)
 Gets the Azure virtual network configuration from the current subscription.
 
@@ -250,10 +225,6 @@ Gets a list object with information about Azure virtual networks.
 
 ### [Get-AzureWinRMUri](./Get-AzureWinRMUri.md)
 Gets the URI to WinRM https listener to a virtual machine or a list of virtual machines in a hosted service.
-
-
-### [Import-AzureVM](./Import-AzureVM.md)
-Imports an Azure virtual machine state from a file.
 
 
 ### [Move-AzureDeployment](./Move-AzureDeployment.md)
@@ -308,10 +279,6 @@ Creates an Azure DNS settings object.
 Creates an internal load balancer configuration.
 
 
-### [New-AzureQuickVM](./New-AzureQuickVM.md)
-Configures and creates an Azure virtual machine.
-
-
 ### [New-AzureReservedIP](./New-AzureReservedIP.md)
 Creates a reserved IP address.
 
@@ -348,10 +315,6 @@ Creates a new storage account in an Azure subscription.
 Regenerates storage keys for an Azure storage account.
 
 
-### [New-AzureVMConfig](./New-AzureVMConfig.md)
-Creates an Azure virtual machine configuration object.
-
-
 ### [New-AzureVMImageDiskConfigSet](./New-AzureVMImageDiskConfigSet.md)
 Creates a disk configuration set object.
 
@@ -365,11 +328,6 @@ Creates a configuration object for virtual machine automatic patching.
 
 
 ### [New-AzureVMSqlServerKeyVaultCredentialConfig](./New-AzureVMSqlServerKeyVaultCredentialConfig.md)
-
-
-
-### [New-AzureVM](./New-AzureVM.md)
-Creates an Azure virtual machine.
 
 
 ### [Publish-AzureVMDscConfiguration](./Publish-AzureVMDscConfiguration.md)
@@ -468,10 +426,6 @@ Deletes the specified storage account from a subscription.
 Deletes a virtual IP address from your Cloud Service.
 
 
-### [Remove-AzureVMAccessExtension](./Remove-AzureVMAccessExtension.md)
-Removes the VMAccess extension applied on a virtual machine.
-
-
 ### [Remove-AzureVMBGInfoExtension](./Remove-AzureVMBGInfoExtension.md)
 Removes the BGInfo extension applied on a virtual machine.
 
@@ -480,20 +434,8 @@ Removes the BGInfo extension applied on a virtual machine.
 Removes the Chef extension applied on the virtual machine.
 
 
-### [Remove-AzureVMCustomScriptExtension](./Remove-AzureVMCustomScriptExtension.md)
-Removes the custom script extension from a virtual machine.
-
-
-### [Remove-AzureVMDiagnosticsExtension](./Remove-AzureVMDiagnosticsExtension.md)
-Removes the Azure Diagnostics extension from a virtual machine.
-
-
 ### [Remove-AzureVMDscExtension](./Remove-AzureVMDscExtension.md)
 Removes an Azure DSC extension from a virtual machine.
-
-
-### [Remove-AzureVMExtension](./Remove-AzureVMExtension.md)
-Removes resource extensions from a virtual machine.
 
 
 ### [Remove-AzureVMImageDataDiskConfig](./Remove-AzureVMImageDataDiskConfig.md)
@@ -520,20 +462,12 @@ Removes the Puppet extension applied on a virtual machine.
 Removes an Azure virtual machine SQL Server extension from a virtual machine object.
 
 
-### [Remove-AzureVM](./Remove-AzureVM.md)
-Removes an Azure virtual machine.
-
-
 ### [Remove-AzureVNetConfig](./Remove-AzureVNetConfig.md)
 Deletes the network configuration from the current Azure subscription.
 
 
 ### [Reset-AzureRoleInstance](./Reset-AzureRoleInstance.md)
 Requests a reboot or reimage of a single role instance or all role instances of a specific role.
-
-
-### [Restart-AzureVM](./Restart-AzureVM.md)
-Restarts an Azure virtual machine.
 
 
 ### [Save-AzureVhd](./Save-AzureVhd.md)
@@ -640,36 +574,16 @@ Updates the properties of a storage account in an Azure subscription.
 Defines the subnet list for an Azure virtual machine.
 
 
-### [Set-AzureVMAccessExtension](./Set-AzureVMAccessExtension.md)
-Sets the VMAccess extension for a virtual machine.
-
-
 ### [Set-AzureVMBGInfoExtension](./Set-AzureVMBGInfoExtension.md)
 Sets the BGInfo extension for a virtual machine.
-
-
-### [Set-AzureVMBootDiagnostics](./Set-AzureVMBootDiagnostics.md)
-
 
 
 ### [Set-AzureVMChefExtension](./Set-AzureVMChefExtension.md)
 Adds the Chef extension to the virtual machine.
 
 
-### [Set-AzureVMCustomScriptExtension](./Set-AzureVMCustomScriptExtension.md)
-Sets information for an Azure virtual machine custom script extension.
-
-
-### [Set-AzureVMDiagnosticsExtension](./Set-AzureVMDiagnosticsExtension.md)
-Configures the Azure Diagnostics extension on a virtual machine.
-
-
 ### [Set-AzureVMDscExtension](./Set-AzureVMDscExtension.md)
 Configures the DSC extension on a virtual machine.
-
-
-### [Set-AzureVMExtension](./Set-AzureVMExtension.md)
-Sets resource extensions for virtual machines.
 
 
 ### [Set-AzureVMImageDataDiskConfig](./Set-AzureVMImageDataDiskConfig.md)
@@ -688,10 +602,6 @@ Configures the Microsoft Antimalware extension for a virtual machine.
 Sets the Puppet extension for a virtual machine.
 
 
-### [Set-AzureVMSize](./Set-AzureVMSize.md)
-Sets the size of an Azure virtual machine.
-
-
 ### [Set-AzureVMSqlServerExtension](./Set-AzureVMSqlServerExtension.md)
 Sets the Azure SQL Server extension on a virtual machine.
 
@@ -702,14 +612,6 @@ Updates the virtual network settings for an Azure cloud service.
 
 ### [Set-AzureWalkUpgradeDomain](./Set-AzureWalkUpgradeDomain.md)
 Walks the specified upgrade domain.
-
-
-### [Start-AzureVM](./Start-AzureVM.md)
-Starts an Azure virtual machine.
-
-
-### [Stop-AzureVM](./Stop-AzureVM.md)
-Shuts down an Azure virtual machine.
 
 
 ### [Test-AzureStaticVNetIP](./Test-AzureStaticVNetIP.md)
@@ -724,8 +626,7 @@ Changes the label of a disk in the Azure disk repository.
 Updates the label of an operating system image in the image repository.
 
 
-### [Update-AzureVM](./Update-AzureVM.md)
-Modifies the configuration of an Azure virtual machine.
+
 
 
 
