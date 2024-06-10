@@ -32,12 +32,29 @@ $DebugPreference = 'Continue'
 When connecting to Azure with Azure PowerShell, announcement messages are displayed using
 PowerShell's information stream to prevent them from altering the returned object-based output.
 Although we've made every effort to ensure the announcement messages don't impact your experience,
-there are some automation scenarios where they may affect the usage. If you experience issues, we
+there are some automation scenarios where they might affect the usage. If you experience issues, we
 recommend that you suppress the information stream in those scenarios:
 
 ```azurepowershell
 Connect-AzAccount -Subscription '<subscription name or id>' -InformationAction Ignore
 ```
+
+## Web Account Manager (WAM)
+
+- The interactive sign-in method can't open a window for WAM and returns the error: _User canceled
+  authentication_.
+- Azure PowerShell cmdlets can't run after logging in with a username and password or device code.
+- WAM popup window doesn't display the _Work and School Account_ option.
+- The interactive sign-in method can't open a WAM window in the Windows PowerShell ISE console.
+
+The workaround for these issues is to disable WAM:
+
+```azurepowershell
+Update-AzConfig -EnableLoginByWam $false
+```
+
+- WAM popup window to select an account isn't easy to find. Minimize other windows to locate the
+  popup window.
 
 ## Installation
 
