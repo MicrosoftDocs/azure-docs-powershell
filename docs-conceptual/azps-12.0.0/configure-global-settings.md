@@ -9,14 +9,14 @@ title: Configure Azure PowerShell global settings
 
 # Configure Azure PowerShell global settings
 
-Azure PowerShell supports several global settings like disabling breaking change warning messages.
-Before Az PowerShell module version 9, there wasn't a centralized or granular way to configure
-global settings for Azure PowerShell.
+Azure PowerShell offers various global settings, such as the option to disable breaking change
+warning messages. Before version 9 of the **Az** PowerShell module, there was no centralized or
+detailed method for configuring these global settings.
 
 ## Centralized configuration
 
-The Az PowerShell module version 9 and higher includes cmdlets for managing the configuration of
-global settings for Azure PowerShell. These `*-AzConfig` cmdlets are part of the Az.Accounts
+The **Az** PowerShell module version 9 and higher includes cmdlets for managing the configuration of
+global settings for Azure PowerShell. These `*-AzConfig` cmdlets are part of the **Az.Accounts**
 PowerShell module:
 
 - [Get-AzConfig][get-azconfig]
@@ -27,60 +27,31 @@ PowerShell module:
 
 ## Granular settings
 
-You can apply settings that are only effective in a particular scope. The valid values for the
+You can apply settings that are effective within a particular scope. The valid values for the
 **Scope** parameter are:
 
-- `Current User`. The default when applying a setting.
-- `Process`. Setting is only applied to the current PowerShell session.
-- `Default`. Readonly scope where the default value hasn't been changed.
-- `Environment`. Readonly scope where the value has been configured via an environment variable.
+- `Current User`: The default scope when applying a setting.
+- `Process`: The setting is applied only to the current PowerShell session.
+- `Default`: A read-only scope where the default value hasn't changed.
+- `Environment`: A read-only scope where the value is configured via an environment variable.
 
-Besides scopes, you can apply the settings to all Az PowerShell modules or only a single module.
-With the **AppliesTo** parameter, you can specify how broad you want the setting applied. The value
-`Az` indicates the setting is applied to all modules available that are part of Azure PowerShell.
+Besides scopes, you can apply settings to all **Az** PowerShell modules or only a single module.
+Using the **AppliesTo** parameter, you can specify how broad you want the setting to be applied. The
+value `Az` indicates that the setting is applied to all modules that are part of Azure PowerShell.
 
-## Breaking change warning messages
+## Configuration options
 
-To disable breaking change warning messages for cmdlets in all **Az** modules, use the
-`Update-AzConfig` cmdlet with the **DisplayBreakingChangeWarning** parameter as shown in the
-following example.
-
-```azurepowershell-interactive
-Update-AzConfig -DisplayBreakingChangeWarning $false
-```
-
-To disable the breaking change warning message for cmdlets in the **Az.Compute** module, use the
-`Update-AzConfig` cmdlet with the **DisplayBreakingChangeWarning** and **AppliesTo** parameters as
-shown in the following example.
+There are numerous configuration options that you can set with the `*-AzConfig` cmdlets. Many of
+these configuration options are shown in this section. Run the following command to see a complete
+list of the Azure PowerShell configuration options you can set with the `*-AzConfig` cmdlets.
 
 ```azurepowershell-interactive
-Update-AzConfig -DisplayBreakingChangeWarning $false -AppliesTo Az.Compute
+Get-AzConfig | Format-List
 ```
 
-In this scenario, the breaking change warning message remains active for cmdlets in all Az
-PowerShell modules except **Az.Compute**.
+### Upgrade notifications
 
-## Default subscription
-
-By default, when you authenticate to Azure, all subscriptions that you can access are retrieved. The
-first subscription that's returned by Azure is used unless you specify a subscription with
-`Connect-AzAccount`. This behavior can be dangerous, for example if the first subscription returned
-is a production environment.
-
-To configure your default subscription, you use the `Update-AzConfig` cmdlet with the
-**DefaultSubscriptionForLogin** parameter as shown in the following example.
-
-```azurepowershell-interactive
-Update-AzConfig -DefaultSubscriptionForLogin <Subscription ID or Name>
-```
-
-> [!NOTE]
-> Not to be confused with **the subscription of the default context**, the
-> **DefaultSubscriptionForLogin** configuration takes effect only when authenticating to Azure.
-
-## Upgrade notifications
-
-In-tool notifications for version upgrades of Azure PowerShell is a feature released in Az
+In-tool notifications for Azure PowerShell version upgrades is a feature released in **Az**
 PowerShell module version 10.3.0. When a new version of Azure PowerShell is available, an upgrade
 notification is displayed in your interactive PowerShell session.
 
@@ -105,23 +76,133 @@ parameter and `$false` for its value, as shown in the following example.
 Update-AzConfig -CheckForUpgrade $false
 ```
 
-## Azure region identification
+### Default subscription
 
-Azure customers can choose to deploy resources in many different regions. In some cases, customers
-may be able to reduce costs by selecting nearby regions offering the same services. If a nearby
-region is identified, a message will display the region to select for future deployments.
+By default, beginning with **Az** PowerShell module version 12.0.0, if you have access to multiple
+subscriptions, you're prompted to select an Azure subscription to sign in with.
 
-### Disabling region recommendation message
+To prevent being prompted to select a subscription each time you sign in interactively, use the
+`Update-AzConfig` cmdlet with the **DefaultSubscriptionForLogin** parameter to set your default
+subscription, as shown in the following example.
 
-In the following example, the `Update-AzConfig` cmdlet is used to disable the region recommendation
-message:
+```azurepowershell-interactive
+Update-AzConfig -DefaultSubscriptionForLogin <Subscription ID or Name>
+```
+
+> [!NOTE]
+> Not to be confused with **the subscription of the default context**, the
+> **DefaultSubscriptionForLogin** configuration takes effect only when authenticating to Azure.
+
+### Breaking change warning messages
+
+To disable breaking change warning messages for cmdlets in all **Az** modules, use the
+`Update-AzConfig` cmdlet with the `DisplayBreakingChangeWarning` parameter, as shown in the
+following example:
+
+```powershell
+Update-AzConfig -DisplayBreakingChangeWarning $false
+```
+
+To disable the breaking change warning message specifically for cmdlets in the **Az.Compute**
+module, use the `Update-AzConfig` cmdlet with both the **DisplayBreakingChangeWarning** and
+**AppliesTo** parameters as shown in the following example:
+
+```powershell
+Update-AzConfig -DisplayBreakingChangeWarning $false -AppliesTo Az.Compute
+```
+
+In this scenario, the breaking change warning message remains active for cmdlets in all **Az**
+PowerShell modules except **Az.Compute**.
+
+### Azure region identification
+
+Azure customers can choose to deploy resources in several different regions. Sometimes, customers
+can reduce costs by selecting nearby regions offering the same services. If a nearby region is
+identified, a message displays the region to choose for future deployments.
+
+To disable the region recommendation messages, use the `Update-AzConfig` cmdlet with the
+**DisplayRegionIdentified** parameter, as shown in the following example.
 
 ```azurepowershell-interactive
 Update-AzConfig -DisplayRegionIdentified $false
 ```
 
 For more information about Azure regions, see
-[choose the right Azure region for you](https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview).
+[Choose the right Azure region for you][choose-azure-region].
+
+### Display secrets warning
+
+Azure PowerShell displays a warning message by default beginning with version 12.0.0 to help you
+protect sensitive information when it identifies a potential secret in the output of a command.
+
+In the following example, the `Update-AzConfig` cmdlet is used to disable the warning message.
+
+```azurepowershell-interactive
+Update-AzConfig -DisplaySecretsWarning $false
+```
+
+### Surveys
+
+When using Azure PowerShell, you might be invited to participate in a survey to tell us about your
+experience. While we appreciate the insights this data provides, we understand not everyone wants to
+be prompted to complete a survey.
+
+You can disable being prompted to participate in surveys with the `Update-AzConfig` cmdlet, as shown
+in the following example.
+
+```azurepowershell-interactive
+Update-AzConfig -DisplaySurveyMessage $false
+```
+
+### Data collection
+
+By default, Azure PowerShell cmdlets send telemetry data to Microsoft to improve the customer
+experience. For more information, see our privacy statement: [aka.ms/privacy][privacy].
+
+```azurepowershell-interactive
+Update-AzConfig -EnableDataCollection $false
+```
+
+### Error records
+
+By default, Azure PowerShell error records are written to `$HOME/.Azure/ErrorRecords`.
+
+To disable persistent error records, use the `Update-AzConfig` cmdlet with the
+**EnableErrorRecordsPersistence** parameter, as shown in the following example.
+
+```azurepowershell-interactive
+Update-AzConfig -EnableErrorRecordsPersistence $false
+```
+
+### Web Account Manager (WAM)
+
+Beginning with **Az** PowerShell module version 12.0.0, Windows systems use Web Account Manager
+(WAM), and Linux and macOS systems use browser-based sign-in by default.
+
+To use browser-based sign-in on Windows 10 and later or on Windows Server 2019 and later with **Az**
+12.0.0 and higher, you must disable WAM for use with Azure PowerShell. Use the following command to
+disable WAM and return to browser-based sign-in, the default before Az 12.0.0.
+
+```azurepowershell-interactive
+Update-AzConfig -EnableLoginByWam $false
+```
+
+### The new login experience
+
+Beginning with **Az** PowerShell module version 12.0.0, if you have access to multiple
+subscriptions, you're prompted to select an Azure subscription to sign in with.
+
+When the new login experience is disabled, and you have access to multiple subscriptions, you're
+signed in to the first subscription Azure returns unless you specify a subscription with
+`Connect-AzAccount`. Commands run against this subscription by default. This behavior can be
+dangerous, for example if the first subscription returned is a production environment.
+
+To disable the new login experience, use the `Update-AzConfig` cmdlet, as shown in the following
+example.
+
+```azurepowershell-interactive
+Update-AzConfig -LoginExperienceV2 Off
+```
 
 ## Replicating settings
 
@@ -155,3 +236,5 @@ Clear-AzConfig -DefaultSubscriptionForLogin
 [export-azconfig]: /powershell/module/az.accounts/export-azconfig
 [import-azconfig]: /powershell/module/az.accounts/import-azconfig
 [clear-azconfig]: /powershell/module/az.accounts/clear-azconfig
+[choose-azure-region]: https://azure.microsoft.com/explore/global-infrastructure/geographies/#overview
+[privacy]: https://aka.ms/privacy
