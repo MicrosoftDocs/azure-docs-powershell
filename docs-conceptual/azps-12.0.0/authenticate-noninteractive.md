@@ -215,5 +215,5 @@ For more information, see
 [new-azadserviceprincipal]: /powershell/module/az.resources/new-azadserviceprincipal
 [configure-managed-identity-for-vm]: /entra/identity/managed-identities-azure-resources/qs-configure-powershell-windows-vm
 [managed-identities-overview]: /entra/identity/managed-identities-azure-resources/overview
-[assign-managed-identity-access]: /entra/identity/managed-identities-azure-resources/howto-assign-access-powershell
+[assign-managed-identity-access]: /entra/identity/managed-identities-azure-resources/how-to-assign-access-azure-resource?pivots=identity-mi-access-powershell
 [view-service-principal-of-managed-identity]: /entra/identity/managed-identities-azure-resources/how-to-view-managed-identity-service-principal-powershell
