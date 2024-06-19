@@ -40,7 +40,7 @@ cmdlet creates a new version of that secret.
 
 ### Example 1: Modify the value of a secret using default attributes
 ```powershell
-$Secret = ConvertTo-SecureString -String 'Password' -AsPlainText -Force
+$Secret = Read-Host -Prompt 'Enter a Password' -AsSecureString
 Set-AzKeyVaultSecret -VaultName 'Contoso' -Name 'ITSecret' -SecretValue $Secret
 ```
 
@@ -66,7 +66,7 @@ secret value becomes the value stored in $Secret.
 
 ### Example 2: Modify the value of a secret using custom attributes
 ```powershell
-$Secret = ConvertTo-SecureString -String 'Password' -AsPlainText -Force
+$Secret = Read-Host -Prompt 'Enter a Password' -AsSecureString
 $Expires = (Get-Date).AddYears(2).ToUniversalTime()
 $NBF =(Get-Date).ToUniversalTime()
 $Tags = @{ 'Severity' = 'medium'; 'IT' = 'true'}
