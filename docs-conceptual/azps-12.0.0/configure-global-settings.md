@@ -45,7 +45,7 @@ There are numerous configuration options that you can set with the `*-AzConfig` 
 these configuration options are shown in this section. Run the following command to see a complete
 list of the Azure PowerShell configuration options you can set with the `*-AzConfig` cmdlets.
 
-```azurepowershell-interactive
+```azurepowershell
 Get-AzConfig | Format-List
 ```
 
@@ -58,21 +58,21 @@ notification is displayed in your interactive PowerShell session.
 To determine if upgrade notifications are enabled, use the `Get-AzConfig` cmdlet with
 the **CheckForUpgrade** parameter, as shown in the following example.
 
-```azurepowershell-interactive
+```azurepowershell
 Get-AzConfig -CheckForUpgrade
 ```
 
 To enable upgrade notifications for Azure PowerShell, use the `Update-AzConfig` cmdlet with the
 **CheckForUpgrade** parameter and `$true` for its value, as shown in the following example.
 
-```azurepowershell-interactive
+```azurepowershell
 Update-AzConfig -CheckForUpgrade $true
 ```
 
 To turn off upgrade notifications, use the `Update-AzConfig` cmdlet with the **CheckForUpgrade**
 parameter and `$false` for its value, as shown in the following example.
 
-```azurepowershell-interactive
+```azurepowershell
 Update-AzConfig -CheckForUpgrade $false
 ```
 
@@ -85,7 +85,7 @@ To prevent being prompted to select a subscription each time you sign in interac
 `Update-AzConfig` cmdlet with the **DefaultSubscriptionForLogin** parameter to set your default
 subscription, as shown in the following example.
 
-```azurepowershell-interactive
+```azurepowershell
 Update-AzConfig -DefaultSubscriptionForLogin <Subscription ID or Name>
 ```
 
@@ -93,13 +93,28 @@ Update-AzConfig -DefaultSubscriptionForLogin <Subscription ID or Name>
 > Not to be confused with **the subscription of the default context**, the
 > **DefaultSubscriptionForLogin** configuration takes effect only when authenticating to Azure.
 
+### Instance discovery
+
+The disable instance discovery setting is designed for situations where the metadata endpoint is
+inaccessible, such as in private clouds or Azure Stack environments. Instance discovery involves
+retrieving authority metadata from `https://login.microsoft.com/` to validate the authority. By
+enabling this setting (setting it to `true`), you disable both instance discovery and authority
+validation. Therefore, it's essential to ensure that the configured authority host is valid and
+trustworthy.
+
+To disable both instance discovery and authority validation, enable this setting (set it to `true`).
+
+```azurepowershell
+Update-AzConfig -DisableInstanceDiscovery $true
+```
+
 ### Breaking change warning messages
 
 To disable breaking change warning messages for cmdlets in all **Az** modules, use the
 `Update-AzConfig` cmdlet with the `DisplayBreakingChangeWarning` parameter, as shown in the
 following example:
 
-```powershell
+```azurepowershell
 Update-AzConfig -DisplayBreakingChangeWarning $false
 ```
 
@@ -107,7 +122,7 @@ To disable the breaking change warning message specifically for cmdlets in the *
 module, use the `Update-AzConfig` cmdlet with both the **DisplayBreakingChangeWarning** and
 **AppliesTo** parameters as shown in the following example:
 
-```powershell
+```azurepowershell
 Update-AzConfig -DisplayBreakingChangeWarning $false -AppliesTo Az.Compute
 ```
 
@@ -123,7 +138,7 @@ identified, a message displays the region to choose for future deployments.
 To disable the region recommendation messages, use the `Update-AzConfig` cmdlet with the
 **DisplayRegionIdentified** parameter, as shown in the following example.
 
-```azurepowershell-interactive
+```azurepowershell
 Update-AzConfig -DisplayRegionIdentified $false
 ```
 
@@ -137,7 +152,7 @@ protect sensitive information when it identifies a potential secret in the outpu
 
 In the following example, the `Update-AzConfig` cmdlet is used to disable the warning message.
 
-```azurepowershell-interactive
+```azurepowershell
 Update-AzConfig -DisplaySecretsWarning $false
 ```
 
@@ -150,7 +165,7 @@ be prompted to complete a survey.
 You can disable being prompted to participate in surveys with the `Update-AzConfig` cmdlet, as shown
 in the following example.
 
-```azurepowershell-interactive
+```azurepowershell
 Update-AzConfig -DisplaySurveyMessage $false
 ```
 
@@ -159,7 +174,7 @@ Update-AzConfig -DisplaySurveyMessage $false
 By default, Azure PowerShell cmdlets send telemetry data to Microsoft to improve the customer
 experience. For more information, see our privacy statement: [aka.ms/privacy][privacy].
 
-```azurepowershell-interactive
+```azurepowershell
 Update-AzConfig -EnableDataCollection $false
 ```
 
@@ -170,7 +185,7 @@ By default, Azure PowerShell error records are written to `$HOME/.Azure/ErrorRec
 To disable persistent error records, use the `Update-AzConfig` cmdlet with the
 **EnableErrorRecordsPersistence** parameter, as shown in the following example.
 
-```azurepowershell-interactive
+```azurepowershell
 Update-AzConfig -EnableErrorRecordsPersistence $false
 ```
 
@@ -183,7 +198,7 @@ To use browser-based sign-in on Windows 10 and later or on Windows Server 2019 a
 12.0.0 and higher, you must disable WAM for use with Azure PowerShell. Use the following command to
 disable WAM and return to browser-based sign-in, the default before Az 12.0.0.
 
-```azurepowershell-interactive
+```azurepowershell
 Update-AzConfig -EnableLoginByWam $false
 ```
 
@@ -200,7 +215,7 @@ dangerous, for example if the first subscription returned is a production enviro
 To disable the new login experience, use the `Update-AzConfig` cmdlet, as shown in the following
 example.
 
-```azurepowershell-interactive
+```azurepowershell
 Update-AzConfig -LoginExperienceV2 Off
 ```
 
@@ -209,14 +224,14 @@ Update-AzConfig -LoginExperienceV2 Off
 To replicate your settings from one environment to another, you use the `Export-AzConfig` cmdlet to
 export the settings to a JSON file.
 
-```azurepowershell-interactive
+```azurepowershell
 Export-AzConfig -Path $HOME\AzConfig.json
 ```
 
 To import your settings, use the `Import-AzConfig` cmdlet and reference the previously exported
 JSON file.
 
-```azurepowershell-interactive
+```azurepowershell
 Import-AzConfig -Path $HOME\AzConfig.json
 ```
 
@@ -226,7 +241,7 @@ To reset the configuration setting of one or more Azure PowerShell global settin
 use the `Clear-AzConfig` cmdlet. In the following example, the **DefaultSubscriptionForLogin**
 setting is cleared.
 
-```azurepowershell-interactive
+```azurepowershell
 Clear-AzConfig -DefaultSubscriptionForLogin
 ```
 
