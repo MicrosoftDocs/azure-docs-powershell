@@ -11,8 +11,8 @@ title: Troubleshooting the Az PowerShell module
 
 ## Enable debug logging
 
-One of the first steps you should take in troubleshooting a problem with the Azure Az PowerShell
-module is to enable debug logging.
+One of the first steps you should take in troubleshooting a problem with the Az PowerShell module is
+to enable debug logging.
 
 To enable debug logging on a per command basis, specify the **Debug** parameter.
 
@@ -58,7 +58,7 @@ Update-AzConfig -EnableLoginByWam $false
 
 ## Installation
 
-This section contains a list of solutions to common problems when installing the Azure Az PowerShell
+This section contains a list of solutions to common problems when installing the Az PowerShell
 module.
 
 ### Az and AzureRM coexistence
