@@ -11,23 +11,20 @@ title: Intelligent context-aware command completion with Az Predictor
 
 ## Overview
 
-[Az Predictor](https://www.powershellgallery.com/packages/Az.Tools.Predictor/) is a PowerShell
-module that helps you navigate the cmdlets and parameters of the
-[Az PowerShell module](https://www.powershellgallery.com/packages/Az). It provides intelligent
-context-aware suggestions for command completion when using Azure PowerShell.
+[Az Predictor][azpredictor-psgallery] is a PowerShell module that helps you navigate the cmdlets and
+parameters of the [Az PowerShell module][install-azps]. It provides intelligent context-aware
+suggestions for command completion when using Azure PowerShell.
 
-Az Predictor uses the
-[subsystem plugin model](/powershell/scripting/learn/experimental-features#pssubsystempluginmodel)
-available in PowerShell 7.2. This updated version requires
-[PSReadLine 2.2.2](https://www.powershellgallery.com/packages/PSReadLine/2.2.2) or higher to display
+Az Predictor uses the [subsystem plugin model][subsystem-plugin-model] available in PowerShell 7.2.
+This updated version requires [PSReadLine 2.2.2][psreadline-psgallery] or higher to display
 suggestions.
 
-## Requirements
+## Prerequisites
 
 Required configuration for Az Predictor:
 
-- [PowerShell 7.2](https://github.com/PowerShell/PowerShell/) or higher
-- [PSReadline 2.2.2](https://github.com/PowerShell/PSReadLine/) or higher
+- [PowerShell 7.2][install-pwsh] or higher
+- [PSReadline 2.2.2][psreadline-psgallery] or higher
 
 Install the latest version of PSReadLine:
 
@@ -39,7 +36,7 @@ Install-Module -Name PSReadline
 
 ### Install Az Predictor
 
-Install the Az.Tools.Predictor PowerShell module
+Install the **Az.Tools.Predictor** PowerShell module
 
 ```powershell
 Install-Module -Name Az.Tools.Predictor
@@ -72,10 +69,10 @@ Install-Module -Name Az.Tools.Predictor
 
 ## Uninstallation
 
-Once installed and enabled, Az Predictor is loaded in the PowerShell profile.
-To uninstall the Az.Tools.Predictor module:
+Once installed and enabled, Az Predictor is loaded in the PowerShell profile. To uninstall the
+**Az.Tools.Predictor** module:
 
-1. Close **all** PowerShell sessions including VS Code.
+1. Close **all** PowerShell sessions, including VS Code.
 
 1. Launch a PowerShell session with no profile.
 
@@ -96,12 +93,12 @@ To uninstall the Az.Tools.Predictor module:
 ### Privacy
 
 Az predictor uses the previous two Az cmdlets to make suggestions and ignores any cmdlet that's not
-part of the [Az PowerShell](https://www.powershellgallery.com/packages/Az) module. Only the names of
-cmdlets and parameters are sent to our API to obtain the suggestion. Parameter values are discarded.
-The resource group name and location used are kept locally and reused with subsequent cmdlets for
-convenience but are never sent to the API. In the preview version, the module generates and sends
-anonymized information about the current session used for predictions to the API. This information
-is used to assess the quality of suggestions.
+part of the [Az PowerShell module][install-azps]. Only the names of cmdlets and parameters are sent
+to our API to obtain the suggestion. Parameter values are discarded. The resource group name and
+location used are kept locally and reused with subsequent cmdlets for convenience but are never sent
+to the API. In the preview version, the module generates and sends anonymized information about the
+current session used for predictions to the API. This information is used to assess the quality of
+suggestions.
 
 ### Data collection
 
@@ -112,6 +109,15 @@ private or personal data.
 For example, the usage data helps identify inaccurate suggestions and issues like interferences with
 PSReadLine. While we appreciate the insights this data provides, we understand not everyone wants to
 send usage data. You can disable data collection with the
-[Disable-AzDataCollection](/powershell/module/az.accounts/disable-azdatacollection)
-cmdlet. You can also read our
-[privacy statement](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409) to learn more.
+[Disable-AzDataCollection][disable-azdatacollection] cmdlet. You can also read our
+[privacy statement][privacy-statement] to learn more.
+
+<!-- link references -->
+
+[azpredictor-psgallery]: https://www.powershellgallery.com/packages/Az.Tools.Predictor/
+[install-azps]: install-azure-powershell.md
+[subsystem-plugin-model]: /powershell/scripting/learn/experimental-features#pssubsystempluginmodel
+[psreadline-psgallery]: https://www.powershellgallery.com/packages/PSReadLine/
+[install-pwsh]: /powershell/scripting/install/installing-powershell
+[disable-azdatacollection]: /powershell/module/az.accounts/disable-azdatacollection
+[privacy-statement]: https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409
