@@ -39,7 +39,7 @@ Remove a SignalR service.
 
 ## EXAMPLES
 
-### Remove a SignalR service
+### Example 1: Remove a SignalR service
 ```powershell
 Remove-AzSignalR -ResourceGroupName myResourceGroup -Name mysignalr1 -PassThru
 ```
@@ -48,7 +48,7 @@ Remove-AzSignalR -ResourceGroupName myResourceGroup -Name mysignalr1 -PassThru
 True
 ```
 
-### Remove all SignalR service from pipe
+### Example 2: Remove all SignalR service from pipe
 ```powershell
 Get-AzSignalR -ResourceGroupName myResourceGroup | Remove-AzSignalR
 ```

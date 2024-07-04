@@ -90,7 +90,7 @@ Get-AzAksCluster -ResourceGroupName group -Name myCluster | Set-AzAksCluster -No
 
 Set the number of nodes in the Kubernetes cluster to 5.
 
-### Update an AKS cluster with AutoScalerProfile.
+### Example 2: Update an AKS cluster with AutoScalerProfile.
 When you update an AKS cluster, you can configure granular details of the cluster autoscaler by changing the default values in the cluster-wide autoscaler profile.
 
 ```powershell
@@ -103,7 +103,7 @@ $AutoScalerProfile=[Microsoft.Azure.Management.ContainerService.Models.ManagedCl
 Get-AzAksCluster -ResourceGroupName group -Name myCluster | Set-AzAksCluster -AutoScalerProfile $AutoScalerProfile
 ```
 
-### Update an AKS cluster with AadProfile.
+### Example 3: Update an AKS cluster with AadProfile.
 When you update an AKS cluster, you can configure the AAD profile.
 
 ```powershell
