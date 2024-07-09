@@ -1,6 +1,10 @@
 {
     "build": {
         "content": [
+            { "files": ["toc.yml"], "src": "azps-12.1.0", "version": "azps-12.1.0", "dest": "module/azure-powershell" },
+            { "files": ["**/*.yml"], "src": "azps-12.1.0", "version": "azps-12.1.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-12.1.0", "version": "azps-12.1.0", "dest": "azure" },
+
             { "files": ["toc.yml"], "src": "azps-12.0.0", "version": "azps-12.0.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-12.0.0", "version": "azps-12.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-12.0.0", "version": "azps-12.0.0", "dest": "azure" },
@@ -63,12 +67,14 @@
             { "files": ["**/*.md"], "src": "azureelasticdbjobsps-0.8.33", "version": "azureelasticdbjobsps-0.8.33" }
         ],
         "resource": [
+            { "files": ["media/**"], "version": "azps-12.1.0" },
             { "files": ["media/**"], "version": "azps-12.0.0" },
             { "files": ["media/**"], "version": "azps-11.6.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" },
             { "files": ["media/**"], "version": "azurermps-6.13.0" }
         ],
         "versions": {
+            "azps-12.1.0": { "dest": "azps-12.1.0" },
             "azps-12.0.0": { "dest": "azps-12.0.0" },
             "azps-11.6.0": { "dest": "azps-11.6.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
@@ -512,18 +518,8 @@
             },
             "feedback_system": {
                 "azps-12.0.0/**/*": "OpenSource",
-                "docs-conceptual/**/**.md": "None",
-                "docs-conceptual/**/**.yml": "None",
-                "docs-conceptual/azps-12.0.0/**.md": "OpenSource",
-                "docs-conceptual/azps-12.0.0/**.yml": "OpenSource",
-                "azps-11.6.0/**/*": "None",
-                "azps-0.10.0/**/*": "None",
-                "azurermps-6.13.0/**/*": "None",
-                "azuresmps-4.0.0/**/*": "None",
-                "azuredmps-0.9.0/**/*": "None",
-                "aztools/Az.Tools.Installer/*": "OpenSource",
-                "aztools/Az.Tools.Predictor/*": "OpenSource",
-                "aztools/Az.Tools.Migration/*": "OpenSource"
+                "docs-conceptual/azps-12.0.0/*": "OpenSource",
+                "aztools/**/*": "OpenSource"
             },
             "open_source_feedback_issueUrl": {
                 "azps-*/**/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml",
@@ -547,7 +543,7 @@
             ],
             "breadcrumb_path": "/powershell/bread/toc.json",
             "ms.devlang": "powershell",
-            "feedback_system": "GitHub",
+            "feedback_system": "None",
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new/choose",
             "open_source_feedback_contributorGuideUrl": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide",
             "open_source_feedback_issueTitle": "",
