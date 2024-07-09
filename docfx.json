@@ -1,6 +1,10 @@
 {
     "build": {
         "content": [
+            { "files": ["toc.yml"], "src": "azps-12.1.0", "version": "azps-12.1.0", "dest": "module/azure-powershell" },
+            { "files": ["**/*.yml"], "src": "azps-12.1.0", "version": "azps-12.1.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-12.1.0", "version": "azps-12.1.0", "dest": "azure" },
+
             { "files": ["toc.yml"], "src": "azps-12.0.0", "version": "azps-12.0.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-12.0.0", "version": "azps-12.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-12.0.0", "version": "azps-12.0.0", "dest": "azure" },
@@ -63,12 +67,14 @@
             { "files": ["**/*.md"], "src": "azureelasticdbjobsps-0.8.33", "version": "azureelasticdbjobsps-0.8.33" }
         ],
         "resource": [
+            { "files": ["media/**"], "version": "azps-12.1.0" },
             { "files": ["media/**"], "version": "azps-12.0.0" },
             { "files": ["media/**"], "version": "azps-11.6.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" },
             { "files": ["media/**"], "version": "azurermps-6.13.0" }
         ],
         "versions": {
+            "azps-12.1.0": { "dest": "azps-12.1.0" },
             "azps-12.0.0": { "dest": "azps-12.0.0" },
             "azps-11.6.0": { "dest": "azps-11.6.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
