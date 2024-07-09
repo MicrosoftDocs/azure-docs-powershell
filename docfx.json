@@ -517,8 +517,8 @@
                 "docs-conceptual/azuredmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
-                "azps-12.0.0/**/*": "OpenSource",
-                "docs-conceptual/azps-12.0.0/*": "OpenSource",
+                "azps-12.1.0/**/*": "OpenSource",
+                "docs-conceptual/azps-12.1.0/*": "OpenSource",
                 "aztools/**/*": "OpenSource"
             },
             "open_source_feedback_issueUrl": {
