@@ -546,6 +546,8 @@
             "ms.devlang": "powershell",
             "feedback_system": "None",
             "feedback_product_url": "https://github.com/Azure/azure-powershell/issues/new/choose",
+            "feedback_help_link_url": "https://techcommunity.microsoft.com/t5/azure-tools/bd-p/AzureTools",
+            "feedback_help_link_type": "ask-the-community",
             "open_source_feedback_contributorGuideUrl": "https://learn.microsoft.com/powershell/azure/azps-docs-style-guide",
             "open_source_feedback_issueTitle": "",
             "open_source_feedback_productLogoLightUrl": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
