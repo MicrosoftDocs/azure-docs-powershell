@@ -9,6 +9,11 @@ title: Upcoming breaking changes in Azure PowerShell
 
 # Upcoming breaking changes in Azure PowerShell
 
+The breaking changes listed in this article are planned for the next major release of the Az
+PowerShell module unless otherwise noted. Per our
+[Support lifecycle](azureps-support-lifecycle.md), breaking changes in Azure PowerShell occur twice
+a year with major versions of the Az PowerShell module.
+
 ## Az.Accounts
 
 ### `Get-AzAccessToken`
