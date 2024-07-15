@@ -24,7 +24,7 @@ Check the availability of a name. Alias: Test-AzSignal.
 
 ## EXAMPLES
 
-### Check an existed name.
+### Example 1: Check an existed name.
 ```powershell
 Test-AzSignalRName -Name existedsignalr -Location eastus
 ```
@@ -33,7 +33,7 @@ Test-AzSignalRName -Name existedsignalr -Location eastus
 False
 ```
 
-### Check an unexisted name.
+### Example 2: Check an unexisted name.
 ```powershell
 Test-AzSignalRName -Name unexistedsignalr -Location eastus
 ```
