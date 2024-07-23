@@ -9,82 +9,105 @@ title: What is Azure PowerShell
 
 # What is Azure PowerShell?
 
-Azure PowerShell is a set of cmdlets for managing Azure resources directly from PowerShell. Azure
-PowerShell is designed to make it easy to learn and get started with, but provides powerful features
-for automation.
+Azure PowerShell is the product name for the collection of official Microsoft PowerShell modules for
+managing Azure resources. It requires PowerShell, a command-line shell and scripting language.
+
+You can use Azure PowerShell interactively by running commands from PowerShell or creating and
+executing scripts that consist of multiple commands.
 
 ## The Az PowerShell module
 
-> [!IMPORTANT]
-> The Az PowerShell module is the recommended PowerShell module for managing Azure resources on all
-> platforms.
-
-The Az PowerShell module is based on the .NET Standard, and works with PowerShell 7.2 or higher on
-all platforms including Windows, Linux, and macOS. It's also compatible with Windows PowerShell 5.1.
+The current version of Azure PowerShell is the **Az** PowerShell module. It's the recommended
+PowerShell module for managing Azure resources with PowerShell on all platforms including Windows,
+Linux, and macOS. It includes thousands of commands that control almost every aspect of Azure. The
+**Az** PowerShell module is cross-platform.
 
 > [!NOTE]
-> PowerShell 7.2 or higher is the recommended version of PowerShell for use with the Az PowerShell
-> module on all platforms.
+> PowerShell 7 or higher is the recommended version of PowerShell for use with the Az PowerShell
+> module. It's also compatible with Windows PowerShell 5.1.
 
-You can install the Az PowerShell module locally on Windows, Linux, and macOS. It can also be used
-from a browser through [Azure Cloud Shell](/azure/cloud-shell/overview) or
-[inside a Docker container](/powershell/azure/azureps-in-docker). For more information, see the
-[Azure PowerShell documentation](/powershell/azure/).
+There are a few different options for using the Az PowerShell module:
+
+- [Azure Cloud Shell][cloud-shell]: A browser-based shell that allows you to run Azure PowerShell
+  commands without installing anything on your local machine.
+- [Local installation][azps-install]: To run commands directly from your terminal, install Azure
+  PowerShell on your local machine.
+- [Docker container][azps-docker]: Run Azure PowerShell in a Docker container.
 
 ### Authentication
 
 Azure PowerShell supports several authentication methods. For detailed information about
 authenticating to Azure from the Az PowerShell module, see
-[Sign in with Azure PowerShell](/powershell/azure/authenticate-azureps).
+[Sign into Azure from Azure PowerShell][azps-auth].
 
 ### Module Design
 
-The Az PowerShell module is a wrapper module for Azure service related PowerShell modules, usually
-one module per Azure service such as `Az.Network` for Azure networking services and `Az.AKS` for
-Azure Kubernetes Service.
+The **Az** PowerShell module is a wrapper module for Azure service-related PowerShell modules,
+usually one module per Azure service, such as **Az.Network** for Azure networking services and
+**Az.AKS** for Azure Kubernetes Service.
 
-The cmdlets in the Az PowerShell module make REST calls to the Azure API. Breaking changes in the Az
-PowerShell module are limited to twice a year. Many breaking changes at the API level are handled
-within the cmdlets to prevent the perception of a breaking change.
+The cmdlets in the **Az** PowerShell module make REST calls to the Azure Resource Manager API.
+Breaking changes in the **Az** PowerShell module are limited to twice a year. Many breaking changes
+at the API level are handled within the cmdlets to prevent the perception of a breaking change.
 
-The Az PowerShell module contains cmdlets for performing both control plane and data plane
+The **Az** PowerShell module contains cmdlets for performing both control plane and data plane
 operations in Azure. You use the control plane to manage resources in your subscription. You use the
-data plane to use capabilities exposed by your instance of a resource type. For more information,
-see
-[Azure control plane and data plane](/azure/azure-resource-manager/management/control-plane-and-data-plane).
+data plane to control capabilities exposed by your instance of a resource type. For more
+information, see [Azure control plane and data plane][control-and-data-plane].
 
 ### Output Objects
 
-The cmdlets in the Az PowerShell module produce .NET objects. As with any PowerShell command that
-produces output, the cmdlets in the Az PowerShell module can be piped to the
-[Get-Member](/powershell/module/microsoft.powershell.utility/get-member) cmdlet to determine what
-type of object is produced along with a list of the available properties and methods. For more
-information, see [Query output of Azure PowerShell](/powershell/azure/queries-azureps) and
-[Format Azure PowerShell cmdlet output](/powershell/azure/formatting-output).
+The cmdlets in the **Az** PowerShell module produce .NET objects. As with any PowerShell command
+that produces output, the cmdlets in the **Az** PowerShell module can be piped to the `Get-Member`
+cmdlet to determine what type of object is produced, along with a list of the available properties
+and methods. For more information, see [Query output of Azure PowerShell][azps-output] and
+[Format Azure PowerShell cmdlet output][format-azps-output].
 
-## Other modules
+## The AzPreview PowerShell module
 
-The AzureAD and MSOnline PowerShell modules aren't part of the Az PowerShell module. For more
-information about those modules, see the documentation for
-[Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/overview).
+The **AzPreview** PowerShell module includes all generally available (GA) modules from the **Az**
+PowerShell module and all preview modules for managing Azure resources. It isn't recommended for use
+in production environments since preview modules don't adhere to breaking change policies.
 
-## Legacy Azure PowerShell modules
+The **AzPreview** module is always the same version and is released at the same time as the **Az**
+PowerShell module.
 
-### The AzureRM PowerShell module
+## The AzureRM PowerShell module
 
-[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+While you might find examples online that use the **AzureRM** PowerShell module, it's the previous
+generation of Azure PowerShell. It's deprecated, no longer maintained or supported, and not
+recommended. Commands in the **AzureRM** PowerShell module use the `*-AzureRM*` format. For more
+information, see [Overview of the AzureRM PowerShell module][azurerm-module].
 
-The AzureRM PowerShell module is deprecated, new features are no longer being added, and it's not
-cross platform. For more information, see
-[Overview of the AzureRM PowerShell module](/powershell/azure/azurerm/overview).
+## The Azure PowerShell module
 
-### The Azure PowerShell module
+You might also encounter a version of Azure PowerShell named the **Azure** PowerShell module, which
+is for managing legacy Azure resources that use Azure Service Manager (ASM) APIs. This module isn't
+recommended for creating new resources as ASM is scheduled for retirement. For more information, see
+[Overview of the Azure PowerShell Service Management module][azure-rdfe-module].
 
-> [!IMPORTANT]
-> The cmdlets in the Azure PowerShell module are for managing legacy Azure resources that use
-> Service Management APIs.
+## Azure PowerShell-related modules
 
-Some cmdlets in the Azure PowerShell module have been deprecated and others have been deprecated for
-new customers with retirement announced for existing customers as noted on their corresponding
-reference documentation pages. For more information, see
-[Overview of the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/overview)
+The following PowerShell modules aren't part of Azure PowerShell:
+
+- **Microsoft.Graph**
+- **Microsoft.Graph.Entra**
+- **AzureAD PowerShell Module**
+- **MSOnline PowerShell Module**
+
+## References
+
+[Get-Member][get-member]
+
+<!-- link references -->
+
+[cloud-shell]: /azure/cloud-shell/overview
+[azps-install]: install-azure-powershell.md
+[azps-docker]: azureps-in-docker.md
+[azps-auth]: /powershell/azure/authenticate-azureps
+[control-and-data-plane]: /azure/azure-resource-manager/management/control-plane-and-data-plane
+[get-member]: /powershell/module/microsoft.powershell.utility/get-member
+[azps-output]: queries-azureps.md
+[format-azps-output]: formatting-output.md
+[azurerm-module]: /powershell/azure/azurerm/overview
+[azure-rdfe-module]: /powershell/azure/servicemanagement/overview
