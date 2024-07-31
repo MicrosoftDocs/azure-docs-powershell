@@ -140,7 +140,7 @@
                 "az*-*/Az*.Cdn/*.yml": "azure-cdn",
                 "az*-*/Az*.CognitiveServices/*.yml": "azure-ai-services",
                 "az*-*/Az*.Compute/*.yml": "virtual-machines",
-                "az*-*/Az*.ContainerInstance/*.yml": "container-instances",
+                "az*-*/Az*.ContainerInstance/*.yml": "azure-container-instances",
                 "az*-*/Az*.ContainerRegistry/*.yml": "container-registry",
                 "az*-*/Az*.Consumption/*.yml": "cost-management-billing",
                 "az*-*/Az*.DataFactories/*.yml": "data-factory",
