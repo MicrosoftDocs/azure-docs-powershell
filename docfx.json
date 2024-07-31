@@ -154,7 +154,7 @@
                 "az*-*/Az*.DNS/*.yml": "dns",
                 "az*-*/Az*.EventGrid/*.yml": "event-grid",
                 "az*-*/Az*.EventHub/*.yml": "event-hubs",
-                "az*-*/Az*.FrontDoor/*.yml": "frontdoor",
+                "az*-*/Az*.FrontDoor/*.yml": "azure-frontdoor",
                 "az*-*/Az*.HDInsight/*.yml": "hdinsight",
                 "az*-*/Az*.Insights/*.yml": "azure-monitor",
                 "az*-*/Az*.IotCentral/*.yml": "iot-central",
