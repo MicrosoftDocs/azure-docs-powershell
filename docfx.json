@@ -146,7 +146,7 @@
                 "az*-*/Az*.DataFactories/*.yml": "data-factory",
                 "az*-*/Az*.DataFactoryV2/*.yml": "data-factory",
                 "az*-*/Az*.DataLakeAnalytics/*.yml": "data-lake-analytics",
-                "az*-*/Az*.DataLakeStore/*.yml": "data-lake-store",
+                "az*-*/Az*.DataLakeStore/*.yml": "azure-data-lake-storage-gen1",
                 "az*-*/Az*.DataMigration/*.yml": "dms",
                 "az*-*/Az*.DevSpaces/*.yml": "azure-dev-spaces",
                 "az*-*/Az*.DevTestLabs/*.yml": "devtest-lab",
