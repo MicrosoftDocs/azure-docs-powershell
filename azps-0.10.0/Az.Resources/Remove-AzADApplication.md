@@ -55,10 +55,10 @@ Removes the application with object id 'b4cd1619-80b3-4cfb-9f8f-9f2333425738' fr
 ### Example 2 - Remove application by application id
 
 ```
-PS C:\> Remove-AzADApplication -ApplicationId f9c5ea4f-28f0-401a-a491-491a037fa346
+PS C:\> Remove-AzADApplication -ApplicationId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Removes the application with application id 'f9c5ea4f-28f0-401a-a491-491a037fa346' from the tenant.
+Removes the application with application id '00001111-aaaa-2222-bbbb-3333cccc4444' from the tenant.
 
 ### Example 3 - Remove application by piping
 

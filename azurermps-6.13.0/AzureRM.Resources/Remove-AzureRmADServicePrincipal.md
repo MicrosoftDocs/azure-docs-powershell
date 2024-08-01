@@ -69,10 +69,10 @@ Removes the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d
 ### Example 2 - Remove a service principal by application id
 
 ```
-PS C:\> Remove-AzureRmADServicePrincipal -ApplicationId 9263469e-d328-4321-8646-3e3e75d20e76
+PS C:\> Remove-AzureRmADServicePrincipal -ApplicationId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Removes the service principal with application id '9263469e-d328-4321-8646-3e3e75d20e76'.
+Removes the service principal with application id '00001111-aaaa-2222-bbbb-3333cccc4444'.
 
 ### Example 3 - Remove a service principal by SPN
 
@@ -93,10 +93,10 @@ Gets the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45'
 ### Example 5 - Remove a service principal by piping an application
 
 ```
-PS C:\> Get-AzureRmApplication -ApplicationId 9263469e-d328-4321-8646-3e3e75d20e76 | Remove-AzureRmADServicePrincipal
+PS C:\> Get-AzureRmApplication -ApplicationId 00001111-aaaa-2222-bbbb-3333cccc4444 | Remove-AzureRmADServicePrincipal
 ```
 
-Gets the application with application id '9263469e-d328-4321-8646-3e3e75d20e76' and pipes that to the Remove-AzureRmADServicePrincipal cmdlet to remove the service principal associated with that application.
+Gets the application with application id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the Remove-AzureRmADServicePrincipal cmdlet to remove the service principal associated with that application.
 
 ## PARAMETERS
 

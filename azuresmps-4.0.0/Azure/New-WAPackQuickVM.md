@@ -31,7 +31,7 @@ The **New-WAPackQuickVM** cmdlet creates a virtual machine based on a template.
 ### Example 1: Create a virtual machine based on a template
 ```
 PS C:\> $Credentials = Get-Credential
-PS C:\> $TemplateId = Get-WAPackVMTemplate -Id 66242D17-189F-480D-87CF-8E1D749998C8
+PS C:\> $TemplateId = Get-WAPackVMTemplate -Id 00001111-aaaa-2222-bbbb-3333cccc4444
 PS C:\> New-WAPackQuickVM -Name "VirtualMachine023" -Template $TemplateId -VMCredential $Credentials
 ```
 

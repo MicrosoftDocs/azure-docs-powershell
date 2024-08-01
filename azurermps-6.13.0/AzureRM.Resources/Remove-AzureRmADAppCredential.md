@@ -51,26 +51,26 @@ The credential to be removed is identified by its key ID.
 ### Example 1 - Remove a specific credential from an application
 
 ```
-PS C:\> Remove-AzureRmADAppCredential -ObjectId 7663d3fb-6f86-4352-9e6d-cf9d50d5ee82 -KeyId 9044423a-60a3-45ac-9ab1-09534157ebb
+PS C:\> Remove-AzureRmADAppCredential -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -KeyId 9044423a-60a3-45ac-9ab1-09534157ebb
 ```
 
-Removes the credential with key id '9044423a-60a3-45ac-9ab1-09534157ebb' from the application with object id '7663d3fb-6f86-4352-9e6d-cf9d50d5ee82'.
+Removes the credential with key id '9044423a-60a3-45ac-9ab1-09534157ebb' from the application with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
 
 ### Example 2 - Remove all credentials from an application
 
 ```
-PS C:\> Remove-AzureRmADAppCredential -ApplicationId 4589cd6b-3d79-4bb4-93b8-a0b99f3bfc58
+PS C:\> Remove-AzureRmADAppCredential -ApplicationId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Removes all credentials from the application with application id '4589cd6b-3d79-4bb4-93b8-a0b99f3bfc58'.
+Removes all credentials from the application with application id '00001111-aaaa-2222-bbbb-3333cccc4444'.
 
 ### Example 3 - Remove all credentials using piping
 
 ```
-PS C:\> Get-AzureRmADApplication -ObjectId 7663d3fb-6f86-4352-9e6d-cf9d50d5ee82 | Remove-AzureRmADAppCredential
+PS C:\> Get-AzureRmADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Remove-AzureRmADAppCredential
 ```
 
-Gets the application with object id '7663d3fb-6f86-4352-9e6d-cf9d50d5ee82' and pipes that to the Remove-AzureRmADAppCredential cmdlet and removes all credentials from that application.
+Gets the application with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the Remove-AzureRmADAppCredential cmdlet and removes all credentials from that application.
 
 ## PARAMETERS
 
