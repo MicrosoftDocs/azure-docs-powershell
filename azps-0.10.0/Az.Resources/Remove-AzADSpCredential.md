@@ -49,10 +49,10 @@ The credential to be removed is identified by its key ID if an individual creden
 ### Example 1 - Remove a specific credential from a service principal
 
 ```
-PS C:\> Remove-AzADSpCredential -ObjectId 7663d3fb-6f86-4352-9e6d-cf9d50d5ee82 -KeyId 9044423a-60a3-45ac-9ab1-09534157ebb
+PS C:\> Remove-AzADSpCredential -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -KeyId 9044423a-60a3-45ac-9ab1-09534157ebb
 ```
 
-Removes the credential with key id '9044423a-60a3-45ac-9ab1-09534157ebb' from the service principal with object id '7663d3fb-6f86-4352-9e6d-cf9d50d5ee82'.
+Removes the credential with key id '9044423a-60a3-45ac-9ab1-09534157ebb' from the service principal with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
 
 ### Example 2 - Remove all credentials from a service principal
 
@@ -65,10 +65,10 @@ Removes all credentials from the service principal with the SPN "http://test123"
 ### Example 3 - Remove all credentials from a service principal using piping
 
 ```
-PS C:\> Get-AzADServicePrincipal -ObjectId 7663d3fb-6f86-4352-9e6d-cf9d50d5ee82 | Remove-AzADSpCredential
+PS C:\> Get-AzADServicePrincipal -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Remove-AzADSpCredential
 ```
 
-Gets the service principal with object id '7663d3fb-6f86-4352-9e6d-cf9d50d5ee82' and pipes that to the Remove-AzADSpCredential cmdlet to remove all credentials from that service principal.
+Gets the service principal with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the Remove-AzADSpCredential cmdlet to remove all credentials from that service principal.
 
 ## PARAMETERS
 

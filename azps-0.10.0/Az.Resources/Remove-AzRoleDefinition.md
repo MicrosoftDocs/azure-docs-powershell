@@ -51,7 +51,7 @@ Get-AzRoleDefinition -Name "Virtual Machine Operator" | Remove-AzRoleDefinition
 
 ### Example 2
 ```
-Remove-AzRoleDefinition -Id "52a6cc13-ff92-47a8-a39b-2a8205c3087e"
+Remove-AzRoleDefinition -Id "00001111-aaaa-2222-bbbb-3333cccc4444"
 ```
 
 ## PARAMETERS

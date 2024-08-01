@@ -88,10 +88,10 @@ PS C:\> $cer = New-Object System.Security.Cryptography.X509Certificates.X509Cert
 PS C:\> $cer.Import("C:\myapp.cer") 
 PS C:\> $binCert = $cer.GetRawCertData() 
 PS C:\> $credValue = [System.Convert]::ToBase64String($binCert)
-PS C:\> New-AzureRmADAppCredential -ApplicationId 4589cd6b-3d79-4bb4-93b8-a0b99f3bfc58 -CertValue $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
+PS C:\> New-AzureRmADAppCredential -ApplicationId 00001111-aaaa-2222-bbbb-3333cccc4444 -CertValue $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
 ```
 
-The supplied base64 encoded public X509 certificate ("myapp.cer") is added to the existing application with application id '4589cd6b-3d79-4bb4-93b8-a0b99f3bfc58'.
+The supplied base64 encoded public X509 certificate ("myapp.cer") is added to the existing application with application id '00001111-aaaa-2222-bbbb-3333cccc4444'.
 
 ### Example 3 - Create a new application credential using piping
 

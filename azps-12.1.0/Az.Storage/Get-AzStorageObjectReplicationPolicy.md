@@ -37,13 +37,13 @@ The **Get-AzStorageObjectReplicationPolicy** cmdlet gets or lists object replica
 
 
 ```
-$policy = Get-AzStorageObjectReplicationPolicy -ResourceGroupName "myresourcegroup" -AccountName "mydestaccount" -PolicyId 56bfa11c-81ef-4f8d-b307-5e5386e16fba
+$policy = Get-AzStorageObjectReplicationPolicy -ResourceGroupName "myresourcegroup" -AccountName "mydestaccount" -PolicyId 00001111-aaaa-2222-bbbb-3333cccc4444
 
 $policy
 
 ResourceGroupName StorageAccountName PolicyId                             EnabledTime SourceAccount   DestinationAccount Rules                                     
 ----------------- ------------------ --------                             ----------- -------------   ------------------ -----   
-myresourcegroup   mydestaccount      56bfa11c-81ef-4f8d-b307-5e5386e16fba             mysourceaccount mydestaccount      [5fa8b1d6-4985-4abd-a0b3-ec4d07295a43,...]
+myresourcegroup   mydestaccount      00001111-aaaa-2222-bbbb-3333cccc4444             mysourceaccount mydestaccount      [5fa8b1d6-4985-4abd-a0b3-ec4d07295a43,...]
 
 $policy.Rules
 
@@ -65,7 +65,7 @@ $policies
 ```output
 ResourceGroupName StorageAccountName PolicyId                             EnabledTime SourceAccount   DestinationAccount Rules                                     
 ----------------- ------------------ --------                             ----------- -------------   ------------------ -----   
-myresourcegroup   mydestaccount      56bfa11c-81ef-4f8d-b307-5e5386e16fba             mysrcaccount1   mydestaccount      [5fa8b1d6-4985-4abd-a0b3-ec4d07295a43,...]
+myresourcegroup   mydestaccount      00001111-aaaa-2222-bbbb-3333cccc4444             mysrcaccount1   mydestaccount      [5fa8b1d6-4985-4abd-a0b3-ec4d07295a43,...]
 myresourcegroup   mydestaccount      68434c7a-20d0-4282-b75c-43b5a243435e             mysrcaccount2   mydestaccount      [d3d39a01-8d92-40e5-849f-e56209ae5cf5,...]
 ```
 

@@ -36,7 +36,7 @@ Name               : test1027
 Kind               : web
 Location           : eastus
 Type               : microsoft.insights/components
-AppId              : 8323fb13-32aa-46af-b467-8355cf4f8f98
+AppId              : 00001111-aaaa-2222-bbbb-3333cccc4444
 ApplicationType    : web
 Tags               : {}
 CreationDate       : 10/27/2017 4:56:40 PM

@@ -170,18 +170,18 @@ More information about configuring Managed Identities can be found here: https:/
 # and giving it proper permissions, please see the following:
 # https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-authenticate-service-principal-powershell
 PS C:\> $Thumbprint = "0SZTNJ34TCCMUJ5MJZGR8XQD3S0RVHJBA33Z8ZXV"
-PS C:\> $TenantId = "4cd76576-b611-43d0-8f2b-adcb139531bf"
-PS C:\> $ApplicationId = "3794a65a-e4e4-493d-ac1d-f04308d712dd"
+PS C:\> $TenantId = "00001111-aaaa-2222-bbbb-3333cccc4444"
+PS C:\> $ApplicationId = "00001111-aaaa-2222-bbbb-3333cccc4444"
 PS C:\> Connect-AzAccount -CertificateThumbprint $Thumbprint -ApplicationId $ApplicationId -Tenant $TenantId -ServicePrincipal
 
 Account             SubscriptionName TenantId            Environment
 -------             ---------------- --------            -----------
 xxxx-xxxx-xxxx-xxxx Subscription1    xxxx-xxxx-xxxx-xxxx AzureCloud
 
-Account          : 3794a65a-e4e4-493d-ac1d-f04308d712dd
+Account          : 00001111-aaaa-2222-bbbb-3333cccc4444
 SubscriptionName : MyTestSubscription
 SubscriptionId   : 85f0f653-1f86-4d2c-a9f1-042efc00085c
-TenantId         : 4cd76576-b611-43d0-8f2b-adcb139531bf
+TenantId         : 00001111-aaaa-2222-bbbb-3333cccc4444
 Environment      : AzureCloud
 ```
 

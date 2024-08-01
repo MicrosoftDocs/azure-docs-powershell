@@ -104,7 +104,7 @@ Modify values for *First* and *Skip* to view other results.
 
 ### Example 3: Get backups for a backup policy ID
 ```
-PS C:\>Get-AzureStorSimpleDeviceBackup -DeviceName "Contoso63-AppVm" -BackupPolicyId "de088eac-b283-4d92-b501-a759845fdf3f" -First 10 -From "9/7/2014"
+PS C:\>Get-AzureStorSimpleDeviceBackup -DeviceName "Contoso63-AppVm" -BackupPolicyId "00001111-aaaa-2222-bbbb-3333cccc4444" -First 10 -From "9/7/2014"
 BackupJobCreationType : BySchedule
 CreatedOn             : 10/1/2014 11:00:12 AM
 SizeInBytes           : 10737418240

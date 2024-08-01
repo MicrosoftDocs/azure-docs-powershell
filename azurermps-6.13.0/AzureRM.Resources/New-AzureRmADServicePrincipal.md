@@ -192,16 +192,16 @@ The above command creates an AD service principal using the default values for p
 ### Example 5 - Create a new AD service principal using application id with role assignment
 
 ```
-PS C:\> New-AzureRmADServicePrincipal -ApplicationId 34a28ad2-dec4-4a41-bc3b-d22ddf90000e
+PS C:\> New-AzureRmADServicePrincipal -ApplicationId 00001111-aaaa-2222-bbbb-3333cccc4444
 
-ServicePrincipalNames : {34a28ad2-dec4-4a41-bc3b-d22ddf90000e, http://my-temp-app}
-ApplicationId         : 34a28ad2-dec4-4a41-bc3b-d22ddf90000e
+ServicePrincipalNames : {00001111-aaaa-2222-bbbb-3333cccc4444, http://my-temp-app}
+ApplicationId         : 00001111-aaaa-2222-bbbb-3333cccc4444
 DisplayName           : my-temp-app
 Id                    : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
 Type                  : ServicePrincipal
 ```
 
-Creates a new AD service principal for the application with application id '34a28ad2-dec4-4a41-bc3b-d22ddf90000e'. Since no values were provided for `Role` or `Scope`, the created service principal does not have any permissions.
+Creates a new AD service principal for the application with application id '00001111-aaaa-2222-bbbb-3333cccc4444'. Since no values were provided for `Role` or `Scope`, the created service principal does not have any permissions.
 
 ### Example 6 - Create a new AD service principal using piping
 
