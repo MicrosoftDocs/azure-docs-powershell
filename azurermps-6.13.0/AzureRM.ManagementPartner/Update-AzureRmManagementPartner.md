@@ -31,7 +31,7 @@ Updates the Microsoft Partner Network(MPN) ID of the current authenticated user 
 PS C:\> Update-AzureRmManagementPartner -PartnerId 4977985
 PartnerId   : 4977985
 PartnerName : Test_Test_DPORTest
-TenantId    : 1b1121dd-6900-412a-af73-e8d44f81e1c1
+TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
 ObjectId    : aa67f786-0552-423e-8849-244ed12bf581
 State       : Active
 ```

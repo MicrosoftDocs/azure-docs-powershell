@@ -35,7 +35,7 @@ This cmdlet also deletes all schedules associated with the deleted policy.
 
 ### Example 1: Remove a backup policy
 ```
-PS C:\>Remove-AzureStorSimpleDeviceBackupPolicy -DeviceName "Contoso63-AppVm" -BackupPolicyId "03710b4c-82c1-40ca-be5c-40289dc49642" -Force
+PS C:\>Remove-AzureStorSimpleDeviceBackupPolicy -DeviceName "Contoso63-AppVm" -BackupPolicyId "00001111-aaaa-2222-bbbb-3333cccc4444" -Force
 VERBOSE: ClientRequestId: b3e4d485-eae4-4cf4-a43b-815f3abcd2dd_PS
 VERBOSE: ClientRequestId: a260ee98-46aa-49e0-91ac-31d4155f4cae_PS
 VERBOSE: About to create a job to remove your backuppolicy! 
@@ -45,7 +45,7 @@ VERBOSE: The remove task is submitted successfully. Please use the command Get-A
 695be190-ac81-4cf2-b1c5-03ef6b08d005 for tracking the task's status
 ```
 
-This command removes the **BackupPolicy** that has the instance ID 03710b4c-82c1-40ca-be5c-40289dc49642, so that no more backups are made based on this policy.
+This command removes the **BackupPolicy** that has the instance ID 00001111-aaaa-2222-bbbb-3333cccc4444, so that no more backups are made based on this policy.
 The command also deletes all schedules associated with this policy.
 The command starts the operation that removes the **BackupPolicy** object, and then returns a **TaskResponse** object.
 To see the status of the task, use the **Get-AzureStorSimpleTask** cmdlet.

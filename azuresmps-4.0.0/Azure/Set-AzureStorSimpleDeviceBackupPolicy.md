@@ -29,7 +29,7 @@ You can rename the policy, add, update or delete schedules, and update the volum
 
 ### Example 1: Change the name of a backup policy
 ```
-PS C:\>Set-AzureStorSimpleDeviceBackupPolicy -DeviceName "Contoso63-AppVm" -BackupPolicyId "e6d9f1b3-a250-4d57-966a-039c8eaef9e9" -BackupPolicyName "UpdatedGeneralPolicy07" -WaitForComplete
+PS C:\>Set-AzureStorSimpleDeviceBackupPolicy -DeviceName "Contoso63-AppVm" -BackupPolicyId "00001111-aaaa-2222-bbbb-3333cccc4444" -BackupPolicyName "UpdatedGeneralPolicy07" -WaitForComplete
 VERBOSE: ClientRequestId: f4465b46-26cc-40ff-88da-7a28df88c35c_PS
 VERBOSE: ClientRequestId: 5e33a35c-e089-47c1-b760-474635b1ead8_PS
 VERBOSE: About to run a task to update your backuppolicy! 
@@ -53,7 +53,7 @@ NextBackup               : 12/16/2014 3:13:43 PM
 SchedulesCount           : 2
 SSMHostName              : 
 VolumesCount             : 1
-InstanceId               : e6d9f1b3-a250-4d57-966a-039c8eaef9e9
+InstanceId               : 00001111-aaaa-2222-bbbb-3333cccc4444
 Name                     : UpdatedGeneralPolicy07
 OperationInProgress      : None
 ```
@@ -66,7 +66,7 @@ This command specifies the *WaitForComplete* parameter, so the command completes
 PS C:\>$UpdateConfig = New-AzureStorSimpleDeviceBackupScheduleUpdateConfig -Id "3a6c6247-6b4d-42e2-aa87-16f4f21476ea" -BackupType CloudSnapshot -RecurrenceType Daily -RecurrenceValue 3 -RetentionCount 2 -Enabled $True
 PS C:\> $UpdateArray = @()
 PS C:\> $UpdateArray += $UpdateConfig
-PS C:\> Set-AzureStorSimpleDeviceBackupPolicy -DeviceName "Contoso63-AppVm" -BackupPolicyId "712605f6-eb03-4db8-8f79-e0ce64b2cce1" -BackupSchedulesToUpdate $UpdateArray
+PS C:\> Set-AzureStorSimpleDeviceBackupPolicy -DeviceName "Contoso63-AppVm" -BackupPolicyId "00001111-aaaa-2222-bbbb-3333cccc4444" -BackupSchedulesToUpdate $UpdateArray
 Error      : Microsoft.WindowsAzure.Management.StorSimple.Models.ErrorDetails
 JobId      : 7b265417-a5f1-45ad-8fbc-33bad4f63ec9
 JobSteps   : {Microsoft.WindowsAzure.Management.StorSimple.Models.JobStep, 

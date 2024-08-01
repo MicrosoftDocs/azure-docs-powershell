@@ -33,7 +33,7 @@ PS C:\> New-AzureRmSubscription -Name "My Subscription" -EnrollmentAccountObject
 
 Name        : My Subscription
 Id          : 86869d42-1782-4337-98b0-c905fb937d46
-TenantId    : a5dcb057-fd83-4384-9d49-5198004d33a5
+TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
 State       : Enabled
 ```
 

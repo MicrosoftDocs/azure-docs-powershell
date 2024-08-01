@@ -36,7 +36,7 @@ If you omit a required template parameter, the cmdlet prompts you for the value.
 ### Example 1: Get the run history of a logic app
 ```
 PS C:\>Get-AzureRmLogicAppActionRunHistory -ResourceGroupName "Resourcegroup11" -Name "LogicApp03"
-CorrelationId    : 55830326-9042-404d-a4c3-fab198106a57
+CorrelationId    : 00001111-aaaa-2222-bbbb-3333cccc4444
 EndTime          : 1/13/2016 2:46:55 PM
 Error            : {code, message}
 Name             : 08587489104702792076
@@ -47,7 +47,7 @@ TriggerName      :
 LogicAppName     : LogicApp03
 LogicAppVersion  : 08587489107859952540
 
-CorrelationId    : d3ddc917-9aaa-47b3-8814-c621c2ae530b
+CorrelationId    : 00001111-aaaa-2222-bbbb-3333cccc4444
 EndTime          : 1/13/2016 2:42:56 PM
 Error            : {code, message}
 Name             : 08587489107100664541
@@ -64,7 +64,7 @@ This command gets the run history of a logic app named LogicApp03.
 ### Example 2: Get a logic app run
 ```
 PS C:\>Get-AzureRmLogicAppActionRunHistory -ResourceGroupName "Resourcegroup11" -Name "LogicApp03" -RunName "08587489104702792076"
-CorrelationId    : 55830326-9042-404d-a4c3-fab198106a57
+CorrelationId    : 00001111-aaaa-2222-bbbb-3333cccc4444
 EndTime          : 1/13/2016 2:46:55 PM
 Error            : {code, message}
 Name             : 08587489104702792076
