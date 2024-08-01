@@ -147,7 +147,7 @@
                 "az*-*/Az*.DataFactoryV2/*.yml": "data-factory",
                 "az*-*/Az*.DataLakeAnalytics/*.yml": "data-lake-analytics",
                 "az*-*/Az*.DataLakeStore/*.yml": "data-lake-store",
-                "az*-*/Az*.DataMigration/*.yml": "dms",
+                "az*-*/Az*.DataMigration/*.yml": "azure-database-migration-service",
                 "az*-*/Az*.DevSpaces/*.yml": "azure-dev-spaces",
                 "az*-*/Az*.DevTestLabs/*.yml": "devtest-lab",
                 "az*-*/Az*.DeviceProvisioningServices/*.yml": "iot-dps",
