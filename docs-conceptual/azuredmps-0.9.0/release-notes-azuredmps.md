@@ -5,7 +5,8 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.workload:
 
-ms.service: deployment-manager
+ms.service: dotnet
+ms.subservice: azure-deployment-manager-sdk
 ---
 
 # Release notes
