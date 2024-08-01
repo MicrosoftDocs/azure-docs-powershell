@@ -145,7 +145,7 @@
                 "az*-*/Az*.Consumption/*.yml": "cost-management-billing",
                 "az*-*/Az*.DataFactories/*.yml": "data-factory",
                 "az*-*/Az*.DataFactoryV2/*.yml": "data-factory",
-                "az*-*/Az*.DataLakeAnalytics/*.yml": "data-lake-analytics",
+                "az*-*/Az*.DataLakeAnalytics/*.yml": "azure-data-lake-analytics",
                 "az*-*/Az*.DataLakeStore/*.yml": "data-lake-store",
                 "az*-*/Az*.DataMigration/*.yml": "dms",
                 "az*-*/Az*.DevSpaces/*.yml": "azure-dev-spaces",
