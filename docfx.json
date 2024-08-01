@@ -151,7 +151,7 @@
                 "az*-*/Az*.DevSpaces/*.yml": "azure-dev-spaces",
                 "az*-*/Az*.DevTestLabs/*.yml": "devtest-lab",
                 "az*-*/Az*.DeviceProvisioningServices/*.yml": "iot-dps",
-                "az*-*/Az*.DNS/*.yml": "dns",
+                "az*-*/Az*.DNS/*.yml": "azure-dns",
                 "az*-*/Az*.EventGrid/*.yml": "event-grid",
                 "az*-*/Az*.EventHub/*.yml": "event-hubs",
                 "az*-*/Az*.FrontDoor/*.yml": "frontdoor",
