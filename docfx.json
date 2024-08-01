@@ -141,7 +141,7 @@
                 "az*-*/Az*.CognitiveServices/*.yml": "azure-ai-services",
                 "az*-*/Az*.Compute/*.yml": "virtual-machines",
                 "az*-*/Az*.ContainerInstance/*.yml": "container-instances",
-                "az*-*/Az*.ContainerRegistry/*.yml": "container-registry",
+                "az*-*/Az*.ContainerRegistry/*.yml": "azure-container-registry",
                 "az*-*/Az*.Consumption/*.yml": "cost-management-billing",
                 "az*-*/Az*.DataFactories/*.yml": "data-factory",
                 "az*-*/Az*.DataFactoryV2/*.yml": "data-factory",
