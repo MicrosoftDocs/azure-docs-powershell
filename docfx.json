@@ -149,7 +149,7 @@
                 "az*-*/Az*.DataLakeStore/*.yml": "azure-data-lake-storage-gen1",
                 "az*-*/Az*.DataMigration/*.yml": "dms",
                 "az*-*/Az*.DevSpaces/*.yml": "azure-dev-spaces",
-                "az*-*/Az*.DevTestLabs/*.yml": "devtest-lab",
+                "az*-*/Az*.DevTestLabs/*.yml": "azure-devtest-labs",
                 "az*-*/Az*.DeviceProvisioningServices/*.yml": "iot-dps",
                 "az*-*/Az*.DNS/*.yml": "dns",
                 "az*-*/Az*.EventGrid/*.yml": "event-grid",
