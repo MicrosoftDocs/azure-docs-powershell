@@ -60,7 +60,7 @@ SystemDataLastModifiedBy     :
 SystemDataLastModifiedByType : 
 Tag                          : {
                                }
-TenantId                     : 7de8a199-bb33-4eda-9600-583103317243
+TenantId                     : 00001111-aaaa-2222-bbbb-3333cccc4444
 Type                         : microsoft.azuresphere/catalogs
 ```
 

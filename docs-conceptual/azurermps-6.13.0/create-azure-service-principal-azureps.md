@@ -59,7 +59,7 @@ ObjectId                : 775f64cd-0ec8-4b9b-b69a-8b8946022d9f
 IdentifierUris          : {http://MyDemoWebApp}
 HomePage                : http://www.contoso.com
 Type                    : Application
-ApplicationId           : 00c01aaa-1603-49fc-b6df-b78c4e5138b4
+ApplicationId           : 00001111-aaaa-2222-bbbb-3333cccc4444
 AvailableToOtherTenants : False
 AppPermissions          :
 ReplyUrls               : {}
@@ -70,13 +70,13 @@ ReplyUrls               : {}
 The `New-AzureRmADServicePrincipal` cmdlet is used to create the service principal.
 
 ```azurepowershell
-$servicePrincipal = New-AzureRmADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4
+$servicePrincipal = New-AzureRmADServicePrincipal -ApplicationId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
 ```Output
 Secret                : System.Security.SecureString
-ServicePrincipalNames : {00c01aaa-1603-49fc-b6df-b78c4e5138b4, http://MyDemoWebApp}
-ApplicationId         : 00c01aaa-1603-49fc-b6df-b78c4e5138b4
+ServicePrincipalNames : {00001111-aaaa-2222-bbbb-3333cccc4444, http://MyDemoWebApp}
+ApplicationId         : 00001111-aaaa-2222-bbbb-3333cccc4444
 DisplayName           : MyDemoWebApp
 Id                    : 698138e7-d7b6-4738-a866-b4e3081a69e4
 AdfsId                :
@@ -101,7 +101,7 @@ Your Tenant ID is displayed when you sign into Azure with your personal credenti
 a service principal, use the following commands:
 
 ```azurepowershell-interactive
-$cred = New-Object System.Management.Automation.PSCredential ("00c01aaa-1603-49fc-b6df-b78c4e5138b4", $servicePrincipal.Secret)
+$cred = New-Object System.Management.Automation.PSCredential ("00001111-aaaa-2222-bbbb-3333cccc4444", $servicePrincipal.Secret)
 Connect-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId 00000000-0000-0000-0000-000000000000
 ```
 
@@ -109,7 +109,7 @@ After a successful sign-in you see output like:
 
 ```Output
 Environment           : AzureCloud
-Account               : 00c01aaa-1603-49fc-b6df-b78c4e5138b4
+Account               : 00001111-aaaa-2222-bbbb-3333cccc4444
 TenantId              : 00000000-0000-0000-0000-000000000000
 SubscriptionId        :
 SubscriptionName      :
@@ -200,7 +200,7 @@ New-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 Secret    : System.Security.SecureString
 StartDate : 11/16/2018 12:38:23 AM
 EndDate   : 11/16/2019 12:38:23 AM
-KeyId     : 6f801c3e-6fcd-42b9-be8e-320b17ba1d36
+KeyId     : 00001111-aaaa-2222-bbbb-3333cccc4444
 Type      : Password
 ```
 
@@ -213,7 +213,7 @@ Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```Output
 StartDate           EndDate             KeyId                                Type
 ---------           -------             -----                                ----
-3/8/2017 5:58:24 PM 3/8/2018 5:58:24 PM 6f801c3e-6fcd-42b9-be8e-320b17ba1d36 Password
+3/8/2017 5:58:24 PM 3/8/2018 5:58:24 PM 00001111-aaaa-2222-bbbb-3333cccc4444 Password
 5/5/2016 4:55:27 PM 5/5/2017 4:55:27 PM ca9d4846-4972-4c70-b6f5-a4effa60b9bc Password
 ```
 
@@ -225,7 +225,7 @@ Remove-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -KeyId ca
 
 ```Output
 Confirm
-Are you sure you want to remove credential with keyId '6f801c3e-6fcd-42b9-be8e-320b17ba1d36' for
+Are you sure you want to remove credential with keyId '00001111-aaaa-2222-bbbb-3333cccc4444' for
 service principal objectId '698138e7-d7b6-4738-a866-b4e3081a69e4'.
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```
@@ -239,7 +239,7 @@ Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```output
 StartDate           EndDate             KeyId                                Type
 ---------           -------             -----                                ----
-3/8/2017 5:58:24 PM 3/8/2018 5:58:24 PM 6f801c3e-6fcd-42b9-be8e-320b17ba1d36 Password
+3/8/2017 5:58:24 PM 3/8/2018 5:58:24 PM 00001111-aaaa-2222-bbbb-3333cccc4444 Password
 ```
 
 ### Get information about the service principal
@@ -250,8 +250,8 @@ $svcprincipal | Select-Object -Property *
 ```
 
 ```Output
-ServicePrincipalNames : {http://MyDemoWebApp, 00c01aaa-1603-49fc-b6df-b78c4e5138b4}
-ApplicationId         : 00c01aaa-1603-49fc-b6df-b78c4e5138b4
+ServicePrincipalNames : {http://MyDemoWebApp, 00001111-aaaa-2222-bbbb-3333cccc4444}
+ApplicationId         : 00001111-aaaa-2222-bbbb-3333cccc4444
 DisplayName           : MyDemoWebApp
 Id                    : 698138e7-d7b6-4738-a866-b4e3081a69e4
 Type                  : ServicePrincipal

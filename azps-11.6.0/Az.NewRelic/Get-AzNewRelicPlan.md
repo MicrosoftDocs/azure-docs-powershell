@@ -26,7 +26,7 @@ List plans data
 
 ### Example 1: List plans data associated with specified organization
 ```powershell
-Get-AzNewRelicPlan -SubscriptionId 272c26cb-7026-4b37-b190-7cb7b2abecb0 -OrganizationId 9c5445c7-65e3-4bd5-8581-80c65584100f
+Get-AzNewRelicPlan -SubscriptionId 00001111-aaaa-2222-bbbb-3333cccc4444 -OrganizationId 9c5445c7-65e3-4bd5-8581-80c65584100f
 ```
 
 ```output
@@ -39,7 +39,7 @@ List plans data associated with specified Organization Id
 
 ### Example 2: Link plans account with specified organization in different subscription
 ```powershell
-Get-AzNewRelicPlan -SubscriptionId 272c26cb-7026-4b37-b190-7cb7b2abecb0 -OrganizationId 9c5445c7-65e3-4bd5-8581-80c65584100f -AccountId 3996563
+Get-AzNewRelicPlan -SubscriptionId 00001111-aaaa-2222-bbbb-3333cccc4444 -OrganizationId 9c5445c7-65e3-4bd5-8581-80c65584100f -AccountId 3996563
 ```
 
 Link plans account with specified organization in different subscription

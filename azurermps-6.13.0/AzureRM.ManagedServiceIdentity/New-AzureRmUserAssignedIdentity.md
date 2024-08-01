@@ -41,13 +41,13 @@ Name              : ID1
 
 Location          : centralus
 
-TenantId          : 493b860d-2741-480b-8b34-7b1d76e33c50
+TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
 
-PrincipalId       : e34192f9-7831-4a02-bfe2-4c6d2fb4360d
+PrincipalId       : 00001111-aaaa-2222-bbbb-3333cccc4444
 
-ClientId          : a5e650a2-fdfe-4652-bb3b-109b64617cfd
+ClientId          : 00001111-aaaa-2222-bbbb-3333cccc4444
 
-ClientSecretUrl   : https://control-westus.identity.azure.net/subscriptions/586d0246-0344-49dc-a790-59c916b0c309/resourcegroups/PSRG1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ID1/credentials?tid=493b860d-2741-480b-8b34-7b1d76e33c50&oid=e34192f9-7831-4a02-bfe2-4c6d2fb4360d&aid=a5e650a2-fdfe-4652-bb3b-109b64617cfd
+ClientSecretUrl   : https://control-westus.identity.azure.net/subscriptions/586d0246-0344-49dc-a790-59c916b0c309/resourcegroups/PSRG1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ID1/credentials?tid=00001111-aaaa-2222-bbbb-3333cccc4444&oid=00001111-aaaa-2222-bbbb-3333cccc4444&aid=00001111-aaaa-2222-bbbb-3333cccc4444
 
 Type              : Microsoft.ManagedIdentity/userAssignedIdentities
 ```
@@ -66,13 +66,13 @@ Name              : ID1
 
 Location          : westus
 
-TenantId          : 493b860d-2741-480b-8b34-7b1d76e33c50
+TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
 
-PrincipalId       : e34192f9-7831-4a02-bfe2-4c6d2fb4360d
+PrincipalId       : 00001111-aaaa-2222-bbbb-3333cccc4444
 
-ClientId          : a5e650a2-fdfe-4652-bb3b-109b64617cfd
+ClientId          : 00001111-aaaa-2222-bbbb-3333cccc4444
 
-ClientSecretUrl   : https://control-westus.identity.azure.net/subscriptions/586d0246-0344-49dc-a790-59c916b0c309/resourcegroups/PSRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ID1/credentials?tid=493b860d-2741-480b-8b34-7b1d76e33c50&oid=e34192f9-7831-4a02-bfe2-4c6d2fb4360d&aid=a5e650a2-fdfe-4652-bb3b-109b64617cfd
+ClientSecretUrl   : https://control-westus.identity.azure.net/subscriptions/586d0246-0344-49dc-a790-59c916b0c309/resourcegroups/PSRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ID1/credentials?tid=00001111-aaaa-2222-bbbb-3333cccc4444&oid=00001111-aaaa-2222-bbbb-3333cccc4444&aid=00001111-aaaa-2222-bbbb-3333cccc4444
 
 Type              : Microsoft.ManagedIdentity/userAssignedIdentities
 ```
