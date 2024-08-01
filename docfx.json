@@ -161,7 +161,7 @@
                 "az*-*/Az*.IotHub/*.yml": "iot-hub",
                 "az*-*/Az*.KeyVault/*.yml": "key-vault",
                 "az*-*/Az*.Kusto/*.yml": "data-explorer",
-                "az*-*/Az*.LogicApp/*.yml": "logic-apps",
+                "az*-*/Az*.LogicApp/*.yml": "azure-logic-apps",
                 "az*-*/Az*.MachineLearning*/*.yml": "machine-learning",
                 "az*-*/Az*.ManagedServiceIdentity*/*.yml": "active-directory",
                 "az*-*/Az*.Maps*/*.yml": "azure-maps",
