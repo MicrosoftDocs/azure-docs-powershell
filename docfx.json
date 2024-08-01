@@ -135,7 +135,7 @@
                 "az*-*/Az*.AzureStackAdmin/*.yml": "azure-stack",
                 "az*-*/Az*.AzureStackStorage/*.yml": "azure-stack",
                 "az*-*/Az*.Backup/*.yml": "backup",
-                "az*-*/Az*.Batch/*.yml": "batch",
+                "az*-*/Az*.Batch/*.yml": "azure-batch",
                 "az*-*/Az*.Billing/*.yml": "cost-management-billing",
                 "az*-*/Az*.Cdn/*.yml": "azure-cdn",
                 "az*-*/Az*.CognitiveServices/*.yml": "azure-ai-services",
