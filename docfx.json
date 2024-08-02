@@ -187,7 +187,7 @@
                 "az*-*/Az*.SiteRecovery/*.yml": "site-recovery",
                 "az*-*/Az*.Sql/*.yml": "sql-database",
                 "az*-*/Az*.Storage/*.yml": "azure-storage",
-                "az*-*/Az*.StreamAnalytics/*.yml": "stream-analytics",
+                "az*-*/Az*.StreamAnalytics/*.yml": "azure-stream-analytics",
                 "az*-*/Az*.Tags/*.yml": "azure-resource-manager",
                 "az*-*/Az*.TrafficManager/*.yml": "traffic-manager",
                 "az*-*/Az*.UsageAggregates/*.yml": "cost-management-billing",
