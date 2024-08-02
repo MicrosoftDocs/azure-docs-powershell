@@ -176,7 +176,7 @@
                 "az*-*/Az*.RecoveryServices.Backup/*.yml": "site-recovery",
                 "az*-*/Az*.RedisCache/*.yml": "azure-cache-redis",
                 "az*-*/Az*.Relay/*.yml": "service-bus",
-                "az*-*/Az*.ResourceGraph/*.yml": "resource-graph",
+                "az*-*/Az*.ResourceGraph/*.yml": "azure-resource-graph",
                 "az*-*/Az*.Resources/*.yml": "azure-resource-manager",
                 "az*-*/Az*.Scheduler/*.yml": "scheduler",
                 "az*-*/Az*.Security/*.yml": "security",
