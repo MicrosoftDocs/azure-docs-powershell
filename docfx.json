@@ -183,7 +183,7 @@
                 "az*-*/Az*.ServerManagement/*.yml": "server-management",
                 "az*-*/Az*.ServiceBus/*.yml": "service-bus",
                 "az*-*/Az*.ServiceFabric/*.yml": "service-fabric",
-                "az*-*/Az*.SignalR/*.yml": "signalr",
+                "az*-*/Az*.SignalR/*.yml": "azure-signalr-service",
                 "az*-*/Az*.SiteRecovery/*.yml": "site-recovery",
                 "az*-*/Az*.Sql/*.yml": "sql-database",
                 "az*-*/Az*.Storage/*.yml": "azure-storage",
