@@ -189,7 +189,7 @@
                 "az*-*/Az*.Storage/*.yml": "azure-storage",
                 "az*-*/Az*.StreamAnalytics/*.yml": "azure-stream-analytics",
                 "az*-*/Az*.Tags/*.yml": "azure-resource-manager",
-                "az*-*/Az*.TrafficManager/*.yml": "traffic-manager",
+                "az*-*/Az*.TrafficManager/*.yml": "azure-traffic-manager",
                 "az*-*/Az*.UsageAggregates/*.yml": "cost-management-billing",
                 "az*-*/Az*.Websites/*.yml": "app-service"
             },
