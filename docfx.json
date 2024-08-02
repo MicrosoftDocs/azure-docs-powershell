@@ -167,7 +167,7 @@
                 "az*-*/Az*.Maps*/*.yml": "azure-maps",
                 "az*-*/Az*.Media/*.yml": "media-services",
                 "az*-*/Az*.Network/*.yml": "virtual-network",
-                "az*-*/Az*.NotificationHubs/*.yml": "notification-hubs",
+                "az*-*/Az*.NotificationHubs/*.yml": "azure-notification-hubs",
                 "az*-*/Az*.OperationalInsights/*.yml": "operational-insights",
                 "az*-*/Az*.PolicyInsights/*.yml": "azure-policy",
                 "az*-*/Az*.PowerBIEmbedded/*.yml": "power-bi-embedded",
