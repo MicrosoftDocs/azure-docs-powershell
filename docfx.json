@@ -166,7 +166,7 @@
                 "az*-*/Az*.ManagedServiceIdentity*/*.yml": "active-directory",
                 "az*-*/Az*.Maps*/*.yml": "azure-maps",
                 "az*-*/Az*.Media/*.yml": "media-services",
-                "az*-*/Az*.Network/*.yml": "virtual-network",
+                "az*-*/Az*.Network/*.yml": "azure-virtual-network",
                 "az*-*/Az*.NotificationHubs/*.yml": "azure-notification-hubs",
                 "az*-*/Az*.OperationalInsights/*.yml": "operational-insights",
                 "az*-*/Az*.PolicyInsights/*.yml": "azure-policy",
