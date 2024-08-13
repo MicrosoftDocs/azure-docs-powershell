@@ -131,7 +131,7 @@
                 "az*-*/Az*.AnalysisServices/*.yml": "analysis-services",
                 "az*-*/Az*.ApiManagement/*.yml": "azure-api-management",
                 "az*-*/Az*.ApplicationInsights/*.yml": "azure-monitor",
-                "az*-*/Az*.Automation/*.yml": "automation",
+                "az*-*/Az*.Automation/*.yml": "azure-automation",
                 "az*-*/Az*.AzureStackAdmin/*.yml": "azure-stack",
                 "az*-*/Az*.AzureStackStorage/*.yml": "azure-stack",
                 "az*-*/Az*.Backup/*.yml": "azure-backup",
