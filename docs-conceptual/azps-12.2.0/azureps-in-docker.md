@@ -36,13 +36,13 @@ PowerShell session.
 1. Download the latest azure-powershell image.
 
    ```console
-   docker pull mcr.microsoft.com/azure-powershell
+   docker pull mcr.microsoft.com/azure-powershell:mariner-2
    ```
 
 1. Run the azure-powershell container in interactive mode:
 
    ```console
-   docker run -it mcr.microsoft.com/azure-powershell pwsh
+   docker run -it mcr.microsoft.com/azure-powershell:mariner-2 pwsh
    ```
 
 # [arm64](#tab/arm64)
@@ -72,7 +72,7 @@ The following command deletes the Docker container when you no longer need it.
 # [amd64](#tab/amd64)
 
 ```console
-docker rmi mcr.microsoft.com/azure-powershell
+docker rmi mcr.microsoft.com/azure-powershell:mariner-2
 ```
 
 # [arm64](#tab/arm64)
