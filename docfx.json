@@ -143,8 +143,8 @@
                 "az*-*/Az*.ContainerInstance/*.yml": "azure-container-instances",
                 "az*-*/Az*.ContainerRegistry/*.yml": "azure-container-registry",
                 "az*-*/Az*.Consumption/*.yml": "cost-management-billing",
-                "az*-*/Az*.DataFactories/*.yml": "data-factory",
-                "az*-*/Az*.DataFactoryV2/*.yml": "data-factory",
+                "az*-*/Az*.DataFactories/*.yml": "azure-data-factory",
+                "az*-*/Az*.DataFactoryV2/*.yml": "azure-data-factory",
                 "az*-*/Az*.DataLakeAnalytics/*.yml": "azure-data-lake-analytics",
                 "az*-*/Az*.DataLakeStore/*.yml": "azure-data-lake-storage-gen1",
                 "az*-*/Az*.DataMigration/*.yml": "azure-database-migration-service",
@@ -152,7 +152,7 @@
                 "az*-*/Az*.DevTestLabs/*.yml": "azure-devtest-labs",
                 "az*-*/Az*.DeviceProvisioningServices/*.yml": "iot-dps",
                 "az*-*/Az*.DNS/*.yml": "azure-dns",
-                "az*-*/Az*.EventGrid/*.yml": "event-grid",
+                "az*-*/Az*.EventGrid/*.yml": "azure-event-grid",
                 "az*-*/Az*.EventHub/*.yml": "azure-event-hubs",
                 "az*-*/Az*.FrontDoor/*.yml": "azure-frontdoor",
                 "az*-*/Az*.HDInsight/*.yml": "azure-hdinsight",
@@ -191,7 +191,7 @@
                 "az*-*/Az*.Tags/*.yml": "azure-resource-manager",
                 "az*-*/Az*.TrafficManager/*.yml": "azure-traffic-manager",
                 "az*-*/Az*.UsageAggregates/*.yml": "cost-management-billing",
-                "az*-*/Az*.Websites/*.yml": "app-service"
+                "az*-*/Az*.Websites/*.yml": "azure-app-service"
             },
             "products": {
                 "az*-*/Az*.Consumption/*.md": [
