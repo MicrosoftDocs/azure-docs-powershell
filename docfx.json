@@ -191,7 +191,7 @@
                 "az*-*/Az*.Tags/*.yml": "azure-resource-manager",
                 "az*-*/Az*.TrafficManager/*.yml": "azure-traffic-manager",
                 "az*-*/Az*.UsageAggregates/*.yml": "cost-management-billing",
-                "az*-*/Az*.Websites/*.yml": "app-service"
+                "az*-*/Az*.Websites/*.yml": "azure-app-service"
             },
             "products": {
                 "az*-*/Az*.Consumption/*.md": [
