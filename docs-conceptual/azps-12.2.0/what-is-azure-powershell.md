@@ -44,7 +44,7 @@ authenticating to Azure from the Az PowerShell module, see
 
 The **Az** PowerShell module is a wrapper module for Azure service-related PowerShell modules,
 usually one module per Azure service, such as **Az.Network** for Azure networking services and
-**Az.AKS** for Azure Kubernetes Service.
+**Az.Aks** for Azure Kubernetes Service.
 
 The cmdlets in the **Az** PowerShell module make REST calls to the Azure Resource Manager API.
 Breaking changes in the **Az** PowerShell module are limited to twice a year. Many breaking changes
@@ -81,12 +81,12 @@ information, see [Overview of the AzureRM PowerShell module][azurerm-module].
 
 ## The Azure PowerShell module
 
-You might also encounter a version of Azure PowerShell named the **Azure** PowerShell module, which
-is for managing legacy Azure resources that use Azure Service Manager (ASM) APIs. This module isn't
+You might also encounter a version of Azure PowerShell named the **Azure** PowerShell module. This
+module is for managing legacy Azure resources that use Azure Service Manager (ASM) APIs. It isn't
 recommended for creating new resources as ASM is scheduled for retirement. For more information, see
 [Overview of the Azure PowerShell Service Management module][azure-rdfe-module].
 
-## Azure PowerShell-related modules
+## Azure-related PowerShell modules
 
 The following PowerShell modules aren't part of Azure PowerShell:
 
