@@ -9,127 +9,137 @@ title: Get started with Azure PowerShell
 
 # Get started with Azure PowerShell
 
-Azure PowerShell is designed for managing and administering Azure resources from the command line.
-Use Azure PowerShell when you want to build automated tools that use the Azure Resource Manager
-model. Try it out in your browser with [Azure Cloud Shell](/azure/cloud-shell/overview), or install
-on your local machine.
+Azure PowerShell is a powerful tool for managing and administering Azure resources directly from
+PowerShell. It's ideal for building automated workflows and managing resources using the Azure
+Resource Manager model. You can try it out in your browser using [Azure Cloud Shell][cloudshell] or
+install it locally on your machine.
 
-This article helps you get started with Azure PowerShell and teaches the core concepts behind it.
+This article helps you get started with Azure PowerShell and teaches its core concepts.
 
 ## Install or run in Azure Cloud Shell
 
-The easiest way to get started with Azure PowerShell is by trying it out in an Azure Cloud Shell
-environment. To get up and running with Cloud Shell, see
-[Quickstart for PowerShell in Azure Cloud Shell](/azure/cloud-shell/quickstart-powershell). Cloud
-Shell runs PowerShell on a Linux container, so Windows-specific functionality isn't available.
+The easiest way to try Azure PowerShell is through Azure Cloud Shell, a browser-based environment
+that requires no installation. To get started, see
+[Get started with Azure Cloud Shell][ps-cloudshell]. Cloud Shell runs PowerShell on a Linux
+container, so Windows-specific features aren't available.
 
-When you're ready to install Azure PowerShell on your local machine, follow the instructions in
-[Install the Azure PowerShell module](install-azure-powershell.md).
+When you're ready to install Azure PowerShell locally, follow the steps in
+[How to install Azure PowerShell][install-azps].
 
 ## Sign in to Azure
 
-Sign in interactively with the
-[Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet. Skip this step if you
-use Cloud Shell. Your Azure Cloud Shell session is already authenticated for the environment,
-subscription, and tenant that launched the Cloud Shell session.
+To sign in, use the `Connect-AzAccount` cmdlet. If you're using Cloud Shell, you can skip this step
+since you're already authenticated for your environment, subscription, and tenant.
 
 ```azurepowershell
 Connect-AzAccount
 ```
 
-Azure cloud services offer environments compliant with regional data-handling laws. For accounts in
-a regional cloud, use the `Environment` parameter to sign in. Get the name of the environment for
-your region using the [Get-AzEnvironment](/powershell/module/Az.Accounts/Get-AzEnvironment) cmdlet.
-For example, to sign in to Azure China 21Vianet:
+For regional environments that require specific compliance (e.g., Azure China 21Vianet), use the
+**Environment** parameter:
 
-```azurepowershell-interactive
+```azurepowershell
 Connect-AzAccount -Environment AzureChinaCloud
 ```
 
-Beginning with Az PowerShell module version 5.0.0, `Connect-AzAccount` presents an interactive
-browser based login prompt by default. You can specify the `UseDeviceAuthentication` parameter to
-receive a token string which was previously the default for PowerShell version 6 and higher.
+Azure PowerShell defaults to Web Account Manager (WAM) for authentication on Windows systems, while
+other platforms use browser-based login. For more details, see [Web Account Manager (WAM)][wam].
 
-After signing in, you'll see information indicating which of your Azure subscriptions is active. If
-you have multiple Azure subscriptions in your account and want to select a different one, get your
-available subscriptions with
-[Get-AzSubscription](/powershell/module/az.accounts/get-azsubscription) and use the
-[Set-AzContext](/powershell/module/az.accounts/set-azcontext) cmdlet with your subscription ID. For
-more information about managing your Azure subscriptions in Azure PowerShell, see
-[Use multiple Azure subscriptions](manage-subscriptions-azureps.md).
+If you have access to multiple subscriptions, you’ll be prompted to select one upon login. Learn
+more about this process in [Login experience][login-experience].
 
-Once signed in, use the Azure PowerShell cmdlets to access and manage resources in your
-subscription. To learn more about the sign-in process and authentication methods, see
-[Sign in with Azure PowerShell](authenticate-azureps.md).
+Once signed in, you can use Azure PowerShell cmdlets to manage your resources. For further details
+on authentication, see [Sign in with Azure PowerShell][authenticate].
 
 ## Find commands
 
-Azure PowerShell cmdlets follow a standard naming convention for PowerShell, `Verb-Noun`. The verb
-describes the action (examples include `New`, `Get`, `Set`, `Remove`) and the noun describes the
-resource type (examples include `AzVM`, `AzKeyVaultCertificate`, `AzFirewall`,
-`AzVirtualNetworkGateway`). Nouns in Azure PowerShell always start with the prefix `Az`. For the
-full list of standard verbs, see
-[Approved verbs for PowerShell Commands](/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands).
+Azure PowerShell cmdlets follow the standard PowerShell naming convention of `Verb-Noun`. The verb
+describes the action (e.g., `New`, `Get`, `Set`, `Remove`), while the noun represents the resource
+type (e.g., `AzVM`, `AzKeyVaultCertificate`, `AzFirewall`, `AzVirtualNetworkGateway`). Nouns in
+Azure PowerShell start with the prefix `Az`.
 
-Knowing the nouns, verbs, and the Azure PowerShell modules available helps you find commands with
-the [Get-Command](/powershell/module/microsoft.powershell.core/get-command) cmdlet. For example, to
-find all VM-related commands that use the `Get` verb:
+To discover commands, use the `Get-Command` cmdlet. For instance, to list all commands related to
+virtual machines:
 
 ```powershell-interactive
 Get-Command -Verb Get -Noun AzVM* -Module Az.Compute
 ```
 
-To help you find common commands, this table lists the resource type, corresponding Azure PowerShell
-module, and noun prefix to use with `Get-Command`:
+Here’s a quick reference table of common resources and their associated modules:
 
-|                              Resource type                              |                   Azure PowerShell module                    |    Noun prefix     |
-| ----------------------------------------------------------------------- | ------------------------------------------------------------ | ------------------ |
-| [Resource group](/azure/azure-resource-manager/resource-group-overview) | [Az.Resources](/powershell/module/az.resources#resources)    | `AzResourceGroup`  |
-| [Virtual machines](/azure/virtual-machines)                             | [Az.Compute](/powershell/module/az.compute#virtual_machines) | `AzVM`             |
-| [Storage accounts](/azure/storage/common/storage-introduction)          | [Az.Storage](/powershell/module/az.storage/)                 | `AzStorageAccount` |
-| [Key Vault](/azure/key-vault/key-vault-whatis)                          | [Az.KeyVault](/powershell/module/az.keyvault)                | `AzKeyVault`       |
-| [Web applications](/azure/app-service)                                  | [Az.Websites](/powershell/module/az.websites)                | `AzWebApp`         |
-| [SQL databases](/azure/sql-database)                                    | [Az.Sql](/powershell/module/az.sql)                          | `AzSqlDatabase`    |
+|  Resource Type   | Azure PowerShell Module |   Noun Prefix    |
+| ---------------- | ----------------------- | ---------------- |
+| Resource Groups  | Az.Resources            | AzResourceGroup  |
+| Virtual Machines | Az.Compute              | AzVM             |
+| Storage Accounts | Az.Storage              | AzStorageAccount |
+| Key Vault        | Az.KeyVault             | AzKeyVault       |
+| Web Applications | Az.Websites             | AzWebApp         |
+| SQL Databases    | Az.Sql                  | AzSqlDatabase    |
 
-For a full list of the modules in Azure PowerShell, see the
-[Azure PowerShell modules list](https://github.com/Azure/azure-powershell/blob/master/documentation/azure-powershell-modules.md)
-hosted on GitHub.
+For a complete list of Azure PowerShell modules, see the
+[Azure PowerShell modules list][azps-modules] hosted on GitHub.
 
-## Data Collection
+## Data collection
 
-Azure PowerShell collects telemetry data by default. Microsoft aggregates collected data to identify
-patterns of usage to identify common issues and to improve the experience of Azure PowerShell.
-Microsoft Azure PowerShell does not collect any private or personal data. For example, the usage
-data helps identify issues such as cmdlets with low success and helps prioritize our work.
+By default, Azure PowerShell collects telemetry data to improve user experience by identifying usage
+patterns and issues. No private or personal data is collected. However, you can opt-out using the
+`Disable-AzDataCollection` cmdlet if you prefer. For more information, see our
+[privacy statement][privacy-statement].
 
-While we appreciate the insights this data provides, we also understand that not everyone wants to
-send usage data. You can disable data collection with the
-[`Disable-AzDataCollection`](/powershell/module/az.accounts/disable-azdatacollection) cmdlet. You
-can also read our [privacy statement](https://privacy.microsoft.com/privacystatement) to learn more.
+## Quickstarts and tutorials
 
-## Learn Azure PowerShell basics with quickstarts and tutorials
+Get hands-on with Azure PowerShell through our guided tutorials:
 
-To get started with Azure PowerShell, try an in-depth tutorial for setting up virtual machines and
-learning how to query them.
-
-> [!div class="nextstepaction"]
-> [Create virtual machines with Azure PowerShell](azureps-vm-tutorial.yml)
-
-There are also Azure PowerShell quickstarts for other popular Azure services:
-
-* [Create a storage account](/azure/storage/common/storage-quickstart-create-account?tabs=azure-powershell)
-* [Transfer objects to/from Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-powershell)
-* [Create and retrieve secrets from Azure Key Vault](/azure/key-vault/quick-create-powershell)
-* [Create an Azure SQL database and firewall](/azure/sql-database/scripts/sql-database-create-and-configure-database-powershell)
-* [Run a container in Azure Container Instances](/azure/container-instances/container-instances-quickstart-powershell)
-* [Create a Virtual Machine Scale Set](/azure/virtual-machine-scale-sets/quick-create-powershell)
-* [Create a standard load balancer](/azure/load-balancer/quickstart-create-standard-load-balancer-powershell)
+- [Create virtual machines with Azure PowerShell][create-vms]
+- [Create a storage account][create-storageaccount]
+- [Transfer objects to/from Azure Blob storage][transfer-objects]
+- [Create and retrieve secrets from Azure Key Vault][keyvault]
+- [Create an Azure SQL database and firewall][azsql]
+- [Run a container in Azure Container Instances][aci]
+- [Create a Virtual Machine Scale Set][vm-scaleset]
+- [Create a standard load balancer][load-balancer]
 
 ## Next steps
 
-* [Sign in with Azure PowerShell](authenticate-azureps.md)
-* [Manage Azure subscriptions with Azure PowerShell](manage-subscriptions-azureps.md)
-* [Create service principals with Azure PowerShell](create-azure-service-principal-azureps.md)
-* Get help from the community:
-  * [Azure forum on MSDN](https://go.microsoft.com/fwlink/p/?LinkId=320212)
-  * [Stack Overflow](https://go.microsoft.com/fwlink/?LinkId=320213)
+Explore more Azure PowerShell capabilities:
+
+- [Sign in with Azure PowerShell][authenticate]
+- [Manage Azure subscriptions with Azure PowerShell][manage-subscriptions]
+- [Create service principals with Azure PowerShell][service-principal]
+
+For additional help, connect with the community:
+
+- [Azure Tools Community][aztools-community]
+- [Stack Overflow][stack-overflow]
+
+## References
+
+- [Connect-AzAccount][connect-azaccount]
+- [Get-AzEnvironment][get-azenvironment]
+- [Get-Command][get-command]
+- [Disable-AzDataCollection][disable-azdatacollection]
+
+[cloudshell]: /azure/cloud-shell/overview
+[ps-cloudshell]: /azure/cloud-shell/quickstart-powershell
+[install-azps]: install-azure-powershell.md
+[connect-azaccount]: /powershell/module/az.accounts/connect-azaccount
+[get-azenvironment]: /powershell/module/Az.Accounts/Get-AzEnvironment
+[wam]: authenticate-interactive.md#web-account-manager-wam
+[login-experience]: authenticate-interactive.md#login-experience
+[authenticate]: authenticate-azureps.md
+[get-command]: /powershell/module/microsoft.powershell.core/get-command
+[azps-modules]: https://github.com/Azure/azure-powershell/blob/master/documentation/azure-powershell-modules.md
+[disable-azdatacollection]: /powershell/module/az.accounts/disable-azdatacollection
+[privacy-statement]: https://privacy.microsoft.com/privacystatement
+[create-vms]: azureps-vm-tutorial.yml
+[create-storageaccount]: /azure/storage/common/storage-quickstart-create-account?tabs=azure-powershell
+[transfer-objects]: /azure/storage/blobs/storage-quickstart-blobs-powershell
+[keyvault]: /azure/key-vault/quick-create-powershell
+[azsql]: /azure/sql-database/scripts/sql-database-create-and-configure-database-powershell
+[aci]: /azure/container-instances/container-instances-quickstart-powershell
+[vm-scaleset]: /azure/virtual-machine-scale-sets/quick-create-powershell
+[load-balancer]: /azure/load-balancer/quickstart-create-standard-load-balancer-powershell
+[service-principal]: create-azure-service-principal-azureps.md
+[aztools-community]: https://techcommunity.microsoft.com/t5/azure-tools/bd-p/AzureTools
+[stack-overflow]: https://go.microsoft.com/fwlink/?LinkId=320213
+[manage-subscriptions]: /powershell/azure/manage-subscriptions-azureps
