@@ -11,22 +11,22 @@ title: Intelligent context-aware command completion with Az Predictor
 
 ## Overview
 
-[Az Predictor][azpredictor-psgallery] is a PowerShell module that helps you navigate the cmdlets and
-parameters of the [Az PowerShell module][install-azps]. It provides intelligent context-aware
-suggestions for command completion when using Azure PowerShell.
+[Az Predictor][azpredictor-psgallery] is a PowerShell module that provides intelligent,
+context-aware suggestions for command completion when using Azure PowerShell. It helps you navigate
+the cmdlets and parameters of the [Az PowerShell module][install-azps] more efficiently.
 
-Az Predictor uses the [subsystem plugin model][subsystem-plugin-model] available in PowerShell 7.2.
-This updated version requires [PSReadLine 2.2.2][psreadline-psgallery] or higher to display
+Az Predictor is built on the [subsystem plugin model][subsystem-plugin-model] available in
+PowerShell 7.2 and higher and requires [PSReadLine 2.2.2][psreadline-psgallery] or higher to display
 suggestions.
 
 ## Prerequisites
 
-Required configuration for Az Predictor:
+To use Az Predictor, ensure you have the following:
 
-- [PowerShell 7.2][install-pwsh] or higher
-- [PSReadline 2.2.2][psreadline-psgallery] or higher
+- [PowerShell version 7.2][install-pwsh] or higher
+- [PSReadline version 2.2.2][psreadline-psgallery] or higher
 
-Install the latest version of PSReadLine:
+You can install the latest version of **PSReadLine** using:
 
 ```powershell
 Install-Module -Name PSReadline
@@ -44,49 +44,48 @@ Install-Module -Name Az.Tools.Predictor
 
 ### Enable Az Predictor
 
-1. Enable Az Predictor for the current and future PowerShell sessions.
+Enable Az Predictor for the current and future PowerShell sessions.
 
-   ```powershell
-   Enable-AzPredictor -AllSession
-   ```
+```powershell
+Enable-AzPredictor -AllSession
+```
 
-1. Set your preferred view for suggestions.
+### Set your preferred suggestion view
 
-   Enable list view:
+- Enable list view:
 
-   ```powershell
-   Set-PSReadLineOption -PredictionViewStyle ListView
-   ```
+  ```powershell
+  Set-PSReadLineOption -PredictionViewStyle ListView
+  ```
 
-   Enable inline view:
+- Enable inline view:
 
-   ```powershell
-   Set-PSReadLineOption -PredictionViewStyle InlineView
-   ```
+  ```powershell
+  Set-PSReadLineOption -PredictionViewStyle InlineView
+  ```
 
 > [!NOTE]
-> You can switch between view modes with the <kbd>F2</kbd> key.
+> You can switch between the view modes using the <kbd>F2</kbd> key.
 
 ## Uninstallation
 
-Once installed and enabled, Az Predictor is loaded in the PowerShell profile. To uninstall the
-**Az.Tools.Predictor** module:
+To uninstall the **Az.Tools.Predictor** module, follow these steps:
 
-1. Close **all** PowerShell sessions, including VS Code.
+1. Close **all** active PowerShell sessions, including those in VS Code.
 
-1. Launch a PowerShell session with no profile.
+1. Start a new PowerShell session without loading any profiles:
 
    ```powershell
    pwsh -noprofile
    ```
 
-1. Uninstall Az Predictor
+1. Uninstall the Az Predictor module
 
    ```powershell
    Uninstall-Module -Name Az.Tools.Predictor -Force
    ```
 
-1. Close PowerShell
+1. Close the PowerShell session
 
 ## Privacy and data collection
 
