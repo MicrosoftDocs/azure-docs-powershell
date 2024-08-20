@@ -159,7 +159,7 @@
                 "az*-*/Az*.Insights/*.yml": "azure-monitor",
                 "az*-*/Az*.IotCentral/*.yml": "iot-central",
                 "az*-*/Az*.IotHub/*.yml": "iot-hub",
-                "az*-*/Az*.KeyVault/*.yml": "key-vault",
+                "az*-*/Az*.KeyVault/*.yml": "azure-key-vault",
                 "az*-*/Az*.Kusto/*.yml": "azure-data-explorer",
                 "az*-*/Az*.LogicApp/*.yml": "azure-logic-apps",
                 "az*-*/Az*.MachineLearning*/*.yml": "azure-machine-learning",
