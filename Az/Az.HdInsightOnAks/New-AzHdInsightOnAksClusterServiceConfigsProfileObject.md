@@ -1,7 +1,7 @@
 ---
 external help file: Az.HdInsightOnAks-help.xml
 Module Name: Az.HdInsightOnAks
-online version: https://learn.microsoft.com/powershell/module/az.hdinsightonaks/New-AzHdInsightOnAksClusterServiceConfigsProfileObject
+online version: https://learn.microsoft.com/powershell/module/Az.HdInsightOnAks/new-azhdinsightonaksclusterserviceconfigsprofileobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksClusterServiceConfigsProfileObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksClusterServiceConfigsProfileObject.md
@@ -10,17 +10,17 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzHdInsightOnAksClusterServiceConfigsProfileObject
 
 ## SYNOPSIS
-Create a service config profile.
+Create an in-memory object for ClusterServiceConfigsProfile.
 
 ## SYNTAX
 
 ```
-New-AzHdInsightOnAksClusterServiceConfigsProfileObject -ServiceName <String> -Config <IClusterServiceConfig[]>
+New-AzHdInsightOnAksClusterServiceConfigsProfileObject -Config <IClusterServiceConfig[]> -ServiceName <String>
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Create a service config profile.
+Create an in-memory object for ClusterServiceConfigsProfile.
 
 ## EXAMPLES
 
@@ -31,7 +31,7 @@ $yarnComponentConfig= New-AzHdInsightOnAksClusterServiceConfigObject -ComponentN
 $yarnServiceConfigProfile=New-AzHdInsightOnAksClusterServiceConfigsProfileObject -ServiceName "yarn-service" -Config $yarnComponentConfig
 ```
 
-This cmdlet creates the service config profile of "yarn-service" with the component service config.
+This cmdlet creates the service config profile of "yarn-service" with the ComponentName service config.
 
 ## PARAMETERS
 
@@ -56,7 +56,7 @@ Name of the service the configurations should apply to.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: Name
+Aliases:
 
 Required: True
 Position: Named
@@ -70,13 +70,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IClusterServiceConfig[]
-
-### System.String
-
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IClusterServiceConfigsProfile
+### Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.ClusterServiceConfigsProfile
 
 ## NOTES
 

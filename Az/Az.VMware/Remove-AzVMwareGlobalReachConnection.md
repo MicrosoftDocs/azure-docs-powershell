@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzVMwareGlobalReachConnection
 
 ## SYNOPSIS
-Delete a global reach connection in a private cloud
+Delete a GlobalReachConnection
 
 ## SYNTAX
 
@@ -35,7 +35,7 @@ Remove-AzVMwareGlobalReachConnection -InputObject <IVMwareIdentity> [-DefaultPro
 ```
 
 ## DESCRIPTION
-Delete a global reach connection in a private cloud
+Delete a GlobalReachConnection
 
 ## EXAMPLES
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the global reach connection in the private cloud
+Name of the global reach connection
 
 ```yaml
 Type: System.String
@@ -194,6 +194,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String

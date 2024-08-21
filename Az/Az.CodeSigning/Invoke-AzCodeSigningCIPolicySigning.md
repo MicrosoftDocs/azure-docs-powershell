@@ -193,3 +193,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzCodeSigningCustomerEku](./Get-AzCodeSigningCustomerEku.md)
 
 [Get-AzCodeSigningRootCert](./Get-AzCodeSigningRootCert.md)
+
+[Get-AzCodeSigningCertChain](./Get-AzCodeSigningCertChain.md)

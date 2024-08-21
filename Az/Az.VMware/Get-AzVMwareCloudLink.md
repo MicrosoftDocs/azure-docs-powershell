@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzVMwareCloudLink
 
 ## SYNOPSIS
-Get an cloud link by name in a private cloud
+Get a CloudLink
 
 ## SYNTAX
 
@@ -40,7 +40,7 @@ Get-AzVMwareCloudLink -InputObject <IVMwareIdentity> [-DefaultProfile <PSObject>
 ```
 
 ## DESCRIPTION
-Get an cloud link by name in a private cloud
+Get a CloudLink
 
 ## EXAMPLES
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the cloud link resource
+Name of the cloud link.
 
 ```yaml
 Type: System.String
@@ -166,6 +166,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String[]

@@ -17,22 +17,22 @@ Removes a Subscription scoped Deployment Stack.
 ### RemoveByName (Default)
 ```
 Remove-AzSubscriptionDeploymentStack [-Name] <String> -ActionOnUnmanage <PSActionOnUnmanage> [-PassThru]
- [-Force] [-BypassStackOutOfSyncError] [-Pre] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-Force] [-BypassStackOutOfSyncError] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveByResourceId
 ```
 Remove-AzSubscriptionDeploymentStack -ResourceId <String> -ActionOnUnmanage <PSActionOnUnmanage> [-PassThru]
- [-Force] [-BypassStackOutOfSyncError] [-Pre] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-Force] [-BypassStackOutOfSyncError] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveByStackObject
 ```
 Remove-AzSubscriptionDeploymentStack [-InputObjet] <PSDeploymentStack> -ActionOnUnmanage <PSActionOnUnmanage>
- [-PassThru] [-Force] [-BypassStackOutOfSyncError] [-Pre] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-PassThru] [-Force] [-BypassStackOutOfSyncError] [-Pre] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +56,7 @@ Action to take on resources that become unmanaged on deletion or update of the d
 Type: Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.DeploymentStacks.PSActionOnUnmanage
 Parameter Sets: (All)
 Aliases:
-Accepted values: DetachAll, DeleteResources, DeleteResourcesAndResourceGroups, DeleteAll
+Accepted values: DetachAll, DeleteResources, DeleteAll
 
 Required: True
 Position: Named

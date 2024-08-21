@@ -14,7 +14,7 @@ Microsoft Azure PowerShell: Databricks cmdlets
 
 ## Az.Databricks Cmdlets
 ### [Get-AzDatabricksAccessConnector](Get-AzDatabricksAccessConnector.md)
-Gets an azure databricks accessConnector.
+Gets an Azure Databricks Access Connector.
 
 ### [Get-AzDatabricksOutboundNetworkDependenciesEndpoint](Get-AzDatabricksOutboundNetworkDependenciesEndpoint.md)
 Gets the list of endpoints that VNET Injected Workspace calls Azure Databricks Control Plane.
@@ -28,7 +28,7 @@ Gets the workspace vNet Peering.
 Gets the workspace.
 
 ### [New-AzDatabricksAccessConnector](New-AzDatabricksAccessConnector.md)
-Creates or updates azure databricks accessConnector.
+Creates or updates Azure Databricks Access Connector.
 
 ### [New-AzDatabricksVNetPeering](New-AzDatabricksVNetPeering.md)
 Creates vNet Peering for workspace.
@@ -40,7 +40,7 @@ Creates a new workspace.
 Create an in-memory object for WorkspaceProviderAuthorization.
 
 ### [Remove-AzDatabricksAccessConnector](Remove-AzDatabricksAccessConnector.md)
-Deletes the azure databricks accessConnector.
+Deletes the Azure Databricks Access Connector.
 
 ### [Remove-AzDatabricksVNetPeering](Remove-AzDatabricksVNetPeering.md)
 Deletes the workspace vNetPeering.
@@ -49,7 +49,7 @@ Deletes the workspace vNetPeering.
 Deletes the workspace.
 
 ### [Update-AzDatabricksAccessConnector](Update-AzDatabricksAccessConnector.md)
-Updates an azure databricks accessConnector.
+Updates an Azure Databricks Access Connector.
 
 ### [Update-AzDatabricksVNetPeering](Update-AzDatabricksVNetPeering.md)
 Update vNet Peering for workspace.

@@ -39,7 +39,7 @@ Set-AzNetAppFilesBackupPolicy -Name <String> [-Enabled] [-DailyBackupsToKeep <In
 ```
 
 ## DESCRIPTION
-The **Set-AzNetAppFilesBackupPolicy** cmdlet modifies an ANF account.
+The **Set-AzNetAppFilesBackupPolicy** cmdlet modifies an ANF BackupPolicy.
 
 ## EXAMPLES
 

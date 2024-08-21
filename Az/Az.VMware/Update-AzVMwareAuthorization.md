@@ -10,32 +10,33 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzVMwareAuthorization
 
 ## SYNOPSIS
-Update an ExpressRoute Circuit Authorization in a private cloud
+Update a ExpressRouteAuthorization
 
 ## SYNTAX
 
 ### UpdateExpanded (Default)
 ```
 Update-AzVMwareAuthorization -Name <String> -PrivateCloudName <String> -ResourceGroupName <String>
- [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-SubscriptionId <String>] [-ExpressRouteId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityPrivateCloudExpanded
 ```
 Update-AzVMwareAuthorization -Name <String> -PrivateCloudInputObject <IVMwareIdentity>
- [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-ExpressRouteId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzVMwareAuthorization -InputObject <IVMwareIdentity> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-AzVMwareAuthorization -InputObject <IVMwareIdentity> [-ExpressRouteId <String>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Update an ExpressRoute Circuit Authorization in a private cloud
+Update a ExpressRouteAuthorization
 
 ## EXAMPLES
 
@@ -90,6 +91,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExpressRouteId
+The ID of the ExpressRoute Circuit
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InputObject
 Identity Parameter
 
@@ -106,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the ExpressRoute Circuit Authorization in the private cloud
+Name of the ExpressRoute Circuit Authorization
 
 ```yaml
 Type: System.String
@@ -151,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateCloudName
-The name of the private cloud.
+Name of the private cloud
 
 ```yaml
 Type: System.String
@@ -183,6 +199,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String

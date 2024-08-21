@@ -15,8 +15,9 @@ Return trial status for subscription by region
 ## SYNTAX
 
 ```
-Test-AzVMwareLocationTrialAvailability -Location <String> [-SubscriptionId <String>] [-Name <String>]
- [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Test-AzVMwareLocationTrialAvailability -Location <String> [-SubscriptionId <String>] [-Capacity <Int32>]
+ [-Family <String>] [-Name <String>] [-Size <String>] [-Tier <String>] [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,6 +40,22 @@ Check trial availability
 
 ## PARAMETERS
 
+### -Capacity
+If the SKU supports scale out/in then the capacity integer should be included.
+If scale out/in is not possible for the resource this may be omitted.
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultProfile
 The DefaultProfile parameter is not functional.
 Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
@@ -55,8 +72,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Family
+If the service has different generations of hardware, for the same SKU, then that can be captured here.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Location
-Azure region
+The name of the Azure region.
 
 ```yaml
 Type: System.String
@@ -72,6 +104,25 @@ Accept wildcard characters: False
 
 ### -Name
 The name of the SKU.
+E.g.
+P3.
+It is typically a letter+number code
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Size
+The SKU size.
+When the name field is the combination of tier and some other value, this would be the standalone code.
 
 ```yaml
 Type: System.String
@@ -87,6 +138,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String
@@ -96,6 +148,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tier
+This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

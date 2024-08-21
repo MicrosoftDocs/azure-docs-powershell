@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file: Az.MachineLearningServices-help.xml
 Module Name: Az.MachineLearningServices
-online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/new-azmlworkspacevirtualmachineobject
+online version: https://learn.microsoft.com/powershell/module/az.MachineLearningServices/new-AzMLWorkspaceVirtualMachineObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceVirtualMachineObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceVirtualMachineObject.md
@@ -15,11 +15,11 @@ Create an in-memory object for VirtualMachine.
 ## SYNTAX
 
 ```
-New-AzMLWorkspaceVirtualMachineObject [-Address <String>] [-AdministratorAccountPassword <String>]
+New-AzMLWorkspaceVirtualMachineObject [-Description <String>] [-DisableLocalAuth <Boolean>]
+ [-ResourceId <String>] [-Address <String>] [-AdministratorAccountPassword <String>]
  [-AdministratorAccountPrivateKeyData <String>] [-AdministratorAccountPublicKeyData <String>]
- [-AdministratorAccountUsername <String>] [-Description <String>] [-DisableLocalAuth <Boolean>]
- [-IsNotebookInstanceCompute <Boolean>] [-NotebookServerPort <Int32>] [-ResourceId <String>] [-Size <String>]
- [-SshPort <Int32>] [<CommonParameters>]
+ [-AdministratorAccountUsername <String>] [-IsNotebookInstanceCompute <Boolean>] [-NotebookServerPort <Int32>]
+ [-Size <String>] [-SshPort <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -223,11 +223,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20220501.VirtualMachine
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.VirtualMachine
 
 ## NOTES
 
-ALIASES
-
 ## RELATED LINKS
-

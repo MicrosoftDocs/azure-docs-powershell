@@ -44,7 +44,7 @@ This cmdlet will create a managed cluster resource without node types. To bootst
 ```powershell
 $rgName = "testRG"
 $clusterName = "testCluster"
-$password = ConvertTo-SecureString -AsPlainText -Force "testpass1234!@#$"
+$password = ConvertTo-SecureString -String "****" -AsPlainText -Force
 $tags = @{"test"="tag"}
 
 New-AzServiceFabricManagedCluster -ResourceGroupName $rgName -Location centraluseuap -ClusterName $clusterName -AdminPassword $password -Tag $tags -Verbose
@@ -56,7 +56,7 @@ This command creates a cluster resource with default basic sku.
 ```powershell
 $rgName = "testRG"
 $clusterName = "testCluster"
-$password = ConvertTo-SecureString -AsPlainText -Force "testpass1234!@#$"
+$password = ConvertTo-SecureString -String "****" -AsPlainText -Force
 New-AzServiceFabricManagedCluster -ResourceGroupName $rgName -Location centraluseuap -ClusterName $clusterName -ClientCertThumbprint XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -ClientCertIsAdmin -AdminPassword $password -Sku Standard -Verbose
 ```
 
@@ -66,7 +66,7 @@ This command creates a cluster resource in centraluseuap with an initial admin c
 ```powershell
 $rgName = "testRG"
 $clusterName = "testCluster"
-$password = ConvertTo-SecureString -AsPlainText -Force "testpass1234!@#$"
+$password = ConvertTo-SecureString -String "****" -AsPlainText -Force
 New-AzServiceFabricManagedCluster -ResourceGroupName $rgName -Location centraluseuap -ClusterName $clusterName -AdminPassword $password -Sku Standard -UpgradeMode Automatic -UpgradeCadence Wave1 -ZonalResiliency -Verbose
 ```
 
@@ -76,7 +76,7 @@ This command creates a cluster with upgrade cadence in wave1 and zonal resilienc
 ```powershell
 $rgName = "testRG"
 $clusterName = "testCluster"
-$password = ConvertTo-SecureString -AsPlainText -Force "testpass1234!@#$"
+$password = ConvertTo-SecureString -String "****" -AsPlainText -Force
 New-AzServiceFabricManagedCluster -ResourceGroupName $rgName -Location centraluseuap -ClusterName $clusterName -AdminPassword $password -Sku Standard -UpgradeMode Manual -CodeVersion 7.2.477.9590 -Verbose
 ```
 

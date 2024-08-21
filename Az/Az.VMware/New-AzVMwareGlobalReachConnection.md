@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzVMwareGlobalReachConnection
 
 ## SYNOPSIS
-Create a global reach connection in a private cloud
+Create a GlobalReachConnection
 
 ## SYNTAX
 
@@ -38,7 +38,7 @@ New-AzVMwareGlobalReachConnection -InputObject <IVMwareIdentity> [-Authorization
 ```
 
 ## DESCRIPTION
-Create a global reach connection in a private cloud
+Create a GlobalReachConnection
 
 ## EXAMPLES
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationKey
-Authorization key from the peer express route used for the global reach connection
+Authorization key from the peer express route used for the global reachconnection
 
 ```yaml
 Type: System.String
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteId
-The ID of the Private Cloud's ExpressRoute Circuit that is participating in the global reach connection
+The ID of the Private Cloud's ExpressRoute Circuit that is participating in theglobal reach connection
 
 ```yaml
 Type: System.String
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the global reach connection in the private cloud
+Name of the global reach connection
 
 ```yaml
 Type: System.String
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerExpressRouteResourceId
-Identifier of the ExpressRoute Circuit to peer with in the global reach connection
+Identifier of the ExpressRoute Circuit to peer with in the global reachconnection
 
 ```yaml
 Type: System.String
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateCloudName
-The name of the private cloud.
+Name of the private cloud
 
 ```yaml
 Type: System.String
@@ -226,6 +226,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String

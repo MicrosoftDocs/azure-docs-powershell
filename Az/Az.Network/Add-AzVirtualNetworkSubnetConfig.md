@@ -19,7 +19,7 @@ Adds a subnet configuration to a virtual network.
 ```
 Add-AzVirtualNetworkSubnetConfig -Name <String> -VirtualNetwork <PSVirtualNetwork> -AddressPrefix <String[]>
  [-NetworkSecurityGroup <PSNetworkSecurityGroup>] [-RouteTable <PSRouteTable>] [-InputObject <PSNatGateway>]
- [-ServiceEndpoint <String[]>] [-ServiceEndpointPolicy <PSServiceEndpointPolicy[]>]
+ [-ServiceEndpoint <String[]>] [-NetworkIdentifier <PSResourceId>] [-ServiceEndpointConfig <PSServiceEndpoint[]>] [-ServiceEndpointPolicy <PSServiceEndpointPolicy[]>]
  [-Delegation <PSDelegation[]>] [-PrivateEndpointNetworkPoliciesFlag <String>]
  [-PrivateLinkServiceNetworkPoliciesFlag <String>] [-IpAllocation <PSIpAllocation[]>]
  [-DefaultOutboundAccess <Boolean>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -29,7 +29,7 @@ Add-AzVirtualNetworkSubnetConfig -Name <String> -VirtualNetwork <PSVirtualNetwor
 ```
 Add-AzVirtualNetworkSubnetConfig -Name <String> -VirtualNetwork <PSVirtualNetwork> -AddressPrefix <String[]>
  [-NetworkSecurityGroupId <String>] [-RouteTableId <String>] [-ResourceId <String>]
- [-ServiceEndpoint <String[]>] [-ServiceEndpointPolicy <PSServiceEndpointPolicy[]>]
+ [-ServiceEndpoint <String[]>] [-NetworkIdentifier <PSResourceId>] [-ServiceEndpointConfig <PSServiceEndpoint[]>] [-ServiceEndpointPolicy <PSServiceEndpointPolicy[]>]
  [-Delegation <PSDelegation[]>] [-PrivateEndpointNetworkPoliciesFlag <String>]
  [-PrivateLinkServiceNetworkPoliciesFlag <String>] [-IpAllocation <PSIpAllocation[]>]
  [-DefaultOutboundAccess <Boolean>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]

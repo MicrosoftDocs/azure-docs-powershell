@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzVMwareGlobalReachConnection
 
 ## SYNOPSIS
-Get a global reach connection by name in a private cloud
+Get a GlobalReachConnection
 
 ## SYNTAX
 
@@ -41,7 +41,7 @@ Get-AzVMwareGlobalReachConnection -InputObject <IVMwareIdentity> [-DefaultProfil
 ```
 
 ## DESCRIPTION
-Get a global reach connection by name in a private cloud
+Get a GlobalReachConnection
 
 ## EXAMPLES
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the global reach connection in the private cloud
+Name of the global reach connection
 
 ```yaml
 Type: System.String
@@ -167,6 +167,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String[]

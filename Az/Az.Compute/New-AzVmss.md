@@ -67,7 +67,7 @@ See [Quickstart: Create a virtual machine scale set with Azure PowerShell](https
 $vmssName = 'VMSSNAME'
 # Create credentials, I am using one way to create credentials, there are others as well.
 # Pick one that makes the most sense according to your use case.
-$vmPassword = ConvertTo-SecureString "PASSWORD" -AsPlainText -Force
+$vmPassword = ConvertTo-SecureString -String "****" -AsPlainText -Force
 $vmCred = New-Object System.Management.Automation.PSCredential('USERNAME', $vmPassword)
 $securityTypeStnd = "Standard"
 
@@ -195,7 +195,7 @@ $vmssName = 'VMSSNAME';
 $domainNameLabel = "dnl" + $ResourceGroupName;
 # Create credentials, I am using one way to create credentials, there are others as well.
 # Pick one that makes the most sense according to your use case.
-$vmPassword = ConvertTo-SecureString 'PASSWORD' -AsPlainText -Force;
+$vmPassword = ConvertTo-SecureString -String "****" -AsPlainText -Force;
 $vmCred = New-Object System.Management.Automation.PSCredential('USERNAME', $vmPassword);
 
 $text = "UserData value to encode";
@@ -220,7 +220,7 @@ $vmssSize = 'Standard_D4s_v3';
 $vmssName1 = 'vmss1' + $rgname;
 $imageName = "Win2022AzureEdition";
 $adminUsername = "<Username>";
-$adminPassword = "<Password>" | ConvertTo-SecureString -AsPlainText -Force;
+$adminPassword = ConvertTo-SecureString -String "****" -AsPlainText -Force;
 $vmCred = New-Object System.Management.Automation.PSCredential ($adminUsername, $adminPassword);
 
 # VMSS Creation 

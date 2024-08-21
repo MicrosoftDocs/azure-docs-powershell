@@ -17,9 +17,9 @@ Creates an Azure SQL Managed Instance.
 ### NewByEditionAndComputeGenerationParameterSet (Default)
 ```
 New-AzSqlInstance [-Name] <String> [-ResourceGroupName] <String> [-AdministratorCredential <PSCredential>]
- -Location <String> -SubnetId <String> [-LicenseType <String>] [-StorageSizeInGB <Int32>] -VCore <Int32>
- -Edition <String> -ComputeGeneration <String> [-Collation <String>] [-PublicDataEndpointEnabled]
- [-ProxyOverride <String>] [-TimezoneId <String>] [-Tag <Hashtable>] [-AssignIdentity]
+ -Location <String> -SubnetId <String> [-LicenseType <String>] [-StorageSizeInGB <Int32>] [-StorageIOps <Int32>]
+ -VCore <Int32> -Edition <String> -ComputeGeneration <String> [-IsGeneralPurposeV2 <Boolean>] [-Collation <String>]
+ [-PublicDataEndpointEnabled] [-ProxyOverride <String>] [-TimezoneId <String>] [-Tag <Hashtable>] [-AssignIdentity]
  [-DnsZonePartner <String>] [-InstancePoolName <String>] [-MinimalTlsVersion <String>]
  [-BackupStorageRedundancy <String>] [-MaintenanceConfigurationId <String>]
  [-PrimaryUserAssignedIdentityId <String>] [-KeyId <String>]
@@ -61,9 +61,9 @@ New-AzSqlInstance [-InstancePoolResourceId] <String> [-Name] <String> [-Administ
 ### NewBySkuNameParameterSetParameter
 ```
 New-AzSqlInstance [-Name] <String> [-ResourceGroupName] <String> [-AdministratorCredential <PSCredential>]
- -Location <String> -SubnetId <String> [-LicenseType <String>] [-StorageSizeInGB <Int32>] -VCore <Int32>
- -SkuName <String> [-Collation <String>] [-PublicDataEndpointEnabled] [-ProxyOverride <String>]
- [-TimezoneId <String>] [-Tag <Hashtable>] [-AssignIdentity] [-DnsZonePartner <String>]
+ -Location <String> -SubnetId <String> [-LicenseType <String>] [-StorageSizeInGB <Int32>] [-StorageIOps <Int32>]
+ -VCore <Int32> -SkuName <String> [-IsGeneralPurposeV2 <Boolean>] [-Collation <String>] [-PublicDataEndpointEnabled]
+ [-ProxyOverride <String>] [-TimezoneId <String>] [-Tag <Hashtable>] [-AssignIdentity] [-DnsZonePartner <String>]
  [-InstancePoolName <String>] [-MinimalTlsVersion <String>] [-BackupStorageRedundancy <String>]
  [-MaintenanceConfigurationId <String>] [-PrimaryUserAssignedIdentityId <String>] [-KeyId <String>]
  [-UserAssignedIdentityId <System.Collections.Generic.List`1[System.String]>] [-IdentityType <String>] [-AsJob]
@@ -91,6 +91,7 @@ ManagedInstanceName      : managedInstance1
 Tags                     :
 Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
 Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+IsGeneralPurposeV2       : false
 FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
 AdministratorLogin       : adminLogin1
 AdministratorPassword    :
@@ -98,6 +99,7 @@ SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/r
 LicenseType              : LicenseIncluded
 VCores                   : 16
 StorageSizeInGB          : 1024
+StorageIOps              :
 DnsZone                  : ad35cna0mw
 InstancePoolName         :
 ```
@@ -117,6 +119,7 @@ ManagedInstanceName      : managedInstance2
 Tags                     :
 Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
 Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+IsGeneralPurposeV2       : false
 FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
 AdministratorLogin       : adminLogin1
 AdministratorPassword    :
@@ -124,13 +127,71 @@ SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/r
 LicenseType              : LicenseIncluded
 VCores                   : 16
 StorageSizeInGB          : 1024
+StorageIOps              :
 DnsZone                  : ad35cna0mw
 InstancePoolName         :
 ```
 
 This command creates a new instance by using by using Edition and ComputeGeneration parameters.
 
-### Example 3: Create a new instance in an instance pool using an instance pool object
+### Example 3: Create a new GPv2 instance
+```powershell
+New-AzSqlInstance -Name "managedInstance3" -ResourceGroupName "ResourceGroup01" -Location "westcentralus" -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType "LicenseIncluded" -StorageSizeInGB 1024 -StorageIOps 4000 -VCore 8 -SkuName "GP_Gen5" -IsGeneralPurposeV2 $true
+```
+
+```output
+Location                 : westcentralus
+Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+ResourceGroupName        : resourcegroup01
+ManagedInstanceName      : managedInstance3
+Tags                     :
+Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+IsGeneralPurposeV2       : true
+FullyQualifiedDomainName : managedInstance3.wcusxxxxxxxxxxxxx.database.windows.net
+AdministratorLogin       : adminLogin1
+AdministratorPassword    :
+SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+LicenseType              : LicenseIncluded
+VCores                   : 8
+StorageSizeInGB          : 1024
+StorageIOps              : 4000
+DnsZone                  : ad35cna0mw
+InstancePoolName         :
+```
+
+This command creates a new GPv2 instance by using the SkuName parameter.
+
+### Example 4: Create a new GPv2 instance
+```powershell
+New-AzSqlInstance -Name "managedInstance4" -ResourceGroupName "ResourceGroup01" -Location "westcentralus" -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType "LicenseIncluded" -StorageSizeInGB 1024 -StorageIOps 4000 -VCore 8 -Edition "GeneralPurpose" -ComputeGeneration "Gen5" -IsGeneralPurposeV2 $true
+```
+
+```output
+Location                 : westcentralus
+Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+ResourceGroupName        : resourcegroup01
+ManagedInstanceName      : managedInstance4
+Tags                     :
+Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+IsGeneralPurposeV2       : true
+FullyQualifiedDomainName : managedInstance4.wcusxxxxxxxxxxxxx.database.windows.net
+AdministratorLogin       : adminLogin1
+AdministratorPassword    :
+SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+LicenseType              : LicenseIncluded
+VCores                   : 8
+StorageSizeInGB          : 1024
+StorageIOps              : 4000
+StorageIOps              :
+DnsZone                  : ad35cna0mw
+InstancePoolName         :
+```
+
+This command creates a new GPv2 instance by using by using Edition and ComputeGeneration parameters.
+
+### Example 5: Create a new instance in an instance pool using an instance pool object
 ```powershell
 $instancePool = Get-AzSqlInstancePool -ResourceGroupName resourcegroup01 -Name instancepool0
 $instancePool | New-AzSqlInstance -Name managedInstance2 -AdministratorCredential (Get-Credential) -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 2
@@ -157,7 +218,7 @@ InstancePoolName         : instancepool0
 
 This command creates a new instance in an instance pool using an instance pool object.
 
-### Example 4: Create a new instance in an instance pool using an instance pool resource identifier
+### Example 6: Create a new instance in an instance pool using an instance pool resource identifier
 ```powershell
 New-AzSqlInstance -Name managedInstance2 -AdministratorCredential (Get-Credential) -StorageSizeInGB 1024 -VCore 2 -InstancePoolResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/instancePools/instancePool0"
 ```
@@ -183,7 +244,7 @@ InstancePoolName         : instancepool0
 
 This command creates a new instance in an instance pool using the instance pool's resource identifier.
 
-### Example 5: Create a new instance in an instance pool
+### Example 7: Create a new instance in an instance pool
 ```powershell
 New-AzSqlInstance -Name managedInstance1 -ResourceGroupName resourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 32 -VCore 2 -ComputeGeneration Gen5 -Edition GeneralPurpose -InstancePoolName instancePool0
 ```
@@ -209,7 +270,7 @@ InstancePoolName         : instancePool0
 
 This command creates a new instance in an instance pool with name instancePool0
 
-### Example 6: Create a new instance with maintenance configuration
+### Example 8: Create a new instance with maintenance configuration
 ```powershell
 New-AzSqlInstance -Name managedInstance1 -ResourceGroupName resourcegroup01 -Location "westus" -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -VCore 8 -ComputeGeneration Gen5 -Edition GeneralPurpose -MaintenanceConfigurationId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_WestUS_MI_2"
 ```
@@ -222,6 +283,7 @@ ManagedInstanceName					: managedInstance1
 Tags								:
 Identity							:
 Sku									: Microsoft.Azure.Management.Internal.Resources.Models.Sku
+IsGeneralPurposeV2					: false
 FullyQualifiedDomainName			: managedInstance1.wusxxxxxxxxxxxxx.database.windows.net
 AdministratorLogin					: adminLogin1
 AdministratorPassword				:
@@ -229,6 +291,7 @@ SubnetId							: /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGro
 LicenseType							: LicenseIncluded
 VCores								: 8
 StorageSizeInGB						: 256
+StorageIOps							:
 Collation							: SQL_Latin1_General_CP1_CI_AS
 PublicDataEndpointEnabled			: False
 ProxyOverride						:
@@ -244,7 +307,7 @@ MaintenanceConfigurationId			: /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 This command creates a new instance with maintenance configuration MI_2
 
-### Example 7: Create a new instance with External (Microsoft Entra ID) Administrator, Microsoft Entra-only Authentication and no SqlAdministratorCredentials
+### Example 9: Create a new instance with External (Microsoft Entra ID) Administrator, Microsoft Entra-only Authentication and no SqlAdministratorCredentials
 <!-- Skip: Output cannot be splitted from code -->
 ```powershell
 New-AzSqlInstance -Name managedInstance2 -ResourceGroupName ResourceGroup01 -ExternalAdminName DummyLogin -EnableActiveDirectoryOnlyAuthentication -Location westcentralus -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -Edition "GeneralPurpose" -ComputeGeneration Gen4
@@ -256,6 +319,7 @@ ManagedInstanceName      : managedInstance2
 Tags                     :
 Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
 Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+IsGeneralPurposeV2       : false
 FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
 AdministratorLogin       : adminLogin1
 AdministratorPassword    :
@@ -263,6 +327,7 @@ SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/r
 LicenseType              : LicenseIncluded
 VCores                   : 16
 StorageSizeInGB          : 1024
+StorageIOps              :
 DnsZone                  : ad35cna0mw
 InstancePoolName         :
 Administrators           :
@@ -275,6 +340,7 @@ ManagedInstanceName      : managedInstance2
 Tags                     :
 Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
 Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+IsGeneralPurposeV2       : false
 FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
 AdministratorLogin       : adminLogin1
 AdministratorPassword    :
@@ -282,6 +348,7 @@ SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/r
 LicenseType              : LicenseIncluded
 VCores                   : 16
 StorageSizeInGB          : 1024
+StorageIOps              :
 DnsZone                  : ad35cna0mw
 InstancePoolName         :
 Administrators           : Microsoft.Azure.Management.Sql.Models.ManagedInstanceExternalAdministrator
@@ -297,7 +364,7 @@ AzureADOnlyAuthentication : True
 
 This command creates a new zone - redundant instance
 
-### Example 8: Create a new zone - redundant instance
+### Example 10: Create a new zone - redundant instance
 ```powershell
 New-AzSqlInstance -Name managedInstance1 -ResourceGroupName ResourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -SkuName GP_Gen4 -DnsZonePartner "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/partnerServerForDnsZone" -ZoneRedundant
 ```
@@ -310,6 +377,7 @@ ManagedInstanceName      : managedInstance1
 Tags                     :
 Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
 Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+IsGeneralPurposeV2       : false
 FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
 AdministratorLogin       : adminLogin1
 AdministratorPassword    :
@@ -317,6 +385,7 @@ SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/r
 LicenseType              : LicenseIncluded
 VCores                   : 16
 StorageSizeInGB          : 1024
+StorageIOps              :
 DnsZone                  : ad35cna0mw
 InstancePoolName         :
 ZoneRedundant            : true
@@ -324,7 +393,7 @@ ZoneRedundant            : true
 
 This command creates a new instance with external administrator properties and Microsoft Entra-only authentication enabled.
 
-### Example 9: Create a new instance with TDE CMK
+### Example 11: Create a new instance with TDE CMK
 ```powershell
 New-AzSqlInstance -Name managedInstance1 -ResourceGroupName ResourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -SkuName GP_Gen4 -DnsZonePartner "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/partnerServerForDnsZone" -AssignIdentity -IdentityType "UserAssigned" -PrimaryUserAssignedIdentityId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity01" -UserAssignedIdentityId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity01" -KeyId "https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901"
 ```
@@ -337,6 +406,7 @@ ManagedInstanceName      : managedInstance1
 Tags                     :
 Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
 Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+IsGeneralPurposeV2       : false
 FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
 AdministratorLogin       : adminLogin1
 AdministratorPassword    :
@@ -344,6 +414,7 @@ SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/r
 LicenseType              : LicenseIncluded
 VCores                   : 16
 StorageSizeInGB          : 1024
+StorageIOps              :
 DnsZone                  : ad35cna0mw
 InstancePoolName         :
 KeyId                    : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
@@ -352,7 +423,7 @@ PrimaryUserAssignedIdentityId : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx
 
 This command creates a new managed instance with TDE CMK enabled.
 
-### Example 10: Create a new instance with database format and pricing model
+### Example 12: Create a new instance with database format and pricing model
 ```powershell
 New-AzSqlInstance -Name managedInstance1 -ResourceGroupName ResourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -SkuName GP_Gen4 -DnsZonePartner "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/partnerServerForDnsZone" -DatabaseFormat AlwaysUpToDate -PricingModel Regular
 ```
@@ -365,6 +436,7 @@ ManagedInstanceName      : managedInstance1
 Tags                     :
 Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
 Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+IsGeneralPurposeV2       : false
 FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
 AdministratorLogin       : adminLogin1
 AdministratorPassword    :
@@ -372,6 +444,7 @@ SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/r
 LicenseType              : LicenseIncluded
 VCores                   : 16
 StorageSizeInGB          : 1024
+StorageIOps              :
 DnsZone                  : ad35cna0mw
 DatabaseFormat           : AlwaysUpToDate
 PricingModel             : Regular
@@ -637,6 +710,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -IsGeneralPurposeV2
+Whether or not this is a GPv2 variant of General Purpose edition.
+
+```yaml
+Type: System.Nullable`1[System.Boolean]
+Parameter Sets: NewByEditionAndComputeGenerationParameterSet, NewBySkuNameParameterSetParameter
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -KeyId
 The Azure Key Vault URI that is used for encryption.
 
@@ -816,6 +904,21 @@ Parameter Sets: NewBySkuNameParameterSetParameter
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageIOps
+Determines how much Storage IOps to associate with instance
+
+```yaml
+Type: System.Int32
+Parameter Sets: NewByEditionAndComputeGenerationParameterSet, NewBySkuNameParameterSetParameter
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

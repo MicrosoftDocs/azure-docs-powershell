@@ -21,16 +21,16 @@ Get-AzNetAppFilesVolumeGroupIdListForLDAPUser -ResourceGroupName <String> -Accou
  [<CommonParameters>]
 ```
 
+### ByParentObjectParameterSet
+```
+Get-AzNetAppFilesVolumeGroupIdListForLDAPUser -Name <String> -PoolObject <PSNetAppFilesPool>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
 ### ByResourceIdParameterSet
 ```
 Get-AzNetAppFilesVolumeGroupIdListForLDAPUser -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
-```
-
-### ByParentObjectParameterSet
-```
-Get-AzNetAppFilesVolumeGroupIdListForLDAPUser -PoolObject <PSNetAppFilesPool>
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByObjectParameterSet
@@ -103,7 +103,7 @@ The name of the ANF volume
 
 ```yaml
 Type: System.String
-Parameter Sets: ByFieldsParameterSet
+Parameter Sets: ByFieldsParameterSet, ByParentObjectParameterSet
 Aliases: VolumeName
 
 Required: True

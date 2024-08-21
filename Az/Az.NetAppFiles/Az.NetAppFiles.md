@@ -28,6 +28,9 @@ Gets details of an Azure NetApp Files (ANF) Backup.
 ### [Get-AzNetAppFilesBackupPolicy](Get-AzNetAppFilesBackupPolicy.md)
 Gets details of an Azure NetApp Files (ANF) Backup Policy.
 
+### [Get-AzNetAppFilesBackupVault](Get-AzNetAppFilesBackupVault.md)
+Gets details of an Azure NetApp Files (ANF) BackupVault.
+
 ### [Get-AzNetAppFilesNetworkSiblingSet](Get-AzNetAppFilesNetworkSiblingSet.md)
 Get details of a network sibling set
 
@@ -91,6 +94,9 @@ Creates a new Azure NetApp Files (ANF) backup.
 ### [New-AzNetAppFilesBackupPolicy](New-AzNetAppFilesBackupPolicy.md)
 Creates a new Azure NetApp Files (ANF) backup policy for an ANF account.
 
+### [New-AzNetAppFilesBackupVault](New-AzNetAppFilesBackupVault.md)
+Creates a new Azure NetApp Files (ANF) BackupVault.
+
 ### [New-AzNetAppFilesExportPolicyObject](New-AzNetAppFilesExportPolicyObject.md)
 Creates export policy object.
 
@@ -130,6 +136,9 @@ Deletes an Azure NetApp Files (ANF) backup.
 
 ### [Remove-AzNetAppFilesBackupPolicy](Remove-AzNetAppFilesBackupPolicy.md)
 Deletes an Azure NetApp Files (ANF) backup policy.
+
+### [Remove-AzNetAppFilesBackupVault](Remove-AzNetAppFilesBackupVault.md)
+Deletes an Azure NetApp Files (ANF) BackupVault.
 
 ### [Remove-AzNetAppFilesPool](Remove-AzNetAppFilesPool.md)
 Deletes an Azure NetApp Files (ANF) pool.
@@ -179,6 +188,9 @@ Updates an Azure NetApp Files (ANF) account with the new data set. Useful for de
 ### [Set-AzNetAppFilesBackupPolicy](Set-AzNetAppFilesBackupPolicy.md)
 Updates an Azure NetApp Files (ANF) Backup Policy with the new data set. 
 
+### [Set-AzNetAppFilesBackupVault](Set-AzNetAppFilesBackupVault.md)
+Updates an Azure NetApp Files (ANF) BackupVault with the new data set.
+
 ### [Set-AzNetAppFilesPool](Set-AzNetAppFilesPool.md)
 Updates an Azure NetApp Files (ANF) Capacity Pool with the new data set. 
 
@@ -208,6 +220,9 @@ Updates an Azure NetApp Files (ANF) backup to the optional modifiers provided.
 
 ### [Update-AzNetAppFilesBackupPolicy](Update-AzNetAppFilesBackupPolicy.md)
 Updates an Azure NetApp Files (ANF) backup policy to the optional modifiers provided.
+
+### [Update-AzNetAppFilesBackupVault](Update-AzNetAppFilesBackupVault.md)
+Updates an Azure NetApp Files (ANF) BackupVault according to the optional modifiers provided.
 
 ### [Update-AzNetAppFilesNetworkSiblingSet](Update-AzNetAppFilesNetworkSiblingSet.md)
 Update the network features of a network sibling set

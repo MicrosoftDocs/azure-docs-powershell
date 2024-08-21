@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file: Az.MachineLearningServices-help.xml
 Module Name: Az.MachineLearningServices
-online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/new-azmlworkspacesynapsesparkobject
+online version: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceSynapseSparkObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceSynapseSparkObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceSynapseSparkObject.md
@@ -17,10 +17,10 @@ Create an in-memory object for SynapseSpark.
 ```
 New-AzMLWorkspaceSynapseSparkObject [-AutoPausePropertyDelayInMinute <Int32>]
  [-AutoPausePropertyEnabled <Boolean>] [-AutoScalePropertyEnabled <Boolean>]
- [-AutoScalePropertyMaxNodeCount <Int32>] [-AutoScalePropertyMinNodeCount <Int32>] [-Description <String>]
- [-DisableLocalAuth <Boolean>] [-NodeCount <Int32>] [-NodeSize <String>] [-NodeSizeFamily <String>]
- [-PoolName <String>] [-ResourceGroup <String>] [-ResourceId <String>] [-SparkVersion <String>]
- [-SubscriptionId <String>] [-WorkspaceName <String>] [<CommonParameters>]
+ [-AutoScalePropertyMaxNodeCount <Int32>] [-AutoScalePropertyMinNodeCount <Int32>] [-NodeCount <Int32>]
+ [-NodeSize <String>] [-NodeSizeFamily <String>] [-PoolName <String>] [-ResourceGroup <String>]
+ [-SparkVersion <String>] [-SubscriptionId <String>] [-WorkspaceName <String>] [-Description <String>]
+ [-DisableLocalAuth <Boolean>] [-ResourceId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +39,6 @@ Create an in-memory object for SynapseSpark
 
 ### -AutoPausePropertyDelayInMinute
 
-
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
@@ -53,7 +52,6 @@ Accept wildcard characters: False
 ```
 
 ### -AutoPausePropertyEnabled
-
 
 ```yaml
 Type: System.Boolean
@@ -69,7 +67,6 @@ Accept wildcard characters: False
 
 ### -AutoScalePropertyEnabled
 
-
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
@@ -84,7 +81,6 @@ Accept wildcard characters: False
 
 ### -AutoScalePropertyMaxNodeCount
 
-
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
@@ -98,7 +94,6 @@ Accept wildcard characters: False
 ```
 
 ### -AutoScalePropertyMinNodeCount
-
 
 ```yaml
 Type: System.Int32
@@ -284,11 +279,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20220501.SynapseSpark
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.SynapseSpark
 
 ## NOTES
 
-ALIASES
-
 ## RELATED LINKS
-

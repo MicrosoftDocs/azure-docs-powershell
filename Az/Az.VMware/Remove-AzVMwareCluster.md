@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzVMwareCluster
 
 ## SYNOPSIS
-Delete a cluster in a private cloud
+Delete a Cluster
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ Remove-AzVMwareCluster -InputObject <IVMwareIdentity> [-DefaultProfile <PSObject
 ```
 
 ## DESCRIPTION
-Delete a cluster in a private cloud
+Delete a Cluster
 
 ## EXAMPLES
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the cluster in the private cloud
+Name of the cluster
 
 ```yaml
 Type: System.String
@@ -193,6 +193,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String

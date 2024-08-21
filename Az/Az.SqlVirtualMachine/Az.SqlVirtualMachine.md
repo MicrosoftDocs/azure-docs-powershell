@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Microsoft Azure PowerShell: SqlVirtualMachine cmdlets
 
 ## Az.SqlVirtualMachine Cmdlets
+### [Assert-AzSqlVMEntraAuth](Assert-AzSqlVMEntraAuth.md)
+Validates a SQL virtual machine Entra Authentication.
+
 ### [Get-AzAvailabilityGroupListener](Get-AzAvailabilityGroupListener.md)
 Gets an availability group listener.
 

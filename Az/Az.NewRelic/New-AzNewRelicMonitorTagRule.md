@@ -14,12 +14,27 @@ Create a TagRule
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
 New-AzNewRelicMonitorTagRule -MonitorName <String> -ResourceGroupName <String> -RuleSetName <String>
- [-SubscriptionId <String>] [-LogRuleFilteringTag <IFilteringTag[]>] [-LogRuleSendAadLog <SendAadLogsStatus>]
- [-LogRuleSendActivityLog <SendActivityLogsStatus>] [-LogRuleSendSubscriptionLog <SendSubscriptionLogsStatus>]
- [-MetricRuleFilteringTag <IFilteringTag[]>] [-MetricRuleSendMetric <SendMetricsStatus>]
- [-MetricRuleUserEmail <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-SubscriptionId <String>] [-LogRuleFilteringTag <IFilteringTag[]>] [-LogRuleSendAadLog <String>]
+ [-LogRuleSendActivityLog <String>] [-LogRuleSendSubscriptionLog <String>]
+ [-MetricRuleFilteringTag <IFilteringTag[]>] [-MetricRuleSendMetric <String>] [-MetricRuleUserEmail <String>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzNewRelicMonitorTagRule -MonitorName <String> -ResourceGroupName <String> -RuleSetName <String>
+ [-SubscriptionId <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzNewRelicMonitorTagRule -MonitorName <String> -ResourceGroupName <String> -RuleSetName <String>
+ [-SubscriptionId <String>] -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -30,13 +45,13 @@ Create a TagRule
 
 ### Example 1: Create tag rule
 ```powershell
-New-AzNewRelicMonitorTagRule -MonitorName test-01 -ResourceGroupName ps-test -RuleSetName default -LogRuleSendAadLog 'Disabled' -LogRuleSendActivityLog 'Enabled' -LogRuleSendSubscriptionLog 'Disabled' -MetricRuleSendMetric 'Enabled' -MetricRuleUserEmail v-jiaji@outlook.com
+New-AzNewRelicMonitorTagRule -MonitorName test-01 -ResourceGroupName ps-test -RuleSetName default -LogRuleSendAadLog 'Disabled' -LogRuleSendActivityLog 'Enabled' -LogRuleSendSubscriptionLog 'Disabled' -MetricRuleSendMetric 'Enabled' -MetricRuleUserEmail user1@outlook.com
 ```
 
 ```output
 Name    SystemDataCreatedAt  SystemDataCreatedBy   SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ResourceGroupName RetryAfter
 ----    -------------------  -------------------   ----------------------- ------------------------ ------------------------ ---------------------------- ----------------- ----------
-default 6/28/2023 6:03:14 AM v-jiaji@outlook.com User                    6/28/2023 6:03:14 AM     v-jiaji@outlook.com    User                         ps-test
+default 6/28/2023 6:03:14 AM user1@outlook.com User                    6/28/2023 6:03:14 AM     user1@outlook.com    User                         ps-test
 ```
 
 Create monitor tag rule with specified monitor and default name
@@ -74,16 +89,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LogRuleFilteringTag
 List of filtering tags to be used for capturing logs.
 This only takes effect if SendActivityLogs flag is enabled.
 If empty, all resources will be captured.If only Exclude action is specified, the rules will apply to the list of all available resources.
 If Include actions are specified, the rules will only include resources with the associated tags.
-To construct, see NOTES section for LOGRULEFILTERINGTAG properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Models.Api20220701.IFilteringTag[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Models.IFilteringTag[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -97,8 +141,8 @@ Accept wildcard characters: False
 Flag specifying if AAD logs should be sent for the Monitor resource.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Support.SendAadLogsStatus
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -112,8 +156,8 @@ Accept wildcard characters: False
 Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Support.SendActivityLogsStatus
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -127,8 +171,8 @@ Accept wildcard characters: False
 Flag specifying if subscription logs should be sent for the Monitor resource.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Support.SendSubscriptionLogsStatus
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -140,11 +184,10 @@ Accept wildcard characters: False
 
 ### -MetricRuleFilteringTag
 List of filtering tags to be used for capturing metrics.
-To construct, see NOTES section for METRICRULEFILTERINGTAG properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Models.Api20220701.IFilteringTag[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Models.IFilteringTag[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -158,8 +201,8 @@ Accept wildcard characters: False
 Flag specifying if metrics should be sent for the Monitor resource.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Support.SendMetricsStatus
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -174,7 +217,7 @@ User Email
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -298,7 +341,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Models.Api20220701.ITagRule
+### Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Models.ITagRule
 
 ## NOTES
 

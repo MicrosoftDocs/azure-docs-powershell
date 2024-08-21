@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzDatabricksAccessConnector
 
 ## SYNOPSIS
-Deletes the azure databricks accessConnector.
+Deletes the Azure Databricks Access Connector.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Remove-AzDatabricksAccessConnector -InputObject <IDatabricksIdentity> [-DefaultP
 ```
 
 ## DESCRIPTION
-Deletes the azure databricks accessConnector.
+Deletes the Azure Databricks Access Connector.
 
 ## EXAMPLES
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the azure databricks accessConnector.
+The name of the Azure Databricks Access Connector.
 
 ```yaml
 Type: System.String
@@ -158,6 +158,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String

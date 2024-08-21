@@ -18,7 +18,7 @@ Modifies an Azure Cache for Redis.
 ```
 Set-AzRedisCache [-ResourceGroupName <String>] -Name <String> [-Size <String>] [-Sku <String>]
  [-RedisConfiguration <Hashtable>] [-EnableNonSslPort <Boolean>] [-TenantSettings <Hashtable>]
- [-ShardCount <Int32>] [-MinimumTlsVersion <String>] [-RedisVersion <String>] [-UpdateChannel <String>]
+ [-ShardCount <Int32>] [-MinimumTlsVersion <String>] [-DisableAccessKeyAuthentication <Boolean>] [-RedisVersion <String>] [-UpdateChannel <String>]
  [-Tag <Hashtable>] [-IdentityType <String>] [-UserAssignedIdentity <String[]>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -34,8 +34,8 @@ Set-AzRedisCache -ResourceGroupName "MyGroup" -Name "MyCache" -RedisConfiguratio
 ```
 
 ```output
-PrimaryKey         : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
-          SecondaryKey       : sJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
+PrimaryKey         : ******
+          SecondaryKey       : ******
           ResourceGroupName  : mygroup
           Id                 : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/mygroup/providers/Microsoft.Cache/Redis/myCache
           Location           : North Central US
@@ -62,8 +62,8 @@ Set-AzRedisCache -Name "MyCache"  -RedisConfiguration @{"rdb-backup-enabled" = "
 ```
 
 ```output
-PrimaryKey         : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
-          SecondaryKey       : sJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
+PrimaryKey         : ******
+          SecondaryKey       : ******
           ResourceGroupName  : MyGroup
           Id                 : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/mygroup/providers/Microsoft.Cache/Redis/MyCache
           Location           : Central US
@@ -89,12 +89,12 @@ This cmdlet disables RDB backup data persistence for Azure Cache for Redis. You 
 
 ### Example 3: Modify Azure Cache for Redis - If you want to add data persistence after azure redis cache created.
 ```powershell
-Set-AzRedisCache -Name "MyCache" -RedisConfiguration @{"rdb-backup-enabled" = "true"; "rdb-storage-connection-string" = "DefaultEndpointsProtocol=https;AccountName=mystorageaccount;AccountKey=pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=;EndpointSuffix=mySuffix"; "rdb-backup-frequency" = "30"}
+Set-AzRedisCache -Name "MyCache" -RedisConfiguration @{"rdb-backup-enabled" = "true"; "rdb-storage-connection-string" = "DefaultEndpointsProtocol=https;AccountName=mystorageaccount;AccountKey=******;EndpointSuffix=mySuffix"; "rdb-backup-frequency" = "30"}
 ```
 
 ```output
-PrimaryKey         : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
-          SecondaryKey       : sJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
+PrimaryKey         : ******
+          SecondaryKey       : ******
           ResourceGroupName  : MyGroup
           Id                 : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/mygroup/providers/Microsoft.Cache/Redis/MyCache
           Location           : Central US
@@ -125,8 +125,8 @@ Set-AzRedisCache -Name "MyCache" -RedisConfiguration @{"rdb-backup-frequency" = 
 ```
 
 ```output
-PrimaryKey         : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
-          SecondaryKey       : sJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
+PrimaryKey         : ******
+          SecondaryKey       : ******
           ResourceGroupName  : MyGroup
           Id                 : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/mygroup/providers/Microsoft.Cache/Redis/MyCache
           Location           : Central US
@@ -149,12 +149,12 @@ PrimaryKey         : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
 ### Example 5: Modify Azure Cache for Redis - If you want to change AOF back up data persistence to RDB back up.
 
 ```powershell
-Set-AzRedisCache -Name "MyCache"  -RedisConfiguration @{"aof-backup-enabled"= "false"; "rdb-backup-enabled" = "true"; "rdb-storage-connection-string" = "DefaultEndpointsProtocol=https;AccountName=mystorageaccount;AccountKey=pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=;EndpointSuffix=mySuffix"; "rdb-backup-frequency" = "30"}
+Set-AzRedisCache -Name "MyCache"  -RedisConfiguration @{"aof-backup-enabled"= "false"; "rdb-backup-enabled" = "true"; "rdb-storage-connection-string" = "DefaultEndpointsProtocol=https;AccountName=mystorageaccount;AccountKey=******;EndpointSuffix=mySuffix"; "rdb-backup-frequency" = "30"}
 ```
 
 ```output
-PrimaryKey         : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
-          SecondaryKey       : sJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
+PrimaryKey         : ******
+          SecondaryKey       : ******
           ResourceGroupName  : MyGroup
           Id                 : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/mygroup/providers/Microsoft.Cache/Redis/MyCache
           Location           : Central US
@@ -184,8 +184,8 @@ Set-AzRedisCache -Name "MyCache" -Size "P2" -Sku "Premium"
 ```
 
 ```output
-PrimaryKey         : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
-          SecondaryKey       : sJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
+PrimaryKey         : ******
+          SecondaryKey       : ******
           ResourceGroupName  : MyGroup
           Id                 : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/mygroup/providers/Microsoft.Cache/Redis/MyCache
           Location           : Central US
@@ -214,8 +214,8 @@ Set-AzRedisCache -Name "MyCache" -Size "P1" -Sku "Premium"
 ```
 
 ```output
-PrimaryKey         : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
-          SecondaryKey       : sJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
+PrimaryKey         : ******
+          SecondaryKey       : ******
           ResourceGroupName  : MyGroup
           Id                 : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/mygroup/providers/Microsoft.Cache/Redis/MyCache
           Location           : Central US
@@ -244,8 +244,8 @@ Set-AzRedisCache -Name "MyCache" -ShardCount 1
 ```
 
 ```output
-PrimaryKey         : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
-          SecondaryKey       : sJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
+PrimaryKey         : ******
+          SecondaryKey       : ******
           ResourceGroupName  : MyGroup
           Id                 : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/mygroup/providers/Microsoft.Cache/Redis/MyCache
           Location           : Central US
@@ -275,8 +275,8 @@ Set-AzRedisCache -Name "MyCache" -ShardCount 2
 ```
 
 ```output
-PrimaryKey         : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
-          SecondaryKey       : sJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
+PrimaryKey         : ******
+          SecondaryKey       : ******
           ResourceGroupName  : MyGroup
           Id                 : /subscriptions/a559b6fd-3a84-40bb-a450-b0db5ed37dfe/resourceGroups/mygroup/providers/Microsoft.Cache/Redis/MyCache
           Location           : Central US
@@ -598,6 +598,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DisableAccessKeyAuthentication
+Optional: Authentication to Redis through access keys is disabled when set as true. Default value is false.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: false
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -654,5 +669,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzRedisCache](./New-AzRedisCache.md)
 
 [Remove-AzRedisCache](./Remove-AzRedisCache.md)
-
-

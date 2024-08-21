@@ -17,8 +17,9 @@ Updates the Bastion Resource.
 ```
 Set-AzBastion -InputObject <PSBastion> [-Sku <String>] [-ScaleUnit <Int32>] [-EnableKerberos <Boolean>]
  [-DisableCopyPaste <Boolean>] [-EnableTunneling <Boolean>] [-EnableIpConnect <Boolean>]
- [-EnableShareableLink <Boolean>] [-Tag <Hashtable>] [-Force] [-AsJob]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableShareableLink <Boolean>] [-EnableSessionRecording <Boolean>] [-Tag <Hashtable>] [-Force] [-AsJob]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -219,6 +220,21 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -EnableSessionRecording
+Session Recording
+
+```yaml
+Type: System.Nullable`1[System.Boolean]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -EnableShareableLink
 Shareable Link
 
@@ -301,7 +317,7 @@ The Bastion Sku Tier
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Accepted values: Basic, Standard
+Accepted values: Basic, Standard, Premium
 
 Required: False
 Position: Named

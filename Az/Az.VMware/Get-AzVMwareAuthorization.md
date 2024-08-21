@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzVMwareAuthorization
 
 ## SYNOPSIS
-Get an ExpressRoute Circuit Authorization by name in a private cloud
+Get a ExpressRouteAuthorization
 
 ## SYNTAX
 
@@ -40,7 +40,7 @@ Get-AzVMwareAuthorization -InputObject <IVMwareIdentity> [-DefaultProfile <PSObj
 ```
 
 ## DESCRIPTION
-Get an ExpressRoute Circuit Authorization by name in a private cloud
+Get a ExpressRouteAuthorization
 
 ## EXAMPLES
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the ExpressRoute Circuit Authorization in the private cloud
+Name of the ExpressRoute Circuit Authorization
 
 ```yaml
 Type: System.String
@@ -166,6 +166,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String[]

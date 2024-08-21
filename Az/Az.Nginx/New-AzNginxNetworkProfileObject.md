@@ -44,7 +44,7 @@ Create an in-memory object for NginxNetworkProfile.
 To construct, see NOTES section for FRONTENDIPCONFIGURATION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Nginx.Models.Api20230401.INginxFrontendIPConfiguration
+Type: Microsoft.Azure.PowerShell.Cmdlets.Nginx.Models.Api202401Preview.INginxFrontendIPConfiguration
 Parameter Sets: (All)
 Aliases:
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 To construct, see NOTES section for NETWORKINTERFACECONFIGURATION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Nginx.Models.Api20230401.INginxNetworkInterfaceConfiguration
+Type: Microsoft.Azure.PowerShell.Cmdlets.Nginx.Models.Api202401Preview.INginxNetworkInterfaceConfiguration
 Parameter Sets: (All)
 Aliases:
 
@@ -77,7 +77,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Nginx.Models.Api20230401.NginxNetworkProfile
+### Microsoft.Azure.PowerShell.Cmdlets.Nginx.Models.Api202401Preview.NginxNetworkProfile
 
 ## NOTES
 

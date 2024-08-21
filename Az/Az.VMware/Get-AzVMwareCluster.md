@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzVMwareCluster
 
 ## SYNOPSIS
-Get a cluster by name in a private cloud
+Get a Cluster
 
 ## SYNTAX
 
@@ -40,7 +40,7 @@ Get-AzVMwareCluster -InputObject <IVMwareIdentity> [-DefaultProfile <PSObject>]
 ```
 
 ## DESCRIPTION
-Get a cluster by name in a private cloud
+Get a Cluster
 
 ## EXAMPLES
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the cluster in the private cloud
+Name of the cluster
 
 ```yaml
 Type: System.String
@@ -166,6 +166,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String[]

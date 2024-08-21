@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzVMwarePlacementPolicy
 
 ## SYNOPSIS
-Create a placement policy in a private cloud cluster
+Create a PlacementPolicy
 
 ## SYNTAX
 
@@ -44,13 +44,13 @@ New-AzVMwarePlacementPolicy -InputObject <IVMwareIdentity> [-Property <IPlacemen
 ```
 
 ## DESCRIPTION
-Create a placement policy in a private cloud cluster
+Create a PlacementPolicy
 
 ## EXAMPLES
 
 ### Example 1: Create or update a placement policy in a private cloud cluster
 ```powershell
-$abc = New-AzVMwareVMPlacementPolicyPropertiesObject -AffinityType 'Affinity' -Type 'VmVm' -VMMember @{"test"="test"}
+$abc = New-AzVMwareVMPlacementPolicyPropertyObject -AffinityType 'Affinity' -VMMember @{"test"="test"}
 New-AzVMwarePlacementPolicy -ClusterName cluster1 -Name policy1 -PrivateCloudName cloud1 -ResourceGroupName group1 -Property $abc
 ```
 
@@ -64,7 +64,7 @@ Create or update a placement policy in a private cloud cluster
 
 ### Example 2: Create or update a placement policy in a private cloud cluster
 ```powershell
-$abc = New-AzVMwareVmHostPlacementPolicyPropertiesObject -AffinityType 'AntiAffinity' -HostMember @{"test"="test"}  -Type 'VmHost' -VMMember @{"test"="test"}
+$abc = New-AzVMwareVmHostPlacementPolicyPropertyObject -AffinityType 'AntiAffinity' -HostMember @{"test"="test"} -VMMember @{"test"="test"}
 New-AzVMwarePlacementPolicy -ClusterName cluster1 -Name policy1 -PrivateCloudName cloud1 -ResourceGroupName group1 -Property $abc
 ```
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClusterName
-Name of the cluster in the private cloud
+Name of the cluster
 
 ```yaml
 Type: System.String
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the VMware vSphere Distributed Resource Scheduler (DRS) placement policy
+Name of the placement policy.
 
 ```yaml
 Type: System.String
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -Property
-placement policy properties
+The resource-specific properties for this resource.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.VMware.Models.IPlacementPolicyProperties
@@ -247,6 +247,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String

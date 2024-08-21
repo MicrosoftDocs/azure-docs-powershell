@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Start-AzStorageMoverJobDefinition
 
 ## SYNOPSIS
-Requests an Agent to start a new instance of this Job Definition, generating a new Job Run resource.
+Creates a new Job Run resource for the specified Job Definition and passes it to the Agent for execution.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Start-AzStorageMoverJobDefinition -InputObject <IStorageMoverIdentity> [-Default
 ```
 
 ## DESCRIPTION
-Requests an Agent to start a new instance of this Job Definition, generating a new Job Run resource.
+Creates a new Job Run resource for the specified Job Definition and passes it to the Agent for execution.
 
 ## EXAMPLES
 

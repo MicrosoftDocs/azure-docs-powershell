@@ -162,7 +162,7 @@ Accept wildcard characters: False
 To construct, see NOTES section for SOFTWAREASSURANCECHANGEREQUEST properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20230301.ISoftwareAssuranceChangeRequest
+Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.ISoftwareAssuranceChangeRequest
 Parameter Sets: Extend, ExtendViaIdentity
 Aliases:
 
@@ -190,6 +190,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String
@@ -239,13 +240,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20230301.ISoftwareAssuranceChangeRequest
+### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.ISoftwareAssuranceChangeRequest
 
 ### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IStackHciIdentity
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20230301.ICluster
+### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.ICluster
 
 ## NOTES
 

@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file: Az.MachineLearningServices-help.xml
 Module Name: Az.MachineLearningServices
-online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/new-azmlworkspacekubernetesobject
+online version: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceKubernetesObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceKubernetesObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceKubernetesObject.md
@@ -15,11 +15,11 @@ Create an in-memory object for Kubernetes.
 ## SYNTAX
 
 ```
-New-AzMLWorkspaceKubernetesObject [-DefaultInstanceType <String>] [-Description <String>]
- [-DisableLocalAuth <Boolean>] [-ExtensionInstanceReleaseTrain <String>] [-ExtensionPrincipalId <String>]
- [-InstanceLimit <Hashtable>] [-InstanceNodeSelector <Hashtable>] [-InstanceRequest <Hashtable>]
- [-Namespace <String>] [-RelayConnectionString <String>] [-ResourceId <String>]
- [-ServiceBusConnectionString <String>] [-VcName <String>] [<CommonParameters>]
+New-AzMLWorkspaceKubernetesObject [-Description <String>] [-DisableLocalAuth <Boolean>] [-ResourceId <String>]
+ [-DefaultInstanceType <String>] [-ExtensionInstanceReleaseTrain <String>] [-ExtensionPrincipalId <String>]
+ [-InstanceNodeSelector <Hashtable>] [-InstanceLimit <Hashtable>] [-InstanceRequest <Hashtable>]
+ [-Namespace <String>] [-RelayConnectionString <String>] [-ServiceBusConnectionString <String>]
+ [-VcName <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,11 +29,7 @@ Create an in-memory object for Kubernetes.
 
 ### Example 1: Create an in-memory object for Kubernetes
 ```powershell
-New-AzMLWorkspaceKubernetesObject
-```
-
-```output
-{{ Add output here }}
+New-AzMLWorkspaceKubernetesObject -ResourceId <KubernetesResourceId>
 ```
 
 Create an in-memory object for Kubernetes
@@ -242,11 +238,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20220501.Kubernetes
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.Kubernetes
 
 ## NOTES
 
-ALIASES
-
 ## RELATED LINKS
-

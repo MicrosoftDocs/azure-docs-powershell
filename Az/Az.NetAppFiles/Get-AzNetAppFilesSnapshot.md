@@ -21,16 +21,16 @@ Get-AzNetAppFilesSnapshot -ResourceGroupName <String> -AccountName <String> -Poo
  [<CommonParameters>]
 ```
 
-### ByResourceIdParameterSet
-```
-Get-AzNetAppFilesSnapshot [-Name <String>] -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
-```
-
 ### ByParentObjectParameterSet
 ```
 Get-AzNetAppFilesSnapshot [-Name <String>] -VolumeObject <PSNetAppFilesVolume>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### ByResourceIdParameterSet
+```
+Get-AzNetAppFilesSnapshot -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,7 +95,7 @@ The name of the ANF snapshot
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: ByFieldsParameterSet, ByParentObjectParameterSet
 Aliases: SnapshotName
 
 Required: False

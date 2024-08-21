@@ -35,13 +35,6 @@ Update-AzConnectedExtension -MachineName <String> -ResourceGroupName <String> [-
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### Upgrade
-```
-Update-AzConnectedExtension -MachineName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- -ExtensionUpgradeParameter <IMachineExtensionUpgrade> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
 ### UpgradeViaIdentityExpanded
 ```
 Update-AzConnectedExtension -InputObject <IConnectedMachineIdentity> [-ExtensionTarget <Hashtable>]
@@ -126,7 +119,7 @@ Describes the Machine Extension Upgrade Properties.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.IMachineExtensionUpgrade
-Parameter Sets: Upgrade, UpgradeViaIdentity
+Parameter Sets: UpgradeViaIdentity
 Aliases:
 
 Required: True
@@ -186,7 +179,7 @@ The name of the hybrid machine.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpgradeExpanded, UpgradeViaJsonString, UpgradeViaJsonFilePath, Upgrade
+Parameter Sets: UpgradeExpanded, UpgradeViaJsonString, UpgradeViaJsonFilePath
 Aliases:
 
 Required: True
@@ -232,7 +225,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpgradeExpanded, UpgradeViaJsonString, UpgradeViaJsonFilePath, Upgrade
+Parameter Sets: UpgradeExpanded, UpgradeViaJsonString, UpgradeViaJsonFilePath
 Aliases:
 
 Required: True
@@ -247,7 +240,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpgradeExpanded, UpgradeViaJsonString, UpgradeViaJsonFilePath, Upgrade
+Parameter Sets: UpgradeExpanded, UpgradeViaJsonString, UpgradeViaJsonFilePath
 Aliases:
 
 Required: False

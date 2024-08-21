@@ -1,7 +1,7 @@
 ---
 external help file: Az.HdInsightOnAks-help.xml
 Module Name: Az.HdInsightOnAks
-online version: https://learn.microsoft.com/powershell/module/az.hdinsightonaks/New-AzHdInsightOnAksClusterHotfixUpgradeObject
+online version: https://learn.microsoft.com/powershell/module/Az.HdInsightOnAks/new-azhdinsightonaksclusterhotfixupgradeobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksClusterHotfixUpgradeObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksClusterHotfixUpgradeObject.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzHdInsightOnAksClusterHotfixUpgradeObject
 
 ## SYNOPSIS
-Create an object to hold the cluster upgrade parameters.
+Create an in-memory object for ClusterHotfixUpgradeProperties.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ New-AzHdInsightOnAksClusterHotfixUpgradeObject [-ComponentName <String>] [-Targe
 ```
 
 ## DESCRIPTION
-Create an object to hold the cluster upgrade parameters.
+Create an in-memory object for ClusterHotfixUpgradeProperties.
 
 ## EXAMPLES
 

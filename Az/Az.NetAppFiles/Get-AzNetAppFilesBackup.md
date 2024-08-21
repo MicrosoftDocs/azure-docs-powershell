@@ -16,27 +16,27 @@ Gets details of an Azure NetApp Files (ANF) Backup.
 
 ### ByFieldsParameterSet (Default)
 ```
-Get-AzNetAppFilesBackup -ResourceGroupName <String> -AccountName <String> -PoolName <String>
- [-VolumeName <String>] [-Name <String>] [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+Get-AzNetAppFilesBackup -ResourceGroupName <String> -AccountName <String> [-PoolName <String>]
+ [-VolumeName <String>] [-BackupVaultName <String>] [-Name <String>] [-Filter <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByAccountBackupFieldsParameterSet
 ```
-Get-AzNetAppFilesBackup -ResourceGroupName <String> -AccountName <String> [-Name <String>]
- [-AccountBackupName <String>] [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+Get-AzNetAppFilesBackup -ResourceGroupName <String> -AccountName <String> [-AccountBackupName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### ByParentObjectParameterSet
 ```
-Get-AzNetAppFilesBackup [-Name <String>] [-AccountBackupName <String>] -VolumeObject <PSNetAppFilesVolume>
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzNetAppFilesBackup [-Name <String>] [-AccountBackupName <String>] [-VolumeObject <PSNetAppFilesVolume>]
+ -BackupVaultObject <PSNetAppFilesBackupVault> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ByResourceIdParameterSet
 ```
-Get-AzNetAppFilesBackup [-Name <String>] -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+Get-AzNetAppFilesBackup -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
 ```
 
@@ -91,6 +91,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BackupVaultName
+The name of the ANF BackupVault
+
+```yaml
+Type: System.String
+Parameter Sets: ByFieldsParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BackupVaultObject
+The BackupVault object containing the backup to return
+
+```yaml
+Type: Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesBackupVault
+Parameter Sets: ByParentObjectParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with Azure.
 
@@ -106,12 +136,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Filter
+Filter list of backups, this filter accepts volumeResourceId
+
+```yaml
+Type: System.String
+Parameter Sets: ByFieldsParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 The name of the ANF backup
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: ByFieldsParameterSet, ByParentObjectParameterSet
 Aliases: BackupName
 
 Required: False
@@ -129,7 +174,7 @@ Type: System.String
 Parameter Sets: ByFieldsParameterSet
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -189,7 +234,7 @@ Type: Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesVolume
 Parameter Sets: ByParentObjectParameterSet
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
@@ -204,6 +249,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.String
 
 ### Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesVolume
+
+### Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesBackupVault
 
 ## OUTPUTS
 

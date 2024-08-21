@@ -1,7 +1,7 @@
 ---
 external help file: Az.HdInsightOnAks-help.xml
 Module Name: Az.HdInsightOnAks
-online version: https://learn.microsoft.com/powershell/module/az.hdinsightonaks/New-AzHdInsightOnAksSecretReferenceObject
+online version: https://learn.microsoft.com/powershell/module/Az.HdInsightOnAks/new-azhdinsightonakssecretreferenceobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksSecretReferenceObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksSecretReferenceObject.md
@@ -10,23 +10,17 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzHdInsightOnAksSecretReferenceObject
 
 ## SYNOPSIS
-Create a reference to provide a secret to store the password for accessing the database.
+Create an in-memory object for SecretReference.
 
 ## SYNTAX
 
 ```
-New-AzHdInsightOnAksSecretReferenceObject -SecretName <String> -ReferenceName <String> [-Version <String>]
- [<CommonParameters>]
+New-AzHdInsightOnAksSecretReferenceObject -ReferenceName <String> -SecretName <String> -Type <String>
+ [-Version <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Create a reference to provide a secret to store the password for accessing the database.
-$keyVaultResourceId="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/{your resource group name}/providers/Microsoft.KeyVault/vaults/{your vault name}";
-$secretName="{your secret name}"
-$referenceName="{your secret reference name}";
-
-$secretReference=New-AzHdInsightOnAksSecretReferenceObject -SecretName $secretName -ReferenceName $referenceName
-NA
+Create an in-memory object for SecretReference.
 
 ## EXAMPLES
 
@@ -36,11 +30,11 @@ $keyVaultResourceId="/subscriptions/00000000-0000-0000-0000-000000000000/resourc
 $secretName="{your secret name}"
 $referenceName="{your secret reference name}";
 
-$secretReference=New-AzHdInsightOnAksSecretReferenceObject -SecretName $secretName -ReferenceName $referenceName
+$secretReference=New-AzHdInsightOnAksSecretReferenceObject -SecretName $secretName -ReferenceName $referenceName -Type Secret
 ```
 
 ```output
-KeyVaultObjectName ReferenceName                Type   Version
+SecretName ReferenceName                Type   Version
 ------------------ -------------                ----   -------
 {your secret name} {your secret reference name} Secret
 ```
@@ -50,7 +44,7 @@ Create a reference to provide a secret to store the password for accessing the d
 ## PARAMETERS
 
 ### -ReferenceName
-The reference name of the secret to be used in service configs.
+Reference name of the secret to be used in service configs.
 
 ```yaml
 Type: System.String
@@ -65,7 +59,22 @@ Accept wildcard characters: False
 ```
 
 ### -SecretName
-The secret name in the key vault.
+Object identifier name of the secret in key vault.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Type
+Type of key vault object: secret, key or certificate.
 
 ```yaml
 Type: System.String
@@ -80,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-The version of the secret in key vault.
+Version of the secret in key vault.
 
 ```yaml
 Type: System.String
@@ -101,7 +110,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.ISecretReference
+### Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.SecretReference
 
 ## NOTES
 

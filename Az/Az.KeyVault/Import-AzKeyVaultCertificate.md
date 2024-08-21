@@ -49,7 +49,7 @@ You can create the certificate to import by using one of the following methods:
 
 ### Example 1: Import a key vault certificate
 ```powershell
-$Password = ConvertTo-SecureString -String "123" -AsPlainText -Force
+$Password = ConvertTo-SecureString -String "****" -AsPlainText -Force
 Import-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "ImportCert01" -FilePath "C:\Users\contosoUser\Desktop\import.pfx" -Password $Password
 ```
 
@@ -86,7 +86,7 @@ The second command imports the certificate named ImportCert01 into the CosotosoK
 
 ### Example 2: Import a key vault certificate by CertificateString
 ```powershell
-$Password = ConvertTo-SecureString -String "123" -AsPlainText -Force
+$Password = ConvertTo-SecureString -String "****" -AsPlainText -Force
 $Base64String = [System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes("import.pfx"))
 Import-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "ImportCert01" -CertificateString $Base64String -Password $Password
 ```
@@ -125,7 +125,7 @@ The third command imports the certificate named ImportCert01 into the CosotosoKV
 
 ### Example 3: Import a key vault certificate with PolicyFile
 ```powershell
-$Password = ConvertTo-SecureString -String "123" -AsPlainText -Force
+$Password = ConvertTo-SecureString -String "****" -AsPlainText -Force
 Import-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "ImportCert01" -FilePath "C:\Users\contosoUser\Desktop\import.pfx" -Password $Password -PolicyPath "C:\Users\contosoUser\Desktop\policy.json"
 ```
 

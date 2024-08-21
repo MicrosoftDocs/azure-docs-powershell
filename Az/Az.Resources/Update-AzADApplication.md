@@ -26,8 +26,8 @@ Update-AzADApplication -ObjectId <String> [-HomePage <String>] [-ReplyUrl <Strin
  [-LogoInputFile <String>] [-Note <String>] [-Oauth2RequirePostResponse]
  [-OptionalClaim <IMicrosoftGraphOptionalClaims>]
  [-ParentalControlSetting <IMicrosoftGraphParentalControlSettings>] [-PublicClientRedirectUri <String[]>]
- [-RequiredResourceAccess <IMicrosoftGraphRequiredResourceAccess[]>] [-SignInAudience <String>]
- [-SPARedirectUri <String[]>] [-Tag <String[]>] [-TokenEncryptionKeyId <String>]
+ [-RequiredResourceAccess <IMicrosoftGraphRequiredResourceAccess[]>] [-ServiceManagementReference <String>]
+ [-SignInAudience <String>] [-SPARedirectUri <String[]>] [-Tag <String[]>] [-TokenEncryptionKeyId <String>]
  [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
  [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>] [-Web <IMicrosoftGraphWebApplication>]
  [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf] [-Confirm]
@@ -46,8 +46,8 @@ Update-AzADApplication -ApplicationId <Guid> [-HomePage <String>] [-ReplyUrl <St
  [-LogoInputFile <String>] [-Note <String>] [-Oauth2RequirePostResponse]
  [-OptionalClaim <IMicrosoftGraphOptionalClaims>]
  [-ParentalControlSetting <IMicrosoftGraphParentalControlSettings>] [-PublicClientRedirectUri <String[]>]
- [-RequiredResourceAccess <IMicrosoftGraphRequiredResourceAccess[]>] [-SignInAudience <String>]
- [-SPARedirectUri <String[]>] [-Tag <String[]>] [-TokenEncryptionKeyId <String>]
+ [-RequiredResourceAccess <IMicrosoftGraphRequiredResourceAccess[]>] [-ServiceManagementReference <String>]
+ [-SignInAudience <String>] [-SPARedirectUri <String[]>] [-Tag <String[]>] [-TokenEncryptionKeyId <String>]
  [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
  [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>] [-Web <IMicrosoftGraphWebApplication>]
  [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf] [-Confirm]
@@ -66,8 +66,8 @@ Update-AzADApplication -InputObject <IMicrosoftGraphApplication> [-HomePage <Str
  [-LogoInputFile <String>] [-Note <String>] [-Oauth2RequirePostResponse]
  [-OptionalClaim <IMicrosoftGraphOptionalClaims>]
  [-ParentalControlSetting <IMicrosoftGraphParentalControlSettings>] [-PublicClientRedirectUri <String[]>]
- [-RequiredResourceAccess <IMicrosoftGraphRequiredResourceAccess[]>] [-SignInAudience <String>]
- [-SPARedirectUri <String[]>] [-Tag <String[]>] [-TokenEncryptionKeyId <String>]
+ [-RequiredResourceAccess <IMicrosoftGraphRequiredResourceAccess[]>] [-ServiceManagementReference <String>]
+ [-SignInAudience <String>] [-SPARedirectUri <String[]>] [-Tag <String[]>] [-TokenEncryptionKeyId <String>]
  [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
  [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>] [-Web <IMicrosoftGraphWebApplication>]
  [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf] [-Confirm]
@@ -568,6 +568,22 @@ To construct, see NOTES section for REQUIREDRESOURCEACCESS properties and create
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphRequiredResourceAccess[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceManagementReference
+References application or service contact information from a Service or Asset Management database.
+Nullable.
+
+```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -1692,5 +1708,20 @@ WEB `<IMicrosoftGraphWebApplication>`: webApplication
   - `[RedirectUri <String[]>]`: Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
 
 ## RELATED LINKS
+
+## RELATED LINKS
+
+
+## RELATED LINKS
+
+
+## RELATED LINKS
+
+
+## RELATED LINKS
+
+
+## RELATED LINKS
+
 
 ## RELATED LINKS

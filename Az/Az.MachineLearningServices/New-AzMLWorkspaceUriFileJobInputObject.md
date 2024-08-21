@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file: Az.MachineLearningServices-help.xml
 Module Name: Az.MachineLearningServices
-online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/new-azmlworkspaceurifilejobinputobject
+online version: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceUriFileJobInputObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceUriFileJobInputObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceUriFileJobInputObject.md
@@ -15,8 +15,8 @@ Create an in-memory object for UriFileJobInput.
 ## SYNTAX
 
 ```
-New-AzMLWorkspaceUriFileJobInputObject -Type <JobInputType> -Uri <String> [-Description <String>]
- [-Mode <InputDeliveryMode>] [<CommonParameters>]
+New-AzMLWorkspaceUriFileJobInputObject -Uri <String> -Type <JobInputType> [-Mode <InputDeliveryMode>]
+ [-Description <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,11 +100,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20220501.UriFileJobInput
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.UriFileJobInput
 
 ## NOTES
 
-ALIASES
-
 ## RELATED LINKS
-

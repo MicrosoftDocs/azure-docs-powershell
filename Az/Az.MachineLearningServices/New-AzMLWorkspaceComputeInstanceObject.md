@@ -1,7 +1,7 @@
 ---
-external help file: 
+external help file: Az.MachineLearningServices-help.xml
 Module Name: Az.MachineLearningServices
-online version: https://learn.microsoft.com/powershell/module/az.machinelearningservices/new-azmlworkspacecomputeinstanceobject
+online version: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceComputeInstanceObject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceComputeInstanceObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceComputeInstanceObject.md
@@ -15,17 +15,17 @@ Create an in-memory object for ComputeInstance.
 ## SYNTAX
 
 ```
-New-AzMLWorkspaceComputeInstanceObject [-ApplicationSharingPolicy <ApplicationSharingPolicy>]
- [-AssignedUserObjectId <String>] [-AssignedUserTenantId <String>]
- [-AuthorizationType <ComputeInstanceAuthorizationType>] [-CreationScriptArgument <String>]
- [-CreationScriptData <String>] [-CreationScriptSource <String>] [-CreationScriptTimeout <String>]
- [-Description <String>] [-DisableLocalAuth <Boolean>] [-EnableNodePublicIP <Boolean>]
- [-LastOperationName <OperationName>] [-LastOperationStatus <OperationStatus>] [-LastOperationTime <DateTime>]
- [-LastOperationTrigger <OperationTrigger>] [-ResourceId <String>]
- [-ScheduleComputeStartStop <IComputeStartStopSchedule[]>] [-SshSettingAdminPublicKey <String>]
- [-SshSettingSshPublicAccess <SshPublicAccess>] [-StartupScriptArgument <String>]
- [-StartupScriptData <String>] [-StartupScriptSource <String>] [-StartupScriptTimeout <String>]
- [-SubnetId <String>] [-VersionRuntime <String>] [-VMSize <String>] [<CommonParameters>]
+New-AzMLWorkspaceComputeInstanceObject [-Description <String>] [-DisableLocalAuth <Boolean>]
+ [-ResourceId <String>] [-ApplicationSharingPolicy <ApplicationSharingPolicy>] [-AssignedUserObjectId <String>]
+ [-AssignedUserTenantId <String>] [-AuthorizationType <ComputeInstanceAuthorizationType>]
+ [-CreationScriptArgument <String>] [-CreationScriptData <String>] [-CreationScriptSource <String>]
+ [-CreationScriptTimeout <String>] [-EnableNodePublicIP <Boolean>] [-LastOperationName <OperationName>]
+ [-LastOperationStatus <OperationStatus>] [-LastOperationTime <DateTime>]
+ [-LastOperationTrigger <OperationTrigger>] [-ScheduleComputeStartStop <IComputeStartStopSchedule[]>]
+ [-SshSettingAdminPublicKey <String>] [-SshSettingSshPublicAccess <SshPublicAccess>]
+ [-StartupScriptArgument <String>] [-StartupScriptData <String>] [-StartupScriptSource <String>]
+ [-StartupScriptTimeout <String>] [-SubnetId <String>] [-VMSize <String>] [-VersionRuntime <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignedUserObjectId
-User’s AAD Object Id.
+User's AAD Object Id.
 
 ```yaml
 Type: System.String
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignedUserTenantId
-User’s AAD Tenant Id.
+User's AAD Tenant Id.
 
 ```yaml
 Type: System.String
@@ -292,7 +292,7 @@ The list of compute start stop schedules to be applied.
 To construct, see NOTES section for SCHEDULECOMPUTESTARTSTOP properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20220501.IComputeStartStopSchedule[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IComputeStartStopSchedule[]
 Parameter Sets: (All)
 Aliases:
 
@@ -448,22 +448,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20220501.ComputeInstance
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.ComputeInstance
 
 ## NOTES
 
-ALIASES
-
-COMPLEX PARAMETER PROPERTIES
-
-To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
-
-
-SCHEDULECOMPUTESTARTSTOP <IComputeStartStopSchedule[]>: The list of compute start stop schedules to be applied.
-  - `[Action <ComputePowerAction?>]`: The compute power action.
-  - `[ScheduleId <String>]`: 
-  - `[ScheduleProvisioningStatus <ScheduleProvisioningState?>]`: 
-  - `[ScheduleStatus <ScheduleStatus?>]`: 
-
 ## RELATED LINKS
-
