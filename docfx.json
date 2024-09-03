@@ -5,9 +5,9 @@
             { "files": ["**/*.yml"], "src": "azps-12.2.0", "version": "azps-12.2.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-12.2.0", "version": "azps-12.2.0", "dest": "azure" },
 
-            { "files": ["toc.yml"], "src": "azps-12.1.0", "version": "azps-12.1.0", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-12.1.0", "version": "azps-12.1.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-12.1.0", "version": "azps-12.1.0", "dest": "azure" },
+            { "files": ["toc.yml"], "src": "azps-12.3.0", "version": "azps-12.3.0", "dest": "module/azure-powershell" },
+            { "files": ["**/*.yml"], "src": "azps-12.3.0", "version": "azps-12.3.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-12.3.0", "version": "azps-12.3.0", "dest": "azure" },
 
             { "files": ["toc.yml"], "src": "azps-11.6.0", "version": "azps-11.6.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-11.6.0", "version": "azps-11.6.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
@@ -68,14 +68,14 @@
         ],
         "resource": [
             { "files": ["media/**"], "version": "azps-12.2.0" },
-            { "files": ["media/**"], "version": "azps-12.1.0" },
+            { "files": ["media/**"], "version": "azps-12.3.0" },
             { "files": ["media/**"], "version": "azps-11.6.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" },
             { "files": ["media/**"], "version": "azurermps-6.13.0" }
         ],
         "versions": {
             "azps-12.2.0": { "dest": "azps-12.2.0" },
-            "azps-12.1.0": { "dest": "azps-12.1.0" },
+            "azps-12.3.0": { "dest": "azps-12.3.0" },
             "azps-11.6.0": { "dest": "azps-11.6.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
             "azurermps-6.13.0": { "dest": "azurermps-6.13.0" },
@@ -488,7 +488,7 @@
             },
             "ms.date": {
                 "azps-12.2.0/**/*.yml": "08/06/2024",
-                "azps-12.1.0/**/*.yml": "07/09/2024",
+                "azps-12.3.0/**/*.yml": "08/29/2024",
                 "azps-11.6.0/**/*.yml": "04/30/2024",
                 "azps-0.10.0/**/*.yml": "4/14/2020",
                 "azurermps-6.13.0/**/*.yml": "03/23/2021",
