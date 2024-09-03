@@ -487,8 +487,8 @@
                 "docs-conceptual/**/*.md": "conceptual"
             },
             "ms.date": {
+                "azps-12.3.0/**/*.yml": "09/03/2024",
                 "azps-12.2.0/**/*.yml": "08/06/2024",
-                "azps-12.3.0/**/*.yml": "08/29/2024",
                 "azps-11.6.0/**/*.yml": "04/30/2024",
                 "azps-0.10.0/**/*.yml": "4/14/2020",
                 "azurermps-6.13.0/**/*.yml": "03/23/2021",
@@ -558,7 +558,7 @@
             "author": "mikefrobbins",
             "ms.manager": "jasongroce",
             "uhfHeaderId": "Azure",
-            "ms.date": "08/06/2024"
+            "ms.date": "09/03/2024"
         },
         "dest": "azureps",
         "lruSize": 0,
