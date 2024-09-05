@@ -88,12 +88,22 @@ recommended for creating new resources as ASM is scheduled for retirement. For m
 
 ## Azure-related PowerShell modules
 
-The following PowerShell modules aren't part of Azure PowerShell:
+These products are used to manage Azure resources but aren't part of the Azure PowerShell collective
+product. They should never be described using the "Azure PowerShell" collective name.
 
-- **Microsoft.Graph**
-- **Microsoft.Graph.Entra**
-- **AzureAD PowerShell Module**
-- **MSOnline PowerShell Module**
+- Azure Active Directory PowerShell (AzureAD)
+- Azure Information Protection PowerShell
+- Azure Deployment Manager PowerShell
+- Azure Elastic Database Jobs PowerShell
+- Azure Service Fabric PowerShell
+- Azure Stack PowerShell
+- Microsoft.Graph PowerShell
+- Microsoft.Graph.Entra PowerShell
+- MSOnline PowerShell
+
+Guidelines
+
+- Always use the full proper name of the product or the specific PowerShell module name
 
 ## References
 
