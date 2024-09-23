@@ -1,5 +1,0 @@
-- name: Azure Deployment Manager PowerShell
-  href: overview.md
-  items:
-  - name: Release notes
-    href: release-notes-azuredmps.md
