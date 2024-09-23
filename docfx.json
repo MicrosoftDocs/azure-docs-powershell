@@ -25,10 +25,6 @@
             { "files": ["**/*.yml"], "src": "azuresmps-4.0.0", "version": "azuresmps-4.0.0", "exclude": ["docs-conceptual/**"], "dest": "module/servicemanagement" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azuresmps-4.0.0", "version": "azuresmps-4.0.0", "dest": "azure/servicemanagement" },
 
-            { "files": ["toc.yml"], "src": "azuredmps-0.9.0", "version": "azuredmps-0.9.0-preview", "dest": "module/deploymentmanager" },
-            { "files": ["**/*.md", "**/*.yml"], "src": "docs-conceptual/azuredmps-0.9.0", "version": "azuredmps-0.9.0-preview", "dest": "azure/deploymentmanager" },
-            { "files": ["**/*.yml"], "src": "azuredmps-0.9.0", "version": "azuredmps-0.9.0-preview", "exclude": ["docs-conceptual/**"], "dest": "module" },
-
             { "files": ["toc.yml"], "src": "aztools", "version": "aztools", "dest": "module/aztools" },
             { "files": ["**/*.yml"], "src": "aztools", "version": "aztools", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/aztools", "version": "aztools", "dest": "azure" },
@@ -80,7 +76,6 @@
             "azps-0.10.0": { "dest": "azps-0.10.0" },
             "azurermps-6.13.0": { "dest": "azurermps-6.13.0" },
             "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" },
-            "azuredmps-0.9.0-preview": { "dest": "azuredmps-0.9.0-preview" },
             "azureipps": { "dest": "azureipps" },
             "azureservicefabricps": { "dest": "azureservicefabricps" },
             "azureadps-1.0": { "dest": "azureadps-1.0" },
@@ -91,22 +86,18 @@
         "filemetadata": {
             "ms.author": {
                 "azps-*/**/*.yml": "mirobb",
-                "azuredmps-*/**/*.yml": "mirobb",
                 "azurermps-*/**/*.yml": "mirobb",
                 "azuresmps-*/**/*.yml": "mirobb",
                 "docs-conceptual/azps-*/*.md": "mirobb",
-                "docs-conceptual/azuredmps-*/*.md": "mirobb",
                 "docs-conceptual/azurermps-*/*.md": "mirobb",
                 "docs-conceptual/azuresmps-*/*.md": "mirobb",
                 "docs-conceptual/includes/*.md": "mirobb"
             },
             "author": {
                 "azps-*/**/*.yml": "mikefrobbins",
-                "azuredmps-*/**/*.yml": "mikefrobbins",
                 "azurermps-*/**/*.yml": "mikefrobbins",
                 "azuresmps-*/**/*.yml": "mikefrobbins",
                 "docs-conceptual/azps-*/*.md": "mikefrobbins",
-                "docs-conceptual/azuredmps-*/*.md": "mikefrobbins",
                 "docs-conceptual/azurermps-*/*.md": "mikefrobbins",
                 "docs-conceptual/azuresmps-*/*.md": "mikefrobbins",
                 "docs-conceptual/includes/*.md": "mikefrobbins"
@@ -481,7 +472,6 @@
             },
             "ms.topic": {
                 "azps-*/**/*.yml": "reference",
-                "azuredmps-*/**/*.yml": "reference",
                 "azurermps-*/**/*.yml": "reference",
                 "azuresmps-*/**/*.yml": "reference",
                 "docs-conceptual/**/*.md": "conceptual"
@@ -492,8 +482,7 @@
                 "azps-11.6.0/**/*.yml": "04/30/2024",
                 "azps-0.10.0/**/*.yml": "4/14/2020",
                 "azurermps-6.13.0/**/*.yml": "03/23/2021",
-                "azuresmps-4.0.0/**/*.yml": "11/28/2020",
-                "azuredmps-*/**/*.yml": "09/28/2018"
+                "azuresmps-4.0.0/**/*.yml": "11/28/2020"
             },
             "enable_powershell_try_it": {
                 "azurermps-*/**/*.yml": false,
@@ -513,9 +502,7 @@
             },
             "ROBOTS": {
                 "azurermps-*/**/*": "NOINDEX, NOFOLLOW",
-                "docs-conceptual/azurermps-*/**/*": "NOINDEX, NOFOLLOW",
-                "azuredmps-*/**/*": "NOINDEX, NOFOLLOW",
-                "docs-conceptual/azuredmps-*/**/*": "NOINDEX, NOFOLLOW"
+                "docs-conceptual/azurermps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
                 "azps-12.3.0/**/*": "OpenSource",
@@ -537,6 +524,7 @@
         },
         "globalMetadata": {
             "apiPlatform": "powershell",
+            "archive_url": "https://learn.microsoft.com/previous-versions/powershell/azure/deploymentmanager/overview",
             "brand": "azure",
             "searchScope": [
                 "Azure",
