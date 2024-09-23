@@ -68,11 +68,6 @@
     {
       "redirect_document_id": false,
       "redirect_url": "/powershell/azure/overview",
-      "source_path": "docs-conceptual/azuredmps-0.9.0/index.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/overview",
       "source_path": "docs-conceptual/azuresmps-4.0.0/index.md"
     },
     {
