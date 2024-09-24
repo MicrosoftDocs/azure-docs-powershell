@@ -31,36 +31,9 @@
 
             {
                 "files": [
-                    "AADRM/**/*.md",
-                    "AADRM/**/*.yml",
-                    "AzureInformationProtection/**/*.md",
-                    "AzureInformationProtection/**/*.yml",
-                    "AzureAD/**/*.md",
-                    "AzureAD/**/*.yml",
-                    "ElasticDatabaseJobs/**/*.md",
-                    "ElasticDatabaseJobs/**/*.yml",
-                    "MSOnline/**/*.md",
-                    "MSOnline/**/*.yml",
-                    "ResourceManager/**/*.md",
-                    "ResourceManager/**/*.yml",
-                    "ServiceManagement/**/*.md",
-                    "ServiceManagement/**/*.yml",
-                    "AzureStack/**/*.md",
-                    "AzureStack/**/*.yml",
-                    "ServiceFabric/**/*.md",
-                    "ServiceFabric/**/*.yml",
-                    "Storage/**/*.md",
-                    "Storage/**/*.yml",
-                    "azure ad cmdlets/**/*.md",
                     "bread/toc.yml"
                 ]
-            },
-            { "files": ["**/*.md"], "src": "azureipps", "version": "azureipps" },
-            { "files": ["**/*.md"], "src": "azureservicefabricps", "version": "azureservicefabricps" },
-            { "files": ["**/*.md"], "src": "azureadps-1.0", "version": "azureadps-1.0" },
-            { "files": ["**/*.md"], "src": "azureadps-2.0", "version": "azureadps-2.0" },
-            { "files": ["**/*.md"], "src": "azureadps-2.0-preview", "version": "azureadps-2.0-preview" },
-            { "files": ["**/*.md"], "src": "azureelasticdbjobsps-0.8.33", "version": "azureelasticdbjobsps-0.8.33" }
+            }
         ],
         "resource": [
             { "files": ["media/**"], "version": "azps-12.2.0" },
@@ -75,42 +48,9 @@
             "azps-11.6.0": { "dest": "azps-11.6.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
             "azurermps-6.13.0": { "dest": "azurermps-6.13.0" },
-            "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" },
-            "azureipps": { "dest": "azureipps" },
-            "azureservicefabricps": { "dest": "azureservicefabricps" },
-            "azureadps-1.0": { "dest": "azureadps-1.0" },
-            "azureadps-2.0": { "dest": "azureadps-2.0" },
-            "azureadps-2.0-preview": { "dest": "azureadps-2.0-preview" },
-            "azureelasticdbjobsps-0.8.33": { "dest": "azureelasticdbjobsps-0.8.33" }
+            "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" }
         },
         "filemetadata": {
-            "ms.author": {
-                "azps-*/**/*.yml": "mirobb",
-                "azurermps-*/**/*.yml": "mirobb",
-                "azuresmps-*/**/*.yml": "mirobb",
-                "docs-conceptual/azps-*/*.md": "mirobb",
-                "docs-conceptual/azurermps-*/*.md": "mirobb",
-                "docs-conceptual/azuresmps-*/*.md": "mirobb",
-                "docs-conceptual/includes/*.md": "mirobb"
-            },
-            "author": {
-                "azps-*/**/*.yml": "mikefrobbins",
-                "azurermps-*/**/*.yml": "mikefrobbins",
-                "azuresmps-*/**/*.yml": "mikefrobbins",
-                "docs-conceptual/azps-*/*.md": "mikefrobbins",
-                "docs-conceptual/azurermps-*/*.md": "mikefrobbins",
-                "docs-conceptual/azuresmps-*/*.md": "mikefrobbins",
-                "docs-conceptual/includes/*.md": "mikefrobbins"
-            },
-            "ms.manager": {
-                "azps-*/**/*.yml": "jasongroce",
-                "azurermps-*/**/*.yml": "jasongroce",
-                "azuresmps-*/**/*.yml": "jasongroce",
-                "docs-conceptual/azps-*/*.md": "jasongroce",
-                "docs-conceptual/azurermps-*/*.md": "jasongroce",
-                "docs-conceptual/azuresmps-*/*.md": "jasongroce",
-                "docs-conceptual/includes/*.md": "jasongroce"
-            },
             "ms.service": {
                 "azuresmps-*/**/*.yml": "azure-asm",
                 "docs-conceptual/azuresmps-*/**/*.md": "azure-asm",
@@ -471,18 +411,18 @@
                 ]
             },
             "ms.topic": {
-                "azps-*/**/*.yml": "reference",
-                "azurermps-*/**/*.yml": "reference",
-                "azuresmps-*/**/*.yml": "reference",
-                "docs-conceptual/**/*.md": "conceptual"
+                "azps-*/**/*": "reference",
+                "azurermps-*/**/*": "reference",
+                "azuresmps-*/**/*": "reference",
+                "docs-conceptual/**/*": "conceptual"
             },
             "ms.date": {
-                "azps-12.3.0/**/*.yml": "09/03/2024",
-                "azps-12.2.0/**/*.yml": "08/06/2024",
-                "azps-11.6.0/**/*.yml": "04/30/2024",
-                "azps-0.10.0/**/*.yml": "4/14/2020",
-                "azurermps-6.13.0/**/*.yml": "03/23/2021",
-                "azuresmps-4.0.0/**/*.yml": "11/28/2020"
+                "azps-12.3.0/**/*": "09/03/2024",
+                "azps-12.2.0/**/*": "08/06/2024",
+                "azps-11.6.0/**/*": "04/30/2024",
+                "azps-0.10.0/**/*": "4/14/2020",
+                "azurermps-6.13.0/**/*": "03/23/2021",
+                "azuresmps-4.0.0/**/*": "11/28/2020"
             },
             "enable_powershell_try_it": {
                 "azurermps-*/**/*.yml": false,
@@ -502,7 +442,9 @@
             },
             "ROBOTS": {
                 "azurermps-*/**/*": "NOINDEX, NOFOLLOW",
-                "docs-conceptual/azurermps-*/**/*": "NOINDEX, NOFOLLOW"
+                "docs-conceptual/azurermps-*/**/*": "NOINDEX, NOFOLLOW",
+                "azuresmps-*/**/*": "NOINDEX, NOFOLLOW",
+                "docs-conceptual/azuresmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
                 "azps-12.3.0/**/*": "OpenSource",
