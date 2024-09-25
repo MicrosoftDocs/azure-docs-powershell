@@ -171,13 +171,13 @@ modules.
 > Azure PowerShell is supported only on versions of PowerShell that are still within their support
 > lifecycle. For details, refer to the [PowerShell end-of-support dates][powershell-support-dates].
 
-|          Azure PowerShell           | PowerShell <br/> <= 7.1, & 7.3 | PowerShell <br/> 7.2, & >= 7.4 | Windows PowerShell <br/> 5.1 |
-| ----------------------------------- | :----------------------------: | :----------------------------: | :--------------------------: |
-| ![Supported][1] Az 12.x             |      ![Not Supported][3]       |        ![Supported][1]         |       ![Supported][1]        |
-| ![Supported][1] Az 11.x             |      ![Not Supported][3]       |        ![Supported][1]         |       ![Supported][1]        |
-| ![Out of Support][4] <= Az 10.x     |      ![Out of Support][4]      |      ![Out of Support][4]      |     ![Out of Support][4]     |
-| ![Out of Support][4] AzureRM 6.13.2 |      ![Not Supported][3]       |      ![Not Supported][3]       |     ![Out of Support][4]     |
-| ![Supported][1] Azure 5.3.1         |      ![Not Supported][3]       |      ![Not Supported][3]       |       ![Supported][1]        |
+|          Azure PowerShell           | PowerShell <br/> 7.2, 7.4, and higher | Windows PowerShell <br/> 5.1 |
+| ----------------------------------- | :-----------------------------------: | :--------------------------: |
+| ![Supported][1] Az 12.x             |            ![Supported][1]            |       ![Supported][1]        |
+| ![Supported][1] Az 11.x             |            ![Supported][1]            |       ![Supported][1]        |
+| ![Out of Support][4] <= Az 10.x     |         ![Out of Support][4]          |     ![Out of Support][4]     |
+| ![Out of Support][4] AzureRM 6.13.2 |          ![Not Supported][3]          |     ![Out of Support][4]     |
+| ![Supported][1] Azure 5.3.1         |          ![Not Supported][3]          |       ![Supported][1]        |
 
 - The ![Supported][1] icon indicates supported version combinations of Azure PowerShell and
   PowerShell.
