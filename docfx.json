@@ -1,9 +1,9 @@
 {
     "build": {
         "content": [
-            { "files": ["toc.yml"], "src": "azps-12.2.0", "version": "azps-12.2.0", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-12.2.0", "version": "azps-12.2.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-12.2.0", "version": "azps-12.2.0", "dest": "azure" },
+            { "files": ["toc.yml"], "src": "azps-12.4.0", "version": "azps-12.4.0", "dest": "module/azure-powershell" },
+            { "files": ["**/*.yml"], "src": "azps-12.4.0", "version": "azps-12.4.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-12.4.0", "version": "azps-12.4.0", "dest": "azure" },
 
             { "files": ["toc.yml"], "src": "azps-12.3.0", "version": "azps-12.3.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-12.3.0", "version": "azps-12.3.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
@@ -36,14 +36,14 @@
             }
         ],
         "resource": [
-            { "files": ["media/**"], "version": "azps-12.2.0" },
+            { "files": ["media/**"], "version": "azps-12.4.0" },
             { "files": ["media/**"], "version": "azps-12.3.0" },
             { "files": ["media/**"], "version": "azps-11.6.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" },
             { "files": ["media/**"], "version": "azurermps-6.13.0" }
         ],
         "versions": {
-            "azps-12.2.0": { "dest": "azps-12.2.0" },
+            "azps-12.4.0": { "dest": "azps-12.4.0" },
             "azps-12.3.0": { "dest": "azps-12.3.0" },
             "azps-11.6.0": { "dest": "azps-11.6.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
@@ -418,7 +418,7 @@
             },
             "ms.date": {
                 "azps-12.3.0/**/*": "09/03/2024",
-                "azps-12.2.0/**/*": "08/06/2024",
+                "azps-12.4.0/**/*": "09/26/2024",
                 "azps-11.6.0/**/*": "04/30/2024",
                 "azps-0.10.0/**/*": "4/14/2020",
                 "azurermps-6.13.0/**/*": "03/23/2021",
