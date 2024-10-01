@@ -8,6 +8,12 @@ title: Upcoming breaking changes in Azure PowerShell
 ---
 
 # Upcoming breaking changes in Azure PowerShell
+
+The breaking changes listed in this article are planned for the next major release of the Az
+PowerShell module unless otherwise noted. Per our
+[Support lifecycle](azureps-support-lifecycle.md), breaking changes in Azure PowerShell occur twice
+a year with major versions of the Az PowerShell module.
+
 ## Az.Accounts
 
 ### `Get-AzAccessToken`
@@ -366,7 +372,7 @@ title: Upcoming breaking changes in Azure PowerShell
     - The parameter : 'SourceEndpoint' is being replaced by parameter : 'PartnerEndpoint'.
     - This change is expected to take effect from Az.Sql version: 6.0.0 and Az version: 13.0.0
   - `-TargetDatabase`
-    - The parameter 'TargetDatabase' is being replaced by parameter 'Databases'. The type of new parameter is changing from 'String' to 'List<String>'
+    - The parameter 'TargetDatabase' is being replaced by parameter 'Databases'. The type of new parameter is changing from 'String' to `List<String>`
     - This change is expected to take effect from Az.Sql version: 6.0.0 and Az version: 13.0.0
 
 ### `Remove-AzSqlInstanceLink`
