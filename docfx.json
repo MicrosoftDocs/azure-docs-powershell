@@ -417,8 +417,8 @@
                 "docs-conceptual/**/*": "conceptual"
             },
             "ms.date": {
+                "azps-12.4.0/**/*": "10/08/2024",
                 "azps-12.3.0/**/*": "09/03/2024",
-                "azps-12.4.0/**/*": "09/26/2024",
                 "azps-11.6.0/**/*": "04/30/2024",
                 "azps-0.10.0/**/*": "4/14/2020",
                 "azurermps-6.13.0/**/*": "03/23/2021",
@@ -447,8 +447,8 @@
                 "docs-conceptual/azuresmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
-                "azps-12.3.0/**/*": "OpenSource",
-                "docs-conceptual/azps-12.3.0/*": "OpenSource",
+                "azps-12.4.0/**/*": "OpenSource",
+                "docs-conceptual/azps-12.4.0/*": "OpenSource",
                 "aztools/**/*": "OpenSource"
             },
             "open_source_feedback_issueUrl": {
@@ -488,7 +488,7 @@
             "author": "mikefrobbins",
             "ms.manager": "jasongroce",
             "uhfHeaderId": "Azure",
-            "ms.date": "09/03/2024"
+            "ms.date": "10/08/2024"
         },
         "dest": "azureps",
         "lruSize": 0,
