@@ -94,7 +94,7 @@
                 "az*-*/Az*.Kusto/*.yml": "azure-data-explorer",
                 "az*-*/Az*.LogicApp/*.yml": "azure-logic-apps",
                 "az*-*/Az*.MachineLearning*/*.yml": "azure-machine-learning",
-                "az*-*/Az*.ManagedServiceIdentity*/*.yml": "active-directory",
+                "az*-*/Az*.ManagedServiceIdentity*/*.yml": "azure-active-directory",
                 "az*-*/Az*.Maps*/*.yml": "azure-maps",
                 "az*-*/Az*.Media/*.yml": "media-services",
                 "az*-*/Az*.Network/*.yml": "azure-virtual-network",
