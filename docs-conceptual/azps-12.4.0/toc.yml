@@ -116,6 +116,8 @@
       href: /azure/key-vault/secrets/quick-create-powershell?toc=/powershell/azure/toc.json
 - name: Migration
   items:
+    - name: Breaking changes in generated modules
+      href: breaking-changes-generated-modules.md
     - name: Azure AD to Microsoft Graph Migration Guide
       href: azps-msgraph-migration-changes.md
     - name: Migrate from previous versions of Az
