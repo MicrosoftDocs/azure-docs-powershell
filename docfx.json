@@ -88,7 +88,7 @@
                 "az*-*/Az*.FrontDoor/*.yml": "azure-frontdoor",
                 "az*-*/Az*.HDInsight/*.yml": "azure-hdinsight",
                 "az*-*/Az*.Insights/*.yml": "azure-monitor",
-                "az*-*/Az*.IotCentral/*.yml": "iot-central",
+                "az*-*/Az*.IotCentral/*.yml": "azure-iot-central",
                 "az*-*/Az*.IotHub/*.yml": "iot-hub",
                 "az*-*/Az*.KeyVault/*.yml": "azure-key-vault",
                 "az*-*/Az*.Kusto/*.yml": "azure-data-explorer",
