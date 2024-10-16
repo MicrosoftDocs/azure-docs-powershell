@@ -51,6 +51,9 @@
             "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" }
         },
         "filemetadata": {
+            "ms.subservice": {
+                "az*-*/Az*.DeviceProvisioningServices/*.yml": "azure-iot-hub-dps"
+            },
             "ms.service": {
                 "azuresmps-*/**/*.yml": "azure-asm",
                 "docs-conceptual/azuresmps-*/**/*.md": "azure-asm",
@@ -81,7 +84,7 @@
                 "az*-*/Az*.DataMigration/*.yml": "azure-database-migration-service",
                 "az*-*/Az*.DevSpaces/*.yml": "azure-dev-spaces",
                 "az*-*/Az*.DevTestLabs/*.yml": "azure-devtest-labs",
-                "az*-*/Az*.DeviceProvisioningServices/*.yml": "iot-dps",
+                "az*-*/Az*.DeviceProvisioningServices/*.yml": "azure-iot-hub",
                 "az*-*/Az*.DNS/*.yml": "azure-dns",
                 "az*-*/Az*.EventGrid/*.yml": "azure-event-grid",
                 "az*-*/Az*.EventHub/*.yml": "azure-event-hubs",
