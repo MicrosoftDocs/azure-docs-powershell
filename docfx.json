@@ -52,7 +52,8 @@
         },
         "filemetadata": {
             "ms.subservice": {
-                "az*-*/Az*.DeviceProvisioningServices/*.yml": "azure-iot-hub-dps"
+                "az*-*/Az*.DeviceProvisioningServices/*.yml": "azure-iot-hub-dps",
+                "az*-*/Az*.OperationalInsights/*.yml": "azure-operational-insights"
             },
             "ms.service": {
                 "azuresmps-*/**/*.yml": "azure-asm",
@@ -102,7 +103,7 @@
                 "az*-*/Az*.Media/*.yml": "media-services",
                 "az*-*/Az*.Network/*.yml": "azure-virtual-network",
                 "az*-*/Az*.NotificationHubs/*.yml": "azure-notification-hubs",
-                "az*-*/Az*.OperationalInsights/*.yml": "operational-insights",
+                "az*-*/Az*.OperationalInsights/*.yml": "azure",
                 "az*-*/Az*.PolicyInsights/*.yml": "azure-policy",
                 "az*-*/Az*.PowerBIEmbedded/*.yml": "power-bi-embedded",
                 "az*-*/Az*.Profile/*.yml": "azure-resource-manager",
