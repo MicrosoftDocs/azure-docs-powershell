@@ -32,6 +32,10 @@ sections:
           Set-Item -Path Env:\SuppressAzurePowerShellBreakingChangeWarnings -Value $true
           ```
 
+          This environment variable must be set before importing the **Az** or **Az.Accounts** PowerShell module for it to take effect in the current PowerShell session.
+
+          For additional methods to disable breaking change warning messages in Azure PowerShell, see [Configure Azure PowerShell global settings](/powershell/azure/configure-global-settings#breaking-change-warning-messages).
+
       - question: |
           How do I disable the AzureRM retirement warning message in Azure PowerShell?
         answer: |
