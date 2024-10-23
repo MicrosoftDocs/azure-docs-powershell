@@ -453,7 +453,17 @@
             "feedback_system": {
                 "azps-12.4.0/**/*": "OpenSource",
                 "docs-conceptual/azps-12.4.0/*": "OpenSource",
-                "aztools/**/*": "OpenSource"
+                "aztools/**/*": "OpenSource",
+                "azps-12.3.0/**/*": "None",
+                "docs-conceptual/azps-12.3.0/*": "None",
+                "azps-11.6.0/**/*": "None",
+                "docs-conceptual/azps-11.6.0/*": "None",
+                "azps-0.10.0/**/*": "None",
+                "docs-conceptual/azps-0.10.0/*": "None",
+                "azurermps-6.13.0/**/*": "None",
+                "docs-conceptual/azurermps-6.13.0/*": "None",
+                "azuresmps-4.0.0/**/*": "None",
+                "docs-conceptual/azuresmps-4.0.0/*": "None"
             },
             "open_source_feedback_issueUrl": {
                 "azps-*/**/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml",
