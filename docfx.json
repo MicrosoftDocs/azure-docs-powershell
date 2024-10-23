@@ -100,7 +100,7 @@
                 "az*-*/Az*.MachineLearning*/*.yml": "azure-machine-learning",
                 "az*-*/Az*.ManagedServiceIdentity*/*.yml": "azure-active-directory",
                 "az*-*/Az*.Maps*/*.yml": "azure-maps",
-                "az*-*/Az*.Media/*.yml": "media-services",
+                "az*-*/Az*.Media/*.yml": "azure-media-services",
                 "az*-*/Az*.Network/*.yml": "azure-virtual-network",
                 "az*-*/Az*.NotificationHubs/*.yml": "azure-notification-hubs",
                 "az*-*/Az*.OperationalInsights/*.yml": "azure",
