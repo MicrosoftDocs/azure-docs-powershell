@@ -27,6 +27,8 @@ articles.
 - [Interactive authentication][authenticate-interactive]
 - [Noninteractive authentication][authenticate-noninteractive]
 
+[!INCLUDE [mfa-requirement](../../includes/mfa-requirement.md)]
+
 In addition to these authentication methods, you can also use Azure PowerShell in
 [Azure Cloud Shell][azure-cloud-shell], which logs you in automatically. It's the easiest way to get
 started with Azure PowerShell.
