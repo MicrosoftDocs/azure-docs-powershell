@@ -16,6 +16,8 @@ sign-in, such as those with multifactor authentication (MFA). This method simpli
 script testing, learning, and on-the-fly management without needing to preconfigure service
 principals or other noninteractive authentication methods.
 
+[!INCLUDE [mfa-requirement](../../includes/mfa-requirement.md)]
+
 ## Prerequisites
 
 - [Install the latest version of the Az PowerShell module][install-azps].
