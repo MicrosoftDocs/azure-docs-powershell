@@ -180,7 +180,7 @@ To clear Azure contexts and credentials:
 - Sign out of an account with `Disconnect-AzAccount`. You can sign out of any account either by
   account or context:
 
-  ```azurepowershell-interactive
+  ```azurepowershell
   Disconnect-AzAccount # Disconnect active account
   Disconnect-AzAccount -Username 'user@contoso.com' # Disconnect by account name
   Disconnect-AzAccount -ContextName MyContextName # Disconnect by context name
