@@ -35,6 +35,8 @@ since you're already authenticated for your environment, subscription, and tenan
 Connect-AzAccount
 ```
 
+[!INCLUDE [mfa-requirement](../../includes/mfa-requirement.md)]
+
 For regional environments that require specific compliance (e.g., Azure China 21Vianet), use the
 **Environment** parameter:
 
