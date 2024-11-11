@@ -189,7 +189,7 @@ created under.
 
 To sign in with a service principal using a password:
 
-```azurepowershell-interactive
+```azurepowershell
 # Use the application ID as the username, and the secret as password
 $credentials = Get-Credential
 Connect-AzAccount -ServicePrincipal -Credential $credentials -Tenant <tenant ID>
@@ -198,7 +198,7 @@ Connect-AzAccount -ServicePrincipal -Credential $credentials -Tenant <tenant ID>
 Certificate-based authentication requires that Azure PowerShell can retrieve information from a
 local certificate store based on a certificate thumbprint.
 
-```azurepowershell-interactive
+```azurepowershell
 Connect-AzAccount -ServicePrincipal -Tenant <TenantId> -CertificateThumbprint <Thumbprint> -ApplicationId <ApplicationId>
 ```
 
