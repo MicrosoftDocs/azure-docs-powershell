@@ -3,4 +3,4 @@ ms.topic: include
 ms.custom:
 ---
 
-The current version of Azure PowerShell is 12.4.0.
+The current version of Azure PowerShell is 12.5.0.
