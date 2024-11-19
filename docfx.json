@@ -421,8 +421,8 @@
                 "docs-conceptual/**/*": "conceptual"
             },
             "ms.date": {
+                "azps-13.0.0/**/*": "11/19/2024",
                 "azps-12.5.0/**/*": "11/11/2024",
-                "azps-13.0.0/**/*": "11/14/2024",
                 "azps-11.6.0/**/*": "04/30/2024",
                 "azps-0.10.0/**/*": "4/14/2020",
                 "azurermps-6.13.0/**/*": "03/23/2021",
@@ -502,7 +502,7 @@
             "author": "mikefrobbins",
             "ms.manager": "jasongroce",
             "uhfHeaderId": "Azure",
-            "ms.date": "10/08/2024"
+            "ms.date": "11/19/2024"
         },
         "dest": "azureps",
         "lruSize": 0,
