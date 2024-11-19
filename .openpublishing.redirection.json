@@ -63,21 +63,6 @@
     {
       "redirect_document_id": false,
       "redirect_url": "/powershell/azure/",
-      "source_path": "docs-conceptual/azps-11.6.0/overview.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/install-azure-powershell/",
-      "source_path": "docs-conceptual/azps-11.6.0/install-az-ps.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/install-azure-powershell/",
-      "source_path": "docs-conceptual/azps-11.6.0/install-az-ps-msi.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/",
       "source_path": "docs-conceptual/azps-0.10.0/overview.md"
     },
     {
