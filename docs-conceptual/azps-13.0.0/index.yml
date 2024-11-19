@@ -54,8 +54,8 @@ landingContent:
             url: whats-new-overview.md
           - text: Release notes
             url: release-notes-azureps.md
-          - text: Az 12.0.0 migration guide
-            url: migrate-az-12.0.0.md
+          - text: Az 13.0.0 migration guide
+            url: migrate-az-13.0.0.md
           - text: Upcoming breaking changes
             url: upcoming-breaking-changes.md
   - title: Azure PowerShell Reference
@@ -63,7 +63,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Cmdlet reference
-            url: /powershell/module/?view=azps-12.5.0
+            url: /powershell/module/?view=azps-13.0.0
   - title: Identity and Authentication
     linkLists:
       - linkListType: how-to-guide
