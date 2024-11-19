@@ -7,7 +7,7 @@ ms.topic: conceptual
 title: Migration guide for Az 13.0.0
 ---
 
-# Migration Guide for Az 13.0.0.0
+# Migration Guide for Az 13.0.0
 
 ## Az.Accounts
 
