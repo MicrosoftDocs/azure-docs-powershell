@@ -12,6 +12,11 @@ title: Offline Installation of Azure PowerShell
 In some environments, it's not possible to connect to the internet or the PowerShell Gallery. In
 those situations, you can install the Az PowerShell module offline using one of these methods.
 
+> [!NOTE]
+> The options for offline installation in this article require at least one system with internet
+> access to download the **Az** PowerShell module, which can be different from the system where you
+> plan to install the module.
+
 ## Prerequisites
 
 - Install a supported version of [PowerShell version 7 or higher][install-powershell]
