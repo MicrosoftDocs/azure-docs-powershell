@@ -70,6 +70,19 @@ sections:
           [System.Environment]::SetEnvironmentVariable('AZURE_PS_HTTP_MAX_RETRIES_FOR_429 ', 3, [System.EnvironmentVariableTarget]::User)
           ```
 
+      - question: |
+          How to convert from secure string to plain text?
+        answer: |
+          The code snippet to transfer from $secureString to $plainText
+          ```azurepowershell-interactive
+          $ssPtr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($secureString)
+          try {
+              $plaintext = [System.Runtime.InteropServices.Marshal]::PtrToStringBSTR($ssPtr)
+          } finally {
+              $plainText = [System.Runtime.InteropServices.Marshal]::ZeroFreeBSTR($ssPtr)
+          }
+          ```
+
 
 
 
