@@ -70,7 +70,20 @@ sections:
           [System.Environment]::SetEnvironmentVariable('AZURE_PS_HTTP_MAX_RETRIES_FOR_429 ', 3, [System.EnvironmentVariableTarget]::User)
           ```
 
+      - question: |
+          How can I convert a SecureString to plain text in PowerShell?
+        answer: |
+          You can use the following code snippet to convert a SecureString (`$secureString`) into plain text (`$plainText`):
 
+          ```powershell
+          $ssPtr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($secureString)
+          try {
+              $plaintext = [System.Runtime.InteropServices.Marshal]::PtrToStringBSTR($ssPtr)
+              # Perform operations with the contents of $plaintext in this section.
+          } finally {
+              # The following line ensures that sensitive data is not left in memory.
+              $plainText = [System.Runtime.InteropServices.Marshal]::ZeroFreeBSTR($ssPtr)
+          }
+          ```
 
-
-
+          **Note:** Handle plain text carefully, as it is less secure than a SecureString.
