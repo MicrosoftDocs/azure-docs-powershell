@@ -36,7 +36,7 @@ Configures single-sign-on for this resource.
 
 ### Example 1: Configures single-sign-on for Data monitor resource
 ```powershell
-New-AzDatadogSingleSignOnConfiguration -ResourceGroupName azure-rg-Datadog -MonitorName Datadog -Name 'default' -SingleSignOnState Enable -EnterpriseAppId 00000000-0000-0000-0000-000000000000
+New-AzDatadogSingleSignOnConfiguration -ResourceGroupName azure-rg-Datadog -MonitorName Datadog -Name 'default' -SingleSignOnState Enable -EnterpriseAppId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
 ```output
@@ -49,7 +49,7 @@ This command configures single-sign-on for Data monitor resource.
 
 ### Example 2: Configures single-sign-on for Data monitor resource by pipeline
 ```powershell
-Get-AzDatadogSingleSignOnConfiguration -ResourceGroupName azure-rg-Datadog -MonitorName Datadog -Name 'default' | New-AzDatadogSingleSignOnConfiguration -SingleSignOnState Disable -EnterpriseAppId 00000000-0000-0000-0000-000000000000
+Get-AzDatadogSingleSignOnConfiguration -ResourceGroupName azure-rg-Datadog -MonitorName Datadog -Name 'default' | New-AzDatadogSingleSignOnConfiguration -SingleSignOnState Disable -EnterpriseAppId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
 ```output

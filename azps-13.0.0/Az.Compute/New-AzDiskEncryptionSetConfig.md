@@ -29,7 +29,7 @@ Creates a configurable disk encryption set object.
 
 ### Example 1
 ```powershell
-$config = New-AzDiskEncryptionSetConfig -Location 'westcentralus' -KeyUrl "https://valut1.vault.azure.net:443/keys/key1/mykey" -SourceVaultId '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.KeyVault/vaults/vault1' -IdentityType 'SystemAssigned'
+$config = New-AzDiskEncryptionSetConfig -Location 'westcentralus' -KeyUrl "https://valut1.vault.azure.net:443/keys/key1/mykey" -SourceVaultId '/subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/rg1/providers/Microsoft.KeyVault/vaults/vault1' -IdentityType 'SystemAssigned'
 $config | New-AzDiskEncryptionSet -ResourceGroupName 'rg1' -Name 'enc1'
 ```
 
@@ -38,7 +38,7 @@ Creates disk encryption set using the given active key in the key vault.
 ### Example 2
 ```powershell
 $userAssignedIdentities = @{ "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}" = @{}};
-$config = New-AzDiskEncryptionSetConfig -Location 'westcentralus' -KeyUrl "https://valut1.vault.azure.net:443/keys/key1/mykey" -SourceVaultId '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.KeyVault/vaults/vault1' -IdentityType 'UserAssigned' -RotationToLatestKeyVersionEnabled $True -UserAssignedIdentity $userAssignedIdentities -FederatedClientId "13ebe945-1314-41b4-8b58-f3784e0dd278"
+$config = New-AzDiskEncryptionSetConfig -Location 'westcentralus' -KeyUrl "https://valut1.vault.azure.net:443/keys/key1/mykey" -SourceVaultId '/subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/rg1/providers/Microsoft.KeyVault/vaults/vault1' -IdentityType 'UserAssigned' -RotationToLatestKeyVersionEnabled $True -UserAssignedIdentity $userAssignedIdentities -FederatedClientId "13ebe945-1314-41b4-8b58-f3784e0dd278"
 $config | New-AzDiskEncryptionSet -ResourceGroupName 'rg1' -Name 'enc1'
 ```
 

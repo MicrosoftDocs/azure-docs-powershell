@@ -62,10 +62,10 @@ Lists the first 100 AD groups in a tenant.
 ### Example 3 - Get AD group by object id
 
 ```
-PS C:\> Get-AzADGroup -ObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE
+PS C:\> Get-AzADGroup -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Gets an AD group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE'.
+Gets an AD group with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
 
 ### Example 4 - List groups by search string
 

@@ -71,7 +71,7 @@ StartTime                        : 9/16/20 11:57:32 AM
 State                            : Succeeded
 StateDescription                 : Completed
 TargetInstanceType               : ProtectionProfile
-TargetObjectId                   : 42752b89-5fad-52fd-bf93-679fbdb6fed9
+TargetObjectId                   : 00001111-aaaa-2222-bbbb-3333cccc4444
 TargetObjectName                 : migrateAzMigratePWSHTc8d1sitepolicy
 Task                             : {CloudPairingPrerequisitesCheck, CloudPairingPrepareSite}
 Type                             : Microsoft.RecoveryServices/vaults/replicationJobs
@@ -101,7 +101,7 @@ StartTime                        : 9/21/20 4:13:34 PM
 State                            : Succeeded
 StateDescription                 : Completed
 TargetInstanceType               : ProtectionEntity
-TargetObjectId                   : 593b735d-2a34-53b2-b8ed-e33da5650703
+TargetObjectId                   : 00001111-aaaa-2222-bbbb-3333cccc4444
 TargetObjectName                 : rb-w2k12r2-1
 Task                             : {}
 Type                             : Microsoft.RecoveryServices/vaults/replicationJobs
@@ -131,7 +131,7 @@ StartTime                        : 8/21/20 6:41:48 AM
 State                            : Succeeded
 StateDescription                 : Completed
 TargetInstanceType               : ProtectionProfile
-TargetObjectId                   : 18b2ccec-e39a-517b-ae5d-dd395e9f4f96
+TargetObjectId                   : 00001111-aaaa-2222-bbbb-3333cccc4444
 TargetObjectName                 : samplePolicy3
 Task                             : {AddProtectionProfilePreflightsCheckTask, AddProtectionProfileTask}
 Type                             : Microsoft.RecoveryServices/vaults/replicationJobs

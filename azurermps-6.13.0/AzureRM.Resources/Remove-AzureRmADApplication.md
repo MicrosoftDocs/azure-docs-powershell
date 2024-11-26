@@ -49,10 +49,10 @@ Deletes the Microsoft Entra application.
 ### Example 1 - Remove application by object id
 
 ```
-PS C:\> Remove-AzureRmADApplication -ObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738
+PS C:\> Remove-AzureRmADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Removes the application with object id 'b4cd1619-80b3-4cfb-9f8f-9f2333425738' from the tenant.
+Removes the application with object id '00001111-aaaa-2222-bbbb-3333cccc4444' from the tenant.
 
 ### Example 2 - Remove application by application id
 
@@ -65,10 +65,10 @@ Removes the application with application id '00001111-aaaa-2222-bbbb-3333cccc444
 ### Example 3 - Remove application by piping
 
 ```
-PS C:\> Get-AzureRmADApplication -ObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738 | Remove-AzureRmADApplication
+PS C:\> Get-AzureRmADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Remove-AzureRmADApplication
 ```
 
-Gets the application with object id 'b4cd1619-80b3-4cfb-9f8f-9f2333425738' and pipes that to the Remove-AzureRmADApplication cmdlet to remove the application from the tenant.
+Gets the application with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the Remove-AzureRmADApplication cmdlet to remove the application from the tenant.
 
 ## PARAMETERS
 

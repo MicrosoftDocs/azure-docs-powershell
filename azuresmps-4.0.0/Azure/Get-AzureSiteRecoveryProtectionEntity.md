@@ -64,7 +64,7 @@ ServerId                     : 4a94c4a9-c856-4577-afbd-367fe9b3ce9c
 ProtectionContainerId        : 4a94c4a9-c856-4577-afbd-367fe9b3ce9c_1c513d45-645d-4ed0-b9ae-e7b869a1f7fc
 Name                         : testvm
 Type                         : VirtualMachine
-FabricObjectId               : 506B3CAC-5758-49E2-98C4-E5B0512E4D8E
+FabricObjectId               : 00001111-aaaa-2222-bbbb-3333cccc4444
 Protected                    : False
 CanCommit                    : False
 CanFailover                  : False

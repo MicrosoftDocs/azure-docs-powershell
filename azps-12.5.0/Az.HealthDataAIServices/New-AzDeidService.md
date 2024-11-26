@@ -48,8 +48,8 @@ New-AzDeidService -Name myHealthDeidService -ResourceGroupName azpwsh-test-rg -L
 
 ```output
 Id                           : /subscriptions/a49b70b4-60ee-4422-a7e2-3a5223f5fae4/resourceGroups/azpwsh-test-rg/providers/Microsoft.HealthDataAIServices/deidServices/myHealthDeidService
-IdentityPrincipalId          : efab95dd-6969-4c43-bd96-4126dc372bfa
-IdentityTenantId             : 72f988bf-86f1-41af-91ab-2d7cd011db47
+IdentityPrincipalId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+IdentityTenantId             : 00001111-aaaa-2222-bbbb-3333cccc4444
 IdentityType                 : SystemAssigned
 IdentityUserAssignedIdentity : {
                                }

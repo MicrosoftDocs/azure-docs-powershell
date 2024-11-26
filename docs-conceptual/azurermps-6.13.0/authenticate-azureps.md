@@ -67,7 +67,7 @@ the use of `TenantId`. Normally, this parameter can be provided as either a tena
 name. However, for CSP sign-in, it must be provided a **tenant ID**.
 
 ```azurepowershell
-Connect-AzureRmAccount -TenantId '00000000-0000-0000-0000-000000000000'
+Connect-AzureRmAccount -TenantId '00001111-aaaa-2222-bbbb-3333cccc4444'
 ```
 
 ## Sign in to another Cloud

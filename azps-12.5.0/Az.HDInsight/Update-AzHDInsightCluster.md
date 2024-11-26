@@ -41,7 +41,7 @@ Update tags for the cluster.
 ### Example 2
 ```powershell
 $clusterName = "your-hadoop-001"
-$identityId = "/subscriptions/00000000-0000-0000-0000-000000000000
+$identityId = "/subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444
 /resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/hdi-msi"
 
 Update-AzHDInsightCluster -ClusterName $clusterName -IdentityType UserAssigned -IdentityId $identityId
