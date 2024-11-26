@@ -168,7 +168,7 @@ This example identifies the application by using the service principal name regi
 
 ### Example 3: Remove permissions for an application by using its object ID
 ```powershell
-PS C:\> Remove-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectID 34595082-9346-41b6-8d6b-295a2808b8db
+PS C:\> Remove-AzureRmKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectID 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
 This command removes all the permissions that an application has on the key vault named Contoso03Vault.

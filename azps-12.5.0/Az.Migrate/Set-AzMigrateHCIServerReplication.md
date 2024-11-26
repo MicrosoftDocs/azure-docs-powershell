@@ -28,7 +28,7 @@ The Set-AzMigrateHCIServerReplication cmdlet updates the target properties for t
 
 ### Example 1: Update target VM name
 ```powershell
-Set-AzMigrateHCIServerReplication -TargetObjectID  '/subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/protectedItems/503a4f02-916c-d6b0-8d14-222bbd4767e5' -TargetVMName "targetName1"
+Set-AzMigrateHCIServerReplication -TargetObjectID  '/subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/protectedItems/00001111-aaaa-2222-bbbb-3333cccc4444' -TargetVMName "targetName1"
 ```
 
 ```output
@@ -72,7 +72,7 @@ $memoryConfig = [PSCustomObject]@{
 	TargetMemoryBufferPercentage = 20
 }
 
-Set-AzMigrateHCIServerReplication -TargetObjectID  '/subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/protectedItems/503a4f02-916c-d6b0-8d14-222bbd4767e5' -DynamicMemoryConfig $memoryConfig
+Set-AzMigrateHCIServerReplication -TargetObjectID  '/subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/protectedItems/00001111-aaaa-2222-bbbb-3333cccc4444' -DynamicMemoryConfig $memoryConfig
 ```
 
 ```output

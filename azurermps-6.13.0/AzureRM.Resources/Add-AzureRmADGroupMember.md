@@ -60,18 +60,18 @@ Adds a user to an existing AD group.
 ### Example 1 - Add a user to a group by object id
 
 ```
-PS C:\> Add-AzureRmADGroupMember -MemberObjectId D9076BBC-D62C-4105-9C78-A7F5BC4A3405 -TargetGroupObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE
+PS C:\> Add-AzureRmADGroupMember -MemberObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -TargetGroupObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Adds the user with object id 'D9076BBC-D62C-4105-9C78-A7F5BC4A3405' to the group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE'.
+Adds the user with object id '00001111-aaaa-2222-bbbb-3333cccc4444' to the group with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
 
 ### Example 2 - Add a user to a group by piping
 
 ```
-PS C:\> Get-AzureRmADGroup -ObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE | Add-AzureRmADGroupMember -MemberObjectId D9076BBC-D62C-4105-9C78-A7F5BC4A3405
+PS C:\> Get-AzureRmADGroup -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Add-AzureRmADGroupMember -MemberObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Gets the group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE' and pipes it to the Add-AzureRmADGroupMember cmdlet to add the user to that group.
+Gets the group with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes it to the Add-AzureRmADGroupMember cmdlet to add the user to that group.
 
 ## PARAMETERS
 

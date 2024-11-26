@@ -35,7 +35,7 @@ The Remove-AzMigrateHCIServerReplication cmdlet stops the replication for a migr
 
 ### Example 1: Remove replication by Id
 ```powershell
-Remove-AzMigrateHCIServerReplication -TargetObjectID "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/0ec082d5-6827-457a-bae2-f986e1b94851"
+Remove-AzMigrateHCIServerReplication -TargetObjectID "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/00001111-aaaa-2222-bbbb-3333cccc4444"
 ```
 
 ```output
@@ -73,7 +73,7 @@ Remove AzStackHCI replication by Id.
 
 ### Example 2: Remove replication by input object
 ```powershell
-$InputObject = Get-AzMigrateHCIServerReplication -TargetObjectID "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/0ec082d5-6827-457a-bae2-f986e1b94851"
+$InputObject = Get-AzMigrateHCIServerReplication -TargetObjectID "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/00001111-aaaa-2222-bbbb-3333cccc4444"
 
 Remove-AzMigrateHCIServerReplication -InputObject $InputObject
 

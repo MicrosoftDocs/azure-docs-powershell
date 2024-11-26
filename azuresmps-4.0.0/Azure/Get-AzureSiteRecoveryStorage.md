@@ -28,15 +28,15 @@ The **Get-AzureSiteRecoveryStorage** cmdlet gets Azure Site Recovery Storages fo
 PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> Get-AzureSiteRecoveryStorage -Server $Servers[0]
 Name           : phase2PrimaryStorageClassification
-ID             : 1c1d0c0b-0c50-4675-af1a-1fdac70dbb6d
-FabricObjectID : 1c1d0c0b-0c50-4675-af1a-1fdac70dbb6d
+ID             : 00001111-aaaa-2222-bbbb-3333cccc4444
+FabricObjectID : 00001111-aaaa-2222-bbbb-3333cccc4444
 ServerId       : 774859b0-1966-48cc-9df7-759c441b7a8c
 Type           : Classification
 FabricType     : VMM
 
 Name           : phase2RecoveryStorageClassification
-ID             : 20cf8d92-fd5d-4872-985a-0f4562b8a0bf
-FabricObjectID : 20cf8d92-fd5d-4872-985a-0f4562b8a0bf
+ID             : 00001111-aaaa-2222-bbbb-3333cccc4444
+FabricObjectID : 00001111-aaaa-2222-bbbb-3333cccc4444
 ServerId       : 774859b0-1966-48cc-9df7-759c441b7a8c
 Type           : Classification
 FabricType     : VMM

@@ -97,10 +97,10 @@ Lists all AD service principals whose display name start with "Web".
 ### Example 5 - List service principals by piping
 
 ```
-PS C:\> Get-AzADApplication -ObjectId 39e64ec6-569b-4030-8e1c-c3c519a05d69 | Get-AzADServicePrincipal
+PS C:\> Get-AzADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Get-AzADServicePrincipal
 ```
 
-Gets the AD application with object id '39e64ec6-569b-4030-8e1c-c3c519a05d69' and pipes it to the Get-AzADServicePrincipal cmdlet to list all service principals for that application.
+Gets the AD application with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes it to the Get-AzADServicePrincipal cmdlet to list all service principals for that application.
 
 ## PARAMETERS
 

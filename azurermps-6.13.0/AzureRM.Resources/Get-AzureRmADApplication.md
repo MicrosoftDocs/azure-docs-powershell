@@ -87,10 +87,10 @@ Gets the application with identifier uri as "http://mySecretApp1".
 ### Example 4 - Get application by object id
 
 ```
-PS C:\> Get-AzureRmADApplication -ObjectId 39e64ec6-569b-4030-8e1c-c3c519a05d69
+PS C:\> Get-AzureRmADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Gets the application with the object id '39e64ec6-569b-4030-8e1c-c3c519a05d69'.
+Gets the application with the object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
 
 ## PARAMETERS
 

@@ -53,7 +53,7 @@ StartTime                        : 9/25/20 9:20:08 PM
 State                            : InProgress
 StateDescription                 : InProgress
 TargetInstanceType               : ProtectionEntity
-TargetObjectId                   : 101883a0-23f7-538a-bbd5-6d8b4fa900e2
+TargetObjectId                   : 00001111-aaaa-2222-bbbb-3333cccc4444
 TargetObjectName                 : prsadhu-TestVM
 Task                             : {DisableProtectionOnPrimary, UpdateDraState}
 Type                             : Microsoft.RecoveryServices/vaults/replicationJobs
@@ -84,7 +84,7 @@ StartTime                        : 9/25/20 9:20:08 PM
 State                            : InProgress
 StateDescription                 : InProgress
 TargetInstanceType               : ProtectionEntity
-TargetObjectId                   : 101883a0-23f7-538a-bbd5-6d8b4fa900e2
+TargetObjectId                   : 00001111-aaaa-2222-bbbb-3333cccc4444
 TargetObjectName                 : prsadhu-TestVM
 Task                             : {DisableProtectionOnPrimary, UpdateDraState}
 Type                             : Microsoft.RecoveryServices/vaults/replicationJobs

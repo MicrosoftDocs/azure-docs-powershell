@@ -117,7 +117,7 @@ Disable SmbCsi driver in provisioned cluster.
 
 ### Example 10: Update aad admin GUIDS
 ```powershell
-Update-AzAksArcCluster -ClusterName azps_test_cluster -ResourceGroupName azps_test_group -AdminGroupObjectID @("2e00cb64-66d8-4c9c-92d8-6462caf99e33", "1b28ff4f-f7c5-4aaa-aa79-ba8b775ab443")
+Update-AzAksArcCluster -ClusterName azps_test_cluster -ResourceGroupName azps_test_group -AdminGroupObjectID @("00001111-aaaa-2222-bbbb-3333cccc4444", "1b28ff4f-f7c5-4aaa-aa79-ba8b775ab443")
 ```
 
 Update aad admin GUIDS.

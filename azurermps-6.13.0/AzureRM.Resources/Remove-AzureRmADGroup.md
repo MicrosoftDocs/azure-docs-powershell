@@ -42,18 +42,18 @@ Deletes an active directory group.
 ### Example 1 - Remove a group by object id
 
 ```
-PS C:\> Remove-AzureRmADGroup -ObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE
+PS C:\> Remove-AzureRmADGroup -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Removes the group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE' from the tenant.
+Removes the group with object id '00001111-aaaa-2222-bbbb-3333cccc4444' from the tenant.
 
 ### Example 2 - Remove a group by piping
 
 ```
-PS C:\> Get-AzureRmADGroup -ObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE | Remove-AzureRmADGroup
+PS C:\> Get-AzureRmADGroup -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Remove-AzureRmADGroup
 ```
 
-Gets the group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE' and pipes that to Remove-AzureRmADGroup to remove the group from the tenant.
+Gets the group with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to Remove-AzureRmADGroup to remove the group from the tenant.
 
 ## PARAMETERS
 

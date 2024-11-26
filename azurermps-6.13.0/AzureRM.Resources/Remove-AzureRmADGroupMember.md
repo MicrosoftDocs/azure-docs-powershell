@@ -66,18 +66,18 @@ Removes a user from an AD group.
 ### Example 1 - Remove a user from a group by object id
 
 ```
-PS C:\> Remove-AzureRmADGroup -MemberObjectId D9076BBC-D62C-4105-9C78-A7F5BC4A3405 -GroupObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE
+PS C:\> Remove-AzureRmADGroup -MemberObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -GroupObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Removes the user with object id 'D9076BBC-D62C-4105-9C78-A7F5BC4A3405' from the group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE'.
+Removes the user with object id '00001111-aaaa-2222-bbbb-3333cccc4444' from the group with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
 
 ### Example 2 - Remove a user from a group by piping
 
 ```
-PS C:\> Get-AzureRmADGroup -ObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE | Remove-AzureRmADGroupMember -MemberObjectId D9076BBC-D62C-4105-9C78-A7F5BC4A3405
+PS C:\> Get-AzureRmADGroup -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Remove-AzureRmADGroupMember -MemberObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Gets the group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE' and pipes it to the Remove-AzureRmADGroupMember cmdlet to remove the user to that group.
+Gets the group with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes it to the Remove-AzureRmADGroupMember cmdlet to remove the user to that group.
 
 ## PARAMETERS
 

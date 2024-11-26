@@ -206,10 +206,10 @@ Creates a new AD service principal for the application with application id '0000
 ### Example 6 - Create a new AD service principal using piping
 
 ```
-PS C:\> Get-AzureRmADApplication -ObjectId 3ede3c26-b443-4e0b-9efc-b05e68338dc3 | New-AzureRmADServicePrincipal
+PS C:\> Get-AzureRmADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | New-AzureRmADServicePrincipal
 ```
 
-Gets the application with object id '3ede3c26-b443-4e0b-9efc-b05e68338dc3' and pipes that to the New-AzureRmADServicePrincipal cmdlet to create a new AD service principal for that application.
+Gets the application with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the New-AzureRmADServicePrincipal cmdlet to create a new AD service principal for that application.
 
 ## PARAMETERS
 
