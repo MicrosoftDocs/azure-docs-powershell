@@ -55,18 +55,18 @@ To update the properties associated with the underlying application, please use 
 ### Example 1 - Update the display name of a service principal
 
 ```
-PS C:\> Update-AzureRmADServicePrincipal -ObjectId 784136ca-3ae2-4fdd-a388-89d793e7c780 -DisplayName MyNewDisplayName
+PS C:\> Update-AzureRmADServicePrincipal -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -DisplayName MyNewDisplayName
 ```
 
-Updates the display name of the service principal with object id '784136ca-3ae2-4fdd-a388-89d793e7c780' to be 'MyNewDisplayName'.
+Updates the display name of the service principal with object id '00001111-aaaa-2222-bbbb-3333cccc4444' to be 'MyNewDisplayName'.
 
 ### Example 2 - Update the display name of a service principal using piping
 
 ```
-PS C:\> Get-AzureRmADServicePrincipal -ObjectId 784136ca-3ae2-4fdd-a388-89d793e7c780 | Update-AzureRmADServicePrincipal -DisplayName MyNewDisplayName
+PS C:\> Get-AzureRmADServicePrincipal -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Update-AzureRmADServicePrincipal -DisplayName MyNewDisplayName
 ```
 
-Gets the service principal with object id '784136ca-3ae2-4fdd-a388-89d793e7c780' and pipes that to the Update-AzureRmADServicePrincipal cmdlet to update the display name of the service principal to "MyNewDisplayName".
+Gets the service principal with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the Update-AzureRmADServicePrincipal cmdlet to update the display name of the service principal to "MyNewDisplayName".
 
 ## PARAMETERS
 

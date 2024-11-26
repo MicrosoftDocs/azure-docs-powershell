@@ -43,26 +43,26 @@ Lists members of an AD group in the current tenant.
 ### Example 1 - List members by AD group object id
 
 ```
-PS C:\> Get-AzureRmADGroupMember -GroupObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE
+PS C:\> Get-AzureRmADGroupMember -GroupObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Lists members of the AD group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE'.
+Lists members of the AD group with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
 
 ### Example 2 - List members by AD group object id using paging
 
 ```
-PS C:\> Get-AzureRmADGroupMember -GroupObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE -First 100
+PS C:\> Get-AzureRmADGroupMember -GroupObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -First 100
 ```
 
-Lists the first 100 members of the AD group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE'.
+Lists the first 100 members of the AD group with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
 
 ### Example 3 - List members by piping
 
 ```
-PS C:\> Get-AzureRmADGroup -ObjectId 85F89C90-780E-4AA6-9F4F-6F268D322EEE | Get-AzureRmADGroupMember
+PS C:\> Get-AzureRmADGroup -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Get-AzureRmADGroupMember
 ```
 
-Gets the AD group with object id '85F89C90-780E-4AA6-9F4F-6F268D322EEE' and pipes it to the Get-AzureRmADGroupMember cmdlet to list all members in that group. 
+Gets the AD group with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes it to the Get-AzureRmADGroupMember cmdlet to list all members in that group. 
 
 ## PARAMETERS
 

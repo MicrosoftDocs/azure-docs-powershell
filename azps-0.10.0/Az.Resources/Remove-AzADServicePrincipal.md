@@ -59,10 +59,10 @@ Deletes the Microsoft Entra service principal.
 ### Example 1 - Remove a service principal by object id
 
 ```
-PS C:\> Remove-AzADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45
+PS C:\> Remove-AzADServicePrincipal -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Removes the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45'.
+Removes the service principal with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
 
 ### Example 2 - Remove a service principal by application id
 
@@ -83,10 +83,10 @@ Remove the service principal with service principal name "MyServicePrincipal"
 ### Example 4 - Remove a service principal by piping
 
 ```
-PS C:\> Get-AzADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45 | Remove-AzADServicePrincipal
+PS C:\> Get-AzADServicePrincipal -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Remove-AzADServicePrincipal
 ```
 
-Gets the service principal with object id '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45' and pipes that to the Remove-AzADServicePrincipal cmdlet to remove that service principal.
+Gets the service principal with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the Remove-AzADServicePrincipal cmdlet to remove that service principal.
 
 ### Example 5 - Remove a service principal by piping an application
 

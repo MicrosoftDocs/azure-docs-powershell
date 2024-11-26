@@ -28,16 +28,16 @@ The **Get-AzureSiteRecoveryNetwork** cmdlet gets information about Azure Site Re
 PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> Get-AzureSiteRecoveryNetwork -Server $Servers[0]
 Name                : phase2RecoveryVMNetwork
-ID                  : 7cfd636e-5cc2-4e01-873b-8a7aa4962341
-FabricObjectID      : 7cfd636e-5cc2-4e01-873b-8a7aa4962341
+ID                  : 00001111-aaaa-2222-bbbb-3333cccc4444
+FabricObjectID      : 00001111-aaaa-2222-bbbb-3333cccc4444
 ServerId            : 774859b0-1966-48cc-9df7-759c441b7a8c
 Type                : NoIsolation
 FabricType          : VMM
 VmNetworkSubnetList : {}
 
 Name                : phase2PrimaryVMNetwork
-ID                  : d903e2c6-3141-4cef-bfe1-04616cd43cbb
-FabricObjectID      : d903e2c6-3141-4cef-bfe1-04616cd43cbb
+ID                  : 00001111-aaaa-2222-bbbb-3333cccc4444
+FabricObjectID      : 00001111-aaaa-2222-bbbb-3333cccc4444
 ServerId            : 774859b0-1966-48cc-9df7-759c441b7a8c
 Type                : NoIsolation
 FabricType          : VMM

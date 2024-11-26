@@ -53,10 +53,10 @@ For more information: https://msdn.microsoft.com/en-us/library/azure/ad/graph/ap
 ### Example 1 - Update the display name of a user using object id
 
 ```
-PS C:\> Update-AzureRmADUser -ObjectId 155a5c10-93a9-4941-a0df-96d83ab5ab24 -DisplayName MyNewDisplayName
+PS C:\> Update-AzureRmADUser -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -DisplayName MyNewDisplayName
 ```
 
-Updates the display name of the user with object id '155a5c10-93a9-4941-a0df-96d83ab5ab24' to be 'MyNewDisplayName'.
+Updates the display name of the user with object id '00001111-aaaa-2222-bbbb-3333cccc4444' to be 'MyNewDisplayName'.
 
 ### Example 2 - Update the display name of a user using user principal name
 
@@ -69,10 +69,10 @@ Updates the display name of the user with user principal name 'foo@domain.com' t
 ### Example 3 - Update the display name of a user using piping
 
 ```
-PS C:\> Get-AzureRmADUser -ObjectId 155a5c10-93a9-4941-a0df-96d83ab5ab24 | Update-AzureRmADUser -DisplayName MyNewDisplayName
+PS C:\> Get-AzureRmADUser -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Update-AzureRmADUser -DisplayName MyNewDisplayName
 ```
 
-Gets the user with object id '155a5c10-93a9-4941-a0df-96d83ab5ab24' and pipes that to the Update-AzureRmADUser cmdlet to update the display name of that user to 'MyNewDisplayName'.
+Gets the user with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the Update-AzureRmADUser cmdlet to update the display name of that user to 'MyNewDisplayName'.
 
 ## PARAMETERS
 

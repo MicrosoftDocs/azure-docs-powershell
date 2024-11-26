@@ -32,7 +32,7 @@ PS C:\> Update-AzureRmManagementPartner -PartnerId 4977985
 PartnerId   : 4977985
 PartnerName : Test_Test_DPORTest
 TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
-ObjectId    : aa67f786-0552-423e-8849-244ed12bf581
+ObjectId    : 00001111-aaaa-2222-bbbb-3333cccc4444
 State       : Active
 ```
 

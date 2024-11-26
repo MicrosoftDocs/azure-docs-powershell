@@ -333,13 +333,13 @@ Scripts should no longer make processing decisions based on the values fo these 
   Passwords are automatically generated, scripts that provided the password:
 
   ```azurepowershell-interactive
-  New-AzAdSpCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476 -Password $secPassword
+  New-AzAdSpCredential -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -Password $secPassword
   ```
 
   Should be changed to retrieve the password from the output:
 
   ```azurepowershell-interactive
-  $credential = New-AzAdSpCredential -ObjectId 1f99cf81-0146-4f4e-beae-2007d0668476
+  $credential = New-AzAdSpCredential -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
   $secPassword = $credential.Secret
   ```
 

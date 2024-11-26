@@ -67,7 +67,7 @@ This command gets the Datadog single sign-on resource for the given Monitor.
 
 ### Example 3: Gets the Datadog single sign-on resource for the given Monitor by pipeline
 ```powershell
-New-AzDatadogSingleSignOnConfiguration -ResourceGroupName azure-rg-Datadog -MonitorName Datadog -Name 'default' -SingleSignOnState Enable -EnterpriseAppId 00000000-0000-0000-0000-000000000000 | Get-AzDatadogSingleSignOnConfiguration
+New-AzDatadogSingleSignOnConfiguration -ResourceGroupName azure-rg-Datadog -MonitorName Datadog -Name 'default' -SingleSignOnState Enable -EnterpriseAppId 00001111-aaaa-2222-bbbb-3333cccc4444 | Get-AzDatadogSingleSignOnConfiguration
 ```
 
 ```output

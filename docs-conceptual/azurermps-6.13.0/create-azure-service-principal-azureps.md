@@ -55,7 +55,7 @@ Get-AzureRmADApplication -DisplayNameStartWith MyDemoWebApp
 
 ```Output
 DisplayName             : MyDemoWebApp
-ObjectId                : 775f64cd-0ec8-4b9b-b69a-8b8946022d9f
+ObjectId                : 00001111-aaaa-2222-bbbb-3333cccc4444
 IdentifierUris          : {http://MyDemoWebApp}
 HomePage                : http://www.contoso.com
 Type                    : Application
@@ -151,7 +151,7 @@ Scope              : /subscriptions/00000000-0000-0000-0000-000000000000/resourc
 DisplayName        : MyDemoWebApp
 SignInName         :
 RoleDefinitionName : Reader
-RoleDefinitionId   : b24988ac-6180-42a0-ab88-20f7382dd24c
+RoleDefinitionId   : 00001111-aaaa-2222-bbbb-3333cccc4444
 ObjectId           : 698138e7-d7b6-4738-a866-b4e3081a69e4
 ObjectType         : ServicePrincipal
 ```
@@ -172,7 +172,7 @@ Scope              : /subscriptions/00000000-0000-0000-0000-000000000000/resourc
 DisplayName        : MyDemoWebApp
 SignInName         :
 RoleDefinitionName : Reader
-RoleDefinitionId   : acdd72a7-3385-48ef-bd42-f606fba81ae7
+RoleDefinitionId   : 00001111-aaaa-2222-bbbb-3333cccc4444
 ObjectId           : 698138e7-d7b6-4738-a866-b4e3081a69e4
 ObjectType         : ServicePrincipal
 ```
@@ -214,13 +214,13 @@ Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 StartDate           EndDate             KeyId                                Type
 ---------           -------             -----                                ----
 3/8/2017 5:58:24 PM 3/8/2018 5:58:24 PM 00001111-aaaa-2222-bbbb-3333cccc4444 Password
-5/5/2016 4:55:27 PM 5/5/2017 4:55:27 PM ca9d4846-4972-4c70-b6f5-a4effa60b9bc Password
+5/5/2016 4:55:27 PM 5/5/2017 4:55:27 PM 00001111-aaaa-2222-bbbb-3333cccc4444 Password
 ```
 
 ### Remove the old password from the service principal
 
 ```azurepowershell
-Remove-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -KeyId ca9d4846-4972-4c70-b6f5-a4effa60b9bc
+Remove-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -KeyId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
 ```Output

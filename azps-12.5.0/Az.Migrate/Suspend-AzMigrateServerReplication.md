@@ -53,7 +53,7 @@ StartTime                        : 9/25/2022 9:10:42 PM
 State                            : InProgress
 StateDescription                 : InProgress
 TargetInstanceType               : ProtectionEntity
-TargetObjectId                   : 52896ea4-214d-5825-bc32-24169dfcc44c
+TargetObjectId                   : 00001111-aaaa-2222-bbbb-3333cccc4444
 TargetObjectName                 : Win2k16
 Task                             : {PauseReplicationPreflightChecksTask, PauseReplicationTask}
 Type                             : Microsoft.RecoveryServices/vaults/replicationJobs
@@ -84,7 +84,7 @@ StartTime                        : 9/25/2022 9:10:42 PM
 State                            : InProgress
 StateDescription                 : InProgress
 TargetInstanceType               : ProtectionEntity
-TargetObjectId                   : 52896ea4-214d-5825-bc32-24169dfcc44c
+TargetObjectId                   : 00001111-aaaa-2222-bbbb-3333cccc4444
 TargetObjectName                 : Win2k16
 Task                             : {PauseReplicationPreflightChecksTask, PauseReplicationTask}
 Type                             : Microsoft.RecoveryServices/vaults/replicationJobs

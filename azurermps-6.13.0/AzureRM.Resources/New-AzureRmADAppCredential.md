@@ -76,10 +76,10 @@ The application is identified by supplying either the application object id or a
 
 ```
 PS C:\> $SecureStringPassword = ConvertTo-SecureString -String "password" -AsPlainText -Force
-PS C:\> New-AzureRmADAppCredential -ObjectId 1f89cf81-0146-4f4e-beae-2007d0668416 -Password $SecureStringPassword
+PS C:\> New-AzureRmADAppCredential -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -Password $SecureStringPassword
 ```
 
-A new password credential is added to the existing appplication with object id '1f89cf81-0146-4f4e-beae-2007d0668416'.
+A new password credential is added to the existing appplication with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
 
 ### Example 2 - Create a new application credential using a certificate
 
@@ -97,10 +97,10 @@ The supplied base64 encoded public X509 certificate ("myapp.cer") is added to th
 
 ```
 PS C:\> $SecureStringPassword = ConvertTo-SecureString -String "password" -AsPlainText -Force
-PS C:\> Get-AzureRmADApplication -ObjectId 1f89cf81-0146-4f4e-beae-2007d0668416 | New-AzureRmADAppCredential -Password $SecureStringPassword
+PS C:\> Get-AzureRmADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | New-AzureRmADAppCredential -Password $SecureStringPassword
 ```
 
-Gets the application with object id '1f89cf81-0146-4f4e-beae-2007d0668416' and pipes that to the New-AzureRmADAppCredential to create a new application credential for that application with the given password.
+Gets the application with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the New-AzureRmADAppCredential to create a new application credential for that application with the given password.
 
 ## PARAMETERS
 

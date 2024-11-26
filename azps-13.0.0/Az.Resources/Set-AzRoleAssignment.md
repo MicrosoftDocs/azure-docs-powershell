@@ -52,7 +52,7 @@ $ConditionVersion = "2.0"
   $Description = "This is a new role assignment for John"
   $Condition = "@Resource[Microsoft.Storage/storageAccounts/blobServices/containers/blobs:Path] StringEqualsIgnoreCase 'foo_storage_container'"
 
-  $roleAssignment = Get-AzRoleAssignment -Scope "/subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/contoso_rg" -PrincipalId "0c0f6cdc-90dd-4664-83c0-a0d986c4c604"
+  $roleAssignment = Get-AzRoleAssignment -Scope "/subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/contoso_rg" -PrincipalId "00001111-aaaa-2222-bbbb-3333cccc4444"
   $roleAssignment.Description = $Description
   $roleAssignment.Condition = $Condition
   $roleAssignment.ConditionVersion = $ConditionVersion
@@ -68,8 +68,8 @@ RoleAssignmentId   : /providers/Microsoft.Management/managementGroups/1273adef-0
   DisplayName        : John Doe
   SignInName         : John.Doe@Contoso.com
   RoleDefinitionName : Owner
-  RoleDefinitionId   : 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
-  ObjectId           : 0c0f6cdc-90dd-4664-83c0-a0d986c4c604
+  RoleDefinitionId   : 00001111-aaaa-2222-bbbb-3333cccc4444
+  ObjectId           : 00001111-aaaa-2222-bbbb-3333cccc4444
   ObjectType         : User
   CanDelegate        : False
   Description        : This is a new role assignment for John
@@ -92,8 +92,8 @@ RoleAssignmentId   : /providers/Microsoft.Management/managementGroups/1273adef-0
   DisplayName        : John Doe
   SignInName         : John.Doe@Contoso.com
   RoleDefinitionName : Owner
-  RoleDefinitionId   : 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
-  ObjectId           : 0c0f6cdc-90dd-4664-83c0-a0d986c4c604
+  RoleDefinitionId   : 00001111-aaaa-2222-bbbb-3333cccc4444
+  ObjectId           : 00001111-aaaa-2222-bbbb-3333cccc4444
   ObjectType         : User
   CanDelegate        : False
   Description        : This is a new role assignment for John

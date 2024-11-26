@@ -57,7 +57,7 @@ CreationTimeInUtc            : 1/23/2024 6:47:43 AM
 Description                  : my storage task
 ElseOperation                : 
 Enabled                      : True
-Id                           : /subscriptions/11111111-2222-3333-4444-123456789101/resourceGroups/group001/providers/Microsoft.StorageActions/storageTasks/mytask1
+Id                           : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/group001/providers/Microsoft.StorageActions/storageTasks/mytask1
 IdentityPrincipalId          : 
 IdentityTenantId             : 
 IdentityType                 : None
@@ -108,12 +108,12 @@ ElseOperation                : {{
                                  "onFailure": "break"
                                }}
 Enabled                      : True
-Id                           : /subscriptions/11111111-2222-3333-4444-123456789101/resourceGroups/group001/providers/Microsoft.StorageActions/storageTasks/mytask2
+Id                           : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/group001/providers/Microsoft.StorageActions/storageTasks/mytask2
 IdentityPrincipalId          : 
-IdentityTenantId             : 11111111-2222-3333-4444-123456789101
+IdentityTenantId             : 00001111-aaaa-2222-bbbb-3333cccc4444
 IdentityType                 : UserAssigned
 IdentityUserAssignedIdentity : {
-                                 "/subscriptions/11111111-2222-3333-4444-123456789101/resourcegroups/group001/providers/Microsoft.ManagedIdentity/userAssignedI 
+                                 "/subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourcegroups/group001/providers/Microsoft.ManagedIdentity/userAssignedI 
                                dentities/testUserAssignedMI": {
                                  }
                                }
@@ -162,9 +162,9 @@ ElseOperation                : {{
                                  "onFailure": "break"
                                }}
 Enabled                      : True
-Id                           : /subscriptions/11111111-2222-3333-4444-123456789101/resourceGroups/group001/providers/Microsoft.StorageActions/storageTasks/mytask3
+Id                           : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/group001/providers/Microsoft.StorageActions/storageTasks/mytask3
 IdentityPrincipalId          : 00001111-aaaa-2222-bbbb-3333cccc4444
-IdentityTenantId             : 11111111-2222-3333-4444-123456789101
+IdentityTenantId             : 00001111-aaaa-2222-bbbb-3333cccc4444
 IdentityType                 : SystemAssigned
 IdentityUserAssignedIdentity : {
                                }
