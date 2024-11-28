@@ -179,12 +179,12 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  All Principals
                           ObjectType:   SystemDefined
-                          ObjectId:     00001111-aaaa-2222-bbbb-3333cccc4444
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           }
 ExcludePrincipals       : {
                           DisplayName:  testuser
                           ObjectType:   User
-                          ObjectId:     00001111-aaaa-2222-bbbb-3333cccc4444
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           }
 IsSystemProtected       : True
 
@@ -200,11 +200,11 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  testuser
                           ObjectType:   User
-                          ObjectId:     00001111-aaaa-2222-bbbb-3333cccc4444
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           ,
                           DisplayName:  PowershellTestingApp
                           ObjectType:   ServicePrincipal
-                          ObjectId:     00001111-aaaa-2222-bbbb-3333cccc4444
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
@@ -231,7 +231,7 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  john.doe
                           ObjectType:   User
-                          ObjectId:     00001111-aaaa-2222-bbbb-3333cccc4444
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
@@ -248,11 +248,11 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  john.doe
                           ObjectType:   User
-                          ObjectId:     00001111-aaaa-2222-bbbb-3333cccc4444
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           ,
                           DisplayName:  PowershellTestingApp
                           ObjectType:   ServicePrincipal
-                          ObjectId:     00001111-aaaa-2222-bbbb-3333cccc4444
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
@@ -279,7 +279,7 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  TestApp
                           ObjectType:   ServicePrincipal
-                          ObjectId:     00001111-aaaa-2222-bbbb-3333cccc4444
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
@@ -296,11 +296,11 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  testuser
                           ObjectType:   User
-                          ObjectId:     00001111-aaaa-2222-bbbb-3333cccc4444
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           ,
                           DisplayName:  TestApp
                           ObjectType:   ServicePrincipal
-                          ObjectId:     00001111-aaaa-2222-bbbb-3333cccc4444
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
@@ -327,7 +327,7 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  testuser
                           ObjectType:   User
-                          ObjectId:     00001111-aaaa-2222-bbbb-3333cccc4444
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
@@ -344,11 +344,11 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  testuser
                           ObjectType:   User
-                          ObjectId:     00001111-aaaa-2222-bbbb-3333cccc4444
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           ,
                           DisplayName:  TestApp
                           ObjectType:   ServicePrincipal
-                          ObjectId:     00001111-aaaa-2222-bbbb-3333cccc4444
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
