@@ -48,14 +48,14 @@ Get the specified network interface in a cloud service.
 
 ### Example 1: Get network interfaces by a cloud service name
 ```powershell
-Get-AzCloudServiceNetworkInterface -ResourceGroupName "BRGThree" -CloudServiceName BService -SubscriptionId 1133e0eb-b53c-1234-b478-2eac8f04afca
+Get-AzCloudServiceNetworkInterface -ResourceGroupName "BRGThree" -CloudServiceName BService -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 Gets all the network interfaces for a given cloud service name.
 
 ### Example 2: Get network interfaces by a cloud service object
 ```powershell
-$cs = Get-AzCloudService -ResourceGroupName "BRGThree" -CloudServiceName BService -SubscriptionId 1133e0eb-b53c-1234-b478-2eac8f04afca
+$cs = Get-AzCloudService -ResourceGroupName "BRGThree" -CloudServiceName BService -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 Get-AzCloudServiceNetworkInterface -InputObject $cs
 ```
 
