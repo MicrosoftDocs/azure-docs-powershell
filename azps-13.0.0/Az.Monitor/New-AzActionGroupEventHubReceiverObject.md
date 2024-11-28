@@ -27,15 +27,15 @@ Create an in-memory object for EventHubReceiver.
 
 ### Example 1: create action group event hub receiver
 ```powershell
-New-AzActionGroupEventHubReceiverObject -EventHubName "testEventHub" -EventHubNameSpace "testEventHubNameSpace" -Name "sample eventhub" -SubscriptionId "187f412d-1758-44d9-b052-169e2564721d" -TenantId "00001111-aaaa-2222-bbbb-3333cccc4444"
+New-AzActionGroupEventHubReceiverObject -EventHubName "testEventHub" -EventHubNameSpace "testEventHubNameSpace" -Name "sample eventhub" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -TenantId "aaaabbbb-0000-cccc-1111-dddd2222eeee"
 ```
 
 ```output
 EventHubName         : testEventHub
 EventHubNameSpace    : testEventHubNameSpace
 Name                 : sample eventhub
-SubscriptionId       : 187f412d-1758-44d9-b052-169e2564721d
-TenantId             : 00001111-aaaa-2222-bbbb-3333cccc4444
+SubscriptionId       : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+TenantId             : aaaabbbb-0000-cccc-1111-dddd2222eeee
 UseCommonAlertSchema :
 ```
 
@@ -43,14 +43,14 @@ This command creates action group event hub receiver object.
 
 ### Example 2: create another action group event hub receiver
 ```powershell
-New-AzActionGroupEventHubReceiverObject -EventHubName "testEventHub" -EventHubNameSpace "actiongrouptest" -Name "sample eventhub" -SubscriptionId 9e223dbe-3399-4e19-88eb-0975f02ac87f
+New-AzActionGroupEventHubReceiverObject -EventHubName "testEventHub" -EventHubNameSpace "actiongrouptest" -Name "sample eventhub" -SubscriptionId bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f
 ```
 
 ```output
 EventHubName         : testEventHub
 EventHubNameSpace    : actiongrouptest
 Name                 : sample eventhub
-SubscriptionId       : 9e223dbe-3399-4e19-88eb-0975f02ac87f
+SubscriptionId       : bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f
 TenantId             : 
 UseCommonAlertSchema :
 ```

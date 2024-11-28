@@ -42,14 +42,14 @@ Lists the metric values for multiple resources.
 $endpoint = 'https://eastus.metrics.monitor.azure.com'
 $start = "2023-12-06T07:00:00.000Z"
 $end = "2023-12-06T08:00:00.000Z"
-Get-AzMetricsBatch -Endpoint $endpoint -Name 'ingress','egress' -Namespace "Microsoft.Storage/storageAccounts" -EndTime $end -StartTime $start -ResourceId /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/joyer-monitor/providers/Microsoft.Storage/storageAccounts/psmetric01
+Get-AzMetricsBatch -Endpoint $endpoint -Name 'ingress','egress' -Namespace "Microsoft.Storage/storageAccounts" -EndTime $end -StartTime $start -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/joyer-monitor/providers/Microsoft.Storage/storageAccounts/psmetric01
 ```
 
 ```output
 Endtime        : 2023-12-06T08:00:00Z
 Interval       : 00:01:00a
 Namespace      : Microsoft.Storage/storageAccounts
-Resourceid     : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/joyer-monitor/providers/Microsoft.Storage/storageAccounts/psmetric01
+Resourceid     : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/joyer-monitor/providers/Microsoft.Storage/storageAccounts/psmetric01
 Resourceregion : eastus
 Starttime      : 2023-12-06T07:00:00Z
 Value          : {{
@@ -57,7 +57,7 @@ Value          : {{
                      "value": "Ingress",
                      "localizedValue": "Ingress"
                    },
-                   "id": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/joyer-monitor/providers/Microsoft.Storage/storageAccounts/psmetric01/providers/Microsoft.Insigh 
+                   "id": "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/joyer-monitor/providers/Microsoft.Storage/storageAccounts/psmetric01/providers/Microsoft.Insigh 
                  ts/metrics/Ingress",
                    "type": "Microsoft.Insights/metrics",
                    "displayDescription": "The amount of ingress data, in bytes. This number includes ingress from an external client into Azure Storage as well as ingress within Azure.",   
@@ -315,7 +315,7 @@ Value          : {{
                      "value": "Egress",
                      "localizedValue": "Egress"
                    },
-                   "id": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/joyer-monitor/providers/Microsoft.Storage/storageAccounts/psmetric01/providers/Microsoft.Insigh 
+                   "id": "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/joyer-monitor/providers/Microsoft.Storage/storageAccounts/psmetric01/providers/Microsoft.Insigh 
                  ts/metrics/Egress",
                    "type": "Microsoft.Insights/metrics",
                    "displayDescription": "The amount of egress data. This number includes egress to external client from Azure Storage as well as egress within Azure. As a result, this     
