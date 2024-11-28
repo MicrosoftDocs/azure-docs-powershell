@@ -46,19 +46,19 @@ Create a StandbyVirtualMachinePoolResource
 New-AzStandbyVMPool `
 -Name testPool `
 -ResourceGroupName test-standbypool `
--SubscriptionId f8da6e30-a9d8-48ab-b05c-3f7fe482e13b `
+-SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e `
 -Location eastus `
--VMSSId /subscriptions/f8da6e30-a9d8-48ab-b05c-3f7fe482e13b/resourceGroups/test-standbypool/providers/Microsoft.Compute/virtualMachineScaleSets/test-vmss `
+-VMSSId /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-standbypool/providers/Microsoft.Compute/virtualMachineScaleSets/test-vmss `
 -MaxReadyCapacity 1 `
 -MinReadyCapacity 1 `
 -VMState Running
 ```
 
 ```output
-AttachedVirtualMachineScaleSetId  : /subscriptions/f8da6e30-a9d8-48ab-b05c-3f7fe482e13b/resourceGroups/test-standbypool/providers/Microsoft.Compute/virtualMachineScaleSets/test-vmss
+AttachedVirtualMachineScaleSetId  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-standbypool/providers/Microsoft.Compute/virtualMachineScaleSets/test-vmss
 ElasticityProfileMaxReadyCapacity : 1
 ElasticityProfileMinReadyCapacity : 1
-Id                                : /subscriptions/f8da6e30-a9d8-48ab-b05c-3f7fe482e13b/resourceGroups/test-standbypool/providers/Microsoft.StandbyPool/standbyVirtualMachinePools/testPool
+Id                                : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-standbypool/providers/Microsoft.StandbyPool/standbyVirtualMachinePools/testPool
 Location                          : eastus
 Name                              : testPool
 ProvisioningState                 : Succeeded
