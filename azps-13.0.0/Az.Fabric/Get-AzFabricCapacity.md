@@ -45,7 +45,7 @@ Get a FabricCapacity
 
 ### Example 1: List Capacities by Resource Group
 ```powershell
-Get-AzFabricCapacity -ResourceGroupName "testrg" -SubscriptionId "548B7FB7-3B2A-4F46-BB02-66473F1FC22C"
+Get-AzFabricCapacity -ResourceGroupName "testrg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -55,11 +55,11 @@ West Central US  azsdktest                                                      
 West Central US  azsdktest2                                                                                                                                                      testrg
 ```
 
-The above command lists all Fabric capacities within the resource group 'testrg' in the subscription '548B7FB7-3B2A-4F46-BB02-66473F1FC22C'
+The above command lists all Fabric capacities within the resource group 'testrg' in the subscription 'aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e'
 
 ### Example 2: List Capacities by Subscription
 ```powershell
-Get-AzFabricCapacity -SubscriptionId "548B7FB7-3B2A-4F46-BB02-66473F1FC22C"
+Get-AzFabricCapacity -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -70,16 +70,16 @@ West Central US  azsdktest2                                                     
 West Europe      azsdktest3                                                                                                                                                      testrg3
 ```
 
-The above command lists all Fabric capacities in the subscription '548B7FB7-3B2A-4F46-BB02-66473F1FC22C'.
+The above command lists all Fabric capacities in the subscription 'aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e'.
 
 ### Example 3: Get Capacity
 ```powershell
-Get-AzFabricCapacity -ResourceGroupName "testrg" -SubscriptionId "548B7FB7-3B2A-4F46-BB02-66473F1FC22C" -CapacityName "azsdktest"
+Get-AzFabricCapacity -ResourceGroupName "testrg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -CapacityName "azsdktest"
 ```
 
 ```output
 AdministrationMember         : {azsdktest@microsoft.com}
-Id                           : /subscriptions/548B7FB7-3B2A-4F46-BB02-66473F1FC22C/resourceGroups/testrg/providers/Microsoft.Fabric/capacities/azsdktest
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/testrg/providers/Microsoft.Fabric/capacities/azsdktest
 Location                     : West Central US
 Name                         : azsdktest
 ProvisioningState            : Succeeded
@@ -98,7 +98,7 @@ Tag                          : {
 Type                         : Microsoft.Fabric/capacities
 ```
 
-The above command retrieves the Fabric capacity named 'azsdktest' within the resource group 'testrg' in the subscription '548B7FB7-3B2A-4F46-BB02-66473F1FC22C'.
+The above command retrieves the Fabric capacity named 'azsdktest' within the resource group 'testrg' in the subscription 'aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e'.
 
 ## PARAMETERS
 
