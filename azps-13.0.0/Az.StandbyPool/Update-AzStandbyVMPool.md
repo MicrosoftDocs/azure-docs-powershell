@@ -51,17 +51,17 @@ Update a StandbyVirtualMachinePoolResource
 ### Example 1: Update standby virtual machine pool's max ready capacity.
 ```powershell
 Update-AzStandbyVMPool `
--SubscriptionId f8da6e30-a9d8-48ab-b05c-3f7fe482e13b `
+-SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e `
 -ResourceGroupName test-standbypool `
 -Name testPool `
 -MaxReadyCapacity 2
 ```
 
 ```output
-AttachedVirtualMachineScaleSetId  : /subscriptions/f8da6e30-a9d8-48ab-b05c-3f7fe482e13b/resourceGroups/test-standbypool/providers/Microsoft.Compute/virtualMachineScaleSets/test-vmss
+AttachedVirtualMachineScaleSetId  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-standbypool/providers/Microsoft.Compute/virtualMachineScaleSets/test-vmss
 ElasticityProfileMaxReadyCapacity : 2
 ElasticityProfileMinReadyCapacity : 2
-Id                                : /subscriptions/f8da6e30-a9d8-48ab-b05c-3f7fe482e13b/resourceGroups/test-standbypool/providers/Microsoft.StandbyPool/standbyVirtualMachinePools/testPool
+Id                                : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-standbypool/providers/Microsoft.StandbyPool/standbyVirtualMachinePools/testPool
 Location                          : eastus
 Name                              : testPool
 ProvisioningState                 : Succeeded
