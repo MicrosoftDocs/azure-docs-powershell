@@ -39,15 +39,15 @@ Assign a blueprint definition to a subscription.
 ```powershell
 $rg = @{ResourceGroup=@{name='storage_rg';location='eastus'}}
 $params = @{applytaganditsdefaultvalue_tagName="Department_Cost_Center"; applytaganditsdefaultvalue_tagValue="Contoso/RnD/Dev/986754"}
-$blueprintObject =  Get-AzBlueprint -SubscriptionId "00000000-1111-0000-1111-000000000000" -Name "myBlueprintName"
-$secureString = @{mySecureStringParam=@{keyVaultId='/subscriptions/00000000-1111-0000-1111-000000000000/rsourcegroups/myResourceGroup/providers/Microsoft.Keyvault/Vaults/myKeyVault';secretName='mySecret';secretVersion='1.0'}}
-New-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId "00000000-1111-0000-1111-000000000000" -Location "West US" -ResourceGroupParameter $rg -Parameter $params -SecureStringParameter $secureString
+$blueprintObject =  Get-AzBlueprint -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Name "myBlueprintName"
+$secureString = @{mySecureStringParam=@{keyVaultId='/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/rsourcegroups/myResourceGroup/providers/Microsoft.Keyvault/Vaults/myKeyVault';secretName='mySecret';secretVersion='1.0'}}
+New-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Location "West US" -ResourceGroupParameter $rg -Parameter $params -SecureStringParameter $secureString
 ```
 
 ```output
 Name              : myAssignment
-Id                : /subscriptions/00000000-1111-0000-1111-000000000000/providers/Microsoft.Blueprint/blueprintAssignments/myAssignment
-Scope             : /subscriptions/00000000-1111-0000-1111-000000000000
+Id                : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Blueprint/blueprintAssignments/myAssignment
+Scope             : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 LastModified      : 2019-01-08
 LockMode          : None
 ProvisioningState : Creating
@@ -59,28 +59,28 @@ Create a new blueprint assignment of the blueprint definition `$blueprintObject`
 
 ### Example 2
 ```powershell
-New-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId 00000000-1111-0000-1111-000000000000 -Location "West US" -Parameter @{P1="v1"; P2="v2"} -Lock AllResourcesReadOnly
+New-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e -Location "West US" -Parameter @{P1="v1"; P2="v2"} -Lock AllResourcesReadOnly
 ```
 
 Create a new blueprint assignment of the blueprint definition `$blueprintObject` within the specified subscription using the defined parameter and resource group dictionary and configuring resource locking to **AllResources**. Defaults to using system-assigned identity.  The location defines the region for creating the managed identity.
 
 ### Example 3
 ```powershell
-New-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId 00000000-1111-0000-1111-000000000000 -Location "West US" -Parameter @{P1="v1"; P2="v2"} -UserAssignedIdentity "/subscriptions/00000000-1111-0000-1111-000000000000/resourceGroups/my-resource-group/providers/Microsoft.ManagedIdentity/userAssignedIdentities/my-user-defined-identity"
+New-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e -Location "West US" -Parameter @{P1="v1"; P2="v2"} -UserAssignedIdentity "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/my-resource-group/providers/Microsoft.ManagedIdentity/userAssignedIdentities/my-user-defined-identity"
 ```
 
 Create a new blueprint assignment of the blueprint definition `$blueprintObject` within the specified subscription using the defined parameter and resource group dictionary using the specified user-assigned identity id.
 
 ### Example 4
 ```powershell
-$blueprintObject =  Get-AzBlueprint -SubscriptionId "00000000-1111-0000-1111-000000000000" -Name "myBlueprintName"
-New-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId "00000000-1111-0000-1111-000000000000" -AssignmentFile C:\myAssignmentfile.json
+$blueprintObject =  Get-AzBlueprint -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Name "myBlueprintName"
+New-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -AssignmentFile C:\myAssignmentfile.json
 ```
 
 ```output
 Name              : myAssignment
-Id                : /subscriptions/00000000-1111-0000-1111-000000000000/providers/Microsoft.Blueprint/blueprintAssignments/myAssignment
-Scope             : /subscriptions/00000000-1111-0000-1111-000000000000
+Id                : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Blueprint/blueprintAssignments/myAssignment
+Scope             : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 LastModified      : 2019-01-08
 LockMode          : None
 ProvisioningState : Creating
@@ -93,7 +93,7 @@ Create a blueprint assignment through an assignment file. The format of the assi
 ### Example 5
 ```powershell
 $blueprintObject =  Get-AzBlueprint -SubscriptionId "myManagementGroup" -Name "myBlueprintName"
-New-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -ManagementGroupId "myManagementGroup" -SubscriptionId 00000000-1111-0000-1111-000000000000 -Location "West US" -Parameter @{P1="v1"; P2="v2"}
+New-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -ManagementGroupId "myManagementGroup" -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e -Location "West US" -Parameter @{P1="v1"; P2="v2"}
 ```
 
 Create a new blueprint assignment of the blueprint definition `$blueprintObject` targeting the specified subscription within the specified management group using the defined parameter.
