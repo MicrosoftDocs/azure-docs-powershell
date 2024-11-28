@@ -63,7 +63,7 @@ This cmdlet starts a managed dedicated integration runtime named 'test-dedicated
 
 ### Example 3
 ```powershell
-Start-AzSynapseIntegrationRuntime -ResourceId '/subscriptions/0000abcd-1a1b-12ab-1234-0000abcd00aa/resourceGroups/Contosorg/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/integrationruntimes/test-dedicated-ir'
+Start-AzSynapseIntegrationRuntime -ResourceId '/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Contosorg/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/integrationruntimes/test-dedicated-ir'
 ```
 
 This cmdlet starts a managed dedicated integration runtime using ResourceId in workspace ContosoWorkspace.
