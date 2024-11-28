@@ -44,26 +44,26 @@ To update the credentials associated with this application, please use the New-A
 ### Example 1 - Update the display name of an application
 
 ```
-PS C:\> Update-AzADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -DisplayName MyNewDisplayName
+PS C:\> Update-AzADApplication -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -DisplayName MyNewDisplayName
 ```
 
-Updates the display name of the application with object id '00001111-aaaa-2222-bbbb-3333cccc4444' to be 'MyNewDisplayName'.
+Updates the display name of the application with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' to be 'MyNewDisplayName'.
 
 ### Example 2 - Update all properties of an application
 
 ```
-PS C:\> Update-AzADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -DisplayName MyNewDisplayName -HomePage https://www.microsoft.com -IdentifierUris "https://UpdateAppUri"
+PS C:\> Update-AzADApplication -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -DisplayName MyNewDisplayName -HomePage https://www.microsoft.com -IdentifierUris "https://UpdateAppUri"
 ```
 
-Updates the properties of an application with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
+Updates the properties of an application with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'.
 
 ### Example 3 - Update the display name of an application using piping
 
 ```
-PS C:\> Get-AzADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Update-AzADApplication -DisplayName MyNewDisplayName
+PS C:\> Get-AzADApplication -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Update-AzADApplication -DisplayName MyNewDisplayName
 ```
 
-Gets the application with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the Update-AzADApplication cmdlet to update the display name of the application to "MyNewDisplayName".
+Gets the application with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes that to the Update-AzADApplication cmdlet to update the display name of the application to "MyNewDisplayName".
 
 ## PARAMETERS
 

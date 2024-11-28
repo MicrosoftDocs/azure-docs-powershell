@@ -53,18 +53,18 @@ To update the properties associated with the underlying application, please use 
 ### Example 1 - Update the display name of a service principal
 
 ```
-PS C:\> Update-AzADServicePrincipal -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -DisplayName MyNewDisplayName
+PS C:\> Update-AzADServicePrincipal -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -DisplayName MyNewDisplayName
 ```
 
-Updates the display name of the service principal with object id '00001111-aaaa-2222-bbbb-3333cccc4444' to be 'MyNewDisplayName'.
+Updates the display name of the service principal with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' to be 'MyNewDisplayName'.
 
 ### Example 2 - Update the display name of a service principal using piping
 
 ```
-PS C:\> Get-AzADServicePrincipal -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Update-AzADServicePrincipal -DisplayName MyNewDisplayName
+PS C:\> Get-AzADServicePrincipal -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Update-AzADServicePrincipal -DisplayName MyNewDisplayName
 ```
 
-Gets the service principal with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the Update-AzADServicePrincipal cmdlet to update the display name of the service principal to "MyNewDisplayName".
+Gets the service principal with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes that to the Update-AzADServicePrincipal cmdlet to update the display name of the service principal to "MyNewDisplayName".
 
 ## PARAMETERS
 
