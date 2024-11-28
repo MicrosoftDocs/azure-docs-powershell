@@ -45,7 +45,7 @@ Get a OrganizationResource
 
 ### Example 1: Get Neon Organization Details
 ```powershell
-Get-AzNeonPostgresOrganization -SubscriptionId 5d9a6cc3-4e60-4b41-be79-d28f0a01074e
+Get-AzNeonPostgresOrganization -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
