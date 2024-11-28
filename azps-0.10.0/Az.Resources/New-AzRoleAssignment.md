@@ -121,7 +121,7 @@ PS C:\> Get-AzADGroup -SearchString "Christine Koch Team"
           -----------                    ----                           --------
           Christine Koch Team                                           00001111-aaaa-2222-bbbb-3333cccc4444
 
-PS C:\> New-AzRoleAssignment -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -RoleDefinitionName Contributor  -ResourceGroupName rg1
+PS C:\> New-AzRoleAssignment -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -RoleDefinitionName Contributor  -ResourceGroupName rg1
 ```
 
 Grant access to a security group
@@ -135,7 +135,7 @@ Grant access to a user at a resource (website)
 
 ### Example 4
 ```
-PS C:\> New-AzRoleAssignment -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -RoleDefinitionName "Virtual Machine Contributor" -ResourceName Devices-Engineering-ProjectRND -ResourceType Microsoft.Network/virtualNetworks/subnets -ParentResource virtualNetworks/VNET-EASTUS-01 -ResourceGroupName Network
+PS C:\> New-AzRoleAssignment -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -RoleDefinitionName "Virtual Machine Contributor" -ResourceName Devices-Engineering-ProjectRND -ResourceType Microsoft.Network/virtualNetworks/subnets -ParentResource virtualNetworks/VNET-EASTUS-01 -ResourceGroupName Network
 ```
 
 Grant access to a group at a nested resource (subnet)

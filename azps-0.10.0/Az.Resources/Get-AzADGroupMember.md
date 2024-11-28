@@ -44,7 +44,7 @@ Lists members of an AD group in the current tenant.
 PS C:\> Get-AzADGroupMember -GroupObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Lists members of the AD group with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
+Lists members of the AD group with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'.
 
 ### Example 2 - List members by AD group object id using paging
 
@@ -52,15 +52,15 @@ Lists members of the AD group with object id '00001111-aaaa-2222-bbbb-3333cccc44
 PS C:\> Get-AzADGroupMember -GroupObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -First 100
 ```
 
-Lists the first 100 members of the AD group with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
+Lists the first 100 members of the AD group with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'.
 
 ### Example 3 - List members by piping
 
 ```
-PS C:\> Get-AzADGroup -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Get-AzADGroupMember
+PS C:\> Get-AzADGroup -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Get-AzADGroupMember
 ```
 
-Gets the AD group with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes it to the Get-AzADGroupMember cmdlet to list all members in that group.
+Gets the AD group with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes it to the Get-AzADGroupMember cmdlet to list all members in that group.
 
 ## PARAMETERS
 
@@ -190,4 +190,3 @@ Parameters: GroupObject (ByValue)
 [Get-AzADUser](./Get-AzADUser.md)
 
 [Get-AzADServicePrincipal](./Get-AzADServicePrincipal.md)
-

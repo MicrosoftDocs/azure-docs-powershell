@@ -71,10 +71,10 @@ This command gets the policy set definition named VMPolicySetDefinition from the
 
 ### Example 3: Get policy set definition from subscription by name
 ```
-PS C:\> Get-AzPolicySetDefinition -Name 'VMPolicySetDefinition' -subscriptionId '3bf44b72-c631-427a-b8c8-53e2595398ca'
+PS C:\> Get-AzPolicySetDefinition -Name 'VMPolicySetDefinition' -subscriptionId 'aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e'
 ```
 
-This command gets the policy definition named VMPolicySetDefinition from the subscription with ID 3bf44b72-c631-427a-b8c8-53e2595398ca.
+This command gets the policy definition named VMPolicySetDefinition from the subscription with ID aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e.
 
 ### Example 4: Get all custom policy set definitions from management group
 ```

@@ -54,18 +54,18 @@ Returns a list of credentials associated with the service principal with SPN 'ht
 ### Example 2 - List credentials by object id
 
 ```
-PS C:\> Get-AzADSpCredential -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
+PS C:\> Get-AzADSpCredential -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ```
 
-Returns a list of credentials associated with the service principal with object id "00001111-aaaa-2222-bbbb-3333cccc4444".
+Returns a list of credentials associated with the service principal with object id "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb".
 
 ### Example 3 - List credentials by piping
 
 ```
-PS C:\> Get-AzADServicePrincipal -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Get-AzADSpCredential
+PS C:\> Get-AzADServicePrincipal -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Get-AzADSpCredential
 ```
 
-Gets the service principal with object id "00001111-aaaa-2222-bbbb-3333cccc4444" and pipes it to the Get-AzADSpCredential cmdlet to list all credentials for that service principal.
+Gets the service principal with object id "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" and pipes it to the Get-AzADSpCredential cmdlet to list all credentials for that service principal.
 
 ## PARAMETERS
 
@@ -169,4 +169,3 @@ Parameters: ServicePrincipalObject (ByValue)
 [Remove-AzADSpCredential](./Remove-AzADSpCredential.md)
 
 [Get-AzADServicePrincipal](./Get-AzADServicePrincipal.md)
-

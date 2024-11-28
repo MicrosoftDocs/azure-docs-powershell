@@ -85,10 +85,10 @@ Gets the application with identifier uri as "http://mySecretApp1".
 ### Example 4 - Get application by object id
 
 ```
-PS C:\> Get-AzADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
+PS C:\> Get-AzADApplication -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ```
 
-Gets the application with the object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
+Gets the application with the object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'.
 
 ## PARAMETERS
 

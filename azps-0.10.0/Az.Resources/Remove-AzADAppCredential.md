@@ -49,10 +49,10 @@ The credential to be removed is identified by its key ID.
 ### Example 1 - Remove a specific credential from an application
 
 ```
-PS C:\> Remove-AzADAppCredential -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -KeyId 9044423a-60a3-45ac-9ab1-09534157ebb
+PS C:\> Remove-AzADAppCredential -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -KeyId 9044423a-60a3-45ac-9ab1-09534157ebb
 ```
 
-Removes the credential with key id '9044423a-60a3-45ac-9ab1-09534157ebb' from the application with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
+Removes the credential with key id '9044423a-60a3-45ac-9ab1-09534157ebb' from the application with object id 'ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0'.
 
 ### Example 2 - Remove all credentials from an application
 
@@ -65,10 +65,10 @@ Removes all credentials from the application with application id '00001111-aaaa-
 ### Example 3 - Remove all credentials using piping
 
 ```
-PS C:\> Get-AzADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Remove-AzADAppCredential
+PS C:\> Get-AzADApplication -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Remove-AzADAppCredential
 ```
 
-Gets the application with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the Remove-AzADAppCredential cmdlet and removes all credentials from that application.
+Gets the application with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes that to the Remove-AzADAppCredential cmdlet and removes all credentials from that application.
 
 ## PARAMETERS
 

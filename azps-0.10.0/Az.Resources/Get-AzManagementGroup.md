@@ -37,13 +37,13 @@ PS C:\> Get-AzManagementGroup
 Id          : /providers/Microsoft.Management/managementGroups/TestGroup
 Type        : /providers/Microsoft.Management/managementGroups
 Name        : TestGroup
-TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId    : aaaabbbb-0000-cccc-1111-dddd2222eeee
 DisplayName : TestGroupDisplayName
 
 Id          : /providers/Microsoft.Management/managementGroups/TestGroupChild
 Type        : /providers/Microsoft.Management/managementGroups
 Name        : TestGroupChild
-TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId    : aaaabbbb-0000-cccc-1111-dddd2222eeee
 DisplayName : TestGroupChildDisplayName
 ```
 
@@ -54,7 +54,7 @@ PS C:\> Get-AzManagementGroup -GroupName TestGroup
 Id                : /providers/Microsoft.Management/managementGroups/TestGroup
 Type              : /providers/Microsoft.Management/managementGroups
 Name              : TestGroup
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
 DisplayName       : TestGroupDisplayName
 UpdatedTime       : 2/1/2018 11:16:12 AM
 UpdatedBy         : 64360beb-ffb4-43a8-9314-01aa34db95a9
@@ -71,7 +71,7 @@ PS C:\> $response
 Id                : /providers/Microsoft.Management/managementGroups/TestGroupParent
 Type              : /providers/Microsoft.Management/managementGroups
 Name              : TestGroupParent
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
 DisplayName       : TestGroupParent
 UpdatedTime       : 2/1/2018 11:15:46 AM
 UpdatedBy         : 64360beb-ffb4-43a8-9314-01aa34db95a9
@@ -99,7 +99,7 @@ PS C:\> $response
 Id                : /providers/Microsoft.Management/managementGroups/TestGroupParent
 Type              : /providers/Microsoft.Management/managementGroups
 Name              : TestGroupParent
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
 DisplayName       : TestGroupParent
 UpdatedTime       : 2/1/2018 11:15:46 AM
 UpdatedBy         : 64360beb-ffb4-43a8-9314-01aa34db95a9
