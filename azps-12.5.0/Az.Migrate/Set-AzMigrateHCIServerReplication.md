@@ -41,10 +41,10 @@ EndTime                            : 1/1/1900 8:54:47 PM
 Error                              : {}
 Id                                 : /subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/jobs/f2d3430a-2977-419f-abd5-11d171e17f5e
 Name                               : f2d3430a-2977-419f-abd5-11d171e17f5e
-ObjectId                           : /subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/protectedItems/0ec082d5-6827-457a-bae2-f986e1b94555     
+ObjectId                           : /subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/protectedItems/aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb     
 ObjectInternalId                   : a8b5ee68-102c-5aae-9499-c57a475a8fd4
 ObjectInternalName                 : test_vm
-ObjectName                         : 0ec082d5-6827-457a-bae2-f986e1b94555
+ObjectName                         : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ObjectType                         : ProtectedItem
 ReplicationProviderId              : xxx-xxx-xxx
 SourceFabricProviderId             : b35da11c-d69e-4220-9a90-d81ed93ad2fc
@@ -85,10 +85,10 @@ EndTime                            : 1/1/1900 8:54:47 PM
 Error                              : {}
 Id                                 : /subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/jobs/f2d3430a-2977-419f-abd5-11d171e17f5e
 Name                               : f2d3430a-2977-419f-abd5-11d171e17f5e
-ObjectId                           : /subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/protectedItems/0ec082d5-6827-457a-bae2-f986e1b94555     
+ObjectId                           : /subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/protectedItems/aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb     
 ObjectInternalId                   : a8b5ee68-102c-5aae-9499-c57a475a8fd4
 ObjectInternalName                 : test_vm
-ObjectName                         : 0ec082d5-6827-457a-bae2-f986e1b94555
+ObjectName                         : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ObjectType                         : ProtectedItem
 ReplicationProviderId              : xxx-xxx-xxx
 SourceFabricProviderId             : b35da11c-d69e-4220-9a90-d81ed93ad2fc
