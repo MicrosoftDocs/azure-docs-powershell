@@ -32,9 +32,9 @@ Get-AzConfigurationAssignment -ResourceGroupName smdtestwestus2 -ResourceParentT
 ```
 
 ```output
-MaintenanceConfigurationId : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/ps1/providers/Microsoft.Maintenance/maintenanceConfigurations/ps2
+MaintenanceConfigurationId : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/ps1/providers/Microsoft.Maintenance/maintenanceConfigurations/ps2
 Id                         :
-/subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/smdtestwestus2/providers/Microsoft.Compute/hostGroups/smddhgwestus2/hosts/smddhwestus2/providers/Microsoft.Maintenance/configurationAssignments/ps2
+/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/smdtestwestus2/providers/Microsoft.Compute/hostGroups/smddhgwestus2/hosts/smddhwestus2/providers/Microsoft.Maintenance/configurationAssignments/ps2
 Name                       : ps2
 Type                       : Microsoft.Maintenance/configurationAssignments
 ```
@@ -47,8 +47,8 @@ Get-AzConfigurationAssignment -ResourceGroupName 'rgtestwestus2' -ProviderName M
 ```
 
 ```output
-MaintenanceConfigurationId : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/maintenanceconfigurations/providers/microsoft.maintenance/maintenanceconfigurations/dynamicfiltertag
-ResourceId                 : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/rgtestwestus2/providers/microsoft.hybridcompute/machines/laptop-abcdefg
+MaintenanceConfigurationId : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/maintenanceconfigurations/providers/microsoft.maintenance/maintenanceconfigurations/dynamicfiltertag
+ResourceId                 : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/rgtestwestus2/providers/microsoft.hybridcompute/machines/laptop-abcdefg
 Id                         : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa747/resourcegroups/rgtestwestus2/providers/Microsoft.HybridCompute/machines/LAPTOP-ABCDEFG/providers/Microsoft.Maintenance/configurationAssignments/pphsfbx2qur7k-azpolicy
 Name                       : pphsfbx2qur7k-azpolicy
 Type                       : Microsoft.Maintenance/configurationAssignments
@@ -62,8 +62,8 @@ Get-AzConfigurationAssignment -ResourceGroupName 'ArcMachines' -ProviderName Mic
 ```
 
 ```output
-MaintenanceConfigurationId : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/maintenanceconfigurations/providers/microsoft.maintenance/maintenanceconfigurations/dynamicfiltertag
-ResourceId                 : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/arcmachines/providers/microsoft.hybridcompute/machines/laptop-ivmi31g2
+MaintenanceConfigurationId : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/maintenanceconfigurations/providers/microsoft.maintenance/maintenanceconfigurations/dynamicfiltertag
+ResourceId                 : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/arcmachines/providers/microsoft.hybridcompute/machines/laptop-ivmi31g2
 Id                         : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa747/resourcegroups/arcmachines/providers/Microsoft.HybridCompute/machines/LAPTOP-IVMI31G2/providers/Microsoft.Maintenance/configurationAssignments/pphsfbx2qur7k-azpolicy
 Name                       : pphsfbx2qur7k-azpolicy
 Type                       : Microsoft.Maintenance/configurationAssignments
