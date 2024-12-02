@@ -27,17 +27,17 @@ The **New-AzDataLakeAnalyticsComputePolicy** creates the specified compute polic
 
 ### Example 1: Create a compute policy with only one rule
 ```powershell
-New-AzDataLakeAnalyticsComputePolicy -Account "contosoadla" -Name "myPolicy" -ObjectId 83cb7ad2-3523-4b82-b909-d478b0d8aea3 -ObjectType User -MaxAnalyticsUnitsPerJob 5
+New-AzDataLakeAnalyticsComputePolicy -Account "contosoadla" -Name "myPolicy" -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -ObjectType User -MaxAnalyticsUnitsPerJob 5
 ```
 
-This command creates a policy called "myPolicy" in account "contosoadla" for the user with id "83cb7ad2-3523-4b82-b909-d478b0d8aea3" that ensures they cannot submit any job with more than 5 analytics units.
+This command creates a policy called "myPolicy" in account "contosoadla" for the user with id "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" that ensures they cannot submit any job with more than 5 analytics units.
 
 ### Example 2: Create a compute policy with both rules set
 ```powershell
-New-AzDataLakeAnalyticsComputePolicy -Account "contosoadla" -Name "myPolicy" -ObjectId 83cb7ad2-3523-4b82-b909-d478b0d8aea3 -ObjectType User -MaxAnalyticsUnitsPerJob 5 -MinPriorityPerJob 100
+New-AzDataLakeAnalyticsComputePolicy -Account "contosoadla" -Name "myPolicy" -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -ObjectType User -MaxAnalyticsUnitsPerJob 5 -MinPriorityPerJob 100
 ```
 
-This command creates a policy called "myPolicy" in account "contosoadla" for the user with id "83cb7ad2-3523-4b82-b909-d478b0d8aea3" that ensures they cannot submit any job with more than 5 analytics units or with a priority lower than 100
+This command creates a policy called "myPolicy" in account "contosoadla" for the user with id "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" that ensures they cannot submit any job with more than 5 analytics units or with a priority lower than 100
 
 ## PARAMETERS
 
