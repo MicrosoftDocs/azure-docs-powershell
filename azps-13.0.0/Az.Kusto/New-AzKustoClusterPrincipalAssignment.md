@@ -29,7 +29,7 @@ Create a Kusto cluster principalAssignment.
 
 ### Example 1: Create a Kusto cluster principalAssignment
 ```powershell
-New-AzKustoClusterPrincipalAssignment -ResourceGroupName testrg -ClusterName testnewkustocluster -PrincipalAssignmentName kustoprincipal1 -PrincipalId "00001111-aaaa-2222-bbbb-3333cccc4444" -PrincipalType App -Role AllDatabasesAdmin
+New-AzKustoClusterPrincipalAssignment -ResourceGroupName testrg -ClusterName testnewkustocluster -PrincipalAssignmentName kustoprincipal1 -PrincipalId "aaaaaaaa-bbbb-cccc-1111-222222222222" -PrincipalType App -Role AllDatabasesAdmin
 ```
 
 ```output
