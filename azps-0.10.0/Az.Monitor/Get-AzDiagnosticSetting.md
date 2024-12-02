@@ -28,8 +28,8 @@ A time grain is the aggregation interval of a metric.
 
 ### Example 1: Get the status of the logging categories and time grains
 ```
-PS C:\>Get-AzDiagnosticSetting -ResourceId "/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/ResourceGroups/ContosoRG/providers/microsoft.keyvault/KeyVaults/ContosoKeyVault"
-StorageAccountId   : /subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/ResourceGroups/ContosoRG/providers/microsoft.storage/accounts/ContosoStorageAccount
+PS C:\>Get-AzDiagnosticSetting -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/ResourceGroups/ContosoRG/providers/microsoft.keyvault/KeyVaults/ContosoKeyVault"
+StorageAccountId   : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/ResourceGroups/ContosoRG/providers/microsoft.storage/accounts/ContosoStorageAccount
 StorageAccountName : ContosoStorageAccount001
 Metrics
 
@@ -38,7 +38,7 @@ Enabled  : True
 Category : AuditEvent
 ```
 
-This command gets the categories and time grains that are logged for an Azure Key Vault with a *ResourceId* of /subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/ResourceGroups/ContosoRG/providers/microsoft.keyvault/KeyVaults/ContosoKeyVault.
+This command gets the categories and time grains that are logged for an Azure Key Vault with a *ResourceId* of /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/ResourceGroups/ContosoRG/providers/microsoft.keyvault/KeyVaults/ContosoKeyVault.
 
 ## PARAMETERS
 

@@ -28,7 +28,7 @@ The **Get-AzAutoscaleSetting** cmdlet gets all Autoscale settings associated wit
 ### Example 1: Get Autoscale settings
 ```
 PS C:\>Get-AzAutoscaleSetting -ResourceGroup "Default-Web-EastUS" -DetailedOutput
-resourceId : /subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.
+resourceId : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.
              insights/autoscalesettings/DefaultServerFarm-Default-Web-EastUS
 Location   : East US
 Name       : DefaultServerFarm-Default-Web-EastUS
@@ -104,7 +104,7 @@ Cooldown   : 00:10:00
                                                 Direction  : Increase
 Type       : ChangeCount
 Value      : 1
-             TargetResourceId : /subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/
+             TargetResourceId : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/
              providers/microsoft.web/serverFarms/DefaultServerFarm
 Tags       : {[$type, Microsoft.WindowsAzure.Management.Common.Storage.CasePreservedDictionary,
              Microsoft.WindowsAzure.Management.Common.Storage], [hidden-link:/subscriptions/a93fb07c-6c93-40be-bf3b-4f0
@@ -117,7 +117,7 @@ This command gets the Autoscale settings assigned to the resource group Default-
 ### Example 2: Get an Autoscale setting by name
 ```
 PS C:\>Get-AzAutoscaleSetting -ResourceGroupName "Default-Web-EastUS" -Name "DefaultServerFarm-Default-Web-EastUS" -DetailedOutput
-resourceId : /subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.
+resourceId : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.
              insights/autoscalesettings/DefaultServerFarm-Default-Web-EastUS
 Location   : East US
 Name       : DefaultServerFarm-Default-Web-EastUS
@@ -192,7 +192,7 @@ Cooldown   : 00:10:00
 Direction  : Increase
 Type       : ChangeCount
 Value      : 1
-TargetResourceId : /subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/
+TargetResourceId : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/
              providers/microsoft.web/serverFarms/DefaultServerFarm
 Tags       : {[$type, Microsoft.WindowsAzure.Management.Common.Storage.CasePreservedDictionary,
              Microsoft.WindowsAzure.Management.Common.Storage], [hidden-link:/subscriptions/a93fb07c-6c93-40be-bf3b-4f0
@@ -284,5 +284,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AzAutoscaleSetting](./Add-AzAutoscaleSetting.md)
 
 [Remove-AzAutoscaleSetting](./Remove-AzAutoscaleSetting.md)
-
-
