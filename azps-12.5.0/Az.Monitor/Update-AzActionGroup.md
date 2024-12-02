@@ -65,7 +65,7 @@ EventHubReceiver          : {{
                               "eventHubNameSpace": "actiongrouptest",
                               "eventHubName": "testEventHub",
                               "useCommonAlertSchema": false,
-                              "tenantId": "00001111-aaaa-2222-bbbb-3333cccc4444",
+                              "tenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
                               "subscriptionId": "{subid}"
                             }}
 GroupShortName            : ag1
