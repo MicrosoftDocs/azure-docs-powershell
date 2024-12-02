@@ -50,13 +50,13 @@ We recommend that you provision a dedicated Microsoft Entra group as an administ
 
 ### Example 1: Provision an administrator group for a managed instance associated with resource group
 ```powershell
-Set-AzSqlInstanceActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -DisplayName "DBAs" -ObjectId "40b79501-b343-44ed-9ce7-da4c8cc7353b"
+Set-AzSqlInstanceActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -DisplayName "DBAs" -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
 ```
 
 ```output
 ResourceGroupName InstanceName      DisplayName ObjectId 
 ----------------- ----------------- ----------- -------- 
-ResourceGroup01   ManagedInstance01 DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b
+ResourceGroup01   ManagedInstance01 DBAs        aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ```
 
 This command provisions a Microsoft Entra administrator group named DBAs for the managed instance named ManagedInstance01.
@@ -64,26 +64,26 @@ This server is associated with resource group ResourceGroup01.
 
 ### Example 2: Provision an administrator user using managed instance object
 ```powershell
-Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" | Set-AzSqlInstanceActiveDirectoryAdministrator -DisplayName "David Chew" -ObjectId "11E95548-B179-4FE1-9AF4-ACA49D13ABB9"
+Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" | Set-AzSqlInstanceActiveDirectoryAdministrator -DisplayName "David Chew" -ObjectId "bbbbbbbb-1111-2222-3333-cccccccccccc"
 ```
 
 ```output
 ResourceGroupName InstanceName      DisplayName ObjectId 
 ----------------- ----------------- ----------- -------- 
-Resourcegroup01   ManagedInstance01 David Chew  11E95548-B179-4FE1-9AF4-ACA49D13ABB9
+Resourcegroup01   ManagedInstance01 David Chew  bbbbbbbb-1111-2222-3333-cccccccccccc
 ```
 
 This command provisions a Microsoft Entra user as an administrator from the managed instance object.
 
 ### Example 3: Provision an administrator using managed instance resource identifier
 ```powershell
-Get-AzSqlInstance -ResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01" | Set-AzSqlInstanceActiveDirectoryAdministrator -DisplayName "David Chew" -ObjectId "11E95548-B179-4FE1-9AF4-ACA49D13ABB9"
+Get-AzSqlInstance -ResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01" | Set-AzSqlInstanceActiveDirectoryAdministrator -DisplayName "David Chew" -ObjectId "bbbbbbbb-1111-2222-3333-cccccccccccc"
 ```
 
 ```output
 ResourceGroupName InstanceName      DisplayName ObjectId 
 ----------------- ----------------- ----------- -------- 
-Resourcegroup01   ManagedInstance01 David Chew  11E95548-B179-4FE1-9AF4-ACA49D13ABB9
+Resourcegroup01   ManagedInstance01 David Chew  bbbbbbbb-1111-2222-3333-cccccccccccc
 ```
 
 This command provisions a Microsoft Entra user as an administrator using managed instance resource identifier.
