@@ -53,7 +53,7 @@ Invoking from the management node
 
 ### Example 3:
 ```powershell
-Unregister-AzStackHCI -SubscriptionId "00001111-aaaa-2222-bbbb-3333cccc4444" -ArmAccessToken etyer..ere= -AccountId user1@corp1.com -ResourceName DemoHCICluster3 -ResourceGroupName DemoHCIRG -Confirm:$False
+Unregister-AzStackHCI -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ArmAccessToken etyer..ere= -AccountId user1@corp1.com -ResourceName DemoHCICluster3 -ResourceGroupName DemoHCIRG -Confirm:$False
 ```
 
 ```output
@@ -64,7 +64,7 @@ Invoking from WAC
 
 ### Example 4:
 ```powershell
-Unregister-AzStackHCI -SubscriptionId "00001111-aaaa-2222-bbbb-3333cccc4444" -ResourceName HciCluster1 -TenantId "c31c0dbb-ce27-4c78-ad26-a5f717c14557" -ResourceGroupName HciClusterRG -ArmAccessToken eerrer..ere= -AccountId user1@corp1.com -EnvironmentName AzureCloud -ComputerName node1hci -Credential Get-Credential
+Unregister-AzStackHCI -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ResourceName HciCluster1 -TenantId "aaaabbbb-0000-cccc-1111-dddd2222eeee" -ResourceGroupName HciClusterRG -ArmAccessToken eerrer..ere= -AccountId user1@corp1.com -EnvironmentName AzureCloud -ComputerName node1hci -Credential Get-Credential
 ```
 
 ```output
