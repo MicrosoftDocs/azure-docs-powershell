@@ -46,20 +46,20 @@ Get a StandbyContainerGroupPoolResource
 ### Example 1: Get a standby container group pool
 ```powershell
 Get-AzStandbyContainerGroupPool `
--SubscriptionId f8da6e30-a9d8-48ab-b05c-3f7fe482e13b `
+-SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e `
 -Name testPool `
 -ResourceGroupName test-standbypool
 ```
 
 ```output
-ContainerGroupProfileId           : /subscriptions/f8da6e30-a9d8-48ab-b05c-3f7fe482e13b/resourcegroups/test-standbypool/providers/Microsoft.ContainerInstance/containerGroupProfiles/testCG
+ContainerGroupProfileId           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/test-standbypool/providers/Microsoft.ContainerInstance/containerGroupProfiles/testCG
 ContainerGroupProfileRevision     : 1
 ContainerGroupPropertySubnetId    : {{
-                                      "id": "/subscriptions/f8da6e30-a9d8-48ab-b05c-3f7fe482e13b/resourceGroups/test-standbypool/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default"
+                                      "id": "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-standbypool/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/default"
                                     }}
 ElasticityProfileMaxReadyCapacity : 1
 ElasticityProfileRefillPolicy     : always
-Id                                : /subscriptions/f8da6e30-a9d8-48ab-b05c-3f7fe482e13b/resourceGroups/test-standbypool/providers/Microsoft.StandbyPool/standbyContainerGroupPools/testPool
+Id                                : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-standbypool/providers/Microsoft.StandbyPool/standbyContainerGroupPools/testPool
 Location                          : eastus
 Name                              : testPool
 ProvisioningState                 : Succeeded
