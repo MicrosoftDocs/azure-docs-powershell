@@ -29,7 +29,7 @@ Create a Kusto pool principalAssignment.
 
 ### Example 1: Create a Kusto pool principalAssignment
 ```powershell
-New-AzSynapseKustoPoolPrincipalAssignment -ResourceGroupName testrg -WorkspaceName testws -KustoPoolName testnewkustopool -PrincipalAssignmentName kustoprincipal -PrincipalId "00001111-aaaa-2222-bbbb-3333cccc4444" -PrincipalType App -Role AllDatabasesAdmin
+New-AzSynapseKustoPoolPrincipalAssignment -ResourceGroupName testrg -WorkspaceName testws -KustoPoolName testnewkustopool -PrincipalAssignmentName kustoprincipal -PrincipalId "aaaaaaaa-bbbb-cccc-1111-222222222222" -PrincipalType App -Role AllDatabasesAdmin
 ```
 
 ```output

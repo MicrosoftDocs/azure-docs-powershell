@@ -69,7 +69,7 @@ This command enables Microsoft Entra-only authentication for workspace ContosoWo
 
 ### Example 3
 ```powershell
-Enable-AzSynapseActiveDirectoryOnlyAuthentication -ResourceId /subscriptions/21686af7-58ec-4f4d-9c68-f431f4db4edd/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace
+Enable-AzSynapseActiveDirectoryOnlyAuthentication -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace
 ```
 
 ```output
