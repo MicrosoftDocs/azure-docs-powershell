@@ -34,7 +34,7 @@ Gets configuration values for Single Pane Of Glass for SAP monitor for the speci
 
 ### Example 1: Get information about a SAP landscape monitor
 ```powershell
-Get-AzWorkloadsSapLandscapeMonitor -MonitorName suha-0202-ams9 -ResourceGroupName suha-0802-rg1 -SubscriptionId 49d64d54-e966-4c46-a868-1999802b762c
+Get-AzWorkloadsSapLandscapeMonitor -MonitorName suha-0202-ams9 -ResourceGroupName suha-0802-rg1 -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
@@ -46,7 +46,7 @@ GroupingSapApplication       : {{
                                  "name": "ERP1",
                                  "topSid": [ "SID1", "SID2" ]
                                }}
-Id                           : /subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/suha-0802-rg1/providers/Microsoft.
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/suha-0802-rg1/providers/Microsoft.
                                Workloads/monitors/suha-0202-ams9/sapLandscapeMonitor/default
 Name                         : default
 ProvisioningState            : Succeeded
@@ -69,7 +69,7 @@ Gets information about a specific SAP landscape monitor
 
 ### Example 2: Get information about a SAP landscape monitor by Id
 ```powershell
-Get-AzWorkloadsSapLandscapeMonitor -InputObject "/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/suha-0/providers/Microsoft.Workloads/monitors/suha-0202-ams9/sapLandscapeMonitor/default"
+Get-AzWorkloadsSapLandscapeMonitor -InputObject "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/suha-0/providers/Microsoft.Workloads/monitors/suha-0202-ams9/sapLandscapeMonitor/default"
 ```
 
 ```output
@@ -81,7 +81,7 @@ GroupingSapApplication       : {{
                                  "name": "ERP1",
                                  "topSid": [ "SID1", "SID2" ]
                                }}
-Id                           : /subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/suha-0802-rg1/providers/Microsoft.
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/suha-0802-rg1/providers/Microsoft.
                                Workloads/monitors/suha-0202-ams9/sapLandscapeMonitor/default
 Name                         : default
 ProvisioningState            : Succeeded
