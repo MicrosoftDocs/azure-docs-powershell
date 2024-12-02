@@ -41,7 +41,7 @@ Gets a private endpoint connection.
 
 ### Example 1: List all Kusto PrivateEndpointConnection in a cluster by name
 ```powershell
-Get-AzKustoPrivateEndpointConnection -ClusterName "mycluster" -ResourceGroupName "testrg" -SubscriptionId "12345678-1234-1234-1234-123456789098"
+Get-AzKustoPrivateEndpointConnection -ClusterName "mycluster" -ResourceGroupName "testrg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -55,7 +55,7 @@ The above command returns all Kusto PrivateEndpointConnection in the cluster "my
 
 ### Example 2: Get a specific Kusto PrivateEndpointConnection by name
 ```powershell
-Get-AzKustoPrivateEndpointConnection -ClusterName "mycluster" -ResourceGroupName "testrg" -SubscriptionId "12345678-1234-1234-1234-123456789098" -Name "privateEndpointConnectionName"
+Get-AzKustoPrivateEndpointConnection -ClusterName "mycluster" -ResourceGroupName "testrg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Name "privateEndpointConnectionName"
 ```
 
 ```output
