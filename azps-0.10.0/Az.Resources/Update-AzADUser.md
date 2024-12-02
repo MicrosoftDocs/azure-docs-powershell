@@ -51,10 +51,10 @@ For more information: https://msdn.microsoft.com/en-us/library/azure/ad/graph/ap
 ### Example 1 - Update the display name of a user using object id
 
 ```
-PS C:\> Update-AzADUser -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -DisplayName MyNewDisplayName
+PS C:\> Update-AzADUser -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -DisplayName MyNewDisplayName
 ```
 
-Updates the display name of the user with object id '00001111-aaaa-2222-bbbb-3333cccc4444' to be 'MyNewDisplayName'.
+Updates the display name of the user with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' to be 'MyNewDisplayName'.
 
 ### Example 2 - Update the display name of a user using user principal name
 
@@ -67,10 +67,10 @@ Updates the display name of the user with user principal name 'foo@domain.com' t
 ### Example 3 - Update the display name of a user using piping
 
 ```
-PS C:\> Get-AzADUser -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Update-AzADUser -DisplayName MyNewDisplayName
+PS C:\> Get-AzADUser -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Update-AzADUser -DisplayName MyNewDisplayName
 ```
 
-Gets the user with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the Update-AzADUser cmdlet to update the display name of that user to 'MyNewDisplayName'.
+Gets the user with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes that to the Update-AzADUser cmdlet to update the display name of that user to 'MyNewDisplayName'.
 
 ## PARAMETERS
 

@@ -61,18 +61,18 @@ Removes the user with user principal name "foo@domain.com" from the tenant.
 ### Example 2 - Remove a user by object id
 
 ```
-PS C:\> Remove-AzADUser -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
+PS C:\> Remove-AzADUser -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ```
 
-Removes the user with object id '00001111-aaaa-2222-bbbb-3333cccc4444' from the tenant.
+Removes the user with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' from the tenant.
 
 ### Example 3 - Remove a user by piping
 
 ```
-PS C:\> Get-AzADUser -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Remove-AzADUser
+PS C:\> Get-AzADUser -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Remove-AzADUser
 ```
 
-Gets the user with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the Remove-AzADUser cmdlet to remove the user from the tenant.
+Gets the user with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes that to the Remove-AzADUser cmdlet to remove the user from the tenant.
 
 ## PARAMETERS
 
@@ -250,5 +250,3 @@ Parameters: InputObject (ByValue)
 [New-AzADUser](./New-AzADUser.md)
 
 [Get-AzADUser](./Get-AzADUser.md)
-
-
