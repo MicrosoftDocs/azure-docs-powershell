@@ -56,8 +56,8 @@ PS C:\> Get-AzIotHubRoutingEndpoint -ResourceGroupName "myresourcegroup" -Name "
 
 ResourceGroupName SubscriptionId                       EndpointName
 ----------------- --------------                       ------------
-resourcegroup1    91d12343-a3de-345d-b2ea-135792468abc E1
-resourcegroup1    91d12343-a3de-345d-b2ea-135792468abc E2
+resourcegroup1    aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e E1
+resourcegroup1    aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e E2
 ```
 
 Get all the endpoints of type EventHub from "myiothub" IoT Hub.
@@ -67,7 +67,7 @@ Get all the endpoints of type EventHub from "myiothub" IoT Hub.
 PS C:\> Get-AzIotHubRoutingEndpoint -ResourceGroupName "myresourcegroup" -Name "myiothub" -EndpointType EventHub
 
 ResourceGroupName : resourcegroup1
-SubscriptionId    : 91d12343-a3de-345d-b2ea-135792468abc
+SubscriptionId    : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 EndpointName      : E1
 ConnectionString  : Endpoint=sb://myeventhub1.servicebus.windows.net:5671/;SharedAccessKeyName=iothubroutes_myeventhub1;SharedAccessKey=****;EntityPath=event1
 ```
@@ -79,7 +79,7 @@ Get all the endpoints of type EventHub from "myiothub" IoT Hub.
 PS C:\> Get-AzIotHubRoutingEndpoint -ResourceGroupName "myresourcegroup" -Name "myiothub" -EndpointName E1
 
 ResourceGroupName : resourcegroup1
-SubscriptionId    : 91d12343-a3de-345d-b2ea-135792468abc
+SubscriptionId    : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 EndpointName      : E1
 ConnectionString  : Endpoint=sb://myeventhub1.servicebus.windows.net:5671/;SharedAccessKeyName=iothubroutes_myeventhub1;SharedAccessKey=****;EntityPath=event1
 ```
