@@ -26,7 +26,7 @@ The **New-AzManagementGroupSubscription** cmdlet adds a Subscription to a Manage
 
 ### Example 1: Add Subscription to a Management Group
 ```
-PS C:\> New-AzManagementGroupSubscription -GroupName "TestGroup" -SubscriptionId 2120692d-35c3-44c8-81f5-631fa7351726
+PS C:\> New-AzManagementGroupSubscription -GroupName "TestGroup" -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ## PARAMETERS

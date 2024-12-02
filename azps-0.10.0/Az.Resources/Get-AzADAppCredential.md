@@ -47,18 +47,18 @@ This command will retrieve all of the credential properties (but not the credent
 ### Example 1 - Get application credentials by object id
 
 ```
-PS C:\> Get-AzADAppCredential -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
+PS C:\> Get-AzADAppCredential -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ```
 
-Returns a list of credentials associated with the application having object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
+Returns a list of credentials associated with the application having object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'.
 
 ### Example 2 - Get application credentials by piping
 
 ```
-PS C:\> Get-AzADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Get-AzADAppCredential
+PS C:\> Get-AzADApplication -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Get-AzADAppCredential
 ```
 
-Gets the application with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes it to the Get-AzADAppCredential cmdlet to list all of the credentials for that application.
+Gets the application with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes it to the Get-AzADAppCredential cmdlet to list all of the credentials for that application.
 
 ## PARAMETERS
 
@@ -162,4 +162,3 @@ Parameters: ApplicationObject (ByValue)
 [Remove-AzADAppCredential](./Remove-AzADAppCredential.md)
 
 [Get-AzADApplication](./Get-AzADApplication.md)
-

@@ -209,10 +209,10 @@ Creates a new AD service principal for the application with application id '0000
 ### Example 6 - Create a new AD service principal using piping
 
 ```
-PS C:\> Get-AzADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | New-AzADServicePrincipal
+PS C:\> Get-AzADApplication -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | New-AzADServicePrincipal
 ```
 
-Gets the application with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the New-AzADServicePrincipal cmdlet to create a new AD service principal for that application.
+Gets the application with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes that to the New-AzADServicePrincipal cmdlet to create a new AD service principal for that application.
 
 ## PARAMETERS
 

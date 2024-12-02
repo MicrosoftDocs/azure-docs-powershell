@@ -61,15 +61,15 @@ Adds a user to an existing AD group.
 PS C:\> Add-AzADGroupMember -MemberObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -TargetGroupObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Adds the user with object id '00001111-aaaa-2222-bbbb-3333cccc4444' to the group with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
+Adds the user with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' to the group with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'.
 
 ### Example 2 - Add a user to a group by piping
 
 ```
-PS C:\> Get-AzADGroup -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Add-AzADGroupMember -MemberObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
+PS C:\> Get-AzADGroup -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Add-AzADGroupMember -MemberObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Gets the group with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes it to the Add-AzADGroupMember cmdlet to add the user to that group.
+Gets the group with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes it to the Add-AzADGroupMember cmdlet to add the user to that group.
 
 ## PARAMETERS
 

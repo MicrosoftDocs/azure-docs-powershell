@@ -74,10 +74,10 @@ The application is identified by supplying either the application object id or a
 
 ```
 PS C:\> $SecureStringPassword = ConvertTo-SecureString -String "password" -AsPlainText -Force
-PS C:\> New-AzADAppCredential -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -Password $SecureStringPassword
+PS C:\> New-AzADAppCredential -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -Password $SecureStringPassword
 ```
 
-A new password credential is added to the existing appplication with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
+A new password credential is added to the existing appplication with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'.
 
 ### Example 2 - Create a new application credential using a certificate
 
@@ -95,10 +95,10 @@ The supplied base64 encoded public X509 certificate ("myapp.cer") is added to th
 
 ```
 PS C:\> $SecureStringPassword = ConvertTo-SecureString -String "password" -AsPlainText -Force
-PS C:\> Get-AzADApplication -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | New-AzADAppCredential -Password $SecureStringPassword
+PS C:\> Get-AzADApplication -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | New-AzADAppCredential -Password $SecureStringPassword
 ```
 
-Gets the application with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the New-AzADAppCredential to create a new application credential for that application with the given password.
+Gets the application with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes that to the New-AzADAppCredential to create a new application credential for that application with the given password.
 
 ## PARAMETERS
 
@@ -321,4 +321,3 @@ Parameters: ApplicationObject (ByValue)
 [Remove-AzADAppCredential](./Remove-AzADAppCredential.md)
 
 [Get-AzADApplication](./Get-AzADApplication.md)
-

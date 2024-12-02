@@ -96,12 +96,12 @@ PS C:\> New-AzPolicyDefinition -Name 'VMPolicyDefinition' -Metadata '{"Category"
 
 
 Name               : VMPolicyDefinition
-ResourceId         : /subscriptions/11111111-1111-1111-1111-111111111111/providers/Microsoft.Authorization/policyDefinitions/VMPolicyDefinition
+ResourceId         : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Authorization/policyDefinitions/VMPolicyDefinition
 ResourceName       : VMPolicyDefinition
 ResourceType       : Microsoft.Authorization/policyDefinitions
-SubscriptionId     : 11111111-1111-1111-1111-111111111111
+SubscriptionId     : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 Properties         : @{displayName=VMPolicyDefinition; policyType=Custom; mode=All; metadata=; policyRule=}
-PolicyDefinitionId : /subscriptions/11111111-1111-1111-1111-111111111111/providers/Microsoft.Authorization/policyDefinitions/VMPolicyDefinition
+PolicyDefinitionId : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Authorization/policyDefinitions/VMPolicyDefinition
 ```
 
 This command creates a policy definition named VMPolicyDefinition with metadata indicating its category is "Virtual Machine".
@@ -344,5 +344,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzPolicyDefinition](./Remove-AzPolicyDefinition.md)
 
 [Set-AzPolicyDefinition](./Set-AzPolicyDefinition.md)
-
-
