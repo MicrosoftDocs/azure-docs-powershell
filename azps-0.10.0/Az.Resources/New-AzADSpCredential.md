@@ -62,7 +62,7 @@ The service principal is identified by supplying either the object id or service
 ### Example 1 - Create a new service principal credential using a generated password
 
 ```
-PS C:\> New-AzADSpCredential -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
+PS C:\> New-AzADSpCredential -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 
 Secret    : System.Security.SecureString
 StartDate : 11/12/2018 9:36:05 PM
@@ -71,7 +71,7 @@ KeyId     : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 Type      : Password
 ```
 
-A new password credential is added to the existing service principal with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
+A new password credential is added to the existing service principal with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'.
 
 ### Example 2 - Create a new service principal credential using a certificate
 
@@ -88,7 +88,7 @@ The supplied base64 encoded public X509 certificate ("myapp.cer") is added to th
 ### Example 3 - Create a new service principal credential using piping
 
 ```
-PS C:\> Get-AzADServicePrincipal -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | New-AzADSpCredential
+PS C:\> Get-AzADServicePrincipal -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | New-AzADSpCredential
 
 Secret    : System.Security.SecureString
 StartDate : 11/12/2018 9:36:05 PM
@@ -97,7 +97,7 @@ KeyId     : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 Type      : Password
 ```
 
-Gets the service principal with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes that to the New-AzADSpCredential to create a new service principal credential for that service principal with a generated password.
+Gets the service principal with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes that to the New-AzADSpCredential to create a new service principal credential for that service principal with a generated password.
 
 ## PARAMETERS
 
@@ -312,6 +312,3 @@ Parameters: ServicePrincipalObject (ByValue)
 [Remove-AzADSpCredential](./Remove-AzADSpCredential.md)
 
 [Get-AzADServicePrincipal](./Get-AzADServicePrincipal.md)
-
-
-

@@ -48,7 +48,7 @@ This command gets insights and activities for an Entity.
 
 ### Example 2: Get Insights and Activities for an Entity by Id
 ```powershell
-$Entity = Get-AzSentinelEntity -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName" -EntityId "00001111-aaaa-2222-bbbb-3333cccc4444"
+$Entity = Get-AzSentinelEntity -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName" -EntityId "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
  $Entity | Get-AzSentinelEntityActivity
 ```
 

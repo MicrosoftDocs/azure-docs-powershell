@@ -52,10 +52,10 @@ EndTime                            : 1/1/1900 8:54:47 PM
 Error                              : {}
 Id                                 : /subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/jobs/f2d3430a-2977-419f-abd5-11d171e17f5e
 Name                               : f2d3430a-2977-419f-abd5-11d171e17f5e
-ObjectId                           : /subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/protectedItems/0ec082d5-6827-457a-bae2-f986e1b94555     
+ObjectId                           : /subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/protectedItems/aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb     
 ObjectInternalId                   : a8b5ee68-102c-5aae-9499-c57a475a8fd4
 ObjectInternalName                 : test_vm
-ObjectName                         : 0ec082d5-6827-457a-bae2-f986e1b94555
+ObjectName                         : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ObjectType                         : ProtectedItem
 ReplicationProviderId              : xxx-xxx-xxx
 SourceFabricProviderId             : b35da11c-d69e-4220-9a90-d81ed93ad2fc
@@ -78,13 +78,13 @@ This is for the scenario, when there is only one single disk that has to be prot
 ### Example 2: When there are multiple disks or NICs to migrate
 ```powershell
 [AzStackHCIDiskInput[]]$DisksToInclude = @()
-$OSDisk = New-AzMigrateHCIDiskMappingObject -DiskID "Microsoft:C1A34301-3BFF-4EC6-97F1-6C4BD5ADCDE0\83F8638B-8DCA-4152-9EDA-2CA8B33039B4\0\0\L" -IsOSDisk true -IsDynamic true -Size 42 -Format VHD
-$DataDisk = New-AzMigrateHCIDiskMappingObject -DiskID "Microsoft:C1A34301-3BFF-4EC6-97F1-6C4BD5ADCDE0\C92FAB89-DA8B-47E9-92F3-364642ECDF39\0\0\L" -IsOSDisk false -IsDynamic true -Size 5 -Format VHD
+$OSDisk = New-AzMigrateHCIDiskMappingObject -DiskID "Microsoft:bbbbbbbb-1111-2222-3333-cccccccccccc\83F8638B-8DCA-4152-9EDA-2CA8B33039B4\0\0\L" -IsOSDisk true -IsDynamic true -Size 42 -Format VHD
+$DataDisk = New-AzMigrateHCIDiskMappingObject -DiskID "Microsoft:bbbbbbbb-1111-2222-3333-cccccccccccc\C92FAB89-DA8B-47E9-92F3-364642ECDF39\0\0\L" -IsOSDisk false -IsDynamic true -Size 5 -Format VHD
 $DisksToInclude += $OSDisk
 $DisksToInclude += $DataDisk
 
 [AzStackHCINicInput[]]$NicsToInclude = @()
-$Nic = New-AzMigrateHCINicMappingObject -NicID "Microsoft:C1A34301-3BFF-4EC6-97F1-6C4BD5ADCDE0\99CDFD2E-D60C-4218-AC2E-E7C2D8253EB9" -TargetVirtualSwitchId "/subscriptions/xxx-xxx-xxx/resourceGroups/hciclus-rg/providers/Microsoft.AzureStackHCI/logicalnetworks/external"
+$Nic = New-AzMigrateHCINicMappingObject -NicID "Microsoft:bbbbbbbb-1111-2222-3333-cccccccccccc\99CDFD2E-D60C-4218-AC2E-E7C2D8253EB9" -TargetVirtualSwitchId "/subscriptions/xxx-xxx-xxx/resourceGroups/hciclus-rg/providers/Microsoft.AzureStackHCI/logicalnetworks/external"
 $NicsToInclude += $Nic
 
 New-AzMigrateHCIServerReplication -MachineId "/subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.OffAzure/HyperVSites/testsrc7972site/machines/005-005-005" -TargetStoragePathId "/subscriptions/xxx-xxx-xxx/resourceGroups/hciclus-rg/providers/Microsoft.AzureStackHCI/storagecontainers/testStorageContainer1" -TargetResourceGroupId "/subscriptions//xxx-xxx-xxx/resourceGroups/target-rg"-TargetVMName "targetVM" -DiskToInclude $DisksToInclude -NicToInclude $NicsToInclude
@@ -100,10 +100,10 @@ EndTime                            : 1/1/1900 2:27:14 PM
 Error                              : {}
 Id                                 : /subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/jobs/f855305c-5bed-4bc6-996e-d273115ab833
 Name                               : f855305c-5bed-4bc6-996e-d273115ab833
-ObjectId                           : /subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/protectedItems/c1a34301-3bff-4ec6-97f1-6c4bd5adcde0     
+ObjectId                           : /subscriptions/xxx-xxx-xxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/proj62434replicationvault/protectedItems/bbbbbbbb-1111-2222-3333-cccccccccccc     
 ObjectInternalId                   : a40ecd8e-6413-574d-b1f8-2ef925e087fc
 ObjectInternalName                 : test_vm
-ObjectName                         : c1a34301-3bff-4ec6-97f1-6c4bd5adcde0
+ObjectName                         : bbbbbbbb-1111-2222-3333-cccccccccccc
 ObjectType                         : ProtectedItem
 ReplicationProviderId              : 4de0fddc-bdfe-40d9-b60e-678bdce89630
 SourceFabricProviderId             : b35da11c-d69e-4220-9a90-d81ed93ad2fc

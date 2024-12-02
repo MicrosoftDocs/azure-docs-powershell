@@ -27,15 +27,15 @@ Create an in-memory object for WebhookReceiver.
 
 ### Example 1: create action group webhook receiver with aad auth
 ```powershell
-New-AzActionGroupWebhookReceiverObject -Name "sample webhook" -ServiceUri "http://www.example.com/webhook1" -IdentifierUri "http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a" -ObjectId "00001111-aaaa-2222-bbbb-3333cccc4444" -TenantId 00001111-aaaa-2222-bbbb-3333cccc4444 -UseAadAuth $true -UseCommonAlertSchema $true
+New-AzActionGroupWebhookReceiverObject -Name "sample webhook" -ServiceUri "http://www.example.com/webhook1" -IdentifierUri "http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a" -ObjectId "ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0" -TenantId aaaabbbb-0000-cccc-1111-dddd2222eeee -UseAadAuth $true -UseCommonAlertSchema $true
 ```
 
 ```output
 IdentifierUri        : http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a
 Name                 : sample webhook
-ObjectId             : 00001111-aaaa-2222-bbbb-3333cccc4444
+ObjectId             : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
 ServiceUri           : http://www.example.com/webhook1
-TenantId             : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId             : aaaabbbb-0000-cccc-1111-dddd2222eeee
 UseAadAuth           : True
 UseCommonAlertSchema : True
 ```

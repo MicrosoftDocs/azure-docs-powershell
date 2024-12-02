@@ -85,7 +85,7 @@ This command provisions a Microsoft Entra administrator group named DBAs for the
 
 ### Example 2
 ```powershell
-Set-AzSynapseSqlActiveDirectoryAdministrator -WorkspaceName ContosoWorkspace -ObjectId "00001111-aaaa-2222-bbbb-3333cccc4444"
+Set-AzSynapseSqlActiveDirectoryAdministrator -WorkspaceName ContosoWorkspace -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
 ```
 
 This command provisions a Microsoft Entra administrator by objectId for the workspace named ContosoWorkspace.

@@ -45,7 +45,7 @@ Gets properties of a DNS resolver domain list.
 
 ### Example 1: List all DNS Resolver Domain Lists under the subscription
 ```powershell
-Get-AzDnsResolverDomainList -SubscriptionId 0e5a46b1-de0b-4ec3-a5d7-dda908b4e076
+Get-AzDnsResolverDomainList -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output

@@ -36,7 +36,7 @@ The **Get-AzMetric** cmdlet gets the metric values for a specified resource.
 
 ### Example 1: Get a metric with summarized output
 ```
-PS C:\>Get-AzMetric -ResourceId "/subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -TimeGrain 00:01:00
+PS C:\>Get-AzMetric -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -TimeGrain 00:01:00
 DimensionName  :
 DimensionValue :
 Name           : AverageResponseTime
@@ -44,7 +44,7 @@ EndTime        : 3/20/2015 6:40:46 PM
 MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue,
                  Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...}
 Properties     : {}
-ResourceId     : /subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3
+ResourceId     : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3
 StartTime      : 3/20/2015 5:40:00 PM
 TimeGrain      : 00:01:00
 Unit           : Seconds
@@ -55,7 +55,7 @@ EndTime        : 3/20/2015 6:40:46 PM
 MetricValues   : {Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue,
                  Microsoft.Azure.Insights.Models.MetricValue, Microsoft.Azure.Insights.Models.MetricValue...}
 Properties     : {}
-ResourceId     : /subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3
+ResourceId     : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3
 StartTime      : 3/20/2015 5:40:00 PM
 TimeGrain      : 00:01:00
 Unit           : Bytes
@@ -65,7 +65,7 @@ This command gets the metric values for website3 with a time grain of 1 minute.
 
 ### Example 2: Get a metric with detailed output
 ```
-PS C:\>Get-AzMetric -ResourceId "/subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -TimeGrain 00:01:00 -DetailedOutput
+PS C:\>Get-AzMetric -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -TimeGrain 00:01:00 -DetailedOutput
 MetricValues   :
                      Average    : 0
                      Count      : 1
@@ -96,7 +96,7 @@ DimensionName  :
 DimensionValue :
 Name           : AverageResponseTime
 EndTime        : 3/20/2015 6:43:33 PM
-ResourceId     : /subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3
+ResourceId     : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3
 StartTime      : 3/20/2015 5:43:00 PM
 TimeGrain      : 00:01:00
 Unit           : Seconds
@@ -107,7 +107,7 @@ The output is detailed.
 
 ### Example 3: Get detailed output for a specified metric
 ```
-PS C:\>Get-AzMetric -ResourceId "/subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -MetricName "Requests" -TimeGrain 00:01:00 -DetailedOutput
+PS C:\>Get-AzMetric -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -MetricName "Requests" -TimeGrain 00:01:00 -DetailedOutput
 MetricValues   :
                      Average    : 1
                      Count      : 1
@@ -154,7 +154,7 @@ DimensionName  :
 DimensionValue :
 Name           : Requests
 EndTime        : 3/20/2015 6:47:56 PM
-ResourceId     : /subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3
+ResourceId     : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3
 StartTime      : 3/20/2015 5:47:00 PM
 TimeGrain      : 00:01:00
 Unit           : Count
@@ -443,5 +443,3 @@ https://learn.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported
 
 [Get-AzMetricDefinition](./Get-AzMetricDefinition.md)
 [New-AzMetricFilter](./New-AzMetricFilter.md)
-
-

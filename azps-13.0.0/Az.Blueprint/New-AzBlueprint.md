@@ -33,7 +33,7 @@ Create a new blueprint definition.
 
 ### Example 1
 ```powershell
-New-AzBlueprint -Name MyNewBlueprint -SubscriptionId 00000000-1111-0000-1111-000000000000 -BlueprintFile C:\Blueprint.json
+New-AzBlueprint -Name MyNewBlueprint -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e -BlueprintFile C:\Blueprint.json
 ```
 
 ```output

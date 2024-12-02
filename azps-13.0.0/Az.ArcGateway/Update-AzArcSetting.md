@@ -61,7 +61,7 @@ Patch the base Settings of the target resource.
 
 ### Example 1: Patch the base Settings of the target resource
 ```powershell
-Update-AzArcSetting -ResourceGroupName "ytongtest" -SubscriptionId "00001111-aaaa-2222-bbbb-3333cccc4444" -BaseProvider "Microsoft.HybridCompute" -BaseResourceName "testmachine" -BaseResourceType "machines" -GatewayResourceId "/subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/ytongtest/providers/Microsoft.HybridCompute/gateways/myArcGateway"
+Update-AzArcSetting -ResourceGroupName "ytongtest" -SubscriptionId "ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0" -BaseProvider "Microsoft.HybridCompute" -BaseResourceName "testmachine" -BaseResourceType "machines" -GatewayResourceId "/subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/ytongtest/providers/Microsoft.HybridCompute/gateways/myArcGateway"
 ```
 
 ```output
@@ -78,7 +78,7 @@ SystemDataCreatedByType          :
 SystemDataLastModifiedAt         :
 SystemDataLastModifiedBy         :
 SystemDataLastModifiedByType     :
-TenantId                         : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId                         : aaaabbbb-0000-cccc-1111-dddd2222eeee
 Type                             : Microsoft.HybridCompute/settings
 ```
 

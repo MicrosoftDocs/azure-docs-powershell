@@ -46,13 +46,13 @@ Get a StandbyContainerGroupPoolRuntimeViewResource
 ### Example 1: Get runtime view of a standby container group pool
 ```powershell
 Get-AzStandbyContainerGroupPoolStatus `
--SubscriptionId f8da6e30-a9d8-48ab-b05c-3f7fe482e13b `
+-SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e `
 -Name testPool `
 -ResourceGroupName test-standbypool
 ```
 
 ```output
-Id                           : /subscriptions/f8da6e30-a9d8-48ab-b05c-3f7fe482e13b/resourceGroups/test-standbypool/providers/Microsoft.Standb
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-standbypool/providers/Microsoft.Standb
                                yPool/standbyContainerGroupPools/testPool/runtimeViews/latest
 InstanceCountSummary         : {{
                                  "instanceCountsByState": [

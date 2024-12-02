@@ -49,11 +49,11 @@ ProvisioningState : Succeeded
 Source            : Microsoft.Azure.Management.Monitor.Models.Source
 Schedule          : Microsoft.Azure.Management.Monitor.Models.Schedule
 Action            : Microsoft.Azure.Management.Monitor.Models.AlertingAction
-Id                : /subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1
+Id                : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1
 Name              : LogAlertRule1
 Type              : microsoft.insights/scheduledqueryrules
 Location          : centralindia
-Tags              : {[hidden-link:/subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace, Resource]}
+Tags              : {[hidden-link:/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace, Resource]}
 ```
 
 ### Example 2 - Update by input object
@@ -67,16 +67,16 @@ ProvisioningState : Succeeded
 Source            : Microsoft.Azure.Management.Monitor.Models.Source
 Schedule          : Microsoft.Azure.Management.Monitor.Models.Schedule
 Action            : Microsoft.Azure.Management.Monitor.Models.AlertingAction
-Id                : /subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1
+Id                : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1
 Name              : LogAlertRule1
 Type              : microsoft.insights/scheduledqueryrules
 Location          : centralindia
-Tags              : {[hidden-link:/subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace, Resource]}
+Tags              : {[hidden-link:/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace, Resource]}
 ```
 
 ### Example 3 - Update by resource Id
 ```powershell
-PS C:\> Update-AzScheduledQueryRule -ResourceId /subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1 -Enabled $true
+PS C:\> Update-AzScheduledQueryRule -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1 -Enabled $true
 
 Description       : description
 Enabled           : true
@@ -85,11 +85,11 @@ ProvisioningState : Succeeded
 Source            : Microsoft.Azure.Management.Monitor.Models.Source
 Schedule          : Microsoft.Azure.Management.Monitor.Models.Schedule
 Action            : Microsoft.Azure.Management.Monitor.Models.AlertingAction
-Id                : /subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1
+Id                : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/MyResourceGroup/providers/microsoft.insights/scheduledqueryrules/LogAlertRule1
 Name              : LogAlertRule1
 Type              : microsoft.insights/scheduledqueryrules
 Location          : centralindia
-Tags              : {[hidden-link:/subscriptions/ad825170-845c-47db-8f00-11978947b089/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace, Resource]}
+Tags              : {[hidden-link:/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace, Resource]}
 ```
 
 ## PARAMETERS

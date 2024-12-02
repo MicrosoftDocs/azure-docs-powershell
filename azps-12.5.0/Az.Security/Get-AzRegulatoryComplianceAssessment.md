@@ -37,7 +37,7 @@ Get-AzRegulatoryComplianceAssessment -StandardName "SOC TSP" -ControlName "CC5.8
 ```
 
 ```output
-Id                    : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/regulatoryComp
+Id                    : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComp
                         lianceStandards/SOC-TSP/regulatoryComplianceControls/CC5.8/regulatoryComplianceAssessments/0392
                         b393-395e-42bf-ba60-8d99efc4d2d4
 Name                  : 0392b393-395e-42bf-ba60-8d99efc4d2d4
@@ -51,7 +51,7 @@ PassedResources       : 2
 FailedResources       : 0
 SkippedResources      : 0
 
-Id                    : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/regulatoryComp
+Id                    : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComp
                         lianceStandards/SOC-TSP/regulatoryComplianceControls/CC5.8/regulatoryComplianceAssessments/04c8
                         24de-a93c-49cf-bb22-997cdff9e9fc
 Name                  : 04c824de-a93c-49cf-bb22-997cdff9e9fc
@@ -65,7 +65,7 @@ PassedResources       : 2
 FailedResources       : 0
 SkippedResources      : 0
 
-Id                    : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/regulatoryComp
+Id                    : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComp
                         lianceStandards/SOC-TSP/regulatoryComplianceControls/CC5.8/regulatoryComplianceAssessments/04e7
                         147b-0deb-9796-2e5c-0336343ceb3d
 Name                  : 04e7147b-0deb-9796-2e5c-0336343ceb3d
@@ -79,7 +79,7 @@ PassedResources       : 1
 FailedResources       : 0
 SkippedResources      : 0
 
-Id                    : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/regulatoryComp
+Id                    : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComp
                         lianceStandards/SOC-TSP/regulatoryComplianceControls/CC5.8/regulatoryComplianceAssessments/0515
                         45a4-179e-4c04-9e9b-8f33821ef36f
 Name                  : 051545a4-179e-4c04-9e9b-8f33821ef36f
@@ -93,7 +93,7 @@ PassedResources       : 1
 FailedResources       : 1
 SkippedResources      : 0
 
-Id                    : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/regulatoryComp
+Id                    : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComp
                         lianceStandards/SOC-TSP/regulatoryComplianceControls/CC5.8/regulatoryComplianceAssessments/101e
                         af81-3dd3-4867-8871-f649131a06a9
 Name                  : 101eaf81-3dd3-4867-8871-f649131a06a9
@@ -108,7 +108,7 @@ PassedResources       : 2
 FailedResources       : 0
 SkippedResources      : 0
 
-Id                    : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/regulatoryComp
+Id                    : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComp
                         lianceStandards/SOC-TSP/regulatoryComplianceControls/CC5.8/regulatoryComplianceAssessments/103d
                         e8e8-643e-4b0e-b4a4-a85830239a53
 Name                  : 103de8e8-643e-4b0e-b4a4-a85830239a53
@@ -123,7 +123,7 @@ PassedResources       : 1
 FailedResources       : 1
 SkippedResources      : 0
 
-Id                    : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/regulatoryComp
+Id                    : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComp
                         lianceStandards/SOC-TSP/regulatoryComplianceControls/CC5.8/regulatoryComplianceAssessments/107b
                         8424-7ee8-4b6a-a859-b5256aa6596e
 Name                  : 107b8424-7ee8-4b6a-a859-b5256aa6596e
@@ -142,14 +142,14 @@ Get all assessments under specific control and standard.
 
 ### Example 2
 ```powershell
-Get-AzRegulatoryComplianceAssessment -StandardName "SOC TSP" -ControlName "CC5.8" -Name "fe48038b-f73a-4264-b499-0ff9dfaab05c"
+Get-AzRegulatoryComplianceAssessment -StandardName "SOC TSP" -ControlName "CC5.8" -Name "b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2"
 ```
 
 ```output
-Id                    : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/regulatoryComp
+Id                    : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComp
                         lianceStandards/SOC-TSP/regulatoryComplianceControls/CC5.8/regulatoryComplianceAssessments/fe48
                         038b-f73a-4264-b499-0ff9dfaab05c
-Name                  : fe48038b-f73a-4264-b499-0ff9dfaab05c
+Name                  : b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2
 Type                  : Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls/regulatoryComplia
                         nceAssessments
 Description           : [CCE-24187-7] Audit Policy: Logon-Logoff: Special Logon (Windows Server 2012 Datacenter)
@@ -165,14 +165,14 @@ Get a specific assessment under specific control and standard according to asses
 
 ### Example 3
 ```powershell
-Get-AzRegulatoryComplianceAssessment -ResourceId "/subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/regulatoryComplianceStandards/SOC-TSP/regulatoryComplianceControls/CC5.8/regulatoryComplianceAssessments/fe48038b-f73a-4264-b499-0ff9dfaab05c"
+Get-AzRegulatoryComplianceAssessment -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComplianceStandards/SOC-TSP/regulatoryComplianceControls/CC5.8/regulatoryComplianceAssessments/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2"
 ```
 
 ```output
-Id                    : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/regulatoryComp
+Id                    : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComp
                         lianceStandards/SOC-TSP/regulatoryComplianceControls/CC5.8/regulatoryComplianceAssessments/fe48
                         038b-f73a-4264-b499-0ff9dfaab05c
-Name                  : fe48038b-f73a-4264-b499-0ff9dfaab05c
+Name                  : b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2
 Type                  : Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls/regulatoryComplia
                         nceAssessments
 Description           : [CCE-24187-7] Audit Policy: Logon-Logoff: Special Logon (Windows Server 2012 Datacenter)

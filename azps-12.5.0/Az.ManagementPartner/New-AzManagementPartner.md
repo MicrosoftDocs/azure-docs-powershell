@@ -32,8 +32,8 @@ New-AzManagementPartner -PartnerId 4977985
 ```output
 PartnerId   : 4977985
 PartnerName : Test_Test_DPORTest
-TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
-ObjectId    : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId    : aaaabbbb-0000-cccc-1111-dddd2222eeee
+ObjectId    : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
 State       : Active
 ```
 

@@ -51,12 +51,12 @@ FriendlyName                     : test-pa
 Id                               : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Purview/a 
                                    ccounts/test-pa
 Identity                         : {
-                                     "principalId": "xxxxxxxx-7956-4978-87e8-9ddd82cfe2b7",
-                                     "tenantId": "xxxxxxxx-38d6-4fb2-bad9-b7b93a3e9c5a",
+                                     "principalId": "aaaaaaaa-bbbb-cccc-1111-222222222222",
+                                     "tenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
                                      "type": "SystemAssigned"
                                    }
-IdentityPrincipalId              : xxxxxxxx-7956-4978-87e8-9ddd82cfe2b7
-IdentityTenantId                 : xxxxxxxx-38d6-4fb2-bad9-b7b93a3e9c5a
+IdentityPrincipalId              : aaaaaaaa-bbbb-cccc-1111-222222222222
+IdentityTenantId                 : aaaabbbb-0000-cccc-1111-dddd2222eeee
 IdentityType                     : SystemAssigned
 Location                         : eastus
 ManagedResourceEventHubNamespace : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso 
@@ -112,12 +112,12 @@ FriendlyName                     : test-pa
 Id                               : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Purview/a 
                                    ccounts/test-pa
 Identity                         : {
-                                     "principalId": "xxxxxxxx-7956-4978-87e8-9ddd82cfe2b7",
-                                     "tenantId": "xxxxxxxx-38d6-4fb2-bad9-b7b93a3e9c5a",
+                                     "principalId": "aaaaaaaa-bbbb-cccc-1111-222222222222",
+                                     "tenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
                                      "type": "SystemAssigned"
                                    }
-IdentityPrincipalId              : xxxxxxxx-7956-4978-87e8-9ddd82cfe2b7
-IdentityTenantId                 : xxxxxxxx-38d6-4fb2-bad9-b7b93a3e9c5a
+IdentityPrincipalId              : aaaaaaaa-bbbb-cccc-1111-222222222222
+IdentityTenantId                 : aaaabbbb-0000-cccc-1111-dddd2222eeee
 IdentityType                     : SystemAssigned
 Location                         : eastus
 ManagedResourceEventHubNamespace : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso 

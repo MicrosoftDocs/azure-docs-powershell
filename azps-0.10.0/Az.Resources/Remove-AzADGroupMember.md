@@ -67,15 +67,15 @@ Removes a user from an AD group.
 PS C:\> Remove-AzADGroup -MemberObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -GroupObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Removes the user with object id '00001111-aaaa-2222-bbbb-3333cccc4444' from the group with object id '00001111-aaaa-2222-bbbb-3333cccc4444'.
+Removes the user with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' from the group with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'.
 
 ### Example 2 - Remove a user from a group by piping
 
 ```
-PS C:\> Get-AzADGroup -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 | Remove-AzADGroupMember -MemberObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
+PS C:\> Get-AzADGroup -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Remove-AzADGroupMember -MemberObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
-Gets the group with object id '00001111-aaaa-2222-bbbb-3333cccc4444' and pipes it to the Remove-AzADGroupMember cmdlet to remove the user to that group.
+Gets the group with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes it to the Remove-AzADGroupMember cmdlet to remove the user to that group.
 
 ## PARAMETERS
 
