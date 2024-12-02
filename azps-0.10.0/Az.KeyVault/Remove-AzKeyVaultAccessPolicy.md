@@ -74,7 +74,7 @@ This example identifies the application by using the service principal name regi
 
 ### Example 3: Remove permissions for an application by using its object ID
 ```
-PS C:\>Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectID 00001111-aaaa-2222-bbbb-3333cccc4444
+PS C:\>Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectID aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ```
 
 This command removes all the permissions that an application has on the key vault named Contoso03Vault.
