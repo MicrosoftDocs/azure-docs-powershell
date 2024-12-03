@@ -1,5 +1,5 @@
 ---
-description: Learn the different authentication types for Azure PowerShell — sign in interactively, with a service principal, or with managed identities for Azure resources.
+description: Learn the different authentication types for Azure PowerShell. Sign in interactively, with a service principal, or with managed identities for Azure resources.
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
@@ -34,7 +34,7 @@ In addition to these authentication methods, you can also use Azure PowerShell i
 started with Azure PowerShell.
 
 To keep your Azure resources secure, restrict permissions of the identity for the authentication
-method you've chosen using the principle of least privilege. Limiting sign-in permissions as much as
+method you chose using the principle of least privilege. Limiting sign-in permissions as much as
 possible for your use case helps keep your Azure resources secure. For more information, see
 [Enhance security with the principle of least privilege][principle-of-least-privilege].
 
@@ -61,7 +61,7 @@ For more information, see [Refresh tokens in the Microsoft identity platform][re
 
 - [Azure PowerShell context objects](context-persistence.md)
 - [Create an Azure service principal with Azure PowerShell](create-azure-service-principal-azureps.md)
-- [Set-AzContext][select-azcontext]
+- [Set-AzContext][set-azcontext]
 
 <!-- link references -->
 [azure-cloud-shell]: /azure/cloud-shell/overview
@@ -69,5 +69,5 @@ For more information, see [Refresh tokens in the Microsoft identity platform][re
 [authenticate-noninteractive]: authenticate-noninteractive.md
 [principle-of-least-privilege]: /entra/identity-platform/secure-least-privileged-access
 [use-multiple-subscriptions]: /powershell/azure/manage-subscriptions-azureps
-[select-azcontext]: /powershell/module/az.accounts/set-azcontext
+[set-azcontext]: /powershell/module/az.accounts/set-azcontext
 [refresh-tokens]: /entra/identity-platform/refresh-tokens
