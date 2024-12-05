@@ -20,6 +20,8 @@ release, see the [release notes](release-notes-azureps.md).
 - [Install on Windows](install-azps-windows.md)
 - [Install on Linux](install-azps-linux.md)
 - [Install on macOS](install-azps-macos.md)
+- [Optimize the installation](install-azps-optimized.md)
+- [Offline Installation](install-azps-offline.md)
 - [Run in Azure Cloud Shell](https://shell.azure.com/)
 - [Run in Docker container](azureps-in-docker.md)
 
