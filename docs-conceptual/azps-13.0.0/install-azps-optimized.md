@@ -67,10 +67,10 @@ Installing the entire **Az** PowerShell module results in:
 - **Unnecessary updates** for modules you don't use.
 
 You can streamline the process by installing only the service-specific modules you need. The
-combination of installing fewer modules and installing them with **PSResourceGet** dramatically
+combination of using **PSResourceGet** and installing only the modules you need dramatically
 reduces installation overhead.
 
-In the following example, use the `Install-PSResource` cmdlet to install the **Az.Compute**,
+The following example uses the `Install-PSResource` cmdlet to install the **Az.Compute**,
 **Az.Network**, **Az.Resources**, and **Az.Storage** PowerShell modules.
 
 ```powershell
