@@ -105,7 +105,7 @@ By adopting a more selective and efficient installation process, you:
 - [Install Microsoft.PowerShell.PSResourceGet][install-psresourceget]
 - [Install-PSResource][install-psresource]
 
-## Next Steps
+## Next steps
 
 To learn more about managing your Azure resources with the **Az** PowerShell module, see
 [Get Started with Azure PowerShell][get-started-azps].
