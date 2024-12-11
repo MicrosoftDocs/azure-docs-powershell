@@ -16,22 +16,40 @@ PowerShell version 7.4.
 
 ## Prerequisites
 
-Determine if the **PSResourceGet** PowerShell module is installed and install it if necessary. The
-**PSResourceGet** module provides improved capabilities for installing PowerShell resources,
-including Azure PowerShell modules. **PSResourceGet** is preinstalled with PowerShell version 7.4 or
-higher and is also supported in Windows PowerShell 5.1.
+1. On Windows systems, you must set the PowerShell execution policy to remote signed or less
+   restrictive
 
-1. Determine if the **PSResourceGet** PowerShell module is installed.
+   - Check the PowerShell execution policy:
 
-   ```powershell
-   Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable
-   ```
+     ```powershell
+     Get-ExecutionPolicy -List
+     ```
 
-1. Install the **PSResourceGet** PowerShell module.
+   - Set the PowerShell execution policy to remote signed:
 
-   ```powershell
-   Install-Module -Name Microsoft.PowerShell.PSResourceGet -Repository PSGallery
-   ```
+     ```powershell
+     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+     ```
+
+   For more information about execution policies, see
+   [about_Execution_Policies][execution-policies].
+
+1. Determine if the **PSResourceGet** PowerShell module is installed and install it if necessary.
+   The **PSResourceGet** module provides improved capabilities for installing PowerShell resources,
+   including Azure PowerShell modules. **PSResourceGet** is preinstalled with PowerShell version 7.4
+   or higher and is also supported in Windows PowerShell 5.1.
+
+   - Determine if the **PSResourceGet** PowerShell module is installed.
+
+     ```powershell
+     Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable
+     ```
+
+   - Install the **PSResourceGet** PowerShell module.
+
+     ```powershell
+     Install-Module -Name Microsoft.PowerShell.PSResourceGet -Repository PSGallery
+     ```
 
 ## The Az PowerShell module
 
@@ -111,6 +129,7 @@ To learn more about managing your Azure resources with the **Az** PowerShell mod
 [Get Started with Azure PowerShell][get-started-azps].
 
 <!-- link references -->
+[execution-policies]: /powershell/module/microsoft.powershell.core/about/about_execution_policies
 [install-psresourceget]: /powershell/gallery/powershellget/install-powershellget#install-microsoftpowershellpsresourceget
 [install-psresource]: /powershell/module/microsoft.powershell.psresourceget/install-psresource
 [get-started-azps]: get-started-azureps.md
