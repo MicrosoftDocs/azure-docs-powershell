@@ -17,6 +17,8 @@
       href: release-notes-azureps.md
     - name: Upcoming breaking changes
       href: upcoming-breaking-changes.md
+    - name: Tenanted passthrough disabled
+      href: disable-tenanted-passthrough.md
 - name: Install
   items:
     - name: Overview
