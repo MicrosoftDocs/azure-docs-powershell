@@ -36,9 +36,9 @@ your existing scripts may need additional modification to work with the Az modul
 described here and in the [breaking changes list](migrate-az-1.0.0.md).
 
 If your scripts don't work with AzureRM 6.13.1, update them according to the
-[AzureRM 5.x to 6.x migration guide](/powershell/azure/azurerm/migration-guide.6.0.0).
-If you use an earlier version of the AzureRM module, there are migration guides available for
-each major version.
+[AzureRM 5.x to 6.x migration guide](/previous-versions/powershell/azure/migration-guide.6.0.0). If
+you use an earlier version of the AzureRM module, there are migration guides available for each
+major version.
 
 ## Uninstall AzureRM
 

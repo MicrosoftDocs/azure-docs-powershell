@@ -119,5 +119,5 @@ Guidelines
 [get-member]: /powershell/module/microsoft.powershell.utility/get-member
 [azps-output]: queries-azureps.md
 [format-azps-output]: formatting-output.md
-[azurerm-module]: /powershell/azure/azurerm/overview
+[azurerm-module]: /previous-versions/powershell/azure/
 [azure-rdfe-module]: /powershell/azure/servicemanagement/overview
