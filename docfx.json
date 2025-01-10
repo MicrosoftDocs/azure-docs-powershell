@@ -471,7 +471,7 @@
         },
         "globalMetadata": {
             "apiPlatform": "powershell",
-            "archive_url": "https://learn.microsoft.com/previous-versions/powershell/azure/deploymentmanager/overview",
+            "archive_url": "https://learn.microsoft.com/previous-versions/powershell/azure",
             "brand": "azure",
             "searchScope": [
                 "Azure",
