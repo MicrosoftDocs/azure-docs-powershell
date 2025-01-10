@@ -13,10 +13,6 @@
             { "files": ["**/*.yml"], "src": "azps-0.10.0", "version": "azps-0.10.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-0.10.0", "version": "azps-0.10.0", "dest": "azure" },
 
-            { "files": ["toc.yml"], "src": "azurermps-6.13.0", "version": "azurermps-6.13.0", "dest": "module/azure-rm" },
-            { "files": ["**/*.yml"], "src": "azurermps-6.13.0", "version": "azurermps-6.13.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azurermps-6.13.0", "version": "azurermps-6.13.0", "dest": "azure/azurerm" },
-
             { "files": ["toc.yml"], "src": "azuresmps-4.0.0", "version": "azuresmps-4.0.0", "dest": "module/servicemanagement" },
             { "files": ["**/*.yml"], "src": "azuresmps-4.0.0", "version": "azuresmps-4.0.0", "exclude": ["docs-conceptual/**"], "dest": "module/servicemanagement" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azuresmps-4.0.0", "version": "azuresmps-4.0.0", "dest": "azure/servicemanagement" },
@@ -34,14 +30,12 @@
         "resource": [
             { "files": ["media/**"], "version": "azps-12.5.0" },
             { "files": ["media/**"], "version": "azps-13.0.0" },
-            { "files": ["media/**"], "version": "azps-0.10.0" },
-            { "files": ["media/**"], "version": "azurermps-6.13.0" }
+            { "files": ["media/**"], "version": "azps-0.10.0" }
         ],
         "versions": {
             "azps-12.5.0": { "dest": "azps-12.5.0" },
             "azps-13.0.0": { "dest": "azps-13.0.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
-            "azurermps-6.13.0": { "dest": "azurermps-6.13.0" },
             "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" }
         },
         "filemetadata": {
@@ -52,7 +46,6 @@
             "ms.service": {
                 "azuresmps-*/**/*.yml": "azure-asm",
                 "docs-conceptual/azuresmps-*/**/*.md": "azure-asm",
-                "docs-conceptual/azurermps-*/**/*.md": "azure-powershell",
                 "az*-*/**/*.yml": "azure-powershell",
                 "az*-*/ApiManagement.ServiceManagement/*.yml": "azure-api-management",
                 "az*-*/Azure.Storage/*.yml": "azure-storage",
@@ -335,10 +328,6 @@
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
                 ],
-                "docs-conceptual/azurermps-*/**/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
                 "az*-*/Azure.aks/*.md": [
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
@@ -410,7 +399,6 @@
             },
             "ms.topic": {
                 "azps-*/**/*": "reference",
-                "azurermps-*/**/*": "reference",
                 "azuresmps-*/**/*": "reference",
                 "docs-conceptual/**/*": "conceptual"
             },
@@ -418,11 +406,9 @@
                 "azps-13.0.0/**/*": "11/19/2024",
                 "azps-12.5.0/**/*": "11/11/2024",
                 "azps-0.10.0/**/*": "4/14/2020",
-                "azurermps-6.13.0/**/*": "03/23/2021",
                 "azuresmps-4.0.0/**/*": "11/28/2020"
             },
             "enable_powershell_try_it": {
-                "azurermps-*/**/*.yml": false,
                 "azps-*/**/*.yml": true
             },
             "searchScope": {
@@ -438,8 +424,6 @@
                 "az*-*/Az*.Websites/*.yml": ["App Service", "Azure", "Azure Powershell"]
             },
             "ROBOTS": {
-                "azurermps-*/**/*": "NOINDEX, NOFOLLOW",
-                "docs-conceptual/azurermps-*/**/*": "NOINDEX, NOFOLLOW",
                 "azuresmps-*/**/*": "NOINDEX, NOFOLLOW",
                 "docs-conceptual/azuresmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
@@ -451,8 +435,6 @@
                 "aztools/**/*": "OpenSource",
                 "azps-0.10.0/**/*": "None",
                 "docs-conceptual/azps-0.10.0/*": "None",
-                "azurermps-6.13.0/**/*": "None",
-                "docs-conceptual/azurermps-6.13.0/*": "None",
                 "azuresmps-4.0.0/**/*": "None",
                 "docs-conceptual/azuresmps-4.0.0/*": "None"
             },
@@ -471,7 +453,7 @@
         },
         "globalMetadata": {
             "apiPlatform": "powershell",
-            "archive_url": "https://learn.microsoft.com/previous-versions/powershell/azure/deploymentmanager/overview",
+            "archive_url": "https://learn.microsoft.com/previous-versions/powershell/azure",
             "brand": "azure",
             "searchScope": [
                 "Azure",
