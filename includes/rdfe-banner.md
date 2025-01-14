@@ -1,7 +1,6 @@
 ---
 ms.topic: include
 ms.custom:
-ms.date: 05/16/2023
 ---
 
 > [!NOTE]
