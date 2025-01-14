@@ -1,7 +1,6 @@
 ---
 author: georgewallace
 ms.author: gwallace
-ms.date: 05/25/2020
 ms.topic: include
 ---
 > [!IMPORTANT]

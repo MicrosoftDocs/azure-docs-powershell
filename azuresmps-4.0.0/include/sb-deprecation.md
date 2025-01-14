@@ -1,6 +1,5 @@
 ---
 title: Service Bus deprecation notice
-ms.date: 05/25/2020
 ms.topic: include
 ---
 > [!IMPORTANT]

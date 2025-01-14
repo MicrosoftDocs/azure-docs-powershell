@@ -1,7 +1,6 @@
 ---
 ms.topic: include
 ms.custom: devx-track-azurepowershell
-ms.date: 03/18/2024
 ---
 
 > [!WARNING]

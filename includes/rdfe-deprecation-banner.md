@@ -1,7 +1,6 @@
 ---
 ms.topic: include
 ms.custom:
-ms.date: 08/30/2021
 ---
 
 > [!IMPORTANT]
