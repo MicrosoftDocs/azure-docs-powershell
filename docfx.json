@@ -9,6 +9,10 @@
             { "files": ["**/*.yml"], "src": "azps-13.0.0", "version": "azps-13.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-13.0.0", "version": "azps-13.0.0", "dest": "azure" },
 
+            { "files": ["toc.yml"], "src": "azps-13.1.0", "version": "azps-13.1.0", "dest": "module/azure-powershell" },
+            { "files": ["**/*.yml"], "src": "azps-13.1.0", "version": "azps-13.1.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-13.1.0", "version": "azps-13.1.0", "dest": "azure" },
+
             { "files": ["toc.yml"], "src": "azps-0.10.0", "version": "azps-0.10.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-0.10.0", "version": "azps-0.10.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-0.10.0", "version": "azps-0.10.0", "dest": "azure" },
@@ -30,11 +34,13 @@
         "resource": [
             { "files": ["media/**"], "version": "azps-12.5.0" },
             { "files": ["media/**"], "version": "azps-13.0.0" },
+            { "files": ["media/**"], "version": "azps-13.1.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" }
         ],
         "versions": {
             "azps-12.5.0": { "dest": "azps-12.5.0" },
             "azps-13.0.0": { "dest": "azps-13.0.0" },
+            "azps-13.1.0": { "dest": "azps-13.1.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
             "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" }
         },
@@ -404,6 +410,7 @@
             },
             "ms.date": {
                 "azps-13.0.0/**/*": "11/19/2024",
+                "azps-13.1.0/**/*": "1/10/2024",
                 "azps-12.5.0/**/*": "11/11/2024",
                 "azps-0.10.0/**/*": "4/14/2020",
                 "azuresmps-4.0.0/**/*": "11/28/2020"
@@ -430,6 +437,8 @@
             "feedback_system": {
                 "azps-13.0.0/**/*": "OpenSource",
                 "docs-conceptual/azps-13.0.0/*": "OpenSource",
+                "azps-13.1.0/**/*": "OpenSource",
+                "docs-conceptual/azps-13.1.0/*": "OpenSource",
                 "azps-12.5.0/**/*": "OpenSource",
                 "docs-conceptual/azps-12.5.0/*": "OpenSource",
                 "aztools/**/*": "OpenSource",
