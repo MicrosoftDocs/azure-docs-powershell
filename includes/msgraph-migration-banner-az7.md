@@ -1,6 +1,5 @@
 ---
 ms.topic: include
-ms.date: 01/11/2022
 ---
 
 > [!WARNING]
