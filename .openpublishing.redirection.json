@@ -2,6 +2,11 @@
   "redirections": [
     {
       "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/",
+      "source_path": "docs-conceptual/azps-13.1.0/overview.md"
+    },
+    {
+      "redirect_document_id": false,
       "redirect_url": "/powershell/azure/install-azure-powershell/",
       "source_path": "docs-conceptual/azps-13.1.0/install-az-ps.md"
     },
@@ -14,6 +19,11 @@
       "redirect_document_id": false,
       "redirect_url": "/powershell/azure/azureps-support-lifecycle/",
       "source_path": "docs-conceptual/azps-13.1.0/azps-versioning-release-cadence.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/",
+      "source_path": "docs-conceptual/azps-13.0.0/overview.md"
     },
     {
       "redirect_document_id": false,
@@ -32,6 +42,11 @@
     },
     {
       "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/",
+      "source_path": "docs-conceptual/azps-12.5.0/overview.md"
+    },
+    {
+      "redirect_document_id": false,
       "redirect_url": "/powershell/azure/install-azure-powershell/",
       "source_path": "docs-conceptual/azps-12.5.0/install-az-ps.md"
     },
@@ -44,6 +59,16 @@
       "redirect_document_id": false,
       "redirect_url": "/powershell/azure/azureps-support-lifecycle/",
       "source_path": "docs-conceptual/azps-12.5.0/azps-versioning-release-cadence.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/",
+      "source_path": "docs-conceptual/azps-0.10.0/overview.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/overview",
+      "source_path": "docs-conceptual/aztools/index.md"
     },
     {
       "redirect_document_id": false,
