@@ -1,29 +1,29 @@
 {
     "build": {
         "content": [
-            { "files": ["toc.yml"], "src": "azps-12.5.0", "version": "azps-12.5.0", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-12.5.0", "version": "azps-12.5.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-12.5.0", "version": "azps-12.5.0", "dest": "azure" },
+            { "files": ["toc.yml"], "src": "azps-13.1.0", "version": "azps-13.1.0", "dest": "module/azure-powershell" },
+            { "files": ["**/*.yml"], "src": "azps-13.1.0", "version": "azps-13.1.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-13.1.0", "version": "azps-13.1.0", "dest": "azure" },
 
             { "files": ["toc.yml"], "src": "azps-13.0.0", "version": "azps-13.0.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-13.0.0", "version": "azps-13.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-13.0.0", "version": "azps-13.0.0", "dest": "azure" },
 
-            { "files": ["toc.yml"], "src": "azps-13.1.0", "version": "azps-13.1.0", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-13.1.0", "version": "azps-13.1.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-13.1.0", "version": "azps-13.1.0", "dest": "azure" },
+            { "files": ["toc.yml"], "src": "azps-12.5.0", "version": "azps-12.5.0", "dest": "module/azure-powershell" },
+            { "files": ["**/*.yml"], "src": "azps-12.5.0", "version": "azps-12.5.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-12.5.0", "version": "azps-12.5.0", "dest": "azure" },
 
             { "files": ["toc.yml"], "src": "azps-0.10.0", "version": "azps-0.10.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-0.10.0", "version": "azps-0.10.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-0.10.0", "version": "azps-0.10.0", "dest": "azure" },
 
-            { "files": ["toc.yml"], "src": "azuresmps-4.0.0", "version": "azuresmps-4.0.0", "dest": "module/servicemanagement" },
-            { "files": ["**/*.yml"], "src": "azuresmps-4.0.0", "version": "azuresmps-4.0.0", "exclude": ["docs-conceptual/**"], "dest": "module/servicemanagement" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azuresmps-4.0.0", "version": "azuresmps-4.0.0", "dest": "azure/servicemanagement" },
-
             { "files": ["toc.yml"], "src": "aztools", "version": "aztools", "dest": "module/aztools" },
             { "files": ["**/*.yml"], "src": "aztools", "version": "aztools", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/aztools", "version": "aztools", "dest": "azure" },
+
+            { "files": ["toc.yml"], "src": "azuresmps-4.0.0", "version": "azuresmps-4.0.0", "dest": "module/servicemanagement" },
+            { "files": ["**/*.yml"], "src": "azuresmps-4.0.0", "version": "azuresmps-4.0.0", "exclude": ["docs-conceptual/**"], "dest": "module/servicemanagement" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azuresmps-4.0.0", "version": "azuresmps-4.0.0", "dest": "azure/servicemanagement" },
 
             {
                 "files": [
@@ -32,15 +32,15 @@
             }
         ],
         "resource": [
-            { "files": ["media/**"], "version": "azps-12.5.0" },
-            { "files": ["media/**"], "version": "azps-13.0.0" },
             { "files": ["media/**"], "version": "azps-13.1.0" },
+            { "files": ["media/**"], "version": "azps-13.0.0" },
+            { "files": ["media/**"], "version": "azps-12.5.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" }
         ],
         "versions": {
-            "azps-12.5.0": { "dest": "azps-12.5.0" },
-            "azps-13.0.0": { "dest": "azps-13.0.0" },
             "azps-13.1.0": { "dest": "azps-13.1.0" },
+            "azps-13.0.0": { "dest": "azps-13.0.0" },
+            "azps-12.5.0": { "dest": "azps-12.5.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
             "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" }
         },
@@ -405,12 +405,13 @@
             },
             "ms.topic": {
                 "azps-*/**/*": "reference",
+                "aztools-*/**/*": "reference",
                 "azuresmps-*/**/*": "reference",
                 "docs-conceptual/**/*": "conceptual"
             },
             "ms.date": {
-                "azps-13.0.0/**/*": "11/19/2024",
                 "azps-13.1.0/**/*": "1/14/2025",
+                "azps-13.0.0/**/*": "11/19/2024",
                 "azps-12.5.0/**/*": "11/11/2024",
                 "azps-0.10.0/**/*": "4/14/2020",
                 "azuresmps-4.0.0/**/*": "11/28/2020"
@@ -442,6 +443,7 @@
                 "azps-12.5.0/**/*": "OpenSource",
                 "docs-conceptual/azps-12.5.0/*": "OpenSource",
                 "aztools/**/*": "OpenSource",
+                "docs-conceptual/aztools/*": "OpenSource",
                 "azps-0.10.0/**/*": "None",
                 "docs-conceptual/azps-0.10.0/*": "None",
                 "azuresmps-4.0.0/**/*": "None",
@@ -478,6 +480,7 @@
             "open_source_feedback_issueTitle": "",
             "open_source_feedback_productLogoLightUrl": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
             "open_source_feedback_productLogoDarkUrl": "https://learn.microsoft.com/media/logos/logo-powershell.svg",
+            "open_source_feedback_productName": "Azure PowerShell",
             "ms.topic": "reference",
             "ms.service": "azure-powershell",
             "ms.author": "mirobb",
