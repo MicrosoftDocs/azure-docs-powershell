@@ -11,6 +11,8 @@ title: What's new in Azure PowerShell
 
 This page highlights new features, articles, and learning paths for Azure PowerShell.
 
+[!INCLUDE [mfa-requirement](../../includes/mfa-requirement.md)]
+
 ## Protect sensitive information
 
 Azure PowerShell displays a warning message by default beginning with Az version 12.0.0 to help you
