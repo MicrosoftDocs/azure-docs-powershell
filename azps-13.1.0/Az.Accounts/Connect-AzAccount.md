@@ -12,6 +12,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Connect to Azure with an authenticated account for use with cmdlets from the Az PowerShell modules.
 
+[!INCLUDE [mfa-requirement](../../includes/mfa-requirement.md)]
+
 ## SYNTAX
 
 ### UserWithSubscriptionId (Default)
