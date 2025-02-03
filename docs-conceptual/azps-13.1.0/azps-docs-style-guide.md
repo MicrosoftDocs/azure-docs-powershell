@@ -111,12 +111,12 @@ Use `Get-Random` to add a random number to a name, for example:
 $newAcrName = "myacr-$(Get-Random)"
 ```
 
-## Interactive code snippets (Try It)
+## Interactive code snippets
 
-### When to use Try It
+### When to use interactive code snippets
 
 If Cloud Shell supports _every_ Azure PowerShell command in your article, tag your code blocks with
-`azurepowershell-interactive` to add the _Try It_ button to the snippets:
+`azurepowershell-interactive` to add the _Open Cloud Shell_ button to the snippets:
 
 ````
 ```azurepowershell-interactive
@@ -124,7 +124,7 @@ Get-AzResourceGroup | Select-Object -Property ResourceGroupName, Location
 ```
 ````
 
-### When NOT to use Try It
+### When NOT to use interactive code snippets
 
 Don't use `azurepowershell-interactive` if your article includes _any_ Azure PowerShell commands
 that don't work in Cloud Shell. Use `azurepowershell` only. For example, the `Install-AzAksCliTool`
