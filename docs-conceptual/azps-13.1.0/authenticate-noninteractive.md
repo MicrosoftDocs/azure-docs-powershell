@@ -9,14 +9,17 @@ title: Sign in to Azure PowerShell non-interactively for automation scenarios
 
 # Sign in to Azure PowerShell non-interactively for automation scenarios
 
-A service principal in Azure is a noninteractive account that provides an identity used by
-applications, services, and automation tools to access specific Azure resources. Authenticating with
-a service principal is the best way to write secure scripts because they act as a security identity
-with assigned permissions governing what actions can be performed and what resources can be
-accessed. Service principals help to securely automate management tasks without using personal user
-accounts, facilitating more secure and manageable access to Azure resources. Like other user
-accounts, you manage their permissions with Microsoft Entra. By granting a service principal only
-the permissions it needs, your automation scripts stay secure.
+A managed identity in Azure provides a secure and seamless way for applications, services, and
+automation tools to access Azure resources without storing credentials in code or configuration.
+Unlike service principals, which require manual credential management, Azure automatically handles
+managed identities and does not expose sensitive secrets. Using a managed identity is the best
+practice for writing secure automation scripts because it simplifies authentication and minimizes
+the risk of credential leaks. Managed identities also help automate management tasks securely
+without relying on user identities. Permissions for managed identities are managed through Microsoft
+Entra, ensuring they have only the necessary access to resources, enhancing both security and
+maintainability.
+
+[!INCLUDE [mfa-requirement](../../includes/mfa-requirement.md)]
 
 ## Prerequisites
 
