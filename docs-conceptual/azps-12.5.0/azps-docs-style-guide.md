@@ -9,39 +9,33 @@ title: Azure PowerShell docs style guide
 
 # Azure PowerShell docs style guide
 
-The following checklist helps ensure scripts and samples that use Azure PowerShell are consistent.
+This article focuses on Azure PowerShell conceptual and reference content available in the following
+GitHub repositories:
+
+- [azure-docs-powershell][azps-docs-repo]
+- [azure-powershell][azps-source-repo]
 
 ## Version
 
-Because most Microsoft Learn documentation doesn't support multiple product versions, the latest
-version of the Az PowerShell module should be referenced in articles. Documentation referencing a
-specific version number can become outdated because Azure PowerShell is updated monthly. Only the
-last two major versions of the Az PowerShell module are supported by Microsoft. For more
-information, see [Azure PowerShell support lifecycle](azureps-support-lifecycle.md).
+Unlike most Microsoft Learn documentation, the Azure PowerShell content in the
+**azure-docs-powershell** repository is maintained for multiple supported versions. For details on
+supported versions, see [Azure PowerShell support lifecycle][support-lifecycle].
 
-If cmdlets used in the article are part of a preview module, that module must be explicitly
-installed because only GA modules ship as part of the Az PowerShell module.
+If an article references cmdlets from a preview module, that module must be explicitly installed
+unless the **AzPreview** module is already installed. This is because only generally available (GA)
+modules are included with the **Az** PowerShell module.
 
 > [!IMPORTANT]
-> Do not use commands from the AzureRM PowerShell module in articles. AzureRM is deprecated.
+> Don't use commands from the **AzureRM** PowerShell module in articles. **AzureRM** is deprecated.
 
 ## Prerequisites
 
-### Include files
+Always place Azure service prerequisites first, followed by Azure PowerShell and Azure Cloud Shell
+instructions. For example, "You must have `Microsoft.Authorization/roleAssignments/write`
+permissions to complete the instructions in this tutorial" should come first.
 
-- Use one of three Azure PowerShell include files when the article contains commands from the Az
-  PowerShell module.
-  - [No header](https://github.com/MicrosoftDocs/azure-docs/blob/main/includes/azure-powershell-requirements-no-header.md)
-  - [H2 header](https://github.com/MicrosoftDocs/azure-docs/blob/main/includes/azure-powershell-requirements.md)
-  - [H3 header](https://github.com/MicrosoftDocs/azure-docs/blob/main/includes/azure-powershell-requirements-h3.md)
-- Always place Azure service prerequisites first, followed by Azure PowerShell and Azure Cloud Shell
-  instructions. For example, "You must have `Microsoft.Authorization/roleAssignments/write`
-  permissions to complete the instructions in this tutorial" should come before
-  `azure-powershell-requirements-no-header.md`.
-
-If all commands aren't compatible with Cloud Shell, don't use the include files. Instead, instruct
-the user to install Azure PowerShell locally. Include the following text in an H2 Prerequisites
-section.
+If all commands aren't compatible with Cloud Shell, instruct the user to install the **Az**
+PowerShell module locally. Include the following text in an H2 Prerequisites section.
 
 ```markdown
 - This tutorial requires that you run Azure PowerShell locally:
@@ -56,14 +50,23 @@ Follow the [PowerShell-Docs style guide](/powershell/scripting/community/contrib
 and [Editor's checklist](/powershell/scripting/community/contributing/editorial-checklist)
 for formatting command syntax elements in Azure PowerShell documentation.
 
-The first mention of a cmdlet name should be a link to the cmdlet documentation, for example:
+Don't link to cmdlet documentation when mentioning cmdlet names in a paragraph. Instead, surround
+the cmdlet name with backticks, which is styling for inline code (``). Add a references section
+towards the bottom of the page. List the cmdlet names in the references section and link to their
+associated reference article. For example:
 
 ```markdown
-The [Get-AzVM](/powershell/module/az.compute/get-azvm) cmdlet uses the **Location** parameter to ...
+This is an example of using the `Connect-AzAccount` and `Get-AzVM` cmdlets within a
+paragraph.
+
+## References
+
+- [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount)
+- [Get-AzVM](/powershell/module/az.compute/get-azvm)
 ```
 
 > [!NOTE]
-> Do not format text inside the brackets of a hyperlink. For more information about linking to
+> Don't format text inside the brackets of a hyperlink. For more information about linking to
 > Azure PowerShell content, see
 > [Linking to other documents](/powershell/scripting/community/contributing/editorial-checklist#linking-to-other-documents).
 
@@ -71,16 +74,16 @@ The [Get-AzVM](/powershell/module/az.compute/get-azvm) cmdlet uses the **Locatio
 
 Parameters for an Azure PowerShell cmdlet should appear in the order defined by the cmdlet help. A
 cmdlet can have multiple ways to provide the required parameters. When it does, follow the parameter
-set for the usage you're demonstrating. An example of a cmdlet with multiple ways to invoke it is
-[Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount).
+set for the usage you're demonstrating. `Connect-AzAccount` is an example of a cmdlet with multiple
+ways to invoke it.
 
 ## Variables
 
 Avoid reusing variables across multiple code blocks.
 
-The reader may complete the article steps in different sessions. Using variables across code blocks
-may cause errors if they're not set correctly. If you must use the variables across steps, make it
-clear that variables are reused in later steps.
+The reader might complete the article steps in different sessions. Using variables across code
+blocks might cause errors if they're not set correctly. If you must use the variables across steps,
+make it clear that variables are reused in later steps.
 
 ## Randomize passwords for new resources
 
@@ -108,12 +111,12 @@ Use `Get-Random` to add a random number to a name, for example:
 $newAcrName = "myacr-$(Get-Random)"
 ```
 
-## Interactive code snippets (Try It)
+## Interactive code snippets
 
-### When to use Try It
+### When to use interactive code snippets
 
 If Cloud Shell supports _every_ Azure PowerShell command in your article, tag your code blocks with
-`azurepowershell-interactive` to add the _Try It_ button to the snippets:
+`azurepowershell-interactive` to add the _Open Cloud Shell_ button to the snippets:
 
 ````
 ```azurepowershell-interactive
@@ -121,7 +124,7 @@ Get-AzResourceGroup | Select-Object -Property ResourceGroupName, Location
 ```
 ````
 
-### When NOT to use Try It
+### When NOT to use interactive code snippets
 
 Don't use `azurepowershell-interactive` if your article includes _any_ Azure PowerShell commands
 that don't work in Cloud Shell. Use `azurepowershell` only. For example, the `Install-AzAksCliTool`
@@ -143,3 +146,7 @@ Because users are already authenticated when logging into Cloud Shell, don't use
 
 See [Migrate Azure PowerShell from AzureRM to Az](migrate-from-azurerm-to-az.md) for information on
 how to update commands that use the AzureRM PowerShell module to the Az PowerShell module.
+
+[azps-docs-repo]: https://github.com/MicrosoftDocs/azure-docs-powershell
+[azps-source-repo]: https://github.com/Azure/azure-powershell
+[support-lifecycle]: azureps-support-lifecycle.md
