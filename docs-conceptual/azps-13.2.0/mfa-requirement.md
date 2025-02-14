@@ -24,8 +24,8 @@ cases.
 ## Limitations of user identities with MFA in automation
 
 > [!NOTE]
-> You might encounter the error message: **Interactive authentication is needed** when trying to use
-> a user identity with automation.
+> You might encounter the error message: **Interactive authentication is needed** when using a user
+> identity with automation.
 
 - **Interactive authentication**: MFA is triggered during interactive sign-ins when using a
   Microsoft Entra user identity. For automation scripts relying on a user identity, MFA disrupts the
@@ -43,7 +43,7 @@ cases.
 - **Security considerations**: While MFA adds an extra layer of security, it can limit automation
   flexibility, especially in production environments where automation must run without manual
   intervention. Shifting to managed identities, service principals, or federated identities, which
-  are designed for automation purposes and don’t require MFA, is more practical and secure in such
+  are designed for automation purposes and don't require MFA, is more practical and secure in such
   environments.
 
 ## Scenarios that require updates
@@ -110,7 +110,7 @@ mandatory MFA enforcement for Microsoft Entra user identities.
 ### Microsoft Entra MFA articles
 
 - [Plan for mandatory Microsoft Entra multifactor authentication (MFA)][plan-entra-mfa]
-- [How to use the MFA Server Migration Utility to migrate to Microsoft Entra multifactor authentication][mfa-mmigrate-util]
+- [How to use the MFA Server Migration Utility to migrate to Microsoft Entra multifactor authentication][mfa-migrate-util]
 - [Configure Microsoft Entra multifactor authentication][config-entra-mfa]
 - [Deployment considerations for Microsoft Entra multifactor authentication][deploy-considerations-entra-mfa]
 - [Migrate from MFA Server to Microsoft Entra multifactor authentication][migrate-mfa-server-entra]
