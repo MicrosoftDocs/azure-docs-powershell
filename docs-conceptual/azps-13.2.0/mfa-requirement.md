@@ -74,6 +74,7 @@ mandatory MFA enforcement for Microsoft Entra user identities.
 ## See also
 
 - [Planning for mandatory multifactor authentication for Azure and other admin portals][plan-for-mfa]
+- [Workload identities, other machine identities, and human identities][identities]
 - [Sign in to Azure PowerShell non-interactively for automation scenarios][noninteractive-auth]
 - [Reducing personal access token (PAT) usage across Azure DevOps][pat-ado-blog]
 - [Improve security posture in Azure service connections with AzurePipelinesCredential][fic-serviceconn-blog]
@@ -82,6 +83,7 @@ mandatory MFA enforcement for Microsoft Entra user identities.
 <!-- link references -->
 
 [plan-for-mfa]: /entra/identity/authentication/concept-mandatory-multifactor-authentication
+[identities]: /entra/workload-id/workload-identities-overview#workload-identities-other-machine-identities-and-human-identities
 [noninteractive-auth]: /powershell/azure/authenticate-noninteractive
 [pat-ado-blog]: https://devblogs.microsoft.com/devops/reducing-pat-usage-across-azure-devops/
 [fic-serviceconn-blog]: https://devblogs.microsoft.com/azure-sdk/improve-security-posture-in-azure-service-connections-with-azurepipelinescredential/
