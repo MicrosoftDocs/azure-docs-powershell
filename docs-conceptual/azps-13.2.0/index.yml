@@ -58,6 +58,8 @@ landingContent:
             url: migrate-az-13.0.0.md
           - text: Upcoming breaking changes
             url: upcoming-breaking-changes.md
+          - text: Impact of MFA in automation
+            url: authenticate-mfa.md
   - title: Azure PowerShell Reference
     linkLists:
       - linkListType: reference
