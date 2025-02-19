@@ -40,3 +40,17 @@ warning message.
 ```azurepowershell
 Set-Item -Path Env:\AZURE_CLIENTS_SHOW_SECRETS_WARNING -Value $false
 ```
+
+## Transition from Strings to SecureStrings
+
+For security purposes, the default output type of the `Get-AzAccessToken` cmdlet is scheduled to
+change from a plain text `String` to `SecureString`. To prepare for this update, use the
+**AsSecureString** parameter before the breaking change occurs.
+
+This change is designed to prevent the inadvertent exposure of sensitive tokens in plain text. To
+ensure a smooth transition, update your scripts to use the **AsSecureString** parameter, as shown in
+the following example:
+
+```azurepowershell-interactive
+$token = Get-AzAccessToken -AsSecureString
+```
