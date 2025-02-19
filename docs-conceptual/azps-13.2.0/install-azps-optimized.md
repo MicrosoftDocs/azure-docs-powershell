@@ -110,6 +110,31 @@ The following example installs the **AzPreview** module using **PSResourceGet**.
 Install-PSResource -Name AzPreview
 ```
 
+## Install from the Microsoft Artifact Registry
+
+Installing the **Az** PowerShell module from the Microsoft Artifact Registry (MAR) offers faster,
+more reliable installations. MAR ensures quick download speeds and a smooth setup process,
+minimizing potential issues during installation.
+
+1. If you're using a version of PowerShell earlier than 7.5.0, you must install
+   **Microsoft.PowerShell.PSResourceGet** version 1.1.0 or higher
+
+   ```powershell
+   Install-Module -Name Microsoft.PowerShell.PSResourceGet -Repository PSGallery
+   ```
+
+1. Register MAR as a repository in **PSResourceGet** on your system
+
+   ```powershell
+   Register-PSResourceRepository -Name MAR -Uri https://mcr.microsoft.com -ApiVersion ContainerRegistry
+   ```
+
+1. Install the **Az** PowerShell Module from MAR using **PSResourceGet**
+
+   ```powershell
+   Install-PSResource -Name Az -Repository MAR
+   ```
+
 ## Benefits of optimizing the installation process
 
 By adopting a more selective and efficient installation process, you:
@@ -129,6 +154,7 @@ To learn more about managing your Azure resources with the **Az** PowerShell mod
 [Get Started with Azure PowerShell][get-started-azps].
 
 <!-- link references -->
+
 [execution-policies]: /powershell/module/microsoft.powershell.core/about/about_execution_policies
 [install-psresourceget]: /powershell/gallery/powershellget/install-powershellget#install-microsoftpowershellpsresourceget
 [install-psresource]: /powershell/module/microsoft.powershell.psresourceget/install-psresource
