@@ -85,60 +85,110 @@ identity for automation with Azure PowerShell. This list isn't exhaustive of all
 Switching to a managed identity or service principal is required for automation scenarios due to
 mandatory MFA enforcement for Microsoft Entra user identities.
 
-## See also
+## How to begin
 
-- [Sign in to Azure PowerShell non-interactively for automation scenarios][noninteractive-auth]
-- [Reducing personal access token (PAT) usage across Azure DevOps][pat-ado-blog]
-- [Improve security posture in Azure service connections with AzurePipelinesCredential][fic-serviceconn-blog]
+To migrate your Azure PowerShell scripts from using `Connect-AzAccount` with a Microsoft Entra ID
+human user account and password, follow these steps:
 
-### Managed identities
+1. Determine which workload identity is best for you.
+   - Service principal
+   - Managed identity
+   - Federated identity
 
-- [Managed identities for Azure resources][managed-identities]
+1. Obtain the needed permissions to create a new workload identity, or contact your Azure
+   administrator for assistance.
+1. Create the workload identity.
+1. Assign permissions to the new identity.
+1. Update your Azure PowerShell scripts to sign in with a service principal or managed identity.
 
-### Service principals
+### Service principal key concepts
 
-- [Securing service principals in Microsoft Entra ID][service-principals-entra]
+- A nonhuman identity that can access multiple Azure resources. A service principal is used by many
+  Azure resources and isn't tied to a single Azure resource.
+- You can alter properties and credentials of a service principal as needed.
+- Ideal for applications that need to access multiple Azure resources across different
+  subscriptions.
+- Considered more flexible than managed identities but less secure.
+- Often referred to as an "application object" in an Azure tenant or Microsoft Entra ID directory.
+
+To learn more about service principals, see:
+
 - [Apps & service principals in Microsoft Entra ID][apps-sp-entra]
+- [Securing service principals in Microsoft Entra ID][service-principals-entra]
 
-### Workload identities
+To learn how to log into Azure using Azure PowerShell and a service principal, see
+[Sign into Azure with a service principal using Azure PowerShell][auth-sp]
 
-- [Workload identities, other machine identities, and human identities][workload-identities]
+### Managed identity key concepts
 
-### Federated identities
+- Tied to a specific Azure resource allowing that single resource to access other Azure
+  applications.
+- Credentials aren't visible to you. Azure handles secrets, credentials, certificates, and keys.
+- Ideal for Azure resources that need to access other Azure resources within a single subscription.
+- Considered less flexible than service principals but more secure.
+- There are two types of managed identities:
+  - **System assigned**: This type is a 1:1 (one to one) access link between two Azure resources.
+  - **User assigned**: This type has a 1:M (one to many) relationship where the managed identity can
+    access multiple Azure resources.
 
-- [Flexible federated identity credentials (preview)][federated-identities]
-- [Configure an application to trust a managed identity (preview)][trust-managed-identity]
-- [Set up a Flexible Federated identity credential (preview)][setup-federated-identity]
+To learn more about managed identities, see
+[Managed identities for Azure resources][managed-identities].
+
+To learn how to log into Azure using Azure PowerShell and a managed identity, see
+[Sign into Azure with a managed identity using Azure PowerShell][auth-managed-identity]
+
+### Federated identity key concepts
+
+- A federated identity allows service principals (app registrations) and user-assigned managed
+  identities to trust tokens from an external identity provider (IdP), such as GitHub or Google.
+- Once the trust relationship is created, your external software workload exchanges trusted tokens
+  from the external IdP for access tokens from the Microsoft identity platform.
+- Your software workload uses that access token to access the Microsoft Entra protected resources to
+  which the workload is granted access.
+- Federated identities are often the best solution for the following scenarios:
+  - Workload running on any Kubernetes cluster
+  - GitHub Actions
+  - Workload running on Azure compute platforms using application identities
+  - Google Cloud
+  - Amazon Web Services (AWS)
+  - Workload running in compute platforms outside of Azure
+
+To learn more about federated identities, see:
+
+- [What is workload identity federation?][identity-federations]
 - [Migrate to Microsoft Entra multifactor authentication with federations][mfa-federations]
 
-### Microsoft Entra MFA articles
+## Learn more about multifactor authentication
+
+The Microsoft Entra ID documentation site offers more detail on MFA.
 
 - [Plan for mandatory Microsoft Entra multifactor authentication (MFA)][plan-entra-mfa]
 - [How to use the MFA Server Migration Utility to migrate to Microsoft Entra multifactor authentication][mfa-migrate-util]
-- [Configure Microsoft Entra multifactor authentication][config-entra-mfa]
 - [Deployment considerations for Microsoft Entra multifactor authentication][deploy-considerations-entra-mfa]
 - [Migrate from MFA Server to Microsoft Entra multifactor authentication][migrate-mfa-server-entra]
 
+## See also
+
+- [Workload identities, other machine identities, and human identities][workload-identities].
+- [Reducing personal access token (PAT) usage across Azure DevOps][pat-ado-blog]
+- [Improve security posture in Azure service connections with AzurePipelinesCredential][fic-serviceconn-blog]
+
 <!-- link references -->
 
-[noninteractive-auth]: /powershell/azure/authenticate-noninteractive
-[pat-ado-blog]: https://devblogs.microsoft.com/devops/reducing-pat-usage-across-azure-devops/
-[fic-serviceconn-blog]: https://devblogs.microsoft.com/azure-sdk/improve-security-posture-in-azure-service-connections-with-azurepipelinescredential/
-
-[managed-identities]: /entra/identity/managed-identities-azure-resources/
-
-[service-principals-entra]: /entra/architecture/service-accounts-principal
 [apps-sp-entra]: /entra/identity-platform/app-objects-and-service-principals
+[service-principals-entra]: /entra/architecture/service-accounts-principal
+[auth-sp]: /powershell/azure/authenticate-noninteractive#login-with-a-service-principal
+[managed-identities]: /entra/identity/managed-identities-azure-resources/overview
+[auth-managed-identity]: /powershell/azure/authenticate-noninteractive#login-with-a-managed-identity
 
-[workload-identities]: /entra/workload-id/workload-identities-overview#workload-identities-other-machine-identities-and-human-identities
-
-[federated-identities]: /entra/workload-id/workload-identities-flexible-federated-identity-credentials
-[trust-managed-identity]: /entra/workload-id/workload-identity-federation-config-app-trust-managed-identity
-[setup-federated-identity]: /entra/workload-id/workload-identities-set-up-flexible-federated-identity-credential
+[identity-federations]: /entra/workload-id/workload-identity-federation
 [mfa-federations]: /entra/identity/authentication/how-to-migrate-mfa-server-to-mfa-with-federation
 
 [plan-entra-mfa]: /entra/identity/authentication/concept-mandatory-multifactor-authentication
 [mfa-migrate-util]: /entra/identity/authentication/how-to-mfa-server-migration-utility
-[config-entra-mfa]: /entra/identity/authentication/howto-mfa-mfasettings
 [deploy-considerations-entra-mfa]: /entra/identity/authentication/howto-mfa-getstarted
 [migrate-mfa-server-entra]: /entra/identity/authentication/how-to-migrate-mfa-server-to-azure-mfa
+
+[workload-identities]: /entra/workload-id/workload-identities-overview#workload-identities-other-machine-identities-and-human-identities
+[pat-ado-blog]: https://devblogs.microsoft.com/devops/reducing-pat-usage-across-azure-devops/
+[fic-serviceconn-blog]: https://devblogs.microsoft.com/azure-sdk/improve-security-posture-in-azure-service-connections-with-azurepipelinescredential/
