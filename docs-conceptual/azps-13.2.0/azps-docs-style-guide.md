@@ -147,6 +147,8 @@ Because users are already authenticated when logging into Cloud Shell, don't use
 See [Migrate Azure PowerShell from AzureRM to Az](migrate-from-azurerm-to-az.md) for information on
 how to update commands that use the AzureRM PowerShell module to the Az PowerShell module.
 
+<!-- link references -->
+
 [azps-docs-repo]: https://github.com/MicrosoftDocs/azure-docs-powershell
 [azps-source-repo]: https://github.com/Azure/azure-powershell
 [support-lifecycle]: azureps-support-lifecycle.md

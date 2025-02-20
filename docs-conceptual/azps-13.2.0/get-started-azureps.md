@@ -121,6 +121,8 @@ For additional help, connect with the community:
 - [Get-Command][get-command]
 - [Disable-AzDataCollection][disable-azdatacollection]
 
+<!-- link references -->
+
 [cloudshell]: /azure/cloud-shell/overview
 [ps-cloudshell]: /azure/cloud-shell/quickstart-powershell
 [install-azps]: install-azure-powershell.md

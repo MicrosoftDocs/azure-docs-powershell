@@ -129,6 +129,7 @@ To learn more about managing your Azure resources with the **Az** PowerShell mod
 [Get Started with Azure PowerShell][get-started-azps].
 
 <!-- link references -->
+
 [execution-policies]: /powershell/module/microsoft.powershell.core/about/about_execution_policies
 [install-psresourceget]: /powershell/gallery/powershellget/install-powershellget#install-microsoftpowershellpsresourceget
 [install-psresource]: /powershell/module/microsoft.powershell.psresourceget/install-psresource
