@@ -53,7 +53,7 @@ token for a new access token when needed.
 
 > [!NOTE]
 > Depending on your authentication method, your tenant may have Conditional Access policies
-> restricting your access to certain resources.
+> restricting your access to specific resources.
 
 For more information, see [Refresh tokens in the Microsoft identity platform][refresh-tokens].
 
@@ -64,6 +64,7 @@ For more information, see [Refresh tokens in the Microsoft identity platform][re
 - [Set-AzContext][set-azcontext]
 
 <!-- link references -->
+
 [azure-cloud-shell]: /azure/cloud-shell/overview
 [authenticate-interactive]: authenticate-interactive.md
 [authenticate-noninteractive]: authenticate-noninteractive.md

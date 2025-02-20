@@ -246,6 +246,7 @@ Clear-AzConfig -DefaultSubscriptionForLogin
 ```
 
 <!-- link references -->
+
 [get-azconfig]: /powershell/module/az.accounts/get-azconfig
 [update-azconfig]:/powershell/module/az.accounts/update-azconfig
 [export-azconfig]: /powershell/module/az.accounts/export-azconfig

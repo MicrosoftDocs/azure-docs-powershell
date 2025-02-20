@@ -180,15 +180,12 @@ The Microsoft Entra ID documentation site offers more detail on MFA.
 [auth-sp]: /powershell/azure/authenticate-noninteractive#login-with-a-service-principal
 [managed-identities]: /entra/identity/managed-identities-azure-resources/overview
 [auth-managed-identity]: /powershell/azure/authenticate-noninteractive#login-with-a-managed-identity
-
 [identity-federations]: /entra/workload-id/workload-identity-federation
 [mfa-federations]: /entra/identity/authentication/how-to-migrate-mfa-server-to-mfa-with-federation
-
 [plan-entra-mfa]: /entra/identity/authentication/concept-mandatory-multifactor-authentication
 [mfa-migrate-util]: /entra/identity/authentication/how-to-mfa-server-migration-utility
 [deploy-considerations-entra-mfa]: /entra/identity/authentication/howto-mfa-getstarted
 [migrate-mfa-server-entra]: /entra/identity/authentication/how-to-migrate-mfa-server-to-azure-mfa
-
 [workload-identities]: /entra/workload-id/workload-identities-overview#workload-identities-other-machine-identities-and-human-identities
 [pat-ado-blog]: https://devblogs.microsoft.com/devops/reducing-pat-usage-across-azure-devops/
 [fic-serviceconn-blog]: https://devblogs.microsoft.com/azure-sdk/improve-security-posture-in-azure-service-connections-with-azurepipelinescredential/

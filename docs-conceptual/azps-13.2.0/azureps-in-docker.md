@@ -89,6 +89,7 @@ To learn more about the Azure PowerShell modules and their features, see
 [Get Started with Azure PowerShell](get-started-azureps.md).
 
 <!-- link references -->
+
 [install]: https://docs.docker.com/engine/installation/
 [az-image]: https://aka.ms/azps-docker-images
 [file-sharing]: https://docs.docker.com/docker-for-windows/#file-sharing

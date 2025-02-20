@@ -71,8 +71,8 @@ A user-assigned managed identity is an identity you create and manage in Microso
 assigned to one or more Azure service instances. The lifecycle of a user-assigned managed identity
 is managed separately from the service instances to which it's assigned.
 
-When using a user-assigned managed identity, you must specify the **AccountId** parameter and the
-**Identity** parameter, as shown in the following example.
+When using a user-assigned managed identity, you must specify the **AccountId** and **Identity**
+parameters, as shown in the following example.
 
 ```azurepowershell
  Connect-AzAccount -Identity -AccountId <user-assigned-identity-clientId-or-resourceId>

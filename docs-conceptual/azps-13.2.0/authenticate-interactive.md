@@ -11,10 +11,10 @@ title: Sign in to Azure PowerShell interactively
 
 Interactive logins to Azure offer a more intuitive and flexible user experience. Interactive login
 with Azure PowerShell allows users to authenticate to Azure directly through the PowerShell
-interface, which is useful for ad-hoc management tasks and for environments that require manual
-sign-in, such as those with multifactor authentication (MFA). This method simplifies access for
-script testing, learning, and on-the-fly management without needing to preconfigure service
-principals or other noninteractive authentication methods.
+interface, which is helpful for ad-hoc management tasks and environments requiring manual sign-in,
+such as those with multifactor authentication (MFA). This method simplifies access for script
+testing, learning, and on-the-fly management without needing to preconfigure service principals or
+other noninteractive authentication methods.
 
 [!INCLUDE [mfa-requirement](../../includes/mfa-requirement.md)]
 
@@ -119,7 +119,7 @@ example.
 Update-AzConfig -LoginExperienceV2 Off
 ```
 
-When the new login experience is disabled and you have access to multiple subscriptions, you're
+When the new login experience is disabled, and you have access to multiple subscriptions, you're
 signed in to the first subscription Azure returns. Commands run against this subscription by
 default. To change your active subscription for a session, use the `Set-AzContext` cmdlet. To change
 your active subscription and have it persist between sessions on the same system, use the
