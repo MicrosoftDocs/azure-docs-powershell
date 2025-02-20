@@ -39,6 +39,7 @@ The **Az** PowerShell module is preinstalled in Azure [Cloud Shell][cloud-shell-
 - [Support Lifecycle][support-lifecycle]
 
 <!-- link references -->
+
 [release-notes]: release-notes-azureps.md
 [install-windows]: install-azps-windows.md
 [install-linux]: install-azps-linux.md
