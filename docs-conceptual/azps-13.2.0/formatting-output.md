@@ -9,18 +9,18 @@ title: Format Azure PowerShell cmdlet output
 
 # Format Azure PowerShell cmdlet output
 
-By default each Azure PowerShell cmdlet formats output to be easy to read. PowerShell allows you to
-convert or format cmdlet output by piping to one of the following cmdlets:
+By default, Azure PowerShell cmdlets format their output for easy readability. However, you can
+modify or customize the output format by piping the cmdlet output to one of the following cmdlets:
 
-| Formatting      | Conversion       |
-|-----------------|------------------|
-| [Format-Custom](/powershell/module/microsoft.powershell.utility/format-custom) | [ConvertTo-Csv](/powershell/module/microsoft.powershell.utility/convertto-csv)  |
-| [Format-List](/powershell/module/microsoft.powershell.utility/format-list)   | [ConvertTo-Html](/powershell/module/microsoft.powershell.utility/convertto-html) |
-| [Format-Table](/powershell/module/microsoft.powershell.utility/format-table)  | [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) |
-| [Format-Wide](/powershell/module/microsoft.powershell.utility/format-wide)   | [ConvertTo-Xml](/powershell/module/microsoft.powershell.utility/convertto-xml)  |
+|           Formatting           |            Conversion            |
+| ------------------------------ | -------------------------------- |
+| [Format-Custom][format-custom] | [ConvertTo-Csv][convertto-csv]   |
+| [Format-List][format-list]     | [ConvertTo-Html][convertto-html] |
+| [Format-Table][format-table]   | [ConvertTo-Json][convertto-json] |
+| [Format-Wide][format-wide]     | [ConvertTo-Xml][convertto-xml]   |
 
-Formatting is used for display in the PowerShell console, and conversion is used for generating data
-to be consumed by other scripts or programs.
+Formatting displays information in the PowerShell console, while conversion generates data for other
+scripts or programs.
 
 ## Table output format
 
@@ -346,3 +346,14 @@ Get-AzVM | ConvertTo-HTML
 </table>
 </body></html>
 ```
+
+<!-- link references -->
+
+[format-custom]: /powershell/module/microsoft.powershell.utility/format-custom
+[format-list]: /powershell/module/microsoft.powershell.utility/format-list
+[format-table]: /powershell/module/microsoft.powershell.utility/format-table
+[format-wide]: /powershell/module/microsoft.powershell.utility/format-wide
+[convertto-csv]: /powershell/module/microsoft.powershell.utility/convertto-csv
+[convertto-html]: /powershell/module/microsoft.powershell.utility/convertto-html
+[convertto-json]: /powershell/module/microsoft.powershell.utility/convertto-json
+[convertto-xml]: /powershell/module/microsoft.powershell.utility/convertto-xml
