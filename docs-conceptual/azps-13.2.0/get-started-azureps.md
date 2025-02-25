@@ -1,5 +1,5 @@
 ---
-description: Get started with Azure PowerShell
+description: Learn how to get started with Azure PowerShell to manage Azure resources, sign in, and find essential cmdlets for automating tasks with ease.
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
@@ -37,28 +37,29 @@ Connect-AzAccount
 
 [!INCLUDE [mfa-requirement](../../includes/mfa-requirement.md)]
 
-For regional environments that require specific compliance (e.g., Azure China 21Vianet), use the
-**Environment** parameter:
+For regional environments that require specific compliance, for example, Azure China 21Vianet, use
+the **Environment** parameter:
 
 ```azurepowershell
 Connect-AzAccount -Environment AzureChinaCloud
 ```
 
 Azure PowerShell defaults to Web Account Manager (WAM) for authentication on Windows systems, while
-other platforms use browser-based login. For more details, see [Web Account Manager (WAM)][wam].
+other platforms use browser-based login. For more information, see
+[Web Account Manager (WAM)][wam].
 
-If you have access to multiple subscriptions, you’ll be prompted to select one upon login. Learn
-more about this process in [Login experience][login-experience].
+If you have access to multiple subscriptions, you're prompted to select one upon login. Learn more
+about this process in [Login experience][login-experience].
 
-Once signed in, you can use Azure PowerShell cmdlets to manage your resources. For further details
+Once signed in, you can use Azure PowerShell cmdlets to manage your resources. For more information
 on authentication, see [Sign in with Azure PowerShell][authenticate].
 
 ## Find commands
 
 Azure PowerShell cmdlets follow the standard PowerShell naming convention of `Verb-Noun`. The verb
-describes the action (e.g., `New`, `Get`, `Set`, `Remove`), while the noun represents the resource
-type (e.g., `AzVM`, `AzKeyVaultCertificate`, `AzFirewall`, `AzVirtualNetworkGateway`). Nouns in
-Azure PowerShell start with the prefix `Az`.
+describes the action, for instance, `New`, `Get`, `Set`, and `Remove`, while the noun represents the
+resource type, for example, `AzVM`, `AzKeyVaultCertificate`, `AzFirewall`, and
+`AzVirtualNetworkGateway`. Nouns in Azure PowerShell start with the prefix `Az`.
 
 To discover commands, use the `Get-Command` cmdlet. For instance, to list all commands related to
 virtual machines:
@@ -67,7 +68,7 @@ virtual machines:
 Get-Command -Verb Get -Noun AzVM* -Module Az.Compute
 ```
 
-Here’s a quick reference table of common resources and their associated modules:
+Here's a quick reference table of common resources and their associated modules:
 
 |  Resource Type   | Azure PowerShell Module |   Noun Prefix    |
 | ---------------- | ----------------------- | ---------------- |
@@ -84,7 +85,7 @@ For a complete list of Azure PowerShell modules, see the
 ## Data collection
 
 By default, Azure PowerShell collects telemetry data to improve user experience by identifying usage
-patterns and issues. No private or personal data is collected. However, you can opt-out using the
+patterns and issues. No private or personal data is collected. However, you can opt out using the
 `Disable-AzDataCollection` cmdlet if you prefer. For more information, see our
 [privacy statement][privacy-statement].
 
@@ -109,7 +110,7 @@ Explore more Azure PowerShell capabilities:
 - [Manage Azure subscriptions with Azure PowerShell][manage-subscriptions]
 - [Create service principals with Azure PowerShell][service-principal]
 
-For additional help, connect with the community:
+For more help, connect with the community:
 
 - [Azure Tools Community][aztools-community]
 - [Stack Overflow][stack-overflow]
