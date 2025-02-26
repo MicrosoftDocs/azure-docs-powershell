@@ -98,7 +98,9 @@ human user account and password, follow these steps:
 1. Obtain the needed permissions to create a new workload identity, or contact your Azure
    administrator for assistance.
 1. Create the workload identity.
-1. Assign permissions to the new identity.
+1. Assign roles to the new identity. For more information on Azure role assignments, see
+   [Steps to assign an Azure role][steps-assign-role]. To assign roles using Azure PowerShell, see
+   [Assign Azure roles using Azure PowerShell][assign-roles].
 1. Update your Azure PowerShell scripts to sign in with a service principal or managed identity.
 
 ### Service principal key concepts
@@ -188,4 +190,6 @@ The Microsoft Entra ID documentation site offers more detail on MFA.
 [migrate-mfa-server-entra]: /entra/identity/authentication/how-to-migrate-mfa-server-to-azure-mfa
 [workload-identities]: /entra/workload-id/workload-identities-overview#workload-identities-other-machine-identities-and-human-identities
 [pat-ado-blog]: https://devblogs.microsoft.com/devops/reducing-pat-usage-across-azure-devops/
+[steps-assign-role]: /azure/role-based-access-control/role-assignments-steps
+[assign-roles]: /azure/role-based-access-control/role-assignments-powershell
 [fic-serviceconn-blog]: https://devblogs.microsoft.com/azure-sdk/improve-security-posture-in-azure-service-connections-with-azurepipelinescredential/
