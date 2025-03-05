@@ -1,5 +1,5 @@
 ---
-description: Learn how to install Azure PowerShell offline on a system without access to the internet or the PowerShell Gallery.
+description: Learn how to install and run Azure PowerShell offline on a system without access to the internet or the PowerShell Gallery.
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
@@ -20,7 +20,7 @@ those situations, you can install the Az PowerShell module offline using one of 
 ## Prerequisites
 
 - Install a supported version of [PowerShell version 7 or higher][install-powershell]
-- Windows PowerShell 5.1 is also supported if your're running a Windows operating system.
+- Windows PowerShell 5.1 is also supported if you're running a Windows operating system.
 
 ## Cross platform
 
