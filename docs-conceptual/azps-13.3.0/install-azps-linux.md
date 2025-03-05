@@ -9,14 +9,15 @@ title: Install Azure PowerShell on Linux
 
 # Install Azure PowerShell on Linux
 
+This article explains how to install the Az PowerShell module from
+[the PowerShell Gallery][powershell-gallery] on Linux.
+
 The Az PowerShell module is a rollup module. Installing it downloads the generally available Az
 PowerShell modules and makes their cmdlets available for use.
 
-This article explains how to install the Az PowerShell module on Linux.
-
 ## Prerequisites
 
-- Install a supported version of [PowerShell version 7 or higher][install-pwsh]
+- Install a supported version of [PowerShell version 7 or higher][install-pwsh-linux]
 
 ## Installation
 
@@ -30,7 +31,8 @@ Install-Module -Name Az -Repository PSGallery -Force
 
 ## Update the Az PowerShell module
 
-Use [Update-Module][update-module] to update to the latest version of the Az PowerShell module:
+Use the [Update-Module][update-module] cmdlet to update to the latest version of the Az PowerShell
+module:
 
 ```powershell
 Update-Module -Name Az -Force
@@ -67,7 +69,6 @@ For solutions to common installation issues with the Az PowerShell module, see
 ## Provide feedback
 
 To file an issue about the Az PowerShell module, see [file an issue on GitHub][azps-github-issue].
-
 To provide feedback from within a PowerShell session, use the [Send-Feedback][send-feedback] cmdlet.
 
 ## Next Steps
@@ -77,7 +78,8 @@ To learn more about managing your Azure resources with the Az PowerShell module,
 
 <!-- link references -->
 
-[install-pwsh]: /powershell/scripting/install/installing-powershell-on-linux
+[powershell-gallery]: /powershell/scripting/gallery/overview
+[install-pwsh-linux]: /powershell/scripting/install/installing-powershell-on-linux
 [install-module]: /powershell/module/powershellget/install-module
 [update-module]: /powershell/module/powershellget/update-module
 [uninstall-azps]: uninstall-az-ps.md
