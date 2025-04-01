@@ -436,10 +436,10 @@
                 "docs-conceptual/azuresmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
-                "azps-13.3.0/**/*": "OpenSource",
-                "docs-conceptual/azps-13.3.0/*": "OpenSource",
-                "azps-13.4.0/**/*": "None",
-                "docs-conceptual/azps-13.4.0/*": "None",
+                "azps-13.4.0/**/*": "OpenSource",
+                "docs-conceptual/azps-13.4.0/*": "OpenSource",
+                "azps-13.3.0/**/*": "None",
+                "docs-conceptual/azps-13.3.0/*": "None",
                 "azps-12.5.0/**/*": "OpenSource",
                 "docs-conceptual/azps-12.5.0/*": "OpenSource",
                 "aztools/**/*": "OpenSource",
