@@ -1,15 +1,13 @@
 ###YamlMime:Landing
 
-title: Azure PowerShell Documentation
+title: Azure PowerShell documentation
 summary: |
   Official product documentation for Azure PowerShell. Azure PowerShell is a collection of modules for managing Azure resources from PowerShell.
 
 metadata:
-  title: Azure PowerShell Documentation
+  title: Azure PowerShell documentation
   description: Official product documentation for Azure PowerShell. Azure PowerShell is a collection of modules for managing Azure resources from PowerShell.
   ms.topic: landing-page
-  author: mikefrobbins
-  ms.author: mirobb
   ms.devlang: powershell
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
@@ -22,13 +20,13 @@ landingContent:
             url: get-started-azureps.md
           - text: What is Azure PowerShell?
             url: what-is-azure-powershell.md
-          - text: Support Lifecycle
+          - text: Support lifecycle
             url: azureps-support-lifecycle.md
       - linkListType: learn
         links:
           - text: Automate Azure tasks from PowerShell
             url: /training/modules/automate-azure-tasks-with-powershell/
-          - text: Choose the best Azure command line tools for managing and provisioning your cloud infrastructure
+          - text: Choose the best Azure command line tools
             url: /training/modules/azure-command-line-tools-intro/
   - title: Installation
     linkLists:
@@ -44,7 +42,7 @@ landingContent:
             url: install-azps-macos.md
           - text: Run in Azure Cloud Shell
             url: https://shell.azure.com
-          - text: Azure PowerShell in Docker
+          - text: Run in a Docker container
             url: azureps-in-docker.md
   - title: What's new
     linkLists:
@@ -60,13 +58,13 @@ landingContent:
             url: upcoming-breaking-changes.md
           - text: Impact of MFA in automation
             url: authenticate-mfa.md
-  - title: Azure PowerShell Reference
+  - title: Azure PowerShell reference
     linkLists:
       - linkListType: reference
         links:
           - text: Cmdlet reference
             url: /powershell/module/?view=azps-13.4.0
-  - title: Identity and Authentication
+  - title: Identity and authentication
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -74,7 +72,7 @@ landingContent:
             url: authenticate-azureps.md
           - text: Create a service principal
             url: create-azure-service-principal-azureps.md
-          - text: Credential Contexts
+          - text: Credential contexts
             url: context-persistence.md
   - title: Concepts
     linkLists:
@@ -142,7 +140,7 @@ landingContent:
         links:
           - text: Automatically migrate PowerShell scripts
             url: quickstart-migrate-azurerm-to-az-automatically.md
-  - title: Help & Support
+  - title: Help & support
     linkLists:
       - linkListType: overview
         links:
@@ -150,7 +148,9 @@ landingContent:
             url: https://github.com/Azure/azure-powershell/issues
           - text: Troubleshoot
             url: troubleshooting.md
-          - text: Follow Azure PowerShell on Twitter
-            url: https://twitter.com/azureposh
+          - text: Get help from the community
+            url: https://stackoverflow.com/questions/tagged/azure-powershell
+          - text: Follow Azure PowerShell on X
+            url: https://x.com/azureposh
           - text: Azure Tools Blog
-            url: https://techcommunity.microsoft.com/t5/azure-tools-blog/bg-p/AzureToolsBlog
+            url: https://techcommunity.microsoft.com/category/azure/blog/azuretoolsblog
