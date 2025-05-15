@@ -54,7 +54,7 @@ platforms including Windows, Linux, and macOS.
    ```powershell
    $tarSourceUrl = (
        Invoke-RestMethod -Uri https://api.github.com/repos/azure/azure-powershell/releases/latest |
-       Select-Object -ExpandProperty assets | Where-Object content_type -eq 'application/x-gzip'
+       Select-Object -ExpandProperty assets | Where-Object name -like Az-Cmdlets-*.tar.gz
    ).browser_download_url
    ```
 

@@ -57,8 +57,8 @@ When the response is received, the operation will be in progress.
 You can monitor the operation by using **Get-AzureSqlDatabaseCopy** or **Get-AzureSqlDatabaseOperation**.
 
 You can create a continuous copy as an online or offline database.
-The online continuous copy is used to configure Active Geo-Replication for Azure SQL Databasehttps://azure.microsoft.com/en-us/documentation/articles/sql-database-geo-replication-overview/.
-The offline continuous copy is used to configure Standard Geo-Replication for Azure SQL Databasehttps://azure.microsoft.com/en-us/documentation/articles/sql-database-business-continuity-scenarios/.
+The online continuous copy is used to configure Active Geo-Replication for Azure SQL Database/azure/azure-sql/database/active-geo-replication-overview.
+The offline continuous copy is used to configure Standard Geo-Replication for Azure SQL Database/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview.
 
 ## EXAMPLES
 
