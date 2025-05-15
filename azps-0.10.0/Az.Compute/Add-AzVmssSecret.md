@@ -24,7 +24,7 @@ Add-AzVmssSecret [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet> [[-SourceV
 ## DESCRIPTION
 The **Add-AzVmssSecret** cmdlet adds a secret to the Virtual Machine Scale Set (VMSS).
 The secret must be stored in an Azure Key Vault.
-For more information relating to Key Vault, see [What is Azure Key Vault?](https://azure.microsoft.com/en-us/documentation/articles/key-vault-whatis/) (https://azure.microsoft.com/en-us/documentation/articles/key-vault-whatis/).
+For more information relating to Key Vault, see [What is Azure Key Vault?](/azure/key-vault/general/overview).
 For more information about the cmdlets, see [Azure Key Vault Cmdlets](/powershell/module/az.keyvault) or the [Set-AzKeyVaultSecret](/powershell/module/az.keyvault/set-azkeyvaultsecret) cmdlet.
 
 ## EXAMPLES

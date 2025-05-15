@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ### -Slot
 Gets the specified deployment slot of the website.
 Enter the slot name, such as "Staging" or "Production".
-For more information about deployment slots, see Staged Deployment on Microsoft Azure Web Siteshttps://azure.microsoft.com/en-us/documentation/articles/web-sites-staged-publishing/.
+For more information about deployment slots, see [Staged Deployment on Microsoft Azure Web Sites](/azure/app-service/deploy-staging-slots).
 To add a deployment slot to an existing Azure website, use the Set-AzureWebsite cmdlet.
 
 ```yaml
