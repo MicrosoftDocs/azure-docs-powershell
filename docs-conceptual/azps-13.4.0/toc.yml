@@ -192,6 +192,8 @@ items:
     items:
       - name: Azure PowerShell docs style guide
         href: azps-docs-style-guide.md
+      - name: Contribute to reference docs
+        href: contribute-reference-docs.md
   - name: Troubleshooting
     href: troubleshooting.md
   - name: Frequently asked questions
