@@ -43,14 +43,19 @@ Set-Item -Path Env:\AZURE_CLIENTS_SHOW_SECRETS_WARNING -Value $false
 
 ## Transition from Strings to SecureStrings
 
-For security purposes, the default output type of the `Get-AzAccessToken` cmdlet is scheduled to
-change from a plain text `String` to `SecureString`. To prepare for this update, use the
-**AsSecureString** parameter before the breaking change occurs.
+To improve security and reduce the risk of credential leaks, the default output type of the
+`Get-AzAccessToken` cmdlet changed from a plain text `String` to a `SecureString`, starting with
+**Az.Accounts** version 5.0.0 and **Az** version 14.0.0.
 
-This change is designed to prevent the inadvertent exposure of sensitive tokens in plain text. To
-ensure a smooth transition, update your scripts to use the **AsSecureString** parameter, as shown in
-the following example:
+Access tokens are sensitive credentials that grant access to Azure resources. Returning them as
+plain text increases the risk of accidental exposure in logs, transcripts, or interactive sessions.
+By switching to `SecureString`, the cmdlet helps prevent tokens from being displayed or stored
+insecurely.
 
-```azurepowershell-interactive
-$token = Get-AzAccessToken -AsSecureString
-```
+If your scenario requires the token in plain text, which is strongly discouraged, you can convert
+the `SecureString` manually. For guidance, see
+[How can I convert a SecureString to plain text in PowerShell?][convert-secure-string-to-string].
+
+<!-- link references -->
+
+[convert-secure-string-to-string]: /powershell/azure/faq#how-can-i-convert-a-securestring-to-plain-text-in-powershell-
