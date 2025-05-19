@@ -24,7 +24,7 @@ Resize-AzVirtualNetworkGateway -VirtualNetworkGateway <PSVirtualNetworkGateway> 
 The **Resize-AzVirtualNetworkGateway** cmdlet enables you to change the stock-keeping unit (SKU) for a virtual network gateway.
 SKUs determine the capabilities of a gateway, including such things as throughput and the maximum number of IP tunnels that are allowed.
 Azure supports Basic, Standard, High-Performance, VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ, VpnGw3AZ, ErGw1AZ, ErGw2AZ, ErGw3AZ SKUs (sometimes referred to as Small, Medium, and Large SKUs).
-For detailed information about the capabilities of each SKU type, see https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-about-vpngateways/.
+For detailed information about the capabilities of each SKU type, see the [VPN Gateway documentation](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
 Keep in mind that SKUs differ in pricing as well as capabilities.
 For more information, see https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/.
 
