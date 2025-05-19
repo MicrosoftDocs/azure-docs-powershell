@@ -52,8 +52,8 @@ landingContent:
             url: whats-new-overview.md
           - text: Release notes
             url: release-notes-azureps.md
-          - text: Az 13.0.0 migration guide
-            url: migrate-az-13.0.0.md
+          - text: Az 14.0.0 migration guide
+            url: migrate-az-14.0.0.md
           - text: Upcoming breaking changes
             url: upcoming-breaking-changes.md
           - text: Impact of MFA in automation

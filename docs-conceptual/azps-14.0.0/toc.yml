@@ -129,6 +129,8 @@ items:
         href: azps-msgraph-migration-changes.md
       - name: Migrate from previous versions of Az
         items:
+          - name: Az 14.0.0 Migration Guide
+            href: migrate-az-14.0.0.md
           - name: Az 13.0.0 Migration Guide
             href: migrate-az-13.0.0.md
           - name: Az.DesktopVirtualization Migration Guide
