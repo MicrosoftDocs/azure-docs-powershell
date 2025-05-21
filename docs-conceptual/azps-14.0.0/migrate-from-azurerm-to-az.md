@@ -3,7 +3,6 @@ description: Learn the steps and tools for migrating Azure PowerShell scripts fr
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Migrate Azure PowerShell scripts from AzureRM to Az
 ---
 

@@ -3,7 +3,6 @@ description: Overview of the AzureRM PowerShell module retirement including step
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: AzureRM PowerShell module retirement overview
 ---
 

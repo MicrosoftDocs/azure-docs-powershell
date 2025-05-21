@@ -3,7 +3,6 @@ description: Strategies to manage, protect, and prevent inadvertent exposure of 
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Protect secrets in Azure PowerShell
 ---
 

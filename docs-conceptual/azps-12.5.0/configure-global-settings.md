@@ -3,7 +3,6 @@ description: Configure Azure PowerShell global settings using centralized and gr
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Configure Azure PowerShell global settings
 ---
 

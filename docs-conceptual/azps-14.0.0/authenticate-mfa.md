@@ -3,7 +3,6 @@ description: Learn about the impact of mandatory multifactor authentication enfo
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: The impact of multifactor authentication on Azure PowerShell in automation scenarios
 ---
 
