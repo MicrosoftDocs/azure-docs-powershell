@@ -121,7 +121,7 @@ The command upgrade a Storage account with Kind "Storage" or "BlobStorage" to "S
 Specifies the access tier of the Storage account that this cmdlet modifies.
 The acceptable values for this parameter are: Hot and Cool.
 If you change the access tier, it may result in additional charges. For more information, see
-[Azure Blob Storage: Hot and cool storage tiers](http://go.microsoft.com/fwlink/?LinkId=786482).
+[Azure Blob Storage: Hot and cool storage tiers](https://azure.microsoft.com/pricing/details/storage/blobs/).
 If the Storage account has Kind as StorageV2 or BlobStorage, you can specify the *AccessTier* parameter.
 If the Storage account has Kind as Storage, do not specify the *AccessTier* parameter.
 

@@ -3,7 +3,6 @@ description: Learn about Azure PowerShell disabling tenanted passthrough to enha
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Tenanted passthrough is going to be disabled for Azure PowerShell
 ---
 

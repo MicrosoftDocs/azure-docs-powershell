@@ -3,7 +3,6 @@ description: This migration guide contains a list of Azure PowerShell changes fo
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Azure AD to Microsoft Graph migration changes in Azure PowerShell
 ---
 

@@ -3,7 +3,6 @@ description: Learn how to install and run Azure PowerShell on Windows to manage 
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Install Azure PowerShell on Windows
 zone_pivot_group_filename: azure/zone-pivot-groups.json
 zone_pivot_groups: install-azps-windows

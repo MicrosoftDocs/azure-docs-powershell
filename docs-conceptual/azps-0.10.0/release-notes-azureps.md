@@ -2,8 +2,6 @@
 title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.devlang: powershell
-ms.topic: conceptual
-
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---

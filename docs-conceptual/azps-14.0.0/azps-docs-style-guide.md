@@ -3,7 +3,6 @@ description: This article provides the rules of style for writing Azure PowerShe
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Azure PowerShell docs style guide
 ---
 

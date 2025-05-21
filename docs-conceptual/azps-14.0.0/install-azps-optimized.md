@@ -3,7 +3,6 @@ description: Learn how to optimize the installation of Azure PowerShell using PS
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Optimize the installation of Azure PowerShell
 ---
 

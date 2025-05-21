@@ -3,7 +3,6 @@ description: Learn the different authentication types for Azure PowerShell — s
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Sign into Azure from Azure PowerShell
 ---
 

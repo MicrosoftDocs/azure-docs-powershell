@@ -3,7 +3,6 @@ description: Azure PowerShell is available to install for Windows, Linux, and ma
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: How to install Azure PowerShell
 ---
 

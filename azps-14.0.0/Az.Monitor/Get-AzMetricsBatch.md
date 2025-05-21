@@ -912,7 +912,7 @@ Accept wildcard characters: False
 ```
 
 ### -Endpoint
-The regional endpoint to use, for example https://eastus.metrics.monitor.azure.com.
+The regional endpoint to use, for example `https://eastus.metrics.monitor.azure.com`.
 The region should match the region of the requested resources.
 For global resources, the region should be 'global'.
 
@@ -1210,7 +1210,7 @@ Accept wildcard characters: False
 ```
 
 ### -Endpoint
-The regional endpoint to use, for example https://eastus.metrics.monitor.azure.com.
+The regional endpoint to use, for example `https://eastus.metrics.monitor.azure.com`.
 The region should match the region of the requested resources.
 For global resources, the region should be 'global'.
 
@@ -1508,7 +1508,7 @@ Accept wildcard characters: False
 ```
 
 ### -Endpoint
-The regional endpoint to use, for example https://eastus.metrics.monitor.azure.com.
+The regional endpoint to use, for example `https://eastus.metrics.monitor.azure.com`.
 The region should match the region of the requested resources.
 For global resources, the region should be 'global'.
 
@@ -1806,7 +1806,7 @@ Accept wildcard characters: False
 ```
 
 ### -Endpoint
-The regional endpoint to use, for example https://eastus.metrics.monitor.azure.com.
+The regional endpoint to use, for example `https://eastus.metrics.monitor.azure.com`.
 The region should match the region of the requested resources.
 For global resources, the region should be 'global'.
 

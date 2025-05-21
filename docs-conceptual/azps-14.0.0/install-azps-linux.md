@@ -3,7 +3,6 @@ description: Learn how to install and run Azure PowerShell on Linux to manage yo
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Install Azure PowerShell on Linux
 ---
 

@@ -50,7 +50,7 @@ in the Key Vault REST API documentation.
 Note: To import a key from your own hardware security module, you must first generate a BYOK
 package (a file with a .byok file name extension) by using the Azure Key Vault BYOK toolset. For
 more information, see
-[How to Generate and Transfer HSM-Protected Keys for Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=522252).
+[How to Generate and Transfer HSM-Protected Keys for Azure Key Vault](/azure/key-vault/keys/hsm-protected-keys).
 
 As a best practice, back up your key after it is created or updated, by using the
 Backup-AzKeyVaultKey cmdlet. There is no undelete functionality, so if you accidentally delete
@@ -107,7 +107,7 @@ specifies. The imported key is an HSM-protected key.
 
 To import a key from your own hardware security module, you must first generate a BYOK package (a file with a .byok file name extension) by using the Azure Key Vault BYOK toolset.
 For more information, see
-[How to Generate and Transfer HSM-Protected Keys for Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=522252).
+[How to Generate and Transfer HSM-Protected Keys for Azure Key Vault](/azure/key-vault/keys/hsm-protected-keys).
 
 ### Example 5: Import a software-protected key
 ```

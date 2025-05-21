@@ -3,7 +3,6 @@ description: Introducing the Az PowerShell module, recommended for interacting w
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Introducing the Az PowerShell module
 ---
 
