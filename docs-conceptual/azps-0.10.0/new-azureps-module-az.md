@@ -1,9 +1,7 @@
 ---
 title: Introducing the Az PowerShell module
 description: Introducing the Az PowerShell module, the replacement for the AzureRM module.
-
 ms.devlang: powershell
-ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
 ---

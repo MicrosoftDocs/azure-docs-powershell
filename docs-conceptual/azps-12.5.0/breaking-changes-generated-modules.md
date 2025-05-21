@@ -3,7 +3,6 @@ description: Learn about breaking changes in generated modules due to AutoRest.P
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Breaking changes in generated modules due to AutoRest.PowerShell upgrade from v3 to v4
 ---
 

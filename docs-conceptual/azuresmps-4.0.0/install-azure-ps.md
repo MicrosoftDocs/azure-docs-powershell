@@ -2,8 +2,6 @@
 title: Install and configure the Azure PowerShell Service Management module | Microsoft Docs
 description: How to install and configure the Azure PowerShell Service Management module.
 ms.devlang: powershell
-ms.topic: conceptual
-
 ms.custom: devx-track-azurepowershell
 ---
 

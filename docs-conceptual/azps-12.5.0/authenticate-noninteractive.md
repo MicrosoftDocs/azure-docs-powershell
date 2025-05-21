@@ -3,7 +3,6 @@ description: Learn how to sign in to Azure PowerShell non-interactively using ma
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Sign in to Azure PowerShell non-interactively for automation scenarios
 ---
 

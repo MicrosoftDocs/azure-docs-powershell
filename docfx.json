@@ -401,7 +401,7 @@
                 "azps-*/**/*": "reference",
                 "aztools-*/**/*": "reference",
                 "azuresmps-*/**/*": "reference",
-                "docs-conceptual/**/*": "conceptual"
+                "docs-conceptual/**/*": "concept-article"
             },
             "ms.date": {
                 "azps-14.0.0/**/*": "5/19/2025",

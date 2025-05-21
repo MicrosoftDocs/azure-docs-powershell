@@ -3,7 +3,6 @@ description: Learn about upcoming breaking changes in Az.DesktopVirtualization m
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Upcoming breaking changes in Az.DesktopVirtualization module
 ---
 

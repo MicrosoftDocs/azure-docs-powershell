@@ -3,7 +3,6 @@ description: This migration guide contains a list of breaking changes made to Az
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: All changes from AzureRM to Azure PowerShell Az 1.0.0
 ---
 

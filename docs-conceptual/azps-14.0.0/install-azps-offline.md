@@ -3,7 +3,6 @@ description: Learn how to install and run Azure PowerShell offline on a system w
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Offline Installation of Azure PowerShell
 ---
 

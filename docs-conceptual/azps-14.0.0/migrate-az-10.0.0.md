@@ -3,7 +3,6 @@ description: This migration guide contains a list of breaking changes made to Az
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-ms.topic: conceptual
 title: Migration guide for Az 10.0.0
 ---
 
