@@ -112,10 +112,6 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[How to Install and Configure Azure PowerShell](https://azure.microsoft.com/documentation/articles/install-configure-powershell/)
-
 [Add-AzureAccount](./Add-AzureAccount.md)
 
 [Get-AzurePublishSettingsFile](./Get-AzurePublishSettingsFile.md)
-
-

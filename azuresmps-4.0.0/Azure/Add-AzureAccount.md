@@ -37,7 +37,6 @@ When the command completes, you can manage your Azure account in Windows PowerSh
 
 There are two different ways to make your Azure account available to Windows PowerShell.
 You can use the **Add-AzureAccount** cmdlet, which uses Microsoft Entra authentication access tokens, or **Import-AzurePublishSettingsFile**, which uses a management certificate.
-For guidance on which method to use, see [How to: Connect to your subscription](https://azure.microsoft.com/documentation/articles/install-configure-powershell) (https://azure.microsoft.com/documentation/articles/install-configure-powershell/#Connect).
 
 When you run **Add-AzureAccount**, it displays an interactive window that prompts you to sign into your Azure account.
 This sign-in is valid until the access token expires.
