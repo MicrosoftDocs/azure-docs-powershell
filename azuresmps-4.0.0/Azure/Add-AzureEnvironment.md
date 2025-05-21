@@ -255,7 +255,6 @@ Accept wildcard characters: False
 
 ### -ResourceManagerEndpoint
 Specifies the endpoint for Azure Resource Manager data, including data about resource groups associated with the account.
-For more information about Azure Resource Manager, see [Azure Resource Manager Cmdlets](https://go.microsoft.com/fwlink/?LinkID=394765)  (https://go.microsoft.com/fwlink/?LinkID=394765) and [Using Windows PowerShell with Resource Manager](https://go.microsoft.com/fwlink/?LinkID=394767)  (https://go.microsoft.com/fwlink/?LinkID=394767).
 
 ```yaml
 Type: String
