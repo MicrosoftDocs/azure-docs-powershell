@@ -149,6 +149,8 @@ For detailed information about breaking changes in major releases of the Az Powe
 the following articles.
 
 - [Upcoming breaking changes](upcoming-breaking-changes.md)
+- [Az 14.0.0 breaking changes](migrate-az-14.0.0.md)
+- [Az 13.0.0 breaking changes](migrate-az-13.0.0.md)
 - [Az 12.0.0 breaking changes](migrate-az-12.0.0.md)
 - [Az 11.0.0 breaking changes](migrate-az-11.0.0.md)
 - [Az 10.0.0 breaking changes](migrate-az-10.0.0.md)
