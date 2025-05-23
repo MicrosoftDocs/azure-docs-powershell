@@ -98,11 +98,11 @@ Parameter 'ApplicationGateway' accepts value of type 'PSApplicationGateway' from
 
 [Add a probe to an existing application gateway](/azure/application-gateway/application-gateway-create-probe-ps#add-a-probe-to-an-existing-application-gateway)
 
-[Add-AzApplicationGatewayProbeConfig]()
+[Add-AzApplicationGatewayProbeConfig](Add-AzApplicationGatewayProbeConfig.md)
 
-[New-AzApplicationGatewayProbeConfig]()
+[New-AzApplicationGatewayProbeConfig](New-AzApplicationGatewayProbeConfig.md)
 
-[Remove-AzApplicationGatewayProbeConfig]()
+[Remove-AzApplicationGatewayProbeConfig](Remove-AzApplicationGatewayProbeConfig.md)
 
-[Set-AzApplicationGatewayProbeConfig]()
+[Set-AzApplicationGatewayProbeConfig](Set-AzApplicationGatewayProbeConfig.md)
 
