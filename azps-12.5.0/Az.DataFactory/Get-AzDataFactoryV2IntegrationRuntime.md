@@ -289,6 +289,6 @@ Keywords: azure, azurerm, arm, resource, management, manager, data, factories, c
 
 ## RELATED LINKS
 
-[Set-AzDataFactoryV2IntegrationRuntime]()
+[Set-AzDataFactoryV2IntegrationRuntime](Set-AzDataFactoryV2IntegrationRuntime.md)
 
-[Remove-AzDataFactoryV2IntegrationRuntime]()
+[Remove-AzDataFactoryV2IntegrationRuntime](Remove-AzDataFactoryV2IntegrationRuntime.md)

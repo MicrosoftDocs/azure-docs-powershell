@@ -301,11 +301,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzApplicationGatewayBackendHttpSetting]()
+[Get-AzApplicationGatewayBackendHttpSetting](Get-AzApplicationGatewayBackendHttpSetting.md)
 
-[New-AzApplicationGatewayBackendHttpSetting]()
+[New-AzApplicationGatewayBackendHttpSetting](New-AzApplicationGatewayBackendHttpSetting.md)
 
-[Remove-AzApplicationGatewayBackendHttpSetting]()
+[Remove-AzApplicationGatewayBackendHttpSetting](Remove-AzApplicationGatewayBackendHttpSetting.md)
 
-[Set-AzApplicationGatewayBackendHttpSetting]()
+[Set-AzApplicationGatewayBackendHttpSetting](Set-AzApplicationGatewayBackendHttpSetting.md)
 

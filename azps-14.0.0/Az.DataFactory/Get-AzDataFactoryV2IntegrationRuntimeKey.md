@@ -159,4 +159,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-AzDataFactoryV2IntegrationRuntimeKey]()
+[New-AzDataFactoryV2IntegrationRuntimeKey](New-AzDataFactoryV2IntegrationRuntimeKey.md)
