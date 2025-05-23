@@ -245,11 +245,11 @@ Parameter 'ApplicationGateway' accepts value of type 'PSApplicationGateway' from
 
 ## RELATED LINKS
 
-[Add-AzApplicationGatewayProbeConfig]()
+[Add-AzApplicationGatewayProbeConfig](Add-AzApplicationGatewayProbeConfig.md)
 
-[Get-AzApplicationGatewayProbeConfig]()
+[Get-AzApplicationGatewayProbeConfig](Get-AzApplicationGatewayProbeConfig.md)
 
-[New-AzApplicationGatewayProbeConfig]()
+[New-AzApplicationGatewayProbeConfig](New-AzApplicationGatewayProbeConfig.md)
 
-[Remove-AzApplicationGatewayProbeConfig]()
+[Remove-AzApplicationGatewayProbeConfig](Remove-AzApplicationGatewayProbeConfig.md)
 
