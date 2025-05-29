@@ -300,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetObjectID
-Specifies the replcating server for which the properties need to be updated.
+Specifies the replicating server for which the properties need to be updated.
 The ID should be retrieved using the Get-AzMigrateServerReplication cmdlet.
 
 ```yaml
@@ -331,7 +331,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetVMName
-Specifies the replcating server for which the properties need to be updated.
+Specifies the replicating server for which the properties need to be updated.
 The ID should be retrieved using the Get-AzMigrateServerReplication cmdlet.
 
 ```yaml

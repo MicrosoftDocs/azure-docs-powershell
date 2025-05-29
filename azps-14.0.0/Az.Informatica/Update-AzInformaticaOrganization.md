@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -Property
-Patchable PropertieInformaticaOrganizationPropertiesUpdates of the Organization observability resource
+Patchable PropertiesInformaticaOrganizationPropertiesUpdates of the Organization observability resource
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Informatica.Models.IOrganizationPropertiesCustomUpdate
