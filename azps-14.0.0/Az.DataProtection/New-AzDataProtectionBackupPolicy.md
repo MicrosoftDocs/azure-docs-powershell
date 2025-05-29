@@ -76,7 +76,7 @@ The fourth command updates the policy object with lifecycles created.
 The fifth, sixth commands create the custom schedule object for the backup policy, twice weekly starting from $schDates.
 The seventh command updates the policy object with custom schedule.
 The eighth, ninth, tenth commands update the Monthly retention rule with custom lifecycles.
-The eleventh, twelth commands create a tag criteria for Monthly policy.
+The eleventh, twelfth commands create a tag criteria for Monthly policy.
 Tag criteria needs to be added for each custom retention rule (automatically added for default retention rule).
 The last command creates the policy.
 
@@ -191,8 +191,8 @@ operationalVaultedPolicyName       Microsoft.DataProtection/backupVaults/backupP
 ```
 
 The first command gets the default vaulted policy template for AzureBlob.
-The second to fifteenth command defines and updates the Operational, vaulted weekly, monthly, yearly lifecycle and tagcriteria.
-Next we define a trigger object with schedule time and timzone, set it to 2:30 AM West Europe standard time.
+The second to fifteenth command defines and updates the Operational, vaulted weekly, monthly, yearly lifecycle and tag criteria.
+Next we define a trigger object with schedule time and timezone, set it to 2:30 AM West Europe standard time.
 The last command creates the hybrid AzureBlob policy.
 
 ### Example 6: Create policy for AzureDatabaseForPGFlexServer/AzureDatabaseForMySQL
@@ -224,7 +224,7 @@ pgflex-policy       Microsoft.DataProtection/backupVaults/backupPolicies
 
 The first command gets the default policy template for AzureDatabaseForPGFlexServer.
 These steps can also be used for AzureDatabaseForMySQL as is.
-The second to tenth command defines and updates the vaulted daily, monthly lifecycle and tagcriteria.
+The second to tenth command defines and updates the vaulted daily, monthly lifecycle and tag criteria.
 Next we define a trigger object with schedule, set it to every Weekly Monday, Tuesday schedule.
 The last command creates the AzureDatabaseForPGFlexServer policy.
 

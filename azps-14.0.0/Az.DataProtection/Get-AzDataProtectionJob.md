@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseSecondaryRegion
-Switch parameter to fetch dataprotection job from secondary region (Cross Region Restore)
+Switch parameter to fetch data protection job from secondary region (Cross Region Restore)
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
