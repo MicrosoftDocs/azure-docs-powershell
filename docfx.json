@@ -1,6 +1,10 @@
 {
     "build": {
         "content": [
+            { "files": ["toc.yml"], "src": "azps-14.1.0", "version": "azps-14.1.0", "dest": "module/azure-powershell" },
+            { "files": ["**/*.yml"], "src": "azps-14.1.0", "version": "azps-14.1.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-14.1.0", "version": "azps-14.1.0", "dest": "azure" },
+
             { "files": ["toc.yml"], "src": "azps-14.0.0", "version": "azps-14.0.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-14.0.0", "version": "azps-14.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-14.0.0", "version": "azps-14.0.0", "dest": "azure" },
@@ -28,11 +32,13 @@
             }
         ],
         "resource": [
+            { "files": ["media/**"], "version": "azps-14.1.0" },
             { "files": ["media/**"], "version": "azps-14.0.0" },
             { "files": ["media/**"], "version": "azps-12.5.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" }
         ],
         "versions": {
+            "azps-14.1.0": { "dest": "azps-14.1.0" },
             "azps-14.0.0": { "dest": "azps-14.0.0" },
             "azps-12.5.0": { "dest": "azps-12.5.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" },
@@ -404,6 +410,7 @@
                 "docs-conceptual/**/*": "concept-article"
             },
             "ms.date": {
+                "azps-14.1.0/**/*": "5/29/2025",
                 "azps-14.0.0/**/*": "5/19/2025",
                 "azps-12.5.0/**/*": "11/11/2024",
                 "azps-0.10.0/**/*": "4/14/2020",
@@ -429,6 +436,8 @@
                 "docs-conceptual/azuresmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
+                "azps-14.1.0/**/*": "OpenSource",
+                "docs-conceptual/azps-14.1.0/*": "OpenSource",
                 "azps-14.0.0/**/*": "OpenSource",
                 "docs-conceptual/azps-14.0.0/*": "OpenSource",
                 "azps-12.5.0/**/*": "OpenSource",
