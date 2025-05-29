@@ -36,7 +36,7 @@ PS C:\> Add-AzureTrafficManagerEndpoint -TrafficManagerProfile $TrafficManagerPr
 The first command uses the **Get-AzureTrafficManagerProfile** cmdlet to get the profile named ContosoProfile, and then stores it in the $TrafficManagerProfile variable.
 
 The second command adds an endpoint to Traffic Manager profile that is stored in $TrafficManagerProfile.
-The endpoint has the domain name Contoso02App.couldapp.net.
+The endpoint has the domain name Contoso02App.cloudapp.net.
 The command also specifies whether it is enabled and its type.
 The command passes the profile object to the **Set-AzureTrafficManagerProfile** cmdlet to connect to Azure to save your changes.
 
@@ -46,7 +46,7 @@ PS C:\>Add-AzureTrafficManagerEndpoint -TrafficManagerProfile ContosoTrafficMana
 ```
 
 This command adds an endpoint to a Traffic Manager profile.
-The endpoint has the domain name Contoso02App.couldapp.net.
+The endpoint has the domain name Contoso02App.cloudapp.net.
 The command also specifies whether it is enabled and its type.
 The command also specifies the weight and location for the endpoint.
 The command passes the profile object to **Set-AzureTrafficManagerProfile** to connect to Azure to save your changes.

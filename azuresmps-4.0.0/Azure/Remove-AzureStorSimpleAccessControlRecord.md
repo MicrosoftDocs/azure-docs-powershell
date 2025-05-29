@@ -31,7 +31,7 @@ The **Remove-AzureStorSimpleAccessControlRecord** cmdlet deletes an access contr
 
 ## EXAMPLES
 
-### Example 1: Remove an Access Controlaccess control recordaccess control
+### Example 1: Remove an Access Control record
 ```
 PS C:\>Remove-AzureStorSimpleAccessControlRecord -ACRName "Acr10" -WaitForComplete -Force
 VERBOSE: ClientRequestId: 574aeb7f-fbc9-46d5-bc68-1bfe4487bd8b_PS
@@ -53,7 +53,7 @@ VERBOSE: The job created for your delete operation has completed successfully.
 This command deletes the access control record named Acr10.
 This command specifies the *WaitForComplete* parameter, and, therefore, the command waits until the operation is complete, and then returns a **TaskStatusInfo** object.
 
-### Example 2: Remove an Access Controlaccess control record by using the pipelineAccess Controlaccess controlaccess control
+### Example 2: Remove an Access Control record by using the pipeline
 ```
 PS C:\>Get-AzureStorSimpleAccessControlRecord -ACRName "Acr10" | Remove-AzureStorSimpleAccessControlRecord -Force 
 VERBOSE: ClientRequestId: ff8d8bd6-4c92-4ab6-8fde-e9344a253da3_PS

@@ -56,14 +56,14 @@ This command sets the status of the deployment for the service named ContosoServ
 
 ### Example 2: Assign a different configuration file to a deployment
 ```
-PS C:\> Set-AzureDeployment -Config -ServiceName "ContosoService" -Slot "Staging" -Configuration "C:\Temp\MyServiceConfig.Cloud.csfg"
+PS C:\> Set-AzureDeployment -Config -ServiceName "ContosoService" -Slot "Staging" -Configuration "C:\Temp\MyServiceConfig.Cloud.cscfg"
 ```
 
 This command assigns a different configuration file for the deployment for the service named ContosoService in the staging environment.
 
 ### Example 3: Set the upgrade mode to Auto
 ```
-PS C:\> Set-AzureDeployment -Upgrade -ServiceName "ContosoService" -Mode Auto -Package "C:\packages\ContosoApp.cspkg" -Configuration "C:\Config\ContosoServiceConfig.Cloud.csfg"
+PS C:\> Set-AzureDeployment -Upgrade -ServiceName "ContosoService" -Mode Auto -Package "C:\packages\ContosoApp.cspkg" -Configuration "C:\Config\ContosoServiceConfig.Cloud.cscfg"
 ```
 
 This command sets the upgrade mode to Auto, and specifies an upgrade package and a new configuration file.

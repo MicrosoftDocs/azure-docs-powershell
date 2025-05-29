@@ -63,7 +63,7 @@ Accept wildcard characters: False
 
 ### -GitHub
 Indicates that this cmdlet links the new website to an existing GitHub repository.
-Commits to the Giuthub repository are pushed to the website in Azure.
+Commits to the GitHub repository are pushed to the website in Azure.
 
 ```yaml
 Type: SwitchParameter

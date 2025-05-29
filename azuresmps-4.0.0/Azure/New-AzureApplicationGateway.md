@@ -27,7 +27,7 @@ The **New-AzureApplicationGateway** cmdlet creates an application gateway.
 
 ### Example 1: Create an application gateway
 ```
-PS C:\> New-AzureApplicationGateway -Name "ApplicationGateway06" -VnetName "VirutalNetwork17" -Subnets @("Subnet01", "Subnet02", "Subnet03")
+PS C:\> New-AzureApplicationGateway -Name "ApplicationGateway06" -VnetName "VirtualNetwork17" -Subnets @("Subnet01", "Subnet02", "Subnet03")
 ```
 
 This command creates an application gateway named ApplicationGateway06.

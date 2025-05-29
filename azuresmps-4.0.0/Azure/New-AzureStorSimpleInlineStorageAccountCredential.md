@@ -61,7 +61,7 @@ EncryptionKey                   : SK23I39L7GvoLce7u63TMT/A/V/TW8JXe+PoXKEKzwsr3t
 InstanceId                      : a72bf4bb-0f0a-4ec2-a8b1-c4548825f522
 IsDefault                       : False
 IsEncryptionEnabled             : True
-Name                            : VolumneContainer_06
+Name                            : VolumeContainer_06
 OperationInProgress             : None
 Owned                           : True
 PrimaryStorageAccountCredential : Microsoft.WindowsAzure.Management.StorSimple.Models.StorageAccountCredentialResponse

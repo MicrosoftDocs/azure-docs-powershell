@@ -28,7 +28,7 @@ The **Update-AzureApplicationGateway** cmdlet updates an existing application ga
 ### Example 1: Modify an application gateway by using its name
 ```
 PS C:\> Stop-AzureApplicationGateway -Name "ApplicationGateway06"
-PS C:\> Update-AzureApplicationGateway -Name "ApplicationGateway06" -VnetName "VirutalNetwork18" -Subnets @("Subnet05", "Subnet06")
+PS C:\> Update-AzureApplicationGateway -Name "ApplicationGateway06" -VnetName "VirtualNetwork18" -Subnets @("Subnet05", "Subnet06")
 ```
 
 The first command stops the application gateway named ApplicationGateway06.

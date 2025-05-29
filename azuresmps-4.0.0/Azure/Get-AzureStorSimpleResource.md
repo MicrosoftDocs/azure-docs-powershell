@@ -110,7 +110,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 This cmdlet returns **ResourceCredentials** objects that contain the following properties: 
 
 - **ResourceName**
-- **ResouceId**
+- **ResourceId**
 - **ResourceState**
 
 ## NOTES
