@@ -20,13 +20,13 @@ VirtualMachinesGetOperationErrors: Get error details on operation errors (like t
 VirtualMachinesGetOperationStatus: Polling endpoint to read status of operations performed on virtual machines
 
 ### [Invoke-AzComputeScheduleExecuteDeallocate](Invoke-AzComputeScheduleExecuteDeallocate.md)
-VirtualMachinesExecuteDeallocate: Execute deallocate operation for a batch of virtual machines, this operation is triggered as soon as Computeschedule receives it.
+VirtualMachinesExecuteDeallocate: Execute deallocate operation for a batch of virtual machines, this operation is triggered as soon as ComputeSchedule receives it.
 
 ### [Invoke-AzComputeScheduleExecuteHibernate](Invoke-AzComputeScheduleExecuteHibernate.md)
-VirtualMachinesExecuteHibernate: Execute hibernate operation for a batch of virtual machines, this operation is triggered as soon as Computeschedule receives it.
+VirtualMachinesExecuteHibernate: Execute hibernate operation for a batch of virtual machines, this operation is triggered as soon as ComputeSchedule receives it.
 
 ### [Invoke-AzComputeScheduleExecuteStart](Invoke-AzComputeScheduleExecuteStart.md)
-VirtualMachinesExecuteStart: Execute start operation for a batch of virtual machines, this operation is triggered as soon as Computeschedule receives it.
+VirtualMachinesExecuteStart: Execute start operation for a batch of virtual machines, this operation is triggered as soon as ComputeSchedule receives it.
 
 ### [Invoke-AzComputeScheduleSubmitDeallocate](Invoke-AzComputeScheduleSubmitDeallocate.md)
 VirtualMachinesSubmitDeallocate: Schedule deallocate operation for a batch of virtual machines at datetime in future.
