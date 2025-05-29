@@ -246,7 +246,7 @@ Accept wildcard characters: False
 
 ### -PartnerDestinationInfoAzureSubscriptionId
 Azure subscription ID of the subscriber.
-The partner destination associated with the channel will becreated under this Azure subscription.
+The partner destination associated with the channel will be created under this Azure subscription.
 
 ```yaml
 Type: System.String
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 
 ### -PartnerDestinationInfoResourceGroupName
 Azure Resource Group of the subscriber.
-The partner destination associated with the channel will becreated under this resource group.
+The partner destination associated with the channel will be created under this resource group.
 
 ```yaml
 Type: System.String
@@ -353,7 +353,7 @@ Accept wildcard characters: False
 
 ### -PartnerTopicInfoAzureSubscriptionId
 Azure subscription ID of the subscriber.
-The partner topic associated with the channel will becreated under this Azure subscription.
+The partner topic associated with the channel will be created under this Azure subscription.
 
 ```yaml
 Type: System.String
@@ -384,7 +384,7 @@ Accept wildcard characters: False
 
 ### -PartnerTopicInfoResourceGroupName
 Azure Resource Group of the subscriber.
-The partner topic associated with the channel will becreated under this resource group.
+The partner topic associated with the channel will be created under this resource group.
 
 ```yaml
 Type: System.String
@@ -399,8 +399,8 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerTopicInfoSource
-The source information is provided by the publisher to determine the scope or context from which the eventsare originating.
-This information can be used by the subscriber during the approval process of thecreated partner topic.
+The source information is provided by the publisher to determine the scope or context from which the events are originating.
+This information can be used by the subscriber during the approval process of the created partner topic.
 
 ```yaml
 Type: System.String
