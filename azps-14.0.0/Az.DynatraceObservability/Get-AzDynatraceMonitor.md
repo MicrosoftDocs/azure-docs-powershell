@@ -43,7 +43,7 @@ Get a MonitorResource
 
 ## EXAMPLES
 
-### Example 1: List all dynatrace monitors under a subsciption
+### Example 1: List all dynatrace monitors under a subscription
 ```powershell
 Get-AzDynatraceMonitor
 ```
@@ -54,7 +54,7 @@ Name        ProvisioningState Location    MonitoringStatus SingleSignOnPropertyA
 dyob-pwsh01 Succeeded         eastus2euap Enabled          {mpliftrlogz20210811outlook.onmicrosoft.com}
 ```
 
-This command lists all dynatrace monitors under a subsciption.
+This command lists all dynatrace monitors under a subscription.
 
 ### Example 2: List all dynatrace monitors under the resource group
 ```powershell
