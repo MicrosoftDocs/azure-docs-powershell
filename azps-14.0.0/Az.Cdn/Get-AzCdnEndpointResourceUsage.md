@@ -25,7 +25,7 @@ Checks the quota and usage of geo filters and custom domains under the given end
 
 ## EXAMPLES
 
-### Example 1: List resource usages of an AzureCDN Endpoint under the AzureCDN profile
+### Example 1: List resource usagesof an AzureCDN Endpoint under the AzureCDN profile
 ```powershell
 Get-AzCdnEndpointResourceUsage -ResourceGroupName testps-rg-da16jm -ProfileName cdn001 -EndpointName endptest001
 ```
