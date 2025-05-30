@@ -29,7 +29,7 @@ The Remove-AzAnalysisServicesServer cmdlet  deletes an instance of Analysis Serv
 Remove-AzAnalysisServicesServer -Name "testserver" -ResourceGroupName "testgroup"
 ```
 
-This command will remove the server named testserver in the resourcegroup testgroup
+This command will remove the server named testserver in the resource group testgroup
 
 ## PARAMETERS
 
