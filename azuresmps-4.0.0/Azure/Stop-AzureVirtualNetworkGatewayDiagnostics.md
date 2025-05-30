@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: 9E7A170D-512A-4117-85C3-3AA4D6341C6B
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Stop-AzureVirtualNetworkGatewayDiagnostics

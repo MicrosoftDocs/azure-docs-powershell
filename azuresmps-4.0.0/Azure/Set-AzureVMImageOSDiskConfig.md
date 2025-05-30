@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 9CD39F1C-D858-4275-A6DE-10901DC962FE
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureVMImageOSDiskConfig

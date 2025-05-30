@@ -1,8 +1,9 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 ms.assetid: 03EAFFB2-EA64-4227-A33B-D24EB4A75F71
-online version:
+online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Add-AzureAccount

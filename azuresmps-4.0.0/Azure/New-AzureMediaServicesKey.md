@@ -3,7 +3,9 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 756F757C-8CDE-43A5-A8A6-D55EF9C66183
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
+
 # New-AzureMediaServicesKey
 
 ## SYNOPSIS
