@@ -1,8 +1,9 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: D04D79CE-F183-4A8D-B925-F640D89377BD
-online version:
+online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-WAPackVM

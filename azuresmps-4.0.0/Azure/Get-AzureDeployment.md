@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 2171943B-D1AC-45FD-99FD-DD0C14AFC60C
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureDeployment

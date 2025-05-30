@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: C608BBDD-DC2B-4BEF-812D-0BAE94FB4395
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureSchedulerHttpJob

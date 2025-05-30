@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 ms.assetid: 049201C9-590F-47EB-9030-25F80CD8DFA5
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureStorSimpleDeviceVolume

@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 ms.assetid: DA8EC1BD-1219-4B98-B661-40A28897271F
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Clear-AzureRemoteAppVmStaleAdObject

@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 939A28A4-394A-4447-9EFA-8F2876D04DCD
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Stop-AzureService

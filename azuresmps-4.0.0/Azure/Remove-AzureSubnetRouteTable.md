@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: AA2F2793-03A5-41D9-8021-D18BE98DB044
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureSubnetRouteTable

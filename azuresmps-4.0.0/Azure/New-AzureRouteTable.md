@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: F4BADE88-28A2-42FB-9578-93D65148709E
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureRouteTable

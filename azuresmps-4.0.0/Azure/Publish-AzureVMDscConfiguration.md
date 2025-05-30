@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 956B60BE-D978-4682-BA11-4EE9296B77B4
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Publish-AzureVMDscConfiguration
