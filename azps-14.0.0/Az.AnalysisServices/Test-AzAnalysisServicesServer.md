@@ -29,7 +29,7 @@ The Test-AzAnalysisServicesServer cmdlet tests the existence of an instance of A
 Test-AzAnalysisServicesServer -Name "testserver" -ResourceGroupName "testgroup"
 ```
 
-This command will test if there is a server named testserver in the resourcegroup testgroup
+This command will test if there is a server named testserver in the resource group testgroup
 
 ## PARAMETERS
 

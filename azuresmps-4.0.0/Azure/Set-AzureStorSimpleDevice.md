@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorSimpleNetworkConfig
-Specifies an array of network configuration objectss for interfaces on a device.
+Specifies an array of network configuration objects for interfaces on a device.
 To obtain a **NetworkConfig** object, use the New-AzureStorSimpleNetworkConfig cmdlet.
 
 ```yaml

@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomRdpProperty
-Specifies custom Remote Desktop Protocal (RDP) properties which can be used to configure drive redirection and other settings.
+Specifies custom Remote Desktop Protocol (RDP) properties which can be used to configure drive redirection and other settings.
 See [RDP Settings for Remote Desktop Services in Windows Server](https://technet.microsoft.com/library/ff393699(v=ws.10).aspx)  `(https://technet.microsoft.com/library/ff393699(v=ws.10).aspx)` for details.
 
 ```yaml

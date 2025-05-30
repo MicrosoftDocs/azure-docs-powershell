@@ -205,6 +205,12 @@ Creates an ASR storage classification mapping in the Recovery Services vault.
 ### [New-AzRecoveryServicesAsrvCenter](New-AzRecoveryServicesAsrvCenter.md)
 Adds a vCenter server to discover protectable items from.
 
+### [New-AzRecoveryServicesAsrVMNicConfig](New-AzRecoveryServicesAsrVMNicConfig.md)
+Creates an ASR NIC config that contains the failover and test failover related configuration details.
+
+### [New-AzRecoveryServicesAsrVMNicIPConfig](New-AzRecoveryServicesAsrVMNicIPConfig.md)
+Creates an ASR NIC IP config that contains the failover and test failover configuration details for each IP Config (Primary and Secondary) of the NIC.
+
 ### [New-AzRecoveryServicesBackupProtectionPolicy](New-AzRecoveryServicesBackupProtectionPolicy.md)
 Creates a Backup protection policy.
 
@@ -235,6 +241,9 @@ Deletes the specified ASR recovery plan from Recovery Services vault.
 ### [Remove-AzRecoveryServicesAsrReplicationProtectedItem](Remove-AzRecoveryServicesAsrReplicationProtectedItem.md)
 Stops/Disables replication for an Azure Site Recovery replication protected item.
 
+### [Remove-AzRecoveryServicesAsrReplicationProtectedItemDisk](Remove-AzRecoveryServicesAsrReplicationProtectedItemDisk.md)
+Removes disks to replication protected item.
+
 ### [Remove-AzRecoveryServicesAsrServicesProvider](Remove-AzRecoveryServicesAsrServicesProvider.md)
 Deletes/unregister the specified Azure Site Recovery recovery services provider from the recovery services vault.
 
@@ -257,8 +266,7 @@ Deletes a Recovery Services vault.
 Restarts an Azure Site Recovery job.
 
 ### [Restore-AzRecoveryServicesBackupItem](Restore-AzRecoveryServicesBackupItem.md)
-Restores the data and configuration for a Backup item to the specified recovery point. The required parameters vary with the backup item type.
-The same command is used to restore Azure Virtual machines, databases running within Azure Virtual machines and Azure file shares as well.
+Restores the data and configuration for a Backup item to the specified recovery point. The required parameters vary with the backup item type. The same command is used to restore Azure Virtual machines, databases running within Azure Virtual machines and Azure file shares as well.
 
 ### [Resume-AzRecoveryServicesAsrJob](Resume-AzRecoveryServicesAsrJob.md)
 Resumes a suspended Azure Site Recovery job.
