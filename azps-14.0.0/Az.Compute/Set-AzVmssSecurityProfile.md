@@ -384,7 +384,7 @@ The second command sets the SecurityType enum to "TrustedLaunch".
     $vmssvm = Get-AzVmssVM -ResourceGroupName $rgname -VMScaleSetName $vmssName -InstanceId $vmssvms[0].InstanceId;
     # Verify the SEcurityEncryptionType at $vmssvm.StorageProfile.OsDIsk.ManagedDisk.SecurityProfile.SecurityEncryptionType;
 
-    # Verify the Gallery Version encyrption at $galVersion.PublishingProfile.TargetRegions.Encryption.OSDiskImage.SecurityProfile.ConfidentialVMEncryptionType $cvmEncryptionType;
+    # Verify the Gallery Version encryption at $galVersion.PublishingProfile.TargetRegions.Encryption.OSDiskImage.SecurityProfile.ConfidentialVMEncryptionType $cvmEncryptionType;
 ```
 
 ## PARAMETERS

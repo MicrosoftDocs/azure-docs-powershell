@@ -62,7 +62,6 @@ Adds a backend address pool configuration to a load balancer.
 Adds a front-end IP configuration to a load balancer.
 
 ### [Add-AzLoadBalancerInboundNatPoolConfig](Add-AzLoadBalancerInboundNatPoolConfig.md)
-{{Manually Enter Add-AzLoadBalancerInboundNatPoolConfig Description Here}}
 
 ### [Add-AzLoadBalancerInboundNatRuleConfig](Add-AzLoadBalancerInboundNatRuleConfig.md)
 Adds an inbound NAT rule configuration to a load balancer.
@@ -167,7 +166,6 @@ Gets the WAF configuration of an application gateway.
 Gets an application security group.
 
 ### [Get-AzBgpServiceCommunity](Get-AzBgpServiceCommunity.md)
-{{Manually Enter Get-AzBgpServiceCommunity Description Here}}
 
 ### [Get-AzEffectiveNetworkSecurityGroup](Get-AzEffectiveNetworkSecurityGroup.md)
 Gets the effective network security group of a network interface.
@@ -209,7 +207,6 @@ Gets a backend address pool configuration for a load balancer.
 Gets a front-end IP configuration in a load balancer.
 
 ### [Get-AzLoadBalancerInboundNatPoolConfig](Get-AzLoadBalancerInboundNatPoolConfig.md)
-{{Manually Enter Get-AzLoadBalancerInboundNatPoolConfig Description Here}}
 
 ### [Get-AzLoadBalancerInboundNatRuleConfig](Get-AzLoadBalancerInboundNatRuleConfig.md)
 Gets an inbound NAT rule configuration for a load balancer.
@@ -240,6 +237,12 @@ Lists network usages for a subscription
 
 ### [Get-AzNetworkWatcher](Get-AzNetworkWatcher.md)
 Gets the properties of a Network Watcher
+
+### [Get-AzNetworkWatcherConnectionMonitor](Get-AzNetworkWatcherConnectionMonitor.md)
+Returns connection monitor with specified name or the list of connection monitors
+
+### [Get-AzNetworkWatcherConnectionMonitorReport](Get-AzNetworkWatcherConnectionMonitorReport.md)
+Query a snapshot of the most recent connection states.
 
 ### [Get-AzNetworkWatcherFlowLogStatus](Get-AzNetworkWatcherFlowLogStatus.md)
 Gets the status of flow logging on a resource.
@@ -272,10 +275,8 @@ Gets a public IP address.
 Gets routes from a route table.
 
 ### [Get-AzRouteFilter](Get-AzRouteFilter.md)
-{{Fill in the Synopsis}}
 
 ### [Get-AzRouteFilterRuleConfig](Get-AzRouteFilterRuleConfig.md)
-{{Fill in the Synopsis}}
 
 ### [Get-AzRouteTable](Get-AzRouteTable.md)
 Gets route tables.
@@ -299,7 +300,6 @@ Lists an Azure virtual network gateway's BGP peers
 Gets a Virtual Network Gateway Connection
 
 ### [Get-AzVirtualNetworkGatewayConnectionSharedKey](Get-AzVirtualNetworkGatewayConnectionSharedKey.md)
-{{Manually Enter Get-AzVirtualNetworkGatewayConnectionSharedKey Description Here}}
 
 ### [Get-AzVirtualNetworkGatewayConnectionVpnDeviceConfigScript](Get-AzVirtualNetworkGatewayConnectionVpnDeviceConfigScript.md)
 This commandlet takes the connection resource, VPN device brand, model, firmware version, and return the corresponding configuration script that customers can apply directly on their on-premises VPN devices. The script will follow the syntax of the selected device, and fill in the necessary parameters such as Azure gateway public IP addresses, virtual network address prefixes, VPN tunnel pre-shared key, etc. so customers can simply copy-paste to their VPN device configurations.
@@ -419,7 +419,6 @@ Creates a backend address pool configuration for a load balancer.
 Creates a front-end IP configuration for a load balancer.
 
 ### [New-AzLoadBalancerInboundNatPoolConfig](New-AzLoadBalancerInboundNatPoolConfig.md)
-{{Manually Enter New-AzLoadBalancerInboundNatPoolConfig Description Here}}
 
 ### [New-AzLoadBalancerInboundNatRuleConfig](New-AzLoadBalancerInboundNatRuleConfig.md)
 Creates an inbound NAT rule configuration for a load balancer.
@@ -447,6 +446,9 @@ Creates a network security rule configuration.
 
 ### [New-AzNetworkWatcher](New-AzNetworkWatcher.md)
 Creates a new Network Watcher resource.
+
+### [New-AzNetworkWatcherConnectionMonitor](New-AzNetworkWatcherConnectionMonitor.md)
+Creates a connection monitor.
 
 ### [New-AzNetworkWatcherPacketCapture](New-AzNetworkWatcherPacketCapture.md)
 Creates a new packet capture resource and starts a packet capture session on a VM.
@@ -476,7 +478,6 @@ Creates a virtual network.
 Creates a Virtual Network Gateway
 
 ### [New-AzVirtualNetworkGatewayConnection](New-AzVirtualNetworkGatewayConnection.md)
-{{Manually Enter New-AzVirtualNetworkGatewayConnection Description Here}}
 
 ### [New-AzVirtualNetworkGatewayIpConfig](New-AzVirtualNetworkGatewayIpConfig.md)
 Creates an IP Configuration for a Virtual Network Gateway
@@ -560,7 +561,6 @@ Removes a backend address pool configuration from a load balancer.
 Removes a front-end IP configuration from a load balancer.
 
 ### [Remove-AzLoadBalancerInboundNatPoolConfig](Remove-AzLoadBalancerInboundNatPoolConfig.md)
-{{Manually Enter Remove-AzLoadBalancerInboundNatPoolConfig Description Here}}
 
 ### [Remove-AzLoadBalancerInboundNatRuleConfig](Remove-AzLoadBalancerInboundNatRuleConfig.md)
 Removes an inbound NAT rule configuration from a load balancer.
@@ -589,6 +589,9 @@ Removes a network security rule from a network security group.
 ### [Remove-AzNetworkWatcher](Remove-AzNetworkWatcher.md)
 Removes a Network Watcher.
 
+### [Remove-AzNetworkWatcherConnectionMonitor](Remove-AzNetworkWatcherConnectionMonitor.md)
+Remove connection monitor.
+
 ### [Remove-AzNetworkWatcherPacketCapture](Remove-AzNetworkWatcherPacketCapture.md)
 Removes a packet capture resource.
 
@@ -599,10 +602,8 @@ Removes a public IP address.
 Removes a route from a route table.
 
 ### [Remove-AzRouteFilter](Remove-AzRouteFilter.md)
-{{Fill in the Synopsis}}
 
 ### [Remove-AzRouteFilterRuleConfig](Remove-AzRouteFilterRuleConfig.md)
-{{Fill in the Synopsis}}
 
 ### [Remove-AzRouteTable](Remove-AzRouteTable.md)
 Removes a route table.
@@ -620,10 +621,8 @@ Deletes a Virtual Network Gateway Connection
 Removes the default site from a virtual network gateway.
 
 ### [Remove-AzVirtualNetworkGatewayIpConfig](Remove-AzVirtualNetworkGatewayIpConfig.md)
-{{Manually Enter Remove-AzVirtualNetworkGatewayIpConfig Description Here}}
 
 ### [Remove-AzVirtualNetworkPeering](Remove-AzVirtualNetworkPeering.md)
-{{Manually Enter Remove-AzVirtualNetworkPeering Description Here}}
 
 ### [Remove-AzVirtualNetworkSubnetConfig](Remove-AzVirtualNetworkSubnetConfig.md)
 Removes a subnet configuration from a virtual network.
@@ -635,10 +634,8 @@ Removes a VPN client-revocation certificate.
 Removes an existing VPN client root certificate.
 
 ### [Reset-AzVirtualNetworkGateway](Reset-AzVirtualNetworkGateway.md)
-{{Manually Enter Reset-AzVirtualNetworkGateway Description Here}}
 
 ### [Reset-AzVirtualNetworkGatewayConnectionSharedKey](Reset-AzVirtualNetworkGatewayConnectionSharedKey.md)
-{{Manually Enter Reset-AzVirtualNetworkGatewayConnectionSharedKey Description Here}}
 
 ### [Resize-AzVirtualNetworkGateway](Resize-AzVirtualNetworkGateway.md)
 Resizes an existing virtual network gateway.
@@ -707,7 +704,6 @@ Sets the goal state for a load balancer.
 Sets the goal state for a front-end IP configuration in a load balancer.
 
 ### [Set-AzLoadBalancerInboundNatPoolConfig](Set-AzLoadBalancerInboundNatPoolConfig.md)
-{{Manually Enter Set-AzLoadBalancerInboundNatPoolConfig Description Here}}
 
 ### [Set-AzLoadBalancerInboundNatRuleConfig](Set-AzLoadBalancerInboundNatRuleConfig.md)
 Sets an inbound NAT rule configuration for a load balancer.
@@ -736,6 +732,9 @@ Sets the goal state for a network security rule configuration.
 ### [Set-AzNetworkWatcherConfigFlowLog](Set-AzNetworkWatcherConfigFlowLog.md)
 Configures flow logging for a target resource.
 
+### [Set-AzNetworkWatcherConnectionMonitor](Set-AzNetworkWatcherConnectionMonitor.md)
+Update a connection monitor.
+
 ### [Set-AzPublicIpAddress](Set-AzPublicIpAddress.md)
 Sets the goal state for a public IP address.
 
@@ -743,10 +742,8 @@ Sets the goal state for a public IP address.
 Sets the goal state for a route.
 
 ### [Set-AzRouteFilter](Set-AzRouteFilter.md)
-{{Fill in the Synopsis}}
 
 ### [Set-AzRouteFilterRuleConfig](Set-AzRouteFilterRuleConfig.md)
-{{Fill in the Synopsis}}
 
 ### [Set-AzRouteTable](Set-AzRouteTable.md)
 Sets the goal state for a route table.
@@ -778,17 +775,22 @@ Configures the goal state for a subnet configuration in a virtual network.
 ### [Start-AzApplicationGateway](Start-AzApplicationGateway.md)
 Starts an application gateway.
 
+### [Start-AzNetworkWatcherConnectionMonitor](Start-AzNetworkWatcherConnectionMonitor.md)
+Start a connection monitor
+
 ### [Start-AzNetworkWatcherResourceTroubleshooting](Start-AzNetworkWatcherResourceTroubleshooting.md)
 Starts troubleshooting on a Networking resource in Azure.
 
 ### [Stop-AzApplicationGateway](Stop-AzApplicationGateway.md)
 Stops an application gateway
 
+### [Stop-AzNetworkWatcherConnectionMonitor](Stop-AzNetworkWatcherConnectionMonitor.md)
+Stop a connection monitor
+
 ### [Stop-AzNetworkWatcherPacketCapture](Stop-AzNetworkWatcherPacketCapture.md)
 Stops a running packet capture session
 
 ### [Test-AzDnsAvailability](Test-AzDnsAvailability.md)
-{{Manually Enter Test-AzDnsAvailability Description Here}}
 
 ### [Test-AzNetworkWatcherConnectivity](Test-AzNetworkWatcherConnectivity.md)
 Returns connectivity information for a specified source VM and a destination.
@@ -798,4 +800,3 @@ Returns whether the packet is allowed or denied to or from a particular destinat
 
 ### [Test-AzPrivateIPAddressAvailability](Test-AzPrivateIPAddressAvailability.md)
 Test availability of a private IP address in a virtual network.
-

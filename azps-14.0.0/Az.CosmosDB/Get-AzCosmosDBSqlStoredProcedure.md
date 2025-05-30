@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Stored Prcodecure Name.
+Stored Procedure Name.
 
 ```yaml
 Type: System.String

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Invoke-AzComputeScheduleExecuteStart
 
 ## SYNOPSIS
-VirtualMachinesExecuteStart: Execute start operation for a batch of virtual machines, this operation is triggered as soon as Computeschedule receives it.
+VirtualMachinesExecuteStart: Execute start operation for a batch of virtual machines, this operation is triggered as soon as ComputeSchedule receives it.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Invoke-AzComputeScheduleExecuteStart -Location <String> [-SubscriptionId <String
 ```
 
 ## DESCRIPTION
-VirtualMachinesExecuteStart: Execute start operation for a batch of virtual machines, this operation is triggered as soon as Computeschedule receives it.
+VirtualMachinesExecuteStart: Execute start operation for a batch of virtual machines, this operation is triggered as soon as ComputeSchedule receives it.
 
 ## EXAMPLES
 

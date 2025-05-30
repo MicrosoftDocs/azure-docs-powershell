@@ -44,7 +44,7 @@ This example adds scaffolding for a new worker role named MyWorkerRole to the cu
 
 ### Example 3: Create worker role with custom scaffolding
 ```
-PS C:\> Add-AzureWorkerRole MyWorkerRole -TemplateFoldr .\MyWorkerRoleTemplate
+PS C:\> Add-AzureWorkerRole MyWorkerRole -TemplateFolder .\MyWorkerRoleTemplate
 ```
 
 This example creates a worker role with custom scaffolding.
