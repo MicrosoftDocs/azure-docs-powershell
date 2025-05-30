@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 9D821623-DEF9-49E4-9C44-10643A92A2E7
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureWebsite

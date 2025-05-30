@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 8632A865-D4CC-4AE5-8307-055CDD776D26
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Add-AzureWorkerRole

@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: CCA6334F-A193-4506-B873-76F29980C68D
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureLocation

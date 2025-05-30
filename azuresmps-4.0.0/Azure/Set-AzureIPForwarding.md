@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: AA9686AF-2D03-43DB-A91B-50D06D674A3D
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureIPForwarding

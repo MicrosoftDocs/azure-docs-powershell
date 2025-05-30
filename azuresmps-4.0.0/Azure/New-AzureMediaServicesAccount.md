@@ -3,7 +3,9 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 6C4081EE-0BCD-4285-8ABB-778BD95BFE4F
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
+
 # New-AzureMediaServicesAccount
 
 ## SYNOPSIS

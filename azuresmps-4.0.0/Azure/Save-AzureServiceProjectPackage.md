@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 9445B7FA-FC72-4F71-BD44-8AA55BE9BA0E
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Save-AzureServiceProjectPackage

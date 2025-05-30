@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: E246C177-EAEE-4D7A-A544-664F47862FC7
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureSBAuthorizationRule

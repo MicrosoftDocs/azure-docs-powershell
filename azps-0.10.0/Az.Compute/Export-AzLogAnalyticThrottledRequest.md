@@ -1,9 +1,10 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
-online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/export-AzLogAnalyticThrottledRequest
+online version: https://learn.microsoft.com/en-us/powershell/module/az.compute/export-azloganalyticthrottledrequest
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Export-AzLogAnalyticThrottledRequest.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Export-AzLogAnalyticThrottledRequest.md
+Module Name: Az.Compute
 ---
 
 # Export-AzLogAnalyticThrottledRequest

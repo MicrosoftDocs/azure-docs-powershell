@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 ms.assetid: 9953AF91-2424-4BD1-9133-E0E07AC1087E
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureSqlDatabaseUsages

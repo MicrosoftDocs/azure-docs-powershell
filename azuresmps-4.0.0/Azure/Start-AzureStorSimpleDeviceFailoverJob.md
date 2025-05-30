@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 ms.assetid: 53580FF1-D905-40FD-A5F0-D5FBCD036E0B
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Start-AzureStorSimpleDeviceFailoverJob

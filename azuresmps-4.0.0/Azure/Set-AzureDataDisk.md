@@ -1,8 +1,9 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 ms.assetid: 64EF867E-5142-4317-9552-8BC94117208D
-online version:
+online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureDataDisk

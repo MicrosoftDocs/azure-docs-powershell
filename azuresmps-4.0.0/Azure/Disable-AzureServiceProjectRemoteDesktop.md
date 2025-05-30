@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: E735FCE5-D82F-42D0-8D74-6A568E55AC17
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Disable-AzureServiceProjectRemoteDesktop

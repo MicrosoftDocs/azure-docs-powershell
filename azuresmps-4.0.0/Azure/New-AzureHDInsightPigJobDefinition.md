@@ -1,8 +1,9 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 ms.assetid: 227D933A-9272-4C53-89AF-711379B47A74
-online version:
+online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureHDInsightPigJobDefinition

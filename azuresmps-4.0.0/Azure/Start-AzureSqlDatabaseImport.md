@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 ms.assetid: 5EE936CA-DD9A-4BC6-B835-E22AE633B46D
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Start-AzureSqlDatabaseImport

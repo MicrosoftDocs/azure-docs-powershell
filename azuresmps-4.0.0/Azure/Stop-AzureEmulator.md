@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 43E2C42E-16A3-426E-A7C4-33942F06F908
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Stop-AzureEmulator

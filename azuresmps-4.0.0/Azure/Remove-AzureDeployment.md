@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: D6D54096-670D-43E4-93EB-24C8FBA199A4
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureDeployment

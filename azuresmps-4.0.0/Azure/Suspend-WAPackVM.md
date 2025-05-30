@@ -1,8 +1,9 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: ABF5B4EB-0908-4103-B0BF-69A68A21D69C
-online version:
+online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Suspend-WAPackVM

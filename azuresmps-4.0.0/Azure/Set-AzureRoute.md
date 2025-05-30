@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: A7DFF559-188D-4CF9-9315-CA327E0C5C0B
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureRoute

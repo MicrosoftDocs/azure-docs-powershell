@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 8062D57E-8381-4715-9AA8-551F15DCC492
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureWebsite
