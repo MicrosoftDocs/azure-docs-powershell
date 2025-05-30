@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserUpn
-Specifes the user Principal Name (UPN) of a user, for example, PattiFuller@contoso.com.
+Specifies the user Principal Name (UPN) of a user, for example, PattiFuller@contoso.com.
 
 ```yaml
 Type: String

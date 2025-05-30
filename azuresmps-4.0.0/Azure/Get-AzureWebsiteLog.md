@@ -56,7 +56,7 @@ PS C:\> Get-AzureWebsiteLog -Tail -Message Error
 
 This example starts log streaming and show error logs only.
 
-### Example 4: Display avaiable logs
+### Example 4: Display available logs
 ```
 PS C:\> Get-AzureWebsiteLog -Name MyWebsite -ListPath
 ```

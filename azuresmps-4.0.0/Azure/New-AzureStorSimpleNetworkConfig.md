@@ -53,7 +53,7 @@ This command creates network configuration for the Data0 interface.
 This command specifies the *Controller0IPv4Address*, *Controller1IPv4Address*, and *EnableIscsi* parameters.
 This cmdlet can configure Data0 for only these three parameters.
 
-### Example 2: Configuren an interface other than Data0 an
+### Example 2: Configure an interface other than Data0 an
 ```
 PS C:\>New-AzureStorSimpleNetworkConfig -InterfaceAlias Data1 -EnableIscsi $True -EnableCloud $True -IPv6Gateway "db8:421e:9a8::a4:1c50" -IPv4Gateway "10.67.64.1" -IPv4Address "10.67.64.48" -IPv6Prefix "2001:db8:a::123/64" -IPv4Netmask "255.255.0.0"
 VERBOSE: ClientRequestId: 3a15ff0e-b769-4329-9147-676b1e0acd7d_PS

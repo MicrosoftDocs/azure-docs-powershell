@@ -28,7 +28,7 @@ The **Get-AzureVirtualNetworkGatewayIPsecParameters** cmdlet gets the IPsec para
 ## PARAMETERS
 
 ### -ConnectedEntityId
-Specifies the ID of a connected entitiy.
+Specifies the ID of a connected entity.
 
 ```yaml
 Type: String
