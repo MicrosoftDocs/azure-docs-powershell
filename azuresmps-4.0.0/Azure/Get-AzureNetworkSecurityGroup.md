@@ -48,7 +48,7 @@ Specifies the name of the network security group that this cmdlet gets.
 > [!NOTE]
 > When a classic network security group is created in a resource group other than
 > ***Default-Networking*** using the Azure portal, you must use the following PowerShell syntax: 
-> `Get-AzureNetworkSecurityGroup -Name 'Group myResouceGroup myNetworkSecurityGroup'`.
+> `Get-AzureNetworkSecurityGroup -Name 'Group myResourceGroup myNetworkSecurityGroup'`.
 
 ```yaml
 Type: String

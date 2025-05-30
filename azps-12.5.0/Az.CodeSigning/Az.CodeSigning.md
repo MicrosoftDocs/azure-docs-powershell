@@ -13,12 +13,15 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 Microsoft Azure PowerShell: CodeSigning cmdlets
 
 ## Az.CodeSigning Cmdlets
+### [Get-AzCodeSigningCertChain](Get-AzCodeSigningCertChain.md)
+Retrieve Azure.CodeSigning Certificate Chain
+
 ### [Get-AzCodeSigningCustomerEku](Get-AzCodeSigningCustomerEku.md)
-Retrieve Azure.CodeSigning customer Eku.
+Retrieve Azure.CodeSigning customer Eku
 
 ### [Get-AzCodeSigningRootCert](Get-AzCodeSigningRootCert.md)
-Retrieve Azure.CodeSigning Root Cert.
+Retrieve Azure.CodeSigning Root Cert
 
 ### [Invoke-AzCodeSigningCIPolicySigning](Invoke-AzCodeSigningCIPolicySigning.md)
-Invoke CI Policy signing to Azure.CodeSigning.
+Invoke CI Policy signing to Azure.CodeSigning
 

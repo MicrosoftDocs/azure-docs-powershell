@@ -41,10 +41,10 @@ Retrieves a list of credentials associated with a service principal.
 Filters active directory users.
 
 ### [Get-AzDeployment](Get-AzDeployment.md)
-Gets a deployment at subscription scope.
+Get deployment
 
 ### [Get-AzDeploymentOperation](Get-AzDeploymentOperation.md)
-Gets the deployment operations for a deployment at subscription scope.
+Get deployment operation
 
 ### [Get-AzLocation](Get-AzLocation.md)
 Gets all locations and the supported resource providers for each location.
@@ -92,12 +92,13 @@ Gets a resource lock.
 Gets a resource provider.
 
 ### [Get-AzRoleAssignment](Get-AzRoleAssignment.md)
-Lists Azure RBAC role assignments at the specified scope.
-By default it lists all role assignments in the selected Azure subscription.
-Use respective parameters to list assignments to a specific user, or to list assignments on a specific resource group or resource.
+Lists Azure RBAC role assignments at the specified scope. By default it lists all role assignments in the selected Azure subscription. Use respective parameters to list assignments to a specific user, or to list assignments on a specific resource group or resource.
 
 ### [Get-AzRoleDefinition](Get-AzRoleDefinition.md)
 Lists all Azure RBAC roles that are available for assignment.
+
+### [Get-AzTag](Get-AzTag.md)
+Gets predefined Azure tags.
 
 ### [Invoke-AzResourceAction](Invoke-AzResourceAction.md)
 Invokes an action on a resource.
@@ -124,7 +125,7 @@ Adds a credential to an existing service principal.
 Creates a new active directory user.
 
 ### [New-AzDeployment](New-AzDeployment.md)
-Creates a new deployment at subscription scope.
+Creat a deployment
 
 ### [New-AzManagedApplication](New-AzManagedApplication.md)
 Creates an Azure managed application.
@@ -163,11 +164,10 @@ Creates a resource lock.
 Assigns the specified RBAC role to the specified principal, at the specified scope.
 
 ### [New-AzRoleDefinition](New-AzRoleDefinition.md)
-Creates a custom role in Azure RBAC.
-Provide either a JSON role definition file or a PSRoleDefinition object as input.
-First, use the Get-AzRoleDefinition command to generate a baseline role definition object.
-Then, modify its properties as required.
-Finally, use this command to create a custom role using role definition.
+Creates a custom role in Azure RBAC. Provide either a JSON role definition file or a PSRoleDefinition object as input. First, use the Get-AzRoleDefinition command to generate a baseline role definition object. Then, modify its properties as required. Finally, use this command to create a custom role using role definition.
+
+### [New-AzTag](New-AzTag.md)
+Creates a predefined Azure tag or adds values to an existing tag.
 
 ### [Register-AzProviderFeature](Register-AzProviderFeature.md)
 Registers an Azure provider feature in your account.
@@ -197,7 +197,7 @@ Removes a credential from a service principal.
 Deletes an active directory user.
 
 ### [Remove-AzDeployment](Remove-AzDeployment.md)
-Removes a deployment at subscription scope.
+Removes a deployment and any associated operations
 
 ### [Remove-AzManagedApplication](Remove-AzManagedApplication.md)
 Removes a managed application
@@ -236,12 +236,13 @@ Removes a resource lock.
 Removes a role assignment to the specified principal who is assigned to a particular role at a particular scope.
 
 ### [Remove-AzRoleDefinition](Remove-AzRoleDefinition.md)
-Deletes a custom role in Azure RBAC.
-The role to be deleted is specified using the Id property of the role.
-Delete will fail if there are existing role assignments made to the custom role.
+Deletes a custom role in Azure RBAC. The role to be deleted is specified using the Id property of the role. Delete will fail if there are existing role assignments made to the custom role.
+
+### [Remove-AzTag](Remove-AzTag.md)
+Deletes predefined Azure tags or values.
 
 ### [Save-AzDeploymentTemplate](Save-AzDeploymentTemplate.md)
-Gets the template for a deployment at subscription scope.
+Saves a deployment template to a file.
 
 ### [Save-AzResourceGroupDeploymentTemplate](Save-AzResourceGroupDeploymentTemplate.md)
 Saves a resource group deployment template to a file.
@@ -271,20 +272,16 @@ Modifies a resource group.
 Modifies a resource lock.
 
 ### [Set-AzRoleDefinition](Set-AzRoleDefinition.md)
-Modifies a custom role in Azure RBAC.
-Provide the modified role definition either as a JSON file or as a PSRoleDefinition.
-First, use the Get-AzRoleDefinition command to retrieve the custom role that you wish to modify.
-Then, modify the properties that you wish to change.
-Finally, save the role definition using this command.
+Modifies a custom role in Azure RBAC. Provide the modified role definition either as a JSON file or as a PSRoleDefinition. First, use the Get-AzRoleDefinition command to retrieve the custom role that you wish to modify. Then, modify the properties that you wish to change. Finally, save the role definition using this command.
 
 ### [Stop-AzDeployment](Stop-AzDeployment.md)
-Cancels a running deployment at subscription scope.
+Cancal a running deployment
 
 ### [Stop-AzResourceGroupDeployment](Stop-AzResourceGroupDeployment.md)
 Cancels a resource group deployment.
 
 ### [Test-AzDeployment](Test-AzDeployment.md)
-Validates a deployment template and parameters at subscription scope.
+Validates a deployment.
 
 ### [Test-AzResourceGroupDeployment](Test-AzResourceGroupDeployment.md)
 Validates a resource group deployment.
@@ -303,3 +300,4 @@ Updates an existing active directory user.
 
 ### [Update-AzManagementGroup](Update-AzManagementGroup.md)
 Updates a Management Group
+

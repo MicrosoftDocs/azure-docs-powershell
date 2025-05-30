@@ -61,7 +61,7 @@ This command gets all subscriptions in the account.
 C:\PS>Get-AzureSubscription -SubscriptionName "MyProdSubscription"
 ```
 
-This command gets only the "MyProdSubsciption" subscription.
+This command gets only the "MyProdSubscription" subscription.
 
 ### Example 3: Get the default subscription
 ```
