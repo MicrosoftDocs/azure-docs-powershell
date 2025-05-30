@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 ms.assetid: F63769D6-9A31-4A67-972A-1E0428853C86
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Start-AzureSqlDatabaseRecovery

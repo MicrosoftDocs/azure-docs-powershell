@@ -3,6 +3,7 @@ external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 ms.assetid: B8E4F6BD-FBF2-4B19-AA61-02149F933ABB
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureAutomationAccount

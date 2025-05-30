@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: A34A2B01-A658-410E-8B68-98A6427DFC33
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureVNetGatewayDefaultSite

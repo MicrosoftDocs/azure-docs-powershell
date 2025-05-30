@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: F8418A93-8E6B-4A1C-B319-7CACE95AB600
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Move-AzureService

@@ -3,6 +3,7 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: AE26EA0F-9D92-4FDF-92EF-CA33BF06C0DB
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Restart-AzureSiteRecoveryJob

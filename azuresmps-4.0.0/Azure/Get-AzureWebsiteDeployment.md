@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: D15329E9-BB72-4F1B-B79A-E7AD920A9D5A
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureWebsiteDeployment

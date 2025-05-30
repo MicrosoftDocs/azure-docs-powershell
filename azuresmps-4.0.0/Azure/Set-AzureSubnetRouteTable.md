@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: 7E40C4A2-8B9A-47E8-82AB-19208247349C
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureSubnetRouteTable
