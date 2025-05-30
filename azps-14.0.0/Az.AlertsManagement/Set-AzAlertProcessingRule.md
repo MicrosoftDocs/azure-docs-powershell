@@ -389,7 +389,7 @@ Accept wildcard characters: False
 
 ### -ScheduleEndDateTime
 End Date Time. Format 2022-09-21 06:00:00
-Should be mentioned in case of Reccurent  Schedule - Daily, Weekly or Monthly.
+Should be mentioned in case of recurrent schedule - Daily, Weekly or Monthly.
 
 ```yaml
 Type: System.String
@@ -437,7 +437,7 @@ Accept wildcard characters: False
 
 ### -ScheduleReccurence2EndTime
 Reccurence Start Time in the timezone of ScheduleTimeZone parameter. Format 06:00:00
-Should be mentioned in case of Reccurent  Schedule - Daily, Weekly or Monthly.
+Should be mentioned in case of recurrent schedule - Daily, Weekly or Monthly.
 
 ```yaml
 Type: System.String
@@ -453,7 +453,7 @@ Accept wildcard characters: False
 
 ### -ScheduleReccurence2StartTime
 Reccurence Start Time in the timezone of ScheduleTimeZone parameter. Format 06:00:00
-Should be mentioned in case of Reccurent  Schedule - Daily, Weekly or Monthly.
+Should be mentioned in case of recurrent schedule - Daily, Weekly or Monthly.
 
 ```yaml
 Type: System.String
@@ -517,7 +517,7 @@ Accept wildcard characters: False
 
 ### -ScheduleReccurenceEndTime
 Reccurence Start Time in the timezone of ScheduleTimeZone parameter. Format 06:00:00
-Should be mentioned in case of Reccurent  Schedule - Daily, Weekly or Monthly.
+Should be mentioned in case of recurrent schedule - Daily, Weekly or Monthly.
 
 ```yaml
 Type: System.String
@@ -533,7 +533,7 @@ Accept wildcard characters: False
 
 ### -ScheduleReccurenceStartTime
 Reccurence Start Time in the timezone of ScheduleTimeZone parameter. Format 06:00:00
-Should be mentioned in case of Reccurent  Schedule - Daily, Weekly or Monthly.
+Should be mentioned in case of recurrent schedule - Daily, Weekly or Monthly.
 
 ```yaml
 Type: System.String
@@ -565,7 +565,7 @@ Accept wildcard characters: False
 
 ### -ScheduleStartDateTime
 Start Date Time. Format 2022-09-21 06:00:00
-Should be mentioned in case of Reccurent  Schedule - Daily, Weekly or Monthly.
+Should be mentioned in case of recurrent schedule - Daily, Weekly or Monthly.
 
 ```yaml
 Type: System.String

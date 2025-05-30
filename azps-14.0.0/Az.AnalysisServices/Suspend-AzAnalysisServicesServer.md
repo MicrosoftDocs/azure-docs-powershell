@@ -29,7 +29,7 @@ The Suspend-AzAnalysisServicesServer cmdlet suspends an instance of Analysis Ser
 Suspend-AzAnalysisServicesServer -Name "testserver" -ResourceGroupName "testgroup"
 ```
 
-This command will suspend an active server named testserver in the resourcegroup testgroup
+This command will suspend an active server named testserver in the resource group testgroup
 
 ## PARAMETERS
 

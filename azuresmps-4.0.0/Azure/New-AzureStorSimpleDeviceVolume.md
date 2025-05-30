@@ -58,7 +58,7 @@ The command specifies the name for the volume, the size, and the access control 
 This command starts the job, and then returns a **TaskResponse** object.
 To see the status of the job, use the **Get-AzureStorSimpleTask** cmdlet.
 
-### Example 2: Create a volume without Access Controlaccess control recordsaccess control
+### Example 2: Create a volume without Access Control record
 ```
 PS C:\>Get-AzureStorSimpleDeviceVolumeContainer -DeviceName "Contoso63-AppVm" -VolumeContainerName "VolumeContainer01" | New-AzureStorSimpleDeviceVolume -DeviceName "Contoso63-AppVm" -VolumeName "Volume22" -Size 2000000000 -AccessControlRecords @() -VolumeAppType PrimaryVolume -Online $True -EnableDefaultBackup $False -EnableMonitoring $False -WaitForComplete
 VERBOSE: ClientRequestId: 3f359790-7e1f-48e7-acf8-ecabba850966_PS
