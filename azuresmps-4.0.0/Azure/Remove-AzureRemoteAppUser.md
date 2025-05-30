@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 ms.assetid: DE89F1C4-8441-4438-B235-F5E0F726EFF8
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureRemoteAppUser

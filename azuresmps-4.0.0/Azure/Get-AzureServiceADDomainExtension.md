@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: CF429CF0-2AB2-4E31-8A0D-AE5C8D77A76B
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureServiceADDomainExtension

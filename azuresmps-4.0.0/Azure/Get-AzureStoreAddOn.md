@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 61CF7F95-F0BB-4282-A971-537CB73708B1
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureStoreAddOn
