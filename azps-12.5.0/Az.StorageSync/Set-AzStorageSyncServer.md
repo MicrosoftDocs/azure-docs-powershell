@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.StorageSync.dll-Help.xml
 Module Name: Az.StorageSync
-online version: https://learn.microsoft.com/powershell/module/Az.storagesync/set-Azstoragesyncserver
+online version: https://learn.microsoft.com/powershell/module/az.storagesync/set-azstoragesyncserver
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageSync/StorageSync/help/Set-AzStorageSyncServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageSync/StorageSync/help/Set-AzStorageSyncServer.md

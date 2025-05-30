@@ -3,6 +3,7 @@ external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 ms.assetid: DDEBA3E1-B5A3-4F16-9A67-A95D15851A33
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureAutomationConnection

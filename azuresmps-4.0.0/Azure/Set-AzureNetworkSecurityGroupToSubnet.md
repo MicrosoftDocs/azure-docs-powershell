@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: A14F9105-1422-4073-96CF-E75CFC039E05
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureNetworkSecurityGroupToSubnet

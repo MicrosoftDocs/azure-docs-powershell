@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 1F76C63E-5289-4F88-9522-3FF4EF732908
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureServiceDiagnosticsExtensionConfig
