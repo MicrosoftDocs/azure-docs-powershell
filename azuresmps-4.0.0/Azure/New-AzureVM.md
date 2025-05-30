@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 1999C880-F8F9-4CED-91A9-33E9BBDFE27D
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureVM

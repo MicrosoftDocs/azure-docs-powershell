@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: 125B6865-0022-4F88-BB0F-DDDDB2EDFF00
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureNetworkSecurityRule

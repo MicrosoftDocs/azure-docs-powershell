@@ -3,6 +3,7 @@ external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 ms.assetid: 436A6D6E-2280-475C-A1F5-6A6D72DAD9E7
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureAutomationSchedule

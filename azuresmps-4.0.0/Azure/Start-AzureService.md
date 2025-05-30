@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 821CB3E4-102E-440A-8C92-D1890899A6EE
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Start-AzureService

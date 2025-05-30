@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: CD735391-62A8-40EC-B2F1-9044DC0676CA
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Reset-AzureVirtualNetworkGateway

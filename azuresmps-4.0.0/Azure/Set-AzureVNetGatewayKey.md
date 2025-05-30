@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: 1AB168AA-F466-4C7C-9AD7-0BC7AEEBC932
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureVNetGatewayKey

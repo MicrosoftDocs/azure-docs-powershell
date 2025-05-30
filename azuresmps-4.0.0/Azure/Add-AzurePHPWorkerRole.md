@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: FEFBF1EF-FBCE-45D8-8455-F3F8662F1F36
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Add-AzurePHPWorkerRole

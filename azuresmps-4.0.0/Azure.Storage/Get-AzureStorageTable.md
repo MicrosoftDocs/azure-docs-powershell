@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 4631D36F-926A-4279-AA4D-5F694C18081E
 online version: 
 schema: 2.0.0
+Module Name: Azure.Storage
 ---
 
 # Get-AzureStorageTable

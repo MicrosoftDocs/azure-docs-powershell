@@ -3,6 +3,7 @@ external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 ms.assetid: 5E5B8102-9E7E-4128-8160-3AA3803B118F
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Resume-AzureAutomationJob

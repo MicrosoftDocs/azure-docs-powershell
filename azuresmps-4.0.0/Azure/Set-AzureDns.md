@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 5BC16303-CCB4-40D8-ABCB-59CF0D85ED63
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureDns

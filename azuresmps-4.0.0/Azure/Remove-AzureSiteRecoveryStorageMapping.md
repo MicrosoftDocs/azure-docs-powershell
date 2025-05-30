@@ -3,6 +3,7 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: 0A1FD05F-6573-46D8-8217-C7EA432F6742
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureSiteRecoveryStorageMapping
