@@ -61,7 +61,7 @@ PS C:\> Set-AzureSchedulerHttpJob -Location "North Central US" -JobCollectionNam
 ```
 
 This command changes the state of the job named Job01 to Disabled.
-That job is part of the job collection named JobColleciton01 for the specified location.
+That job is part of the job collection named JobCollection01 for the specified location.
 
 ### Example 2: Update the URI of a job
 ```

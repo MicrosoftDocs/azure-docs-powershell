@@ -26,7 +26,7 @@ You can use an **AccessControlRecord** object to configure volumes.
 
 ## EXAMPLES
 
-### Example 1: Create an Access Controlaccess control record and wait for the resultaccess control
+### Example 1: Create an Access Control record and wait for the resultaccess control
 ```
 PS C:\>New-AzureStorSimpleAccessControlRecord -ACRName "Acr10" -IQNInitiatorName "Iqn10" -WaitForComplete
 Error      : Microsoft.WindowsAzure.Management.StorSimple.Models.ErrorDetails
@@ -42,7 +42,7 @@ RequestId  : e12362c2c06615108ba8436cf85fcd40
 This command creates an access control record named Acr10 for the iSCSI initiator named Iqn10.
 This command specifies the *WaitForComplete* parameter, and, therefore, the command waits until the operation is complete, and then returns a **TaskStatusInfo** object.
 
-### Example 2: Create an Access Controlaccess control recordaccess control
+### Example 2: Create an Access Control record
 ```
 PS C:\>New-AzureStorSimpleAccessControlRecord -ACRName "Acr11" -IQNInitiatorName "Iqn11"
 VERBOSE: The create job is submitted successfully. Please use the command Get-AzureStorSimpleTask -InstanceId

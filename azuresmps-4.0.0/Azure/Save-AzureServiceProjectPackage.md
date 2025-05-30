@@ -32,7 +32,7 @@ The **Save-AzureServiceProjectPackage** cmdlet packages the service project into
 PS C:\> Save-AzureServiceProjectPackage
 ```
 
-This example creates a *.cspgk for a service project named MyAzureServiceProject.
+This example creates a *.cspkg for a service project named MyAzureServiceProject.
 
 ## PARAMETERS
 

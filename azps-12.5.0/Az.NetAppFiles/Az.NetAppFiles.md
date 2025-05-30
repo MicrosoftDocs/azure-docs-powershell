@@ -31,11 +31,20 @@ Gets details of an Azure NetApp Files (ANF) Backup Policy.
 ### [Get-AzNetAppFilesBackupVault](Get-AzNetAppFilesBackupVault.md)
 Gets details of an Azure NetApp Files (ANF) BackupVault.
 
+### [Get-AzNetAppFilesFilePathAvailability](Get-AzNetAppFilesFilePathAvailability.md)
+Check file path availability
+
+### [Get-AzNetAppFilesNameAvailability](Get-AzNetAppFilesNameAvailability.md)
+Check resource name availability
+
 ### [Get-AzNetAppFilesNetworkSiblingSet](Get-AzNetAppFilesNetworkSiblingSet.md)
 Get details of a network sibling set
 
 ### [Get-AzNetAppFilesPool](Get-AzNetAppFilesPool.md)
 Gets details of an Azure NetApp Files (ANF) pool.
+
+### [Get-AzNetAppFilesQuotaAvailability](Get-AzNetAppFilesQuotaAvailability.md)
+Check quota availability
 
 ### [Get-AzNetAppFilesQuotaLimit](Get-AzNetAppFilesQuotaLimit.md)
 Get quota limits
@@ -122,8 +131,7 @@ Creates a new Azure NetApp Files (ANF) subvolume.
 Creates a new Azure NetApp Files (ANF) volume.
 
 ### [New-AzNetAppFilesVolumeGroup](New-AzNetAppFilesVolumeGroup.md)
-Creates a new Azure NetApp Files (ANF) VolumeGroup along with requisite volumes.
-Creating volume group will create all the volumes specified in request body implicitly. Once volumes are created using volume group, those will be treated as regular volumes thereafter.
+Creates a new Azure NetApp Files (ANF) VolumeGroup along with requisite volumes. Creating volume group will create all the volumes specified in request body implicitly. Once volumes are created using volume group, those will be treated as regular volumes thereafter.
 
 ### [New-AzNetAppFilesVolumeQuotaRule](New-AzNetAppFilesVolumeQuotaRule.md)
 Creates a new Azure NetApp Files (ANF) Volume Quota Rule.
@@ -165,7 +173,7 @@ Deletes an Azure NetApp Files (ANF) volume.
 Deletes an Azure NetApp Files (ANF) VolumeGroup. This delete the specified volume group only does not delete the volumes.
 
 ### [Remove-AzNetAppFilesVolumeQuotaRule](Remove-AzNetAppFilesVolumeQuotaRule.md)
-Deletes an Azure NetApp Files (ANF) Volume Quota Rule. 
+Deletes an Azure NetApp Files (ANF) Volume Quota Rule.
 
 ### [Reset-AzNetAppFilesVolumeCifsPassword](Reset-AzNetAppFilesVolumeCifsPassword.md)
 Reset the Cifs password for the volume
@@ -177,7 +185,7 @@ Create a new Backup Restore Files request
 Restore (Re-establish) the specified replication for the volume
 
 ### [Restore-AzNetAppFilesSnapshotFile](Restore-AzNetAppFilesSnapshotFile.md)
-Restore the specified files from the specified snapshot to the active filesystem 
+Restore the specified files from the specified snapshot to the active filesystem
 
 ### [Restore-AzNetAppFilesVolume](Restore-AzNetAppFilesVolume.md)
 Restore/Revert a volume to one of its snapshots
@@ -189,16 +197,16 @@ Resume/Resync the connection on the destination volume. If the operation is ran 
 Updates an Azure NetApp Files (ANF) account with the new data set. Useful for deletion of associated active directories.
 
 ### [Set-AzNetAppFilesBackupPolicy](Set-AzNetAppFilesBackupPolicy.md)
-Updates an Azure NetApp Files (ANF) Backup Policy with the new data set. 
+Updates an Azure NetApp Files (ANF) Backup Policy with the new data set.
 
 ### [Set-AzNetAppFilesBackupVault](Set-AzNetAppFilesBackupVault.md)
 Updates an Azure NetApp Files (ANF) BackupVault with the new data set.
 
 ### [Set-AzNetAppFilesPool](Set-AzNetAppFilesPool.md)
-Updates an Azure NetApp Files (ANF) Capacity Pool with the new data set. 
+Updates an Azure NetApp Files (ANF) Capacity Pool with the new data set.
 
 ### [Set-AzNetAppFilesSnapshotPolicy](Set-AzNetAppFilesSnapshotPolicy.md)
-Updates an Azure NetApp Files (ANF) Snapshot Policy with the new data set. 
+Updates an Azure NetApp Files (ANF) Snapshot Policy with the new data set.
 
 ### [Set-AzNetAppFilesVolumePool](Set-AzNetAppFilesVolumePool.md)
 Change pool for an Azure NetApp Files (ANF) volume.

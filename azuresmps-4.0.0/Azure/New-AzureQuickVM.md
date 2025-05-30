@@ -47,7 +47,7 @@ This cmdlet can alternatively create an Azure service that hosts the new virtual
 
 ### Example 1: Create a virtual machine
 ```
-PS C:\> New-AzureQuickVM -Windows -ServiceName "ContosoService17" -Name "VirutalMachine01" -ImageName "Image07" -Password "password" -AdminUsername "AdminMain" -WaitForBoot
+PS C:\> New-AzureQuickVM -Windows -ServiceName "ContosoService17" -Name "VirtualMachine01" -ImageName "Image07" -Password "password" -AdminUsername "AdminMain" -WaitForBoot
 ```
 
 This command creates a virtual machine that runs the Windows operating system in an existing service.
