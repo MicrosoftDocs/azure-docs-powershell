@@ -1,8 +1,9 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 ms.assetid: E11AAB11-0CBF-4746-91D7-4D5E64801C29
-online version:
+online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureHDInsightSqoopJobDefinition

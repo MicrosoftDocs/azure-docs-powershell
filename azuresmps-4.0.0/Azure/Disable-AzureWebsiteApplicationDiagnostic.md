@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 3422EFD0-88DC-4DF0-868C-5C63C9FA95EF
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Disable-AzureWebsiteApplicationDiagnostic

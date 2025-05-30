@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: FCB3C8EB-EAA6-48E3-A1A5-DB3050821BD8
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureNetworkSecurityGroupConfig

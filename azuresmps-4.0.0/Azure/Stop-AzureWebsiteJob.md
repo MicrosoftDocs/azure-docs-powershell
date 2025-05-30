@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 7D39F4C9-F37A-4BBE-BF02-1F036A9FC5E8
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Stop-AzureWebsiteJob

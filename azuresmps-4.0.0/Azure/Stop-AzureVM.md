@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 4F347DD1-907C-47DB-8F1D-636DE031A56A
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Stop-AzureVM

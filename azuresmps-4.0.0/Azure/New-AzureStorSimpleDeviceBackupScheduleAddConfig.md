@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 ms.assetid: EE7EC812-640B-4672-B23C-673F912F0EDC
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureStorSimpleDeviceBackupScheduleAddConfig

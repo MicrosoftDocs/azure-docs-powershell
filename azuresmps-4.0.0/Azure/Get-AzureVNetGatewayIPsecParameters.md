@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: B7E2561D-0FE8-4B34-9188-E89AA0B5C9DD
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureVNetGatewayIPsecParameters

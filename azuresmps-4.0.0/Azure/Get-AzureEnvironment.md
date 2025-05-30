@@ -1,8 +1,9 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 ms.assetid: BF5E3E1A-14B6-4630-8168-628057009D5E
-online version:
+online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureEnvironment

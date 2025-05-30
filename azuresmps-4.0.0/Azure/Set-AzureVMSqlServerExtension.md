@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 56C7B6F5-C2AC-4C5A-8930-645374694CC3
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureVMSqlServerExtension
