@@ -75,7 +75,7 @@ Type        : VirtualMachines
 
 The above command is scheduling a start operation on a batch of virtual machines by the given deadline.
 The list below describes guidance on Deadline and Timezone:
-- Computeschedule supports "UTC" timezone currently
+- ComputeSchedule supports "UTC" timezone currently
 - Deadline for a submit type operation can not be more than 5 minutes in the past or greater than 14 days in the future
 
 ## PARAMETERS
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeadlineType
-The deadlinetype of the operation, this can either be InitiateAt or CompleteBy
+The deadline type of the operation, this can either be InitiateAt or CompleteBy
 
 ```yaml
 Type: System.String
