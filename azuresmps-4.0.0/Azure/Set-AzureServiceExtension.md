@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: D37920D3-AF6C-4CFC-B9A3-8ED931AEC0DC
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureServiceExtension

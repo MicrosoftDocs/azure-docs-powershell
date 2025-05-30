@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 ms.assetid: 72D332BA-A30B-45B9-875C-DF9D33299E05
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Export-AzureRemoteAppUserDisk

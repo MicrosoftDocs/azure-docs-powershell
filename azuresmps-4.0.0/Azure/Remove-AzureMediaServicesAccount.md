@@ -3,7 +3,9 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 5B255D11-0A9B-4679-A2AC-4357B293EE96
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
+
 # Remove-AzureMediaServicesAccount
 
 ## SYNOPSIS

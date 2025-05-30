@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: D7B2CDFF-D9A2-48C7-B331-132A6A6843CA
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureSBAuthorizationRule

@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 6AFD3971-460D-4F6A-B266-6ED98DC81CD4
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Move-AzureStorageAccount

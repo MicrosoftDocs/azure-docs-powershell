@@ -1,8 +1,9 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 ms.assetid: 3E3C9626-7AED-4B15-93D0-0B79AD17A834
-online version:
+online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureHDInsightJob

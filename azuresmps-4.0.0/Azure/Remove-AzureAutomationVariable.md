@@ -3,6 +3,7 @@ external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 ms.assetid: 2D89557B-4B8B-43EE-8453-D55FCE0C2CE0
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureAutomationVariable

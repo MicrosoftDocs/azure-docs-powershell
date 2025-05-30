@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 5C8B1482-80B0-4060-A35D-E9D394156886
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureServiceRemoteDesktopExtension

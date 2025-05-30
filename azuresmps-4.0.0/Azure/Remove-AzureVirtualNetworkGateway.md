@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: 9F2CADC2-1053-404F-96DA-D992AA39D0FC
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureVirtualNetworkGateway

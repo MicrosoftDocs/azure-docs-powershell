@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: BA63476C-25CC-444D-AD2C-51BF76374FBC
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Add-AzureApplicationGatewaySslCertificate
