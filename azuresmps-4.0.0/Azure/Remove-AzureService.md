@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 03107EA1-6ADA-4A3E-B8E1-88788E5F3F37
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureService

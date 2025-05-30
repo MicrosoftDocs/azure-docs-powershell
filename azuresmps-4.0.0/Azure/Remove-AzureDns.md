@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 1B1C1459-A602-423D-8CAA-B4901CFC2C82
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureDns

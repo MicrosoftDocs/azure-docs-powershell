@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 7C50472E-CE36-4BF1-92C9-A3B9B183ACD1
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureRole

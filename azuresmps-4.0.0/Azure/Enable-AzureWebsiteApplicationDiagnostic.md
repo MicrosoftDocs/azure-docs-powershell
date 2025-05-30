@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 99A03E14-254E-4E72-8EA9-2FE2A5CEA597
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Enable-AzureWebsiteApplicationDiagnostic

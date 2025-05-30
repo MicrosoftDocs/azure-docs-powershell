@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 9C22F5D7-1FD0-4699-83D7-1D72C5234DEF
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureReservedIP

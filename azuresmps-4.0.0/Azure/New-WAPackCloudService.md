@@ -1,8 +1,9 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: AA2E37AB-F137-4A62-9ABC-90565305A23B
-online version:
+online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-WAPackCloudService

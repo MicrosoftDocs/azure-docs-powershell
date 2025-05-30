@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 1D433BD2-4604-474B-A2DA-BC80EE935E5C
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureSBNamespace

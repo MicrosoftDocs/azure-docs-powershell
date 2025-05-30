@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 163D2F00-E041-43A9-B077-9034F54B4F3D
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Enable-AzureServiceProjectRemoteDesktop

@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 730ECC60-72DE-46DA-A177-D5749F540710
 online version: 
 schema: 2.0.0
+Module Name: Azure.Storage
 ---
 
 # Set-AzureStorageContainerStoredAccessPolicy

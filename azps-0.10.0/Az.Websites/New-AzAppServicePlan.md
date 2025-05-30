@@ -2,7 +2,7 @@
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
 Module Name: Az
 ms.assetid: 8F36244D-A4D7-40BB-AC4C-E9AD445549F8
-online version: https://learn.microsoft.com/en-us/powershell/module/Az.websites/new-Azappserviceplan
+online version: https://learn.microsoft.com/en-us/powershell/module/az.websites/new-azappserviceplan
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/New-AzAppServicePlan.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/New-AzAppServicePlan.md

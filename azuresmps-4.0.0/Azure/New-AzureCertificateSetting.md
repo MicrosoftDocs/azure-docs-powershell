@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 11919623-9EDF-42A3-93FE-54E93D76D3D0
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureCertificateSetting

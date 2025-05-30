@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: 1836F342-A05C-4402-95F7-833E50A1AB97
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureNetworkSecurityGroup
