@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzNetAppFilesVolumeQuotaRule
 
 ## SYNOPSIS
-Gets details of an Azure NetApp Files (ANF) Volume Quouta Rule.
+Gets details of an Azure NetApp Files (ANF) Volume Quota Rule.
 
 ## SYNTAX
 

@@ -163,7 +163,7 @@ Accept wildcard characters: False
 
 ### -DataBackupPerformance
 Specify throughput in MiB/s.
-If ommited DataBackupPerformance will be autocalculated or specify an integer value representing throughput.
+If omitted DataBackupPerformance will be autocalculated or specify an integer value representing throughput.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 
 ### -DataBackupSize
 Specify capacity (in GiB).
-If ommited DataSize will be autocalculated or specify an integer value representing size.
+If omitted DataSize will be autocalculated or specify an integer value representing size.
 
 ```yaml
 Type: System.Nullable`1[System.Int64]
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 
 ### -DataPerformance
 Specify throughput in MiB/s.
-If ommited DataPerformance will be autocalculated or specify and integer value representing throughput.
+If omitted DataPerformance will be autocalculated or specify and integer value representing throughput.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 
 ### -DataSize
 Specify capacity (in GiB).
-If ommited DataSize will be autocalculated or specify an integer value representing size.
+If omitted DataSize will be autocalculated or specify an integer value representing size.
 
 ```yaml
 Type: System.Nullable`1[System.Int64]
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -HannaSystemReplication
-HANA System Replication (HSR): Replication between the same SID instance on hosts in the same region, or differerent regions.
+HANA System Replication (HSR): Replication between the same SID instance on hosts in the same region, or different regions.
 This could be Scale-Up or Scale-Out configurations.
 
 ```yaml
@@ -381,7 +381,7 @@ Accept wildcard characters: False
 
 ### -LogBackupPerformance
 Specify throughput in MiB/s.
-If ommited LogBackupPerformance will be autocalculated or specify an integer value representing throughput.
+If omitted LogBackupPerformance will be autocalculated or specify an integer value representing throughput.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -397,7 +397,7 @@ Accept wildcard characters: False
 
 ### -LogBackupSize
 Specify capacity (in GiB).
-If ommited DataSize will be autocalculated or specify an integer value representing size.
+If omitted DataSize will be autocalculated or specify an integer value representing size.
 
 ```yaml
 Type: System.Nullable`1[System.Int64]
@@ -413,7 +413,7 @@ Accept wildcard characters: False
 
 ### -LogPerformance
 Specify throughput in MiB/s.
-If ommited LogPerformance will be autocalculated or specify and integer value representing throughput.
+If omitted LogPerformance will be autocalculated or specify and integer value representing throughput.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -429,7 +429,7 @@ Accept wildcard characters: False
 
 ### -LogSize
 Specify capacity (in GiB).
-If ommited LogSize will be autocalculated or specify an integer value representing size.
+If omitted LogSize will be autocalculated or specify an integer value representing size.
 
 ```yaml
 Type: System.Nullable`1[System.Int64]
@@ -554,7 +554,7 @@ Accept wildcard characters: False
 
 ### -SharedPerformance
 Specify throughput in MiB/s.
-If ommited SharedPerformance will be autocalculated or specify and integer value representing throughput.
+If omitted SharedPerformance will be autocalculated or specify and integer value representing throughput.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -570,7 +570,7 @@ Accept wildcard characters: False
 
 ### -SharedSize
 Specify capacity (in GiB).
-If ommited SharedSize will be autocalculated or specify an integer value representing size.
+If omitted SharedSize will be autocalculated or specify an integer value representing size.
 
 ```yaml
 Type: System.Nullable`1[System.Int64]

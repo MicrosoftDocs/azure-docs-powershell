@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzP2sVpnGatewayConnectionHealth
 
 ## SYNOPSIS
-Gets the current aggregared point to site connections health information from P2SVpnGateway.
+Gets the current aggregated point to site connections health information from P2SVpnGateway.
 
 ## SYNTAX
 

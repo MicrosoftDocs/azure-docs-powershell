@@ -23,7 +23,7 @@ New-AzApplicationGatewayPrivateLinkConfiguration -Name <String>
 ## DESCRIPTION
 The **New-AzApplicationGatewayPrivateLinkConfiguration** cmdlet creates an PrivateLink Configuration for an Azure application gateway.
 The private link configuration must be associated to a frontend ip configuration to enable the private link functionality.
-One private link configuration can atmost be associated to only one frontend ip configuration on application gateway.
+One private link configuration can at most be associated to only one frontend ip configuration on application gateway.
 
 ## EXAMPLES
 
