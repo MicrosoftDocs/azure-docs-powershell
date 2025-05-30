@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 ms.assetid: F41E3B17-A33C-4FBF-B532-2E86F1AAE2B8
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Import-AzureStorSimpleLegacyApplianceConfig

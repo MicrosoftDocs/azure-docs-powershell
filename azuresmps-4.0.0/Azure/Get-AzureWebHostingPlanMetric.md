@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 2DEF8B3A-4E91-4D39-AD39-1871F9FECE10
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureWebHostingPlanMetric

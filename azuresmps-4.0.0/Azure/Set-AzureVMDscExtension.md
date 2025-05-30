@@ -1,8 +1,9 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
 ms.assetid: 649D0A6C-77CE-4E49-AFF8-DF70ABE9FA13
-online version:
+online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureVMDscExtension

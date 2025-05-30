@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: 36DA2BF9-091E-4A2C-B5E1-07B4D2E482FC
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureVNetGateway

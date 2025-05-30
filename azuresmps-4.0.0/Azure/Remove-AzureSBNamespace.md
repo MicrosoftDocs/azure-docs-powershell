@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 6E369BDF-AE3C-416B-81B7-097C20147CBE
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureSBNamespace

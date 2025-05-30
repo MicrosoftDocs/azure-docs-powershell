@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 0DF54C9D-7A19-4591-A1FC-33C6A4C9BF33
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Test-AzureName

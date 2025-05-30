@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: FAB5E55D-95FC-4545-8BA6-EEFCFDB04200
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureOSVersion

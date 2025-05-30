@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 4696BB05-F507-4FFB-8D96-6BAA2EBB0F0A
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Save-AzureWebsiteLog

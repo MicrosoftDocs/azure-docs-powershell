@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 ms.assetid: 3CD1A989-902C-48B3-81E9-7B78EDA5F880
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureAccount

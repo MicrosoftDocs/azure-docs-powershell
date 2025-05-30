@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 ms.assetid: 70ADAF16-BC52-47BF-A85A-A84DEACDA027
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureAccount
