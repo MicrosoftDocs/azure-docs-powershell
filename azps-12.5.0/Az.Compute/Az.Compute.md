@@ -250,9 +250,6 @@ Grants an access to a disk.
 ### [Grant-AzSnapshotAccess](Grant-AzSnapshotAccess.md)
 Grants an access to a snapshot.
 
-### [Invoke-AzSpotPlacementRecommender](Invoke-AzSpotPlacementRecommender.md)
-Generates placement scores for Spot VM skus.
-
 ### [Invoke-AzSpotPlacementScore](Invoke-AzSpotPlacementScore.md)
 Generates placement scores for Spot VM skus.
 
@@ -440,7 +437,7 @@ Removes a data disk from an image object.
 Delete Proximity Placement Group resource.
 
 ### [Remove-AzRestorePoint](Remove-AzRestorePoint.md)
-This cmdlet can remove a Restore Point 
+This cmdlet can remove a Restore Point
 
 ### [Remove-AzRestorePointCollection](Remove-AzRestorePointCollection.md)
 This Cmdlet can remove Restore Point Collection
@@ -692,7 +689,7 @@ Starts an Azure virtual machine.
 Starts the VMSS or a set of virtual machines within the VMSS.
 
 ### [Start-AzVmssRollingExtensionUpgrade](Start-AzVmssRollingExtensionUpgrade.md)
-This cmdlet starts a rolling upgrade for all extensions on the given Virtual Machine Scale Set to the latest available version. 
+This cmdlet starts a rolling upgrade for all extensions on the given Virtual Machine Scale Set to the latest available version.
 
 ### [Start-AzVmssRollingOSUpgrade](Start-AzVmssRollingOSUpgrade.md)
 Starts a rolling upgrade to move all virtual machine scale set instances to the latest available Platform Image OS version.
