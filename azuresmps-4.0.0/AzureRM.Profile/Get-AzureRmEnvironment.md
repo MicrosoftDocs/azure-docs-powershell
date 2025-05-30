@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
+Module Name: AzureRM.Profile
 ---
 
 # Get-AzureRmEnvironment
@@ -133,9 +134,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AzureRMEnvironment]()
+[Add-AzureRMEnvironment](Add-AzureRMEnvironment.md)
 
-[Remove-AzureRMEnvironment]()
+[Remove-AzureRMEnvironment](Remove-AzureRMEnvironment.md)
 
-[Set-AzureRMEnvironment]()
+[Set-AzureRMEnvironment](Set-AzureRMEnvironment.md)
 

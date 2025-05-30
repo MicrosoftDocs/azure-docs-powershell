@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: EE96AC92-02A8-4A40-A26D-0882673E51A5
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureNetworkInterfaceConfig

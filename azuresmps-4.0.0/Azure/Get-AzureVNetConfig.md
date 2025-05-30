@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: F34910FA-B024-4C1C-B040-671C8962C49D
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureVNetConfig

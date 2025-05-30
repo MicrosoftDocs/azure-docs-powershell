@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: BED3D3FE-D1E8-4857-A675-7B2670A129B2
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureApplicationGateway
@@ -27,7 +28,7 @@ The **New-AzureApplicationGateway** cmdlet creates an application gateway.
 
 ### Example 1: Create an application gateway
 ```
-PS C:\> New-AzureApplicationGateway -Name "ApplicationGateway06" -VnetName "VirutalNetwork17" -Subnets @("Subnet01", "Subnet02", "Subnet03")
+PS C:\> New-AzureApplicationGateway -Name "ApplicationGateway06" -VnetName "VirtualNetwork17" -Subnets @("Subnet01", "Subnet02", "Subnet03")
 ```
 
 This command creates an application gateway named ApplicationGateway06.

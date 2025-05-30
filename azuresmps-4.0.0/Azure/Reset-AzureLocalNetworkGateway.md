@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: 0E4D44EE-BF28-46FE-B2FA-D35C1651016F
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Reset-AzureLocalNetworkGateway

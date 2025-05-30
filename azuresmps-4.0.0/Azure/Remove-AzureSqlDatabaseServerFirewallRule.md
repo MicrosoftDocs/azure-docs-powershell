@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 ms.assetid: 383DD041-78DC-4170-9529-1FD6F13BC178
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureSqlDatabaseServerFirewallRule

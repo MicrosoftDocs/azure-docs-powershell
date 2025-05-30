@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
 ms.assetid: 87163619-DEA4-4183-BB11-2D7B16F4BE8A
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Invoke-AzureRemoteAppSessionLogoff
@@ -65,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserUpn
-Specifes the user Principal Name (UPN) of a user, for example, PattiFuller@contoso.com.
+Specifies the user Principal Name (UPN) of a user, for example, PattiFuller@contoso.com.
 
 ```yaml
 Type: String

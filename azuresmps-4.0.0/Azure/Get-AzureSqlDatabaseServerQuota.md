@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 ms.assetid: 6723557D-8052-4BFA-872C-384B1423B3AE
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureSqlDatabaseServerQuota

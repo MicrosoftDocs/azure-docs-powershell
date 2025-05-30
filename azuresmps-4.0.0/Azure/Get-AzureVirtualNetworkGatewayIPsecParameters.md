@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: 425008DB-9761-42F1-8D6D-F35757A3CA6C
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureVirtualNetworkGatewayIPsecParameters
@@ -27,7 +28,7 @@ The **Get-AzureVirtualNetworkGatewayIPsecParameters** cmdlet gets the IPsec para
 ## PARAMETERS
 
 ### -ConnectedEntityId
-Specifies the ID of a connected entitiy.
+Specifies the ID of a connected entity.
 
 ```yaml
 Type: String

@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 ms.assetid: BC68C60C-86E3-4857-95AE-1A915A841F7D
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureStorSimpleInlineStorageAccountCredential
@@ -61,7 +62,7 @@ EncryptionKey                   : SK23I39L7GvoLce7u63TMT/A/V/TW8JXe+PoXKEKzwsr3t
 InstanceId                      : a72bf4bb-0f0a-4ec2-a8b1-c4548825f522
 IsDefault                       : False
 IsEncryptionEnabled             : True
-Name                            : VolumneContainer_06
+Name                            : VolumeContainer_06
 OperationInProgress             : None
 Owned                           : True
 PrimaryStorageAccountCredential : Microsoft.WindowsAzure.Management.StorSimple.Models.StorageAccountCredentialResponse

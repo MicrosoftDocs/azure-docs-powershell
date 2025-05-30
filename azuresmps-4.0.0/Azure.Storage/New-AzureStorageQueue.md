@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: E9500392-6BE1-46EC-9AF5-9234281025E6
 online version: 
 schema: 2.0.0
+Module Name: Azure.Storage
 ---
 
 # New-AzureStorageQueue

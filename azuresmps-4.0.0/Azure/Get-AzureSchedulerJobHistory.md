@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 2BF5BDF8-3743-46FC-8E04-1A4EA920A2AF
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureSchedulerJobHistory

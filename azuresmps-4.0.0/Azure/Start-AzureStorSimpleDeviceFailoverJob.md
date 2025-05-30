@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 ms.assetid: 53580FF1-D905-40FD-A5F0-D5FBCD036E0B
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Start-AzureStorSimpleDeviceFailoverJob
@@ -60,7 +61,7 @@ PS C:\>(Get-AzureStorSimpleFailoverVolumeContainers -DeviceId "3825f272-1efb-4c1
 ```
 
 This command gets the failover volume containers for the device named ChewD_App7 by using **Get-AzureStorSimpleFailoverVolumeContainers**.
-The command passes the results to **Where-Object**, which drops those containters that have a value other than $True for the **IsDCGroupEligibleForDR** property.
+The command passes the results to **Where-Object**, which drops those containers that have a value other than $True for the **IsDCGroupEligibleForDR** property.
 The cmdlet passes the results to the **Select-Object** cmdlet, which selects the first object to pass to the current cmdlet.
 For more information, type `Get-Help Select-Object`.
 The current cmdlet starts failover jobs for the selected failover volume container.

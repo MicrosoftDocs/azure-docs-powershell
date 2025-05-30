@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
 ms.assetid: AE8E6778-1299-4EC7-BFE0-3FB464AA7BB4
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureStorSimpleDevice
@@ -188,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorSimpleNetworkConfig
-Specifies an array of network configuration objectss for interfaces on a device.
+Specifies an array of network configuration objects for interfaces on a device.
 To obtain a **NetworkConfig** object, use the New-AzureStorSimpleNetworkConfig cmdlet.
 
 ```yaml

@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 86438393-8D5A-46A0-B467-6A4434E18011
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureService

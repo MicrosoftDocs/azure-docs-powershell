@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
+Module Name: AzureRM.Profile
 ---
 
 # Get-AzureRmContext
@@ -56,5 +57,5 @@ This cmdlet returns the account, tenant, and subscription used by Azure Resource
 
 ## RELATED LINKS
 
-[Set-AzureRMContext]()
+[Set-AzureRMContext](Set-AzureRMContext.md)
 

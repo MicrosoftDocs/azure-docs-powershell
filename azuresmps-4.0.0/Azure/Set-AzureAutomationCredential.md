@@ -3,6 +3,7 @@ external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
 ms.assetid: C92B4B70-4342-4219-80D3-FB79BDC171A3
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureAutomationCredential

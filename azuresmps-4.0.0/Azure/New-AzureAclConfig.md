@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: CD2274E5-B3D4-489E-B374-8B2BCC1F923E
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureAclConfig

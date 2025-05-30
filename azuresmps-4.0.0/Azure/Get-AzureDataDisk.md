@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 2A8BE3EB-4929-4B40-82EA-5434C09A5251
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureDataDisk
@@ -34,7 +35,7 @@ This command gets the virtual machine named VirtualMachine07 in the service name
 The command passes the virtual machine to the current cmdlet by using the pipeline operator.
 The current cmdlet gets all the data disks for this virtual machine.
 
-### Example 2: Get a specific data disk for a vituralvirtual machinevirtual
+### Example 2: Get a specific data disk for a virtual machine
 ```
 PS C:\> Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Get-AzureDataDisk -LUN 2
 ```

@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 53988D79-1F8B-4138-9F92-2912D418C121
 online version: 
 schema: 2.0.0
+Module Name: Azure.Storage
 ---
 
 # Remove-AzureStorageDirectory
