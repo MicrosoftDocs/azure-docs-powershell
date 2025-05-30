@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
 ms.assetid: EBB080C0-12AB-4B0C-B3DA-EEA4BCBFB7DF
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Clear-AzureProfile

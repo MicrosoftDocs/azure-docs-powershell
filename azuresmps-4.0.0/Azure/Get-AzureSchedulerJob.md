@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 8EED9813-5106-4D6C-B869-97BCBD7845AC
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureSchedulerJob

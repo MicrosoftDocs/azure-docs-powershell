@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: 67260128-D57B-4587-BB61-2475703ABA66
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureVNetGatewayDefaultSite

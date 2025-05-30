@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 761317FE-55FD-4DCC-B997-4F27D041470F
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureReservedIP

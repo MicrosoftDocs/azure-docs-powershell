@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: A9542EA9-C709-48D7-8066-496015AB977E
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Start-AzureWebsite

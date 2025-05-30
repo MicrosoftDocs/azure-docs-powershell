@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: 88AB3621-7C80-41BA-BE49-4F8F9C46BCF5
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureVirtualNetworkGatewayConnection

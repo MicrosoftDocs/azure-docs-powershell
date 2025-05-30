@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 6B406310-287F-4BD3-BA38-A9C97E8EDC45
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureWebsiteJob

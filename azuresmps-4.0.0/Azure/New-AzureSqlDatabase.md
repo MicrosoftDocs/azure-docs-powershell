@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 ms.assetid: F4FE79DB-B481-49BD-A33B-7C642A136890
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureSqlDatabase
