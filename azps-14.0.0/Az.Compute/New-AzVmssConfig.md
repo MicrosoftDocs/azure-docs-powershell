@@ -171,7 +171,7 @@ $vmss = Get-AzVmss -ResourceGroupName $rgname -VMScaleSetName $vmssName;
 
 ### Example 5: Create a Vmss with the security type TrustedLaunch
 ```powershell
-$rgname = "rganme";
+$rgname = "rgname";
  $loc = "eastus";
  New-AzResourceGroup -Name $rgname -Location $loc -Force;
 # VMSS Profile & Hardware requirements for the TrustedLaunch default behavior.
@@ -183,7 +183,7 @@ $securityType = "TrustedLaunch";
 $enable = $true;
 $disable = $false;
 $extDefaultName = "GuestAttestation";
-$vmGADefaultIDentity = "SystemAssigned";
+$vmGADefaultIdentity = "SystemAssigned";
 
 # NRP
 $subnet = New-AzVirtualNetworkSubnetConfig -Name ('subnet' + $rgname) -AddressPrefix "10.0.0.0/24";
@@ -856,7 +856,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The priority for the virtual machien in the scale set.  Only supported values are 'Regular', 'Spot' and 'Low'.
+The priority for the virtual machine in the scale set.  Only supported values are 'Regular', 'Spot' and 'Low'.
 'Regular' is for regular virtual machine.
 'Spot' is for spot virtual machine.
 'Low' is also for spot virtual machine but is replaced by 'Spot'. Please use 'Spot' instead of 'Low'.

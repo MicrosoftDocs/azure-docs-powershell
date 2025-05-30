@@ -184,7 +184,7 @@ $SKU = "2016-datacenter-gensecond";
 $disable = $false;
 $enable = $true;
 $extDefaultName = "GuestAttestation";
-$vmGADefaultIDentity = "SystemAssigned";
+$vmGADefaultIdentity = "SystemAssigned";
 # Credential
 $securePassword = ConvertTo-SecureString -String "****" -AsPlainText -Force;  
 $user = <Username>;
