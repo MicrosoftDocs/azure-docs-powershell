@@ -130,5 +130,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Select-AzureRMProfile]()
+[Select-AzureRMProfile](Select-AzureRMProfile.md)
 
