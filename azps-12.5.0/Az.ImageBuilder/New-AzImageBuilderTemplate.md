@@ -167,7 +167,7 @@ Location Name       ResourceGroupName
 eastus   azps-ibt-3 azps_test_group_imagebuilder
 ```
 
-This commands creates a virtual machine image template via Json stri.
+This commands creates a virtual machine image template via Json string.
 
 ## PARAMETERS
 
