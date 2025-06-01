@@ -45,7 +45,7 @@ Get-AzMigrateHCIJob [-SubscriptionId <String>] -ResourceGroupID <String> -Projec
 ```
 
 ## DESCRIPTION
-The Get-AzMigrateHCIJob cmdlet retrives the status of an Azure Migrate job.
+The Get-AzMigrateHCIJob cmdlet retrieves the status of an Azure Migrate job.
 
 ## EXAMPLES
 

@@ -152,7 +152,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### icrosoft.Azure.Commands.Insights.OutputClasses.PSMonitorPrivateLinkScopedResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSMonitorPrivateLinkScopedResource
 
 ## NOTES
 
