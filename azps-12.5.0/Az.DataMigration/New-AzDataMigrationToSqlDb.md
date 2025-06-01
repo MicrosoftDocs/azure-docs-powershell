@@ -12,7 +12,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Create a new database migration to a given SQL Db.
 This command can migrate data from the selected source database tables to the target database tables.
-If the target database have no table existing, please use [New-AzDataMigrationSqlServerSchema](https://learn.microsoft.com/powershell/module/az.datamigration/new-azdatamigrationsqlserverschema) command to migrate schema objects from source database to target databse.
+If the target database have no table existing, please use [New-AzDataMigrationSqlServerSchema](https://learn.microsoft.com/powershell/module/az.datamigration/new-azdatamigrationsqlserverschema) command to migrate schema objects from source database to target database.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ New-AzDataMigrationToSqlDb -ResourceGroupName <String> -SqlDbInstanceName <Strin
 ## DESCRIPTION
 Create a new database migration to a given SQL Db.
 This command can migrate data from the selected source database tables to the target database tables.
-If the target database have no table existing, please use [New-AzDataMigrationSqlServerSchema](https://learn.microsoft.com/powershell/module/az.datamigration/new-azdatamigrationsqlserverschema) command to migrate schema objects from source database to target databse.
+If the target database have no table existing, please use [New-AzDataMigrationSqlServerSchema](https://learn.microsoft.com/powershell/module/az.datamigration/new-azdatamigrationsqlserverschema) command to migrate schema objects from source database to target database.
 
 ## EXAMPLES
 
@@ -52,7 +52,7 @@ mydb1       SqlDb   Succeeded         InProgress
 
 Start a Database Migration from the on-premise Source Sql Server to target Sql Db
 
-### Example 2: Start a Database Migration with some selcted tables from the on-premise Source Sql Server to target Sql Db
+### Example 2: Start a Database Migration with some selected tables from the on-premise Source Sql Server to target Sql Db
 ```powershell
 $sourcePassword = ConvertTo-SecureString -String "****" -AsPlainText -Force
 $targetPassword = ConvertTo-SecureString -String "****" -AsPlainText -Force
@@ -65,7 +65,7 @@ Name       Kind  ProvisioningState MigrationStatus
 mydb1       SqlDb   Succeeded         InProgress
 ```
 
-Start a Database Migration with some selcted tables from the on-premise Source Sql Server to target Sql Db
+Start a Database Migration with some selected tables from the on-premise Source Sql Server to target Sql Db
 
 ## PARAMETERS
 
