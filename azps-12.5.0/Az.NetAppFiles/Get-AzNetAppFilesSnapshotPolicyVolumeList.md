@@ -23,7 +23,7 @@ Get-AzNetAppFilesSnapshotPolicyVolumeList -ResourceGroupName <String> -AccountNa
 
 ### ByParentObjectParameterSet
 ```
-Get-AzNetAppFilesSnapshotPolicyVolumeList -Name <String> -SnaphotPolicyObject <PSNetAppFilesSnapshotPolicy>
+Get-AzNetAppFilesSnapshotPolicyVolumeList -Name <String> -SnapshotPolicyObject <PSNetAppFilesSnapshotPolicy>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -135,7 +135,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SnaphotPolicyObject
+### -SnapshotPolicyObject
 The Snapshot Policy object
 
 ```yaml
