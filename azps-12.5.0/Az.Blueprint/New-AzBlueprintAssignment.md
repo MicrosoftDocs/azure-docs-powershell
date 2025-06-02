@@ -40,7 +40,7 @@ Assign a blueprint definition to a subscription.
 $rg = @{ResourceGroup=@{name='storage_rg';location='eastus'}}
 $params = @{applytaganditsdefaultvalue_tagName="Department_Cost_Center"; applytaganditsdefaultvalue_tagValue="Contoso/RnD/Dev/986754"}
 $blueprintObject =  Get-AzBlueprint -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Name "myBlueprintName"
-$secureString = @{mySecureStringParam=@{keyVaultId='/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/rsourcegroups/myResourceGroup/providers/Microsoft.Keyvault/Vaults/myKeyVault';secretName='mySecret';secretVersion='1.0'}}
+$secureString = @{mySecureStringParam=@{keyVaultId='/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/myResourceGroup/providers/Microsoft.Keyvault/Vaults/myKeyVault';secretName='mySecret';secretVersion='1.0'}}
 New-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Location "West US" -ResourceGroupParameter $rg -Parameter $params -SecureStringParameter $secureString
 ```
 
