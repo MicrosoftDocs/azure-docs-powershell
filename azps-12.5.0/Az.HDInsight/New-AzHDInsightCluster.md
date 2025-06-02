@@ -431,7 +431,7 @@ $clusterCreds = Get-Credential
 # New-AzResourceGroup -Name $clusterResourceGroupName -Location $location
 
 # ESP configuration
-$domainResourceId = "your Azure AD Domin Service resource id"
+$domainResourceId = "your Azure AD Domain Service resource id"
 $domainUser = "yourdomainuser"
 $domainPassword = ConvertTo-SecureString -String "****" -AsPlainText -Force
 $domainCredential = New-Object System.Management.Automation.PSCredential($domainUser, $domainPassword)
@@ -441,7 +441,7 @@ $ldapUrls = "ldaps://{your domain name}:636"
 $clusterTier = "Premium"
 $vnetId = "yourvnetid"
 $subnetName = "yoursubnetname"
-$assignedIdentity = "your user managed assigned identity resourcee id"
+$assignedIdentity = "your user managed assigned identity resource id"
 
 #Create security profile
 $config= New-AzHDInsightClusterConfig|Add-AzHDInsightSecurityProfile -DomainResourceId $domainResourceId -DomainUserCredential $domainCredential -LdapsUrls $ldapUrls -ClusterUsersGroupDNs $clusterUserGroupDns
@@ -639,7 +639,7 @@ $clusterCreds = Get-Credential
 # If the cluster's resource group doesn't exist yet, run:
 # New-AzResourceGroup -Name $clusterResourceGroupName -Location $location
 # ESP configuration
-$domainResourceId = "your Azure AD Domin Service resource id"
+$domainResourceId = "your Azure AD Domain Service resource id"
 $domainUser = "yourdomainuser"
 $domainPassword = ConvertTo-SecureString -String "****" -AsPlainText -Force
 $domainCredential = New-Object System.Management.Automation.PSCredential($domainUser, $domainPassword)
@@ -648,7 +648,7 @@ $ldapUrls = "ldaps://{your domain name}:636"
 $clusterTier = "Premium"
 $vnetId = "yourvnetid"
 $subnetName = "yoursubnetname"
-$assignedIdentity = "your user managed assigned identity resourcee id"
+$assignedIdentity = "your user managed assigned identity resource id"
 #Create security profile
 $config= New-AzHDInsightClusterConfig|Add-AzHDInsightSecurityProfile -DomainResourceId $domainResourceId -DomainUserCredential $domainCredential -LdapsUrls $ldapUrls -ClusterUsersGroupDNs $clusterUserGroupDns
 # Create the cluster
