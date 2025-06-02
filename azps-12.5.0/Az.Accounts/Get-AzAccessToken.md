@@ -55,7 +55,7 @@ Get access token of Microsoft Graph endpoint for current account
 ## PARAMETERS
 
 ### -AsSecureString
-Specifiy to convert output token as a secure string.
+Specify to convert output token as a secure string.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

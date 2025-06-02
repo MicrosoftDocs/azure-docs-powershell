@@ -53,8 +53,8 @@ This ConnectionTypeName=AzureServicePrincipal is mainly used for Azure Run As Ac
 ```powershell
 $SubscriptionName = "MyTestSubscription"
 $SubscriptionId = "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
-$ClassicRunAsAccountCertifcateAssetName = "AzureClassicRunAsCertificate"
-$ClassicRunAsAccountConnectionFieldValues = @{"SubscriptionName" = $SubscriptionName; "SubscriptionId" = $SubscriptionId; "CertificateAssetName" = $ClassicRunAsAccountCertifcateAssetName}
+$ClassicRunAsAccountCertificateAssetName = "AzureClassicRunAsCertificate"
+$ClassicRunAsAccountConnectionFieldValues = @{"SubscriptionName" = $SubscriptionName; "SubscriptionId" = $SubscriptionId; "CertificateAssetName" = $ClassicRunAsAccountCertificateAssetName}
 New-AzAutomationConnection -Name "Connection14" -ConnectionTypeName AzureClassicCertificate  -ConnectionFieldValues $ClassicRunAsAccountConnectionFieldValues -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
 ```
 
