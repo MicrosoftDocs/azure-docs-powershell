@@ -61,7 +61,7 @@ AdditionalProperties : {[k, v]}
 Count                : 1
 ```
 
-This command updates a container group using pipeing.
+This command updates a container group using piping.
 
 ## PARAMETERS
 

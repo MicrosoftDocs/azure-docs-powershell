@@ -44,7 +44,7 @@ Gets a HDInsight cluster.
 
 ## EXAMPLES
 
-### Example 1: lsit all HDInsight clusters in a pool.
+### Example 1: list all HDInsight clusters in a pool.
 ```powershell
 $clusterResourceGroupName = "your-resourceGroup"
 $clusterpoolName = "your-clusterpool"
