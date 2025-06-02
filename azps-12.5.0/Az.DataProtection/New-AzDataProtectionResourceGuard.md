@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentityType
-This parameter is no longer in use and will be depricated
+This parameter is no longer in use and will be deprecated
 
 ```yaml
 Type: System.String
