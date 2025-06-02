@@ -602,7 +602,7 @@ Gets the troubleshooting result from the previously run or currently running tro
 Gets an existing P2SVpnGateway under VirtualHub.
 
 ### [Get-AzP2sVpnGatewayConnectionHealth](Get-AzP2sVpnGatewayConnectionHealth.md)
-Gets the current aggregared point to site connections health information from P2SVpnGateway.
+Gets the current aggregated point to site connections health information from P2SVpnGateway.
 
 ### [Get-AzP2sVpnGatewayDetailedConnectionHealth](Get-AzP2sVpnGatewayDetailedConnectionHealth.md)
 Gets the detailed information of current point to site connections from P2SVpnGateway.
@@ -1049,10 +1049,10 @@ Creates a Firewall Application Rule.
 Creates a collection of Firewall application rules.
 
 ### [New-AzFirewallHubIpAddress](New-AzFirewallHubIpAddress.md)
-Ip addresses assoicated to the firewall on virtual hub
+Ip addresses associated to the firewall on virtual hub
 
 ### [New-AzFirewallHubPublicIpAddress](New-AzFirewallHubPublicIpAddress.md)
-Public Ip assoicated to the firewall on virtual hub
+Public Ip associated to the firewall on virtual hub
 
 ### [New-AzFirewallNatRule](New-AzFirewallNatRule.md)
 Creates a Firewall NAT Rule.
@@ -1079,7 +1079,7 @@ Creates a new Azure Firewall Policy
 Create a new Azure Firewall Policy Application Rule
 
 ### [New-AzFirewallPolicyApplicationRuleCustomHttpHeader](New-AzFirewallPolicyApplicationRuleCustomHttpHeader.md)
-Create a new Azure Firewall Policy Application Rule Custon HTTP Header
+Create a new Azure Firewall Policy Application Rule Custom HTTP Header
 
 ### [New-AzFirewallPolicyDnsSetting](New-AzFirewallPolicyDnsSetting.md)
 Creates a new DNS Setting for Azure Firewall Policy
