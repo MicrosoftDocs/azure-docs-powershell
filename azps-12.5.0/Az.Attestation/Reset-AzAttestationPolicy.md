@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Reset-AzAttestationPolicy
 
 ## SYNOPSIS
-Resets the policy from a tenant in Azure Attestationn.}
+Resets the policy from a tenant in Azure Attestation.
 
 ## SYNTAX
 
