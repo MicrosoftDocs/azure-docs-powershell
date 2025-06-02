@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Set-AzAttestationPolicy
 
 ## SYNOPSIS
-Sets the policy from a tenant in Azure Attestationn.
+Sets the policy from a tenant in Azure Attestation.
 
 ## SYNTAX
 
