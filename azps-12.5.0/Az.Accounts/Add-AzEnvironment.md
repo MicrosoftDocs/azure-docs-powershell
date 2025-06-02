@@ -318,7 +318,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureDataLakeStoreFileSystemEndpointSuffix
-Dns Suffix of Azure Data Lake Store FileSystem. Example: azuredatalake.net
+Dns Suffix of Azure Data Lake Store FileSystem. Example: `azuredatalake.net`
 
 ```yaml
 Type: System.String
@@ -333,7 +333,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureKeyVaultDnsSuffix
-Dns suffix of Azure Key Vault service. Example is vault-int.azure-int.net
+Dns suffix of Azure Key Vault service. Example is `vault-int.azure-int.net`
 
 ```yaml
 Type: System.String

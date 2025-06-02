@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzApiManagementGatewayHostnameConfiguration
 
 ## SYNOPSIS
-Creates a hostname configuratin for the existing Gateway.
+Creates a hostname configuration for the existing Gateway.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ New-AzApiManagementGatewayHostnameConfiguration -Context <PsApiManagementContext
 ```
 
 ## DESCRIPTION
-The **New-AzApiManagementGatewayHostnameConfiguration** cmdlet creates a hostname configuratin for the existing Gateway.
+The **New-AzApiManagementGatewayHostnameConfiguration** cmdlet creates a hostname configuration for the existing Gateway.
 
 ## EXAMPLES
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -GatewayHostnameConfigurationId
-Identifier of new gateway hostname confiuration.
+Identifier of new gateway hostname configuration.
 This parameter is optional.
 If not specified will be generated.
 

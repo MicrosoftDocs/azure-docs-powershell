@@ -39,7 +39,7 @@ $trustedSigner = Get-Content -Path .\trusted.signer.txt
 Add-AzAttestationPolicySigner -Name pshtest -ResourceGroupName psh-test-rg -Signer $trustedSigner
 ```
 
-Add a trusted signer for the Atteestation Provider named *pshtest*.
+Add a trusted signer for the Attestation Provider named *pshtest*.
 
 ## PARAMETERS
 
