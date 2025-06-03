@@ -26,7 +26,7 @@ The **Get-AzCodeSigningCertChain** cmdlet retrieves Azure CodeSigning Cert Chain
 Use this cmdlet to retrieve Azure CodeSigning Cert Chain.
 There are two sets of parameters. One set uses AccountName, ProfileName, and EndpointUrl. 
 Another set uses MetadataFilePath.
-Destination is the downloaded cert chain file path, which incldues the file name and extension .der.
+Destination is the downloaded cert chain file path, which includes the file name and extension .der.
 ## EXAMPLES
 
 ### Example 1: Retrieve a cert chain by account and profile name
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -Destination
-Specifies the downloaed cert chain file path. 
+Specifies the download cert chain file path. 
 
 ```yaml
 Type: System.String

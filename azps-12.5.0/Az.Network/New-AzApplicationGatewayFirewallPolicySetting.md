@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRequestBodyCheck
-Diables the requestBodyCheck in policy settings of the firewall policy.
+Disables the requestBodyCheck in policy settings of the firewall policy.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

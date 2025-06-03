@@ -57,7 +57,7 @@ $fileList[0] = "/dir1/customer1.db"
 Restore-AzNetAppFilesBackupFile -ResourceGroupName "MyRG" -AccountName "MyAnfAccount" -PoolName "MyAnfPool" -VolumeName "MyVolume" -BackupName "MyBackup" -FileList $fileList -DestinationVolumeId "destinationVolumeResourceId"
 ```
 
-This command Restores the file customer1.db from "MyBackup" to the specified destingation volume
+This command Restores the file customer1.db from "MyBackup" to the specified destination volume
 
 ## PARAMETERS
 

@@ -39,7 +39,7 @@ eastus   azps-mn-simgroup azps_test_group   Succeeded
 ```
 
 Creates or updates a SIM group.
-You need to create Keyvault, managementiidentity, and give Keyvault some permissions on the ManagementIdentity
+You need to create Keyvault, ManagedIdentity, and give Keyvault some permissions on the ManagedIdentity
 
 ## PARAMETERS
 

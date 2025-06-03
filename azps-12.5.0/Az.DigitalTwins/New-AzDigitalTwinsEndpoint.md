@@ -84,7 +84,7 @@ Name       EndpointType AuthenticationType ResourceGroupName
 azps-dt-sb ServiceBus   KeyBased           azps_test_group
 ```
 
-Create an AzDigitalTwinsEndpoint for ServicBus by PrimaryConnectionString
+Create an AzDigitalTwinsEndpoint for ServiceBus by PrimaryConnectionString
 
 ## PARAMETERS
 

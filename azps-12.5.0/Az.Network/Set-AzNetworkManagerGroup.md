@@ -51,7 +51,7 @@ Etag              :
 Id                : /subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/networkGroups/psNetworkGroup
 ```
 
-Updates a network manager group decription.
+Updates a network manager group description.
 
 ## PARAMETERS
 

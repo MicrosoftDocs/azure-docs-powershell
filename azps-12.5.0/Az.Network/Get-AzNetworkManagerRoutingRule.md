@@ -69,7 +69,7 @@ SystemData            : {
                         }
 ```
 
-Gets a routing rule in a rule rollection.
+Gets a routing rule in a rule collection.
 
 ### Example 2
 ```powershell

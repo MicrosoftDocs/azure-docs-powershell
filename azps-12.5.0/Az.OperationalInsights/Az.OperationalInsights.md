@@ -38,7 +38,7 @@ Starts collection of performance counters from Linux computers.
 Starts collection of syslog data from Linux computers.
 
 ### [Get-AzOperationalInsightsAvailableServiceTier](Get-AzOperationalInsightsAvailableServiceTier.md)
-This command gets all available service tiers for a given worksapce.
+This command gets all available service tiers for a given workspace.
 
 ### [Get-AzOperationalInsightsCluster](Get-AzOperationalInsightsCluster.md)
 Get or list clusters
