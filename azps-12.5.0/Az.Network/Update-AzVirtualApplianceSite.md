@@ -16,7 +16,7 @@ Change or Modify a Virtual Appliance site connected to a Network Virtual Applian
 
 ```
 Update-AzVirtualApplianceSite -Name <String> -ResourceGroupName <String> -NetworkVirtualApplianceId <String>
- [-AddresssPrefix <String>] [-O365Policy <PSOffice365PolicyProperties>] [-Tag <Hashtable>] [-Force] [-AsJob]
+ [-AddressPrefix <String>] [-O365Policy <PSOffice365PolicyProperties>] [-Tag <Hashtable>] [-Force] [-AsJob]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -28,14 +28,14 @@ The Update-AzVirtualApplianceSite command modifies a Virtual Appliance site reso
 ### Example 1
 ```powershell
 $nva=Get-AzNetworkVirtualAppliance -ResourceGroupName testrg -Name nva
-Update-AzVirtualApplianceSite -Name testsite -ResourceGroupName testrg -AddresssPrefix 10.0.4.0/24 -NetworkVirtualApplianceId $nva.Id
+Update-AzVirtualApplianceSite -Name testsite -ResourceGroupName testrg -AddressPrefix 10.0.4.0/24 -NetworkVirtualApplianceId $nva.Id
 ```
 
 Modify the address prefix for a Virtual Appliance site resource.
 
 ## PARAMETERS
 
-### -AddresssPrefix
+### -AddressPrefix
 The address prefix for the site.
 
 ```yaml

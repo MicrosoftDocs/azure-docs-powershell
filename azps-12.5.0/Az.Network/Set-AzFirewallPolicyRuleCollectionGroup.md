@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-The resource Id of the Rule collection groupy
+The resource Id of the Rule collection group
 
 ```yaml
 Type: System.String

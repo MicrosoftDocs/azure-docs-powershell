@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzFirewallHubIpAddress
 
 ## SYNOPSIS
-Ip addresses assoicated to the firewall on virtual hub
+Ip addresses associated to the firewall on virtual hub
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ New-AzFirewallHubIpAddress [-PrivateIPAddress <String>] [-PublicIP <PSAzureFirew
 ```
 
 ## DESCRIPTION
-Ip addresses assoicated to the firewall on virtual hub. These can be public and private addresses
+Ip addresses associated to the firewall on virtual hub. These can be public and private addresses
 
 ## EXAMPLES
 

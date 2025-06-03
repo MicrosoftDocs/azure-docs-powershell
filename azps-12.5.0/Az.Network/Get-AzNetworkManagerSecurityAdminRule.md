@@ -77,7 +77,7 @@ SystemData            : {
                         }
 ```
 
-Gets a security admin rule in a rule rollection.
+Gets a security admin rule in a rule collection.
 
 ### Example 2
 ```powershell
