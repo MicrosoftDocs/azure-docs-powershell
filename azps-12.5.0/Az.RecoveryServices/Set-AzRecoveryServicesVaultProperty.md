@@ -15,7 +15,7 @@ Updates properties of a Vault.
 
 ## SYNTAX
 
-### AzureRSVaultSoftDelteParameterSet (Default)
+### AzureRSVaultSoftDeleteParameterSet (Default)
 ```
 Set-AzRecoveryServicesVaultProperty [-SoftDeleteFeatureState <String>]
  [-DisableHybridBackupSecurityFeature <Boolean>] [-VaultId <String>] [-DefaultProfile <IAzureContextContainer>]
@@ -31,7 +31,7 @@ Set-AzRecoveryServicesVaultProperty [-VaultId <String>] [-DefaultProfile <IAzure
 
 ## DESCRIPTION
 The **Set-AzRecoveryServicesVaultProperty** cmdlet updates properties of a Recovery services vault. This cmdlet can be used to Enable/Disable/AlwaysON soft delete or set CMK encryption for a vault with two different parameter sets. 
-**SoftDeleteFeatureState** property of a vault can be disabled only if there are no registered containers in the vault. InfrastructurEncryption can only be set the first time a user updates the CMK vault.
+**SoftDeleteFeatureState** property of a vault can be disabled only if there are no registered containers in the vault. InfrastructureEncryption can only be set the first time a user updates the CMK vault.
 
 ## EXAMPLES
 
@@ -100,7 +100,7 @@ Optional flag ($true/$false) to disable/enable security setting for hybrid backu
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
-Parameter Sets: AzureRSVaultSoftDelteParameterSet
+Parameter Sets: AzureRSVaultSoftDeleteParameterSet
 Aliases:
 
 Required: False
@@ -160,7 +160,7 @@ SoftDeleteFeatureState of the Recovery Services Vault. Allowed values are Disabl
 
 ```yaml
 Type: System.String
-Parameter Sets: AzureRSVaultSoftDelteParameterSet
+Parameter Sets: AzureRSVaultSoftDeleteParameterSet
 Aliases:
 Accepted values: Enable, Disable, AlwaysON
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseSystemAssignedIdentity
-Boolean flag to indicate if SystemAssigned Identity will be used for CMK encryption. Accepted Vaules: $true, $false
+Boolean flag to indicate if SystemAssigned Identity will be used for CMK encryption. Accepted Values: $true, $false
 
 ```yaml
 Type: System.Boolean
