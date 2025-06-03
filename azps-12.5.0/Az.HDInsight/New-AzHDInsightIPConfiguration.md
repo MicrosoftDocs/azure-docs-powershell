@@ -21,7 +21,7 @@ New-AzHDInsightIPConfiguration [-Name <String>] [-Primary] [-PrivateIPAddress <S
 ```
 
 ## DESCRIPTION
-This cmdlet **New-AzHDInsightIPConfiguration** creates the ip configuration in memeory.
+This cmdlet **New-AzHDInsightIPConfiguration** creates the ip configuration in memory.
 
 ## EXAMPLES
 

@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -HideConsistentAcl
-Do not show directory subtree if the ACLs are the same throughout the entire subtree. This makes it easier to see only the paths up to which the ACLs differ.For example if all files and folders under /a/b are the same, do not show the subtreeunder /a/b, and just output /a/b with 'True' in the Consistent ACL columnCannot be set if IncludeFiles is not set, because consistent Acl cannot be determined without retrieving acls for the files.
+Do not show directory subtree if the ACLs are the same throughout the entire subtree. This makes it easier to see only the paths up to which the ACLs differ.For example if all files and folders under /a/b are the same, do not show the subtree under /a/b, and just output /a/b with 'True' in the Consistent ACL columnCannot be set if IncludeFiles is not set, because consistent Acl cannot be determined without retrieving acls for the files.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

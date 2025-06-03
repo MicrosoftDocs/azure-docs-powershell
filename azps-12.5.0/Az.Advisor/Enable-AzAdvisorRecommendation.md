@@ -50,7 +50,7 @@ b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2 Security automanagehcrprg High   Microsoft.
 
 Enable recommendation by resource Id
 
-### Example 2: Enable recommendation byrecommendation name
+### Example 2: Enable recommendation by recommendation name
 ```powershell
 Enable-AzAdvisorRecommendation -RecommendationName b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2
 ```
@@ -61,7 +61,7 @@ Name                                 Category Resource Group   Impact ImpactedFi
 b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2 Security automanagehcrprg High   Microsoft.Compute/virtualMachines
 ```
 
-Enable recommendation byrecommendation name
+Enable recommendation by recommendation name
 
 ## PARAMETERS
 
