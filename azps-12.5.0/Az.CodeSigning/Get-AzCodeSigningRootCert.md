@@ -27,7 +27,7 @@ The **Get-AzCodeSigningRootCert** cmdlet retrieves Azure CodeSigning Root Cert.
 Use this cmdlet to retrieve Azure CodeSigning Root Cert.
 There are two sets of parameters. One set uses AccountName, ProfileName, and EndpointUrl. 
 Another set uses MetadataFilePath.
-Destination is the downloaded root cert file path, which incldues the file name and extension .cer.
+Destination is the downloaded root cert file path, which includes the file name and extension .cer.
 ## EXAMPLES
 
 ### Example 1: Retrieve a root cert by account and profile name
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Destination
-Specifies the downloaed root cert file path. 
+Specifies the download root cert file path. 
 
 ```yaml
 Type: System.String

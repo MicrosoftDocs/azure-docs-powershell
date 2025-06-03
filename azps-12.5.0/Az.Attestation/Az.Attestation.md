@@ -38,10 +38,10 @@ Removes a trusted policy signer for a tenant in Azure Attestation.
 Delete Attestation Service.
 
 ### [Reset-AzAttestationPolicy](Reset-AzAttestationPolicy.md)
-Resets the policy from a tenant in Azure Attestationn.}
+Resets the policy from a tenant in Azure attestation.}
 
 ### [Set-AzAttestationPolicy](Set-AzAttestationPolicy.md)
-Sets the policy from a tenant in Azure Attestationn.
+Sets the policy from a tenant in Azure Attestation.
 
 ### [Update-AzAttestationProvider](Update-AzAttestationProvider.md)
 Updates the Attestation Provider.

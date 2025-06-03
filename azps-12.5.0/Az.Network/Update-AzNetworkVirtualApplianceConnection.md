@@ -36,7 +36,7 @@ Update-AzNetworkVirtualApplianceConnection -VirtualApplianceResourceId <String> 
 ```
 
 ## DESCRIPTION
-The Update-AzNetworkVirtualApplianceConnectiuon modifies a Network Virtual Appliance Connection resource.
+The Update-AzNetworkVirtualApplianceConnection modifies a Network Virtual Appliance Connection resource.
 
 ## EXAMPLES
 

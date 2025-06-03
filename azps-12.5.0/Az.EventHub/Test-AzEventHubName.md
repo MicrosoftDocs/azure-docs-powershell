@@ -56,7 +56,7 @@ Message                                                                         
 The specified name is not available. For more information visit https://aka.ms/eventhubsarmexceptions.         False NameInUse
 ```
 
-Checks the availability of alias name `myAlias` on namespace `myNamepace`.
+Checks the availability of alias name `myAlias` on namespace `myNamespace`.
 
 ## PARAMETERS
 

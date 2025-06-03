@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingPolicy
-The list of RoutingPolicies to update in this routing intent reesource.
+The list of RoutingPolicies to update in this routing intent resource.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSRoutingPolicy[]
