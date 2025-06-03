@@ -45,7 +45,7 @@ $dcspmOffering = New-AzSecurityDefenderCspmAwsOfferingObject `
     -MdcContainerAgentlessDiscoveryK8SEnabled $true -MdcContainerAgentlessDiscoveryK8SCloudRoleArn "$arnPrefix/MDCContainersAgentlessDiscoveryK8sRole"
 
 $defenderForContainersOffering = New-AzSecurityDefenderForContainersAwsOfferingObject `
-    -AutoProvisioning $true -KuberneteServiceCloudRoleArn "$arnPrefix/DefenderForCloud-Containers-K8s" -KuberneteScubaReaderCloudRoleArn "$arnPrefix/DefenderForCloud-DataCollection" `
+    -AutoProvisioning $true -KubernetesServiceCloudRoleArn "$arnPrefix/DefenderForCloud-Containers-K8s" -KubernetesScubaReaderCloudRoleArn "$arnPrefix/DefenderForCloud-DataCollection" `
     -KinesiToS3CloudRoleArn "$arnPrefix/DefenderForCloud-Containers-K8s-kinesis-to-s3" -CloudWatchToKinesiCloudRoleArn "$arnPrefix/DefenderForCloud-Containers-K8s-cloudwatch-to-kinesis" `
     -KubeAuditRetentionTime 30 -ScubaExternalId "a47ae0a2-7bf7-482a-897a-7a139d30736c" `
     -MdcContainerAgentlessDiscoveryK8SEnabled $true -MdcContainerAgentlessDiscoveryK8SCloudRoleArn "$arnPrefix/MDCContainersAgentlessDiscoveryK8sRole" `

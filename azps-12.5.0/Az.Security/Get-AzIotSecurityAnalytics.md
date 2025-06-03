@@ -109,7 +109,7 @@ MostPrevalentDeviceRecommendations: [
       }
 ```
 
-Get the deafult IoT Security Analytics for Security Solution "MySolution" in reasource group "MyResourceGroup"
+Get the default IoT Security Analytics for Security Solution "MySolution" in resource group "MyResourceGroup"
 
 ## PARAMETERS
 
