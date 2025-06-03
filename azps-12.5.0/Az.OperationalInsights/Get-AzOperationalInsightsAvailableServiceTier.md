@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzOperationalInsightsAvailableServiceTier
 
 ## SYNOPSIS
-This command gets all available service tiers for a given worksapce.
+This command gets all available service tiers for a given workspace.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Get-AzOperationalInsightsAvailableServiceTier [-ResourceGroupName] <String> [-Wo
 ```
 
 ## DESCRIPTION
-This command gets all available service tiers for a given worksapce.
+This command gets all available service tiers for a given workspace.
 
 ## EXAMPLES
 
@@ -47,7 +47,7 @@ CapacityReservationLevel :
 LastSkuUpdate            : Tue, 16 Nov 2021 13:20:32 GMT
 ```
 
-This command gets all available service tiers for a given worksapce.
+This command gets all available service tiers for a given workspace.
 
 ## PARAMETERS
 
