@@ -113,7 +113,7 @@ Remove-AzRoleAssignment [-PassThru] [-InputObject] <PSRoleAssignment> [-SkipClie
 ```
 
 ## DESCRIPTION
-Use the Remove-AzRoleAssignment commandlet to revoke access to any principal at given scope and given role.
+Use the Remove-AzRoleAssignment cmdlet to revoke access to any principal at given scope and given role.
 The object of the assignment i.e.
 the principal MUST be specified.
 The principal can be a user (use SignInName or ObjectId parameters to identify a user), security group (use ObjectId parameter to identify a group) or service principal (use ServicePrincipalName or ObjectId parameters to identify a ServicePrincipal.
@@ -147,11 +147,11 @@ Defaults to using the current subscription as the scope to find the assignment t
 
 ### Example 3
 ```powershell
-$roleassignment = Get-AzRoleAssignment |Select-Object -First 1 -Wait
+$roleassignment = Get-AzRoleAssignment | Select-Object -First 1 -Wait
 Remove-AzRoleAssignment -InputObject $roleassignment
 ```
 
-Removes the first role assignment object which is fetched from the Get-AzRoleAssignment commandlet.
+Removes the first role assignment object which is fetched from the Get-AzRoleAssignment cmdlet.
 
 ## PARAMETERS
 
