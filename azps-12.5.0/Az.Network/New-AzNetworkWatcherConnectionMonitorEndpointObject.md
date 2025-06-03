@@ -202,7 +202,7 @@ Accept wildcard characters: False
 
 ### -CoverageLevel
 Test coverage for the endpoint.
-Supported values are Default, Low, BelowAverage, Average, AboveAvergae, Full.
+Supported values are Default, Low, BelowAverage, Average, AboveAverage, Full.
 
 ```yaml
 Type: System.String
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeItem
-List of items which need to be included into endpont scope.
+List of items which need to be included into endpoint scope.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcherConnectionMonitorEndpointScopeItem[]
