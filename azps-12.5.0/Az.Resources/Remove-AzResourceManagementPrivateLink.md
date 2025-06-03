@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzResourceManagementPrivateLink
 
 ## SYNOPSIS
-Deletes the Resource Manangement Private Link.
+Deletes the Resource Management Private Link.
 
 ## SYNTAX
 
