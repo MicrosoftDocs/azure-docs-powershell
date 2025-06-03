@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: 5422429E-C609-4C1F-A021-E2A085B5F74E
 online version: 
 schema: 2.0.0
+Module Name: Azure.Storage
 ---
 
 # Set-AzureStorageServiceLoggingProperty

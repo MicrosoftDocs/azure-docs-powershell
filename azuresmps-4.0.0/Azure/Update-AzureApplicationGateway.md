@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: C7F08804-E177-4BC5-8F0E-DEC1B467C4BB
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Update-AzureApplicationGateway
@@ -28,7 +29,7 @@ The **Update-AzureApplicationGateway** cmdlet updates an existing application ga
 ### Example 1: Modify an application gateway by using its name
 ```
 PS C:\> Stop-AzureApplicationGateway -Name "ApplicationGateway06"
-PS C:\> Update-AzureApplicationGateway -Name "ApplicationGateway06" -VnetName "VirutalNetwork18" -Subnets @("Subnet05", "Subnet06")
+PS C:\> Update-AzureApplicationGateway -Name "ApplicationGateway06" -VnetName "VirtualNetwork18" -Subnets @("Subnet05", "Subnet06")
 ```
 
 The first command stops the application gateway named ApplicationGateway06.

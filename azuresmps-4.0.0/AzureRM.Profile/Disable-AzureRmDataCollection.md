@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
+Module Name: AzureRM.Profile
 ---
 
 # Disable-AzureRmDataCollection
@@ -83,5 +84,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Enable-AzureRmDataCollection]()
+[Enable-AzureRmDataCollection](Enable-AzureRmDataCollection.md)
 

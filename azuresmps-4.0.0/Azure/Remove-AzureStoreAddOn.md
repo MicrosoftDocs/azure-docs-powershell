@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: D927B159-AD68-4071-ADE3-FA2430750D72
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureStoreAddOn

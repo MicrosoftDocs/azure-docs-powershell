@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: F9A06B8B-55DB-48A5-B246-53347E759E64
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Add-AzurePHPWebRole

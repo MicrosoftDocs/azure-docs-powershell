@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 6715B3E8-6880-4B86-B831-41664766E12B
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureDeploymentEvent
@@ -37,7 +38,7 @@ This cmdlet returns a list of events that identify the role instance or virtual 
 
 ### 1:
 ```
-Get-AzureDeploymentEvent -DeploymentName "ConstosoDeployment" -ServiceName "ContosoService"
+Get-AzureDeploymentEvent -DeploymentName "ContosoDeployment" -ServiceName "ContosoService"
 ```
 
 ## PARAMETERS

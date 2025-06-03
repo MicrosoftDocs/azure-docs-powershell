@@ -29,7 +29,7 @@ The Resume-AzAnalysisServicesServer cmdlet resumes an instance of Analysis Servi
 Resume-AzAnalysisServicesServer -Name "testserver" -ResourceGroupName "testgroup"
 ```
 
-This command will resume a paused server named testserver in the resourcegroup testgroup
+This command will resume a paused server named testserver in the resource group testgroup
 
 ## PARAMETERS
 

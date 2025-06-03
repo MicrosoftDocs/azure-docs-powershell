@@ -63,7 +63,7 @@ ObjectType                  AbsoluteCriterion DaysOfTheWeek    MonthsOfYear Sche
 ScheduleBasedBackupCriteria                   {Sunday, Monday}
 ```
 
-This command creates a critetia object with weekly criteria
+This command creates a criteria object with weekly criteria
 
 ## PARAMETERS
 

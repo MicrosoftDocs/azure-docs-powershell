@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: EFBC8DCD-00CC-4BBF-9383-EA15376535F3
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Update-AzureWebsiteRepository

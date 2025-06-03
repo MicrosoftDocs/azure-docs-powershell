@@ -2,6 +2,7 @@
 external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
 online version: 
 schema: 2.0.0
+Module Name: AzureRM.Profile
 ---
 
 # Select-AzureRmProfile
@@ -103,5 +104,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzureRMContext]()
+[Get-AzureRMContext](Get-AzureRMContext.md)
 

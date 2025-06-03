@@ -45,7 +45,7 @@ default Succeeded         logz-rg-test
 
 This command gets the default tag rule set for a given logz sub account resource.
 
-### Example 2: Get the default tag rule set for a given logz sub account resourceby pipeline
+### Example 2: Get the default tag rule set for a given logz sub account resource by pipeline
 ```powershell
 New-AzLogzSubAccountTagRule -ResourceGroupName logz-rg-test -MonitorName pwsh-logz04 -SubAccountName logz-pwshsub01 | Get-AzLogzSubAccountTagRule
 ```

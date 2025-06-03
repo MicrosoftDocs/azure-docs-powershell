@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: B2C7E454-F38F-4139-ADA2-D1C59C03CC50
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureAffinityGroup

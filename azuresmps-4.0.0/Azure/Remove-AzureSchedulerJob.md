@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 22DEC693-32BA-4048-8912-D1626DD511E7
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Remove-AzureSchedulerJob

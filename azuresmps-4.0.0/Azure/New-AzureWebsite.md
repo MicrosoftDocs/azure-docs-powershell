@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: FBB55071-454D-4473-93BA-D97F33067785
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureWebsite
@@ -63,7 +64,7 @@ Accept wildcard characters: False
 
 ### -GitHub
 Indicates that this cmdlet links the new website to an existing GitHub repository.
-Commits to the Giuthub repository are pushed to the website in Azure.
+Commits to the GitHub repository are pushed to the website in Azure.
 
 ```yaml
 Type: SwitchParameter

@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: C2DAFB2C-A58B-406C-8349-8728771B279E
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Add-AzureNodeWebRole

@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 377716B6-8B8C-4CAE-A8FA-835DA24F04C7
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureVMBGInfoExtension

@@ -1,8 +1,9 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 6617AA59-CDD1-4BA9-84A7-F3914BF1D4B7
-online version:
+online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-WAPackVMRole

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Invoke-AzComputeScheduleExecuteDeallocate
 
 ## SYNOPSIS
-VirtualMachinesExecuteDeallocate: Execute deallocate operation for a batch of virtual machines, this operation is triggered as soon as Computeschedule receives it.
+VirtualMachinesExecuteDeallocate: Execute deallocate operation for a batch of virtual machines, this operation is triggered as soon as ComputeSchedule receives it.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Invoke-AzComputeScheduleExecuteDeallocate -Location <String> [-SubscriptionId <S
 ```
 
 ## DESCRIPTION
-VirtualMachinesExecuteDeallocate: Execute deallocate operation for a batch of virtual machines, this operation is triggered as soon as Computeschedule receives it.
+VirtualMachinesExecuteDeallocate: Execute deallocate operation for a batch of virtual machines, this operation is triggered as soon as ComputeSchedule receives it.
 
 ## EXAMPLES
 

@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 ms.assetid: A723D12D-DCF5-4F0C-AAC2-8BADFBAC3328
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # New-AzureSqlDatabaseServerFirewallRule

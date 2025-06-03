@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: BFB57100-93F6-4FD2-8ECA-7F54BEB0D6B0
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureWebsiteLog
@@ -55,7 +56,7 @@ PS C:\> Get-AzureWebsiteLog -Tail -Message Error
 
 This example starts log streaming and show error logs only.
 
-### Example 4: Display avaiable logs
+### Example 4: Display available logs
 ```
 PS C:\> Get-AzureWebsiteLog -Name MyWebsite -ListPath
 ```

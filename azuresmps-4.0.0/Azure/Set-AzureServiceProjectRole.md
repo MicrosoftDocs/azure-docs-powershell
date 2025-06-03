@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 5D093C10-F8B6-4F4A-ABD7-CC4D7AB7AFFA
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureServiceProjectRole

@@ -1,8 +1,9 @@
 ---
 external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
 ms.assetid: 95CCEB79-EAC4-4F56-B289-5401F976E5F5
-online version:
+online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Grant-AzureHDInsightRdpAccess

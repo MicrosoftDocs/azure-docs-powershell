@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dl
 ms.assetid: DA5689DF-AA4A-4161-89B0-8055BF384274
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Start-AzureVirtualNetworkGatewayDiagnostics

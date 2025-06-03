@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: 3B3F1870-348D-4303-9520-FD81D4650F5F
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Get-AzureWebHostingPlan

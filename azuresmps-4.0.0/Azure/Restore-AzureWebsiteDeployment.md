@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: B83ABF05-3169-4D05-AB6E-167DE045595D
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Restore-AzureWebsiteDeployment

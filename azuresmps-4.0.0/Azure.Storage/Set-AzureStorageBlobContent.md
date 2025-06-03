@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
 ms.assetid: F20A5FD3-6EC3-4EFE-988C-75F8583961A4
 online version: 
 schema: 2.0.0
+Module Name: Azure.Storage
 ---
 
 # Set-AzureStorageBlobContent

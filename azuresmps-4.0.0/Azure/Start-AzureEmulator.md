@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: A1815E7F-720E-4526-A779-106C181B840D
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Start-AzureEmulator

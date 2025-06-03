@@ -3,6 +3,7 @@ external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.x
 ms.assetid: 1BA472FB-E684-486C-8066-42C9215DBDEF
 online version: 
 schema: 2.0.0
+Module Name: Azure
 ---
 
 # Set-AzureEndpoint
@@ -30,7 +31,7 @@ You can specify changes to an endpoint that is not load balanced.
 
 ### Example 1: Modify an endpoint to listen on a port
 ```
-PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirutalMachine01" | Set-AzureEndpoint -Name "Web" -PublicPort 443 -LocalPort 443 -Protocol tcp | Update-AzureVM
+PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine01" | Set-AzureEndpoint -Name "Web" -PublicPort 443 -LocalPort 443 -Protocol tcp | Update-AzureVM
 ```
 
 This command retrieves the configuration of a virtual machine named VirtualMachine01 by using the **Get-AzureVM** cmdlet.
