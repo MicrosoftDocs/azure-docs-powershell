@@ -303,7 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-To be used with ObjectId. Specifies the type of the asignee object
+To be used with ObjectId. Specifies the type of the assignee object
 
 ```yaml
 Type: System.String
