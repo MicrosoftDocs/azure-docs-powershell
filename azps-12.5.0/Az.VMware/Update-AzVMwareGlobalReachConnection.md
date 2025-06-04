@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizationKey
-Authorization key from the peer express route used for the global reachconnection
+Authorization key from the peer express route used for the global reach connection
 
 ```yaml
 Type: System.String
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteId
-The ID of the Private Cloud's ExpressRoute Circuit that is participating in theglobal reach connection
+The ID of the Private Cloud's ExpressRoute Circuit that is participating in the global reach connection
 
 ```yaml
 Type: System.String
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerExpressRouteCircuit
-Identifier of the ExpressRoute Circuit to peer with in the global reachconnection
+Identifier of the ExpressRoute Circuit to peer with in the global reach connection
 
 ```yaml
 Type: System.String
