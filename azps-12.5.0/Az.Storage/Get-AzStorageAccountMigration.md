@@ -33,7 +33,7 @@ Gets the status of the ongoing migration for the specified storage account.
 
 ### Example 1: Get a Storage account migration
 ```powershell
-Get-AzStorageAccountMigration -AccountName myaccount -ResourceGroupName myresroucegroup
+Get-AzStorageAccountMigration -AccountName myaccount -ResourceGroupName myresourcegroup
 ```
 
 ```output
