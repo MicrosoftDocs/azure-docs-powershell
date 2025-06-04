@@ -26,7 +26,7 @@ Get-AzSqlInstance [-InstancePool] <AzureSqlInstancePoolModel> [-ExpandActiveDire
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### ListByInstancePoolResourceIdentiferParameterSet
+### ListByInstancePoolResourceIdentifierParameterSet
 ```
 Get-AzSqlInstance [-InstancePoolResourceId] <String> [-ExpandActiveDirectoryAdministrator]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -501,7 +501,7 @@ The instance pool resource identifier.
 
 ```yaml
 Type: System.String
-Parameter Sets: ListByInstancePoolResourceIdentiferParameterSet
+Parameter Sets: ListByInstancePoolResourceIdentifierParameterSet
 Aliases:
 
 Required: True

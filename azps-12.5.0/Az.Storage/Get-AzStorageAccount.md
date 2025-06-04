@@ -61,7 +61,7 @@ This command gets all of the Storage accounts in the subscription.
 
 ### Example 4:  Get a Storage accounts with its blob restore status
 ```powershell
-$account = Get-AzStorageAccount -ResourceGroupName "myresourcegoup" -Name "mystorageaccount" -IncludeBlobRestoreStatus
+$account = Get-AzStorageAccount -ResourceGroupName "myresourcegroup" -Name "mystorageaccount" -IncludeBlobRestoreStatus
 
 $account.BlobRestoreStatus
 ```

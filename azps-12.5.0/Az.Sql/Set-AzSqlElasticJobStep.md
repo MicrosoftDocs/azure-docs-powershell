@@ -402,7 +402,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetryAttempts
-The retry attemps
+The retry attempts
 
 ```yaml
 Type: System.Nullable`1[System.Int32]

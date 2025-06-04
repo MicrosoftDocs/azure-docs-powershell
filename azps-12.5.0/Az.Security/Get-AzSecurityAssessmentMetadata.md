@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzSecurityAssessmentMetadata
 
 ## SYNOPSIS
-Gets security assessments types and metadta in a subscription.
+Gets security assessments types and metadata in a subscription.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Get-AzSecurityAssessmentMetadata -ResourceId <String> [-DefaultProfile <IAzureCo
 ```
 
 ## DESCRIPTION
-Gets security assessments types and metadta in a subscription. Security Assessment metadata include Built-In assessments and custom assessment types that the user can define.
+Gets security assessments types and metadata in a subscription. Security Assessment metadata include Built-In assessments and custom assessment types that the user can define.
 
 ## EXAMPLES
 

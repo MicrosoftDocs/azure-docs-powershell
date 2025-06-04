@@ -132,7 +132,7 @@ $share.RootSquash
 NoRootSquash
 ```
 
-This command modifies share RootSquash property to NoRootSquash. RootSquash property is only avaialbe on share with EnabledProtocol as NFS.
+This command modifies share RootSquash property to NoRootSquash. RootSquash property is only available on share with EnabledProtocol as NFS.
 
 ## PARAMETERS
 

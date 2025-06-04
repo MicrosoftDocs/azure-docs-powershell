@@ -51,7 +51,7 @@ The start range is included, and the end range is excluded in blob restore.
 ```powershell
 $range1 = New-AzStorageBlobRangeToRestore -StartRange container1/blob1 -EndRange container2/blob2
 $range2 = New-AzStorageBlobRangeToRestore -StartRange container3/blob3 -EndRange container4/blob4
-Restore-AzStorageBlobRange -ResourceGroupName "myresourcegoup" -StorageAccountName "mystorageaccount" -TimeToRestore (Get-Date).AddDays(-1) -BlobRestoreRange $range1,$range2
+Restore-AzStorageBlobRange -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -TimeToRestore (Get-Date).AddDays(-1) -BlobRestoreRange $range1,$range2
 
 Status     RestoreId                            FailureReason Parameters.TimeToRestore     Parameters.BlobRanges                     
 ------     ---------                            ------------- ------------------------     ---------------------                     
@@ -68,7 +68,7 @@ This command first creates 2 blob ranges, then start restores blobs in a Storage
 
 ### Example 2: Restores all blobs in a Storage account in the backend
 ```powershell
-$job = Restore-AzStorageBlobRange -ResourceGroupName "myresourcegoup" -StorageAccountName "mystorageaccount" -TimeToRestore (Get-Date).AddMinutes(-30) -WaitForComplete -asjob
+$job = Restore-AzStorageBlobRange -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -TimeToRestore (Get-Date).AddMinutes(-30) -WaitForComplete -asjob
 
 $job | Wait-Job
 
@@ -85,7 +85,7 @@ This command restores all blobs in a Storage account from 30 minutes ago, and wa
 
 ### Example 3: Restores blobs by input blob ranges directly, and wait for complete
 ```powershell
-Restore-AzStorageBlobRange -ResourceGroupName "myresourcegoup" -StorageAccountName "mystorageaccount" -WaitForComplete `
+Restore-AzStorageBlobRange -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -WaitForComplete `
     -TimeToRestore (Get-Date).AddSeconds(-1) `
     -BlobRestoreRange @{StartRange="aaa/abc";EndRange="bbb/abc"},@{StartRange="bbb/acc";EndRange=""}
 ```
