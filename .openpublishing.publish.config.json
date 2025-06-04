@@ -41,7 +41,7 @@
       "docset_name": "azureps",
       "locale": "en-us",
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ],
       "monikers": [],
       "open_to_public_contributors": true,
