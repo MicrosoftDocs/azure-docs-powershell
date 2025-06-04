@@ -39,7 +39,7 @@ ValueType: "String"
 AllowlistValues: []
 ```
 
-Create new allow list custom alert rull from type "LocalUserNotAllowed" with status set to disable
+Create new allow list custom alert rule from type "LocalUserNotAllowed" with status set to disable
 
 ## PARAMETERS
 

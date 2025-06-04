@@ -119,7 +119,7 @@ New-AzSentinelDataConnector -ResourceGroupName <String> -WorkspaceName <String> 
 ```
 New-AzSentinelDataConnector -ResourceGroupName <String> -WorkspaceName <String> [-SubscriptionId <String>]
  [-Id <String>] -Kind <DataConnectorKind> -AWSRoleArn <String> -Log <String> -SQSURL <String[]>
- -DetinationTable <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ -DestinationTable <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -323,7 +323,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DetinationTable
+### -DestinationTable
 
 ```yaml
 Type: System.String

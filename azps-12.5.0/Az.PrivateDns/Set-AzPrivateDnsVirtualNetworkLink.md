@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResolutionPolicy
-Speficies the resolution policy of the virtual network link
+Specifies the resolution policy of the virtual network link
 
 ```yaml
 Type: Azure.ResourceManager.PrivateDns.Models.PrivateDnsResolutionPolicy

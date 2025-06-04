@@ -148,7 +148,7 @@ $BackupItem = Get-AzRecoveryServicesBackupItem -BackupManagementType "AzureVM" -
 $StartDate = (Get-Date).AddDays(-7)
 $EndDate = Get-Date
 $RP = Get-AzRecoveryServicesBackupRecoveryPoint -Item $BackupItem -StartDate $StartDate.ToUniversalTime() -EndDate $EndDate.ToUniversalTime() -VaultId $vault.ID
-$AlternateLocationRestoreJob = Restore-AzRecoveryServicesBackupItem -RecoveryPoint $RP[0] -TargetResourceGroupName "Target_RG" -StorageAccountName "DestStorageAccount" -StorageAccountResourceGroupName "DestStorageAccRG" -TargetVMName "TagetVirtualMachineName" -TargetVNetName "Target_VNet" -TargetVNetResourceGroup "" -TargetSubnetName "subnetName" -VaultId $vault.ID -VaultLocation $vault.Location 
+$AlternateLocationRestoreJob = Restore-AzRecoveryServicesBackupItem -RecoveryPoint $RP[0] -TargetResourceGroupName "Target_RG" -StorageAccountName "DestStorageAccount" -StorageAccountResourceGroupName "DestStorageAccRG" -TargetVMName "TargetVirtualMachineName" -TargetVNetName "Target_VNet" -TargetVNetResourceGroup "" -TargetSubnetName "subnetName" -VaultId $vault.ID -VaultLocation $vault.Location 
 $OriginalLocationRestoreJob = Restore-AzRecoveryServicesBackupItem -RecoveryPoint $RP[0] -StorageAccountName "DestStorageAccount" -StorageAccountResourceGroupName "DestStorageAccRG" -VaultId $vault.ID -VaultLocation $vault.Location
 ```
 
@@ -512,7 +512,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestoreToEdgeZone
-Switch parameter to indicate edge zone VM restore. This parameter can't be used in cross region and corss subscription restore scenario
+Switch parameter to indicate edge zone VM restore. This parameter can't be used in cross region and cross subscription restore scenario
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
