@@ -33,7 +33,7 @@ Update-AzSentinelDataConnector -ResourceGroupName <String> -WorkspaceName <Strin
 ```
 Update-AzSentinelDataConnector -ResourceGroupName <String> -WorkspaceName <String> -Id <String>
  [-SubscriptionId <String>] [-AWSRoleArn <String>] [-Log <String>] [-SQSURL <String[]>]
- [-DetinationTable <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-AWSS3]
+ [-DestinationTable <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-AWSS3]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -134,7 +134,7 @@ Update-AzSentinelDataConnector -InputObject <ISecurityInsightsIdentity> [-Tenant
 ### UpdateViaIdentityAmazonWebServicesS3
 ```
 Update-AzSentinelDataConnector -InputObject <ISecurityInsightsIdentity> [-TenantId <String>]
- [-AWSRoleArn <String>] [-Log <String>] [-SQSURL <String[]>] [-DetinationTable <String>]
+ [-AWSRoleArn <String>] [-Log <String>] [-SQSURL <String[]>] [-DestinationTable <String>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-AWSS3] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
@@ -527,7 +527,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DetinationTable
+### -DestinationTable
 
 ```yaml
 Type: System.String

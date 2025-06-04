@@ -35,7 +35,7 @@ Disabling Remote Support.
 Remote Support successfully Disabled.
 ```
 
-Disabling Remort support
+Disabling Remote support
 
 ## PARAMETERS
 

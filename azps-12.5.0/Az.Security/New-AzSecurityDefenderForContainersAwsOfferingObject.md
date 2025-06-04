@@ -19,8 +19,8 @@ New-AzSecurityDefenderForContainersAwsOfferingObject [-AutoProvisioning <Boolean
  [-CloudWatchToKinesiCloudRoleArn <String>] [-ContainerVulnerabilityAssessmentCloudRoleArn <String>]
  [-ContainerVulnerabilityAssessmentTaskCloudRoleArn <String>]
  [-EnableContainerVulnerabilityAssessment <Boolean>] [-KinesiToS3CloudRoleArn <String>]
- [-KubeAuditRetentionTime <Int64>] [-KuberneteScubaReaderCloudRoleArn <String>]
- [-KuberneteServiceCloudRoleArn <String>] [-MdcContainerAgentlessDiscoveryK8SCloudRoleArn <String>]
+ [-KubeAuditRetentionTime <Int64>] [-KubernetesScubaReaderCloudRoleArn <String>]
+ [-KubernetesServiceCloudRoleArn <String>] [-MdcContainerAgentlessDiscoveryK8SCloudRoleArn <String>]
  [-MdcContainerAgentlessDiscoveryK8SEnabled <Boolean>] [-MdcContainerImageAssessmentCloudRoleArn <String>]
  [-MdcContainerImageAssessmentEnabled <Boolean>] [-ScubaExternalId <String>]
  [<CommonParameters>]
@@ -35,7 +35,7 @@ Create an in-memory object for DefenderForContainersAwsOffering.
 ```powershell
 $arnPrefix = "arn:aws:iam::123456789012:role"
 New-AzSecurityDefenderForContainersAwsOfferingObject `
-    -AutoProvisioning $true -KuberneteServiceCloudRoleArn "$arnPrefix/DefenderForCloud-Containers-K8s" -KuberneteScubaReaderCloudRoleArn "$arnPrefix/DefenderForCloud-DataCollection" `
+    -AutoProvisioning $true -KubernetesServiceCloudRoleArn "$arnPrefix/DefenderForCloud-Containers-K8s" -KubernetesScubaReaderCloudRoleArn "$arnPrefix/DefenderForCloud-DataCollection" `
     -KinesiToS3CloudRoleArn "$arnPrefix/DefenderForCloud-Containers-K8s-kinesis-to-s3" -CloudWatchToKinesiCloudRoleArn "$arnPrefix/DefenderForCloud-Containers-K8s-cloudwatch-to-kinesis" `
     -KubeAuditRetentionTime 30 -ScubaExternalId "a47ae0a2-7bf7-482a-897a-7a139d30736c" `
     -MdcContainerAgentlessDiscoveryK8SEnabled $true -MdcContainerAgentlessDiscoveryK8SCloudRoleArn "$arnPrefix/MDCContainersAgentlessDiscoveryK8sRole" `
@@ -169,7 +169,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -KuberneteScubaReaderCloudRoleArn
+### -KubernetesScubaReaderCloudRoleArn
 The cloud role ARN in AWS for this feature used for reading data.
 
 ```yaml
@@ -184,7 +184,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -KuberneteServiceCloudRoleArn
+### -KubernetesServiceCloudRoleArn
 The cloud role ARN in AWS for this feature used for provisioning resources.
 
 ```yaml

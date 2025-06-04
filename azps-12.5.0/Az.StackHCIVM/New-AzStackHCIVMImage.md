@@ -50,7 +50,7 @@ Please note some properties can be set only during image creation.
 
 ### Example 1: Create a  Gallery Image
 ```powershell
-New-AzStackHCIVMImage -Name "testImage" -ResourceGroupName "test-rg" -CustomLocationId "/subscriptions/{subscriptionID}/resourcegroups/{resourceGroupName}/providers/microsoft.extendedlocation/customlocations/{customLocationName}" -ImagePath "C:\ClusterStorage\Volume1\Ubunut.vhdx" -OSType "Linux" -Location "eastus"
+New-AzStackHCIVMImage -Name "testImage" -ResourceGroupName "test-rg" -CustomLocationId "/subscriptions/{subscriptionID}/resourcegroups/{resourceGroupName}/providers/microsoft.extendedlocation/customlocations/{customLocationName}" -ImagePath "C:\ClusterStorage\Volume1\Ubuntu.vhdx" -OSType "Linux" -Location "eastus"
 ```
 
 ```output
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -Offer
-The name of the marketplae gallery image definition offer.
+The name of the marketplace gallery image definition offer.
 
 ```yaml
 Type: System.String
