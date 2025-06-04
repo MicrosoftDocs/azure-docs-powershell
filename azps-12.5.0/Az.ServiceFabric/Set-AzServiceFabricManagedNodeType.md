@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Set-AzServiceFabricManagedNodeType
 
 ## SYNOPSIS
-Sets node type resource properties or run reimage actions on specific ndes of the node type with -Reimage parameter.
+Sets node type resource properties or run reimage actions on specific nodes of the node type with -Reimage parameter.
 
 ## SYNTAX
 
@@ -56,7 +56,7 @@ Set-AzServiceFabricManagedNodeType [-InputObject] <PSManagedNodeType> -NodeName 
 ```
 
 ## DESCRIPTION
-Sets node type resource properties or run reimage actions on specific ndes of the node type with -Reimage parameter. On reimgae operation the service fabric nodes will be disabled before reimaging the vms and enabled them back again once they come back. If this is done on primary node types it might take a while as it might not reimage all the nodes at the same time. Use -ForceReimage force the operation even if service fabric is unable to disable the nodes but use with caution as this might cause data loss if stateful workloads are running on the node.
+Sets node type resource properties or run reimage actions on specific nodes of the node type with -Reimage parameter. On reimage operation the service fabric nodes will be disabled before reimaging the vms and enabled them back again once they come back. If this is done on primary node types it might take a while as it might not reimage all the nodes at the same time. Use -ForceReimage force the operation even if service fabric is unable to disable the nodes but use with caution as this might cause data loss if stateful workloads are running on the node.
 
 ## EXAMPLES
 
@@ -78,7 +78,7 @@ $NodeTypeName = "nt1"
 Set-AzServiceFabricManagedNodeType -ResourceGroupName $rgName -ClusterName $clusterName -name $NodeTypeName -PlacementProperty @{NodeColor="Red";SomeProperty="6";} -Verbose
 ```
 
-Update placement properites of the node type. This will overwrite older placement properites if any.
+Update placement properties of the node type. This will overwrite older placement properties if any.
 
 ### Example 3
 ```powershell

@@ -43,7 +43,7 @@ Get a Deployment and its properties.
 
 ## EXAMPLES
 
-### Example 1: Get Spring Cloud App Deploymeng by name
+### Example 1: Get Spring Cloud App Deployment by name
 ```powershell
 Get-AzSpringCloudAppDeployment -ResourceGroupName spring-cloud-rg -ServiceName spring-cloud-service -AppName gateway -DeploymentName default
 ```
@@ -54,7 +54,7 @@ Name    SystemDataCreatedAt  SystemDataCreatedBy  SystemDataCreatedByType System
 jardemo 7/25/2022 9:29:46 AM v-diya@microsoft.com User                    7/25/2022 9:38:28 AM     v-diya@microsoft.com     User                         springcloudrg
 ```
 
-Get Spring Cloud App Deploymeng by name.
+Get Spring Cloud App Deployment by name.
 
 ### Example 2: List all the deployment under a given spring cloud app
 ```powershell

@@ -235,7 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceEndpoint
-IP adress of the source endpoint.
+IP address of the source endpoint.
 
 ```yaml
 Type: System.String
