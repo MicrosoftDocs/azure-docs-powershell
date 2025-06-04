@@ -93,7 +93,7 @@ If an Azure API Management API is onboarded to Microsoft Defender for APIs, the 
 Gets security assessments and their results on a subscription
 
 ### [Get-AzSecurityAssessmentMetadata](Get-AzSecurityAssessmentMetadata.md)
-Gets security assessments types and metadta in a subscription.
+Gets security assessments types and metadata in a subscription.
 
 ### [Get-AzSecurityAutomation](Get-AzSecurityAutomation.md)
 Gets security automations

@@ -26,7 +26,7 @@ Set-AzRecoveryServicesAsrAlertSetting [-EnableEmailSubscriptionOwner] [-CustomEm
  [-LocaleID <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### DisableEmailToSubcriptionOwner
+### DisableEmailToSubscriptionOwner
 ```
 Set-AzRecoveryServicesAsrAlertSetting [-DisableEmailToSubscriptionOwner] [-CustomEmailAddress <String[]>]
  [-LocaleID <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -85,7 +85,7 @@ Alert / Notification sent to emails.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: Set, EmailToSubscriptionOwner, DisableEmailToSubcriptionOwner
+Parameter Sets: Set, EmailToSubscriptionOwner, DisableEmailToSubscriptionOwner
 Aliases:
 
 Required: False
@@ -115,7 +115,7 @@ Switch parameter specifies enable notification to subscription owner.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: DisableEmailToSubcriptionOwner
+Parameter Sets: DisableEmailToSubscriptionOwner
 Aliases:
 
 Required: True
@@ -160,7 +160,7 @@ Email language of alert /notification to user(supported culture codes from micro
 
 ```yaml
 Type: System.String
-Parameter Sets: Set, EmailToSubscriptionOwner, DisableEmailToSubcriptionOwner
+Parameter Sets: Set, EmailToSubscriptionOwner, DisableEmailToSubscriptionOwner
 Aliases:
 
 Required: False

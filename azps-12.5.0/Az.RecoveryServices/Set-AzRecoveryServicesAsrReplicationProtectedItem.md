@@ -82,7 +82,7 @@ Don't pass -EnableAcceleratedNetworkingOnRecovery to disable accelerated Network
 ### Example 6
 ```powershell
 $currentJob = Set-AzRecoveryServicesAsrReplicationProtectedItem -InputObject $rpi `
-		-DiskEncryptionVaultId $DiskEncryptionVaultId -DiskEncryptionSecretUrl $DiskEncryptionSecertUrl `
+		-DiskEncryptionVaultId $DiskEncryptionVaultId -DiskEncryptionSecretUrl $DiskEncryptionSecretUrl `
 		-KeyEncryptionVaultId $KeyEncryptionVaultId -KeyEncryptionKeyUrl $KeyEncryptionKeyUrl
 ```
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureToAzureUpdateReplicationConfiguration
-Specifies the disk configuration to updated for managed disk Vm (Azure to Azure DR scenrio).
+Specifies the disk configuration to updated for managed disk Vm (Azure to Azure DR scenario).
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRAzuretoAzureDiskReplicationConfig[]
@@ -272,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -LicenseType
-Specifiy the license type selection to be used for Windows Server virtual machines. If you are entitled to use the Azure Hybrid Use Benefit (HUB) for migrations and would like to specify that the HUB setting be used while failing over this protected item set the license type to be WindowsServer.
+Specify the license type selection to be used for Windows Server virtual machines. If you are entitled to use the Azure Hybrid Use Benefit (HUB) for migrations and would like to specify that the HUB setting be used while failing over this protected item set the license type to be WindowsServer.
 
 ```yaml
 Type: System.String
