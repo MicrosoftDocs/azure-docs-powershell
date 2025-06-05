@@ -43,7 +43,7 @@ Get a StandbyVirtualMachinePoolResource
 
 ## EXAMPLES
 
-### Example 1: get a standby virutal machine pool
+### Example 1: get a standby virtual machine pool
 ```powershell
 Get-AzStandbyVMPool  `
 -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e `

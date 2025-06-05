@@ -60,7 +60,7 @@ The **Update-AzSynapseWorkspace** cmdlet updates an Azure Synapse Analytics work
 Update-AzSynapseWorkspace -Name ContosoWorkspace -Tag @{'key'='value'}
 ```
 
-This commands updates tags for the specififed Azure Synapse Analytics workspace.
+This commands updates tags for the specified Azure Synapse Analytics workspace.
 
 ### Example 2
 ```powershell
@@ -68,14 +68,14 @@ $ws = Get-AzSynapseWorkspace -Name ContosoWorkspace
 $ws | Update-AzSynapseWorkspace -Tag @{'key'='value1'}
 ```
 
-This commands updates tags for the specififed Azure Synapse Analytics workspace through pipeline.
+This commands updates tags for the specified Azure Synapse Analytics workspace through pipeline.
 
 ### Example 3
 ```powershell
 Update-AzSynapseWorkspace -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace -Tag @{'key'='value2'}
 ```
 
-This commands updates tags for the specififed Azure Synapse Analytics workspace through pipeline with resource ID.
+This commands updates tags for the specified Azure Synapse Analytics workspace through pipeline with resource ID.
 
 ### Example 4
 ```powershell
@@ -83,14 +83,14 @@ $config = New-AzSynapseGitRepositoryConfig -RepositoryType GitHub -AccountName C
 Update-AzSynapseWorkspace -Name ContosoWorkspace -GitRepository $config
 ```
 
-This commands updates Git repository which workspace is conneceted to for the specififed Azure Synapse Analytics workspace.
+This commands updates Git repository which workspace is connected to for the specified Azure Synapse Analytics workspace.
 
 ### Example 5
 ```powershell
 Update-AzSynapseWorkspace -Name ContosoWorkspace -EnablePublicNetworkAccess $True
 ```
 
-This commands updates the specififed Azure Synapse Analytics workspace to enable public network access.
+This commands updates the specified Azure Synapse Analytics workspace to enable public network access.
 
 ### Example 6
 ```powershell
@@ -103,7 +103,7 @@ foreach($uami in $uamis){
 Update-AzSynapseWorkspace -Name ContosoWorkspace -UserAssignedIdentityAction Add -UserAssignedIdentityId $uamilist
 ```
 
-This commands updates workspace to add user assigned managed identites in $uamilist.
+This commands updates workspace to add user assigned managed identities in $uamilist.
 
 ### Example 7
 ```powershell
@@ -116,7 +116,7 @@ foreach($uami in $uamis){
 Update-AzSynapseWorkspace -Name ContosoWorkspace -UserAssignedIdentityAction Remove -UserAssignedIdentityId $uamilist[0]
 ```
 
-This commands removes user assigned managed identites $uamilist[0] from workspace.
+This commands removes user assigned managed identities $uamilist[0] from workspace.
 
 ### Example 8
 ```powershell
@@ -129,7 +129,7 @@ foreach($uami in $uamis){
 Update-AzSynapseWorkspace -Name ContosoWorkspace -UserAssignedIdentityAction Set -UserAssignedIdentityId $uamilist
 ```
 
-This commands updates workspace with user assigned managed identites $uamilist that will cover current identities.
+This commands updates workspace with user assigned managed identities $uamilist that will cover current identities.
 
 ### Example 9
 ```powershell
@@ -139,7 +139,7 @@ New-AzSynapseWorkspaceKey -ResourceGroupName ContosoResourceGroup -WorkspaceName
 ##Update the workspace and set the temp key as the TDE protector
 Update-AzSynapseWorkspace -WorkspaceName ContosoWorkspace -EncryptionKeyName TempKey -UseSystemAssignedIdentityInEncryption $true
 
-##Note, we need to create a new key version for the original encrytion key of the Azure key vault before moving to next steps. 
+##Note, we need to create a new key version for the original encryption key of the Azure key vault before moving to next steps. 
 
 ##Update the workspace and set the encryption key back after we created a new key version. 
 Update-AzSynapseWorkspace -WorkspaceName ContosoWorkspace -EncryptionKeyName default -UseSystemAssignedIdentityInEncryption $true
