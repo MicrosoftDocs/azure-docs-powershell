@@ -71,7 +71,7 @@ The restored SQL pool is created as a new SQL pool.
 ### Example 1
 ```powershell
 # Transform Synapse SQL pool resource ID to SQL database ID because 
-# currently the command only accepts the SQL databse ID. For example: /subscriptions/<SubscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Sql/servers/<WorkspaceName>/databases/<DatabaseName>
+# currently the command only accepts the SQL database ID. For example: /subscriptions/<SubscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Sql/servers/<WorkspaceName>/databases/<DatabaseName>
 $pool = Get-AzSynapseSqlPool -ResourceGroupName ContosoResourceGroup -WorkspaceName ContosoWorkspace -Name ContosoSqlPool
 $databaseId = $pool.Id -replace "Microsoft.Synapse", "Microsoft.Sql" `
 	-replace "workspaces", "servers" `
@@ -89,7 +89,7 @@ This command creates an Azure Synapse Analytics SQL pool by leveraging a restore
 ### Example 2
 ```powershell
 # Transform Synapse SQL pool resource ID to SQL database ID because
-# currently the command only accepts the SQL databse ID. For example: /subscriptions/<SubscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Sql/servers/<WorkspaceName>/recoverabledatabases/<DatabaseName>
+# currently the command only accepts the SQL database ID. For example: /subscriptions/<SubscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Sql/servers/<WorkspaceName>/recoverabledatabases/<DatabaseName>
 $pool = Get-AzSynapseSqlPoolGeoBackup -ResourceGroupName ContosoResourceGroup -WorkspaceName ContosoWorkspace -Name ContosoSqlPool
 $databaseId = $pool.Id -replace "Microsoft.Synapse", "Microsoft.Sql" `
     -replace "workspaces", "servers"
@@ -116,7 +116,7 @@ This command creates an Azure Synapse Analytics SQL pool which restores from the
 ### Example 4
 ```powershell
 # Transform Synapse SQL pool resource ID to SQL database ID because 
-# currently the command only accepts the SQL databse ID. For example: /subscriptions/<SubscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Sql/servers/<WorkspaceName>/databases/<DatabaseName>
+# currently the command only accepts the SQL database ID. For example: /subscriptions/<SubscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Sql/servers/<WorkspaceName>/databases/<DatabaseName>
 $pool = Get-AzSynapseSqlPool -ResourceGroupName ContosoResourceGroup -WorkspaceName ContosoWorkspace -Name ContosoSqlPool
 $databaseId = $pool.Id -replace "Microsoft.Synapse", "Microsoft.Sql" `
 	-replace "workspaces", "servers" `
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeletionDate
-The deletion date of the Azure Synaspe SQL Database to retrieve backups for, with millisecond precision (e.g. 2016-02-23T00:21:22.847Z)
+The deletion date of the Azure Synapse SQL Database to retrieve backups for, with millisecond precision (e.g. 2016-02-23T00:21:22.847Z)
 
 ```yaml
 Type: System.DateTime

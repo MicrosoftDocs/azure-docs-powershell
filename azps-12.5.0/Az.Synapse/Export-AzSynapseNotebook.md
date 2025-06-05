@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Export-AzSynapseNotebook
 
 ## SYNOPSIS
-Exports notbooks.
+Exports netbooks.
 
 ## SYNTAX
 

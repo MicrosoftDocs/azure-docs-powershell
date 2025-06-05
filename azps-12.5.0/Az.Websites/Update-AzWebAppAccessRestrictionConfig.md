@@ -9,7 +9,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzWebAppAccessRestrictionConfig
 
 ## SYNOPSIS
-Updates the inheritance of Main site Access Restiction config to SCM Site for an Azure Web App.
+Updates the inheritance of Main site Access Restriction config to SCM Site for an Azure Web App.
 
 ## SYNTAX
 

@@ -53,7 +53,7 @@ When creating an Azure Synapse Analytics workspace, you can choose to encrypt al
 Exports KQL script.
 
 ### [Export-AzSynapseNotebook](Export-AzSynapseNotebook.md)
-Exports notbooks.
+Exports netbooks.
 
 ### [Export-AzSynapseSparkConfiguration](Export-AzSynapseSparkConfiguration.md)
 Exports a Synapse spark configuration to an output folder.
@@ -143,7 +143,7 @@ Gets information about linked services in workspace.
 Gets Managed Identity Sql Control Settings.
 
 ### [Get-AzSynapseManagedPrivateEndpoint](Get-AzSynapseManagedPrivateEndpoint.md)
-Gets information about mananged private endpoints in a workspace
+Gets information about managed private endpoints in a workspace
 
 ### [Get-AzSynapseNotebook](Get-AzSynapseNotebook.md)
 Gets information about notebooks in a workspace.

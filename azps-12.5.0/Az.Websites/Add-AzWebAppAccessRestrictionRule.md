@@ -9,7 +9,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Add-AzWebAppAccessRestrictionRule
 
 ## SYNOPSIS
-Adds an Access Restiction rule to an Azure Web App.
+Adds an Access Restriction rule to an Azure Web App.
 
 ## SYNTAX
 
