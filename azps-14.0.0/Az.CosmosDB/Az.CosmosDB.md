@@ -11,8 +11,6 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Az.CosmosDB Module
 ## Description
 The topics in this section document the Azure PowerShell cmdlets for Azure Cosmos DB and Azure Managed Instance for Apache Cassandra in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.CosmosDB namespace.
-
-## Az.CosmosDB Cmdlets
 ### [Get-AzCosmosDBAccount](Get-AzCosmosDBAccount.md)
 Get CosmosDB Account.
 
