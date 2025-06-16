@@ -11,9 +11,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl
 # Az.Websites Module
 ## Description
 ARM (Azure Resource Manager) Web App and App Service Plan commands.
-
-## Az.Websites Cmdlets
 ### [Edit-AzWebAppBackupConfiguration](Edit-AzWebAppBackupConfiguration.md)
+Edits the current configuration backup for an Azure Web App.
 
 ### [Get-AzAppServicePlan](Get-AzAppServicePlan.md)
 Gets an Azure App Service plan in the specified resource group.
@@ -25,10 +24,13 @@ Gets Azure Web service plan metrics.
 Gets Azure Web Apps in the specified resource group.
 
 ### [Get-AzWebAppBackup](Get-AzWebAppBackup.md)
+Gets the specified backup of an Azure Web App.
 
 ### [Get-AzWebAppBackupConfiguration](Get-AzWebAppBackupConfiguration.md)
+Gets the backup configuration of an Azure Web App.
 
 ### [Get-AzWebAppBackupList](Get-AzWebAppBackupList.md)
+Gets a list of backups for an Azure Web App.
 
 ### [Get-AzWebAppCertificate](Get-AzWebAppCertificate.md)
 Gets an Azure Web App certificate.
@@ -64,8 +66,10 @@ Creates an Azure App Service plan in a given Geo location.
 Creates an Azure Web App.
 
 ### [New-AzWebAppBackup](New-AzWebAppBackup.md)
+Creates an Azure Web App Backup.
 
 ### [New-AzWebAppDatabaseBackupSetting](New-AzWebAppDatabaseBackupSetting.md)
+Creates a new Azure Web App Backup setting.
 
 ### [New-AzWebAppSlot](New-AzWebAppSlot.md)
 Creates an Azure Web App slot.
@@ -80,22 +84,28 @@ Removes an Azure App Service plan.
 Removes an Azure Web App.
 
 ### [Remove-AzWebAppBackup](Remove-AzWebAppBackup.md)
+Removes the specified backup of an Azure Web App.
 
 ### [Remove-AzWebAppSlot](Remove-AzWebAppSlot.md)
+Removes an Azure Web App Slot provided the resource group and Web App name.
 
 ### [Remove-AzWebAppSSLBinding](Remove-AzWebAppSSLBinding.md)
 Removes an SSL binding from an uploaded certificate.
 
 ### [Reset-AzWebAppPublishingProfile](Reset-AzWebAppPublishingProfile.md)
+Resets the publishing profile for the specified Web App.
 
 ### [Reset-AzWebAppSlotPublishingProfile](Reset-AzWebAppSlotPublishingProfile.md)
+Resets the publishing profile for the specified Web App Slot.
 
 ### [Restart-AzWebApp](Restart-AzWebApp.md)
 Restarts an Azure Web App.
 
 ### [Restart-AzWebAppSlot](Restart-AzWebAppSlot.md)
+Restarts an Azure Web App.
 
 ### [Restore-AzWebAppBackup](Restore-AzWebAppBackup.md)
+Restores an Azure Web App Backup.
 
 ### [Restore-AzWebAppSnapshot](Restore-AzWebAppSnapshot.md)
 Restores a web app snapshot.
@@ -126,3 +136,4 @@ Stops an Azure Web App slot.
 
 ### [Switch-AzWebAppSlot](Switch-AzWebAppSlot.md)
 Swap two slots with a Web App
+
