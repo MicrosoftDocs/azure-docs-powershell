@@ -7,7 +7,7 @@ content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzFirewallPolicyRuleCollectionGroupDraft.md
 ---
 
-# Get-AzFirewallPolicyRuleCollectionGroup
+# Get-AzFirewallPolicyRuleCollectionGroupDraft
 
 ## SYNOPSIS
 Gets an Azure Firewall Policy Rule Collection Group Draft.
