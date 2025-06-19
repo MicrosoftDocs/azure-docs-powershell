@@ -11,6 +11,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Az.Compute Module
 ## Description
 This topic displays the help topics for the Azure Compute Cmdlets.
+
+## Az.Compute Cmdlets
 ### [Add-AzImageDataDisk](Add-AzImageDataDisk.md)
 Adds a data disk to an image object.
 

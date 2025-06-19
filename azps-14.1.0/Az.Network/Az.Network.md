@@ -11,6 +11,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Az.Network Module
 ## Description
 This topic displays help topics for the Azure Network Cmdlets.
+
+## Az.Network Cmdlets
 ### [Add-AzApplicationGatewayAuthenticationCertificate](Add-AzApplicationGatewayAuthenticationCertificate.md)
 Adds an authentication certificate to an application gateway.
 

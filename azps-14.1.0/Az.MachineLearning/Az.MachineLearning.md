@@ -11,6 +11,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Az.MachineLearning Module
 ## Description
 Machine Learning Web Services cmdlets for Azure Resource Manager
+
+## Az.MachineLearning Cmdlets
 ### [Add-AzMlWebServiceRegionalProperty](Add-AzMlWebServiceRegionalProperty.md)
 Creates regional web service properties.
 
