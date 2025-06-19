@@ -11,6 +11,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Az.Sql Module
 ## Description
 This topic displays help topics for the Azure SQL Database Cmdlets.
+
+## Az.Sql Cmdlets
 ### [Add-AzSqlDatabaseToFailoverGroup](Add-AzSqlDatabaseToFailoverGroup.md)
 Adds one or more databases to an Azure SQL Database Failover Group.
 

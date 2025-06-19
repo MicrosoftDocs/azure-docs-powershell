@@ -11,6 +11,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Az.Synapse Module
 ## Description
 The topics in this section document the Azure PowerShell cmdlets for Azure Synapse Analytics.
+
+## Az.Synapse Cmdlets
 ### [Add-AzSynapseDataFlowDebugSessionPackage](Add-AzSynapseDataFlowDebugSessionPackage.md)
 Add data flow resource and its dependencies into specific data flow debug session.
 
