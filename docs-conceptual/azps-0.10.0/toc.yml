@@ -63,10 +63,6 @@
     - name: PowerShell jobs
       href: using-psjobs.md
       displayName: background, task, scripting, automation, context, process
-- name: Tutorials
-  items:
-    - name: Create Virtual Machines
-      href: azureps-vm-tutorial.yml
 - name: Sample Scripts
   items:
     - name: Linux Virtual Machines

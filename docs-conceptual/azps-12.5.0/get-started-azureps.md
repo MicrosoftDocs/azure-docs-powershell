@@ -92,7 +92,6 @@ patterns and issues. No private or personal data is collected. However, you can 
 
 Get hands-on with Azure PowerShell through our guided tutorials:
 
-- [Create virtual machines with Azure PowerShell][create-vms]
 - [Create a storage account][create-storageaccount]
 - [Transfer objects to/from Azure Blob storage][transfer-objects]
 - [Create and retrieve secrets from Azure Key Vault][keyvault]
@@ -133,7 +132,6 @@ For additional help, connect with the community:
 [azps-modules]: https://github.com/Azure/azure-powershell/blob/master/documentation/azure-powershell-modules.md
 [disable-azdatacollection]: /powershell/module/az.accounts/disable-azdatacollection
 [privacy-statement]: https://privacy.microsoft.com/privacystatement
-[create-vms]: azureps-vm-tutorial.yml
 [create-storageaccount]: /azure/storage/common/storage-quickstart-create-account?tabs=azure-powershell
 [transfer-objects]: /azure/storage/blobs/storage-quickstart-blobs-powershell
 [keyvault]: /azure/key-vault/quick-create-powershell
