@@ -77,13 +77,7 @@ For a full list of the modules in Azure PowerShell, see the [Azure PowerShell mo
 
 ## Learn Azure PowerShell basics with quickstarts and tutorials
 
-To get started with Azure PowerShell, try an in-depth tutorial for setting up virtual machines and
-learning how to query them.
-
-> [!div class="nextstepaction"]
-> [Create virtual machines with Azure PowerShell](azureps-vm-tutorial.yml)
-
-There are also Azure PowerShell quickstarts for other popular Azure services:
+There are Azure PowerShell quickstarts for other popular Azure services:
 
 * [Create a storage account](/azure/storage/common/storage-quickstart-create-account?tabs=azure-powershell)
 * [Transfer objects to/from Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-powershell)

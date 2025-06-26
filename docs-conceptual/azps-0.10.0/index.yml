@@ -51,10 +51,6 @@ landingContent:
             url: /azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json
           - text: Sample scripts for SQL databases
             url: /azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json
-      - linkListType: tutorial
-        links:
-          - text: Create virtual machines on the same subnet
-            url: azureps-vm-tutorial.yml
       - linkListType: learn
         links:
           - text: Automate Azure tasks from PowerShell
