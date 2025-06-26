@@ -88,10 +88,6 @@ landingContent:
             url: formatting-output.md
           - text: PowerShell jobs
             url: using-psjobs.md
-      - linkListType: tutorial
-        links:
-          - text: Create virtual machines
-            url: azureps-vm-tutorial.yml
   - title: Configuration
     linkLists:
       - linkListType: how-to-guide

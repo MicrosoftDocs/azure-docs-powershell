@@ -98,8 +98,6 @@
           href: /azure/azure-resource-manager/templates/secure-template-with-sas-token?toc=/powershell/azure/toc.json
 - name: Tutorials
   items:
-    - name: Create Virtual Machines
-      href: azureps-vm-tutorial.yml
     - name: Create a virtual network
       href: /azure/virtual-network/quick-create-powershell?toc=/powershell/azure/toc.json
     - name: Create a storage account
